@@ -49,7 +49,7 @@ def read_frames() -> list[pd.DataFrame]:
 
         cols_to_read = [c for c in base_cols if c in available]
         df = pd.read_parquet(f, columns=cols_to_read, engine="pyarrow")
-        
+
         # ── unificar b1_int (row-wise combine) ────────────────────────────────
         # crea vector base lleno de NA
         b1_int = pd.Series(pd.NA, index=df.index, dtype="Int64")
@@ -195,15 +195,6 @@ def rule_ed_sup_compet_media_baja(df):
 def rule_ed_sup_compet_no_alta(df):
     return _mask_ed_sup(df) & ~df["b1_int"].between(1, 3)
 
-def rule_test_b1_ciuo88(df):
-    return rule_ocupados(df) & df["b1_ciuo88"].between(1, 3)
-
-def rule_test_b1(df):
-    return rule_ocupados(df) & df["b1"].between(1, 3)
-
-def rule_test_b1_int(df):
-    return rule_ocupados(df) & df["b1_int"].between(1, 3)
-
 
 # ───────────────────────────── rule registry
 RULES: dict[str, callable] = {
@@ -243,14 +234,8 @@ RULES: dict[str, callable] = {
     "oc_ed_sup_compet_alta"       : rule_ed_sup_compet_alta,
     "oc_ed_sup_compet_media_baja" : rule_ed_sup_compet_media_baja,
     "oc_ed_sup_compet_no_alta"    : rule_ed_sup_compet_no_alta,
-
-    # test b1_ciuo88
-    "oc_test_b1_ciuo88"           : rule_test_b1_ciuo88,
-    # test b1
-    "oc_test_b1"                  : rule_test_b1,
-    # test b1_int
-    "oc_test_b1_int"              : rule_test_b1_int,
 }
+
 
 # ───────────────────────────── aggregation
 def aggregate(df: pd.DataFrame) -> pd.DataFrame:
