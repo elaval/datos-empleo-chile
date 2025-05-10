@@ -50,13 +50,16 @@ def read_frames() -> list[pd.DataFrame]:
         cols_to_read = [c for c in base_cols if c in available]
         df = pd.read_parquet(f, columns=cols_to_read, engine="pyarrow")
 
-        # ── 2 · unificar a b1_int ─────────────────────────────────────
-        if "b1" in df.columns:
-            df["b1_int"] = df["b1"].astype("Int64")
-        elif "b1_ciuo88" in df.columns:
-            df["b1_int"] = df["b1_ciuo88"].astype("Int64")
+        # ── unificar b1_int ───────────────────────────────────────────────
+        if "b1" in df.columns and df["b1"].notna().any():
+            df["b1_int"] = pd.to_numeric(df["b1"], errors="coerce").astype("Int64")
+
+        elif "b1_ciuo88" in df.columns and df["b1_ciuo88"].notna().any():
+            df["b1_int"] = pd.to_numeric(df["b1_ciuo88"], errors="coerce").astype("Int64")
+
         else:
-            df["b1_int"] = pd.NA
+            df["b1_int"] = pd.Series(pd.NA, index=df.index, dtype="Int64")
+        # ─────────────────────────────────────────────────────────────────
 
         # sexo a entero por si viene como string
         if df["sexo"].dtype != "Int64":
@@ -186,6 +189,9 @@ def rule_ed_sup_compet_media_baja(df):
 def rule_ed_sup_compet_no_alta(df):
     return _mask_ed_sup(df) & ~df["b1_int"].between(1, 3)
 
+def rule_test_b1_ciuo88(df):
+    return _mask_ed_sup(df) & ~df["b1_ciuo88"].between(1, 3)
+
 
 # ───────────────────────────── rule registry
 RULES: dict[str, callable] = {
@@ -225,6 +231,9 @@ RULES: dict[str, callable] = {
     "oc_ed_sup_compet_alta"       : rule_ed_sup_compet_alta,
     "oc_ed_sup_compet_media_baja" : rule_ed_sup_compet_media_baja,
     "oc_ed_sup_compet_no_alta"    : rule_ed_sup_compet_no_alta,
+
+    # test b1_ciuo88
+    "oc_test_b1_ciuo88"           : rule_test_b1_ciuo88,
 }
 
 # ───────────────────────────── aggregation
@@ -261,7 +270,17 @@ def main() -> None:
     )
 
     resumen.to_parquet(OUTFILE, index=False, engine="pyarrow")
-    print(f"✔ Guardado {OUTFILE}  ({len(resumen)} filas)")
+
+    # ─── extra: CSV copy ──────────────────────────────────────────────
+    csv_path = OUTFILE.with_suffix(".csv")          # ene_totales_trimestre.csv
+    resumen.to_csv(csv_path, index=False)
+    # -----------------------------------------------------------------
+
+    print(
+        f"✔ Guardado {OUTFILE} y {csv_path}  "
+        f"({len(resumen)} filas)"
+    )
+
 
 if __name__ == "__main__":
     sys.exit(main())
