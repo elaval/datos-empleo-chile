@@ -49,17 +49,23 @@ def read_frames() -> list[pd.DataFrame]:
 
         cols_to_read = [c for c in base_cols if c in available]
         df = pd.read_parquet(f, columns=cols_to_read, engine="pyarrow")
+        
+        # ── unificar b1_int (row-wise combine) ────────────────────────────────
+        # crea vector base lleno de NA
+        b1_int = pd.Series(pd.NA, index=df.index, dtype="Int64")
 
-        # ── unificar b1_int ───────────────────────────────────────────────
-        if "b1" in df.columns and df["b1"].notna().any():
-            df["b1_int"] = pd.to_numeric(df["b1"], errors="coerce").astype("Int64")
+        # 1 · cargar la versión antigua si existe
+        if "b1_ciuo88" in df.columns:
+            b1_old = pd.to_numeric(df["b1_ciuo88"], errors="coerce").astype("Int64")
+            b1_int = b1_old
 
-        elif "b1_ciuo88" in df.columns and df["b1_ciuo88"].notna().any():
-            df["b1_int"] = pd.to_numeric(df["b1_ciuo88"], errors="coerce").astype("Int64")
+        # 2 · sobrescribir con la versión nueva donde haya datos válidos
+        if "b1" in df.columns:
+            b1_new = pd.to_numeric(df["b1"], errors="coerce").astype("Int64")
+            b1_int = b1_new.combine_first(b1_int)      # fila a fila
 
-        else:
-            df["b1_int"] = pd.Series(pd.NA, index=df.index, dtype="Int64")
-        # ─────────────────────────────────────────────────────────────────
+        df["b1_int"] = b1_int
+        # ──────────────────────────────────────────────────────────────────────
 
         # sexo a entero por si viene como string
         if df["sexo"].dtype != "Int64":
@@ -190,7 +196,13 @@ def rule_ed_sup_compet_no_alta(df):
     return _mask_ed_sup(df) & ~df["b1_int"].between(1, 3)
 
 def rule_test_b1_ciuo88(df):
-    return _mask_ed_sup(df) & ~df["b1_ciuo88"].between(1, 3)
+    return rule_ocupados(df) & df["b1_ciuo88"].between(1, 3)
+
+def rule_test_b1(df):
+    return rule_ocupados(df) & df["b1"].between(1, 3)
+
+def rule_test_b1_int(df):
+    return rule_ocupados(df) & df["b1_int"].between(1, 3)
 
 
 # ───────────────────────────── rule registry
@@ -234,6 +246,10 @@ RULES: dict[str, callable] = {
 
     # test b1_ciuo88
     "oc_test_b1_ciuo88"           : rule_test_b1_ciuo88,
+    # test b1
+    "oc_test_b1"                  : rule_test_b1,
+    # test b1_int
+    "oc_test_b1_int"              : rule_test_b1_int,
 }
 
 # ───────────────────────────── aggregation
