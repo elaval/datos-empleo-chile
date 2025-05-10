@@ -1,0 +1,44 @@
+subset_columns:
+  - ano_trimestre
+  - mes_central
+  - ano_encuesta
+  - mes_encuesta
+  - id_identificacion
+  - idrph
+  - region
+  - edad
+  - tramo_edad
+  - sexo
+  - nivel
+  - termino_nivel
+  - cine
+  - nacionalidad
+  - b1
+  - b1_ciuo88
+  - b13_rev4cl_caenes
+  - b14_rev4cl_caenes
+  - r_p_rev4cl_caenes
+  - habituales
+  - c10
+  - c11
+  - e4
+  - efectivas
+  - activ
+  - cae_general
+  - cae_especifico
+  - categoria_ocupacion
+  - ocup_form
+  - sector
+  - obe
+  - tpi
+  - id
+  - ftp
+  - fact_cal
+
+key_dimensions:
+  - ano_trimestre
+  - mes_central
+  - ocup_form
+  - sector
+  - edad_de_trabajar
+  - sexo

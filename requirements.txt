@@ -1,0 +1,13 @@
+# ─────────────────────────────────────────────
+# Core data wrangling
+pandas>=2.2          # DataFrames, CSV ↔ Parquet
+pyarrow>=15.0        # Parquet engine for pandas; also feather/arrow IPC
+
+# HTTP download
+requests>=2.31       # Simple GET for the release asset
+
+# YAML config reader
+pyyaml>=6.0
+
+# Optional: in-process SQL analytics (duckdb.read_parquet, etc.)
+duckdb>=0.10
