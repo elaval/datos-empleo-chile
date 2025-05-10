@@ -1,0 +1,15 @@
+# ─────────────────────────────────────────────
+# Datos brutos descargados desde el Release
+data/raw/
+
+# Archivos intermedios grandes (opcional)
+data/interim/
+
+# Paquetes / descargas manuales
+*.tar.gz
+*.zip
+
+# Artefactos de Python
+__pycache__/
+*.py[cod]
+.env
