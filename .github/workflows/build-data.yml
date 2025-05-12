@@ -15,9 +15,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - run: python scripts/get_raw_release.py
-      - run: python scripts/build_trimester_panels.py
-      - run: python scripts/totales_trimestre.py
+      - run: python scripts/descargar_datos_raw.py
+      - run: python scripts/construir_panel_encuestados.py
+      - run: python scripts/generar_agregados.py
       - name: Commit processed data
         run: |
           git config user.name  "github-actions"
