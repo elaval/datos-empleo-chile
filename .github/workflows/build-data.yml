@@ -15,9 +15,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - run: python scripts/descargar_datos_raw.py
-      - run: python scripts/construir_panel_encuestados.py
-      - run: python scripts/generar_agregados.py
+      - run: python -m scripts/descargar_csv_raw.py
+      - run: python -m scripts/construir_panel_microdatos.py
+      - run: python -m scripts/generar_agregados.py
       - name: Commit processed data
         run: |
           git config user.name  "github-actions"

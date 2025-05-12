@@ -14,7 +14,7 @@ from __future__ import annotations
 import pathlib, glob, sys
 import pandas as pd, numpy as np
 import pyarrow.parquet as pq    
-from _column_defs import PUBLIC_COLS, SUFIJOS
+from scripts._column_defs import PUBLIC_COLS, SUFIJOS
 
 # rutas base
 ROOT                 = pathlib.Path(__file__).resolve().parents[1]
