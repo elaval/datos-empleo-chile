@@ -16,22 +16,31 @@ import pandas as pd, numpy as np
 import pyarrow.parquet as pq    
 from _column_defs import PUBLIC_COLS, SUFIJOS
 
+# rutas base
+ROOT                 = pathlib.Path(__file__).resolve().parents[1]
+PROCESSED            = ROOT / "data" / "processed"
+MICRODATA_DIR        = PROCESSED / "microdatos"              # ← aquí van los Parquet de microdatos
 
-ROOT       = pathlib.Path(__file__).resolve().parents[1]
-PROCESSED  = ROOT / "data" / "processed"
-# base para los totales
-OUTFILE_BASE = PROCESSED / "ene_trimestre_totales"
+# 1) Carpeta “agregados” con dos subcarpetas:
+AGREGADOS_DIR        = PROCESSED / "agregados"
+INTEGRADO_DIR        = AGREGADOS_DIR / "integrado"
+POR_MES_SIMPL_DIR    = AGREGADOS_DIR / "por_mes_simplificado"
 
-# archivo parquet + su CSV “completo”
-OUTFILE_PARQUET = OUTFILE_BASE.with_suffix(".parquet")
-OUTFILE_CSV     = OUTFILE_BASE.with_suffix(".csv")
+# crear si no existen
+INTEGRADO_DIR.mkdir(parents=True, exist_ok=True)
+POR_MES_SIMPL_DIR.mkdir(parents=True, exist_ok=True)
 
-# CSV simplificado para público general
-OUTFILE_SIMPLIFICADO = PROCESSED / "ene_trimestre_totales_simplificados.csv"
+# archivos dentro de integrado/
+OUTFILE_BASE         = INTEGRADO_DIR / "ene_trimestre_totales"
+OUTFILE_PARQUET      = OUTFILE_BASE.with_suffix(".parquet")
+OUTFILE_CSV          = OUTFILE_BASE.with_suffix(".csv")
+OUTFILE_SIMPLIFICADO = INTEGRADO_DIR / "ene_trimestre_totales_simplificados.csv"
 
 
 def read_frames() -> list[pd.DataFrame]:
-    pattern = str(PROCESSED / "ene-*.parquet")
+    # ahora leemos sólo los Parquet “microdatos”
+    pattern = str(MICRODATA_DIR  / "ene-*.parquet")
+
     files   = sorted(glob.glob(pattern))
     if not files:
         raise SystemExit("No se encuentran Parquet granulares.")
@@ -122,31 +131,31 @@ def rule_efe2(df):      return df.get("efectivas",0) > 0
 
 def rule_horas_1_30(df):
     #  1 ≤ x ≤ 30
-    return rule_ocupados(df) & df["efectivas_clean"].between(1, 30, inclusive="both")
+    return rule_ocupados(df) & df["habituales_clean"].between(1, 30, inclusive="both")
 
 def rule_horas_31_44(df):
     # 31 ≤ x ≤ 44
-    return rule_ocupados(df) & df["efectivas_clean"].between(31, 44, inclusive="both")
+    return rule_ocupados(df) & df["habituales_clean"].between(31, 44, inclusive="both")
 
 def rule_horas_31_39(df):
     # 31 ≤ x ≤ 39
-    return rule_ocupados(df) & df["efectivas_clean"].between(31, 39, inclusive="both")
+    return rule_ocupados(df) & df["habituales_clean"].between(31, 39, inclusive="both")
 
 def rule_horas_40(df):
     # exactly 40
-    return rule_ocupados(df) & (df["efectivas_clean"] == 40)
+    return rule_ocupados(df) & (df["habituales_clean"] == 40)
 
 def rule_horas_41_44(df):
     # 41 ≤ x ≤ 44
-    return rule_ocupados(df) & df["efectivas_clean"].between(41, 44, inclusive="both")
+    return rule_ocupados(df) & df["habituales_clean"].between(41, 44, inclusive="both")
 
 def rule_horas_45(df):
     # exactly 45
-    return rule_ocupados(df) & (df["efectivas_clean"] == 45)
+    return rule_ocupados(df) & (df["habituales_clean"] == 45)
 
 def rule_horas_46_mas(df):
     # x ≥ 46
-    return rule_ocupados(df) & (df["efectivas_clean"] >= 46)
+    return rule_ocupados(df) & (df["habituales_clean"] >= 46)
 
 def rule_edad_15_24(df):
     # 15 ≤ edad ≤ 24
@@ -239,6 +248,7 @@ def main() -> None:
     # Cálculos de horas ponderadas
     # limpiar códigos especiales
     df["efectivas_clean"] = df["efectivas"].replace({888: 0, 999: 0})
+    df["habituales_clean"] = df["habituales"].replace({888: 0, 999: 0}).fillna(0)
 
     resumen = aggregate(df)
     
@@ -334,9 +344,8 @@ def main() -> None:
     lite.to_csv(OUTFILE_SIMPLIFICADO, index=False)
     print(f"✔ CSV público listo: {OUTFILE_SIMPLIFICADO.name}")
 
-    # -- 4) Generar series por mes (reutilizando lite ya renombrado)
-    serie_dir = PROCESSED / "series_por_mes"
-    serie_dir.mkdir(exist_ok=True)
+    # -- 4) Generar series por mes (versión simplificada)
+    serie_dir = POR_MES_SIMPL_DIR
 
     for m in sorted(lite["mes_central"].unique()):
         suf  = SUFIJOS[int(m)]
