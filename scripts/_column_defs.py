@@ -67,6 +67,15 @@ PUBLIC_COLS = [
     ("horas_45",     "ocupados_horas_45"),
     ("horas_46_mas", "ocupados_horas_46_o_más"),
 
+    # ── Ocupados por tramo etario ───────────────────────────────────────────
+    ("oc_edad_15_24", "ocupados_15_24_anos"),
+    ("oc_edad_25_34", "ocupados_25_34_anos"),
+    ("oc_edad_35_44", "ocupados_35_44_anos"),
+    ("oc_edad_45_54", "ocupados_45_54_anos"),
+    ("oc_edad_55_64", "ocupados_55_64_anos"),
+    ("oc_edad_65_mas","ocupados_65_o_mas_anos"),
+
+
     # ── Promedios de horas ───────────────────────────────────────────────
     ("promedio_horas_habituales",             "promedio_horas_habituales"),
     ("promedio_horas_efectivas_presente",     "promedio_horas_efectivas_presente"),

@@ -148,6 +148,27 @@ def rule_horas_46_mas(df):
     # x ≥ 46
     return rule_ocupados(df) & (df["efectivas_clean"] >= 46)
 
+def rule_edad_15_24(df):
+    # 15 ≤ edad ≤ 24
+    return rule_ocupados(df) & df["edad"].between(15, 24, inclusive="both")
+
+def rule_edad_25_34(df):
+    # 25 ≤ edad ≤ 34
+    return rule_ocupados(df) & df["edad"].between(25, 34, inclusive="both")
+
+def rule_edad_35_44(df):
+    return rule_ocupados(df) & df["edad"].between(35, 44, inclusive="both")
+
+def rule_edad_45_54(df):
+    return rule_ocupados(df) & df["edad"].between(45, 54, inclusive="both")
+
+def rule_edad_55_64(df):
+    return rule_ocupados(df) & df["edad"].between(55, 64, inclusive="both")
+
+def rule_edad_65_mas(df):
+    # edad ≥ 65
+    return rule_ocupados(df) & (df["edad"] >= 65)
+
 
 RULES: dict[str, callable] = {
     "personas_ocupadas": rule_ocupados,
@@ -190,6 +211,13 @@ RULES: dict[str, callable] = {
     "horas_41_44":   rule_horas_41_44,
     "horas_45":      rule_horas_45,
     "horas_46_mas":  rule_horas_46_mas,
+    "oc_edad_15_24": rule_edad_15_24,
+    "oc_edad_25_34": rule_edad_25_34,
+    "oc_edad_35_44": rule_edad_35_44,
+    "oc_edad_45_54": rule_edad_45_54,
+    "oc_edad_55_64": rule_edad_55_64,
+    "oc_edad_65_mas": rule_edad_65_mas,
+
 }
 
 def aggregate(df: pd.DataFrame) -> pd.DataFrame:
