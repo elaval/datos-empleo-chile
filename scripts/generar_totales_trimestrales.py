@@ -17,6 +17,79 @@ import pandas as pd
 import pyarrow.parquet as pq
 from scripts._column_defs import PUBLIC_COLS, SUFIJOS
 
+# Columnas en el orden en que queremos exportar el resumen
+FINAL_COLS = [
+    "ano_trimestre",
+    "mes_central",
+
+    "pet",
+    "ft",
+    "o",
+    "do",
+    "cesantes",
+    "busca_trabajo_por_primera_vez",
+    "fft",
+    "fft_iniciadores",
+    "fft_inactivos_potencialmente_activos",
+    "fft_inactivos_habituales",
+
+    "obe",
+    "id",
+    "ftp",
+    "fta",
+    "deseo_trabajar",
+    
+    "categoria_independientes",
+    "categoria_empleador",
+    "categoria_cuenta_propia",
+    "categoria_familiar_personal_no_remunerado",
+    "categoria_dependientes",
+    "categoria_asalariados",
+    "categoria_asalariado_sector_privado",
+    "categoria_asalariado_sector_publico",
+    "categoria_servicio_domestico",
+    "categoria_serv_domestico_puertas_afuera",
+    "categoria_serv_domestico_puertas_adentro",
+
+    "grupo_1",
+    "grupo_2",
+    "grupo_3",
+    "grupo_4",
+    "grupo_5",
+    "grupo_6",
+    "grupo_7",
+    "grupo_8",
+    "grupo_9",
+    "grupo_10",
+    "grupo_nsnr",
+
+    "horas_1_30",
+    "tpi",
+    "tpv",
+    "tp_sin_declarar_voluntareidad",
+    "horas_31_44",
+    "horas_31_39",
+    "horas_40",
+    "horas_41_44",
+    "horas_45",
+    "horas_46_mas",
+    "horas_efectivas_46_mas",
+    "o_declaran_horas",
+
+    "promedio_horas_efectivas_sin_ausentes",
+    "promedio_horas_efectivas_declaran_horas",
+    "promedio_horas_habituales",
+
+    "td",
+    "to",
+    "tp",
+    # resto de tasas y campos…
+    "tpl",
+    "su1", "su2", "su3", "su4",
+    "toi", "tosi",
+    # … cualquier otro campo …
+]
+
 # rutas base
 ROOT                 = pathlib.Path(__file__).resolve().parents[1]
 PROCESSED            = ROOT / "data" / "processed"
@@ -41,11 +114,13 @@ def read_frames() -> list[pd.DataFrame]:
 
     base_cols = [
         "ano_trimestre", "mes_central", "fact_cal",
-        "cae_especifico", "nacionalidad", "edad", "sexo",
-        "ocup_form", "tpi", "categoria_ocupacion",
+        "cae_especifico","cae_general", "nacionalidad", "edad", "sexo",
+        "ocup_form","sector", "tpi", "categoria_ocupacion",
         "nivel", "termino_nivel",
         "b1", "b1_ciuo88",
-        "obe", "id", "ftp", "habituales", "efectivas", "activ",
+        "obe", "id", "ftp", "deseo_trabajar", "habituales", "efectivas", "activ",
+        "c10", "c11",
+
     ]
 
     frames: list[pd.DataFrame] = []
@@ -73,16 +148,70 @@ def read_frames() -> list[pd.DataFrame]:
 
 
 # ───────────────────────────── rule helpers
-def rule_ocupados(df):          return df["cae_especifico"].between(1, 7)
-def rule_desocupados(df):       return df["cae_especifico"].between(8, 9)
+def rule_fuerza_de_trabajo(df): return df["cae_especifico"].between(1, 9)
 def rule_edad_trabajar(df):     return df["edad"] >= 15
+def rule_ocupados(df):          return df["cae_especifico"].between(1, 7)
+
+def rule_desocupados(df):       return df["cae_especifico"].between(8, 9)
+def rule_cesantes(df):          return df["cae_especifico"] == 8
+def rule_busca_trabajo_por_primera_vez(df): return df["cae_especifico"] == 9
+
+def rule_fuera_fuerza_de_trabajo(df): return df["activ"] == 3
+def rule_fft_iniciadores(df): return df["cae_general"] == 6
+def rule_fft_inactivos_potencialmente_activos(df): return df["cae_general"].between(7, 8)
+def rule_fft_inactivos_habituales(df): return df["cae_general"] == 9
+
+def rule_obe(df):       return df["obe"] == 1
+def rule_id(df):        return df["id"] == 1
+def rule_ftp(df):       return df["ftp"] == 1
+def rule_deseo_trabajar(df):       return df["deseo_trabajar"] == 1
+
+def rule_categoria_independientes(df):  return rule_ocupados(df) & df["categoria_ocupacion"].isin([1, 2, 7])
+def rule_categoria_empleador(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 1)
+def rule_categoria_cuenta_propia(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 2)
+def rule_categoria_dependientes(df):    return rule_ocupados(df) & (df["categoria_ocupacion"].between(3, 6))
+def rule_categoria_asalariados(df):    return rule_ocupados(df) & (df["categoria_ocupacion"].between(3, 4))
+def rule_categoria_asalariado_sector_privado(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 3)
+def rule_categoria_asalariado_sector_publico(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 4)
+def rule_categoria_servicio_domestico(df):    return rule_ocupados(df) & (df["categoria_ocupacion"].between(5, 6))
+def rule_categoria_serv_domestico_puertas_afuera(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 5)
+def rule_categoria_serv_domestico_puertas_adentro(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 6)
+def rule_categoria_familiar_personal_no_remunerado(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 7)
+def rule_categoria_no_corresponde(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 0)
+
+def rule_grupo_1(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 1)
+def rule_grupo_2(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 2)
+def rule_grupo_3(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 3)
+def rule_grupo_4(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 4)
+def rule_grupo_5(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 5)
+def rule_grupo_6(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 6)
+def rule_grupo_7(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 7)
+def rule_grupo_8(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 8)
+def rule_grupo_9(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 9)
+def rule_grupo_10(df):   return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 10)
+def rule_grupo_nsnr(df):   return rule_ocupados(df) & (~df["ciuo_gran_grupo"].between(1,10))
+
 def rule_hombres(df):           return rule_ocupados(df) & (df["sexo"] == 1)
 def rule_mujeres(df):           return rule_ocupados(df) & (df["sexo"] == 2)
 def rule_chile(df):             return rule_ocupados(df) & (df["nacionalidad"] == 152)
 def rule_extranjero(df):        return rule_ocupados(df) & (df["nacionalidad"] != 152)
 def rule_formal(df):            return rule_ocupados(df) & (df["ocup_form"] == 1)
 def rule_informal(df):          return rule_ocupados(df) & (df["ocup_form"] == 2)
+def rule_sector_informal(df):          return rule_ocupados(df) & (df["sector"] == 2)
+
 def rule_tpi(df):               return rule_ocupados(df) & (df["tpi"] == 1)
+def rule_tp_sin_declarar_voluntareidad(df):    return rule_ocupados(df) & df["habituales"].between(1, 30) & ((df["c10"] > 2) | ((df["c10"] == 1) & (df["c11"] > 4)))
+def rule_tpv(df):
+    return (
+        rule_ocupados(df)
+        & (df["habituales"] <= 30)
+        & (
+            df["c10"].eq(2)
+            | (df["c10"].eq(1) & df["c11"].between(3, 4))
+        )
+    )
+
+
 def rule_sector_publico(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 4)
 def rule_no_sector_publico(df): return rule_ocupados(df) & (df["categoria_ocupacion"] != 4)
 
@@ -117,13 +246,10 @@ def rule_ed_sup_ciuo_alta(df):       return _mask_ed_sup(df) & df["ciuo_gran_gru
 def rule_ed_sup_ciuo_media_baja(df): return _mask_ed_sup(df) & df["ciuo_gran_grupo"].between(4,9)
 def rule_ed_sup_ciuo_no_alta(df):    return _mask_ed_sup(df) & ~df["ciuo_gran_grupo"].between(1,3)
 
-def rule_obe(df):       return df["obe"] == 1
-def rule_id(df):        return df["id"] == 1
-def rule_ftp(df):       return df["ftp"] == 1
 
-def rule_habituales(df): return df.get("habituales",0) > 0
-def rule_efe1(df):      return df.get("efectivas",0).between(1,168)&(df.get("activ",0)==1)
-def rule_efe2(df):      return df.get("efectivas",0) > 0
+
+def rule_habituales(df):
+    return rule_ocupados(df) & (df["habituales_clean"] > 0)
 
 def rule_horas_1_30(df):
     #  1 ≤ x ≤ 30
@@ -153,6 +279,10 @@ def rule_horas_46_mas(df):
     # x ≥ 46
     return rule_ocupados(df) & (df["habituales_clean"] >= 46)
 
+def rule_horas_efectivas_46_mas(df):
+    # x ≥ 46
+    return rule_ocupados(df) & (df["efectivas_clean"] >= 46)
+
 def rule_edad_15_24(df):
     # 15 ≤ edad ≤ 24
     return rule_ocupados(df) & df["edad"].between(15, 24, inclusive="both")
@@ -176,16 +306,55 @@ def rule_edad_65_mas(df):
 
 
 RULES: dict[str, callable] = {
-    "personas_ocupadas": rule_ocupados,
-    "personas_desocupadas": rule_desocupados,
-    "personas_edad_trabajar": rule_edad_trabajar,
+    "pet": rule_edad_trabajar,
+    "ft": rule_fuerza_de_trabajo,
+    "o": rule_ocupados,
+    "do": rule_desocupados,
+    "cesantes": rule_cesantes,
+    "busca_trabajo_por_primera_vez": rule_busca_trabajo_por_primera_vez,
+    "fft": rule_fuera_fuerza_de_trabajo,
+    "fft_iniciadores": rule_fft_iniciadores,
+    "fft_inactivos_potencialmente_activos": rule_fft_inactivos_potencialmente_activos,
+    "fft_inactivos_habituales": rule_fft_inactivos_habituales,
+
+    "obe": rule_obe,
+    "tpi": rule_tpi,
+    "id": rule_id,
+    "ftp": rule_ftp,
+    "deseo_trabajar": rule_deseo_trabajar,
+ 
+    "categoria_independientes": rule_categoria_independientes,
+    "categoria_empleador": rule_categoria_empleador,
+    "categoria_familiar_personal_no_remunerado": rule_categoria_familiar_personal_no_remunerado,
+    "categoria_dependientes": rule_categoria_dependientes,
+    "categoria_asalariados": rule_categoria_asalariados,
+    "categoria_cuenta_propia": rule_categoria_cuenta_propia,
+    "categoria_asalariado_sector_privado": rule_categoria_asalariado_sector_privado,
+    "categoria_asalariado_sector_publico": rule_categoria_asalariado_sector_publico,
+    "categoria_servicio_domestico": rule_categoria_servicio_domestico,
+    "categoria_serv_domestico_puertas_afuera": rule_categoria_serv_domestico_puertas_afuera,
+    "categoria_serv_domestico_puertas_adentro": rule_categoria_serv_domestico_puertas_adentro,
+    "categoria_no_corresponde": rule_categoria_no_corresponde,
+
+    "grupo_1": rule_grupo_1,
+    "grupo_2": rule_grupo_2,
+    "grupo_3": rule_grupo_3,
+    "grupo_4": rule_grupo_4,
+    "grupo_5": rule_grupo_5,
+    "grupo_6": rule_grupo_6,
+    "grupo_7": rule_grupo_7,
+    "grupo_8": rule_grupo_8,
+    "grupo_9": rule_grupo_9,
+    "grupo_10": rule_grupo_10,
+    "grupo_nsnr": rule_grupo_nsnr,
+
     "oc_hombres": rule_hombres,
     "oc_mujeres": rule_mujeres,
     "oc_chile": rule_chile,
     "oc_extranjero": rule_extranjero,
     "oc_formal": rule_formal,
     "oc_informal": rule_informal,
-    "oc_tpi": rule_tpi,
+    "oc_sector_informal": rule_sector_informal,
     "oc_sector_publico": rule_sector_publico,
     "oc_no_sector_publico": rule_no_sector_publico,
     "oc_sin_basica_completa": rule_sin_basica,
@@ -203,12 +372,11 @@ RULES: dict[str, callable] = {
     "oc_ed_sup_ciuo_alta": rule_ed_sup_ciuo_alta,
     "oc_ed_sup_ciuo_media_baja": rule_ed_sup_ciuo_media_baja,
     "oc_ed_sup_ciuo_no_alta": rule_ed_sup_ciuo_no_alta,
-    "oc_obe": rule_obe,
-    "oc_id": rule_id,
-    "oc_ftp": rule_ftp,
+
     "oc_hab": rule_habituales,
-    "oc_efe1": rule_efe1,
-    "oc_efe2": rule_efe2,
+
+    "tpv": rule_tpv,
+    "tp_sin_declarar_voluntareidad": rule_tp_sin_declarar_voluntareidad,
     "horas_1_30":    rule_horas_1_30,
     "horas_31_44":   rule_horas_31_44,
     "horas_31_39":   rule_horas_31_39,
@@ -216,6 +384,8 @@ RULES: dict[str, callable] = {
     "horas_41_44":   rule_horas_41_44,
     "horas_45":      rule_horas_45,
     "horas_46_mas":  rule_horas_46_mas,
+    "horas_efectivas_46_mas": rule_horas_efectivas_46_mas,
+
     "oc_edad_15_24": rule_edad_15_24,
     "oc_edad_25_34": rule_edad_25_34,
     "oc_edad_35_44": rule_edad_35_44,
@@ -246,76 +416,97 @@ def main() -> int:
     df = pd.concat(frames, ignore_index=True)
 
     # 2) Preparo horas limpias
-    df["efectivas_clean"] = df["efectivas"].replace({888: 0, 999: 0})
+    df["efectivas_clean"]  = df["efectivas"].replace({888: 0, 999: 0})
     df["habituales_clean"] = df["habituales"].replace({888: 0, 999: 0}).fillna(0)
 
     # 3) Agrego todos los indicadores
     resumen = aggregate(df)
 
-    # 4) Promedios ponderados (idéntico a tu bloque original)
-    # efe1
-    mask1 = df["efectivas_clean"].between(1,168)&(df["activ"]==1)
-    df["efe1_horas_pond"] = df["efectivas_clean"].where(mask1,0)*df["fact_cal"]
-    # efe2
-    mask2 = df["efectivas_clean"]>0
-    df["efe2_horas_pond"] = df["efectivas_clean"].where(mask2,0)*df["fact_cal"]
-    # habituales
-    df["hab_horas_pond"] = df["habituales"].fillna(0)*df["fact_cal"]
+    # 4) Promedios ponderados corregidos
+    # Definimos las dos máscaras:
+    mask_o_declaran_horas = (df["activ"] == 1) & (~df["efectivas"].isin([888, 999]))    
+    mask_sin_ausentes = mask_o_declaran_horas & df["efectivas_clean"].between(1, 168, inclusive="both")
 
+    # Calculamos horas ponderadas y pesos
+    df["efe1_horas_pond"] = df["efectivas_clean"].where(mask_o_declaran_horas, 0) * df["fact_cal"]
+    df["efe2_horas_pond"] = df["efectivas_clean"].where(mask_sin_ausentes, 0) * df["fact_cal"]
+    df["hab_horas_pond"]  = df["habituales_clean"] * df["fact_cal"]
+    df["o_declaran_horas_pond"]   = df["fact_cal"].where(mask_o_declaran_horas, 0)
+    df["oc_sin_ausentes_pond"]   = df["fact_cal"].where(mask_sin_ausentes, 0)
+
+    # 5) Agrupamos totales y conteos de pesos por trimestre
     horas = (
-        df.groupby(["ano_trimestre","mes_central"])
+        df.groupby(["ano_trimestre", "mes_central"])
           .agg(
-            efe1_total = ("efe1_horas_pond","sum"),
-            efe2_total = ("efe2_horas_pond","sum"),
-            hab_total  = ("hab_horas_pond","sum"),
+            efe1_total = ("efe1_horas_pond", "sum"),
+            efe2_total = ("efe2_horas_pond", "sum"),
+            hab_total  = ("hab_horas_pond",  "sum"),
+            o_declaran_horas   = ("o_declaran_horas_pond",   "sum"),
+            oc_sin_ausentes   = ("oc_sin_ausentes_pond",   "sum"),
           )
           .reset_index()
     )
 
-    resumen = resumen.merge(horas, on=["ano_trimestre","mes_central"])
+    # 6) Unimos con el resto de indicadores
+    resumen = resumen.merge(horas, on=["ano_trimestre", "mes_central"])
 
-    # renombra conteos
-    resumen["pet"] = resumen["personas_edad_trabajar"]
-    resumen["fdt"] = resumen["personas_ocupadas"] + resumen["personas_desocupadas"]
-    resumen["fft"] = resumen["personas_edad_trabajar"] - resumen["fdt"]
-
-    resumen["oc"]  = resumen["personas_ocupadas"]
-    resumen["des"] = resumen["personas_desocupadas"]
+    # 7) Renombra y calcula columnas derivadas
     resumen.rename(columns={
-        "oc_id":"id", "oc_obe":"obe", "oc_ftp":"ftp",
-        "oc_efe1":"efe1","oc_efe2":"efe2","oc_hab":"habituales_sum"
+        "oc_efe1": "efe1",
+        "oc_efe2": "efe2",
+        "oc_hab":  "habituales_sum"
     }, inplace=True)
-    resumen["tpi"] = resumen["oc_tpi"]
+
     resumen["oi"]  = resumen["oc_informal"]
-    resumen["osi"] = resumen["oc_sector_publico"]
-    resumen["fta"] = resumen["fdt"] + resumen["id"] + resumen["ftp"]
+    resumen["osi"] = resumen["oc_sector_informal"]
+    resumen["fta"] = resumen["ft"] + resumen["id"] + resumen["ftp"]
 
-    # Tasas
-    def safe_div(n,d): return (n/d*100).round(2)
-    resumen["td"]  = safe_div(resumen["des"],resumen["fdt"])
-    resumen["to"]  = safe_div(resumen["oc"],resumen["pet"])
-    resumen["tp"]  = safe_div(resumen["fdt"],resumen["pet"])
-    resumen["tpl"] = safe_div(resumen["id"]+resumen["obe"]+resumen["des"],resumen["fdt"]+resumen["id"])
-    resumen["su1"] = safe_div(resumen["des"]+resumen["id"],resumen["fdt"]+resumen["id"])
-    resumen["su2"] = safe_div(resumen["des"]+resumen["id"]+resumen["tpi"],resumen["fdt"]+resumen["id"])
-    resumen["su3"] = safe_div(resumen["des"]+resumen["id"]+resumen["ftp"],resumen["fta"])
-    resumen["su4"] = safe_div(resumen["des"]+resumen["id"]+resumen["tpi"]+resumen["ftp"],resumen["fta"])
-    resumen["toi"]  = safe_div(resumen["oi"],resumen["oc"])
-    resumen["tosi"] = safe_div(resumen["osi"],resumen["oc"])
 
-    # Promedios reales de horas
-    resumen["promedio_horas_efectivas_presente"] = (resumen["efe1_total"]/resumen["oc"]).round(1)
-    resumen["promedio_horas_efectivas_total"]   = (resumen["efe2_total"]/resumen["oc"]).round(1)
-    resumen["promedio_horas_habituales"]        = (resumen["hab_total"]/resumen["oc"]).round(1)
+    # 8) Tasas originales
+    def safe_div(n, d): return (n / d * 100).round(2)
+    resumen["td"]   = safe_div(resumen["do"], resumen["ft"])
+    resumen["to"]   = safe_div(resumen["o"],  resumen["pet"])
+    resumen["tp"]   = safe_div(resumen["ft"], resumen["pet"])
+    resumen["tpl"]  = safe_div(resumen["id"] + resumen["obe"] + resumen["do"],
+                               resumen["ft"] + resumen["id"])
+    resumen["su1"]  = safe_div(resumen["do"] + resumen["id"],
+                               resumen["ft"] + resumen["id"])
+    resumen["su2"]  = safe_div(resumen["do"] + resumen["id"] + resumen["tpi"],
+                               resumen["ft"] + resumen["id"])
+    resumen["su3"]  = safe_div(resumen["do"] + resumen["id"] + resumen["ftp"],
+                               resumen["fta"])
+    resumen["su4"]  = safe_div(resumen["do"] + resumen["id"] + resumen["tpi"] + resumen["ftp"],
+                               resumen["fta"])
+    resumen["toi"]  = safe_div(resumen["oi"],  resumen["o"])
+    resumen["tosi"] = safe_div(resumen["osi"], resumen["o"])
 
-    # eliminar intermedias
-    resumen.drop(columns=["efe1_total","efe2_total","hab_total"], inplace=True)
-    # 5) Export técnico
+    # 9) Promedios reales de horas con denominadores correctos
+    resumen["promedio_horas_efectivas_sin_ausentes"] = (
+        resumen["efe1_total"] / resumen["oc_sin_ausentes"]
+    ).round(2)
+    resumen["promedio_horas_efectivas_declaran_horas"] = (
+        resumen["efe2_total"] / resumen["o_declaran_horas"]
+    ).round(2)
+    resumen["promedio_horas_habituales"] = (
+        resumen["hab_total"] / resumen["o_declaran_horas"]
+    ).round(2)
+
+    # 10) Eliminar columnas intermedias antes de exportar
+    resumen.drop(columns=[
+        "efe1_total", "efe2_total", "hab_total",
+    #    "o_declaran_horas", "oc_sin_ausentes"
+    ], inplace=True)
+
+
+    # Reordeno según la constante FINAL_COLS
+    resumen = resumen[FINAL_COLS]
+
+    # 11) Export técn ico
     resumen.to_parquet(OUTFILE_PARQUET, index=False)
     resumen.to_csv(OUTFILE_CSV, index=False)
     print(f"✔ Guardado técnico: {OUTFILE_PARQUET} (+ CSV)  [{len(resumen)} filas]")
 
-    # 6) Genero CSV simplificado
+    # 12) Genero CSV simplificado
     lite = resumen.copy()
     orig = set(lite.columns)
     for old, new in PUBLIC_COLS:
@@ -324,9 +515,9 @@ def main() -> int:
     cols_order = [new for old, new in PUBLIC_COLS if old in orig]
     lite = lite[cols_order]
 
-    # redondeo enteros
-    mask_counts = (~lite.columns.isin(["ano_trimestre","mes_central"]) &
-                   ~lite.columns.str.startswith(("tasa_","promedio_")))
+    # Redondeo enteros
+    mask_counts = (~lite.columns.isin(["ano_trimestre", "mes_central"]) &
+                   ~lite.columns.str.startswith(("tasa_", "promedio_")))
     lite.loc[:, mask_counts] = lite.loc[:, mask_counts].round(0).astype("Int64")
 
     lite.to_csv(OUTFILE_SIMPLIFICADO, index=False)

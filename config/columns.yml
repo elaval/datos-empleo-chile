@@ -33,6 +33,7 @@ subset_columns:
   - tpi
   - id
   - ftp
+  - deseo_trabajar
   - fact_cal
 
 key_dimensions:

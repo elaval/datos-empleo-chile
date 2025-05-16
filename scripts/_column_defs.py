@@ -7,13 +7,17 @@ PUBLIC_COLS = [
     ("mes_central",                 "mes_central"),
 
     # ── Totales de población (miles de personas) ───────────────────────
-    ("personas_ocupadas",           "ocupados"),
-    ("personas_desocupadas",        "desocupados"),
-    ("personas_edad_trabajar",      "poblacion_en_edad_de_trabajar"),
-    ("fdt",                         "fuerza_de_trabajo"),
-    ("fft",                         "personas_inactivas"),
+    ("pet",      "poblacion_en_edad_de_trabajar (pet)"),
+    ("ft",                         "fuerza_de_trabajo (ft)"),
+    ("o",           "personas_ocupadas (o)"),
+    ("do",        "personas_desocupadas (do)"),
+    ("cesantes",        "cesantes"),
+    ("busca_trabajo_por_primera_vez", "busca_trabajo_por_primera_vez"),
+    ("fft",                         "fuera_de_la_fuerza_de_trabajo (fft)"),
+    ("fft_iniciadores", "fft_iniciadores"),
+    ("fft_inactivos_potencialmente_activos", "fft_inactivos_potencialmente_activos"),
+    ("fft_inactivos_habituales", "fft_inactivos_habituales"),
    
-
     # ── Ocupados por sexo y nacionalidad ────────────────────────────────
     ("oc_hombres",                  "ocupados_hombres"),
     ("oc_mujeres",                  "ocupados_mujeres"),
@@ -65,7 +69,7 @@ PUBLIC_COLS = [
     ("horas_40",     "ocupados_horas_40"),
     ("horas_41_44",  "ocupados_horas_41_44"),
     ("horas_45",     "ocupados_horas_45"),
-    ("horas_46_mas", "ocupados_horas_46_o_más"),
+    ("horas_46_mas", "ocupados_horas_46_o_mas"),
 
     # ── Ocupados por tramo etario ───────────────────────────────────────────
     ("oc_edad_15_24", "ocupados_15_24_anos"),
