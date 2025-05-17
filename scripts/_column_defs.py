@@ -186,3 +186,190 @@ SUFIJOS = {
     5: "amj",  6: "mjj",  7: "jja", 8: "jas",
     9: "aso", 10: "son", 11: "ond", 12: "nde",
 }
+
+VARIABLE_META = {
+    "pet": {
+        "label": "Población en edad de trabajar (PET)",
+        "description": (
+            "Todas las personas de 15 años o más residentes en Chile, sin "
+            "límite superior de edad. Sirve de universo para calcular tasas "
+            "de participación y ocupación."
+        ),
+        "notes": "Disponible desde 2010-01 con periodicidad mensual.",
+        "source": "Glosario ENE 2024, entrada «Población en edad de trabajar»"  # :contentReference[oaicite:0]{index=0}
+    },
+
+    "ft": {
+        "label": "Fuerza de trabajo (FT)",
+        "description": (
+            "Personas en edad de trabajar que, en la semana de referencia, "
+            "estaban ocupadas o desocupadas."
+        ),
+        "notes": "Serie continua desde 2010-01.",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo (FT)»"  # :contentReference[oaicite:1]{index=1}
+    },
+
+    "o": {
+        "label": "Personas ocupadas",
+        "description": (
+            "Quienes trabajaron ≥ 1 hora la semana de referencia o se ausentaron "
+            "temporalmente de su empleo manteniendo vínculo o remuneración."
+        ),
+        "notes": "Definición OIT adoptada por INE; serie completa 2010-01.",
+        "source": "Glosario ENE 2024, «Ocupado/a (O)»"  # :contentReference[oaicite:2]{index=2}
+    },
+
+    "do": {
+        "label": "Personas desocupadas",
+        "description": (
+            "Personas sin trabajo que buscaron activamente empleo en las últimas "
+            "4 semanas y están disponibles para comenzar en las próximas 2."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Desocupado/a (DO)»"  # :contentReference[oaicite:3]{index=3}
+    },
+
+    "cesantes": {
+        "label": "Cesantes",
+        "description": (
+            "Subconjunto de desocupados/as que tuvieron una ocupación previa de "
+            "al menos un mes."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Cesante»"  # :contentReference[oaicite:4]{index=4}
+    },
+
+    "busca_trabajo_por_primera_vez": {
+        "label": "Buscan trabajo por primera vez",
+        "description": (
+            "Desocupados/as sin experiencia laboral previa —no han tenido nunca "
+            "una ocupación remunerada."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Personas que buscaron trabajo por primera vez»"  # :contentReference[oaicite:5]{index=5}
+    },
+
+    "tpi": {
+        "label": "Tiempo parcial involuntario (TPI)",
+        "description": (
+            "Ocupados/as que trabajan ≤ 30 h habituales y declaran estar "
+            "disponibles para trabajar más horas inmediatamente o en 15 días."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Ocupados/as a tiempo parcial involuntario»"  # :contentReference[oaicite:6]{index=6}
+    },
+
+    "o_informal": {
+        "label": "Ocupados informales",
+        "description": (
+            "Dependientes sin cotización de salud ni pensión asociada a su "
+            "empleador; independientes cuyo negocio pertenece al sector informal "
+            "o familiares no remunerados."
+        ),
+        "notes": "Disponible desde 2017-08.",
+        "source": "Glosario ENE 2019, «Ocupación informal»"  # :contentReference[oaicite:7]{index=7}
+    },
+
+    "ftp": {
+        "label": "Fuerza de trabajo potencial (FTP)",
+        "description": (
+            "Personas no ocupadas que quieren trabajar pero su búsqueda activa "
+            "y/o disponibilidad no cumple los criterios para ser desocupadas."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"  # :contentReference[oaicite:8]{index=8}
+    },
+
+    "fta": {
+        "label": "Fuerza de trabajo ajustada (FTA)",
+        "description": (
+            "Suma de la fuerza de trabajo (ocupados + desocupados) más la fuerza "
+            "de trabajo potencial; se usa como denominador en tasas SU3 y SU4."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo ampliada (FTA)»"  # :contentReference[oaicite:9]{index=9}
+    },
+
+    "td": {
+        "label": "Tasa de desocupación (%)",
+        "description": "Desocupados / Fuerza de trabajo × 100, redondeada a 3 decimales.",
+        "notes": "",
+        "source": "Glosario ENE 2019, «Tasa de desocupación»"  # :contentReference[oaicite:10]{index=10}
+    },
+
+    "tp": {
+        "label": "Tasa de participación (%)",
+        "description": "Fuerza de trabajo / PET × 100, redondeada a 3 decimales.",
+        "notes": "",
+        "source": "Glosario ENE 2019, «Tasa de participación»"  # :contentReference[oaicite:11]{index=11}
+    },
+
+    "to": {
+        "label": "Tasa de ocupación (%)",
+        "description": "Ocupados / PET × 100, redondeada a 3 decimales.",
+        "notes": "",
+        "source": "Glosario ENE 2019, «Tasa de ocupación»"  # :contentReference[oaicite:12]{index=12}
+    }
+}
+
+
+# Diccionario: variable → fecha de arranque
+START_DATES = {
+    "o_formal": "2017-08",
+    "o_informal": "2017-08",
+    "o_sector_informal": "2017-08",
+    "toi": "2017-08",
+    "tosi":   "2017-08",
+    "deseo_trabajar": "2020-02",
+    "grupo_ciuo_nsnr": "2019-12",
+    "rama_1": "2017-08",
+    "rama_2": "2017-08",
+    "rama_3": "2017-08",
+    "rama_4": "2017-08",
+    "rama_5": "2017-08",
+    "rama_6": "2017-08",
+    "rama_7": "2017-08",
+    "rama_8": "2017-08",
+    "rama_9": "2017-08",
+    "rama_10": "2017-08",
+    "rama_11": "2017-08",
+    "rama_12": "2017-08",
+    "rama_13": "2017-08",
+    "rama_14": "2017-08",
+    "rama_15": "2017-08",
+    "rama_16": "2017-08",
+    "rama_17": "2017-08",
+    "rama_18": "2017-08",
+    "rama_19": "2017-08",
+    "rama_20": "2017-08",
+    "rama_21": "2017-08",
+    "grupo_ciuo08_1": "2017-02",
+    "grupo_ciuo08_2": "2017-02",
+    "grupo_ciuo08_3": "2017-02",
+    "grupo_ciuo08_4": "2017-02",
+    "grupo_ciuo08_5": "2017-02",
+    "grupo_ciuo08_6": "2017-02",
+    "grupo_ciuo08_7": "2017-02",
+    "grupo_ciuo08_8": "2017-02",
+    "grupo_ciuo08_9": "2017-02",
+    "grupo_ciuo08_10": "2017-02",
+    "grupo_ciuo08_nsnr": "2017-02",
+
+}
+
+# Diccionario: variable → fecha de arranque
+END_DATES = {
+
+    "grupo_ciuo88_1": "2019-02",
+    "grupo_ciuo88_2": "2019-02",
+    "grupo_ciuo88_3": "2019-02",
+    "grupo_ciuo88_4": "2019-02",
+    "grupo_ciuo88_5": "2019-02",
+    "grupo_ciuo88_6": "2019-02",
+    "grupo_ciuo88_7": "2019-02",
+    "grupo_ciuo88_8": "2019-02",
+    "grupo_ciuo88_9": "2019-02",
+    "grupo_ciuo88_10": "2019-02",
+    "grupo_ciuo88_nsnr": "2019-02",
+
+}

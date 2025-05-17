@@ -12,10 +12,12 @@ Además calcula promedios de horas ponderadas y exporta:
  - CSV simplificado: agregados/integrado/ene_trimestre_totales_simplificados.csv
 """
 from __future__ import annotations
-import pathlib, glob, sys
+import pathlib
+import glob
+import sys
 import pandas as pd
 import pyarrow.parquet as pq
-from scripts._column_defs import PUBLIC_COLS, SUFIJOS
+from scripts._column_defs import PUBLIC_COLS, START_DATES, END_DATES
 
 # Columnas en el orden en que queremos exportar el resumen
 FINAL_COLS = [
@@ -150,67 +152,6 @@ FINAL_COLS = [
     "toi",
     "tosi",
 ]
-
-# Diccionario: variable → fecha de arranque
-START_DATES = {
-    "o_formal": "2017-08",
-    "o_informal": "2017-08",
-    "o_sector_informal": "2017-08",
-    "toi": "2017-08",
-    "tosi":   "2017-08",
-    "deseo_trabajar": "2020-02",
-    "grupo_ciuo_nsnr": "2019-12",
-    "rama_1": "2017-08",
-    "rama_2": "2017-08",
-    "rama_3": "2017-08",
-    "rama_4": "2017-08",
-    "rama_5": "2017-08",
-    "rama_6": "2017-08",
-    "rama_7": "2017-08",
-    "rama_8": "2017-08",
-    "rama_9": "2017-08",
-    "rama_10": "2017-08",
-    "rama_11": "2017-08",
-    "rama_12": "2017-08",
-    "rama_13": "2017-08",
-    "rama_14": "2017-08",
-    "rama_15": "2017-08",
-    "rama_16": "2017-08",
-    "rama_17": "2017-08",
-    "rama_18": "2017-08",
-    "rama_19": "2017-08",
-    "rama_20": "2017-08",
-    "rama_21": "2017-08",
-    "grupo_ciuo08_1": "2017-02",
-    "grupo_ciuo08_2": "2017-02",
-    "grupo_ciuo08_3": "2017-02",
-    "grupo_ciuo08_4": "2017-02",
-    "grupo_ciuo08_5": "2017-02",
-    "grupo_ciuo08_6": "2017-02",
-    "grupo_ciuo08_7": "2017-02",
-    "grupo_ciuo08_8": "2017-02",
-    "grupo_ciuo08_9": "2017-02",
-    "grupo_ciuo08_10": "2017-02",
-    "grupo_ciuo08_nsnr": "2017-02",
-
-}
-
-# Diccionario: variable → fecha de arranque
-END_DATES = {
-
-    "grupo_ciuo88_1": "2019-02",
-    "grupo_ciuo88_2": "2019-02",
-    "grupo_ciuo88_3": "2019-02",
-    "grupo_ciuo88_4": "2019-02",
-    "grupo_ciuo88_5": "2019-02",
-    "grupo_ciuo88_6": "2019-02",
-    "grupo_ciuo88_7": "2019-02",
-    "grupo_ciuo88_8": "2019-02",
-    "grupo_ciuo88_9": "2019-02",
-    "grupo_ciuo88_10": "2019-02",
-    "grupo_ciuo88_nsnr": "2019-02",
-
-}
 
 # rutas base
 ROOT                 = pathlib.Path(__file__).resolve().parents[1]
@@ -808,7 +749,10 @@ def main() -> int:
         ~lite.columns.isin(["Año-Trimestre", "Mes central"]) &
         ~lite.columns.str.startswith(("Tasa", "Promedio", "Prom."))
     )
-    lite.loc[:, mask_counts] = lite.loc[:, mask_counts].round(0).astype("Int64")
+
+    for col in lite.columns[mask_counts]:
+        lite[col] = lite[col].round(0).astype("Int64")
+
 
     lite.to_csv(
         OUTFILE_SIMPLIFICADO,
