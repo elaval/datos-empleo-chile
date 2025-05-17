@@ -327,17 +327,6 @@ VARIABLE_META = {
     },
 
 
-
-    # ------------------------------------------------------------------ Promedios de horas
-    "promedio_horas_efectivas_sin_ausentes": {
-        "label": "Prom. horas efectivas sin ausentes",
-        "description": (
-            "Promedio ponderado de horas efectivas trabajadas por los ocupados "
-            "presentes (excluye ausencias), con redondeo a 3 decimales."
-        ),
-        "notes": "Denominador = `oc_sin_ausentes`.",
-        "source": "Metodología de horas ENE 2024, sección medición de tiempo de trabajo"  # :contentReference[oaicite:17]{index=17}
-    },
     "pet": {
         "label": "Población en edad de trabajar (PET)",
         "description": "Todas las personas de 15 años o más residentes en Chile, sin límite superior de edad. Sirve de universo para calcular tasas de participación y ocupación.",
@@ -579,76 +568,128 @@ VARIABLE_META = {
 
     "categoria_independientes": {
         "label": "Independientes",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Ocupados/as clasificados como *empleador/a* (código 1), "
+            "*trabajador/a por cuenta propia* (2) o *familiar personal no "
+            "remunerado* (7) en la variable `categoria_ocupacion`."
+        ),
+        "notes": "Agrupa a todos los que trabajan sin contrato de dependencia.",
+        "source": "Glosario ENE 2024, definiciones de Independiente y sus sub-categorías  :contentReference[oaicite:0]{index=0}"
+    },    
+
     "categoria_empleador": {
         "label": "Empleador",
-        "description": "",
+        "description": (
+            "Independiente que opera una empresa, negocio o explotación agropecuaria "
+            "y contrata al menos a un asalariado/a remunerado/a (código 1)."
+        ),
         "notes": "",
-        "source": ""
-    },
-    "categoria_familiar_personal_no_remunerado": {
-        "label": "Familiar personal no remunerado",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "categoria_dependientes": {
-        "label": "Dependientes",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "categoria_asalariados": {
-        "label": "Asalariados",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "source": "INE, Libro de Códigos ENE 2020 — variable `categoria_ocupacion`"  
+    },    
+
     "categoria_cuenta_propia": {
         "label": "Cuenta propia",
-        "description": "",
+        "description": (
+            "Persona que trabaja en forma independiente sin contratar asalariados/as "
+            "y cuyo ingreso procede directamente de la venta de bienes o servicios "
+            "(código 2)."
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia» :contentReference[oaicite:2]{index=2}"
+    },    
+
+    "categoria_familiar_personal_no_remunerado": {
+        "label": "Familiar personal no remunerado",
+        "description": (
+            "Miembro del hogar que trabaja en la empresa, negocio o finca de un "
+            "pariente sin percibir remuneración monetaria ni en especie "
+            "(código 7)."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Trabajador/a familiar no remunerado/a»  :contentReference[oaicite:3]{index=3}"
+    },    
+
+    "categoria_dependientes": {
+        "label": "Dependientes",
+        "description": (
+            "Trabajadores/as que prestan servicios a un empleador bajo relación "
+            "de subordinación, abarcando asalariados/as del sector privado (3), "
+            "público (4) y servicio doméstico (5 y 6)."
+        ),
+        "notes": "Complemento del grupo independientes.",
+        "source": "Glosario ENE 2024, definición de Dependiente  :contentReference[oaicite:4]{index=4}"
+    },    
+
+    "categoria_asalariados": {
+        "label": "Asalariados",
+        "description": (
+            "Dependientes remunerados distintos del servicio doméstico; incluye "
+            "asalariados sector privado (3) y público (4)."
+        ),
+        "notes": "",
+        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3-4"  
+    },    
+
     "categoria_asalariado_sector_privado": {
         "label": "Asalariado sector privado",
-        "description": "",
+        "description": (
+            "Dependiente remunerado cuyo empleador pertenece al sector privado "
+            "(código 3)."
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3"  
+    },    
+
     "categoria_asalariado_sector_publico": {
         "label": "Asalariado sector público",
-        "description": "",
+        "description": (
+            "Dependiente remunerado cuyo empleador corresponde al Estado o sus "
+            "entidades (código 4)."
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 4"  
+    },    
+
     "categoria_servicio_domestico": {
         "label": "Servicio doméstico",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Conjunto de trabajadores/as que realizan labores domésticas "
+            "remuneradas en hogares particulares, puertas afuera (5) o adentro (6)."
+        ),
+        "notes": "Sub-grupo dentro de Dependientes — desagregado por lugar de pernocta.",
+        "source": "Glosario ENE 2019, entrada «Servicio doméstico»  :contentReference[oaicite:8]{index=8}"
+    },    
+
     "categoria_serv_domestico_puertas_afuera": {
         "label": "Servicio doméstico puertas afuera",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Trabajador/a de casa particular que vive en su propio hogar y acude a "
+            "trabajar durante el día (código 5)."
+        ),
+        "notes": "Denominado también *puertas fuera* en normativa laboral chilena.",
+        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular” :contentReference[oaicite:9]{index=9}"
+    },    
+
     "categoria_serv_domestico_puertas_adentro": {
         "label": "Servicio doméstico puertas adentro",
-        "description": "",
+        "description": (
+            "Trabajador/a que reside en el hogar empleador formando parte del "
+            "servicio doméstico (código 6)."
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”  :contentReference[oaicite:10]{index=10}"
+    },    
+
     "categoria_no_corresponde": {
         "label": "No corresponde",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Código 0 reservado a casos sin información o en los que la categoría "
+            "ocupacional no aplica al entrevistado/a."
+        ),
+        "notes": "Se trata de un valor residual utilizado por INE para editar datos faltantes.",
+        "source": "Libro de Códigos ENE 2020, nota al valor 0 en `categoria_ocupacion`"  
     },
+
     "grupo_ciuo_alta": {
         "label": "CIUO grupo alto (1-3)",
         "description": "",
@@ -1102,6 +1143,17 @@ VARIABLE_META = {
         ),
         "notes": "Serie inicia 2017-08.",
         "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:20]{index=20}
+    },
+
+    # ------------------------------------------------------------------ Promedios de horas
+    "promedio_horas_efectivas_sin_ausentes": {
+        "label": "Prom. horas efectivas sin ausentes",
+        "description": (
+            "Promedio ponderado de horas efectivas trabajadas por los ocupados "
+            "presentes (excluye ausencias), con redondeo a 3 decimales."
+        ),
+        "notes": "Denominador = `oc_sin_ausentes`.",
+        "source": "Metodología de horas ENE 2024, sección medición de tiempo de trabajo"  # :contentReference[oaicite:17]{index=17}
     },
     "horas_1_30": {
         "label": "Horas 1–30",
