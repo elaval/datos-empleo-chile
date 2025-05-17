@@ -1,4 +1,16 @@
 {
+  "ano_trimestre": {
+    "label": "Año-Trimestre",
+    "description": "",
+    "notes": "",
+    "source": ""
+  },
+  "mes_central": {
+    "label": "Mes central",
+    "description": "",
+    "notes": "",
+    "source": ""
+  },
   "pet": {
     "label": "Población en edad de trabajar (PET)",
     "description": "Todas las personas de 15 años o más residentes en Chile, sin límite superior de edad. Sirve de universo para calcular tasas de participación y ocupación.",
@@ -35,17 +47,41 @@
     "notes": "",
     "source": "Glosario ENE 2024, «Personas que buscaron trabajo por primera vez»"
   },
-  "tpi": {
-    "label": "Tiempo parcial involuntario (TPI)",
-    "description": "Ocupados/as que trabajan ≤ 30 h habituales y declaran estar disponibles para trabajar más horas inmediatamente o en 15 días.",
+  "fft": {
+    "label": "Fuera de la fuerza de trabajo (FFT)",
+    "description": "Personas en edad de trabajar que, durante la semana de referencia, no estaban ocupadas ni desocupadas.",
     "notes": "",
-    "source": "Glosario ENE 2024, «Ocupados/as a tiempo parcial involuntario»"
+    "source": "Glosario ENE 2024, «Personas fuera de la fuerza de trabajo (FFT)»"
   },
-  "o_informal": {
-    "label": "Ocupados informales",
-    "description": "Dependientes sin cotización de salud ni pensión asociada a su empleador; independientes cuyo negocio pertenece al sector informal o familiares no remunerados.",
-    "notes": "Disponible desde 2017-08.",
-    "source": "Glosario ENE 2019, «Ocupación informal»"
+  "fft_iniciadores": {
+    "label": "Iniciadores fuera de la fuerza de trabajo",
+    "description": "Personas fuera de la fuerza de trabajo que pronto iniciarán una actividad laboral y declararon disponibilidad para comenzar en ≤2 semanas.",
+    "notes": "",
+    "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)» —se usa la misma lógica de clasificación"
+  },
+  "fft_inactivos_potencialmente_activos": {
+    "label": "Inactivos potencialmente activos",
+    "description": "Personas no ocupadas que expresaron interés en trabajar pero cuya búsqueda activa y/o disponibilidad no cumplió los criterios de desocupación.",
+    "notes": "Equivalen a la Fuerza de trabajo potencial (FTP).",
+    "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
+  },
+  "fft_inactivos_habituales": {
+    "label": "Inactivos habituales",
+    "description": "Resto de personas fuera de la fuerza de trabajo que ni buscan trabajo ni están disponibles para hacerlo en el corto plazo.",
+    "notes": "",
+    "source": "Clasificación OIT/INE sobre situación en la fuerza de trabajo"
+  },
+  "obe": {
+    "label": "Ocupados que buscaron empleo (OBE)",
+    "description": "Ocupados/as que, aun teniendo trabajo, realizaron búsqueda activa de otro empleo en las últimas 4 semanas.",
+    "notes": "Componente del numerador de la tasa de presión laboral (TPL).",
+    "source": "Separata técnica ENE 2019: se detalla la tasa y su desagregación"
+  },
+  "id": {
+    "label": "Iniciadores disponibles (ID)",
+    "description": "Personas fuera de la fuerza de trabajo que no buscaron empleo porque comenzarán pronto una ocupación y están disponibles para trabajar en ≤2 semanas.",
+    "notes": "",
+    "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)»"
   },
   "ftp": {
     "label": "Fuerza de trabajo potencial (FTP)",
@@ -59,77 +95,11 @@
     "notes": "",
     "source": "Glosario ENE 2024, «Fuerza de trabajo ampliada (FTA)»"
   },
-  "td": {
-    "label": "Tasa de desocupación (%)",
-    "description": "Desocupados / Fuerza de trabajo × 100, redondeada a 3 decimales.",
-    "notes": "",
-    "source": "Glosario ENE 2019, «Tasa de desocupación»"
-  },
-  "tp": {
-    "label": "Tasa de participación (%)",
-    "description": "Fuerza de trabajo / PET × 100, redondeada a 3 decimales.",
-    "notes": "",
-    "source": "Glosario ENE 2019, «Tasa de participación»"
-  },
-  "to": {
-    "label": "Tasa de ocupación (%)",
-    "description": "Ocupados / PET × 100, redondeada a 3 decimales.",
-    "notes": "",
-    "source": "Glosario ENE 2019, «Tasa de ocupación»"
-  },
-  "ano_trimestre": {
-    "label": "Año-Trimestre",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "mes_central": {
-    "label": "Mes central",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "fft": {
-    "label": "Fuera de la fuerza de trabajo (FFT)",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "fft_iniciadores": {
-    "label": "Iniciadores fuera de la fuerza de trabajo",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "fft_inactivos_potencialmente_activos": {
-    "label": "Inactivos potencialmente activos",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "fft_inactivos_habituales": {
-    "label": "Inactivos habituales",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "obe": {
-    "label": "Ocupados que buscaron empleo (OBE)",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
-  "id": {
-    "label": "Iniciadores disponibles (ID)",
-    "description": "",
-    "notes": "",
-    "source": ""
-  },
   "deseo_trabajar": {
     "label": "Deseo de trabajar",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Personas fuera de la fuerza de trabajo que manifiestan querer trabajar pero no realizaron búsqueda activa.",
+    "notes": "Ítem directo del cuestionario ENE.",
+    "source": "Cuestionario ENE 2022, sección ‘Deseo de trabajar’"
   },
   "o_hombres": {
     "label": "Ocupados hombres",
@@ -157,15 +127,21 @@
   },
   "o_formal": {
     "label": "Ocupados formales",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as cuyo vínculo laboral incluye cotizaciones de salud y pensión pagadas por el empleador o, para independientes, empresas con contabilidad formal inscrita en SII.",
+    "notes": "Estimación vigente desde 2017-08 (cambio de módulo de informalidad).",
+    "source": "Glosario ENE 2024, ‘Ocupado informal’ (definición inversa) + Nota metodológica informalidad INE 2020"
+  },
+  "o_informal": {
+    "label": "Ocupados informales",
+    "description": "Dependientes sin cotización de salud ni pensión asociada a su empleador; independientes cuyo negocio pertenece al sector informal o familiares no remunerados.",
+    "notes": "Disponible desde 2017-08.",
+    "source": "Glosario ENE 2019, «Ocupación informal»"
   },
   "o_sector_informal": {
     "label": "Ocupados en sector informal",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as cuyo negocio o unidad económica pertenece al sector informal —sin registro tributario ni contabilidad separada.",
+    "notes": "Serie arranca en 2017-08 junto con el módulo de informalidad.",
+    "source": "Glosario ENE 2024, ‘Sector informal’"
   },
   "o_sin_basica_completa": {
     "label": "Sin educación básica completa",
@@ -331,9 +307,9 @@
   },
   "grupo_ciuo08_1": {
     "label": "CIUO08 G1 Directivos y gerentes",
-    "description": "",
+    "description": "Ocupados/as cuyo Gran Grupo CIUO-08 = 1 (Directores, gerentes y administradores).",
     "notes": "",
-    "source": ""
+    "source": "CIUO-08 (OIT 2008) — tabla de grandes grupos utilizada por INE"
   },
   "grupo_ciuo08_2": {
     "label": "CIUO08 G2 Profesionales, científicos e intelectuales",
@@ -499,9 +475,9 @@
   },
   "rama_7": {
     "label": "Rama 7: Comercio al por mayor y al por menor",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as cuya actividad económica principal se clasifica en la Sección G de la CIIU Rev.4 (Comercio).",
+    "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
+    "source": "CIIU Rev.4 (ONU, 2008) adaptada a CAENES Rev.4 CL"
   },
   "rama_8": {
     "label": "Rama 8: Transporte y almacenamiento",
@@ -593,17 +569,23 @@
     "notes": "",
     "source": ""
   },
+  "tpi": {
+    "label": "Tiempo parcial involuntario (TPI)",
+    "description": "Ocupados/as que trabajan ≤ 30 h habituales y declaran estar disponibles para trabajar más horas inmediatamente o en 15 días.",
+    "notes": "",
+    "source": "Glosario ENE 2024, «Ocupados/as a tiempo parcial involuntario»"
+  },
   "tpv": {
     "label": "Tiempo parcial voluntario (TPV)",
-    "description": "",
+    "description": "Ocupados/as que trabajan ≤ 30 horas habituales y declaran no querer trabajar más horas.",
     "notes": "",
-    "source": ""
+    "source": "Boletín ENE Nacional 2023: se publica la serie TPV junto a TPI"
   },
   "tp_sin_declarar_voluntareidad": {
     "label": "Tiempo parcial sin declarar voluntariedad",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as ≤ 30 h semanales que no especifican si la reducción de jornada es voluntaria o involuntaria.",
+    "notes": "Cálculo interno; no es indicador oficial INE.",
+    "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"
   },
   "horas_31_44": {
     "label": "Horas 31–44",
@@ -655,9 +637,9 @@
   },
   "promedio_horas_efectivas_sin_ausentes": {
     "label": "Prom. horas efectivas sin ausentes",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Promedio ponderado de horas efectivas trabajadas por los ocupados presentes (excluye ausencias), con redondeo a 3 decimales.",
+    "notes": "Denominador = `oc_sin_ausentes`.",
+    "source": "Metodología de horas ENE 2024, sección medición de tiempo de trabajo"
   },
   "promedio_horas_efectivas_declaran_horas": {
     "label": "Prom. horas efectivas (declaran)",
@@ -671,6 +653,24 @@
     "notes": "",
     "source": ""
   },
+  "td": {
+    "label": "Tasa de desocupación (%)",
+    "description": "Desocupados / Fuerza de trabajo × 100, redondeada a 3 decimales.",
+    "notes": "",
+    "source": "Glosario ENE 2019, «Tasa de desocupación»"
+  },
+  "to": {
+    "label": "Tasa de ocupación (%)",
+    "description": "Ocupados / PET × 100, redondeada a 3 decimales.",
+    "notes": "",
+    "source": "Glosario ENE 2019, «Tasa de ocupación»"
+  },
+  "tp": {
+    "label": "Tasa de participación (%)",
+    "description": "Fuerza de trabajo / PET × 100, redondeada a 3 decimales.",
+    "notes": "",
+    "source": "Glosario ENE 2019, «Tasa de participación»"
+  },
   "tpl": {
     "label": "Tasa de presión laboral (%)",
     "description": "",
@@ -679,27 +679,27 @@
   },
   "su1": {
     "label": "Tasa SU1 (%)",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100.",
+    "notes": "Subutilización de la fuerza de trabajo – definición OIT (resolución 2013).",
+    "source": "Glosario ENE 2024, nota sobre indicadores SU1 a SU4"
   },
   "su2": {
     "label": "Tasa SU2 (%)",
-    "description": "",
+    "description": "[(Desocupados + ID + TPI) / (FT + ID)] × 100.",
     "notes": "",
-    "source": ""
+    "source": "Ídem anterior + Resolución OIT 2013"
   },
   "su3": {
     "label": "Tasa SU3 (%)",
-    "description": "",
+    "description": "[(Desocupados + ID + FTP) / FTA] × 100.",
     "notes": "",
-    "source": ""
+    "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"
   },
   "su4": {
     "label": "Tasa SU4 (%)",
-    "description": "",
+    "description": "[(Desocupados + ID + TPI + FTP) / FTA] × 100.",
     "notes": "",
-    "source": ""
+    "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"
   },
   "toi": {
     "label": "Tasa de empleo informal (%)",

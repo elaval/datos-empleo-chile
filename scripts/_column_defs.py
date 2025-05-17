@@ -1,4 +1,5 @@
 # scripts/_column_defs.py
+from collections import OrderedDict
 
 # mapeo común (old_name, new_name)
 PUBLIC_COLS = [
@@ -188,6 +189,176 @@ SUFIJOS = {
 }
 
 VARIABLE_META = {
+    # ------------------------------------------------------------------ FFT
+    "fft": {
+        "label": "Fuera de la fuerza de trabajo (FFT)",
+        "description": (
+            "Personas en edad de trabajar que, durante la semana de referencia, "
+            "no estaban ocupadas ni desocupadas."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Personas fuera de la fuerza de trabajo (FFT)»"  # :contentReference[oaicite:0]{index=0}
+    },
+    "fft_iniciadores": {
+        "label": "Iniciadores fuera de la fuerza de trabajo",
+        "description": (
+            "Personas fuera de la fuerza de trabajo que pronto iniciarán "
+            "una actividad laboral y declararon disponibilidad para comenzar en ≤2 semanas."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)» —se usa la misma lógica de clasificación"  # :contentReference[oaicite:1]{index=1}
+    },
+    "fft_inactivos_potencialmente_activos": {
+        "label": "Inactivos potencialmente activos",
+        "description": (
+            "Personas no ocupadas que expresaron interés en trabajar pero cuya "
+            "búsqueda activa y/o disponibilidad no cumplió los criterios de desocupación."
+        ),
+        "notes": "Equivalen a la Fuerza de trabajo potencial (FTP).",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"  # :contentReference[oaicite:2]{index=2}
+    },
+    "fft_inactivos_habituales": {
+        "label": "Inactivos habituales",
+        "description": (
+            "Resto de personas fuera de la fuerza de trabajo que ni buscan trabajo "
+            "ni están disponibles para hacerlo en el corto plazo."
+        ),
+        "notes": "",
+        "source": "Clasificación OIT/INE sobre situación en la fuerza de trabajo"  # :contentReference[oaicite:3]{index=3}
+    },
+
+    # ------------------------------------------------------------------ Sub-utilización / presión
+    "obe": {
+        "label": "Ocupados que buscaron empleo (OBE)",
+        "description": (
+            "Ocupados/as que, aun teniendo trabajo, realizaron búsqueda activa "
+            "de otro empleo en las últimas 4 semanas."  # definición abreviada
+        ),
+        "notes": "Componente del numerador de la tasa de presión laboral (TPL).",
+        "source": "Separata técnica ENE 2019: se detalla la tasa y su desagregación"  # :contentReference[oaicite:4]{index=4}
+    },
+    "id": {
+        "label": "Iniciadores disponibles (ID)",
+        "description": (
+            "Personas fuera de la fuerza de trabajo que no buscaron empleo porque "
+            "comenzarán pronto una ocupación y están disponibles para trabajar "
+            "en ≤2 semanas."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)»"  # :contentReference[oaicite:5]{index=5}
+    },
+    "deseo_trabajar": {
+        "label": "Deseo de trabajar",
+        "description": (
+            "Personas fuera de la fuerza de trabajo que manifiestan querer "
+            "trabajar pero no realizaron búsqueda activa."
+        ),
+        "notes": "Ítem directo del cuestionario ENE.",
+        "source": "Cuestionario ENE 2022, sección ‘Deseo de trabajar’"  # :contentReference[oaicite:6]{index=6}
+    },
+
+    # ------------------------------------------------------------------ Formalidad e informalidad
+    "o_formal": {
+        "label": "Ocupados formales",
+        "description": (
+            "Ocupados/as cuyo vínculo laboral incluye cotizaciones de salud "
+            "y pensión pagadas por el empleador o, para independientes, "
+            "empresas con contabilidad formal inscrita en SII."
+        ),
+        "notes": "Estimación vigente desde 2017-08 (cambio de módulo de informalidad).",
+        "source": "Glosario ENE 2024, ‘Ocupado informal’ (definición inversa) + Nota metodológica informalidad INE 2020"  # :contentReference[oaicite:7]{index=7}
+    },
+    "o_sector_informal": {
+        "label": "Ocupados en sector informal",
+        "description": (
+            "Ocupados/as cuyo negocio o unidad económica pertenece al sector "
+            "informal —sin registro tributario ni contabilidad separada."
+        ),
+        "notes": "Serie arranca en 2017-08 junto con el módulo de informalidad.",
+        "source": "Glosario ENE 2024, ‘Sector informal’"  # :contentReference[oaicite:8]{index=8}
+    },
+
+    # ------------------------------------------------------------------ Tasas SU1-SU4
+    "su1": {
+        "label": "Tasa SU1 (%)",
+        "description": (
+            "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100."
+        ),
+        "notes": "Subutilización de la fuerza de trabajo – definición OIT (resolución 2013).",
+        "source": "Glosario ENE 2024, nota sobre indicadores SU1 a SU4"  # :contentReference[oaicite:9]{index=9}
+    },
+    "su2": {
+        "label": "Tasa SU2 (%)",
+        "description": "[(Desocupados + ID + TPI) / (FT + ID)] × 100.",
+        "notes": "",
+        "source": "Ídem anterior + Resolución OIT 2013"  # :contentReference[oaicite:10]{index=10}
+    },
+    "su3": {
+        "label": "Tasa SU3 (%)",
+        "description": "[(Desocupados + ID + FTP) / FTA] × 100.",
+        "notes": "",
+        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  # :contentReference[oaicite:11]{index=11}
+    },
+    "su4": {
+        "label": "Tasa SU4 (%)",
+        "description": "[(Desocupados + ID + TPI + FTP) / FTA] × 100.",
+        "notes": "",
+        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  # :contentReference[oaicite:12]{index=12}
+    },
+
+    # ------------------------------------------------------------------ Horas y tiempo parcial
+    "tpv": {
+        "label": "Tiempo parcial voluntario (TPV)",
+        "description": (
+            "Ocupados/as que trabajan ≤ 30 horas habituales y declaran "
+            "no querer trabajar más horas."
+        ),
+        "notes": "",
+        "source": "Boletín ENE Nacional 2023: se publica la serie TPV junto a TPI"  # :contentReference[oaicite:13]{index=13}
+    },
+    "tp_sin_declarar_voluntareidad": {
+        "label": "Tiempo parcial sin declarar voluntariedad",
+        "description": (
+            "Ocupados/as ≤ 30 h semanales que no especifican si la reducción "
+            "de jornada es voluntaria o involuntaria."
+        ),
+        "notes": "Cálculo interno; no es indicador oficial INE.",
+        "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"  # :contentReference[oaicite:14]{index=14}
+    },
+
+    # ------------------------------------------------------------------ Ejemplo genérico de grupos CIUO y ramas
+    "grupo_ciuo08_1": {
+        "label": "CIUO08 G1 Directivos y gerentes",
+        "description": (
+            "Ocupados/as cuyo Gran Grupo CIUO-08 = 1 (Directores, gerentes y "
+            "administradores)."
+        ),
+        "notes": "",
+        "source": "CIUO-08 (OIT 2008) — tabla de grandes grupos utilizada por INE"  # :contentReference[oaicite:15]{index=15}
+    },
+    # … (repetir patrón para CIUO-08_2-10 y CIUO-88_1-10) …
+
+    "rama_7": {
+        "label": "Rama 7: Comercio al por mayor y al por menor",
+        "description": (
+            "Ocupados/as cuya actividad económica principal se clasifica en la "
+            "Sección G de la CIIU Rev.4 (Comercio)."
+        ),
+        "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
+        "source": "CIIU Rev.4 (ONU, 2008) adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:16]{index=16}
+    },
+    # … idem ramas 1-21 …
+
+    # ------------------------------------------------------------------ Promedios de horas
+    "promedio_horas_efectivas_sin_ausentes": {
+        "label": "Prom. horas efectivas sin ausentes",
+        "description": (
+            "Promedio ponderado de horas efectivas trabajadas por los ocupados "
+            "presentes (excluye ausencias), con redondeo a 3 decimales."
+        ),
+        "notes": "Denominador = `oc_sin_ausentes`.",
+        "source": "Metodología de horas ENE 2024, sección medición de tiempo de trabajo"  # :contentReference[oaicite:17]{index=17}
+    },
     "pet": {
         "label": "Población en edad de trabajar (PET)",
         "description": "Todas las personas de 15 años o más residentes en Chile, sin límite superior de edad. Sirve de universo para calcular tasas de participación y ocupación.",
@@ -278,48 +449,6 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
-    "fft": {
-        "label": "Fuera de la fuerza de trabajo (FFT)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "fft_iniciadores": {
-        "label": "Iniciadores fuera de la fuerza de trabajo",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "fft_inactivos_potencialmente_activos": {
-        "label": "Inactivos potencialmente activos",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "fft_inactivos_habituales": {
-        "label": "Inactivos habituales",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "obe": {
-        "label": "Ocupados que buscaron empleo (OBE)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "id": {
-        "label": "Iniciadores disponibles (ID)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "deseo_trabajar": {
-        "label": "Deseo de trabajar",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
     "o_hombres": {
         "label": "Ocupados hombres",
         "description": "",
@@ -340,18 +469,6 @@ VARIABLE_META = {
     },
     "o_extranjero": {
         "label": "Ocupados extranjeros",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "o_formal": {
-        "label": "Ocupados formales",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "o_sector_informal": {
-        "label": "Ocupados en sector informal",
         "description": "",
         "notes": "",
         "source": ""
@@ -518,12 +635,6 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
-    "grupo_ciuo08_1": {
-        "label": "CIUO08 G1 Directivos y gerentes",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
     "grupo_ciuo08_2": {
         "label": "CIUO08 G2 Profesionales, científicos e intelectuales",
         "description": "",
@@ -686,12 +797,6 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
-    "rama_7": {
-        "label": "Rama 7: Comercio al por mayor y al por menor",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
     "rama_8": {
         "label": "Rama 8: Transporte y almacenamiento",
         "description": "",
@@ -782,18 +887,6 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
-    "tpv": {
-        "label": "Tiempo parcial voluntario (TPV)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "tp_sin_declarar_voluntareidad": {
-        "label": "Tiempo parcial sin declarar voluntariedad",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
     "horas_31_44": {
         "label": "Horas 31–44",
         "description": "",
@@ -842,12 +935,6 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
-    "promedio_horas_efectivas_sin_ausentes": {
-        "label": "Prom. horas efectivas sin ausentes",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
     "promedio_horas_efectivas_declaran_horas": {
         "label": "Prom. horas efectivas (declaran)",
         "description": "",
@@ -866,30 +953,6 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
-    "su1": {
-        "label": "Tasa SU1 (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "su2": {
-        "label": "Tasa SU2 (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "su3": {
-        "label": "Tasa SU3 (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    "su4": {
-        "label": "Tasa SU4 (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
     "toi": {
         "label": "Tasa de empleo informal (%)",
         "description": "",
@@ -901,9 +964,26 @@ VARIABLE_META = {
         "description": "",
         "notes": "",
         "source": ""
-    }
+    },
+
+    
 }
 
+# ---------------------------------------------------------------------
+# Re-ordena VARIABLE_META según PUBLIC_COLS (lo que no esté en la lista
+# se agrega manteniendo su orden de aparición original)
+
+
+_PUBLIC_ORDER = [code for code, _ in PUBLIC_COLS]          # 1) orden oficial
+_VARIABLE_REST = [k for k in VARIABLE_META if k not in _PUBLIC_ORDER]
+
+ORDERED_VARIABLE_META = OrderedDict()
+for code in _PUBLIC_ORDER + _VARIABLE_REST:
+    if code in VARIABLE_META:
+        ORDERED_VARIABLE_META[code] = VARIABLE_META[code]
+
+# Sustituye el diccionario original por el ordenado
+VARIABLE_META = ORDERED_VARIABLE_META
 
 # Diccionario: variable → fecha de arranque
 START_DATES = {
