@@ -29,7 +29,7 @@ df = pd.read_parquet(url)
 
 ## 3 | Diccionario de datos (nivel trimestre móvil)
 ## Diccionario de variables
-👉 Consulte la lista completa en [`docs/variables.md`](docs/variables.md)                 |
+👉 Consulte la lista completa en [`../docs/variables.md`](../docs/variables.md)                 |
 
 ## 4 | Reproducibilidad
 
