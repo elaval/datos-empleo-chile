@@ -75,17 +75,29 @@ FINAL_COLS = [
     "grupo_ciuo_media",
     "grupo_ciuo_baja",
     "grupo_ciuo_otras",
-    "grupo_ciuo_1",
-    "grupo_ciuo_2",
-    "grupo_ciuo_3",
-    "grupo_ciuo_4",
-    "grupo_ciuo_5",
-    "grupo_ciuo_6",
-    "grupo_ciuo_7",
-    "grupo_ciuo_8",
-    "grupo_ciuo_9",
-    "grupo_ciuo_10",
-    "grupo_ciuo_nsnr",
+    "grupo_ciuo08_1",
+    "grupo_ciuo08_2",
+    "grupo_ciuo08_3",
+    "grupo_ciuo08_4",
+    "grupo_ciuo08_5",
+    "grupo_ciuo08_6",
+    "grupo_ciuo08_7",
+    "grupo_ciuo08_8",
+    "grupo_ciuo08_9",
+    "grupo_ciuo08_10",
+    "grupo_ciuo08_nsnr",
+
+    "grupo_ciuo88_1",
+    "grupo_ciuo88_2",
+    "grupo_ciuo88_3",
+    "grupo_ciuo88_4",
+    "grupo_ciuo88_5",
+    "grupo_ciuo88_6",
+    "grupo_ciuo88_7",
+    "grupo_ciuo88_8",
+    "grupo_ciuo88_9",
+    "grupo_ciuo88_10",
+    "grupo_ciuo88_nsnr",
 
     "rama_1",
     "rama_2",
@@ -138,6 +150,67 @@ FINAL_COLS = [
     "toi",
     "tosi",
 ]
+
+# Diccionario: variable → fecha de arranque
+START_DATES = {
+    "o_formal": "2017-08",
+    "o_informal": "2017-08",
+    "o_sector_informal": "2017-08",
+    "toi": "2017-08",
+    "tosi":   "2017-08",
+    "deseo_trabajar": "2020-02",
+    "grupo_ciuo_nsnr": "2019-12",
+    "rama_1": "2017-08",
+    "rama_2": "2017-08",
+    "rama_3": "2017-08",
+    "rama_4": "2017-08",
+    "rama_5": "2017-08",
+    "rama_6": "2017-08",
+    "rama_7": "2017-08",
+    "rama_8": "2017-08",
+    "rama_9": "2017-08",
+    "rama_10": "2017-08",
+    "rama_11": "2017-08",
+    "rama_12": "2017-08",
+    "rama_13": "2017-08",
+    "rama_14": "2017-08",
+    "rama_15": "2017-08",
+    "rama_16": "2017-08",
+    "rama_17": "2017-08",
+    "rama_18": "2017-08",
+    "rama_19": "2017-08",
+    "rama_20": "2017-08",
+    "rama_21": "2017-08",
+    "grupo_ciuo08_1": "2017-02",
+    "grupo_ciuo08_2": "2017-02",
+    "grupo_ciuo08_3": "2017-02",
+    "grupo_ciuo08_4": "2017-02",
+    "grupo_ciuo08_5": "2017-02",
+    "grupo_ciuo08_6": "2017-02",
+    "grupo_ciuo08_7": "2017-02",
+    "grupo_ciuo08_8": "2017-02",
+    "grupo_ciuo08_9": "2017-02",
+    "grupo_ciuo08_10": "2017-02",
+    "grupo_ciuo08_nsnr": "2017-02",
+
+}
+
+# Diccionario: variable → fecha de arranque
+END_DATES = {
+
+    "grupo_ciuo88_1": "2019-02",
+    "grupo_ciuo88_2": "2019-02",
+    "grupo_ciuo88_3": "2019-02",
+    "grupo_ciuo88_4": "2019-02",
+    "grupo_ciuo88_5": "2019-02",
+    "grupo_ciuo88_6": "2019-02",
+    "grupo_ciuo88_7": "2019-02",
+    "grupo_ciuo88_8": "2019-02",
+    "grupo_ciuo88_9": "2019-02",
+    "grupo_ciuo88_10": "2019-02",
+    "grupo_ciuo88_nsnr": "2019-02",
+
+}
 
 # rutas base
 ROOT                 = pathlib.Path(__file__).resolve().parents[1]
@@ -240,6 +313,35 @@ def rule_grupo_ciuo_8(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] 
 def rule_grupo_ciuo_9(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 9)
 def rule_grupo_ciuo_10(df):   return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 10)
 def rule_grupo_ciuo_nsnr(df):   return rule_ocupados(df) & (~df["ciuo_gran_grupo"].between(1,10))
+
+def rule_grupo_ciuo08_1(df):    return rule_ocupados(df) & (df["b1"] == 1)
+def rule_grupo_ciuo08_2(df):    return rule_ocupados(df) & (df["b1"] == 2)
+def rule_grupo_ciuo08_3(df):    return rule_ocupados(df) & (df["b1"] == 3)
+def rule_grupo_ciuo08_4(df):    return rule_ocupados(df) & (df["b1"] == 4)
+def rule_grupo_ciuo08_5(df):    return rule_ocupados(df) & (df["b1"] == 5)
+def rule_grupo_ciuo08_6(df):    return rule_ocupados(df) & (df["b1"] == 6)
+def rule_grupo_ciuo08_7(df):    return rule_ocupados(df) & (df["b1"] == 7)
+def rule_grupo_ciuo08_8(df):    return rule_ocupados(df) & (df["b1"] == 8)
+def rule_grupo_ciuo08_9(df):    return rule_ocupados(df) & (df["b1"] == 9)
+def rule_grupo_ciuo08_10(df):   return rule_ocupados(df) & (df["b1"] == 10)
+def rule_grupo_ciuo08_nsnr(df):   return rule_ocupados(df) & (~df["b1"].between(1,10))
+
+def rule_grupo_ciuo88_1(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 1)
+def rule_grupo_ciuo88_2(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 2)
+def rule_grupo_ciuo88_3(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 3)
+def rule_grupo_ciuo88_4(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 4)
+def rule_grupo_ciuo88_5(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 5)
+def rule_grupo_ciuo88_6(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 6)
+def rule_grupo_ciuo88_7(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 7)
+def rule_grupo_ciuo88_8(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 8)
+def rule_grupo_ciuo88_9(df):    return rule_ocupados(df) & (df["b1_ciuo88"] == 9)
+def rule_grupo_ciuo88_10(df):   return rule_ocupados(df) & (df["b1_ciuo88"] == 10)
+def rule_grupo_ciuo88_nsnr(df):   return rule_ocupados(df) & (~df["b1_ciuo88"].between(1,10))
+
+
+
+
+
 
 def rule_hombres(df):           return rule_ocupados(df) & (df["sexo"] == 1)
 def rule_mujeres(df):           return rule_ocupados(df) & (df["sexo"] == 2)
@@ -461,6 +563,30 @@ RULES: dict[str, callable] = {
     "grupo_ciuo_10": rule_grupo_ciuo_10,
     "grupo_ciuo_nsnr": rule_grupo_ciuo_nsnr,
 
+    "grupo_ciuo08_1": rule_grupo_ciuo08_1,
+    "grupo_ciuo08_2": rule_grupo_ciuo08_2,
+    "grupo_ciuo08_3": rule_grupo_ciuo08_3,
+    "grupo_ciuo08_4": rule_grupo_ciuo08_4,
+    "grupo_ciuo08_5": rule_grupo_ciuo08_5,
+    "grupo_ciuo08_6": rule_grupo_ciuo08_6,
+    "grupo_ciuo08_7": rule_grupo_ciuo08_7,
+    "grupo_ciuo08_8": rule_grupo_ciuo08_8,
+    "grupo_ciuo08_9": rule_grupo_ciuo08_9,
+    "grupo_ciuo08_10": rule_grupo_ciuo08_10,
+    "grupo_ciuo08_nsnr": rule_grupo_ciuo08_nsnr,
+
+    "grupo_ciuo88_1": rule_grupo_ciuo88_1,
+    "grupo_ciuo88_2": rule_grupo_ciuo88_2,
+    "grupo_ciuo88_3": rule_grupo_ciuo88_3,
+    "grupo_ciuo88_4": rule_grupo_ciuo88_4,
+    "grupo_ciuo88_5": rule_grupo_ciuo88_5,
+    "grupo_ciuo88_6": rule_grupo_ciuo88_6,
+    "grupo_ciuo88_7": rule_grupo_ciuo88_7,
+    "grupo_ciuo88_8": rule_grupo_ciuo88_8,
+    "grupo_ciuo88_9": rule_grupo_ciuo88_9,
+    "grupo_ciuo88_10": rule_grupo_ciuo88_10,
+    "grupo_ciuo88_nsnr": rule_grupo_ciuo88_nsnr,
+
     "o_hombres": rule_hombres,
     "o_mujeres": rule_mujeres,
 
@@ -640,6 +766,25 @@ def main() -> int:
     #    "o_declaran_horas", "oc_sin_ausentes"
     ], inplace=True)
 
+    # Crea la columna de fecha una sola vez
+    resumen["fecha"] = pd.to_datetime(
+        resumen["ano_trimestre"].astype(str) + "-" +
+        resumen["mes_central"].astype(str).str.zfill(2) + "-01"
+    )
+
+    for var, date_str in START_DATES.items():
+        resumen[var] = resumen[var].mask(
+            resumen["fecha"] < pd.Timestamp(date_str),
+            other=pd.NA
+        )
+
+    for var, date_str in END_DATES.items():
+        resumen[var] = resumen[var].mask(
+            resumen["fecha"] > pd.Timestamp(date_str),
+            other=pd.NA
+        )
+
+    resumen.drop(columns="fecha", inplace=True)
 
     # Reordeno según la constante FINAL_COLS
     resumen = resumen[FINAL_COLS]
