@@ -3,88 +3,142 @@
 # mapeo común (old_name, new_name)
 PUBLIC_COLS = [
     # ── Identificadores temporales ─────────────────────────────────────
-    ("ano_trimestre",               "ano_trimestre"),
-    ("mes_central",                 "mes_central"),
+    ("ano_trimestre", "Año-Trimestre"),
+    ("mes_central",   "Mes central"),
 
-    # ── Totales de población (miles de personas) ───────────────────────
-    ("pet",      "poblacion_en_edad_de_trabajar (pet)"),
-    ("ft",                         "fuerza_de_trabajo (ft)"),
-    ("o",           "personas_ocupadas (o)"),
-    ("do",        "personas_desocupadas (do)"),
-    ("cesantes",        "cesantes"),
-    ("busca_trabajo_por_primera_vez", "busca_trabajo_por_primera_vez"),
-    ("fft",                         "fuera_de_la_fuerza_de_trabajo (fft)"),
-    ("fft_iniciadores", "fft_iniciadores"),
-    ("fft_inactivos_potencialmente_activos", "fft_inactivos_potencialmente_activos"),
-    ("fft_inactivos_habituales", "fft_inactivos_habituales"),
-   
-    # ── Ocupados por sexo y nacionalidad ────────────────────────────────
-    ("oc_hombres",                  "ocupados_hombres"),
-    ("oc_mujeres",                  "ocupados_mujeres"),
-    ("oc_chile",                    "ocupados_chilenos"),
-    ("oc_extranjero",               "ocupados_extranjeros"),
+    # ── Totales de población ─────────────────────────────────────────────
+    ("pet",      "Población en edad de trabajar (PET)"),
+    ("ft",       "Fuerza de trabajo (FT)"),
+    ("o",        "Personas ocupadas"),
+    ("do",       "Personas desocupadas"),
+    ("cesantes", "Cesantes"),
+    ("busca_trabajo_por_primera_vez", "Buscan trabajo por primera vez"),
+    ("fft",      "Fuera de la fuerza de trabajo (FFT)"),
+    ("fft_iniciadores", "Iniciadores fuera de la fuerza de trabajo"),
+    ("fft_inactivos_potencialmente_activos", "Inactivos potencialmente activos"),
+    ("fft_inactivos_habituales",           "Inactivos habituales"),
 
-    # ── Formalidad, TPI y sector ─────────────────────────────────────────
-    ("oc_formal",                   "ocupados_formales"),
-    ("oc_informal",                 "ocupados_informales"),
-    ("oc_tpi",                      "ocupados_tiempo_parcial_involuntario"),
-    ("oc_sector_publico",           "ocupados_sector_publico"),
-    ("oc_no_sector_publico",        "ocupados_sector_no_publico"),
+    # ── Subgrupos especiales ────────────────────────────────────────────
+    ("obe",     "Ocupados que buscaron empleo (OBE)"),
+    ("id",      "Iniciadores disponibles (ID)"),
+    ("ftp",     "Fuerza de trabajo potencial (FTP)"),
+    ("fta",     "Fuerza de trabajo ajustada (FTA)"),
+    ("deseo_trabajar", "Deseo de trabajar"),
 
-    # ── Nivel educacional de ocupados ───────────────────────────────────
-    ("oc_sin_ed_basica",            "ocupados_sin_educ_basica_completa"),
-    ("oc_ed_basica",                "ocupados_educ_basica_completa"),
-    ("oc_ed_media",                 "ocupados_educ_media_completa"),
-    ("oc_ed_sup",                   "ocupados_educ_superior_completa"),
-    ("oc_ed_sup_cft",               "ocupados_educ_superior_cft"),
-    ("oc_ed_sup_ip",                "ocupados_educ_superior_ip"),
-    ("oc_ed_sup_univ",              "ocupados_educ_superior_universitaria"),
+    # ── Ocupados por sexo y origen ──────────────────────────────────────
+    ("o_hombres",    "Ocupados hombres"),
+    ("o_mujeres",    "Ocupados mujeres"),
+    ("o_chile",      "Ocupados chilenos"),
+    ("o_extranjero", "Ocupados extranjeros"),
 
-    # ── Calificación ocupacional (CIUO) ─────────────────────────────────
-    ("oc_ciuo_alta",                "ocupados_ciuo_grupo_1_3"),
-    ("oc_ciuo_media_baja",          "ocupados_ciuo_grupo_4_9"),
-    ("oc_ciuo_media",               "ocupados_ciuo_grupo_4_8"),
-    ("oc_ciuo_baja",                "ocupados_ciuo_grupo_9"),
-    ("oc_ciuo_otras",               "ocupados_ciuo_grupo_otros"),
+    # ── Formalidad y sector ─────────────────────────────────────────────
+    ("o_formal",          "Ocupados formales"),
+    ("o_informal",        "Ocupados informales"),
+    ("o_sector_informal", "Ocupados en sector informal"),
 
-    # ── Educación superior × CIUO ────────────────────────────────────────
-    ("oc_ed_sup_ciuo_alta",         "sup_completa_ciuo_alta"),
-    ("oc_ed_sup_ciuo_media_baja",   "sup_completa_ciuo_media_baja"),
-    ("oc_ed_sup_ciuo_no_alta",      "sup_completa_ciuo_no_alta"),
+    # ── Educación ────────────────────────────────────────────────────────
+    ("o_sin_basica_completa", "Sin educación básica completa"),
+    ("o_ed_basica_completa",  "Educación básica completa"),
+    ("o_ed_media_completa",   "Educación media completa"),
+    ("o_ed_sup_completa",     "Educación superior completa"),
+    ("o_ed_sup_cft",          "Edu. superior en CFT"),
+    ("o_ed_sup_ip",           "Edu. superior en IP"),
+    ("o_ed_sup_univ",         "Edu. superior universitaria"),
 
-    # ── Tasas oficiales del INE (%) ─────────────────────────────────────
-    ("tp",                          "tasa_participacion"),
-    ("to",                          "tasa_ocupacion"),
-    ("td",                          "tasa_desocupacion"),
-    ("toi",                         "tasa_informalidad_ocupacional"),
-    ("tpl",                         "tasa_presion_laboral"),
-    ("su1",                         "tasa_su1"),
-    ("su2",                         "tasa_su2"),
-    ("su3",                         "tasa_su3"),
-    ("su4",                         "tasa_su4"),
+    ("categoria_independientes", "Independientes"),
+    ("categoria_empleador",      "Empleador"),
+    ("categoria_familiar_personal_no_remunerado", "Familiar personal no remunerado"),
+    ("categoria_dependientes",   "Dependientes"),
+    ("categoria_asalariados",    "Asalariados"),
+    ("categoria_cuenta_propia",  "Cuenta propia"),
+    ("categoria_asalariado_sector_privado", "Asalariado sector privado"),
+    ("categoria_asalariado_sector_publico",  "Asalariado sector público"),
+    ("categoria_servicio_domestico",         "Servicio doméstico"),
+    ("categoria_serv_domestico_puertas_afuera", "Servicio doméstico puertas afuera"),
+    ("categoria_serv_domestico_puertas_adentro",  "Servicio doméstico puertas adentro"),
+    ("categoria_no_corresponde", "No corresponde"),
 
-    ("horas_1_30",   "ocupados_horas_1_30"),
-    ("horas_31_44",  "ocupados_horas_31_44"),
-    ("horas_31_39",  "ocupados_horas_31_39"),
-    ("horas_40",     "ocupados_horas_40"),
-    ("horas_41_44",  "ocupados_horas_41_44"),
-    ("horas_45",     "ocupados_horas_45"),
-    ("horas_46_mas", "ocupados_horas_46_o_mas"),
 
-    # ── Ocupados por tramo etario ───────────────────────────────────────────
-    ("oc_edad_15_24", "ocupados_15_24_anos"),
-    ("oc_edad_25_34", "ocupados_25_34_anos"),
-    ("oc_edad_35_44", "ocupados_35_44_anos"),
-    ("oc_edad_45_54", "ocupados_45_54_anos"),
-    ("oc_edad_55_64", "ocupados_55_64_anos"),
-    ("oc_edad_65_mas","ocupados_65_o_mas_anos"),
+   # ── Grupos CIUO ──────────────────────────────────────────────────────
+    ("grupo_ciuo_alta",       "CIUO grupo alto (1-3)"),
+    ("grupo_ciuo_media_baja", "CIUO grupo medio-bajo (4-9)"),
+    ("grupo_ciuo_media",      "CIUO grupo medio (4-8)"),
+    ("grupo_ciuo_baja",       "CIUO grupo bajo (9)"),
+    ("grupo_ciuo_otras",      "CIUO otros"),
 
+    # ── Edu. superior × CIUO ─────────────────────────────────────────────
+    ("o_ed_sup_ciuo_alta",       "Ed Supuerior y Grupo CIUO alto"),
+    ("o_ed_sup_ciuo_media_baja", "Ed Supuerior y Grupo CIUO medio-bajo"),
+    ("o_ed_sup_ciuo_no_alta",    "Ed Supuerior y Grupo CIUO bajo"),
+
+    # ── Grupos CIUO (1 a 10) ────────────────────────────────────────────
+    ("grupo_ciuo_1",  "Grupo 1: Directores, gerentes y administradores"),
+    ("grupo_ciuo_2",  "Grupo 2: Profesionales, científicos e intelectuales"),
+    ("grupo_ciuo_3",  "Grupo 3: Técnicos y profesionales de nivel medio"),
+    ("grupo_ciuo_4",  "Grupo 4: Personal de apoyo administrativo"),
+    ("grupo_ciuo_5",  "Grupo 5: Trabajadores de servicios y vendedores de comercios y mercados"),
+    ("grupo_ciuo_6",  "Grupo 6: Agricultores y trabajadores calif. agropecuarios, forestales y pesqueros"),
+    ("grupo_ciuo_7",  "Grupo 7: Artesanos y operarios de oficios"),
+    ("grupo_ciuo_8",  "Grupo 8: Operadores de instalaciones, máquinas y ensambladores"),
+    ("grupo_ciuo_9",  "Grupo 9: Ocupaciones elementales"),
+    ("grupo_ciuo_10", "Grupo 10: Otros no identificados"),
+    ("grupo_ciuo_nsnr", "CIUO NS/NR"),
+
+    # ── Ramas de actividad (1 a 21) ──────────────────────────────────────
+    ("rama_1",  "Rama 1: Agricultura, ganadería, silvicultura y pesca"),
+    ("rama_2",  "Rama 2: Explotación de minas y canteras"),
+    ("rama_3",  "Rama 3: Industrias manufactureras"),
+    ("rama_4",  "Rama 4: Suministro de electricidad, gas, vapor y aire acondicionado"),
+    ("rama_5",  "Rama 5: Suministro de agua"),
+    ("rama_6",  "Rama 6: Construcción"),
+    ("rama_7",  "Rama 7: Comercio al por mayor y al por menor"),
+    ("rama_8",  "Rama 8: Transporte y almacenamiento"),
+    ("rama_9",  "Rama 9: Actividades de alojamiento y de servicio de comidas"),
+    ("rama_10", "Rama 10: Información y comunicaciones"),
+    ("rama_11", "Rama 11: Actividades financieras y de seguros"),
+    ("rama_12", "Rama 12: Actividades inmobiliarias"),
+    ("rama_13", "Rama 13: Actividades profesionales, científicas y técnicas"),
+    ("rama_14", "Rama 14: Actividades de servicios administrativos y de apoyo"),
+    ("rama_15", "Rama 15: Administración pública y defensa"),
+    ("rama_16", "Rama 16: Enseñanza"),
+    ("rama_17", "Rama 17: Actividades de atención de la salud humana y de asistencia social"),
+    ("rama_18", "Rama 18: Actividades artísticas, de entretenimiento y recreativas"),
+    ("rama_19", "Rama 19: Otras actividades de servicios"),
+    ("rama_20", "Rama 20: Actividades de los hogares como empleadores"),
+    ("rama_21", "Rama 21: Actividades de organizaciones y órganos extraterritoriales"),
+
+    # ── Horas trabajadas ────────────────────────────────────────────────
+    ("horas_1_30", "Horas 1–30"),
+    ("tpi",        "Tiempo parcial involuntario (TPI)"),
+    ("tpv",        "Tiempo parcial voluntario (TPV)"),
+    ("tp_sin_declarar_voluntareidad", "Tiempo parcial sin declarar voluntariedad"),
+    ("horas_31_44", "Horas 31–44"),
+    ("horas_31_39", "Horas 31–39"),
+    ("horas_40",    "Horas 40"),
+    ("horas_41_44", "Horas 41–44"),
+    ("horas_45",    "Horas 45"),
+    ("horas_46_mas","Horas ≥46"),
+    ("horas_efectivas_46_mas", "Horas efectivas ≥46"),
+    ("o_declaran_horas",      "Ocupados que declaran horas"),
 
     # ── Promedios de horas ───────────────────────────────────────────────
-    ("promedio_horas_habituales",             "promedio_horas_habituales"),
-    ("promedio_horas_efectivas_presente",     "promedio_horas_efectivas_presente"),
-    ("promedio_horas_efectivas_total",        "promedio_horas_efectivas_total"),
+    ("promedio_horas_efectivas_sin_ausentes",  "Prom. horas efectivas sin ausentes"),
+    ("promedio_horas_efectivas_declaran_horas","Prom. horas efectivas (declaran)"),
+    ("promedio_horas_habituales",              "Prom. horas habituales"),
+
+    # ── Tasas (%) ────────────────────────────────────────────────────────
+    ("td",   "Tasa de desocupación (%)"),
+    ("to",   "Tasa de ocupación (%)"),
+    ("tp",   "Tasa de participación (%)"),
+    ("tpl",  "Tasa de presión laboral (%)"),
+    ("su1",  "Tasa SU1 (%)"),
+    ("su2",  "Tasa SU2 (%)"),
+    ("su3",  "Tasa SU3 (%)"),
+    ("su4",  "Tasa SU4 (%)"),
+    ("toi",  "Tasa de empleo informal (%)"),
+    ("tosi", "Tasa de empleo en sector informal (%)"),
 ]
+
 
 # sufijos para cada mes
 SUFIJOS = {

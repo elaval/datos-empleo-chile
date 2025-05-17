@@ -38,6 +38,25 @@ FINAL_COLS = [
     "ftp",
     "fta",
     "deseo_trabajar",
+
+    "o_hombres",
+    "o_mujeres",
+    "o_chile",
+    "o_extranjero",
+    "o_formal",
+    "o_informal",
+    "o_sector_informal",
+    "o_sin_basica_completa",
+    "o_ed_basica_completa",
+    "o_ed_media_completa",
+    "o_ed_sup_completa",
+    "o_ed_sup_cft",
+    "o_ed_sup_ip",
+    "o_ed_sup_univ",
+
+    "o_ed_sup_ciuo_alta",
+    "o_ed_sup_ciuo_media_baja",
+    "o_ed_sup_ciuo_no_alta",
     
     "categoria_independientes",
     "categoria_empleador",
@@ -51,17 +70,44 @@ FINAL_COLS = [
     "categoria_serv_domestico_puertas_afuera",
     "categoria_serv_domestico_puertas_adentro",
 
-    "grupo_1",
-    "grupo_2",
-    "grupo_3",
-    "grupo_4",
-    "grupo_5",
-    "grupo_6",
-    "grupo_7",
-    "grupo_8",
-    "grupo_9",
-    "grupo_10",
-    "grupo_nsnr",
+    "grupo_ciuo_alta",
+    "grupo_ciuo_media_baja",
+    "grupo_ciuo_media",
+    "grupo_ciuo_baja",
+    "grupo_ciuo_otras",
+    "grupo_ciuo_1",
+    "grupo_ciuo_2",
+    "grupo_ciuo_3",
+    "grupo_ciuo_4",
+    "grupo_ciuo_5",
+    "grupo_ciuo_6",
+    "grupo_ciuo_7",
+    "grupo_ciuo_8",
+    "grupo_ciuo_9",
+    "grupo_ciuo_10",
+    "grupo_ciuo_nsnr",
+
+    "rama_1",
+    "rama_2",
+    "rama_3",
+    "rama_4",
+    "rama_5",
+    "rama_6",
+    "rama_7",
+    "rama_8",
+    "rama_9",
+    "rama_10",
+    "rama_11",
+    "rama_12",
+    "rama_13",
+    "rama_14",
+    "rama_15",
+    "rama_16",
+    "rama_17",
+    "rama_18",
+    "rama_19",
+    "rama_20",
+    "rama_21",
 
     "horas_1_30",
     "tpi",
@@ -85,9 +131,12 @@ FINAL_COLS = [
     "tp",
     # resto de tasas y campos…
     "tpl",
-    "su1", "su2", "su3", "su4",
-    "toi", "tosi",
-    # … cualquier otro campo …
+    "su1", 
+    "su2", 
+    "su3", 
+    "su4",
+    "toi",
+    "tosi",
 ]
 
 # rutas base
@@ -120,6 +169,7 @@ def read_frames() -> list[pd.DataFrame]:
         "b1", "b1_ciuo88",
         "obe", "id", "ftp", "deseo_trabajar", "habituales", "efectivas", "activ",
         "c10", "c11",
+        "r_p_rev4cl_caenes",
 
     ]
 
@@ -179,17 +229,17 @@ def rule_categoria_serv_domestico_puertas_adentro(df):    return rule_ocupados(d
 def rule_categoria_familiar_personal_no_remunerado(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 7)
 def rule_categoria_no_corresponde(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 0)
 
-def rule_grupo_1(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 1)
-def rule_grupo_2(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 2)
-def rule_grupo_3(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 3)
-def rule_grupo_4(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 4)
-def rule_grupo_5(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 5)
-def rule_grupo_6(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 6)
-def rule_grupo_7(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 7)
-def rule_grupo_8(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 8)
-def rule_grupo_9(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 9)
-def rule_grupo_10(df):   return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 10)
-def rule_grupo_nsnr(df):   return rule_ocupados(df) & (~df["ciuo_gran_grupo"].between(1,10))
+def rule_grupo_ciuo_1(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 1)
+def rule_grupo_ciuo_2(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 2)
+def rule_grupo_ciuo_3(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 3)
+def rule_grupo_ciuo_4(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 4)
+def rule_grupo_ciuo_5(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 5)
+def rule_grupo_ciuo_6(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 6)
+def rule_grupo_ciuo_7(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 7)
+def rule_grupo_ciuo_8(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 8)
+def rule_grupo_ciuo_9(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 9)
+def rule_grupo_ciuo_10(df):   return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 10)
+def rule_grupo_ciuo_nsnr(df):   return rule_ocupados(df) & (~df["ciuo_gran_grupo"].between(1,10))
 
 def rule_hombres(df):           return rule_ocupados(df) & (df["sexo"] == 1)
 def rule_mujeres(df):           return rule_ocupados(df) & (df["sexo"] == 2)
@@ -304,6 +354,69 @@ def rule_edad_65_mas(df):
     # edad ≥ 65
     return rule_ocupados(df) & (df["edad"] >= 65)
 
+def rule_rama_1(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 1)
+
+def rule_rama_2(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 2)
+
+def rule_rama_3(df):    
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 3)
+
+def rule_rama_4(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 4)
+
+def rule_rama_5(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 5)
+
+def rule_rama_6(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 6)
+
+def rule_rama_7(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 7)
+
+def rule_rama_8(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 8)
+
+def rule_rama_9(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 9)
+
+def rule_rama_10(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 10)
+
+def rule_rama_11(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 11)
+
+def rule_rama_12(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 12)
+
+def rule_rama_13(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 13)
+
+def rule_rama_14(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 14)
+
+def rule_rama_15(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 15)
+
+def rule_rama_16(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 16)
+
+def rule_rama_17(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 17)
+
+def rule_rama_18(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 18)
+
+def rule_rama_19(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 19)
+
+def rule_rama_20(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 20)
+
+def rule_rama_21(df):
+    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 21)
+
 
 RULES: dict[str, callable] = {
     "pet": rule_edad_trabajar,
@@ -336,42 +449,46 @@ RULES: dict[str, callable] = {
     "categoria_serv_domestico_puertas_adentro": rule_categoria_serv_domestico_puertas_adentro,
     "categoria_no_corresponde": rule_categoria_no_corresponde,
 
-    "grupo_1": rule_grupo_1,
-    "grupo_2": rule_grupo_2,
-    "grupo_3": rule_grupo_3,
-    "grupo_4": rule_grupo_4,
-    "grupo_5": rule_grupo_5,
-    "grupo_6": rule_grupo_6,
-    "grupo_7": rule_grupo_7,
-    "grupo_8": rule_grupo_8,
-    "grupo_9": rule_grupo_9,
-    "grupo_10": rule_grupo_10,
-    "grupo_nsnr": rule_grupo_nsnr,
+    "grupo_ciuo_1": rule_grupo_ciuo_1,
+    "grupo_ciuo_2": rule_grupo_ciuo_2,
+    "grupo_ciuo_3": rule_grupo_ciuo_3,
+    "grupo_ciuo_4": rule_grupo_ciuo_4,
+    "grupo_ciuo_5": rule_grupo_ciuo_5,
+    "grupo_ciuo_6": rule_grupo_ciuo_6,
+    "grupo_ciuo_7": rule_grupo_ciuo_7,
+    "grupo_ciuo_8": rule_grupo_ciuo_8,
+    "grupo_ciuo_9": rule_grupo_ciuo_9,
+    "grupo_ciuo_10": rule_grupo_ciuo_10,
+    "grupo_ciuo_nsnr": rule_grupo_ciuo_nsnr,
 
-    "oc_hombres": rule_hombres,
-    "oc_mujeres": rule_mujeres,
-    "oc_chile": rule_chile,
-    "oc_extranjero": rule_extranjero,
-    "oc_formal": rule_formal,
-    "oc_informal": rule_informal,
-    "oc_sector_informal": rule_sector_informal,
-    "oc_sector_publico": rule_sector_publico,
-    "oc_no_sector_publico": rule_no_sector_publico,
-    "oc_sin_basica_completa": rule_sin_basica,
-    "oc_ed_basica_complet": rule_ed_basica,
-    "oc_ed_media_completa": rule_ed_media,
-    "oc_ed_sup_completa": rule_ed_sup,
-    "oc_ed_sup_cft": rule_ed_sup_cft,
-    "oc_ed_sup_ip": rule_ed_sup_ip,
-    "oc_ed_sup_univ": rule_ed_sup_univ,
-    "oc_ciuo_alta": rule_ciuo_alta,
-    "oc_ciuo_media_baja": rule_ciuo_media_baja,
-    "oc_ciuo_media": rule_ciuo_media,
-    "oc_ciuo_baja": rule_ciuo_baja,
-    "oc_ciuo_otras": rule_ciuo_otras,
-    "oc_ed_sup_ciuo_alta": rule_ed_sup_ciuo_alta,
-    "oc_ed_sup_ciuo_media_baja": rule_ed_sup_ciuo_media_baja,
-    "oc_ed_sup_ciuo_no_alta": rule_ed_sup_ciuo_no_alta,
+    "o_hombres": rule_hombres,
+    "o_mujeres": rule_mujeres,
+
+    "o_chile": rule_chile,
+    "o_extranjero": rule_extranjero,
+
+    "o_formal": rule_formal,
+    "o_informal": rule_informal,
+
+    "o_sector_informal": rule_sector_informal,
+
+    "o_sin_basica_completa": rule_sin_basica,
+    "o_ed_basica_completa": rule_ed_basica,
+    "o_ed_media_completa": rule_ed_media,
+    "o_ed_sup_completa": rule_ed_sup,
+    "o_ed_sup_cft": rule_ed_sup_cft,
+    "o_ed_sup_ip": rule_ed_sup_ip,
+    "o_ed_sup_univ": rule_ed_sup_univ,
+
+    "o_ed_sup_ciuo_alta": rule_ed_sup_ciuo_alta,
+    "o_ed_sup_ciuo_media_baja": rule_ed_sup_ciuo_media_baja,
+    "o_ed_sup_ciuo_no_alta": rule_ed_sup_ciuo_no_alta,
+
+    "grupo_ciuo_alta": rule_ciuo_alta,
+    "grupo_ciuo_media_baja": rule_ciuo_media_baja,
+    "grupo_ciuo_media": rule_ciuo_media,
+    "grupo_ciuo_baja": rule_ciuo_baja,
+    "grupo_ciuo_otras": rule_ciuo_otras,
 
     "oc_hab": rule_habituales,
 
@@ -392,6 +509,28 @@ RULES: dict[str, callable] = {
     "oc_edad_45_54": rule_edad_45_54,
     "oc_edad_55_64": rule_edad_55_64,
     "oc_edad_65_mas": rule_edad_65_mas,
+
+    "rama_1": rule_rama_1,
+    "rama_2": rule_rama_2,
+    "rama_3": rule_rama_3,
+    "rama_4": rule_rama_4,
+    "rama_5": rule_rama_5,
+    "rama_6": rule_rama_6,
+    "rama_7": rule_rama_7,
+    "rama_8": rule_rama_8,
+    "rama_9": rule_rama_9,
+    "rama_10": rule_rama_10,
+    "rama_11": rule_rama_11,
+    "rama_12": rule_rama_12,
+    "rama_13": rule_rama_13,
+    "rama_14": rule_rama_14,
+    "rama_15": rule_rama_15,
+    "rama_16": rule_rama_16,
+    "rama_17": rule_rama_17,
+    "rama_18": rule_rama_18,
+    "rama_19": rule_rama_19,
+    "rama_20": rule_rama_20,
+    "rama_21": rule_rama_21,
 
 }
 
@@ -457,39 +596,43 @@ def main() -> int:
         "oc_hab":  "habituales_sum"
     }, inplace=True)
 
-    resumen["oi"]  = resumen["oc_informal"]
-    resumen["osi"] = resumen["oc_sector_informal"]
+    resumen["oi"]  = resumen["o_informal"]
+    resumen["osi"] = resumen["o_sector_informal"]
     resumen["fta"] = resumen["ft"] + resumen["id"] + resumen["ftp"]
 
+    # 8) Tasas originales (en porcentaje con 3 decimales)
+    def safe_div(n, d):
+        return (n / d * 100).round(3)
 
-    # 8) Tasas originales
-    def safe_div(n, d): return (n / d * 100).round(2)
-    resumen["td"]   = safe_div(resumen["do"], resumen["ft"])
-    resumen["to"]   = safe_div(resumen["o"],  resumen["pet"])
-    resumen["tp"]   = safe_div(resumen["ft"], resumen["pet"])
+    resumen["td"]   = safe_div(resumen["do"],  resumen["ft"])
+    resumen["to"]   = safe_div(resumen["o"],   resumen["pet"])
+    resumen["tp"]   = safe_div(resumen["ft"],  resumen["pet"])
     resumen["tpl"]  = safe_div(resumen["id"] + resumen["obe"] + resumen["do"],
-                               resumen["ft"] + resumen["id"])
+                                resumen["ft"] + resumen["id"])
     resumen["su1"]  = safe_div(resumen["do"] + resumen["id"],
-                               resumen["ft"] + resumen["id"])
+                                resumen["ft"] + resumen["id"])
     resumen["su2"]  = safe_div(resumen["do"] + resumen["id"] + resumen["tpi"],
-                               resumen["ft"] + resumen["id"])
+                                resumen["ft"] + resumen["id"])
     resumen["su3"]  = safe_div(resumen["do"] + resumen["id"] + resumen["ftp"],
-                               resumen["fta"])
+                                resumen["fta"])
     resumen["su4"]  = safe_div(resumen["do"] + resumen["id"] + resumen["tpi"] + resumen["ftp"],
-                               resumen["fta"])
-    resumen["toi"]  = safe_div(resumen["oi"],  resumen["o"])
-    resumen["tosi"] = safe_div(resumen["osi"], resumen["o"])
+                                resumen["fta"])
+    resumen["toi"]  = safe_div(resumen["oi"],   resumen["o"])
+    resumen["tosi"] = safe_div(resumen["osi"],  resumen["o"])
 
-    # 9) Promedios reales de horas con denominadores correctos
+    # 9) Promedios reales de horas (3 decimales)
     resumen["promedio_horas_efectivas_sin_ausentes"] = (
         resumen["efe1_total"] / resumen["oc_sin_ausentes"]
-    ).round(2)
+    ).round(3)
+
     resumen["promedio_horas_efectivas_declaran_horas"] = (
         resumen["efe2_total"] / resumen["o_declaran_horas"]
-    ).round(2)
+    ).round(3)
+
     resumen["promedio_horas_habituales"] = (
         resumen["hab_total"] / resumen["o_declaran_horas"]
-    ).round(2)
+    ).round(3)
+
 
     # 10) Eliminar columnas intermedias antes de exportar
     resumen.drop(columns=[
@@ -516,11 +659,17 @@ def main() -> int:
     lite = lite[cols_order]
 
     # Redondeo enteros
-    mask_counts = (~lite.columns.isin(["ano_trimestre", "mes_central"]) &
-                   ~lite.columns.str.startswith(("tasa_", "promedio_")))
+    mask_counts = (
+        ~lite.columns.isin(["Año-Trimestre", "Mes central"]) &
+        ~lite.columns.str.startswith(("Tasa", "Promedio", "Prom."))
+    )
     lite.loc[:, mask_counts] = lite.loc[:, mask_counts].round(0).astype("Int64")
 
-    lite.to_csv(OUTFILE_SIMPLIFICADO, index=False)
+    lite.to_csv(
+        OUTFILE_SIMPLIFICADO,
+        index=False,
+        encoding="utf-8-sig"   # UTF-8 con BOM
+    )   
     print(f"✔ Guardado público: {OUTFILE_SIMPLIFICADO}")
 
     return 0

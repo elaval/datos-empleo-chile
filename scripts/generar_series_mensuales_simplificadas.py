@@ -23,9 +23,9 @@ SIMPL_CSV = AGREGADOS_INTEGRADO / "ene_trimestre_totales_simplificados.csv"
 
 def main() -> None:
     df = pd.read_csv(SIMPL_CSV)
-    for m in sorted(df["mes_central"].unique()):
+    for m in sorted(df["Mes central"].unique()):
         suf = SUFIJOS[int(m)]
-        dfm = df[df["mes_central"] == m].reset_index(drop=True)
+        dfm = df[df["Mes central"] == m].reset_index(drop=True)
         # reordenar columnas según PUBLIC_COLS
         cols_final = [new for old, new in PUBLIC_COLS if new in dfm.columns]
         dfm = dfm[cols_final]
