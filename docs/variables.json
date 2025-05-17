@@ -313,129 +313,129 @@
   },
   "grupo_ciuo08_2": {
     "label": "CIUO08 G2 Profesionales, científicos e intelectuales",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as cuyo Gran Grupo CIUO-08 = 2 (Profesionales, científicos e intelectuales). Incluye médicos, docentes universitarios, ingenieros, abogados y otros/as que requieren nivel de cualificación alto (ISCED 5-8).",
+    "notes": "Serie disponible a partir de 2017-02 (variable `b1`).",
+    "source": "Listado oficial de grandes grupos CIUO-08 — OIT / INE Chile"
   },
   "grupo_ciuo08_3": {
     "label": "CIUO08 G3 Técnicos y profesionales de nivel medio",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as con Gran Grupo 3 (Técnicos y profesionales de nivel medio): por ejemplo técnicos en enfermería, asistentes contables, paramédicos, programadores de nivel medio.",
+    "notes": "Disponible desde 2017-02.",
+    "source": "CIUO-08 — definición de Gran Grupo 3"
   },
   "grupo_ciuo08_4": {
     "label": "CIUO08 G4 Personal de apoyo administrativo",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Trabajadores/as clasificados en el Gran Grupo 4 de CIUO-08: secretarios/as, recepcionistas, oficinistas y otros empleos de apoyo administrativo.",
+    "notes": "Disponible desde 2017-02.",
+    "source": "CIUO-08 — Gran Grupo 4"
   },
   "grupo_ciuo08_5": {
     "label": "CIUO08 G5 Trabajadores de los servicios y comercios",
-    "description": "",
+    "description": "Gran Grupo 5 de CIUO-08: vendedores/as, camareros/as, cuidadores/as, personal de seguridad, entre otros puestos de servicios y ventas.",
     "notes": "",
-    "source": ""
+    "source": "CIUO-08 — Gran Grupo 5"
   },
   "grupo_ciuo08_6": {
-    "label": "CIUO08 G6 Agricultores, trab. agropecuarios y pesqueros",
-    "description": "",
+    "label": "CIUO08 G6 Agricultores y trabajadores agropecuarios / pesqueros",
+    "description": "Comprende las ocupaciones agrícolas, ganaderas, forestales y pesqueras calificadas listadas en el Gran Grupo 6 de CIUO-08.",
     "notes": "",
-    "source": ""
+    "source": "CIUO-08 — Gran Grupo 6"
   },
   "grupo_ciuo08_7": {
     "label": "CIUO08 G7 Artesanos y operarios de oficios",
-    "description": "",
+    "description": "Ocupados/as del Gran Grupo 7: oficiales, operarios y artesanos de artes mecánicas, construcción, electricidad, etc.",
     "notes": "",
-    "source": ""
+    "source": "CIUO-08 — Gran Grupo 7"
   },
   "grupo_ciuo08_8": {
     "label": "CIUO08 G8 Operadores de máquinas y ensambladores",
-    "description": "",
+    "description": "Incluye operadores/as de instalaciones fijas, máquinas industriales, vehículos y personal de ensamblaje (Gran Grupo 8).",
     "notes": "",
-    "source": ""
+    "source": "CIUO-08 — Gran Grupo 8"
   },
   "grupo_ciuo08_9": {
     "label": "CIUO08 G9 Ocupaciones elementales",
-    "description": "",
+    "description": "Trabajos que requieren competencias básicas: limpieza, apoyo manual, carga y descarga, mensajería, etc. (Gran Grupo 9 de CIUO-08).",
     "notes": "",
-    "source": ""
+    "source": "CIUO-08 — Gran Grupo 9"
   },
   "grupo_ciuo08_10": {
     "label": "CIUO08 G10 No identificado",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Registros ocupacionales que la ENE no logra codificar en los grandes grupos 1-9; el INE los etiqueta como ‘Otros no identificados’. Corresponde al código 10 utilizado en la difusión nacional.",
+    "notes": "Categoría exclusiva de la publicación INE; no forma parte del estándar OIT.",
+    "source": "Boletines ENE (ej. 2023-12) — notas de pie de cuadro sobre ‘Otros no identificados’"
   },
   "grupo_ciuo08_nsnr": {
     "label": "CIUO08 Sin clasificación / NS-NR",
-    "description": "",
+    "description": "Casos sin información suficiente o respuestas ‘No Sabe / No Responde’ en la codificación CIUO-08.",
     "notes": "",
-    "source": ""
+    "source": "Metodología ENE — tratamiento de códigos NS/NR"
   },
   "grupo_ciuo88_1": {
     "label": "CIUO88 G1 Miembros poder ejecutivo y directivos adm. pública/empresas",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Ocupados/as cuyo Gran Grupo CIUO-88 = 1: Legisladores, altos funcionarios gubernamentales, directores corporativos y gerentes generales.",
+    "notes": "Serie publicada por INE solo hasta febrero-2019.",
+    "source": "ISCO-88, Major Group 1 — Legislators, senior officials and managers"
   },
   "grupo_ciuo88_2": {
     "label": "CIUO88 G2 Profesionales científicos e intelectuales",
-    "description": "",
+    "description": "Gran Grupo 2: Profesionales de ciencias físicas, de la salud, docencia y otras profesiones que requieren formación universitaria completa.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 2 — Professionals"
   },
   "grupo_ciuo88_3": {
     "label": "CIUO88 G3 Técnicos y profesionales de nivel medio",
-    "description": "",
+    "description": "Gran Grupo 3: Técnicos/as, asistentes y profesionales de nivel medio que apoyan labores científicas, sanitarias, docentes, artísticas o administrativas.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 3 — Technicians and associate professionals"
   },
   "grupo_ciuo88_4": {
     "label": "CIUO88 G4 Empleados de oficina",
-    "description": "",
+    "description": "Gran Grupo 4: Personal de apoyo administrativo — secretarios/as, digitadores, contables, recepcionistas y otros empleados de oficina y atención al cliente.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 4 — Clerks"
   },
   "grupo_ciuo88_5": {
     "label": "CIUO88 G5 Trabajadores de los servicios y vendedores",
-    "description": "",
+    "description": "Gran Grupo 5: Personal de servicios personales, protección, comercio y venta al detalle, incluidos meseros/as, peluqueros/as y dependientes de tiendas y mercados.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 5 — Service workers and shop & market sales workers"
   },
   "grupo_ciuo88_6": {
     "label": "CIUO88 G6 Agricultores y trab. agropecuarios/pesqueros",
-    "description": "",
+    "description": "Gran Grupo 6: Trabajadores/as calificados/as de la agricultura, silvicultura, ganadería y pesca — tanto de mercado como de subsistencia.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 6 — Skilled agricultural and fishery workers"
   },
   "grupo_ciuo88_7": {
     "label": "CIUO88 G7 Oficiales, operarios y artesanos de oficios",
-    "description": "",
+    "description": "Gran Grupo 7: Oficiales, artesanos y operarios de oficios mecánicos, construcción, imprenta, joyería, textiles y similares.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 7 — Craft and related trades workers"
   },
   "grupo_ciuo88_8": {
     "label": "CIUO88 G8 Operadores de instalaciones y máquinas/montadores",
-    "description": "",
+    "description": "Gran Grupo 8: Operadores/as de plantas industriales, máquinas fijas o móviles, conductores y ensambladores de equipo.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 8 — Plant and machine operators and assemblers"
   },
   "grupo_ciuo88_9": {
     "label": "CIUO88 G9 Trabajadores no calificados",
-    "description": "",
+    "description": "Gran Grupo 9: Ocupaciones elementales que realizan tareas simples y rutinarias que requieren poca o ninguna formación formal previa.",
     "notes": "",
-    "source": ""
+    "source": "ISCO-88, Major Group 9 — Elementary occupations"
   },
   "grupo_ciuo88_10": {
     "label": "CIUO88 G10 Otros no identificados",
-    "description": "",
-    "notes": "",
-    "source": ""
+    "description": "Registros de ocupaciones insuficientemente descritas o que no encajan en los grupos 1-9; se usan como categoría residual en la ENE histórica.",
+    "notes": "El INE dejó de publicar esta categoría con la adopción de CIUO-08 (2019).",
+    "source": "Metodología ENE 2010 – 2018, adaptación ISCO-88 (categoría residual)"
   },
   "grupo_ciuo88_nsnr": {
     "label": "CIUO88 Sin clasificación / NS-NR",
-    "description": "",
+    "description": "Casos en que la ocupación fue declarada como ‘No sabe/No responde’ o no puede asignarse a ningún gran grupo de la CIUO-88.",
     "notes": "",
-    "source": ""
+    "source": "Cuestionario ENE (apartado de validación de ocupación) + ISCO-88 reglas de codificación"
   },
   "rama_1": {
     "label": "Rama 1: Agricultura, ganadería, silvicultura y pesca",
