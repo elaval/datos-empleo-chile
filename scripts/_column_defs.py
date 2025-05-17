@@ -326,20 +326,7 @@ VARIABLE_META = {
         "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"  # :contentReference[oaicite:14]{index=14}
     },
 
-    # ------------------------------------------------------------------ Ejemplo genérico de grupos CIUO y ramas
 
-    # … (repetir patrón para CIUO-08_2-10 y CIUO-88_1-10) …
-
-    "rama_7": {
-        "label": "Rama 7: Comercio al por mayor y al por menor",
-        "description": (
-            "Ocupados/as cuya actividad económica principal se clasifica en la "
-            "Sección G de la CIIU Rev.4 (Comercio)."
-        ),
-        "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
-        "source": "CIIU Rev.4 (ONU, 2008) adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:16]{index=16}
-    },
-    # … idem ramas 1-21 …
 
     # ------------------------------------------------------------------ Promedios de horas
     "promedio_horas_efectivas_sin_ausentes": {
@@ -441,72 +428,155 @@ VARIABLE_META = {
         "notes": "",
         "source": ""
     },
+    # ------------------------------------------------------------------ Ocupados por sexo y nacionalidad
     "o_hombres": {
         "label": "Ocupados hombres",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Personas clasificadas como ocupadas (v. definición de «Ocupado/a» "
+            "en la ENE) cuyo valor de la variable `sexo` = 1 (hombre) en el "
+            "micro-dato."
+        ),
+        "notes": (
+            "Serie íntegra desde 2010-01.  Se construye con la misma regla de "
+            "ocupación que la variable general `o`, filtrando solo hombres."
+        ),
+        "source": (
+            "Glosario ENE 2024, entrada «Ocupado/a (O)» :contentReference[oaicite:0]{index=0}; "
+            "Libro de Códigos ENE 2020, variable SEXO (códigos 1 = Hombre, 2 = Mujer) :contentReference[oaicite:1]{index=1}"
+        )
     },
+    
     "o_mujeres": {
         "label": "Ocupados mujeres",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Personas ocupadas cuyo valor de la variable `sexo` = 2 (mujer)."
+        ),
+        "notes": (
+            "Serie continua 2010-01 en adelante; complemento de `o_hombres`."
+        ),
+        "source": (
+            "Glosario ENE 2024, «Ocupado/a (O)» :contentReference[oaicite:2]{index=2}; "
+            "Libro de Códigos ENE 2020, variable SEXO :contentReference[oaicite:3]{index=3}"
+        )
     },
+    
     "o_chile": {
         "label": "Ocupados chilenos",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as cuyo código en la variable `nacionalidad` es 152 "
+            "(Chile), según clasificación ISO 3166-1 numérica adoptada por el INE."
+        ),
+        "notes": (
+            "Serie disponible desde 2010-01 sin interrupciones.  "
+            "Corresponde al subconjunto nacional dentro de `o`."
+        ),
+        "source": (
+            "Libro de Códigos ENE 2020, variable NACIONALIDAD "
+            "(código 152 = Chile) :contentReference[oaicite:4]{index=4}; "
+            "Boletín ENE 2022 (ejemplo de publicación con desagregación por "
+            "nacionalidad) :contentReference[oaicite:5]{index=5}"
+        )
     },
+    
     "o_extranjero": {
         "label": "Ocupados extranjeros",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as cuyo valor en `nacionalidad` es distinto de 152, es decir, "
+            "personas de nacionalidad extranjera residentes en Chile."
+        ),
+        "notes": (
+            "Se calcula como complemento de `o_chile`.  Serie completa 2010-01."
+        ),
+        "source": (
+            "Libro de Códigos ENE 2020, variable NACIONALIDAD :contentReference[oaicite:6]{index=6}; "
+            "Boletín ENE 2022 con indicadores por nacionalidad :contentReference[oaicite:7]{index=7}"
+        )
     },
+    # ------------------------------------------------------------------ Nivel educacional de las personas ocupadas
     "o_sin_basica_completa": {
         "label": "Sin educación básica completa",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Ocupados/as cuyo **nivel educacional más alto (variable `nivel`) se "
+            "encuentra por debajo de la enseñanza básica completa**. \n\n"
+            "Se incluyen:\n"
+            "‒ Quienes declararon “Nunca estudió”, pre-escolar o básica/primaria "
+            "pero **no** la finalizaron (`nivel` = 0-3 **y** `termino_nivel` ≠ 1), y\n"
+            "‒ Cualquier otro código fuera del rango 3-14, que el INE clasifica como "
+            "sin estudios formales. :contentReference[oaicite:0]{index=0}"
+        ),
+        "notes": "Serie continua desde 2010-01; construida con `_mask_sin_basica`.",
+        "source": "Libro de Códigos ENE 2010-2019 – definición de `nivel`/`termino_nivel` :contentReference[oaicite:1]{index=1}"
+    },    
+
     "o_ed_basica_completa": {
         "label": "Educación básica completa",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Ocupados/as que **finalizaron la básica/primaria** "
+            "(`nivel` = 3 y `termino_nivel` = 1) **o** que cursaron enseñanza media "
+            "pero **no la concluyeron** (`nivel` ∈ 4-6, 14 y `termino_nivel` ≠ 1). "
+            "Corresponde al *_mask_ed_basica_* definido en el script. :contentReference[oaicite:2]{index=2}"
+        ),
+        "notes": "Continuidad 2010-01 ↔ presente; categoría mutuamente excluyente.",
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 3-6, 14 :contentReference[oaicite:3]{index=3}"
+    },    
+
     "o_ed_media_completa": {
         "label": "Educación media completa",
-        "description": "",
+        "description": (
+            "Ocupados/as que **terminaron la enseñanza media (común o TP) "
+            "o humanidades** (`nivel` = 4-6, 14 **y** `termino_nivel` = 1) "
+            "o que iniciaron estudios superiores **sin concluirlos** "
+            "(`nivel` = 7-9 y `termino_nivel` ≠ 1). "
+            "Implementa la lógica de *_mask_ed_media_*. :contentReference[oaicite:4]{index=4}"
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 4-9, 14 :contentReference[oaicite:5]{index=5}"
+    },    
+
     "o_ed_sup_completa": {
         "label": "Educación superior completa",
-        "description": "",
+        "description": (
+            "Ocupados/as con **estudios superiores finalizados**:\n"
+            "‒ Técnico de nivel superior/CFT (`nivel` = 7, `termino_nivel` = 1),\n"
+            "‒ Profesional/IP (`nivel` = 8, `termino_nivel` = 1),\n"
+            "‒ Universitario u otros de pos-grado (`nivel` = 9-12). "
+            "Equivale al *_mask_ed_sup_* del script. :contentReference[oaicite:6]{index=6}"
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 7-12 :contentReference[oaicite:7]{index=7}"
+    },    
+
     "o_ed_sup_cft": {
         "label": "Edu. superior en CFT",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Sub-conjunto de ocupados/as con **Carrera Técnica de nivel superior** "
+            "terminada (`nivel` = 7 & `termino_nivel` = 1). :contentReference[oaicite:8]{index=8}"
+        ),
+        "notes": "Disponible en toda la serie; regla `rule_ed_sup_cft`.",
+        "source": "Libro de Códigos ENE 2010-2019 – código 7 :contentReference[oaicite:9]{index=9}"
+    },    
+
     "o_ed_sup_ip": {
         "label": "Edu. superior en IP",
-        "description": "",
+        "description": (
+            "Ocupados/as con **título profesional de Instituto Profesional** "
+            "terminado (`nivel` = 8 & `termino_nivel` = 1). :contentReference[oaicite:10]{index=10}"
+        ),
         "notes": "",
-        "source": ""
-    },
+        "source": "Libro de Códigos ENE 2010-2019 – código 8 :contentReference[oaicite:11]{index=11}"
+    },    
+
     "o_ed_sup_univ": {
         "label": "Edu. superior universitaria",
-        "description": "",
+        "description": (
+            "Agrupa ocupados/as con **título universitario o pos-grado** "
+            "completo: `nivel` = 9 (universitario) o 10-12 "
+            "(post-título, magíster, doctorado). :contentReference[oaicite:12]{index=12}"
+        ),
         "notes": "",
-        "source": ""
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 9-12 :contentReference[oaicite:13]{index=13}"
     },
+
     "categoria_independientes": {
         "label": "Independientes",
         "description": "",
@@ -842,125 +912,196 @@ VARIABLE_META = {
         "notes": "",
         "source": "Cuestionario ENE (apartado de validación de ocupación) + ISCO-88 reglas de codificación"  # :contentReference[oaicite:10]{index=10}
     },
+    # ── Ramas de actividad (1 a 21) ─────────────────────────────────────────
     "rama_1": {
         "label": "Rama 1: Agricultura, ganadería, silvicultura y pesca",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as cuya actividad económica principal se clasifica en la "
+            "Sección A de la CIIU Rev.4 (Agricultura, ganadería, silvicultura "
+            "y pesca)."
+        ),
+        "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
+        "source": "CIIU Rev.4 (ONU 2008) adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:0]{index=0}
     },
     "rama_2": {
         "label": "Rama 2: Explotación de minas y canteras",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as clasificados en la Sección B de la CIIU Rev.4 "
+            "(Explotación de minas y canteras)."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:1]{index=1}
     },
     "rama_3": {
         "label": "Rama 3: Industrias manufactureras",
-        "description": "",
-        "notes": "",
-        "source": ""
+    "description": (
+        "Ocupados/as cuya actividad principal corresponde a la Sección C "
+        "Industrias manufactureras de la CIIU Rev.4."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:2]{index=2}
     },
     "rama_4": {
         "label": "Rama 4: Suministro de electricidad, gas, vapor y aire acondicionado",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección D de la CIIU Rev.4: producción y distribución de energía "
+            "eléctrica y otros suministros energéticos."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:3]{index=3}
     },
     "rama_5": {
-        "label": "Rama 5: Suministro de agua",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "label": "Rama 5: Suministro de agua; alcantarillado, gestión de residuos",
+        "description": (
+            "Corresponde a la Sección E de la CIIU Rev.4 (agua, saneamiento "
+            "y actividades de descontaminación)."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:4]{index=4}
     },
     "rama_6": {
         "label": "Rama 6: Construcción",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupaciones encuadradas en la Sección F Construcción de la "
+            "CIIU Rev.4."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:5]{index=5}
+    },
+    "rama_7": {  # (idéntica a tu ejemplo, incluida aquí para continuidad)
+        "label": "Rama 7: Comercio al por mayor y al por menor",
+        "description": (
+            "Ocupados/as cuya actividad económica principal se clasifica en la "
+            "Sección G de la CIIU Rev.4 (Comercio)."
+        ),
+        "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
+        "source": "CIIU Rev.4 (ONU, 2008) adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:6]{index=6}
     },
     "rama_8": {
         "label": "Rama 8: Transporte y almacenamiento",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección H de la CIIU Rev.4: transporte terrestre, acuático, aéreo, "
+            "almacenamiento y actividades de apoyo al transporte."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:7]{index=7}
     },
     "rama_9": {
         "label": "Rama 9: Actividades de alojamiento y de servicio de comidas",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección I de la CIIU Rev.4 (hoteles, restaurantes y servicios de "
+            "comidas y bebidas)."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:8]{index=8}
     },
     "rama_10": {
         "label": "Rama 10: Información y comunicaciones",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección J de la CIIU Rev.4: telecomunicaciones, edición, "
+            "programación informática y otros servicios de información."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:9]{index=9}
     },
     "rama_11": {
         "label": "Rama 11: Actividades financieras y de seguros",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección K de la CIIU Rev.4: intermediación financiera, seguros "
+            "y fondos de pensiones."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:10]{index=10}
     },
     "rama_12": {
         "label": "Rama 12: Actividades inmobiliarias",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección L de la CIIU Rev.4: alquiler, compra-venta y gestión de "
+            "bienes inmuebles propios o arrendados."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:11]{index=11}
     },
     "rama_13": {
         "label": "Rama 13: Actividades profesionales, científicas y técnicas",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección M de la CIIU Rev.4: servicios jurídicos, contables, "
+            "de arquitectura, consultoría, I+D, publicidad, etc."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:12]{index=12}
     },
     "rama_14": {
         "label": "Rama 14: Actividades de servicios administrativos y de apoyo",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección N de la CIIU Rev.4: alquiler de maquinaria, servicios de "
+            "empleo, agencias de viaje, limpieza, seguridad y otros apoyos."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:13]{index=13}
     },
     "rama_15": {
         "label": "Rama 15: Administración pública y defensa",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección O de la CIIU Rev.4: administración pública, defensa "
+            "y planes de seguridad social obligatorios."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:14]{index=14}
     },
     "rama_16": {
         "label": "Rama 16: Enseñanza",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección P de la CIIU Rev.4 que cubre todos los niveles y tipos "
+            "de educación formal."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:15]{index=15}
     },
     "rama_17": {
         "label": "Rama 17: Actividades de atención de la salud humana y de asistencia social",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección Q de la CIIU Rev.4: hospitales, atención ambulatoria, "
+            "servicios sociales con y sin alojamiento."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:16]{index=16}
     },
     "rama_18": {
         "label": "Rama 18: Actividades artísticas, de entretenimiento y recreativas",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección R de la CIIU Rev.4: artes escénicas, bibliotecas, "
+            "deportes y otras actividades recreativas."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:17]{index=17}
     },
     "rama_19": {
         "label": "Rama 19: Otras actividades de servicios",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección S de la CIIU Rev.4: asociaciones, reparación de "
+            "computadores y enseres, servicios personales, etc."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:18]{index=18}
     },
     "rama_20": {
         "label": "Rama 20: Actividades de los hogares como empleadores",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección T de la CIIU Rev.4: hogares que producen bienes o "
+            "servicios de uso propio / como empleadores de personal doméstico."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:19]{index=19}
     },
     "rama_21": {
         "label": "Rama 21: Actividades de organizaciones y órganos extraterritoriales",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sección U de la CIIU Rev.4: organismos internacionales, "
+            "representaciones diplomáticas y otras entidades extraterritoriales."
+        ),
+        "notes": "Serie inicia 2017-08.",
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:20]{index=20}
     },
     "horas_1_30": {
         "label": "Horas 1–30",
