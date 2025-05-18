@@ -10,7 +10,7 @@ PUBLIC_COLS = [
     # ── Totales de población ─────────────────────────────────────────────
     ("pet",      "Población en edad de trabajar (PET)"),
     ("ft",       "Fuerza de trabajo (FT)"),
-    ("o",        "Personas ocupadas"),
+    ("o",        "Personas ocupadas (O)"),
     ("do",       "Personas desocupadas"),
     ("cesantes", "Cesantes"),
     ("busca_trabajo_por_primera_vez", "Buscan trabajo por primera vez"),
@@ -189,143 +189,6 @@ SUFIJOS = {
 }
 
 VARIABLE_META = {
-    # ------------------------------------------------------------------ FFT
-    "fft": {
-        "label": "Fuera de la fuerza de trabajo (FFT)",
-        "description": (
-            "Personas en edad de trabajar que, durante la semana de referencia, "
-            "no estaban ocupadas ni desocupadas."
-        ),
-        "notes": "",
-        "source": "Glosario ENE 2024, «Personas fuera de la fuerza de trabajo (FFT)»"  # :contentReference[oaicite:0]{index=0}
-    },
-    "fft_iniciadores": {
-        "label": "Iniciadores fuera de la fuerza de trabajo",
-        "description": (
-            "Personas fuera de la fuerza de trabajo que pronto iniciarán "
-            "una actividad laboral y declararon disponibilidad para comenzar en ≤2 semanas."
-        ),
-        "notes": "",
-        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)» —se usa la misma lógica de clasificación"  # :contentReference[oaicite:1]{index=1}
-    },
-    "fft_inactivos_potencialmente_activos": {
-        "label": "Inactivos potencialmente activos",
-        "description": (
-            "Personas no ocupadas que expresaron interés en trabajar pero cuya "
-            "búsqueda activa y/o disponibilidad no cumplió los criterios de desocupación."
-        ),
-        "notes": "Equivalen a la Fuerza de trabajo potencial (FTP).",
-        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"  # :contentReference[oaicite:2]{index=2}
-    },
-    "fft_inactivos_habituales": {
-        "label": "Inactivos habituales",
-        "description": (
-            "Resto de personas fuera de la fuerza de trabajo que ni buscan trabajo "
-            "ni están disponibles para hacerlo en el corto plazo."
-        ),
-        "notes": "",
-        "source": "Clasificación OIT/INE sobre situación en la fuerza de trabajo"  # :contentReference[oaicite:3]{index=3}
-    },
-
-    # ------------------------------------------------------------------ Sub-utilización / presión
-    "obe": {
-        "label": "Ocupados que buscaron empleo (OBE)",
-        "description": (
-            "Ocupados/as que, aun teniendo trabajo, realizaron búsqueda activa "
-            "de otro empleo en las últimas 4 semanas."  # definición abreviada
-        ),
-        "notes": "Componente del numerador de la tasa de presión laboral (TPL).",
-        "source": "Separata técnica ENE 2019: se detalla la tasa y su desagregación"  # :contentReference[oaicite:4]{index=4}
-    },
-    "id": {
-        "label": "Iniciadores disponibles (ID)",
-        "description": (
-            "Personas fuera de la fuerza de trabajo que no buscaron empleo porque "
-            "comenzarán pronto una ocupación y están disponibles para trabajar "
-            "en ≤2 semanas."
-        ),
-        "notes": "",
-        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)»"  # :contentReference[oaicite:5]{index=5}
-    },
-    "deseo_trabajar": {
-        "label": "Deseo de trabajar",
-        "description": (
-            "Personas fuera de la fuerza de trabajo que manifiestan querer "
-            "trabajar pero no realizaron búsqueda activa."
-        ),
-        "notes": "Ítem directo del cuestionario ENE.",
-        "source": "Cuestionario ENE 2022, sección ‘Deseo de trabajar’"  # :contentReference[oaicite:6]{index=6}
-    },
-
-    # ------------------------------------------------------------------ Formalidad e informalidad
-    "o_formal": {
-        "label": "Ocupados formales",
-        "description": (
-            "Ocupados/as cuyo vínculo laboral incluye cotizaciones de salud "
-            "y pensión pagadas por el empleador o, para independientes, "
-            "empresas con contabilidad formal inscrita en SII."
-        ),
-        "notes": "Estimación vigente desde 2017-08 (cambio de módulo de informalidad).",
-        "source": "Glosario ENE 2024, ‘Ocupado informal’ (definición inversa) + Nota metodológica informalidad INE 2020"  # :contentReference[oaicite:7]{index=7}
-    },
-    "o_sector_informal": {
-        "label": "Ocupados en sector informal",
-        "description": (
-            "Ocupados/as cuyo negocio o unidad económica pertenece al sector "
-            "informal —sin registro tributario ni contabilidad separada."
-        ),
-        "notes": "Serie arranca en 2017-08 junto con el módulo de informalidad.",
-        "source": "Glosario ENE 2024, ‘Sector informal’"  # :contentReference[oaicite:8]{index=8}
-    },
-
-    # ------------------------------------------------------------------ Tasas SU1-SU4
-    "su1": {
-        "label": "Tasa SU1 (%)",
-        "description": (
-            "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100."
-        ),
-        "notes": "Subutilización de la fuerza de trabajo – definición OIT (resolución 2013).",
-        "source": "Glosario ENE 2024, nota sobre indicadores SU1 a SU4"  # :contentReference[oaicite:9]{index=9}
-    },
-    "su2": {
-        "label": "Tasa SU2 (%)",
-        "description": "[(Desocupados + ID + TPI) / (FT + ID)] × 100.",
-        "notes": "",
-        "source": "Ídem anterior + Resolución OIT 2013"  # :contentReference[oaicite:10]{index=10}
-    },
-    "su3": {
-        "label": "Tasa SU3 (%)",
-        "description": "[(Desocupados + ID + FTP) / FTA] × 100.",
-        "notes": "",
-        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  # :contentReference[oaicite:11]{index=11}
-    },
-    "su4": {
-        "label": "Tasa SU4 (%)",
-        "description": "[(Desocupados + ID + TPI + FTP) / FTA] × 100.",
-        "notes": "",
-        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  # :contentReference[oaicite:12]{index=12}
-    },
-
-    # ------------------------------------------------------------------ Horas y tiempo parcial
-    "tpv": {
-        "label": "Tiempo parcial voluntario (TPV)",
-        "description": (
-            "Ocupados/as que trabajan ≤ 30 horas habituales y declaran "
-            "no querer trabajar más horas."
-        ),
-        "notes": "",
-        "source": "Boletín ENE Nacional 2023: se publica la serie TPV junto a TPI"  # :contentReference[oaicite:13]{index=13}
-    },
-    "tp_sin_declarar_voluntareidad": {
-        "label": "Tiempo parcial sin declarar voluntariedad",
-        "description": (
-            "Ocupados/as ≤ 30 h semanales que no especifican si la reducción "
-            "de jornada es voluntaria o involuntaria."
-        ),
-        "notes": "Cálculo interno; no es indicador oficial INE.",
-        "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"  # :contentReference[oaicite:14]{index=14}
-    },
-
 
     "pet": {
         "label": "Población en edad de trabajar (PET)",
@@ -340,14 +203,14 @@ VARIABLE_META = {
         "source": "Glosario ENE 2024, «Fuerza de trabajo (FT)»"
     },
     "o": {
-        "label": "Personas ocupadas",
-        "description": "Quienes trabajaron ≥ 1 hora la semana de referencia o se ausentaron temporalmente de su empleo manteniendo vínculo o remuneración.",
-        "notes": "Definición OIT adoptada por INE; serie completa 2010-01.",
+        "label": "Personas ocupadas (O)",
+        "description": "Personas en edad de trabajar que, durante la semana de referencia, trabajaron al menos una hora en actividades para producir bienes o servicios a cambio de una remuneración (en dinero o especies), o que estuvieron ausentes temporalmente de su trabajo manteniendo un vínculo laboral. También incluye a quienes trabajan sin remuneración en el negocio de un familiar.",
+        "notes": "Definición OIT adoptada por INE. Considera desde 2010-01. Incluye excepciones por ausencia temporal y trabajo no remunerado en negocios familiares.",
         "source": "Glosario ENE 2024, «Ocupado/a (O)»"
     },
     "do": {
         "label": "Personas desocupadas",
-        "description": "Personas sin trabajo que buscaron activamente empleo en las últimas 4 semanas y están disponibles para comenzar en las próximas 2.",
+        "description": "Personas en edad de trabajar que no tenían empleo en la semana de referencia, buscaron trabajo activamente en las últimas cuatro semanas y estaban disponibles para trabajar dentro de las próximas dos semanas.",
         "notes": "",
         "source": "Glosario ENE 2024, «Desocupado/a (DO)»"
     },
@@ -359,34 +222,235 @@ VARIABLE_META = {
     },
     "busca_trabajo_por_primera_vez": {
         "label": "Buscan trabajo por primera vez",
-        "description": "Desocupados/as sin experiencia laboral previa —no han tenido nunca una ocupación remunerada.",
+        "description": "Personas desocupadas que nunca han tenido una ocupación anterior.",
         "notes": "",
         "source": "Glosario ENE 2024, «Personas que buscaron trabajo por primera vez»"
     },
-    "tpi": {
-        "label": "Tiempo parcial involuntario (TPI)",
-        "description": "Ocupados/as que trabajan ≤ 30 h habituales y declaran estar disponibles para trabajar más horas inmediatamente o en 15 días.",
+
+    # ------------------------------------------------------------------ FFT
+    "fft": {
+        "label": "Fuera de la fuerza de trabajo (FFT)",
+        "description": (
+            "Personas en edad de trabajar que, durante la semana de referencia, "
+            "no estaban ocupadas ni desocupadas."
+        ),
         "notes": "",
-        "source": "Glosario ENE 2024, «Ocupados/as a tiempo parcial involuntario»"
+        "source": "Glosario ENE 2024, «Personas fuera de la fuerza de trabajo (FFT)»" 
     },
+    "fft_iniciadores": {
+        "label": "Iniciadores fuera de la fuerza de trabajo",
+        "description": (
+            "Personas fuera de la fuerza de trabajo que pronto iniciarán "
+            "una actividad laboral y declararon disponibilidad para comenzar en ≤2 semanas."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)» —se usa la misma lógica de clasificación"  
+    },
+    "fft_inactivos_potencialmente_activos": {
+        "label": "Inactivos potencialmente activos",
+        "description": (
+            "Personas no ocupadas que expresaron interés en trabajar pero cuya "
+            "búsqueda activa y/o disponibilidad no cumplió los criterios de desocupación."
+        ),
+        "notes": "Equivalen a la Fuerza de trabajo potencial (FTP).",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»" 
+    },
+    "fft_inactivos_habituales": {
+        "label": "Inactivos habituales",
+        "description": (
+            "Resto de personas fuera de la fuerza de trabajo que ni buscan trabajo "
+            "ni están disponibles para hacerlo en el corto plazo."
+        ),
+        "notes": "",
+        "source": "Clasificación OIT/INE sobre situación en la fuerza de trabajo"  #
+    },
+
+    # ------------------------------------------------------------------ Sub-utilización / presión
+    "obe": {
+        "label": "Ocupados que buscaron empleo (OBE)",
+        "description": (
+            "Personas ocupadas que realizaron acciones de búsqueda de otro empleo o un empleo adicional durante las últimas cuatro semanas." 
+        ),
+        "notes": "Componente del numerador de la tasa de presión laboral (TPL).",
+        "source": "Separata técnica ENE 2019: se detalla la tasa y su desagregación"  
+    },
+    "id": {
+        "label": "Iniciadores disponibles (ID)",
+        "description": (
+            "Personas fuera de la fuerza de trabajo que no buscaron trabajo porque iniciarán una actividad laboral pronto, pero están disponibles para comenzar dentro de las próximas dos semanas."
+        ),
+        "notes": "",
+        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)»"  
+    },
+    "ftp": {
+        "label": "Fuerza de trabajo potencial (FTP)",
+        "description": "Personas no ocupadas que manifestaron interés en trabajar, pero no buscaron activamente empleo o no estaban disponibles para comenzar a trabajar.",
+        "notes": "",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
+    },
+    "fta": {
+        "label": "Fuerza de trabajo ajustada (FTA)",
+        "description": "Corresponde a la suma de la fuerza de trabajo y la fuerza de trabajo potencial. Se utiliza para calcular indicadores de subutilización laboral",
+        "notes": "",
+        "source": "Glosario ENE 2024, «Fuerza de trabajo ampliada (FTA)»"
+    },
+    "deseo_trabajar": {
+        "label": "Deseo de trabajar",
+        "description": (
+            "Personas fuera de la fuerza de trabajo que manifiestan querer "
+            "trabajar pero no realizaron búsqueda activa."
+        ),
+        "notes": "Ítem directo del cuestionario ENE.",
+        "source": "Cuestionario ENE 2022, sección ‘Deseo de trabajar’"  #
+    },
+    # ------------------------------------------------------------------ Ocupados por sexo y nacionalidad
+    "o_hombres": {
+        "label": "Ocupados hombres",
+        "description": (
+            "Personas clasificadas como ocupadas (v. definición de «Ocupado/a» "
+            "en la ENE) cuyo valor de la variable `sexo` = 1 (hombre) en el "
+            "micro-dato."
+        ),
+        "notes": (
+            "Serie íntegra desde 2010-01.  Se construye con la misma regla de "
+            "ocupación que la variable general `o`, filtrando solo hombres."
+        ),
+        "source": (
+            "Glosario ENE 2024, entrada «Ocupado/a (O)» "
+            "Libro de Códigos ENE 2020, variable SEXO (códigos 1 = Hombre, 2 = Mujer)"
+        )
+    },
+    
+    "o_mujeres": {
+        "label": "Ocupados mujeres",
+        "description": (
+            "Personas ocupadas cuyo valor de la variable `sexo` = 2 (mujer)."
+        ),
+        "notes": (
+            "Serie continua 2010-01 en adelante; complemento de `o_hombres`."
+        ),
+        "source": (
+            "Glosario ENE 2024, «Ocupado/a (O)» "
+            "Libro de Códigos ENE 2020, variable SEXO"
+        )
+    },
+    
+    "o_chile": {
+        "label": "Ocupados chilenos",
+        "description": (
+            "Ocupados/as cuyo código en la variable `nacionalidad` es 152 "
+            "(Chile), según clasificación ISO 3166-1 numérica adoptada por el INE."
+        ),
+        "notes": (
+            "Serie disponible desde 2010-01 sin interrupciones.  "
+            "Corresponde al subconjunto nacional dentro de `o`."
+        ),
+        "source": (
+            "Libro de Códigos ENE 2020, variable NACIONALIDAD "
+            "(código 152 = Chile) "
+            "Boletín ENE 2022 (ejemplo de publicación con desagregación por "
+            "nacionalidad)"
+        )
+    },
+    
+    "o_extranjero": {
+        "label": "Ocupados extranjeros",
+        "description": (
+            "Ocupados/as cuyo valor en `nacionalidad` es distinto de 152, es decir, "
+            "personas de nacionalidad extranjera residentes en Chile."
+        ),
+        "notes": (
+            "Se calcula como complemento de `o_chile`.  Serie completa 2010-01."
+        ),
+        "source": (
+            "Libro de Códigos ENE 2020, variable NACIONALIDAD "
+            "Boletín ENE 2022 con indicadores por nacionalidad"
+        )
+    },
+    # ------------------------------------------------------------------ Formalidad e informalidad
+    "o_formal": {
+        "label": "Ocupados formales",
+        "description": (
+            "Ocupados/as cuyo vínculo laboral incluye cotizaciones de salud "
+            "y pensión pagadas por el empleador o, para independientes, "
+            "empresas con contabilidad formal inscrita en SII."
+        ),
+        "notes": "Estimación vigente desde 2017-08 (cambio de módulo de informalidad).",
+        "source": "Glosario ENE 2024, ‘Ocupado informal’ (definición inversa) + Nota metodológica informalidad INE 2020"  #
+    },
+    "o_sector_informal": {
+        "label": "Ocupados en sector informal",
+        "description": (
+            "Ocupados/as cuyo negocio o unidad económica pertenece al sector "
+            "informal —sin registro tributario ni contabilidad separada."
+        ),
+        "notes": "Serie arranca en 2017-08 junto con el módulo de informalidad.",
+        "source": "Glosario ENE 2024, ‘Sector informal’"  #
+    },
+
+    # ------------------------------------------------------------------ Tasas SU1-SU4
+    "su1": {
+        "label": "Tasa SU1 (%)",
+        "description": (
+            "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100."
+        ),
+        "notes": "Subutilización de la fuerza de trabajo – definición OIT (resolución 2013).",
+        "source": "Glosario ENE 2024, nota sobre indicadores SU1 a SU4"  #
+    },
+    "su2": {
+        "label": "Tasa SU2 (%)",
+        "description": "[(Desocupados + ID + TPI) / (FT + ID)] × 100.",
+        "notes": "",
+        "source": "Ídem anterior + Resolución OIT 2013"  #0}
+    },
+    "su3": {
+        "label": "Tasa SU3 (%)",
+        "description": "[(Desocupados + ID + FTP) / FTA] × 100.",
+        "notes": "",
+        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  #1}
+    },
+    "su4": {
+        "label": "Tasa SU4 (%)",
+        "description": "[(Desocupados + ID + TPI + FTP) / FTA] × 100.",
+        "notes": "",
+        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  #2}
+    },
+
+    # ------------------------------------------------------------------ Horas y tiempo parcial
+    "tpv": {
+        "label": "Tiempo parcial voluntario (TPV)",
+        "description": (
+            "Ocupados/as que trabajan ≤ 30 horas habituales y declaran "
+            "no querer trabajar más horas."
+        ),
+        "notes": "",
+        "source": "Boletín ENE Nacional 2023: se publica la serie TPV junto a TPI"  #3}
+    },
+    "tp_sin_declarar_voluntareidad": {
+        "label": "Tiempo parcial sin declarar voluntariedad",
+        "description": (
+            "Ocupados/as ≤ 30 h semanales que no especifican si la reducción "
+            "de jornada es voluntaria o involuntaria."
+        ),
+        "notes": "Cálculo interno; no es indicador oficial INE.",
+        "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"  #4}
+    },
+
+
+    "tpi": {
+        "label": "Ocupados/as a tiempo parcial involuntario (TPI)",
+        "description": "Ocupados/as que trabajan menos de 30 horas habituales a la semana y declaran disponibilidad para trabajar más horas.",
+        "notes": "Se considera como parte de la subutilización de la fuerza de trabajo.",
+        "source": "Glosario ENE 2024, «Ocupados/as a tiempo parcial involuntario (TPI)»"
+    },
+    
     "o_informal": {
         "label": "Ocupados informales",
         "description": "Dependientes sin cotización de salud ni pensión asociada a su empleador; independientes cuyo negocio pertenece al sector informal o familiares no remunerados.",
         "notes": "Disponible desde 2017-08.",
         "source": "Glosario ENE 2019, «Ocupación informal»"
     },
-    "ftp": {
-        "label": "Fuerza de trabajo potencial (FTP)",
-        "description": "Personas no ocupadas que quieren trabajar pero su búsqueda activa y/o disponibilidad no cumple los criterios para ser desocupadas.",
-        "notes": "",
-        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
-    },
-    "fta": {
-        "label": "Fuerza de trabajo ajustada (FTA)",
-        "description": "Suma de la fuerza de trabajo (ocupados + desocupados) más la fuerza de trabajo potencial; se usa como denominador en tasas SU3 y SU4.",
-        "notes": "",
-        "source": "Glosario ENE 2024, «Fuerza de trabajo ampliada (FTA)»"
-    },
+
     "td": {
         "label": "Tasa de desocupación (%)",
         "description": "Desocupados / Fuerza de trabajo × 100, redondeada a 3 decimales.",
@@ -407,80 +471,35 @@ VARIABLE_META = {
     },
     "ano_trimestre": {
         "label": "Año-Trimestre",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Año asociado al **mes central** del trimestre móvil. "
+            "Cada registro corresponde a un trimestre móvil compuesto por tres meses consecutivos, "
+            "pero el año se define según el mes central.\n\n"
+            "Por ejemplo, el trimestre Diciembre 2024 – Enero 2025 – Febrero 2025 "
+            "tiene mes central = Enero (1), por lo tanto, `ano_trimestre` = 2025."
+        ),
+        "notes": (
+            "El año-trimestre permite identificar de manera unívoca el periodo de referencia "
+            "según el criterio adoptado por el INE. Su combinación con `mes_central` es clave "
+            "para ordenar cronológicamente la serie."
+        ),
+        "source": "Metodología ENE 2024 — codificación temporal basada en mes central del trimestre"
     },
+
     "mes_central": {
         "label": "Mes central",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
-    # ------------------------------------------------------------------ Ocupados por sexo y nacionalidad
-    "o_hombres": {
-        "label": "Ocupados hombres",
         "description": (
-            "Personas clasificadas como ocupadas (v. definición de «Ocupado/a» "
-            "en la ENE) cuyo valor de la variable `sexo` = 1 (hombre) en el "
-            "micro-dato."
+            "Número del mes (1 a 12) que representa el mes central del trimestre móvil. "
+            "Por ejemplo, un trimestre Enero–Febrero–Marzo tiene mes central = 2."
         ),
         "notes": (
-            "Serie íntegra desde 2010-01.  Se construye con la misma regla de "
-            "ocupación que la variable general `o`, filtrando solo hombres."
+            "El mes central se usa como referencia para ordenar, visualizar o filtrar "
+            "trimestres móviles. También permite identificar el año del dato cuando se cruza "
+            "con `ano_trimestre`."
         ),
-        "source": (
-            "Glosario ENE 2024, entrada «Ocupado/a (O)» :contentReference[oaicite:0]{index=0}; "
-            "Libro de Códigos ENE 2020, variable SEXO (códigos 1 = Hombre, 2 = Mujer) :contentReference[oaicite:1]{index=1}"
-        )
+        "source": "Metodología ENE 2024 — uso de mes central como indicador de periodo"
     },
-    
-    "o_mujeres": {
-        "label": "Ocupados mujeres",
-        "description": (
-            "Personas ocupadas cuyo valor de la variable `sexo` = 2 (mujer)."
-        ),
-        "notes": (
-            "Serie continua 2010-01 en adelante; complemento de `o_hombres`."
-        ),
-        "source": (
-            "Glosario ENE 2024, «Ocupado/a (O)» :contentReference[oaicite:2]{index=2}; "
-            "Libro de Códigos ENE 2020, variable SEXO :contentReference[oaicite:3]{index=3}"
-        )
-    },
-    
-    "o_chile": {
-        "label": "Ocupados chilenos",
-        "description": (
-            "Ocupados/as cuyo código en la variable `nacionalidad` es 152 "
-            "(Chile), según clasificación ISO 3166-1 numérica adoptada por el INE."
-        ),
-        "notes": (
-            "Serie disponible desde 2010-01 sin interrupciones.  "
-            "Corresponde al subconjunto nacional dentro de `o`."
-        ),
-        "source": (
-            "Libro de Códigos ENE 2020, variable NACIONALIDAD "
-            "(código 152 = Chile) :contentReference[oaicite:4]{index=4}; "
-            "Boletín ENE 2022 (ejemplo de publicación con desagregación por "
-            "nacionalidad) :contentReference[oaicite:5]{index=5}"
-        )
-    },
-    
-    "o_extranjero": {
-        "label": "Ocupados extranjeros",
-        "description": (
-            "Ocupados/as cuyo valor en `nacionalidad` es distinto de 152, es decir, "
-            "personas de nacionalidad extranjera residentes en Chile."
-        ),
-        "notes": (
-            "Se calcula como complemento de `o_chile`.  Serie completa 2010-01."
-        ),
-        "source": (
-            "Libro de Códigos ENE 2020, variable NACIONALIDAD :contentReference[oaicite:6]{index=6}; "
-            "Boletín ENE 2022 con indicadores por nacionalidad :contentReference[oaicite:7]{index=7}"
-        )
-    },
+
     # ------------------------------------------------------------------ Nivel educacional de las personas ocupadas
     "o_sin_basica_completa": {
         "label": "Sin educación básica completa",
@@ -491,10 +510,10 @@ VARIABLE_META = {
             "‒ Quienes declararon “Nunca estudió”, pre-escolar o básica/primaria "
             "pero **no** la finalizaron (`nivel` = 0-3 **y** `termino_nivel` ≠ 1), y\n"
             "‒ Cualquier otro código fuera del rango 3-14, que el INE clasifica como "
-            "sin estudios formales. :contentReference[oaicite:0]{index=0}"
+            "sin estudios formales."
         ),
         "notes": "Serie continua desde 2010-01; construida con `_mask_sin_basica`.",
-        "source": "Libro de Códigos ENE 2010-2019 – definición de `nivel`/`termino_nivel` :contentReference[oaicite:1]{index=1}"
+        "source": "Libro de Códigos ENE 2010-2019 – definición de `nivel`/`termino_nivel`"
     },    
 
     "o_ed_basica_completa": {
@@ -503,10 +522,10 @@ VARIABLE_META = {
             "Ocupados/as que **finalizaron la básica/primaria** "
             "(`nivel` = 3 y `termino_nivel` = 1) **o** que cursaron enseñanza media "
             "pero **no la concluyeron** (`nivel` ∈ 4-6, 14 y `termino_nivel` ≠ 1). "
-            "Corresponde al *_mask_ed_basica_* definido en el script. :contentReference[oaicite:2]{index=2}"
+            "Corresponde al *_mask_ed_basica_* definido en el script."
         ),
         "notes": "Continuidad 2010-01 ↔ presente; categoría mutuamente excluyente.",
-        "source": "Libro de Códigos ENE 2010-2019 – códigos 3-6, 14 :contentReference[oaicite:3]{index=3}"
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 3-6, 14"
     },    
 
     "o_ed_media_completa": {
@@ -516,10 +535,10 @@ VARIABLE_META = {
             "o humanidades** (`nivel` = 4-6, 14 **y** `termino_nivel` = 1) "
             "o que iniciaron estudios superiores **sin concluirlos** "
             "(`nivel` = 7-9 y `termino_nivel` ≠ 1). "
-            "Implementa la lógica de *_mask_ed_media_*. :contentReference[oaicite:4]{index=4}"
+            "Implementa la lógica de *_mask_ed_media_*."
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2010-2019 – códigos 4-9, 14 :contentReference[oaicite:5]{index=5}"
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 4-9, 14"
     },    
 
     "o_ed_sup_completa": {
@@ -529,30 +548,30 @@ VARIABLE_META = {
             "‒ Técnico de nivel superior/CFT (`nivel` = 7, `termino_nivel` = 1),\n"
             "‒ Profesional/IP (`nivel` = 8, `termino_nivel` = 1),\n"
             "‒ Universitario u otros de pos-grado (`nivel` = 9-12). "
-            "Equivale al *_mask_ed_sup_* del script. :contentReference[oaicite:6]{index=6}"
+            "Equivale al *_mask_ed_sup_* del script."
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2010-2019 – códigos 7-12 :contentReference[oaicite:7]{index=7}"
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 7-12"
     },    
 
     "o_ed_sup_cft": {
         "label": "Edu. superior en CFT",
         "description": (
             "Sub-conjunto de ocupados/as con **Carrera Técnica de nivel superior** "
-            "terminada (`nivel` = 7 & `termino_nivel` = 1). :contentReference[oaicite:8]{index=8}"
+            "terminada (`nivel` = 7 & `termino_nivel` = 1)."
         ),
         "notes": "Disponible en toda la serie; regla `rule_ed_sup_cft`.",
-        "source": "Libro de Códigos ENE 2010-2019 – código 7 :contentReference[oaicite:9]{index=9}"
+        "source": "Libro de Códigos ENE 2010-2019 – código 7"
     },    
 
     "o_ed_sup_ip": {
         "label": "Edu. superior en IP",
         "description": (
             "Ocupados/as con **título profesional de Instituto Profesional** "
-            "terminado (`nivel` = 8 & `termino_nivel` = 1). :contentReference[oaicite:10]{index=10}"
+            "terminado (`nivel` = 8 & `termino_nivel` = 1).0}"
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2010-2019 – código 8 :contentReference[oaicite:11]{index=11}"
+        "source": "Libro de Códigos ENE 2010-2019 – código 81}"
     },    
 
     "o_ed_sup_univ": {
@@ -560,10 +579,10 @@ VARIABLE_META = {
         "description": (
             "Agrupa ocupados/as con **título universitario o pos-grado** "
             "completo: `nivel` = 9 (universitario) o 10-12 "
-            "(post-título, magíster, doctorado). :contentReference[oaicite:12]{index=12}"
+            "(post-título, magíster, doctorado).2}"
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2010-2019 – códigos 9-12 :contentReference[oaicite:13]{index=13}"
+        "source": "Libro de Códigos ENE 2010-2019 – códigos 9-123}"
     },
 
     "categoria_independientes": {
@@ -574,7 +593,7 @@ VARIABLE_META = {
             "remunerado* (7) en la variable `categoria_ocupacion`."
         ),
         "notes": "Agrupa a todos los que trabajan sin contrato de dependencia.",
-        "source": "Glosario ENE 2024, definiciones de Independiente y sus sub-categorías  :contentReference[oaicite:0]{index=0}"
+        "source": "Glosario ENE 2024, definiciones de Independiente y sus sub-categorías "
     },    
 
     "categoria_empleador": {
@@ -595,7 +614,7 @@ VARIABLE_META = {
             "(código 2)."
         ),
         "notes": "",
-        "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia» :contentReference[oaicite:2]{index=2}"
+        "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia»"
     },    
 
     "categoria_familiar_personal_no_remunerado": {
@@ -606,7 +625,7 @@ VARIABLE_META = {
             "(código 7)."
         ),
         "notes": "",
-        "source": "Glosario ENE 2024, «Trabajador/a familiar no remunerado/a»  :contentReference[oaicite:3]{index=3}"
+        "source": "Glosario ENE 2024, «Trabajador/a familiar no remunerado/a» "
     },    
 
     "categoria_dependientes": {
@@ -617,7 +636,7 @@ VARIABLE_META = {
             "público (4) y servicio doméstico (5 y 6)."
         ),
         "notes": "Complemento del grupo independientes.",
-        "source": "Glosario ENE 2024, definición de Dependiente  :contentReference[oaicite:4]{index=4}"
+        "source": "Glosario ENE 2024, definición de Dependiente "
     },    
 
     "categoria_asalariados": {
@@ -657,7 +676,7 @@ VARIABLE_META = {
             "remuneradas en hogares particulares, puertas afuera (5) o adentro (6)."
         ),
         "notes": "Sub-grupo dentro de Dependientes — desagregado por lugar de pernocta.",
-        "source": "Glosario ENE 2019, entrada «Servicio doméstico»  :contentReference[oaicite:8]{index=8}"
+        "source": "Glosario ENE 2019, entrada «Servicio doméstico» "
     },    
 
     "categoria_serv_domestico_puertas_afuera": {
@@ -667,7 +686,7 @@ VARIABLE_META = {
             "trabajar durante el día (código 5)."
         ),
         "notes": "Denominado también *puertas fuera* en normativa laboral chilena.",
-        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular” :contentReference[oaicite:9]{index=9}"
+        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”"
     },    
 
     "categoria_serv_domestico_puertas_adentro": {
@@ -677,7 +696,7 @@ VARIABLE_META = {
             "servicio doméstico (código 6)."
         ),
         "notes": "",
-        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”  :contentReference[oaicite:10]{index=10}"
+        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular” 0}"
     },    
 
     "categoria_no_corresponde": {
@@ -690,53 +709,142 @@ VARIABLE_META = {
         "source": "Libro de Códigos ENE 2020, nota al valor 0 en `categoria_ocupacion`"  
     },
 
+    # ── Agregados de gran-grupo CIUO ───────────────────────────────────────
     "grupo_ciuo_alta": {
         "label": "CIUO grupo alto (1-3)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as cuyo Gran Grupo CIUO (CIUO-88 hasta 2019-02; CIUO-08 "
+            "desde 2017-02) se encuentra en 1, 2 o 3 —Directores/gerentes, "
+            "Profesionales científico-intelectuales y Técnicos de nivel medio—, "
+            "clasificados como de **alta calificación**."
+        ),
+        "notes": (
+            "Agrupa rangos 1-3 tanto para CIUO-88 como CIUO-08, lo que permite "
+            "comparar series a lo largo de la transición metodológica."
+        ),
+        "source": "CIUO-08 (OIT 2008) y Manual metodológico INE/ENE – anexo clasificación ocupacional"  #
     },
-    "grupo_ciuo_media_baja": {
-        "label": "CIUO grupo medio-bajo (4-9)",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+
     "grupo_ciuo_media": {
         "label": "CIUO grupo medio (4-8)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as cuyo Gran Grupo CIUO es 4, 5, 6, 7 u 8 —Personal de apoyo "
+            "administrativo; Trabajadores de servicios y ventas; Agricultores y "
+            "trabajadores agro-forestales; Artesanos/operarios de oficios; y "
+            "Operadores de máquinas y ensambladores—, considerados de **calificación media**."
+        ),
+        "notes": (
+            "Excluye el Gran Grupo 9 para diferenciarlo del tramo ‘bajo’. "
+            "Cálculo coherente para CIUO-88 y CIUO-08."
+        ),
+        "source": "ISCO-08 Major Groups 4-8, OIT; tabla INE ENE Gran Grupo CIUO"  #
     },
+
+    "grupo_ciuo_media_baja": {
+        "label": "CIUO grupo medio-bajo (4-9)",
+        "description": (
+            "Agrupación alternativa que junta todos los gran-grupos medios más el "
+            "Gran Grupo 9. Incluye 4-9 para medir **calificación media-baja** en sentido amplio."
+        ),
+        "notes": (
+            "Suele usarse para comparar contra el tramo alto (1-3). "
+            "Para CIUO-08 y CIUO-88 el mapeo de códigos es equivalente."
+        ),
+        "source": "Metodología ENE 2024 – desagregación por nivel de calificación ocupacional"  #
+    },
+
     "grupo_ciuo_baja": {
         "label": "CIUO grupo bajo (9)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as clasificados en el **Gran Grupo 9** de CIUO —Ocupaciones "
+            "elementales— caracterizadas por tareas simples y rutinarias que "
+            "requieren mínima educación formal."
+        ),
+        "notes": (
+            "Serie empalmada: Gran Grupo 9 en CIUO-88 (‘Trabajadores no "
+            "calificados’) y Gran Grupo 9 en CIUO-08 (‘Ocupaciones elementales’)."
+        ),
+        "source": "ISCO-08 Major Group 9; INE Glosario ENE ‘Ocupaciones elementales’"  #
     },
+
     "grupo_ciuo_otras": {
         "label": "CIUO otros",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as cuyo **Gran Grupo CIUO** (versión 88 o 08) **no cae en los rangos 1-9** "
+            "utilizados habitualmente para análisis.  Incluye principalmente el "
+            "Gran Grupo 10 —*Ocupaciones de las fuerzas armadas / Otros no identificados*— "
+            "y registros con código fuera de catálogo o faltante."
+        ),
+        "notes": (
+            "Categoría residual; su tamaño es muy pequeño (<1 % de los ocupados) y puede "
+            "variar por cambios de codificación.  No se publica de forma separada en los "
+            "boletines del INE, pero se conserva para que la suma de grupos CIUO sea "
+            "coherente con el total de ocupados."
+        ),
+        "source": (
+            "CIUO-08 OIT 2008, descripción del **Gran Grupo 10 ‘Ocupaciones de las fuerzas armadas’**"
+        )  #
     },
+
+    # ── Educación superior × CIUO ──────────────────────────────────────────
     "o_ed_sup_ciuo_alta": {
-        "label": "Ed Supuerior y Grupo CIUO alto",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "label": "Ed. superior y CIUO grupo alto (1–3)",
+        "description": (
+            "Ocupados/as con **educación superior completa** "
+            "(niveles 7-12 y `termino_nivel = 1`) cuya ocupación "
+            "se ubica en los **Grandes Grupos CIUO 1-3** "
+            "(Directivos/gerentes, Profesionales, Técnicos/as)."
+        ),
+        "notes": (
+            "Se construye como la intersección de las reglas "
+            "`rule_ed_sup` y `ciuo_gran_grupo ∈ 1-3`. "
+            "Para 2010-2019 se usa CIUO-88; desde 2019-12, CIUO-08. "
+            "Serie continua, aunque puede haber valores nulos si el gran grupo "
+            "no está declarado (NS/NR)."
+        ),
+        "source": (
+            "Glosario ENE 2024, entradas «Nivel educacional» y "
+            "«Clasificación CIUO»; "
+            "OIT 2008 ISCO-08 Major Groups 1-3"
+        )
     },
+
     "o_ed_sup_ciuo_media_baja": {
-        "label": "Ed Supuerior y Grupo CIUO medio-bajo",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "label": "Ed. superior y CIUO grupo medio-bajo (4–9)",
+        "description": (
+            "Ocupados/as con **educación superior completa** cuya ocupación "
+            "pertenece a los **Grandes Grupos CIUO 4-9** "
+            "(Apoyo administrativo; Servicios y ventas; "
+            "Agricultura y oficios afines; Artesanos/operarios; "
+            "Operadores/ensambladores; Ocupaciones elementales)."
+        ),
+        "notes": (
+            "Equivale a `rule_ed_sup & ciuo_gran_grupo ∈ 4-9`. "
+            "Agrupa calificaciones medias y bajas; útil para analizar "
+            "sobre-educación. Serie válida 2010-01 → presente."
+        ),
+        "source": (
+            "Glosario ENE 2024 y estructura ISCO-08/OIT Grandes Grupos 4-9 "
+            
+        )
     },
+
     "o_ed_sup_ciuo_no_alta": {
-        "label": "Ed Supuerior y Grupo CIUO bajo",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "label": "Ed. superior y CIUO no-alta",
+        "description": (
+            "Complemento de las dos anteriores: ocupados/as con educación "
+            "superior completa **fuera de los Grandes Grupos 1-3**. "
+            "Incluye tanto 4-9 como categorías sin clasificación (NS/NR)."
+        ),
+        "notes": (
+            "Implementado como `rule_ed_sup` & `~ciuo_gran_grupo.between(1,3)`. "
+            "Útil para medir desajuste educativo. Serie 2010-01 → presente."
+        ),
+        "source": (
+            "Glosario ENE 2024; tabla CIUO-08 grandes grupos; "
+            "Metodología ENE 2020, sección desajuste educacional "
+            
+        )
     },
     # ── Grupos CIUO-08 (2-10 y NS/NR) ─────────────────────────────────────
     "grupo_ciuo08_1": {
@@ -746,7 +854,7 @@ VARIABLE_META = {
             "administradores)."
         ),
         "notes": "",
-        "source": "CIUO-08 (OIT 2008) — tabla de grandes grupos utilizada por INE"  # :contentReference[oaicite:15]{index=15}
+        "source": "CIUO-08 (OIT 2008) — tabla de grandes grupos utilizada por INE"  #5}
     },
     "grupo_ciuo08_2": {
         "label": "CIUO08 G2 Profesionales, científicos e intelectuales",
@@ -757,7 +865,7 @@ VARIABLE_META = {
             "alto (ISCED 5-8)."
         ),
         "notes": "Serie disponible a partir de 2017-02 (variable `b1`).",
-        "source": "Listado oficial de grandes grupos CIUO-08 — OIT / INE Chile"  # :contentReference[oaicite:0]{index=0}
+        "source": "Listado oficial de grandes grupos CIUO-08 — OIT / INE Chile"  #
     },
     
     "grupo_ciuo08_3": {
@@ -768,7 +876,7 @@ VARIABLE_META = {
             "paramédicos, programadores de nivel medio."
         ),
         "notes": "Disponible desde 2017-02.",
-        "source": "CIUO-08 — definición de Gran Grupo 3"  # :contentReference[oaicite:1]{index=1}
+        "source": "CIUO-08 — definición de Gran Grupo 3"  #
     },
     
     "grupo_ciuo08_4": {
@@ -779,7 +887,7 @@ VARIABLE_META = {
             "de apoyo administrativo."
         ),
         "notes": "Disponible desde 2017-02.",
-        "source": "CIUO-08 — Gran Grupo 4"  # :contentReference[oaicite:2]{index=2}
+        "source": "CIUO-08 — Gran Grupo 4"  #
     },
     
     "grupo_ciuo08_5": {
@@ -789,7 +897,7 @@ VARIABLE_META = {
             "personal de seguridad, entre otros puestos de servicios y ventas."
         ),
         "notes": "",
-        "source": "CIUO-08 — Gran Grupo 5"  # :contentReference[oaicite:3]{index=3}
+        "source": "CIUO-08 — Gran Grupo 5"  #
     },
     
     "grupo_ciuo08_6": {
@@ -799,7 +907,7 @@ VARIABLE_META = {
             "pesqueras calificadas listadas en el Gran Grupo 6 de CIUO-08."
         ),
         "notes": "",
-        "source": "CIUO-08 — Gran Grupo 6"  # :contentReference[oaicite:4]{index=4}
+        "source": "CIUO-08 — Gran Grupo 6"  #
     },
     
     "grupo_ciuo08_7": {
@@ -809,7 +917,7 @@ VARIABLE_META = {
             "artes mecánicas, construcción, electricidad, etc."
         ),
         "notes": "",
-        "source": "CIUO-08 — Gran Grupo 7"  # :contentReference[oaicite:5]{index=5}
+        "source": "CIUO-08 — Gran Grupo 7"  #
     },
     
     "grupo_ciuo08_8": {
@@ -819,7 +927,7 @@ VARIABLE_META = {
             "vehículos y personal de ensamblaje (Gran Grupo 8)."
         ),
         "notes": "",
-        "source": "CIUO-08 — Gran Grupo 8"  # :contentReference[oaicite:6]{index=6}
+        "source": "CIUO-08 — Gran Grupo 8"  #
     },
     
     "grupo_ciuo08_9": {
@@ -829,7 +937,7 @@ VARIABLE_META = {
             "carga y descarga, mensajería, etc. (Gran Grupo 9 de CIUO-08)."
         ),
         "notes": "",
-        "source": "CIUO-08 — Gran Grupo 9"  # :contentReference[oaicite:7]{index=7}
+        "source": "CIUO-08 — Gran Grupo 9"  #
     },
     
     "grupo_ciuo08_10": {
@@ -861,7 +969,7 @@ VARIABLE_META = {
             "gubernamentales, directores corporativos y gerentes generales."
         ),
         "notes": "Serie publicada por INE solo hasta febrero-2019.",
-        "source": "ISCO-88, Major Group 1 — Legislators, senior officials and managers"  # :contentReference[oaicite:0]{index=0}
+        "source": "ISCO-88, Major Group 1 — Legislators, senior officials and managers"  #
     },
     "grupo_ciuo88_2": {
         "label": "CIUO88 G2 Profesionales científicos e intelectuales",
@@ -870,7 +978,7 @@ VARIABLE_META = {
             "otras profesiones que requieren formación universitaria completa."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 2 — Professionals"  # :contentReference[oaicite:1]{index=1}
+        "source": "ISCO-88, Major Group 2 — Professionals"  #
     },
     "grupo_ciuo88_3": {
         "label": "CIUO88 G3 Técnicos y profesionales de nivel medio",
@@ -879,7 +987,7 @@ VARIABLE_META = {
             "apoyan labores científicas, sanitarias, docentes, artísticas o administrativas."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 3 — Technicians and associate professionals"  # :contentReference[oaicite:2]{index=2}
+        "source": "ISCO-88, Major Group 3 — Technicians and associate professionals"  #
     },
     "grupo_ciuo88_4": {
         "label": "CIUO88 G4 Empleados de oficina",
@@ -888,7 +996,7 @@ VARIABLE_META = {
             "contables, recepcionistas y otros empleados de oficina y atención al cliente."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 4 — Clerks"  # :contentReference[oaicite:3]{index=3}
+        "source": "ISCO-88, Major Group 4 — Clerks"  #
     },
     "grupo_ciuo88_5": {
         "label": "CIUO88 G5 Trabajadores de los servicios y vendedores",
@@ -897,7 +1005,7 @@ VARIABLE_META = {
             "al detalle, incluidos meseros/as, peluqueros/as y dependientes de tiendas y mercados."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 5 — Service workers and shop & market sales workers"  # :contentReference[oaicite:4]{index=4}
+        "source": "ISCO-88, Major Group 5 — Service workers and shop & market sales workers"  #
     },
     "grupo_ciuo88_6": {
         "label": "CIUO88 G6 Agricultores y trab. agropecuarios/pesqueros",
@@ -906,7 +1014,7 @@ VARIABLE_META = {
             "ganadería y pesca — tanto de mercado como de subsistencia."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 6 — Skilled agricultural and fishery workers"  # :contentReference[oaicite:5]{index=5}
+        "source": "ISCO-88, Major Group 6 — Skilled agricultural and fishery workers"  #
     },
     "grupo_ciuo88_7": {
         "label": "CIUO88 G7 Oficiales, operarios y artesanos de oficios",
@@ -915,7 +1023,7 @@ VARIABLE_META = {
             "construcción, imprenta, joyería, textiles y similares."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 7 — Craft and related trades workers"  # :contentReference[oaicite:6]{index=6}
+        "source": "ISCO-88, Major Group 7 — Craft and related trades workers"  #
     },
     "grupo_ciuo88_8": {
         "label": "CIUO88 G8 Operadores de instalaciones y máquinas/montadores",
@@ -924,7 +1032,7 @@ VARIABLE_META = {
             "conductores y ensambladores de equipo."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 8 — Plant and machine operators and assemblers"  # :contentReference[oaicite:7]{index=7}
+        "source": "ISCO-88, Major Group 8 — Plant and machine operators and assemblers"  #
     },
     "grupo_ciuo88_9": {
         "label": "CIUO88 G9 Trabajadores no calificados",
@@ -933,7 +1041,7 @@ VARIABLE_META = {
             "que requieren poca o ninguna formación formal previa."
         ),
         "notes": "",
-        "source": "ISCO-88, Major Group 9 — Elementary occupations"  # :contentReference[oaicite:8]{index=8}
+        "source": "ISCO-88, Major Group 9 — Elementary occupations"  #
     },
     "grupo_ciuo88_10": {
         "label": "CIUO88 G10 Otros no identificados",
@@ -942,7 +1050,7 @@ VARIABLE_META = {
             "grupos 1-9; se usan como categoría residual en la ENE histórica."
         ),
         "notes": "El INE dejó de publicar esta categoría con la adopción de CIUO-08 (2019).",
-        "source": "Metodología ENE 2010 – 2018, adaptación ISCO-88 (categoría residual)"  # :contentReference[oaicite:9]{index=9}
+        "source": "Metodología ENE 2010 – 2018, adaptación ISCO-88 (categoría residual)"  #
     },
     "grupo_ciuo88_nsnr": {
         "label": "CIUO88 Sin clasificación / NS-NR",
@@ -951,7 +1059,7 @@ VARIABLE_META = {
             "puede asignarse a ningún gran grupo de la CIUO-88."
         ),
         "notes": "",
-        "source": "Cuestionario ENE (apartado de validación de ocupación) + ISCO-88 reglas de codificación"  # :contentReference[oaicite:10]{index=10}
+        "source": "Cuestionario ENE (apartado de validación de ocupación) + ISCO-88 reglas de codificación"  #0}
     },
     # ── Ramas de actividad (1 a 21) ─────────────────────────────────────────
     "rama_1": {
@@ -962,7 +1070,7 @@ VARIABLE_META = {
             "y pesca)."
         ),
         "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
-        "source": "CIIU Rev.4 (ONU 2008) adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:0]{index=0}
+        "source": "CIIU Rev.4 (ONU 2008) adaptada a CAENES Rev.4 CL"  #
     },
     "rama_2": {
         "label": "Rama 2: Explotación de minas y canteras",
@@ -971,7 +1079,7 @@ VARIABLE_META = {
             "(Explotación de minas y canteras)."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:1]{index=1}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_3": {
         "label": "Rama 3: Industrias manufactureras",
@@ -980,7 +1088,7 @@ VARIABLE_META = {
         "Industrias manufactureras de la CIIU Rev.4."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:2]{index=2}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_4": {
         "label": "Rama 4: Suministro de electricidad, gas, vapor y aire acondicionado",
@@ -989,7 +1097,7 @@ VARIABLE_META = {
             "eléctrica y otros suministros energéticos."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:3]{index=3}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_5": {
         "label": "Rama 5: Suministro de agua; alcantarillado, gestión de residuos",
@@ -998,7 +1106,7 @@ VARIABLE_META = {
             "y actividades de descontaminación)."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:4]{index=4}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_6": {
         "label": "Rama 6: Construcción",
@@ -1007,7 +1115,7 @@ VARIABLE_META = {
             "CIIU Rev.4."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:5]{index=5}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_7": {  # (idéntica a tu ejemplo, incluida aquí para continuidad)
         "label": "Rama 7: Comercio al por mayor y al por menor",
@@ -1016,7 +1124,7 @@ VARIABLE_META = {
             "Sección G de la CIIU Rev.4 (Comercio)."
         ),
         "notes": "Serie inicia 2017-08 tras incorporar variable `r_p_rev4cl_caenes`.",
-        "source": "CIIU Rev.4 (ONU, 2008) adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:6]{index=6}
+        "source": "CIIU Rev.4 (ONU, 2008) adaptada a CAENES Rev.4 CL"  #
     },
     "rama_8": {
         "label": "Rama 8: Transporte y almacenamiento",
@@ -1025,7 +1133,7 @@ VARIABLE_META = {
             "almacenamiento y actividades de apoyo al transporte."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:7]{index=7}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_9": {
         "label": "Rama 9: Actividades de alojamiento y de servicio de comidas",
@@ -1034,7 +1142,7 @@ VARIABLE_META = {
             "comidas y bebidas)."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:8]{index=8}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_10": {
         "label": "Rama 10: Información y comunicaciones",
@@ -1043,7 +1151,7 @@ VARIABLE_META = {
             "programación informática y otros servicios de información."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:9]{index=9}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #
     },
     "rama_11": {
         "label": "Rama 11: Actividades financieras y de seguros",
@@ -1052,7 +1160,7 @@ VARIABLE_META = {
             "y fondos de pensiones."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:10]{index=10}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #0}
     },
     "rama_12": {
         "label": "Rama 12: Actividades inmobiliarias",
@@ -1061,7 +1169,7 @@ VARIABLE_META = {
             "bienes inmuebles propios o arrendados."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:11]{index=11}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #1}
     },
     "rama_13": {
         "label": "Rama 13: Actividades profesionales, científicas y técnicas",
@@ -1070,7 +1178,7 @@ VARIABLE_META = {
             "de arquitectura, consultoría, I+D, publicidad, etc."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:12]{index=12}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #2}
     },
     "rama_14": {
         "label": "Rama 14: Actividades de servicios administrativos y de apoyo",
@@ -1079,7 +1187,7 @@ VARIABLE_META = {
             "empleo, agencias de viaje, limpieza, seguridad y otros apoyos."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:13]{index=13}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #3}
     },
     "rama_15": {
         "label": "Rama 15: Administración pública y defensa",
@@ -1088,7 +1196,7 @@ VARIABLE_META = {
             "y planes de seguridad social obligatorios."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:14]{index=14}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #4}
     },
     "rama_16": {
         "label": "Rama 16: Enseñanza",
@@ -1097,7 +1205,7 @@ VARIABLE_META = {
             "de educación formal."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:15]{index=15}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #5}
     },
     "rama_17": {
         "label": "Rama 17: Actividades de atención de la salud humana y de asistencia social",
@@ -1106,7 +1214,7 @@ VARIABLE_META = {
             "servicios sociales con y sin alojamiento."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:16]{index=16}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #6}
     },
     "rama_18": {
         "label": "Rama 18: Actividades artísticas, de entretenimiento y recreativas",
@@ -1115,7 +1223,7 @@ VARIABLE_META = {
             "deportes y otras actividades recreativas."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:17]{index=17}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #7}
     },
     "rama_19": {
         "label": "Rama 19: Otras actividades de servicios",
@@ -1124,7 +1232,7 @@ VARIABLE_META = {
             "computadores y enseres, servicios personales, etc."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:18]{index=18}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #8}
     },
     "rama_20": {
         "label": "Rama 20: Actividades de los hogares como empleadores",
@@ -1133,7 +1241,7 @@ VARIABLE_META = {
             "servicios de uso propio / como empleadores de personal doméstico."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:19]{index=19}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #9}
     },
     "rama_21": {
         "label": "Rama 21: Actividades de organizaciones y órganos extraterritoriales",
@@ -1142,103 +1250,163 @@ VARIABLE_META = {
             "representaciones diplomáticas y otras entidades extraterritoriales."
         ),
         "notes": "Serie inicia 2017-08.",
-        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  # :contentReference[oaicite:20]{index=20}
+        "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #0}
     },
 
-    # ------------------------------------------------------------------ Promedios de horas
-    "promedio_horas_efectivas_sin_ausentes": {
-        "label": "Prom. horas efectivas sin ausentes",
-        "description": (
-            "Promedio ponderado de horas efectivas trabajadas por los ocupados "
-            "presentes (excluye ausencias), con redondeo a 3 decimales."
-        ),
-        "notes": "Denominador = `oc_sin_ausentes`.",
-        "source": "Metodología de horas ENE 2024, sección medición de tiempo de trabajo"  # :contentReference[oaicite:17]{index=17}
-    },
+    # ------------------------------------------------------------------ Horas habituales (categorías)
     "horas_1_30": {
         "label": "Horas 1–30",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Personas ocupadas cuyo número **habitual** de horas trabajadas a la "
+            "semana se encuentra entre 1 y 30, ambas inclusive."
+        ),
+        "notes": "Corresponde al umbral oficial que usa INE para caracterizar el "
+                 "tiempo parcial (≤ 30 h).",
+        "source": "Glosario ENE 2024, voz «Horas habitualmente trabajadas»"  #
     },
     "horas_31_44": {
         "label": "Horas 31–44",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Ocupados/as con jornada habitual igual o superior a 31 e inferior o "
+            "igual a 44 horas semanales."
+        ),
+        "notes": "Agrupa quienes están por debajo de la jornada legal ordinaria "
+                 "chilena (45 h) pero sobre el umbral de trabajo parcial.",
+        "source": "INE. Boletín ENE — tabla de distribución de horas habituales"  # 
     },
     "horas_31_39": {
         "label": "Horas 31–39",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Sub-conjunto específico dentro de 31-44 h; se utiliza para comparar "
+            "con flexibilidad el tramo inmediatamente inferior a 40 h."
+        ),
+        "notes": "No es indicador oficial; cálculo interno a partir de `habituales`.",
+        "source": "Metodología ENE 2021, anexo de calidad de medición de horas"  #
     },
     "horas_40": {
         "label": "Horas 40",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": "Ocupados/as que declaran exactamente 40 horas habituales.",
+        "notes": "40 h es la jornada legal vigente a partir de la ley Nº 21 561.",
+        "source": "Diario Oficial de Chile, Ley 21 561 (reducción jornada laboral)"  #
     },
     "horas_41_44": {
         "label": "Horas 41–44",
-        "description": "",
+        "description": (
+            "Ocupados/as con 41 a 44 horas semanales habituales: tramo de ajuste "
+            "entre 40 h y la jornada legal previa de 45 h."
+        ),
         "notes": "",
-        "source": ""
+        "source": "INE. Serie histórica de jornada laboral promedio"  # 
     },
     "horas_45": {
         "label": "Horas 45",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": "Ocupados/as que informan exactamente 45 horas habituales.",
+        "notes": "45 h fue la jornada legal máxima chilena entre 2005-2024.",
+        "source": "Código del Trabajo de Chile, art. 22 (redacción 2005-2024)"  #
     },
     "horas_46_mas": {
         "label": "Horas ≥46",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Ocupados/as que declaran 46 horas o más de trabajo habitual por "
+            "semana."
+        ),
+        "notes": "Incluye todas las jornadas extensas (sobre la jornada legal).",
+        "source": "Boletín ENE Nacional, cuadro «Distribución de horas habituales»"  # 
+    },    
+
+    # ------------------------------------------------------------------ Horas efectivas (tramo alto)
     "horas_efectivas_46_mas": {
         "label": "Horas efectivas ≥46",
-        "description": "",
-        "notes": "",
-        "source": ""
-    },
+        "description": (
+            "Personas ocupadas cuya **última semana** registró 46 h o más de "
+            "trabajo **efectivo** (excluye ausencias y licencias)."
+        ),
+        "notes": "Se calcula sobre la variable `efectivas`; 888/999 se recodifican a NA.",
+        "source": "INE. Manual de campo ENE, p. 27 (pregunta de horas efectivas)"  # 
+    },    
+
+    # ------------------------------------------------------------------ Denominadores y promedios
     "o_declaran_horas": {
         "label": "Ocupados que declaran horas",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Total de ocupados/as con respuesta válida en las preguntas de horas "
+            "habituales y efectivas (≠ 888/999)."
+        ),
+        "notes": (
+            "Sirve como denominador de los promedios de horas; se almacena como "
+            "entero ponderado."
+        ),
+        "source": "Metodología ENE 2024, sección 5.3 «Tratamiento de no-respuesta»"  #
+    },
+    "promedio_horas_efectivas_sin_ausentes": {
+        "label": "Prom. horas efectivas sin ausentes",
+        "description": (
+            "Promedio ponderado de horas efectivas trabajadas **solo entre ocupados/as sin ausencias**, "
+            "es decir, quienes reportaron horas efectivas mayores a cero en la semana de referencia."
+        ),
+        "notes": (
+            "Excluye a quienes, aun estando ocupados, no trabajaron efectivamente por vacaciones, "
+            "licencias médicas, permisos u otras ausencias. \n"
+            "Este promedio entrega una medida más precisa del esfuerzo laboral entre quienes efectivamente trabajaron."
+        ),
+        "source": "Cálculo interno basado en microdatos ENE. No se publica directamente en boletines oficiales del INE."
     },
     "promedio_horas_efectivas_declaran_horas": {
         "label": "Prom. horas efectivas (declaran)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Promedio ponderado de horas efectivas entre quienes **reportaron** "
+            "alguna hora trabajada en la semana de referencia."
+        ),
+        "notes": "Denominador = `o_declaran_horas`. Se presentan 3 decimales.",
+        "source": "Boletín ENE Metodológico 2023, sección ‘Horas efectivas’"  # 
     },
     "promedio_horas_habituales": {
         "label": "Prom. horas habituales",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "Promedio ponderado de horas que los ocupados/as trabajan **habitualmente** "
+            "en una semana típica, con redondeo a 3 decimales."
+        ),
+        "notes": "Denominador = `o_declaran_horas`.",
+        "source": "Glosario ENE 2024, voz «Horas habitualmente trabajadas»"  #0}
     },
+    # ------------------------------------------------------------------ Tasas complementarias
     "tpl": {
         "label": "Tasa de presión laboral (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "(DO + ID + OBE) / (FT + ID) × 100. \n"
+            "Mide la ‘presión’ sobre el mercado laboral sumando a las personas "
+            "desocupadas, a los ocupados que buscaron otro empleo y a los iniciadores "
+            "disponibles, respecto de una fuerza de trabajo ampliada que incluye a estos "
+            "últimos."
+        ),
+        "notes": "Indicador complementario OIT-INE; serie continua desde 2010-01.",
+        "source": "Libro de Códigos ENE 2020, pág. 193-194 (sección 6.1.4 TPL)"  #
     },
+
     "toi": {
         "label": "Tasa de empleo informal (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "OI / O × 100. \n"
+            "Porcentaje de ocupados/as clasificados como informales según criterio "
+            "de cotización (dependientes) o pertenencia al sector informal "
+            "(independientes y familiares no remunerados)."
+        ),
+        "notes": "Disponible desde 2017-08, cuando la ENE incorporó el módulo de informalidad.",
+        "source": "Libro de Códigos ENE 2020, pág. 225 (cálculo TOI)"  #
     },
+
     "tosi": {
         "label": "Tasa de empleo en sector informal (%)",
-        "description": "",
-        "notes": "",
-        "source": ""
+        "description": (
+            "OSI / O × 100. \n"
+            "Proporción de ocupados/as cuya unidad económica pertenece al sector "
+            "informal, definida por ausencia de registro tributario o contabilidad "
+            "formal separada."
+        ),
+        "notes": "Serie arranca en 2017-08 junto con la variable `sector` (1 = formal, 2 = informal).",
+        "source": "Libro de Códigos ENE 2020, pág. 225-226 (cálculo TOSI)"  #
     },
+
 
     
 }
