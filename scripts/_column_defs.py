@@ -731,7 +731,7 @@ VARIABLE_META = {
             "Personas ocupadas en los **grandes grupos 4 a 9** de la CIUO, que incluyen todas "
             "las ocupaciones de calificación media y las elementales:\n"
             "- Grupos 4 a 8 (ver CIUO grupo medio), más\n"
-            "- Ocupaciones elementales (G9), caracterizadas por tareas simples y rutinarias."
+            "- Ocupaciones elementales (G9), caracterizadas por tareas simples y rutinarias.  "
         ),
         "notes": (
             "Agrupación útil para comparar con el grupo alto (G1 a G3). Se utiliza `b1` o `b1_ciuo88` "
