@@ -131,48 +131,6 @@
     "notes": "Serie arranca en 2017-08 junto con el módulo de informalidad.",
     "source": "Glosario ENE 2024, ‘Sector informal’"
   },
-  "o_sin_basica_completa": {
-    "label": "Sin educación básica completa",
-    "description": "Ocupados/as cuyo **nivel educacional más alto** está por debajo de la enseñanza básica completa.\n\nIncluye:\n‒ Personas que declararon 'Nunca estudió', preescolar o básica/primaria sin haberla finalizado (`nivel` entre 0 y 3, con `termino_nivel` ≠ 1).\n‒ Casos con códigos fuera del rango 3–14, considerados por el INE como ausencia de estudios formales.",
-    "notes": "Serie continua desde 2010-01.",
-    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
-  },
-  "o_ed_basica_completa": {
-    "label": "Educación básica completa",
-    "description": "Ocupados/as que **completaron la enseñanza básica o primaria** (`nivel` = 3 y `termino_nivel` = 1), o que cursaron enseñanza media sin terminarla (`nivel` entre 4 y 6 o igual a 14, con `termino_nivel` ≠ 1).",
-    "notes": "Serie continua desde 2010-01.",
-    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
-  },
-  "o_ed_media_completa": {
-    "label": "Educación media completa",
-    "description": "Ocupados/as que **terminaron la enseñanza media** (común, técnico-profesional o humanidades) — `nivel` entre 4 y 6 o igual a 14, con `termino_nivel` = 1 — o que iniciaron estudios superiores **sin concluirlos** (`nivel` entre 7 y 9 con `termino_nivel` ≠ 1).",
-    "notes": "Serie continua desde 2010-01.",
-    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
-  },
-  "o_ed_sup_completa": {
-    "label": "Educación superior completa",
-    "description": "Ocupados/as con **estudios superiores finalizados**, incluyendo:\n‒ Carrera técnica de nivel superior en CFT (`nivel` = 7, `termino_nivel` = 1),\n‒ Título profesional en Instituto Profesional (`nivel` = 8, `termino_nivel` = 1),\n‒ Estudios universitarios o de posgrado completos (`nivel` entre 9 y 12).",
-    "notes": "Serie continua desde 2010-01.",
-    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
-  },
-  "o_ed_sup_cft": {
-    "label": "Edu. superior en CFT",
-    "description": "Ocupados/as con **carrera técnica de nivel superior completada** (`nivel` = 7 y `termino_nivel` = 1).",
-    "notes": "Disponible en toda la serie.",
-    "source": "Libro de Códigos ENE 2010–2019 – código 7 en `nivel`"
-  },
-  "o_ed_sup_ip": {
-    "label": "Edu. superior en IP",
-    "description": "Ocupados/as con **título profesional de Instituto Profesional** completado (`nivel` = 8 y `termino_nivel` = 1).",
-    "notes": "Disponible en toda la serie.",
-    "source": "Libro de Códigos ENE 2010–2019 – código 8 en `nivel`"
-  },
-  "o_ed_sup_univ": {
-    "label": "Edu. superior universitaria",
-    "description": "Ocupados/as con **título universitario o de posgrado completo**:\n`nivel` = 9 (universitario), 10 (postítulo), 11 (magíster), o 12 (doctorado).",
-    "notes": "Serie continua desde 2010-01.",
-    "source": "Libro de Códigos ENE 2010–2019 – códigos 9–12 en `nivel`"
-  },
   "categoria_independientes": {
     "label": "Categoría: Independientes",
     "description": "Ocupados/as clasificados como *empleador/a* (`categoria_ocupacion` = 1), *trabajador/a por cuenta propia* (`categoria_ocupacion` = 2), o *familiar personal no remunerado* (`categoria_ocupacion` = 7).",
@@ -244,54 +202,6 @@
     "description": "Código reservado (`categoria_ocupacion` = 0) para casos sin información o en los que la categoría ocupacional no aplica al entrevistado/a.",
     "notes": "Valor residual utilizado por INE para editar datos faltantes.",
     "source": "Libro de Códigos ENE 2020, nota al valor 0 en `categoria_ocupacion`"
-  },
-  "grupo_ciuo_alta": {
-    "label": "CIUO grupo alto (1-3)",
-    "description": "Ocupados/as cuyo Gran Grupo CIUO (CIUO-88 hasta 2019-02; CIUO-08 desde 2017-02) se encuentra en 1, 2 o 3 —Directores/gerentes, Profesionales científico-intelectuales y Técnicos de nivel medio—, clasificados como de **alta calificación**.",
-    "notes": "Agrupa rangos 1-3 tanto para CIUO-88 como CIUO-08, lo que permite comparar series a lo largo de la transición metodológica.",
-    "source": "CIUO-08 (OIT 2008) y Manual metodológico INE/ENE – anexo clasificación ocupacional"
-  },
-  "grupo_ciuo_media_baja": {
-    "label": "CIUO grupo medio-bajo (4-9)",
-    "description": "Agrupación alternativa que junta todos los gran-grupos medios más el Gran Grupo 9. Incluye 4-9 para medir **calificación media-baja** en sentido amplio.",
-    "notes": "Suele usarse para comparar contra el tramo alto (1-3). Para CIUO-08 y CIUO-88 el mapeo de códigos es equivalente.",
-    "source": "Metodología ENE 2024 – desagregación por nivel de calificación ocupacional"
-  },
-  "grupo_ciuo_media": {
-    "label": "CIUO grupo medio (4-8)",
-    "description": "Ocupados/as cuyo Gran Grupo CIUO es 4, 5, 6, 7 u 8 —Personal de apoyo administrativo; Trabajadores de servicios y ventas; Agricultores y trabajadores agro-forestales; Artesanos/operarios de oficios; y Operadores de máquinas y ensambladores—, considerados de **calificación media**.",
-    "notes": "Excluye el Gran Grupo 9 para diferenciarlo del tramo ‘bajo’. Cálculo coherente para CIUO-88 y CIUO-08.",
-    "source": "ISCO-08 Major Groups 4-8, OIT; tabla INE ENE Gran Grupo CIUO"
-  },
-  "grupo_ciuo_baja": {
-    "label": "CIUO grupo bajo (9)",
-    "description": "Ocupados/as clasificados en el **Gran Grupo 9** de CIUO —Ocupaciones elementales— caracterizadas por tareas simples y rutinarias que requieren mínima educación formal.",
-    "notes": "Serie empalmada: Gran Grupo 9 en CIUO-88 (‘Trabajadores no calificados’) y Gran Grupo 9 en CIUO-08 (‘Ocupaciones elementales’).",
-    "source": "ISCO-08 Major Group 9; INE Glosario ENE ‘Ocupaciones elementales’"
-  },
-  "grupo_ciuo_otras": {
-    "label": "CIUO otros",
-    "description": "Ocupados/as cuyo **Gran Grupo CIUO** (versión 88 o 08) **no cae en los rangos 1-9** utilizados habitualmente para análisis.  Incluye principalmente el Gran Grupo 10 —*Ocupaciones de las fuerzas armadas / Otros no identificados*— y registros con código fuera de catálogo o faltante.",
-    "notes": "Categoría residual; su tamaño es muy pequeño (<1 % de los ocupados) y puede variar por cambios de codificación.  No se publica de forma separada en los boletines del INE, pero se conserva para que la suma de grupos CIUO sea coherente con el total de ocupados.",
-    "source": "CIUO-08 OIT 2008, descripción del **Gran Grupo 10 ‘Ocupaciones de las fuerzas armadas’**"
-  },
-  "o_ed_sup_ciuo_alta": {
-    "label": "Ed. superior y CIUO grupo alto (1–3)",
-    "description": "Ocupados/as con **educación superior completa** (niveles 7-12 y `termino_nivel = 1`) cuya ocupación se ubica en los **Grandes Grupos CIUO 1-3** (Directivos/gerentes, Profesionales, Técnicos/as).",
-    "notes": "Se construye como la intersección de las reglas `rule_ed_sup` y `ciuo_gran_grupo ∈ 1-3`. Para 2010-2019 se usa CIUO-88; desde 2019-12, CIUO-08. Serie continua, aunque puede haber valores nulos si el gran grupo no está declarado (NS/NR).",
-    "source": "Glosario ENE 2024, entradas «Nivel educacional» y «Clasificación CIUO»; OIT 2008 ISCO-08 Major Groups 1-3"
-  },
-  "o_ed_sup_ciuo_media_baja": {
-    "label": "Ed. superior y CIUO grupo medio-bajo (4–9)",
-    "description": "Ocupados/as con **educación superior completa** cuya ocupación pertenece a los **Grandes Grupos CIUO 4-9** (Apoyo administrativo; Servicios y ventas; Agricultura y oficios afines; Artesanos/operarios; Operadores/ensambladores; Ocupaciones elementales).",
-    "notes": "Equivale a `rule_ed_sup & ciuo_gran_grupo ∈ 4-9`. Agrupa calificaciones medias y bajas; útil para analizar sobre-educación. Serie válida 2010-01 → presente.",
-    "source": "Glosario ENE 2024 y estructura ISCO-08/OIT Grandes Grupos 4-9 "
-  },
-  "o_ed_sup_ciuo_no_alta": {
-    "label": "Ed. superior y CIUO no-alta",
-    "description": "Complemento de las dos anteriores: ocupados/as con educación superior completa **fuera de los Grandes Grupos 1-3**. Incluye tanto 4-9 como categorías sin clasificación (NS/NR).",
-    "notes": "Implementado como `rule_ed_sup` & `~ciuo_gran_grupo.between(1,3)`. Útil para medir desajuste educativo. Serie 2010-01 → presente.",
-    "source": "Glosario ENE 2024; tabla CIUO-08 grandes grupos; Metodología ENE 2020, sección desajuste educacional "
   },
   "grupo_ciuo08_1": {
     "label": "CIUO08 G1 Directivos y gerentes",
@@ -424,6 +334,96 @@
     "description": "Casos en que la ocupación fue declarada como ‘No sabe/No responde’ o no puede asignarse a ningún gran grupo de la CIUO-88.",
     "notes": "",
     "source": "Cuestionario ENE (apartado de validación de ocupación) + ISCO-88 reglas de codificación"
+  },
+  "grupo_ciuo_alta": {
+    "label": "CIUO grupo alto (1-3)",
+    "description": "Ocupados/as cuyo Gran Grupo CIUO (CIUO-88 hasta 2019-02; CIUO-08 desde 2017-02) se encuentra en 1, 2 o 3 —Directores/gerentes, Profesionales científico-intelectuales y Técnicos de nivel medio—, clasificados como de **alta calificación**.",
+    "notes": "Agrupa rangos 1-3 tanto para CIUO-88 como CIUO-08, lo que permite comparar series a lo largo de la transición metodológica.",
+    "source": "CIUO-08 (OIT 2008) y Manual metodológico INE/ENE – anexo clasificación ocupacional"
+  },
+  "grupo_ciuo_media_baja": {
+    "label": "CIUO grupo medio-bajo (4-9)",
+    "description": "Agrupación alternativa que junta todos los gran-grupos medios más el Gran Grupo 9. Incluye 4-9 para medir **calificación media-baja** en sentido amplio.",
+    "notes": "Suele usarse para comparar contra el tramo alto (1-3). Para CIUO-08 y CIUO-88 el mapeo de códigos es equivalente.",
+    "source": "Metodología ENE 2024 – desagregación por nivel de calificación ocupacional"
+  },
+  "grupo_ciuo_media": {
+    "label": "CIUO grupo medio (4-8)",
+    "description": "Ocupados/as cuyo Gran Grupo CIUO es 4, 5, 6, 7 u 8 —Personal de apoyo administrativo; Trabajadores de servicios y ventas; Agricultores y trabajadores agro-forestales; Artesanos/operarios de oficios; y Operadores de máquinas y ensambladores—, considerados de **calificación media**.",
+    "notes": "Excluye el Gran Grupo 9 para diferenciarlo del tramo ‘bajo’. Cálculo coherente para CIUO-88 y CIUO-08.",
+    "source": "ISCO-08 Major Groups 4-8, OIT; tabla INE ENE Gran Grupo CIUO"
+  },
+  "grupo_ciuo_baja": {
+    "label": "CIUO grupo bajo (9)",
+    "description": "Ocupados/as clasificados en el **Gran Grupo 9** de CIUO —Ocupaciones elementales— caracterizadas por tareas simples y rutinarias que requieren mínima educación formal.",
+    "notes": "Serie empalmada: Gran Grupo 9 en CIUO-88 (‘Trabajadores no calificados’) y Gran Grupo 9 en CIUO-08 (‘Ocupaciones elementales’).",
+    "source": "ISCO-08 Major Group 9; INE Glosario ENE ‘Ocupaciones elementales’"
+  },
+  "grupo_ciuo_otras": {
+    "label": "CIUO otros",
+    "description": "Ocupados/as cuyo **Gran Grupo CIUO** (versión 88 o 08) **no cae en los rangos 1-9** utilizados habitualmente para análisis.  Incluye principalmente el Gran Grupo 10 —*Ocupaciones de las fuerzas armadas / Otros no identificados*— y registros con código fuera de catálogo o faltante.",
+    "notes": "Categoría residual; su tamaño es muy pequeño (<1 % de los ocupados) y puede variar por cambios de codificación.  No se publica de forma separada en los boletines del INE, pero se conserva para que la suma de grupos CIUO sea coherente con el total de ocupados.",
+    "source": "CIUO-08 OIT 2008, descripción del **Gran Grupo 10 ‘Ocupaciones de las fuerzas armadas’**"
+  },
+  "o_sin_basica_completa": {
+    "label": "Sin educación básica completa",
+    "description": "Ocupados/as cuyo **nivel educacional más alto** está por debajo de la enseñanza básica completa.\n\nIncluye:\n‒ Personas que declararon 'Nunca estudió', preescolar o básica/primaria sin haberla finalizado (`nivel` entre 0 y 3, con `termino_nivel` ≠ 1).\n‒ Casos con códigos fuera del rango 3–14, considerados por el INE como ausencia de estudios formales.",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+  },
+  "o_ed_basica_completa": {
+    "label": "Educación básica completa",
+    "description": "Ocupados/as que **completaron la enseñanza básica o primaria** (`nivel` = 3 y `termino_nivel` = 1), o que cursaron enseñanza media sin terminarla (`nivel` entre 4 y 6 o igual a 14, con `termino_nivel` ≠ 1).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+  },
+  "o_ed_media_completa": {
+    "label": "Educación media completa",
+    "description": "Ocupados/as que **terminaron la enseñanza media** (común, técnico-profesional o humanidades) — `nivel` entre 4 y 6 o igual a 14, con `termino_nivel` = 1 — o que iniciaron estudios superiores **sin concluirlos** (`nivel` entre 7 y 9 con `termino_nivel` ≠ 1).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+  },
+  "o_ed_sup_completa": {
+    "label": "Educación superior completa",
+    "description": "Ocupados/as con **estudios superiores finalizados**, incluyendo:\n‒ Carrera técnica de nivel superior en CFT (`nivel` = 7, `termino_nivel` = 1),\n‒ Título profesional en Instituto Profesional (`nivel` = 8, `termino_nivel` = 1),\n‒ Estudios universitarios o de posgrado completos (`nivel` entre 9 y 12).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+  },
+  "o_ed_sup_cft": {
+    "label": "Edu. superior en CFT",
+    "description": "Ocupados/as con **carrera técnica de nivel superior completada** (`nivel` = 7 y `termino_nivel` = 1).",
+    "notes": "Disponible en toda la serie.",
+    "source": "Libro de Códigos ENE 2010–2019 – código 7 en `nivel`"
+  },
+  "o_ed_sup_ip": {
+    "label": "Edu. superior en IP",
+    "description": "Ocupados/as con **título profesional de Instituto Profesional** completado (`nivel` = 8 y `termino_nivel` = 1).",
+    "notes": "Disponible en toda la serie.",
+    "source": "Libro de Códigos ENE 2010–2019 – código 8 en `nivel`"
+  },
+  "o_ed_sup_univ": {
+    "label": "Edu. superior universitaria",
+    "description": "Ocupados/as con **título universitario o de posgrado completo**:\n`nivel` = 9 (universitario), 10 (postítulo), 11 (magíster), o 12 (doctorado).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – códigos 9–12 en `nivel`"
+  },
+  "o_ed_sup_ciuo_alta": {
+    "label": "Ed. superior y CIUO grupo alto (1–3)",
+    "description": "Ocupados/as con **educación superior completa** (niveles 7-12 y `termino_nivel = 1`) cuya ocupación se ubica en los **Grandes Grupos CIUO 1-3** (Directivos/gerentes, Profesionales, Técnicos/as).",
+    "notes": "Se construye como la intersección de las reglas `rule_ed_sup` y `ciuo_gran_grupo ∈ 1-3`. Para 2010-2019 se usa CIUO-88; desde 2019-12, CIUO-08. Serie continua, aunque puede haber valores nulos si el gran grupo no está declarado (NS/NR).",
+    "source": "Glosario ENE 2024, entradas «Nivel educacional» y «Clasificación CIUO»; OIT 2008 ISCO-08 Major Groups 1-3"
+  },
+  "o_ed_sup_ciuo_media_baja": {
+    "label": "Ed. superior y CIUO grupo medio-bajo (4–9)",
+    "description": "Ocupados/as con **educación superior completa** cuya ocupación pertenece a los **Grandes Grupos CIUO 4-9** (Apoyo administrativo; Servicios y ventas; Agricultura y oficios afines; Artesanos/operarios; Operadores/ensambladores; Ocupaciones elementales).",
+    "notes": "Equivale a `rule_ed_sup & ciuo_gran_grupo ∈ 4-9`. Agrupa calificaciones medias y bajas; útil para analizar sobre-educación. Serie válida 2010-01 → presente.",
+    "source": "Glosario ENE 2024 y estructura ISCO-08/OIT Grandes Grupos 4-9 "
+  },
+  "o_ed_sup_ciuo_no_alta": {
+    "label": "Ed. superior y CIUO no-alta",
+    "description": "Complemento de las dos anteriores: ocupados/as con educación superior completa **fuera de los Grandes Grupos 1-3**. Incluye tanto 4-9 como categorías sin clasificación (NS/NR).",
+    "notes": "Implementado como `rule_ed_sup` & `~ciuo_gran_grupo.between(1,3)`. Útil para medir desajuste educativo. Serie 2010-01 → presente.",
+    "source": "Glosario ENE 2024; tabla CIUO-08 grandes grupos; Metodología ENE 2020, sección desajuste educacional "
   },
   "rama_1": {
     "label": "Rama 1: Agricultura, ganadería, silvicultura y pesca",
@@ -569,12 +569,6 @@
     "notes": "",
     "source": "Boletín ENE Nacional 2023: se publica la serie TPV junto a TPI"
   },
-  "tp_sin_declarar_voluntareidad": {
-    "label": "Tiempo parcial sin declarar voluntariedad",
-    "description": "Ocupados/as ≤ 30 h semanales que no especifican si la reducción de jornada es voluntaria o involuntaria.",
-    "notes": "Cálculo interno; no es indicador oficial INE.",
-    "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"
-  },
   "horas_31_44": {
     "label": "Horas 31–44",
     "description": "Ocupados/as con jornada habitual igual o superior a 31 e inferior o igual a 44 horas semanales.",
@@ -706,5 +700,11 @@
     "description": "Personas desocupadas que nunca han tenido una ocupación anterior.",
     "notes": "",
     "source": "Glosario ENE 2024, «Personas que buscaron trabajo por primera vez»"
+  },
+  "tp_sin_declarar_voluntareidad": {
+    "label": "Tiempo parcial sin declarar voluntariedad",
+    "description": "Ocupados/as ≤ 30 h semanales que no especifican si la reducción de jornada es voluntaria o involuntaria.",
+    "notes": "Cálculo interno; no es indicador oficial INE.",
+    "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"
   }
 }

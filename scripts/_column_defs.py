@@ -36,15 +36,7 @@ PUBLIC_COLS = [
     ("o_informal",        "Ocupados informales"),
     ("o_sector_informal", "Ocupados en sector informal"),
 
-    # ── Educación ────────────────────────────────────────────────────────
-    ("o_sin_basica_completa", "Sin educación básica completa"),
-    ("o_ed_basica_completa",  "Educación básica completa"),
-    ("o_ed_media_completa",   "Educación media completa"),
-    ("o_ed_sup_completa",     "Educación superior completa"),
-    ("o_ed_sup_cft",          "Edu. superior en CFT"),
-    ("o_ed_sup_ip",           "Edu. superior en IP"),
-    ("o_ed_sup_univ",         "Edu. superior universitaria"),
-
+    # ── Ocupados por categoría ocupacional ──────────────────────────────
     ("categoria_independientes", "Categoría: Independientes"),
     ("categoria_empleador",      "Categoría: Empleador"),
     ("categoria_cuenta_propia",  "Categoría: Cuenta propia"),
@@ -58,44 +50,6 @@ PUBLIC_COLS = [
     ("categoria_serv_domestico_puertas_adentro",  "Categoría: Servicio doméstico puertas adentro"),
     ("categoria_no_corresponde", "Categoría: No corresponde"),
 
-
-   # ── Grupos CIUO ──────────────────────────────────────────────────────
-    ("grupo_ciuo_alta",       "CIUO grupo alto (1-3)"),
-    ("grupo_ciuo_media_baja", "CIUO grupo medio-bajo (4-9)"),
-    ("grupo_ciuo_media",      "CIUO grupo medio (4-8)"),
-    ("grupo_ciuo_baja",       "CIUO grupo bajo (9)"),
-    ("grupo_ciuo_otras",      "CIUO otros"),
-
-    # ── Edu. superior × CIUO ─────────────────────────────────────────────
-    ("o_ed_sup_ciuo_alta",       "Ed Supuerior y Grupo CIUO alto"),
-    ("o_ed_sup_ciuo_media_baja", "Ed Supuerior y Grupo CIUO medio-bajo"),
-    ("o_ed_sup_ciuo_no_alta",    "Ed Supuerior y Grupo CIUO bajo"),
-
-    # ── Grupos CIUO-08 (1 a 10) ─────────────────────────────────────────
-    #("grupo_ciuo08_1",   "Grupo CIUO08 1: Directores y gerentes"),
-    #("grupo_ciuo08_2",   "Grupo CIUO08 2: Profesionales científicos e intelectuales"),
-    #("grupo_ciuo08_3",   "Grupo CIUO08 3: Técnicos y profesionales de nivel medio"),
-    #("grupo_ciuo08_4",   "Grupo CIUO08 4: Personal de apoyo administrativo"),
-    #("grupo_ciuo08_5",   "Grupo CIUO08 5: Trabajadores de los servicios y vendedores de comercios y mercados"),
-    #("grupo_ciuo08_6",   "Grupo CIUO08 6: Agricultores y trabajadores calificados agropecuarios, forestales y pesqueros"),
-    #("grupo_ciuo08_7",   "Grupo CIUO08 7: Oficiales, operarios y artesanos de artes mecánicas y de otros oficios"),
-    #("grupo_ciuo08_8",   "Grupo CIUO08 8: Operadores de instalaciones y máquinas y ensambladores"),
-    #("grupo_ciuo08_9",   "Grupo CIUO08 9: Ocupaciones elementales"),
-    #("grupo_ciuo08_10",  "Grupo CIUO08 10: Otros no identificados"),
-    #("grupo_ciuo08_nsnr","CIUO08 NS/NR"),
-
-    # ── Grupos CIUO-88 (1 a 10) ─────────────────────────────────────────
-    #("grupo_ciuo88_1",   "Grupo CIUO88 1: Miembros del poder ejecutivo y de los cuerpos legislativos y personal directivo de la administración pública y de empresas"),
-    #("grupo_ciuo88_2",   "Grupo CIUO88 2: Profesionales científicos e intelectuales"),
-    #("grupo_ciuo88_3",   "Grupo CIUO88 3: Técnicos profesionales de nivel medio"),
-    #("grupo_ciuo88_4",   "Grupo CIUO88 4: Empleados de oficina"),
-    #("grupo_ciuo88_5",   "Grupo CIUO88 5: Trabajadores de los servicios y vendedores de comercios y mercados"),
-    #("grupo_ciuo88_6",   "Grupo CIUO88 6: Agricultores y trabajadores calificados agropecuarios y pesqueros"),
-    #("grupo_ciuo88_7",   "Grupo CIUO88 7: Oficiales, operarios y artesanos de artes mecánicas y de otros oficios"),
-    #("grupo_ciuo88_8",   "Grupo CIUO88 8: Operadores de instalaciones y máquinas y montadores"),
-    #("grupo_ciuo88_9",   "Grupo CIUO88 9: Trabajadores no calificados"),
-    #("grupo_ciuo88_10",  "Grupo CIUO88 10: Otros no clasificados"),
-    #("grupo_ciuo88_nsnr","CIUO88 NS/NR"),
 
     # ── Grupos CIUO-08 (rótulos INE) ─────────────────────────────────────
     ("grupo_ciuo08_1",   "CIUO08 G1 Directivos y gerentes"),
@@ -123,6 +77,30 @@ PUBLIC_COLS = [
     ("grupo_ciuo88_10",  "CIUO88 G10 Otros no identificados"),
     ("grupo_ciuo88_nsnr","CIUO88 Sin clasificación / NS-NR"),
 
+       # ── Grupos CIUO ──────────────────────────────────────────────────────
+    ("grupo_ciuo_alta",       "CIUO grupo alto (1-3)"),
+    ("grupo_ciuo_media_baja", "CIUO grupo medio-bajo (4-9)"),
+    ("grupo_ciuo_media",      "CIUO grupo medio (4-8)"),
+    ("grupo_ciuo_baja",       "CIUO grupo bajo (9)"),
+    ("grupo_ciuo_otras",      "CIUO otros"),
+
+    # ── Educación ────────────────────────────────────────────────────────
+    ("o_sin_basica_completa", "Sin educación básica completa"),
+    ("o_ed_basica_completa",  "Educación básica completa"),
+    ("o_ed_media_completa",   "Educación media completa"),
+    ("o_ed_sup_completa",     "Educación superior completa"),
+    ("o_ed_sup_cft",          "Edu. superior en CFT"),
+    ("o_ed_sup_ip",           "Edu. superior en IP"),
+    ("o_ed_sup_univ",         "Edu. superior universitaria"),
+
+
+    # ── Edu. superior × CIUO ─────────────────────────────────────────────
+    ("o_ed_sup_ciuo_alta",       "Ed Supuerior y Grupo CIUO alto"),
+    ("o_ed_sup_ciuo_media_baja", "Ed Supuerior y Grupo CIUO medio-bajo"),
+    ("o_ed_sup_ciuo_no_alta",    "Ed Supuerior y Grupo CIUO bajo"),
+
+
+
 
     # ── Ramas de actividad (1 a 21) ──────────────────────────────────────
     ("rama_1",  "Rama 1: Agricultura, ganadería, silvicultura y pesca"),
@@ -147,11 +125,12 @@ PUBLIC_COLS = [
     ("rama_20", "Rama 20: Actividades de los hogares como empleadores"),
     ("rama_21", "Rama 21: Actividades de organizaciones y órganos extraterritoriales"),
 
+
     # ── Horas trabajadas ────────────────────────────────────────────────
     ("horas_1_30", "Horas 1–30"),
     ("tpi",        "Tiempo parcial involuntario (TPI)"),
     ("tpv",        "Tiempo parcial voluntario (TPV)"),
-    ("tp_sin_declarar_voluntareidad", "Tiempo parcial sin declarar voluntariedad"),
+    ("tp_sin_declarar_voluntariedad", "Tiempo parcial sin declarar voluntariedad"),
     ("horas_31_44", "Horas 31–44"),
     ("horas_31_39", "Horas 31–39"),
     ("horas_40",    "Horas 40"),

@@ -125,7 +125,7 @@ FINAL_COLS = [
     "horas_1_30",
     "tpi",
     "tpv",
-    "tp_sin_declarar_voluntareidad",
+    "tp_sin_declarar_voluntariedad",
     "horas_31_44",
     "horas_31_39",
     "horas_40",
@@ -291,7 +291,7 @@ def rule_informal(df):          return rule_ocupados(df) & (df["ocup_form"] == 2
 def rule_sector_informal(df):          return rule_ocupados(df) & (df["sector"] == 2)
 
 def rule_tpi(df):               return rule_ocupados(df) & (df["tpi"] == 1)
-def rule_tp_sin_declarar_voluntareidad(df):    return rule_ocupados(df) & df["habituales"].between(1, 30) & ((df["c10"] > 2) | ((df["c10"] == 1) & (df["c11"] > 4)))
+def rule_tp_sin_declarar_voluntariedad(df):    return rule_ocupados(df) & df["habituales"].between(1, 30) & ((df["c10"] > 2) | ((df["c10"] == 1) & (df["c11"] > 4)))
 def rule_tpv(df):
     return (
         rule_ocupados(df)
@@ -557,7 +557,7 @@ RULES: dict[str, callable] = {
     "oc_hab": rule_habituales,
 
     "tpv": rule_tpv,
-    "tp_sin_declarar_voluntareidad": rule_tp_sin_declarar_voluntareidad,
+    "tp_sin_declarar_voluntariedad": rule_tp_sin_declarar_voluntariedad,
     "horas_1_30":    rule_horas_1_30,
     "horas_31_44":   rule_horas_31_44,
     "horas_31_39":   rule_horas_31_39,
