@@ -47,7 +47,7 @@ PUBLIC_COLS = [
 
     ("categoria_independientes", "Categoría: Independientes"),
     ("categoria_empleador",      "Categoría: Empleador"),
-    ("categoria_familiar_personal_no_remunerado", "FCategoría: amiliar personal no remunerado"),
+    ("categoria_familiar_personal_no_remunerado", "Categoría: Familiar personal no remunerado"),
     ("categoria_dependientes",   "Categoría: Dependientes"),
     ("categoria_asalariados",    "Categoría: Asalariados"),
     ("categoria_cuenta_propia",  "Categoría: Cuenta propia"),
