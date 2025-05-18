@@ -682,141 +682,158 @@ VARIABLE_META = {
         "source": "Libro de Códigos ENE 2020, nota al valor 0 en `categoria_ocupacion`"
     },
 
-    # ── Agregados de gran-grupo CIUO ───────────────────────────────────────
+    # -- Agrupaciones por CIUO
+
     "grupo_ciuo_alta": {
-        "label": "CIUO grupo alto (1-3)",
+        "label": "CIUO grupo alto (1–3)",
         "description": (
-            "Ocupados/as cuyo Gran Grupo CIUO (CIUO-88 hasta 2019-02; CIUO-08 "
-            "desde 2017-02) se encuentra en 1, 2 o 3 —Directores/gerentes, "
-            "Profesionales científico-intelectuales y Técnicos de nivel medio—, "
-            "clasificados como de **alta calificación**."
+            "Personas ocupadas clasificadas en los **grandes grupos 1 a 3** de la "
+            "Clasificación Internacional Uniforme de Ocupaciones (CIUO), que incluyen:\n"
+            "‒ Directivos/as y gerentes (G1),\n"
+            "‒ Profesionales científicos/as e intelectuales (G2),\n"
+            "‒ Técnicos/as y profesionales de nivel medio (G3).\n\n"
+            "Estas ocupaciones corresponden a un nivel de **alta calificación**."
         ),
         "notes": (
-            "Agrupa rangos 1-3 tanto para CIUO-88 como CIUO-08, lo que permite "
-            "comparar series a lo largo de la transición metodológica."
+            "Agrupación válida tanto para CIUO-88 como para CIUO-08. Se utiliza la variable `b1` "
+            "(CIUO-08) desde 2017-02 y `b1_ciuo88` (CIUO-88) para años anteriores."
         ),
-        "source": "CIUO-08 (OIT 2008) y Manual metodológico INE/ENE – anexo clasificación ocupacional"  #
+        "source": (
+            "Clasificación propia basada en los códigos de gran grupo CIUO registrados en las "
+            "variables `b1` y `b1_ciuo88` de la Encuesta Nacional de Empleo (ENE)."
+        )
     },
 
     "grupo_ciuo_media": {
-        "label": "CIUO grupo medio (4-8)",
+        "label": "CIUO grupo medio (4–8)",
         "description": (
-            "Ocupados/as cuyo Gran Grupo CIUO es 4, 5, 6, 7 u 8 —Personal de apoyo "
-            "administrativo; Trabajadores de servicios y ventas; Agricultores y "
-            "trabajadores agro-forestales; Artesanos/operarios de oficios; y "
-            "Operadores de máquinas y ensambladores—, considerados de **calificación media**."
+            "Personas ocupadas en los **grandes grupos 4 a 8** de la CIUO, que abarcan:\n"
+            "‒ Personal de apoyo administrativo (G4),\n"
+            "‒ Trabajadores/as de servicios y ventas (G5),\n"
+            "‒ Agricultores/as y trabajadores agropecuarios/pesqueros (G6),\n"
+            "‒ Artesanos/as y operarios de oficios (G7),\n"
+            "‒ Operadores/as de maquinaria y ensambladores (G8).\n\n"
+            "Estas ocupaciones se consideran de **calificación media**."
         ),
         "notes": (
-            "Excluye el Gran Grupo 9 para diferenciarlo del tramo ‘bajo’. "
-            "Cálculo coherente para CIUO-88 y CIUO-08."
+            "Se basa en el código de gran grupo en `b1` (CIUO-08) o `b1_ciuo88` (CIUO-88), "
+            "según disponibilidad."
         ),
-        "source": "ISCO-08 Major Groups 4-8, OIT; tabla INE ENE Gran Grupo CIUO"  #
+        "source": (
+            "Clasificación propia basada en los códigos de gran grupo CIUO registrados en las "
+            "variables `b1` y `b1_ciuo88` de la ENE."
+        )
     },
 
     "grupo_ciuo_media_baja": {
-        "label": "CIUO grupo medio-bajo (4-9)",
+        "label": "CIUO grupo medio-bajo (4–9)",
         "description": (
-            "Agrupación alternativa que junta todos los gran-grupos medios más el "
-            "Gran Grupo 9. Incluye 4-9 para medir **calificación media-baja** en sentido amplio."
+            "Personas ocupadas en los **grandes grupos 4 a 9** de la CIUO, que incluyen todas "
+            "las ocupaciones de calificación media y las elementales:\n"
+            "‒ Grupos 4 a 8 (ver CIUO grupo medio), más\n"
+            "‒ Ocupaciones elementales (G9), caracterizadas por tareas simples y rutinarias."
         ),
         "notes": (
-            "Suele usarse para comparar contra el tramo alto (1-3). "
-            "Para CIUO-08 y CIUO-88 el mapeo de códigos es equivalente."
+            "Agrupación útil para comparar con el grupo alto (G1 a G3). Se utiliza `b1` o `b1_ciuo88` "
+            "según la versión CIUO disponible."
         ),
-        "source": "Metodología ENE 2024 – desagregación por nivel de calificación ocupacional"  #
+        "source": (
+            "Clasificación propia basada en los códigos de gran grupo CIUO registrados en las "
+            "variables `b1` y `b1_ciuo88` de la ENE."
+        )
     },
 
     "grupo_ciuo_baja": {
         "label": "CIUO grupo bajo (9)",
         "description": (
-            "Ocupados/as clasificados en el **Gran Grupo 9** de CIUO —Ocupaciones "
-            "elementales— caracterizadas por tareas simples y rutinarias que "
-            "requieren mínima educación formal."
+            "Personas ocupadas clasificadas en el **gran grupo 9** de la CIUO —Ocupaciones elementales—, "
+            "asociadas a tareas simples y rutinarias que requieren escasa formación formal."
         ),
         "notes": (
-            "Serie empalmada: Gran Grupo 9 en CIUO-88 (‘Trabajadores no "
-            "calificados’) y Gran Grupo 9 en CIUO-08 (‘Ocupaciones elementales’)."
+            "Corresponde al grupo 9 tanto en CIUO-88 (‘Trabajadores no calificados’) como en CIUO-08 "
+            "(‘Ocupaciones elementales’)."
         ),
-        "source": "ISCO-08 Major Group 9; INE Glosario ENE ‘Ocupaciones elementales’"  #
+        "source": (
+            "Clasificación propia basada en el código de gran grupo CIUO en las variables `b1` "
+            "y `b1_ciuo88` de la ENE."
+        )
     },
 
     "grupo_ciuo_otras": {
         "label": "CIUO otros",
         "description": (
-            "Ocupados/as cuyo **Gran Grupo CIUO** (versión 88 o 08) **no cae en los rangos 1-9** "
-            "utilizados habitualmente para análisis.  Incluye principalmente el "
-            "Gran Grupo 10 —*Ocupaciones de las fuerzas armadas / Otros no identificados*— "
-            "y registros con código fuera de catálogo o faltante."
+            "Personas ocupadas cuyo código de gran grupo en CIUO **no está en el rango 1–9**, "
+            "ya sea por pertenecer al gran grupo 10 (ocupaciones en fuerzas armadas) "
+            "o por no tener una clasificación válida o declarada (NS/NR)."
         ),
         "notes": (
-            "Categoría residual; su tamaño es muy pequeño (<1 % de los ocupados) y puede "
-            "variar por cambios de codificación.  No se publica de forma separada en los "
-            "boletines del INE, pero se conserva para que la suma de grupos CIUO sea "
-            "coherente con el total de ocupados."
+            "Categoría residual. Su tamaño es reducido y su inclusión asegura la consistencia "
+            "con el total de personas ocupadas."
         ),
         "source": (
-            "CIUO-08 OIT 2008, descripción del **Gran Grupo 10 ‘Ocupaciones de las fuerzas armadas’**"
-        )  #
+            "Clasificación propia basada en los códigos de gran grupo CIUO en las variables "
+            "`b1` y `b1_ciuo88` de la ENE."
+        )
     },
 
-    # ── Educación Superior × CIUO ──────────────────────────────────────────
+
     "o_ed_sup_ciuo_alta": {
-        "label": "Ed. Superior y grupo CIUO alto (1–3)",
+        "label": "Ed. superior y grupo CIUO alto (1–3)",
         "description": (
-            "Ocupados/as con **educación Superior completa** "
-            "(niveles 7-12 y `termino_nivel = 1`) cuya ocupación "
-            "se ubica en los **Grandes Grupos CIUO 1-3** "
-            "(Directivos/gerentes, Profesionales, Técnicos/as)."
+            "Personas ocupadas con **educación superior completa** cuya ocupación "
+            "se clasifica dentro de los **grandes grupos CIUO 1 a 3**:\n"
+            "‒ Directivos y gerentes\n"
+            "‒ Profesionales científicos e intelectuales\n"
+            "‒ Técnicos y profesionales de nivel medio\n\n"
+            "Corresponde a ocupaciones de alta calificación, de acuerdo con la "
+            "clasificación CIUO-08 (OIT)."
         ),
         "notes": (
-            "Se construye como la intersección de las reglas "
-            "`rule_ed_sup` y `ciuo_gran_grupo ∈ 1-3`. "
-            "Para 2010-2019 se usa CIUO-88; desde 2019-12, CIUO-08. "
-            "Serie continua, aunque puede haber valores nulos si el gran grupo "
-            "no está declarado (NS/NR)."
+            "Cruce entre nivel educacional y grupo ocupacional según codificación ENE. "
+            "Serie válida desde 2010. Puede haber valores faltantes cuando el grupo ocupacional "
+            "no está informado (NS/NR)."
         ),
         "source": (
-            "Glosario ENE 2024, entradas «Nivel educacional» y "
-            "«Clasificación CIUO»; "
-            "OIT 2008 ISCO-08 Major Groups 1-3"
+            "Clasificación propia basada en las variables `nivel` y `ciuo_gran_grupo` "
+            "según Libro de Códigos ENE 2020. Agrupación de CIUO según ISCO-08 (OIT)."
         )
     },
 
     "o_ed_sup_ciuo_media_baja": {
-        "label": "Ed. Superior y grupo CIUO medio-bajo (4–9)",
+        "label": "Ed. superior y grupo CIUO medio-bajo (4–9)",
         "description": (
-            "Ocupados/as con **educación Superior completa** cuya ocupación "
-            "pertenece a los **Grandes Grupos CIUO 4-9** "
-            "(Apoyo administrativo; Servicios y ventas; "
-            "Agricultura y oficios afines; Artesanos/operarios; "
-            "Operadores/ensambladores; Ocupaciones elementales)."
+            "Personas ocupadas con **educación superior completa** cuya ocupación "
+            "se ubica en los **grandes grupos CIUO 4 a 9**, que incluyen:\n"
+            "‒ Personal de apoyo administrativo\n"
+            "‒ Trabajadores de servicios, ventas, agricultura, oficios y maquinaria\n"
+            "‒ Ocupaciones elementales\n\n"
+            "Agrupa ocupaciones de calificación media o baja, en contraste con los grupos 1–3."
         ),
         "notes": (
-            "Equivale a `rule_ed_sup & ciuo_gran_grupo ∈ 4-9`. "
-            "Agrupa calificaciones medias y bajas; útil para analizar "
-            "sobre-educación. Serie válida 2010-01 → presente."
+            "Permite analizar desajuste educativo, es decir, personas con alta formación "
+            "en empleos de menor calificación. Serie disponible desde 2010."
         ),
         "source": (
-            "Glosario ENE 2024 y estructura ISCO-08/OIT Grandes Grupos 4-9 "
-            
+            "Clasificación propia basada en las variables `nivel` y `ciuo_gran_grupo` "
+            "según Libro de Códigos ENE 2020. Agrupación de CIUO según ISCO-08 (OIT)."
         )
     },
 
     "o_ed_sup_ciuo_no_alta": {
-        "label": "Ed. Superior y CIUO no-alta",
+        "label": "Ed. superior y CIUO no-alta",
         "description": (
-            "Complemento de las dos anteriores: ocupados/as con educación "
-            "superior completa **fuera de los Grandes Grupos 1-3**. "
-            "Incluye tanto 4-9 como categorías sin clasificación (NS/NR)."
+            "Personas ocupadas con **educación superior completa** que se desempeñan "
+            "en ocupaciones **fuera de los grandes grupos CIUO 1 a 3**.\n"
+            "Incluye tanto los grupos 4 a 9 como casos sin codificación ocupacional "
+            "(NS/NR)."
         ),
         "notes": (
-            "Implementado como `rule_ed_sup` & `~ciuo_gran_grupo.between(1,3)`. "
-            "Útil para medir desajuste educativo. Serie 2010-01 → presente."
+            "Complementa las categorías anteriores. Se utiliza para medir desajuste entre "
+            "educación y tipo de empleo. Disponible desde 2010."
         ),
         "source": (
-            "Glosario ENE 2024; tabla CIUO-08 grandes grupos; "
-            "Metodología ENE 2020, sección desajuste educacional "
-            
+            "Clasificación propia basada en las variables `nivel` y `ciuo_gran_grupo` "
+            "según Libro de Códigos ENE 2020. Agrupación de CIUO según ISCO-08 (OIT)."
         )
     },
     # ── Grupos CIUO-08 (2-10 y NS/NR) ─────────────────────────────────────
