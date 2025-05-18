@@ -408,13 +408,13 @@
     "source": "Libro de Códigos ENE 2010-2019 - códigos 9-12 en `nivel`"
   },
   "o_ed_sup_ciuo_alta": {
-    "label": "Ed. superior y grupo CIUO alto (1-3)",
+    "label": "Ed. Superior y grupo CIUO alto (1-3)",
     "description": "Personas ocupadas con **educación superior completa** cuya ocupación se clasifica dentro de los **grandes grupos CIUO 1 a 3**:\n- Directivos y gerentes\n- Profesionales científicos e intelectuales\n- Técnicos y profesionales de nivel medio\n\nCorresponde a ocupaciones de alta calificación, de acuerdo con la clasificación CIUO-08 (OIT).",
     "notes": "Cruce entre nivel educacional y grupo ocupacional según codificación ENE. Serie válida desde 2010. Puede haber valores faltantes cuando el grupo ocupacional no está informado (NS/NR).",
     "source": "Clasificación propia basada en las variables `nivel` y `ciuo_gran_grupo` según Libro de Códigos ENE 2020. Agrupación de CIUO según ISCO-08 (OIT)."
   },
   "o_ed_sup_ciuo_media_baja": {
-    "label": "Ed. superior y grupo CIUO medio-bajo (4-9)",
+    "label": "Ed. Superior y grupo CIUO medio-bajo (4-9)",
     "description": "Personas ocupadas con **educación superior completa** cuya ocupación se ubica en los **grandes grupos CIUO 4 a 9**, que incluyen:\n- Personal de apoyo administrativo\n- Trabajadores de servicios, ventas, agricultura, oficios y maquinaria\n- Ocupaciones elementales\n\nAgrupa ocupaciones de calificación media o baja, en contraste con los grupos 1-3.",
     "notes": "Permite analizar desajuste educativo, es decir, personas con alta formación en empleos de menor calificación. Serie disponible desde 2010.",
     "source": "Clasificación propia basada en las variables `nivel` y `ciuo_gran_grupo` según Libro de Códigos ENE 2020. Agrupación de CIUO según ISCO-08 (OIT)."

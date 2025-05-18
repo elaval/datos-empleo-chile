@@ -95,8 +95,8 @@ PUBLIC_COLS = [
 
 
     # ── Ed. Superior × CIUO ─────────────────────────────────────────────
-    ("o_ed_sup_ciuo_alta",       "Ed. superior y grupo CIUO alto (1-3)"),
-    ("o_ed_sup_ciuo_media_baja", "Ed. superior y grupo CIUO medio-bajo (4-9)"),
+    ("o_ed_sup_ciuo_alta",       "Ed. Superior y grupo CIUO alto (1-3)"),
+    ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo (4-9)"),
     ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO no-alto"),
 
 
@@ -778,7 +778,7 @@ VARIABLE_META = {
 
 
     "o_ed_sup_ciuo_alta": {
-        "label": "Ed. superior y grupo CIUO alto (1-3)",
+        "label": "Ed. Superior y grupo CIUO alto (1-3)",
         "description": (
             "Personas ocupadas con **educación superior completa** cuya ocupación "
             "se clasifica dentro de los **grandes grupos CIUO 1 a 3**:\n"
@@ -800,7 +800,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_ciuo_media_baja": {
-        "label": "Ed. superior y grupo CIUO medio-bajo (4-9)",
+        "label": "Ed. Superior y grupo CIUO medio-bajo (4-9)",
         "description": (
             "Personas ocupadas con **educación superior completa** cuya ocupación "
             "se ubica en los **grandes grupos CIUO 4 a 9**, que incluyen:\n"
