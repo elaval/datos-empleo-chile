@@ -95,8 +95,8 @@ PUBLIC_COLS = [
 
 
     # ── Ed. Superior × CIUO ─────────────────────────────────────────────
-    ("o_ed_sup_ciuo_alta",       "Ed. superior y grupo CIUO alto (1–3)"),
-    ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo (4–9)"),
+    ("o_ed_sup_ciuo_alta",       "Ed. superior y grupo CIUO alto (1-3)"),
+    ("o_ed_sup_ciuo_media_baja", "Ed. superior y grupo CIUO medio-bajo (4-9)"),
     ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO no-alto"),
 
 
@@ -125,14 +125,14 @@ PUBLIC_COLS = [
 
 
     # ── Horas trabajadas ────────────────────────────────────────────────
-    ("horas_1_30", "Horas 1–30"),
+    ("horas_1_30", "Horas 1-30"),
     ("tpi",        "Tiempo parcial involuntario (TPI)"),
     ("tpv",        "Tiempo parcial voluntario (TPV)"),
     ("tp_sin_declarar_voluntariedad", "Tiempo parcial sin declarar voluntariedad"),
-    ("horas_31_44", "Horas 31–44"),
-    ("horas_31_39", "Horas 31–39"),
+    ("horas_31_44", "Horas 31-44"),
+    ("horas_31_39", "Horas 31-39"),
     ("horas_40",    "Horas 40"),
-    ("horas_41_44", "Horas 41–44"),
+    ("horas_41_44", "Horas 41-44"),
     ("horas_45",    "Horas 45"),
     ("horas_46_mas","Horas ≥46"),
     ("horas_efectivas_46_mas", "Horas efectivas ≥46"),
@@ -368,7 +368,7 @@ VARIABLE_META = {
         "description": (
             "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100."
         ),
-        "notes": "Subutilización de la fuerza de trabajo – definición OIT (resolución 2013).",
+        "notes": "Subutilización de la fuerza de trabajo - definición OIT (resolución 2013).",
         "source": "Glosario ENE 2024, nota sobre indicadores SU1 a SU4"  #
     },
     "su2": {
@@ -449,7 +449,7 @@ VARIABLE_META = {
             "Año asociado al **mes central** del trimestre móvil. "
             "Cada registro corresponde a un trimestre móvil compuesto por tres meses consecutivos, "
             "pero el año se define según el mes central.\n\n"
-            "Por ejemplo, el trimestre Diciembre 2024 – Enero 2025 – Febrero 2025 "
+            "Por ejemplo, el trimestre Diciembre 2024 - Enero 2025 - Febrero 2025 "
             "tiene mes central = Enero (1), por lo tanto, `ano_trimestre` = 2025."
         ),
         "notes": (
@@ -464,7 +464,7 @@ VARIABLE_META = {
         "label": "Mes central",
         "description": (
             "Número del mes (1 a 12) que representa el mes central del trimestre móvil. "
-            "Por ejemplo, un trimestre Enero–Febrero–Marzo tiene mes central = 2."
+            "Por ejemplo, un trimestre Enero-Febrero-Marzo tiene mes central = 2."
         ),
         "notes": (
             "El mes central se usa como referencia para ordenar, visualizar o filtrar "
@@ -483,11 +483,11 @@ VARIABLE_META = {
             "Incluye:\n"
             "- Personas que declararon 'Nunca estudió', preescolar o básica/primaria "
             "sin haberla finalizado (`nivel` entre 0 y 3, con `termino_nivel` ≠ 1).\n"
-            "- Casos con códigos fuera del rango 3–14, considerados por el INE como "
+            "- Casos con códigos fuera del rango 3-14, considerados por el INE como "
             "ausencia de estudios formales."
         ),
         "notes": "Serie continua desde 2010-01.",
-        "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - variables `nivel` y `termino_nivel`"
     },
 
     "o_ed_basica_completa": {
@@ -498,7 +498,7 @@ VARIABLE_META = {
             "sin terminarla (`nivel` entre 4 y 6 o igual a 14, con `termino_nivel` ≠ 1)."
         ),
         "notes": "Serie continua desde 2010-01.",
-        "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - variables `nivel` y `termino_nivel`"
     },
 
     "o_ed_media_completa": {
@@ -510,7 +510,7 @@ VARIABLE_META = {
             "(`nivel` entre 7 y 9 con `termino_nivel` ≠ 1)."
         ),
         "notes": "Serie continua desde 2010-01.",
-        "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - variables `nivel` y `termino_nivel`"
     },
 
     "o_ed_sup_completa": {
@@ -522,7 +522,7 @@ VARIABLE_META = {
             "- Estudios universitarios o de posgrado completos (`nivel` entre 9 y 12)."
         ),
         "notes": "Serie continua desde 2010-01.",
-        "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - variables `nivel` y `termino_nivel`"
     },
 
     "o_ed_sup_cft": {
@@ -532,7 +532,7 @@ VARIABLE_META = {
             "(`nivel` = 7 y `termino_nivel` = 1)."
         ),
         "notes": "Disponible en toda la serie.",
-        "source": "Libro de Códigos ENE 2010–2019 – código 7 en `nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - código 7 en `nivel`"
     },
 
     "o_ed_sup_ip": {
@@ -542,7 +542,7 @@ VARIABLE_META = {
             "completado (`nivel` = 8 y `termino_nivel` = 1)."
         ),
         "notes": "Disponible en toda la serie.",
-        "source": "Libro de Códigos ENE 2010–2019 – código 8 en `nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - código 8 en `nivel`"
     },
 
     "o_ed_sup_univ": {
@@ -552,7 +552,7 @@ VARIABLE_META = {
             "`nivel` = 9 (universitario), 10 (postítulo), 11 (magíster), o 12 (doctorado)."
         ),
         "notes": "Serie continua desde 2010-01.",
-        "source": "Libro de Códigos ENE 2010–2019 – códigos 9–12 en `nivel`"
+        "source": "Libro de Códigos ENE 2010-2019 - códigos 9-12 en `nivel`"
     },
 
 
@@ -762,7 +762,7 @@ VARIABLE_META = {
     "grupo_ciuo_otras": {
         "label": "CIUO otros",
         "description": (
-            "Personas ocupadas cuyo código de gran grupo en CIUO **no está en el rango 1–9**, "
+            "Personas ocupadas cuyo código de gran grupo en CIUO **no está en el rango 1-9**, "
             "ya sea por pertenecer al gran grupo 10 (ocupaciones en fuerzas armadas) "
             "o por no tener una clasificación válida o declarada (NS/NR)."
         ),
@@ -778,7 +778,7 @@ VARIABLE_META = {
 
 
     "o_ed_sup_ciuo_alta": {
-        "label": "Ed. superior y grupo CIUO alto (1–3)",
+        "label": "Ed. superior y grupo CIUO alto (1-3)",
         "description": (
             "Personas ocupadas con **educación superior completa** cuya ocupación "
             "se clasifica dentro de los **grandes grupos CIUO 1 a 3**:\n"
@@ -800,14 +800,14 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_ciuo_media_baja": {
-        "label": "Ed. superior y grupo CIUO medio-bajo (4–9)",
+        "label": "Ed. superior y grupo CIUO medio-bajo (4-9)",
         "description": (
             "Personas ocupadas con **educación superior completa** cuya ocupación "
             "se ubica en los **grandes grupos CIUO 4 a 9**, que incluyen:\n"
             "- Personal de apoyo administrativo\n"
             "- Trabajadores de servicios, ventas, agricultura, oficios y maquinaria\n"
             "- Ocupaciones elementales\n\n"
-            "Agrupa ocupaciones de calificación media o baja, en contraste con los grupos 1–3."
+            "Agrupa ocupaciones de calificación media o baja, en contraste con los grupos 1-3."
         ),
         "notes": (
             "Permite analizar desajuste educativo, es decir, personas con alta formación "
@@ -1040,7 +1040,7 @@ VARIABLE_META = {
             "grupos 1-9; se usan como categoría residual en la ENE histórica."
         ),
         "notes": "El INE dejó de publicar esta categoría con la adopción de CIUO-08 (2019).",
-        "source": "Metodología ENE 2010 – 2018, adaptación ISCO-88 (categoría residual)"  #
+        "source": "Metodología ENE 2010 - 2018, adaptación ISCO-88 (categoría residual)"  #
     },
     "grupo_ciuo88_nsnr": {
         "label": "CIUO88 Sin clasificación / NS-NR",
@@ -1245,7 +1245,7 @@ VARIABLE_META = {
 
     # ------------------------------------------------------------------ Horas habituales (categorías)
     "horas_1_30": {
-        "label": "Horas 1–30",
+        "label": "Horas 1-30",
         "description": (
             "Personas ocupadas cuyo número **habitual** de horas trabajadas a la "
             "semana se encuentra entre 1 y 30, ambas inclusive."
@@ -1255,7 +1255,7 @@ VARIABLE_META = {
         "source": "Glosario ENE 2024, voz «Horas habitualmente trabajadas»"  #
     },
     "horas_31_44": {
-        "label": "Horas 31–44",
+        "label": "Horas 31-44",
         "description": (
             "Ocupados/as con jornada habitual igual o superior a 31 e inferior o "
             "igual a 44 horas semanales."
@@ -1265,7 +1265,7 @@ VARIABLE_META = {
         "source": "INE. Boletín ENE — tabla de distribución de horas habituales"  # 
     },
     "horas_31_39": {
-        "label": "Horas 31–39",
+        "label": "Horas 31-39",
         "description": (
             "Sub-conjunto específico dentro de 31-44 h; se utiliza para comparar "
             "con flexibilidad el tramo inmediatamente inferior a 40 h."
@@ -1280,7 +1280,7 @@ VARIABLE_META = {
         "source": "Diario Oficial de Chile, Ley 21 561 (reducción jornada laboral)"  #
     },
     "horas_41_44": {
-        "label": "Horas 41–44",
+        "label": "Horas 41-44",
         "description": (
             "Ocupados/as con 41 a 44 horas semanales habituales: tramo de ajuste "
             "entre 40 h y la jornada legal previa de 45 h."
