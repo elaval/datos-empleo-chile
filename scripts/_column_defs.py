@@ -680,8 +680,6 @@ VARIABLE_META = {
         ),
         "notes": "Denominado también *puertas fuera* en normativa laboral chilena.",
         "source": "Libro de Códigos ENE 2020 – variable `categoria_ocupacion` (código 5)"
-
-"
     },
 
     "categoria_serv_domestico_puertas_adentro": {
