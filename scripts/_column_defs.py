@@ -85,19 +85,19 @@ PUBLIC_COLS = [
     ("grupo_ciuo_otras",      "CIUO otros"),
 
     # ── Educación ────────────────────────────────────────────────────────
-    ("o_sin_basica_completa", "Sin educación básica completa"),
-    ("o_ed_basica_completa",  "Educación básica completa"),
-    ("o_ed_media_completa",   "Educación media completa"),
-    ("o_ed_sup_completa",     "Educación superior completa"),
-    ("o_ed_sup_cft",          "Edu. superior en CFT"),
-    ("o_ed_sup_ip",           "Edu. superior en IP"),
-    ("o_ed_sup_univ",         "Edu. superior universitaria"),
+    ("o_sin_basica_completa", "Sin educación Básica completa"),
+    ("o_ed_basica_completa",  "Educación Básica completa"),
+    ("o_ed_media_completa",   "Educación Media completa"),
+    ("o_ed_sup_completa",     "Educación Superior completa"),
+    ("o_ed_sup_cft",          "Ed. Superior en CFT"),
+    ("o_ed_sup_ip",           "Ed. Superior en IP"),
+    ("o_ed_sup_univ",         "Ed. Superior universitaria"),
 
 
-    # ── Edu. superior × CIUO ─────────────────────────────────────────────
-    ("o_ed_sup_ciuo_alta",       "Ed Supuerior y Grupo CIUO alto"),
-    ("o_ed_sup_ciuo_media_baja", "Ed Supuerior y Grupo CIUO medio-bajo"),
-    ("o_ed_sup_ciuo_no_alta",    "Ed Supuerior y Grupo CIUO bajo"),
+    # ── Ed. Superior × CIUO ─────────────────────────────────────────────
+    ("o_ed_sup_ciuo_alta",       "Ed. Superior y grupo CIUO alto"),
+    ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo"),
+    ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO bajo"),
 
 
 
@@ -478,7 +478,7 @@ VARIABLE_META = {
 
     # ------------------------------------------------------------------ Nivel educacional de las personas ocupadas
     "o_sin_basica_completa": {
-        "label": "Sin educación básica completa",
+        "label": "Sin educación Básica completa",
         "description": (
             "Ocupados/as cuyo **nivel educacional más alto** está por debajo de la "
             "enseñanza básica completa.\n\n"
@@ -493,7 +493,7 @@ VARIABLE_META = {
     },
 
     "o_ed_basica_completa": {
-        "label": "Educación básica completa",
+        "label": "Educación Básica completa",
         "description": (
             "Ocupados/as que **completaron la enseñanza básica o primaria** "
             "(`nivel` = 3 y `termino_nivel` = 1), o que cursaron enseñanza media "
@@ -504,7 +504,7 @@ VARIABLE_META = {
     },
 
     "o_ed_media_completa": {
-        "label": "Educación media completa",
+        "label": "Educación Media completa",
         "description": (
             "Ocupados/as que **terminaron la enseñanza media** (común, técnico-profesional "
             "o humanidades) — `nivel` entre 4 y 6 o igual a 14, con `termino_nivel` = 1 — "
@@ -516,7 +516,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_completa": {
-        "label": "Educación superior completa",
+        "label": "Educación Superior completa",
         "description": (
             "Ocupados/as con **estudios superiores finalizados**, incluyendo:\n"
             "‒ Carrera técnica de nivel superior en CFT (`nivel` = 7, `termino_nivel` = 1),\n"
@@ -528,7 +528,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_cft": {
-        "label": "Edu. superior en CFT",
+        "label": "Ed. Superior en CFT",
         "description": (
             "Ocupados/as con **carrera técnica de nivel superior completada** "
             "(`nivel` = 7 y `termino_nivel` = 1)."
@@ -538,7 +538,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_ip": {
-        "label": "Edu. superior en IP",
+        "label": "Ed. Superior en IP",
         "description": (
             "Ocupados/as con **título profesional de Instituto Profesional** "
             "completado (`nivel` = 8 y `termino_nivel` = 1)."
@@ -548,7 +548,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_univ": {
-        "label": "Edu. superior universitaria",
+        "label": "Ed. Superior universitaria",
         "description": (
             "Ocupados/as con **título universitario o de posgrado completo**:\n"
             "`nivel` = 9 (universitario), 10 (postítulo), 11 (magíster), o 12 (doctorado)."
@@ -761,11 +761,11 @@ VARIABLE_META = {
         )  #
     },
 
-    # ── Educación superior × CIUO ──────────────────────────────────────────
+    # ── Educación Superior × CIUO ──────────────────────────────────────────
     "o_ed_sup_ciuo_alta": {
-        "label": "Ed. superior y CIUO grupo alto (1–3)",
+        "label": "Ed. Superior y grupo CIUO alto (1–3)",
         "description": (
-            "Ocupados/as con **educación superior completa** "
+            "Ocupados/as con **educación Superior completa** "
             "(niveles 7-12 y `termino_nivel = 1`) cuya ocupación "
             "se ubica en los **Grandes Grupos CIUO 1-3** "
             "(Directivos/gerentes, Profesionales, Técnicos/as)."
@@ -785,9 +785,9 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_ciuo_media_baja": {
-        "label": "Ed. superior y CIUO grupo medio-bajo (4–9)",
+        "label": "Ed. Superior y grupo CIUO medio-bajo (4–9)",
         "description": (
-            "Ocupados/as con **educación superior completa** cuya ocupación "
+            "Ocupados/as con **educación Superior completa** cuya ocupación "
             "pertenece a los **Grandes Grupos CIUO 4-9** "
             "(Apoyo administrativo; Servicios y ventas; "
             "Agricultura y oficios afines; Artesanos/operarios; "
@@ -805,7 +805,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_ciuo_no_alta": {
-        "label": "Ed. superior y CIUO no-alta",
+        "label": "Ed. Superior y CIUO no-alta",
         "description": (
             "Complemento de las dos anteriores: ocupados/as con educación "
             "superior completa **fuera de los Grandes Grupos 1-3**. "
