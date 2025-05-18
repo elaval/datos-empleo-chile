@@ -95,11 +95,9 @@ PUBLIC_COLS = [
 
 
     # ── Ed. Superior × CIUO ─────────────────────────────────────────────
-    ("o_ed_sup_ciuo_alta",       "Ed. Superior y grupo CIUO alto"),
-    ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo"),
-    ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO bajo"),
-
-
+    ("o_ed_sup_ciuo_alta",       "Ed. Superior y grupo CIUO alto (1–3)"),
+    ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo (4–9)"),
+    ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO no-alto"),
 
 
     # ── Ramas de actividad (1 a 21) ──────────────────────────────────────
