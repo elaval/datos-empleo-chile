@@ -196,8 +196,8 @@ VARIABLE_META = {
         "notes": "",
         "source": "Glosario ENE 2024, «Cesante»"
     },
-    "busca_trabajo_por_primera_vez (BTPV)": {
-        "label": "Buscan trabajo por primera vez",
+    "busca_trabajo_por_primera_vez": {
+        "label": "Buscan trabajo por primera vez (BTPV)",
         "description": "Personas desocupadas que nunca han tenido una ocupación anterior.",
         "notes": "",
         "source": "Glosario ENE 2024, «Personas que buscaron trabajo por primera vez»"
