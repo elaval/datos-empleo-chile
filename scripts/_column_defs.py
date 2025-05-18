@@ -95,7 +95,7 @@ PUBLIC_COLS = [
 
 
     # ── Ed. Superior × CIUO ─────────────────────────────────────────────
-    ("o_ed_sup_ciuo_alta",       "Ed. Superior y grupo CIUO alto (1–3)"),
+    ("o_ed_sup_ciuo_alta",       "Ed. superior y grupo CIUO alto (1–3)"),
     ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo (4–9)"),
     ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO no-alto"),
 
@@ -481,9 +481,9 @@ VARIABLE_META = {
             "Ocupados/as cuyo **nivel educacional más alto** está por debajo de la "
             "enseñanza básica completa.\n\n"
             "Incluye:\n"
-            "‒ Personas que declararon 'Nunca estudió', preescolar o básica/primaria "
+            "- Personas que declararon 'Nunca estudió', preescolar o básica/primaria "
             "sin haberla finalizado (`nivel` entre 0 y 3, con `termino_nivel` ≠ 1).\n"
-            "‒ Casos con códigos fuera del rango 3–14, considerados por el INE como "
+            "- Casos con códigos fuera del rango 3–14, considerados por el INE como "
             "ausencia de estudios formales."
         ),
         "notes": "Serie continua desde 2010-01.",
@@ -517,9 +517,9 @@ VARIABLE_META = {
         "label": "Educación Superior completa",
         "description": (
             "Ocupados/as con **estudios superiores finalizados**, incluyendo:\n"
-            "‒ Carrera técnica de nivel superior en CFT (`nivel` = 7, `termino_nivel` = 1),\n"
-            "‒ Título profesional en Instituto Profesional (`nivel` = 8, `termino_nivel` = 1),\n"
-            "‒ Estudios universitarios o de posgrado completos (`nivel` entre 9 y 12)."
+            "- Carrera técnica de nivel superior en CFT (`nivel` = 7, `termino_nivel` = 1),\n"
+            "- Título profesional en Instituto Profesional (`nivel` = 8, `termino_nivel` = 1),\n"
+            "- Estudios universitarios o de posgrado completos (`nivel` entre 9 y 12)."
         ),
         "notes": "Serie continua desde 2010-01.",
         "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
@@ -685,13 +685,13 @@ VARIABLE_META = {
     # -- Agrupaciones por CIUO
 
     "grupo_ciuo_alta": {
-        "label": "CIUO grupo alto (1–3)",
+        "label": "CIUO grupo alto (1-3)",
         "description": (
             "Personas ocupadas clasificadas en los **grandes grupos 1 a 3** de la "
             "Clasificación Internacional Uniforme de Ocupaciones (CIUO), que incluyen:\n"
-            "‒ Directivos/as y gerentes (G1),\n"
-            "‒ Profesionales científicos/as e intelectuales (G2),\n"
-            "‒ Técnicos/as y profesionales de nivel medio (G3).\n\n"
+            "- Directivos/as y gerentes (G1),\n"
+            "- Profesionales científicos/as e intelectuales (G2),\n"
+            "- Técnicos/as y profesionales de nivel medio (G3).\n\n"
             "Estas ocupaciones corresponden a un nivel de **alta calificación**."
         ),
         "notes": (
@@ -705,14 +705,14 @@ VARIABLE_META = {
     },
 
     "grupo_ciuo_media": {
-        "label": "CIUO grupo medio (4–8)",
+        "label": "CIUO grupo medio (4-8)",
         "description": (
             "Personas ocupadas en los **grandes grupos 4 a 8** de la CIUO, que abarcan:\n"
-            "‒ Personal de apoyo administrativo (G4),\n"
-            "‒ Trabajadores/as de servicios y ventas (G5),\n"
-            "‒ Agricultores/as y trabajadores agropecuarios/pesqueros (G6),\n"
-            "‒ Artesanos/as y operarios de oficios (G7),\n"
-            "‒ Operadores/as de maquinaria y ensambladores (G8).\n\n"
+            "- Personal de apoyo administrativo (G4),\n"
+            "- Trabajadores/as de servicios y ventas (G5),\n"
+            "- Agricultores/as y trabajadores agropecuarios/pesqueros (G6),\n"
+            "- Artesanos/as y operarios de oficios (G7),\n"
+            "- Operadores/as de maquinaria y ensambladores (G8).\n\n"
             "Estas ocupaciones se consideran de **calificación media**."
         ),
         "notes": (
@@ -726,12 +726,12 @@ VARIABLE_META = {
     },
 
     "grupo_ciuo_media_baja": {
-        "label": "CIUO grupo medio-bajo (4–9)",
+        "label": "CIUO grupo medio-bajo (4-9)",
         "description": (
             "Personas ocupadas en los **grandes grupos 4 a 9** de la CIUO, que incluyen todas "
             "las ocupaciones de calificación media y las elementales:\n"
-            "‒ Grupos 4 a 8 (ver CIUO grupo medio), más\n"
-            "‒ Ocupaciones elementales (G9), caracterizadas por tareas simples y rutinarias."
+            "- Grupos 4 a 8 (ver CIUO grupo medio), más\n"
+            "- Ocupaciones elementales (G9), caracterizadas por tareas simples y rutinarias."
         ),
         "notes": (
             "Agrupación útil para comparar con el grupo alto (G1 a G3). Se utiliza `b1` o `b1_ciuo88` "
@@ -782,9 +782,9 @@ VARIABLE_META = {
         "description": (
             "Personas ocupadas con **educación superior completa** cuya ocupación "
             "se clasifica dentro de los **grandes grupos CIUO 1 a 3**:\n"
-            "‒ Directivos y gerentes\n"
-            "‒ Profesionales científicos e intelectuales\n"
-            "‒ Técnicos y profesionales de nivel medio\n\n"
+            "- Directivos y gerentes\n"
+            "- Profesionales científicos e intelectuales\n"
+            "- Técnicos y profesionales de nivel medio\n\n"
             "Corresponde a ocupaciones de alta calificación, de acuerdo con la "
             "clasificación CIUO-08 (OIT)."
         ),
@@ -804,9 +804,9 @@ VARIABLE_META = {
         "description": (
             "Personas ocupadas con **educación superior completa** cuya ocupación "
             "se ubica en los **grandes grupos CIUO 4 a 9**, que incluyen:\n"
-            "‒ Personal de apoyo administrativo\n"
-            "‒ Trabajadores de servicios, ventas, agricultura, oficios y maquinaria\n"
-            "‒ Ocupaciones elementales\n\n"
+            "- Personal de apoyo administrativo\n"
+            "- Trabajadores de servicios, ventas, agricultura, oficios y maquinaria\n"
+            "- Ocupaciones elementales\n\n"
             "Agrupa ocupaciones de calificación media o baja, en contraste con los grupos 1–3."
         ),
         "notes": (
@@ -820,7 +820,7 @@ VARIABLE_META = {
     },
 
     "o_ed_sup_ciuo_no_alta": {
-        "label": "Ed. superior y CIUO no-alta",
+        "label": "Ed. Superior y grupo CIUO no-alto",
         "description": (
             "Personas ocupadas con **educación superior completa** que se desempeñan "
             "en ocupaciones **fuera de los grandes grupos CIUO 1 a 3**.\n"
