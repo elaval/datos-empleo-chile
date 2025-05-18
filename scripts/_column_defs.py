@@ -240,10 +240,10 @@ VARIABLE_META = {
     "obe": {
         "label": "Ocupados que buscaron empleo (OBE)",
         "description": (
-            "Personas ocupadas que realizaron acciones de búsqueda de otro empleo o un empleo adicional durante las últimas cuatro semanas." 
+            "Corresponden a personas ocupadas que declararon haber buscado empleo en la semana de referencia." 
         ),
         "notes": "Componente del numerador de la tasa de presión laboral (TPL).",
-        "source": "Separata técnica ENE 2019: se detalla la tasa y su desagregación"  
+        "source": "Documento Metodológico Encuesta Nacional de Empleo (ENE)"  
     },
     "id": {
         "label": "Iniciadores disponibles (ID)",
@@ -366,29 +366,47 @@ VARIABLE_META = {
     "su1": {
         "label": "Tasa SU1 (%)",
         "description": (
-            "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100."
+            "[(Desocupados + Iniciadores disponibles) / (FT + ID)] × 100.\n\n"
+            "Mide la subutilización básica del trabajo, incorporando a quienes están "
+            "desocupados/as y quienes están disponibles para comenzar a trabajar en el corto plazo."
         ),
-        "notes": "Subutilización de la fuerza de trabajo - definición OIT (resolución 2013).",
-        "source": "Glosario ENE 2024, nota sobre indicadores SU1 a SU4"  #
+        "notes": "Subutilización de la fuerza de trabajo — definición internacional estandarizada.",
+        "source": "Glosario ENE 2024, entrada «Tasa de desocupación con iniciadores disponibles (SU1)»"
     },
+
     "su2": {
         "label": "Tasa SU2 (%)",
-        "description": "[(Desocupados + ID + TPI) / (FT + ID)] × 100.",
-        "notes": "",
-        "source": "Ídem anterior + Resolución OIT 2013"  #0}
+        "description": (
+            "[(Desocupados + Iniciadores disponibles + Tiempo parcial involuntario) / (FT + ID)] × 100.\n\n"
+            "Amplía SU1 al incluir a quienes trabajan menos de 30 horas de forma involuntaria, "
+            "reflejando una mayor insatisfacción con la cantidad de trabajo disponible."
+        ),
+        "notes": "Indicador complementario de subutilización según estándares OIT.",
+        "source": "Glosario ENE 2024, entrada «Tasa combinada de desocupación y tiempo parcial involuntario (SU2)»"
     },
+
     "su3": {
         "label": "Tasa SU3 (%)",
-        "description": "[(Desocupados + ID + FTP) / FTA] × 100.",
-        "notes": "",
-        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  #1}
+        "description": (
+            "[(Desocupados + Iniciadores disponibles + Fuerza de trabajo potencial) / FTA] × 100.\n\n"
+            "Incorpora, además de desocupados/as y disponibles, a personas fuera de la fuerza de trabajo "
+            "que muestran interés por trabajar pero enfrentan barreras de búsqueda o disponibilidad inmediata."
+        ),
+        "notes": "Usa como denominador la Fuerza de Trabajo Ampliada (FTA).",
+        "source": "Glosario ENE 2024, entrada «Tasa combinada de desocupación y fuerza de trabajo potencial (SU3)»"
     },
+
     "su4": {
         "label": "Tasa SU4 (%)",
-        "description": "[(Desocupados + ID + TPI + FTP) / FTA] × 100.",
-        "notes": "",
-        "source": "Glosario ENE 2024, descripción de FTA y tasas SU3/SU4"  #2}
+        "description": (
+            "[(Desocupados + Iniciadores disponibles + Tiempo parcial involuntario + FTP) / FTA] × 100.\n\n"
+            "Es el indicador más amplio de subutilización, integrando todos los grupos con necesidad de empleo: "
+            "desocupados/as, iniciadores/as disponibles, ocupados/as a tiempo parcial involuntario y la fuerza de trabajo potencial."
+        ),
+        "notes": "Se expresa como proporción de la Fuerza de Trabajo Ampliada (FTA).",
+        "source": "Glosario ENE 2024, entrada «Tasa global de subutilización (SU4)»"
     },
+
 
     # ------------------------------------------------------------------ Horas y tiempo parcial
     "tpv": {
@@ -398,17 +416,19 @@ VARIABLE_META = {
             "no querer trabajar más horas."
         ),
         "notes": "",
-        "source": "Boletín ENE Nacional 2023: se publica la serie TPV junto a TPI"  #3}
+        "source": "Boletín ENE Nacional Trimestral: se publican datos de TPV junto a TPI" 
     },
+
     "tp_sin_declarar_voluntareidad": {
         "label": "Tiempo parcial sin declarar voluntariedad",
         "description": (
-            "Ocupados/as ≤ 30 h semanales que no especifican si la reducción "
-            "de jornada es voluntaria o involuntaria."
+            "Ocupados/as que declaran ≤ 30 h habituales semanales pero no especifican "
+            "si la reducción de jornada es voluntaria o involuntaria."
         ),
-        "notes": "Cálculo interno; no es indicador oficial INE.",
-        "source": "Metodología ENE 2021, anexo de calidad de respuesta horas"  #4}
+        "notes": "Cálculo interno; no corresponde a un indicador oficial del INE.",
+        "source": "Notas técnicas de la serie INE 'Indicadores relacionados con horas trabajadas', hoja 'AS'"
     },
+
 
 
     "tpi": {
@@ -586,7 +606,7 @@ VARIABLE_META = {
             "(`categoria_ocupacion` = 2)."
         ),
         "notes": "",
-        "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia»"
+        "source": "Glosario ENE 2024, entrada «Trabajador/a independiente» (describe el subtipo cuenta propia)"
     },
 
     "categoria_familiar_personal_no_remunerado": {
@@ -649,7 +669,7 @@ VARIABLE_META = {
             "(`categoria_ocupacion` = 5) o en el hogar empleador (`categoria_ocupacion` = 6)."
         ),
         "notes": "Subgrupo dentro de Dependientes — desagregado por lugar de pernocta.",
-        "source": "Glosario ENE 2019, entrada «Servicio doméstico»"
+        "source": "Glosario ENE 2024, dentro de la entrada ‘Trabajador/a dependiente’."
     },
 
     "categoria_serv_domestico_puertas_afuera": {
@@ -659,7 +679,9 @@ VARIABLE_META = {
             "trabajar durante el día (`categoria_ocupacion` = 5)."
         ),
         "notes": "Denominado también *puertas fuera* en normativa laboral chilena.",
-        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”"
+        "source": "Libro de Códigos ENE 2020 – variable `categoria_ocupacion` (código 5)"
+
+"
     },
 
     "categoria_serv_domestico_puertas_adentro": {
@@ -669,7 +691,7 @@ VARIABLE_META = {
             "servicio doméstico (`categoria_ocupacion` = 6)."
         ),
         "notes": "",
-        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”"
+        "source": "Libro de Códigos ENE 2020 – variable `categoria_ocupacion` (código )"
     },
 
     "categoria_no_corresponde": {
@@ -1243,7 +1265,6 @@ VARIABLE_META = {
         "source": "CIIU Rev.4 adaptada a CAENES Rev.4 CL"  #0}
     },
 
-    # ------------------------------------------------------------------ Horas habituales (categorías)
     "horas_1_30": {
         "label": "Horas 1-30",
         "description": (
@@ -1251,9 +1272,10 @@ VARIABLE_META = {
             "semana se encuentra entre 1 y 30, ambas inclusive."
         ),
         "notes": "Corresponde al umbral oficial que usa INE para caracterizar el "
-                 "tiempo parcial (≤ 30 h).",
-        "source": "Glosario ENE 2024, voz «Horas habitualmente trabajadas»"  #
+                "tiempo parcial (≤ 30 h).",
+        "source": "Glosario ENE 2024, entrada «Horas habituales»"
     },
+
     "horas_31_44": {
         "label": "Horas 31-44",
         "description": (
@@ -1261,59 +1283,63 @@ VARIABLE_META = {
             "igual a 44 horas semanales."
         ),
         "notes": "Agrupa quienes están por debajo de la jornada legal ordinaria "
-                 "chilena (45 h) pero sobre el umbral de trabajo parcial.",
-        "source": "INE. Boletín ENE — tabla de distribución de horas habituales"  # 
+                "chilena (45 h) pero sobre el umbral de trabajo parcial.",
+        "source": "Clasificación propia basada en `habituales`; referencia en boletines ENE"
     },
+
     "horas_31_39": {
         "label": "Horas 31-39",
         "description": (
-            "Sub-conjunto específico dentro de 31-44 h; se utiliza para comparar "
-            "con flexibilidad el tramo inmediatamente inferior a 40 h."
+            "Subgrupo dentro del tramo 31–44 horas, utilizado para analizar la "
+            "transición hacia la jornada legal de 40 h."
         ),
-        "notes": "No es indicador oficial; cálculo interno a partir de `habituales`.",
-        "source": "Metodología ENE 2021, anexo de calidad de medición de horas"  #
+        "notes": "No corresponde a un indicador oficial; cálculo propio a partir de `habituales`.",
+        "source": "Clasificación interna para análisis de jornada laboral"
     },
+
     "horas_40": {
         "label": "Horas 40",
         "description": "Ocupados/as que declaran exactamente 40 horas habituales.",
-        "notes": "40 h es la jornada legal vigente a partir de la ley Nº 21 561.",
-        "source": "Diario Oficial de Chile, Ley 21 561 (reducción jornada laboral)"  #
+        "notes": "40 h es la jornada legal vigente a partir de la Ley Nº 21.561 (2023).",
+        "source": "Diario Oficial de Chile, Ley N° 21.561"
     },
+
     "horas_41_44": {
         "label": "Horas 41-44",
         "description": (
             "Ocupados/as con 41 a 44 horas semanales habituales: tramo de ajuste "
-            "entre 40 h y la jornada legal previa de 45 h."
+            "entre la jornada actual (40 h) y la jornada previa (45 h)."
         ),
         "notes": "",
-        "source": "INE. Serie histórica de jornada laboral promedio"  # 
+        "source": "Clasificación propia basada en `habituales`; referencia en boletines ENE"
     },
+
     "horas_45": {
         "label": "Horas 45",
         "description": "Ocupados/as que informan exactamente 45 horas habituales.",
-        "notes": "45 h fue la jornada legal máxima chilena entre 2005-2024.",
-        "source": "Código del Trabajo de Chile, art. 22 (redacción 2005-2024)"  #
+        "notes": "45 h fue la jornada legal máxima entre 2005 y 2024.",
+        "source": "Código del Trabajo de Chile, artículo 22 (redacción 2005–2024)"
     },
+
     "horas_46_mas": {
         "label": "Horas ≥46",
         "description": (
-            "Ocupados/as que declaran 46 horas o más de trabajo habitual por "
-            "semana."
+            "Ocupados/as que declaran 46 horas o más de trabajo habitual por semana."
         ),
         "notes": "Incluye todas las jornadas extensas (sobre la jornada legal).",
-        "source": "Boletín ENE Nacional, cuadro «Distribución de horas habituales»"  # 
-    },    
+        "source": "Clasificación propia basada en boletines ENE — distribución de horas habituales"
+    },
 
-    # ------------------------------------------------------------------ Horas efectivas (tramo alto)
     "horas_efectivas_46_mas": {
         "label": "Horas efectivas ≥46",
         "description": (
             "Personas ocupadas cuya **última semana** registró 46 h o más de "
             "trabajo **efectivo** (excluye ausencias y licencias)."
         ),
-        "notes": "Se calcula sobre la variable `efectivas`; 888/999 se recodifican a NA.",
-        "source": "INE. Manual de campo ENE, p. 27 (pregunta de horas efectivas)"  # 
-    },    
+        "notes": "Se calcula sobre la variable `efectivas`, imputando NA a 888/999.",
+        "source": "Glosario ENE 2024, entrada «Horas efectivas»"
+    },
+
 
     # ------------------------------------------------------------------ Denominadores y promedios
     "o_declaran_horas": {
@@ -1328,6 +1354,7 @@ VARIABLE_META = {
         ),
         "source": "Metodología ENE 2024, sección 5.3 «Tratamiento de no-respuesta»"  #
     },
+
     "promedio_horas_efectivas_sin_ausentes": {
         "label": "Prom. horas efectivas sin ausentes",
         "description": (
@@ -1341,6 +1368,7 @@ VARIABLE_META = {
         ),
         "source": "Cálculo interno basado en microdatos ENE. No se publica directamente en boletines oficiales del INE."
     },
+
     "promedio_horas_efectivas_declaran_horas": {
         "label": "Prom. horas efectivas (declaran)",
         "description": (
@@ -1348,8 +1376,9 @@ VARIABLE_META = {
             "alguna hora trabajada en la semana de referencia."
         ),
         "notes": "Denominador = `o_declaran_horas`. Se presentan 3 decimales.",
-        "source": "Boletín ENE Metodológico 2023, sección ‘Horas efectivas’"  # 
+        "source": "Cálculo interno basado en microdatos ENE. No se publica directamente en boletines oficiales del INE."
     },
+
     "promedio_horas_habituales": {
         "label": "Prom. horas habituales",
         "description": (
@@ -1357,8 +1386,9 @@ VARIABLE_META = {
             "en una semana típica, con redondeo a 3 decimales."
         ),
         "notes": "Denominador = `o_declaran_horas`.",
-        "source": "Glosario ENE 2024, voz «Horas habitualmente trabajadas»"  #0}
+        "source": "Glosario ENE 2024, voz «Horas habituales»"
     },
+
     # ------------------------------------------------------------------ Tasas complementarias
     "tpl": {
         "label": "Tasa de presión laboral (%)",
