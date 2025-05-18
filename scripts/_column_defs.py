@@ -11,7 +11,7 @@ PUBLIC_COLS = [
     ("pet",      "Población en edad de trabajar (PET)"),
     ("ft",       "Fuerza de trabajo (FT)"),
     ("o",        "Personas ocupadas (O)"),
-    ("do",       "Personas desocupadas"),
+    ("do",       "Personas desocupadas (DO)"),
     ("cesantes", "Cesantes"),
     ("busca_trabajo_por_primera_vez", "Buscan trabajo por primera vez"),
     ("fft",      "Fuera de la fuerza de trabajo (FFT)"),
@@ -209,7 +209,7 @@ VARIABLE_META = {
         "source": "Glosario ENE 2024, «Ocupado/a (O)»"
     },
     "do": {
-        "label": "Personas desocupadas",
+        "label": "Personas desocupadas (DO)",
         "description": "Personas en edad de trabajar que no tenían empleo en la semana de referencia, buscaron trabajo activamente en las últimas cuatro semanas y estaban disponibles para trabajar dentro de las próximas dos semanas.",
         "notes": "",
         "source": "Glosario ENE 2024, «Desocupado/a (DO)»"
@@ -443,7 +443,7 @@ VARIABLE_META = {
         "notes": "Se considera como parte de la subutilización de la fuerza de trabajo.",
         "source": "Glosario ENE 2024, «Ocupados/as a tiempo parcial involuntario (TPI)»"
     },
-    
+
     "o_informal": {
         "label": "Ocupados informales",
         "description": "Dependientes sin cotización de salud ni pensión asociada a su empleador; independientes cuyo negocio pertenece al sector informal o familiares no remunerados.",
