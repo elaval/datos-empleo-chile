@@ -105,7 +105,7 @@ PUBLIC_COLS = [
     ("rama_2",  "Rama 2: Explotación de minas y canteras"),
     ("rama_3",  "Rama 3: Industrias manufactureras"),
     ("rama_4",  "Rama 4: Suministro de electricidad, gas, vapor y aire acondicionado"),
-    ("rama_5",  "Rama 5: Suministro de agua"),
+    ("rama_5",  "Rama 5: Suministro de agua; alcantarillado, gestión de residuos"),
     ("rama_6",  "Rama 6: Construcción"),
     ("rama_7",  "Rama 7: Comercio al por mayor y al por menor"),
     ("rama_8",  "Rama 8: Transporte y almacenamiento"),
