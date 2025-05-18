@@ -13,7 +13,7 @@ PUBLIC_COLS = [
     ("o",        "Personas ocupadas (O)"),
     ("do",       "Personas desocupadas (DO)"),
     ("cesantes", "Cesantes"),
-    ("busca_trabajo_por_primera_vez", "Buscan trabajo por primera vez"),
+    ("busca_trabajo_por_primera_vez", "Buscan trabajo por primera vez (BTPV)"),
     ("fft",      "Fuera de la fuerza de trabajo (FFT)"),
     ("fft_iniciadores", "Iniciadores fuera de la fuerza de trabajo"),
     ("fft_inactivos_potencialmente_activos", "Inactivos potencialmente activos"),
@@ -220,7 +220,7 @@ VARIABLE_META = {
         "notes": "",
         "source": "Glosario ENE 2024, «Cesante»"
     },
-    "busca_trabajo_por_primera_vez": {
+    "busca_trabajo_por_primera_vez (BTPV)": {
         "label": "Buscan trabajo por primera vez",
         "description": "Personas desocupadas que nunca han tenido una ocupación anterior.",
         "notes": "",
@@ -240,12 +240,16 @@ VARIABLE_META = {
     "fft_iniciadores": {
         "label": "Iniciadores fuera de la fuerza de trabajo",
         "description": (
-            "Personas fuera de la fuerza de trabajo que pronto iniciarán "
-            "una actividad laboral y declararon disponibilidad para comenzar en ≤2 semanas."
+            "Personas fuera de la fuerza de trabajo que pronto iniciarán una actividad laboral, "
+            "incluyendo tanto a quienes están disponibles para comenzar en ≤2 semanas como a quienes no lo están."
         ),
-        "notes": "",
-        "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)» —se usa la misma lógica de clasificación"  
+        "notes": (
+            "Corresponden a quienes tienen `cae_general = 6`, incluyendo los códigos específicos 10 (disponibles) y 11 (no disponibles). "
+            "Este grupo es parte de la clasificación de la fuerza de trabajo según el INE y se publica como categoría separada en los indicadores principales."
+        ),
+        "source": "Libro de Códigos ENE 2020, variables cae_general y cae_especifico",
     },
+
     "fft_inactivos_potencialmente_activos": {
         "label": "Inactivos potencialmente activos",
         "description": (
