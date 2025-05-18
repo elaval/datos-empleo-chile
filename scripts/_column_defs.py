@@ -45,18 +45,18 @@ PUBLIC_COLS = [
     ("o_ed_sup_ip",           "Edu. superior en IP"),
     ("o_ed_sup_univ",         "Edu. superior universitaria"),
 
-    ("categoria_independientes", "Independientes"),
-    ("categoria_empleador",      "Empleador"),
-    ("categoria_familiar_personal_no_remunerado", "Familiar personal no remunerado"),
-    ("categoria_dependientes",   "Dependientes"),
-    ("categoria_asalariados",    "Asalariados"),
-    ("categoria_cuenta_propia",  "Cuenta propia"),
-    ("categoria_asalariado_sector_privado", "Asalariado sector privado"),
-    ("categoria_asalariado_sector_publico",  "Asalariado sector público"),
-    ("categoria_servicio_domestico",         "Servicio doméstico"),
-    ("categoria_serv_domestico_puertas_afuera", "Servicio doméstico puertas afuera"),
-    ("categoria_serv_domestico_puertas_adentro",  "Servicio doméstico puertas adentro"),
-    ("categoria_no_corresponde", "No corresponde"),
+    ("categoria_independientes", "Categoría: Independientes"),
+    ("categoria_empleador",      "Categoría: Empleador"),
+    ("categoria_familiar_personal_no_remunerado", "FCategoría: amiliar personal no remunerado"),
+    ("categoria_dependientes",   "Categoría: Dependientes"),
+    ("categoria_asalariados",    "Categoría: Asalariados"),
+    ("categoria_cuenta_propia",  "Categoría: Cuenta propia"),
+    ("categoria_asalariado_sector_privado", "Categoría: Asalariado sector privado"),
+    ("categoria_asalariado_sector_publico",  "Categoría: Asalariado sector público"),
+    ("categoria_servicio_domestico",         "Categoría: Servicio doméstico"),
+    ("categoria_serv_domestico_puertas_afuera", "Categoría: Servicio doméstico puertas afuera"),
+    ("categoria_serv_domestico_puertas_adentro",  "Categoría: Servicio doméstico puertas adentro"),
+    ("categoria_no_corresponde", "Categoría: No corresponde"),
 
 
    # ── Grupos CIUO ──────────────────────────────────────────────────────
@@ -579,128 +579,130 @@ VARIABLE_META = {
     },
 
 
+    # ------------------------------------------------------------------ Categorías de ocupación
     "categoria_independientes": {
-        "label": "Independientes",
+        "label": "Categoría: Independientes",
         "description": (
-            "Ocupados/as clasificados como *empleador/a* (código 1), "
-            "*trabajador/a por cuenta propia* (2) o *familiar personal no "
-            "remunerado* (7) en la variable `categoria_ocupacion`."
+            "Ocupados/as clasificados como *empleador/a* (`categoria_ocupacion` = 1), "
+            "*trabajador/a por cuenta propia* (`categoria_ocupacion` = 2), o "
+            "*familiar personal no remunerado* (`categoria_ocupacion` = 7)."
         ),
         "notes": "Agrupa a todos los que trabajan sin contrato de dependencia.",
-        "source": "Glosario ENE 2024, definiciones de Independiente y sus sub-categorías "
-    },    
+        "source": "Glosario ENE 2024, definiciones de Independiente y sus sub-categorías"
+    },
 
     "categoria_empleador": {
-        "label": "Empleador",
+        "label": "Categoría: Empleador",
         "description": (
             "Independiente que opera una empresa, negocio o explotación agropecuaria "
-            "y contrata al menos a un asalariado/a remunerado/a (código 1)."
+            "y contrata al menos a un/a asalariado/a remunerado/a (`categoria_ocupacion` = 1)."
         ),
         "notes": "",
-        "source": "INE, Libro de Códigos ENE 2020 — variable `categoria_ocupacion`"  
-    },    
+        "source": "INE, Libro de Códigos ENE 2020 — variable `categoria_ocupacion`"
+    },
 
     "categoria_cuenta_propia": {
-        "label": "Cuenta propia",
+        "label": "Categoría: Cuenta propia",
         "description": (
             "Persona que trabaja en forma independiente sin contratar asalariados/as "
             "y cuyo ingreso procede directamente de la venta de bienes o servicios "
-            "(código 2)."
+            "(`categoria_ocupacion` = 2)."
         ),
         "notes": "",
         "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia»"
-    },    
+    },
 
     "categoria_familiar_personal_no_remunerado": {
-        "label": "Familiar personal no remunerado",
+        "label": "Categoría: Familiar personal no remunerado",
         "description": (
-            "Miembro del hogar que trabaja en la empresa, negocio o finca de un "
+            "Miembro del hogar que trabaja en la empresa, negocio o finca de un/a "
             "pariente sin percibir remuneración monetaria ni en especie "
-            "(código 7)."
+            "(`categoria_ocupacion` = 7)."
         ),
         "notes": "",
-        "source": "Glosario ENE 2024, «Trabajador/a familiar no remunerado/a» "
-    },    
+        "source": "Glosario ENE 2024, «Trabajador/a familiar no remunerado/a»"
+    },
 
     "categoria_dependientes": {
-        "label": "Dependientes",
+        "label": "Categoría: Dependientes",
         "description": (
-            "Trabajadores/as que prestan servicios a un empleador bajo relación "
-            "de subordinación, abarcando asalariados/as del sector privado (3), "
-            "público (4) y servicio doméstico (5 y 6)."
+            "Trabajadores/as que prestan servicios a un/a empleador/a bajo relación "
+            "de subordinación, abarcando asalariados/as del sector privado "
+            "(`categoria_ocupacion` = 3), público (4), y servicio doméstico (5 y 6)."
         ),
         "notes": "Complemento del grupo independientes.",
-        "source": "Glosario ENE 2024, definición de Dependiente "
-    },    
+        "source": "Glosario ENE 2024, definición de Dependiente"
+    },
 
     "categoria_asalariados": {
-        "label": "Asalariados",
+        "label": "Categoría: Asalariados",
         "description": (
             "Dependientes remunerados distintos del servicio doméstico; incluye "
-            "asalariados sector privado (3) y público (4)."
+            "asalariados/as del sector privado (`categoria_ocupacion` = 3) y público (4)."
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3-4"  
-    },    
+        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3-4"
+    },
 
     "categoria_asalariado_sector_privado": {
-        "label": "Asalariado sector privado",
+        "label": "Categoría: Asalariado sector privado",
         "description": (
             "Dependiente remunerado cuyo empleador pertenece al sector privado "
-            "(código 3)."
+            "(`categoria_ocupacion` = 3)."
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3"  
-    },    
+        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3"
+    },
 
     "categoria_asalariado_sector_publico": {
-        "label": "Asalariado sector público",
+        "label": "Categoría: Asalariado sector público",
         "description": (
             "Dependiente remunerado cuyo empleador corresponde al Estado o sus "
-            "entidades (código 4)."
+            "entidades (`categoria_ocupacion` = 4)."
         ),
         "notes": "",
-        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 4"  
-    },    
+        "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 4"
+    },
 
     "categoria_servicio_domestico": {
-        "label": "Servicio doméstico",
+        "label": "Categoría: Servicio doméstico",
         "description": (
-            "Conjunto de trabajadores/as que realizan labores domésticas "
-            "remuneradas en hogares particulares, puertas afuera (5) o adentro (6)."
+            "Conjunto de trabajadores/as que realizan labores domésticas remuneradas "
+            "en hogares particulares, ya sea viviendo en su propio hogar "
+            "(`categoria_ocupacion` = 5) o en el hogar empleador (`categoria_ocupacion` = 6)."
         ),
-        "notes": "Sub-grupo dentro de Dependientes — desagregado por lugar de pernocta.",
-        "source": "Glosario ENE 2019, entrada «Servicio doméstico» "
-    },    
+        "notes": "Subgrupo dentro de Dependientes — desagregado por lugar de pernocta.",
+        "source": "Glosario ENE 2019, entrada «Servicio doméstico»"
+    },
 
     "categoria_serv_domestico_puertas_afuera": {
-        "label": "Servicio doméstico puertas afuera",
+        "label": "Categoría: Servicio doméstico puertas afuera",
         "description": (
             "Trabajador/a de casa particular que vive en su propio hogar y acude a "
-            "trabajar durante el día (código 5)."
+            "trabajar durante el día (`categoria_ocupacion` = 5)."
         ),
         "notes": "Denominado también *puertas fuera* en normativa laboral chilena.",
         "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”"
-    },    
+    },
 
     "categoria_serv_domestico_puertas_adentro": {
-        "label": "Servicio doméstico puertas adentro",
+        "label": "Categoría: Servicio doméstico puertas adentro",
         "description": (
             "Trabajador/a que reside en el hogar empleador formando parte del "
-            "servicio doméstico (código 6)."
+            "servicio doméstico (`categoria_ocupacion` = 6)."
         ),
         "notes": "",
-        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular” 0}"
-    },    
+        "source": "Dirección del Trabajo (Chile), ficha “Trabajadoras de casa particular”"
+    },
 
     "categoria_no_corresponde": {
-        "label": "No corresponde",
+        "label": "Categoría: No corresponde",
         "description": (
-            "Código 0 reservado a casos sin información o en los que la categoría "
-            "ocupacional no aplica al entrevistado/a."
+            "Código reservado (`categoria_ocupacion` = 0) para casos sin información "
+            "o en los que la categoría ocupacional no aplica al entrevistado/a."
         ),
-        "notes": "Se trata de un valor residual utilizado por INE para editar datos faltantes.",
-        "source": "Libro de Códigos ENE 2020, nota al valor 0 en `categoria_ocupacion`"  
+        "notes": "Valor residual utilizado por INE para editar datos faltantes.",
+        "source": "Libro de Códigos ENE 2020, nota al valor 0 en `categoria_ocupacion`"
     },
 
     # ── Agregados de gran-grupo CIUO ───────────────────────────────────────
