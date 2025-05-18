@@ -185,6 +185,12 @@
     "notes": "",
     "source": "INE, Libro de Códigos ENE 2020 — variable `categoria_ocupacion`"
   },
+  "categoria_cuenta_propia": {
+    "label": "Categoría: Cuenta propia",
+    "description": "Persona que trabaja en forma independiente sin contratar asalariados/as y cuyo ingreso procede directamente de la venta de bienes o servicios (`categoria_ocupacion` = 2).",
+    "notes": "",
+    "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia»"
+  },
   "categoria_familiar_personal_no_remunerado": {
     "label": "Categoría: Familiar personal no remunerado",
     "description": "Miembro del hogar que trabaja en la empresa, negocio o finca de un/a pariente sin percibir remuneración monetaria ni en especie (`categoria_ocupacion` = 7).",
@@ -202,12 +208,6 @@
     "description": "Dependientes remunerados distintos del servicio doméstico; incluye asalariados/as del sector privado (`categoria_ocupacion` = 3) y público (4).",
     "notes": "",
     "source": "Libro de Códigos ENE 2020, `categoria_ocupacion` = 3-4"
-  },
-  "categoria_cuenta_propia": {
-    "label": "Categoría: Cuenta propia",
-    "description": "Persona que trabaja en forma independiente sin contratar asalariados/as y cuyo ingreso procede directamente de la venta de bienes o servicios (`categoria_ocupacion` = 2).",
-    "notes": "",
-    "source": "Glosario ENE 2024, «Trabajador/a por cuenta propia»"
   },
   "categoria_asalariado_sector_privado": {
     "label": "Categoría: Asalariado sector privado",

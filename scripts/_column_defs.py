@@ -47,10 +47,10 @@ PUBLIC_COLS = [
 
     ("categoria_independientes", "Categoría: Independientes"),
     ("categoria_empleador",      "Categoría: Empleador"),
+    ("categoria_cuenta_propia",  "Categoría: Cuenta propia"),
     ("categoria_familiar_personal_no_remunerado", "Categoría: Familiar personal no remunerado"),
     ("categoria_dependientes",   "Categoría: Dependientes"),
     ("categoria_asalariados",    "Categoría: Asalariados"),
-    ("categoria_cuenta_propia",  "Categoría: Cuenta propia"),
     ("categoria_asalariado_sector_privado", "Categoría: Asalariado sector privado"),
     ("categoria_asalariado_sector_publico",  "Categoría: Asalariado sector público"),
     ("categoria_servicio_domestico",         "Categoría: Servicio doméstico"),
