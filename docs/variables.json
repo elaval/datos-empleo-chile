@@ -133,45 +133,45 @@
   },
   "o_sin_basica_completa": {
     "label": "Sin educación básica completa",
-    "description": "Ocupados/as cuyo **nivel educacional más alto (variable `nivel`) se encuentra por debajo de la enseñanza básica completa**. \n\nSe incluyen:\n‒ Quienes declararon “Nunca estudió”, pre-escolar o básica/primaria pero **no** la finalizaron (`nivel` = 0-3 **y** `termino_nivel` ≠ 1), y\n‒ Cualquier otro código fuera del rango 3-14, que el INE clasifica como sin estudios formales.",
-    "notes": "Serie continua desde 2010-01; construida con `_mask_sin_basica`.",
-    "source": "Libro de Códigos ENE 2010-2019 – definición de `nivel`/`termino_nivel`"
+    "description": "Ocupados/as cuyo **nivel educacional más alto** está por debajo de la enseñanza básica completa.\n\nIncluye:\n‒ Personas que declararon 'Nunca estudió', preescolar o básica/primaria sin haberla finalizado (`nivel` entre 0 y 3, con `termino_nivel` ≠ 1).\n‒ Casos con códigos fuera del rango 3–14, considerados por el INE como ausencia de estudios formales.",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
   },
   "o_ed_basica_completa": {
     "label": "Educación básica completa",
-    "description": "Ocupados/as que **finalizaron la básica/primaria** (`nivel` = 3 y `termino_nivel` = 1) **o** que cursaron enseñanza media pero **no la concluyeron** (`nivel` ∈ 4-6, 14 y `termino_nivel` ≠ 1). Corresponde al *_mask_ed_basica_* definido en el script.",
-    "notes": "Continuidad 2010-01 ↔ presente; categoría mutuamente excluyente.",
-    "source": "Libro de Códigos ENE 2010-2019 – códigos 3-6, 14"
+    "description": "Ocupados/as que **completaron la enseñanza básica o primaria** (`nivel` = 3 y `termino_nivel` = 1), o que cursaron enseñanza media sin terminarla (`nivel` entre 4 y 6 o igual a 14, con `termino_nivel` ≠ 1).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
   },
   "o_ed_media_completa": {
     "label": "Educación media completa",
-    "description": "Ocupados/as que **terminaron la enseñanza media (común o TP) o humanidades** (`nivel` = 4-6, 14 **y** `termino_nivel` = 1) o que iniciaron estudios superiores **sin concluirlos** (`nivel` = 7-9 y `termino_nivel` ≠ 1). Implementa la lógica de *_mask_ed_media_*.",
-    "notes": "",
-    "source": "Libro de Códigos ENE 2010-2019 – códigos 4-9, 14"
+    "description": "Ocupados/as que **terminaron la enseñanza media** (común, técnico-profesional o humanidades) — `nivel` entre 4 y 6 o igual a 14, con `termino_nivel` = 1 — o que iniciaron estudios superiores **sin concluirlos** (`nivel` entre 7 y 9 con `termino_nivel` ≠ 1).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
   },
   "o_ed_sup_completa": {
     "label": "Educación superior completa",
-    "description": "Ocupados/as con **estudios superiores finalizados**:\n‒ Técnico de nivel superior/CFT (`nivel` = 7, `termino_nivel` = 1),\n‒ Profesional/IP (`nivel` = 8, `termino_nivel` = 1),\n‒ Universitario u otros de pos-grado (`nivel` = 9-12). Equivale al *_mask_ed_sup_* del script.",
-    "notes": "",
-    "source": "Libro de Códigos ENE 2010-2019 – códigos 7-12"
+    "description": "Ocupados/as con **estudios superiores finalizados**, incluyendo:\n‒ Carrera técnica de nivel superior en CFT (`nivel` = 7, `termino_nivel` = 1),\n‒ Título profesional en Instituto Profesional (`nivel` = 8, `termino_nivel` = 1),\n‒ Estudios universitarios o de posgrado completos (`nivel` entre 9 y 12).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – variables `nivel` y `termino_nivel`"
   },
   "o_ed_sup_cft": {
     "label": "Edu. superior en CFT",
-    "description": "Sub-conjunto de ocupados/as con **Carrera Técnica de nivel superior** terminada (`nivel` = 7 & `termino_nivel` = 1).",
-    "notes": "Disponible en toda la serie; regla `rule_ed_sup_cft`.",
-    "source": "Libro de Códigos ENE 2010-2019 – código 7"
+    "description": "Ocupados/as con **carrera técnica de nivel superior completada** (`nivel` = 7 y `termino_nivel` = 1).",
+    "notes": "Disponible en toda la serie.",
+    "source": "Libro de Códigos ENE 2010–2019 – código 7 en `nivel`"
   },
   "o_ed_sup_ip": {
     "label": "Edu. superior en IP",
-    "description": "Ocupados/as con **título profesional de Instituto Profesional** terminado (`nivel` = 8 & `termino_nivel` = 1).0}",
-    "notes": "",
-    "source": "Libro de Códigos ENE 2010-2019 – código 81}"
+    "description": "Ocupados/as con **título profesional de Instituto Profesional** completado (`nivel` = 8 y `termino_nivel` = 1).",
+    "notes": "Disponible en toda la serie.",
+    "source": "Libro de Códigos ENE 2010–2019 – código 8 en `nivel`"
   },
   "o_ed_sup_univ": {
     "label": "Edu. superior universitaria",
-    "description": "Agrupa ocupados/as con **título universitario o pos-grado** completo: `nivel` = 9 (universitario) o 10-12 (post-título, magíster, doctorado).2}",
-    "notes": "",
-    "source": "Libro de Códigos ENE 2010-2019 – códigos 9-123}"
+    "description": "Ocupados/as con **título universitario o de posgrado completo**:\n`nivel` = 9 (universitario), 10 (postítulo), 11 (magíster), o 12 (doctorado).",
+    "notes": "Serie continua desde 2010-01.",
+    "source": "Libro de Códigos ENE 2010–2019 – códigos 9–12 en `nivel`"
   },
   "categoria_independientes": {
     "label": "Independientes",
