@@ -126,7 +126,7 @@ PUBLIC_COLS = [
 
     # ── Horas trabajadas ────────────────────────────────────────────────
     ("horas_1_30", "Horas 1-30"),
-    ("tpi",        "Tiempo parcial involuntario (TPI)"),
+    ("tpi",        "Ocupados/as a tiempo parcial involuntario (TPI)"),
     ("tpv",        "Tiempo parcial voluntario (TPV)"),
     ("tp_sin_declarar_voluntariedad", "Tiempo parcial sin declarar voluntariedad"),
     ("horas_31_44", "Horas 31-44"),
