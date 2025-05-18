@@ -47,17 +47,17 @@
     "notes": "",
     "source": "Glosario ENE 2024, «Personas fuera de la fuerza de trabajo (FFT)»"
   },
+  "ftp": {
+    "label": "Fuerza de trabajo potencial (FTP)",
+    "description": "Personas no ocupadas que manifestaron interés en trabajar, pero no buscaron activamente empleo o no estaban disponibles para comenzar a trabajar. También se les denomina «inactivos/as potencialmente activos/as».",
+    "notes": "",
+    "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
+  },
   "fft_iniciadores": {
     "label": "Iniciadores fuera de la fuerza de trabajo",
     "description": "Personas fuera de la fuerza de trabajo que pronto iniciarán una actividad laboral, incluyendo tanto a quienes están disponibles para comenzar en ≤2 semanas como a quienes no lo están.",
     "notes": "Corresponden a quienes tienen `cae_general = 6`, incluyendo los códigos específicos 10 (disponibles) y 11 (no disponibles). Este grupo es parte de la clasificación de la fuerza de trabajo según el INE y se publica como categoría separada en los indicadores principales.",
     "source": "Libro de Códigos ENE 2020, variables cae_general y cae_especifico"
-  },
-  "fft_inactivos_potencialmente_activos": {
-    "label": "Inactivos potencialmente activos",
-    "description": "Personas no ocupadas que expresaron interés en trabajar pero cuya búsqueda activa y/o disponibilidad no cumplió los criterios de desocupación.",
-    "notes": "Equivalen a la Fuerza de trabajo potencial (FTP).",
-    "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
   },
   "fft_inactivos_habituales": {
     "label": "Inactivos habituales",
@@ -76,12 +76,6 @@
     "description": "Personas fuera de la fuerza de trabajo que no buscaron trabajo porque iniciarán una actividad laboral pronto, pero están disponibles para comenzar dentro de las próximas dos semanas.",
     "notes": "",
     "source": "Glosario ENE 2024, «Iniciadores/as disponibles (ID)»"
-  },
-  "ftp": {
-    "label": "Fuerza de trabajo potencial (FTP)",
-    "description": "Personas no ocupadas que manifestaron interés en trabajar, pero no buscaron activamente empleo o no estaban disponibles para comenzar a trabajar.",
-    "notes": "",
-    "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
   },
   "fta": {
     "label": "Fuerza de trabajo ajustada (FTA)",

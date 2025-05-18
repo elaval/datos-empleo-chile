@@ -32,7 +32,6 @@ FINAL_COLS = [
     "busca_trabajo_por_primera_vez",
     "fft",
     "fft_iniciadores",
-    "fft_inactivos_potencialmente_activos",
     "fft_inactivos_habituales",
 
     "obe",
@@ -222,7 +221,6 @@ def rule_busca_trabajo_por_primera_vez(df): return df["cae_especifico"] == 9
 
 def rule_fuera_fuerza_de_trabajo(df): return df["activ"] == 3
 def rule_fft_iniciadores(df): return df["cae_general"] == 6
-def rule_fft_inactivos_potencialmente_activos(df): return df["cae_general"].between(7, 8)
 def rule_fft_inactivos_habituales(df): return df["cae_general"] == 9
 
 def rule_obe(df):       return df["obe"] == 1
@@ -470,7 +468,6 @@ RULES: dict[str, callable] = {
     "busca_trabajo_por_primera_vez": rule_busca_trabajo_por_primera_vez,
     "fft": rule_fuera_fuerza_de_trabajo,
     "fft_iniciadores": rule_fft_iniciadores,
-    "fft_inactivos_potencialmente_activos": rule_fft_inactivos_potencialmente_activos,
     "fft_inactivos_habituales": rule_fft_inactivos_habituales,
 
     "obe": rule_obe,

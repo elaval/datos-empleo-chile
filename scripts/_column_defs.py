@@ -15,14 +15,13 @@ PUBLIC_COLS = [
     ("cesantes", "Cesantes"),
     ("busca_trabajo_por_primera_vez", "Buscan trabajo por primera vez (BTPV)"),
     ("fft",      "Fuera de la fuerza de trabajo (FFT)"),
+    ("ftp",     "Fuerza de trabajo potencial (FTP)"),
     ("fft_iniciadores", "Iniciadores fuera de la fuerza de trabajo"),
-    ("fft_inactivos_potencialmente_activos", "Inactivos potencialmente activos"),
     ("fft_inactivos_habituales",           "Inactivos habituales"),
 
     # ── Subgrupos especiales ────────────────────────────────────────────
     ("obe",     "Ocupados que buscaron empleo (OBE)"),
     ("id",      "Iniciadores disponibles (ID)"),
-    ("ftp",     "Fuerza de trabajo potencial (FTP)"),
     ("fta",     "Fuerza de trabajo ajustada (FTA)"),
     ("deseo_trabajar", "Deseo de trabajar"),
 
@@ -250,15 +249,6 @@ VARIABLE_META = {
         "source": "Libro de Códigos ENE 2020, variables cae_general y cae_especifico",
     },
 
-    "fft_inactivos_potencialmente_activos": {
-        "label": "Inactivos potencialmente activos",
-        "description": (
-            "Personas no ocupadas que expresaron interés en trabajar pero cuya "
-            "búsqueda activa y/o disponibilidad no cumplió los criterios de desocupación."
-        ),
-        "notes": "Equivalen a la Fuerza de trabajo potencial (FTP).",
-        "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»" 
-    },
     "fft_inactivos_habituales": {
         "label": "Inactivos habituales",
         "description": (
@@ -288,7 +278,10 @@ VARIABLE_META = {
     },
     "ftp": {
         "label": "Fuerza de trabajo potencial (FTP)",
-        "description": "Personas no ocupadas que manifestaron interés en trabajar, pero no buscaron activamente empleo o no estaban disponibles para comenzar a trabajar.",
+        "description": (
+            "Personas no ocupadas que manifestaron interés en trabajar, pero no buscaron activamente empleo o no estaban disponibles para comenzar a trabajar. "
+            "También se les denomina «inactivos/as potencialmente activos/as»."
+        ),
         "notes": "",
         "source": "Glosario ENE 2024, «Fuerza de trabajo potencial (FTP)»"
     },
