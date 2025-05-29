@@ -99,7 +99,6 @@ PUBLIC_COLS = [
     ("o_ed_sup_ciuo_media_baja", "Ed. Superior y grupo CIUO medio-bajo (4-9)"),
     ("o_ed_sup_ciuo_no_alta",    "Ed. Superior y grupo CIUO no-alto"),
 
-
     # ── Ramas de actividad (1 a 21) ──────────────────────────────────────
     ("rama_1",  "Rama 1: Agricultura, ganadería, silvicultura y pesca"),
     ("rama_2",  "Rama 2: Explotación de minas y canteras"),
