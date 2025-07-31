@@ -40,6 +40,9 @@ df = pd.read_parquet(url)
 
 Acciones de GitHub automatizan los pasos 3‑4 a cada push o calendario. 
 
+Actualización de datos desde repositorio local:
+$ python update_raw_release.py 2025-04
+
 ## 5 | Licencia y citación
 
 * **Código**: MIT License.
