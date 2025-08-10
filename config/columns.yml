@@ -35,6 +35,8 @@ subset_columns:
   - ftp
   - deseo_trabajar
   - b7a_1
+  - b7a_2
+  - b7a_3
   - fact_cal
 
 key_dimensions:

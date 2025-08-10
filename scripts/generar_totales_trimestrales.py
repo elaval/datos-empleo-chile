@@ -65,6 +65,9 @@ FINAL_COLS = [
     "categoria_familiar_personal_no_remunerado",
     "categoria_dependientes",
     "dependientes_cotizantes",
+    "asalariados_sector_privado_cotizantes",
+    "cotizantes",
+
     "categoria_asalariados",
     "categoria_asalariado_sector_privado",
     "categoria_asalariado_sector_publico",
@@ -180,7 +183,7 @@ def read_frames() -> list[pd.DataFrame]:
         "cae_especifico","cae_general", "nacionalidad", "edad", "sexo",
         "ocup_form","sector", "tpi", "categoria_ocupacion",
         "nivel", "termino_nivel",
-        "b1", "b1_ciuo88", "b7a_1",
+        "b1", "b1_ciuo88", "b7a_1","b7a_2","b7a_3",
         "obe", "id", "ftp", "deseo_trabajar", "habituales", "efectivas", "activ",
         "c10", "c11",
         "r_p_rev4cl_caenes",
@@ -240,9 +243,16 @@ def rule_categoria_servicio_domestico(df):    return rule_ocupados(df) & (df["ca
 def rule_categoria_serv_domestico_puertas_afuera(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 5)
 def rule_categoria_serv_domestico_puertas_adentro(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 6)
 def rule_categoria_familiar_personal_no_remunerado(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 7)
-def rule_dependientes_cotizantes(df):    return rule_ocupados(df) & (df["b7a_1"] == 1) & (df["categoria_ocupacion"].between(3, 6))
+def rule_dependientes(df):
+    # Ajusta los códigos a tu diccionario. Usar isin es más seguro que between.
+    return rule_ocupados(df) & df["categoria_ocupacion"].isin([3, 4, 5, 6])
+def rule_dependientes_cotizantes(df):
+    valid = df["b7a_1"].isin([0, 1])  # ajusta según tu codificación (1=Sí, 0/2=No)
+    return rule_dependientes(df) & valid & (df["b7a_1"] == 1)
+def rule_asalariados_sector_privado_cotizantes(df):
+    return rule_categoria_asalariado_sector_privado(df) &  (df["b7a_1"] == 1)
+def rule_cotizantes(df):    return rule_ocupados(df) & (df["b7a_1"] == 1)
 def rule_categoria_no_corresponde(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 0)
-
 def rule_grupo_ciuo_1(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 1)
 def rule_grupo_ciuo_2(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 2)
 def rule_grupo_ciuo_3(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 3)
@@ -483,6 +493,9 @@ RULES: dict[str, callable] = {
     "categoria_familiar_personal_no_remunerado": rule_categoria_familiar_personal_no_remunerado,
     "categoria_dependientes": rule_categoria_dependientes,
     "dependientes_cotizantes": rule_dependientes_cotizantes,
+    "asalariados_sector_privado_cotizantes": rule_asalariados_sector_privado_cotizantes,
+    "cotizantes": rule_cotizantes,
+
     "categoria_asalariados": rule_categoria_asalariados,
     "categoria_cuenta_propia": rule_categoria_cuenta_propia,
     "categoria_asalariado_sector_privado": rule_categoria_asalariado_sector_privado,
