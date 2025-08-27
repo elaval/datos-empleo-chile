@@ -66,6 +66,7 @@ FINAL_COLS = [
     "categoria_dependientes",
     "dependientes_cotizantes",
     "asalariados_sector_privado_cotizantes",
+    "asalariados_sector_publico_cotizantes",
     "cotizantes",
     "dependientes_cotizantes2017",
     "asalariados_sector_privado_cotizantes2017",
@@ -254,6 +255,8 @@ def rule_dependientes_cotizantes(df):
     return rule_dependientes(df) & valid & (df["b7a_1"] == 1)
 def rule_asalariados_sector_privado_cotizantes(df):
     return rule_categoria_asalariado_sector_privado(df) &  (df["b7a_1"] == 1)
+def rule_asalariados_sector_publico_cotizantes(df):
+    return rule_categoria_asalariado_sector_publico(df) &  (df["b7a_1"] == 1)
 def rule_cotizantes(df):    return rule_ocupados(df) & (df["b7a_1"] == 1)
 
 def rule_dependientes_cotizantes2017(df):
@@ -506,6 +509,7 @@ RULES: dict[str, callable] = {
     "categoria_dependientes": rule_categoria_dependientes,
     "dependientes_cotizantes": rule_dependientes_cotizantes,
     "asalariados_sector_privado_cotizantes": rule_asalariados_sector_privado_cotizantes,
+    "asalariados_sector_publico_cotizantes":rule_asalariados_sector_publico_cotizantes,
     "cotizantes": rule_cotizantes,
     "dependientes_cotizantes2017": rule_dependientes_cotizantes2017,
     "asalariados_sector_privado_cotizantes2017": rule_asalariados_sector_privado_cotizantes2017,
