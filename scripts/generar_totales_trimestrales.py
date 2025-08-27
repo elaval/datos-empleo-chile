@@ -67,6 +67,9 @@ FINAL_COLS = [
     "dependientes_cotizantes",
     "asalariados_sector_privado_cotizantes",
     "cotizantes",
+    "dependientes_cotizantes2017",
+    "asalariados_sector_privado_cotizantes2017",
+    "cotizantes2017",
 
     "categoria_asalariados",
     "categoria_asalariado_sector_privado",
@@ -183,7 +186,7 @@ def read_frames() -> list[pd.DataFrame]:
         "cae_especifico","cae_general", "nacionalidad", "edad", "sexo",
         "ocup_form","sector", "tpi", "categoria_ocupacion",
         "nivel", "termino_nivel",
-        "b1", "b1_ciuo88", "b7a_1","b7a_2","b7a_3",
+        "b1", "b1_ciuo88", "b7a_1","b7a_2","b7a_3","b7_3",
         "obe", "id", "ftp", "deseo_trabajar", "habituales", "efectivas", "activ",
         "c10", "c11",
         "r_p_rev4cl_caenes",
@@ -252,6 +255,15 @@ def rule_dependientes_cotizantes(df):
 def rule_asalariados_sector_privado_cotizantes(df):
     return rule_categoria_asalariado_sector_privado(df) &  (df["b7a_1"] == 1)
 def rule_cotizantes(df):    return rule_ocupados(df) & (df["b7a_1"] == 1)
+
+def rule_dependientes_cotizantes2017(df):
+    valid = df["b7_3"].isin([0, 1])  # ajusta según tu codificación (1=Sí, 0/2=No)
+    return rule_dependientes(df) & valid & (df["b7_3"] == 1)
+def rule_asalariados_sector_privado_cotizantes2017(df):
+    return rule_categoria_asalariado_sector_privado(df) &  (df["b7_3"] == 1)
+def rule_cotizantes2017(df):    return rule_ocupados(df) & (df["b7_3"] == 1)
+
+
 def rule_categoria_no_corresponde(df):    return rule_ocupados(df) & (df["categoria_ocupacion"] == 0)
 def rule_grupo_ciuo_1(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 1)
 def rule_grupo_ciuo_2(df):    return rule_ocupados(df) & (df["ciuo_gran_grupo"] == 2)
@@ -495,6 +507,9 @@ RULES: dict[str, callable] = {
     "dependientes_cotizantes": rule_dependientes_cotizantes,
     "asalariados_sector_privado_cotizantes": rule_asalariados_sector_privado_cotizantes,
     "cotizantes": rule_cotizantes,
+    "dependientes_cotizantes2017": rule_dependientes_cotizantes2017,
+    "asalariados_sector_privado_cotizantes2017": rule_asalariados_sector_privado_cotizantes2017,
+    "cotizantes2017": rule_cotizantes2017,
 
     "categoria_asalariados": rule_categoria_asalariados,
     "categoria_cuenta_propia": rule_categoria_cuenta_propia,
