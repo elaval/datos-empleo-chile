@@ -12,6 +12,9 @@ subset_columns:
   - nivel
   - termino_nivel
   - cine
+  - cine97
+  - cine11_1
+  - cine11_2d
   - nacionalidad
   - b1
   - b1_ciuo88
