@@ -125,6 +125,8 @@ def main():
 
       (t1.TD - t2.TD) AS delta_TD,
       (t1.FT - t2.FT) AS delta_FT,
+      (t1.FT - t2.FT)::Float / NULLIF(t2.FT, 0) AS delta_relativo_FT,
+
 
       (t1.O_hombre - t2.O_hombre) AS delta_O_hombre,
       (t1.O_hombre - t2.O_hombre)::Float / NULLIF(t2.O_hombre, 0) AS delta_relativo_O_hombre,
