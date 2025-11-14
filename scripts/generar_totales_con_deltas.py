@@ -152,6 +152,8 @@ def main():
       (t1.O_formal - t2.O_formal)::Float / NULLIF(t2.O_formal, 0) AS delta_relativo_O_formal,
 
       (t1.O_informal - t2.O_informal) AS delta_O_informal,
+      (t1.O_informal - t2.O_informal)::Float / NULLIF(t2.O_informal, 0) AS delta_relativo_O_informal,
+
       (t1.Porcentaje_informal - t2.Porcentaje_informal) AS delta_pp_Porcentaje_informal,
 
       (t1.O_empleador - t2.O_empleador) AS delta_O_empleador,
