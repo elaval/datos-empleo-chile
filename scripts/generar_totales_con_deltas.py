@@ -140,6 +140,8 @@ def main():
       (t1.Porcentaje_mujer - t2.Porcentaje_mujer) AS delta_pp_Porcentaje_mujer,
 
       (t1.O_chileno - t2.O_chileno) AS delta_O_chileno,
+      (t1.O_chileno - t2.O_chileno)::Float / NULLIF(t2.O_chileno, 0) AS delta_relativo_O_chileno,
+
       (t1.DO_chileno - t2.DO_chileno) AS delta_DO_chileno,
       (t1.TD_chileno - t2.TD_chileno) AS delta_TD_chileno,
 
