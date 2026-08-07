@@ -1,0 +1,66 @@
+{
+  "nota": "Serie anual CISO-18 2020-2025 PUBLICADA por el INE, transcrita a mano desde los anexos G y H del documento metodológico de adopción de la CISO-18. Evidencia EXTERNA: no se genera por script y NO es reproducible desde los microdatos de este repo (las variables CISO-18 y sus preguntas de insumo se publican en las bases trimestrales solo desde AMJ 2026). Sirve como contexto histórico de la nueva clasificación mientras la serie propia (derivable desde ene-2026-05-amj en adelante) acumula historia.",
+  "fuente": "INE (2026), 'Documento Metodológico: Adopción de la Clasificación Internacional de la Situación en la Ocupación (CISO-18) en la Encuesta Nacional de Empleo', julio 2026, versión 1.0. Anexo G (segundo nivel) y Anexo H (tercer nivel, Forma B). Fuente citada por el INE: 'Encuesta Nacional de Empleo, Base Anual 2020-2025'.",
+  "advertencia": "Serie ANUAL (promedio del año calendario, factor de expansión anual fact_anual): NO comparable 1:1 con los trimestres móviles de este repo. Clasificación CISO-18: NO comparable con categoria_ocupacion (CISE-93) — en 2025 la recomposición mueve ~3,3 pp desde asalariados privados y ~2,7 pp desde cuenta propia hacia contratistas dependientes; el servicio doméstico se publica fusionado (puertas adentro + afuera) y los familiares no remunerados integran el grupo de dependientes. Ver ADR-0002.",
+  "unidad": "miles de personas (promedio anual); pct = porcentaje sobre el total de ocupados, como fue publicado",
+  "anios": [2020, 2021, 2022, 2023, 2024, 2025],
+  "nivel2": {
+    "empleadores": [269.88, 258.02, 284.96, 286.47, 278.82, 282.9],
+    "cuenta_propia": [1286.81, 1529.01, 1586.9, 1645.12, 1643.24, 1631.51],
+    "subtotal_independientes": [1556.68, 1787.03, 1871.86, 1931.59, 1922.07, 1914.41],
+    "contratistas_dependientes": [574.34, 590.7, 633.42, 653.79, 696.05, 697.69],
+    "asalariados_privados": [4515.36, 4695.74, 5087.76, 5172.53, 5318.54, 5446.53],
+    "asalariados_publicos": [1010.1, 982.23, 1002.04, 1067.85, 1114.51, 1096.44],
+    "servicio_domestico": [197.13, 190.19, 207.02, 189.08, 190.99, 182.43],
+    "familiares_no_remunerados": [68.85, 68.07, 60.61, 59.55, 56.38, 53.99],
+    "subtotal_dependientes": [6365.78, 6526.93, 6990.84, 7142.8, 7376.47, 7477.07],
+    "total_ocupados": [7922.46, 8313.96, 8862.7, 9074.39, 9298.54, 9391.48]
+  },
+  "nivel2_pct": {
+    "empleadores": [3.4, 3.1, 3.2, 3.2, 3.0, 3.0],
+    "cuenta_propia": [16.2, 18.4, 17.9, 18.1, 17.7, 17.4],
+    "subtotal_independientes": [19.6, 21.5, 21.1, 21.3, 20.7, 20.4],
+    "contratistas_dependientes": [7.2, 7.1, 7.1, 7.2, 7.5, 7.4],
+    "asalariados_privados": [57.0, 56.5, 57.4, 57.0, 57.2, 58.0],
+    "asalariados_publicos": [12.7, 11.8, 11.3, 11.8, 12.0, 11.7],
+    "servicio_domestico": [2.5, 2.3, 2.3, 2.1, 2.1, 1.9],
+    "familiares_no_remunerados": [0.9, 0.8, 0.7, 0.7, 0.6, 0.6],
+    "subtotal_dependientes": [80.4, 78.5, 78.9, 78.7, 79.3, 79.6]
+  },
+  "nivel3_forma_b": {
+    "empleadores_empresa_sociedad": [82.0, 79.7, 93.4, 105.5, 103.2, 130.2],
+    "empleadores_no_registrada_o_persona_natural": [187.9, 178.3, 191.6, 180.9, 175.6, 152.7],
+    "tcp_empresa_sociedad": [51.1, 67.8, 72.7, 86.7, 92.5, 125.0],
+    "tcp_no_registrada_o_persona_natural": [1235.7, 1461.2, 1514.2, 1558.4, 1550.8, 1506.5],
+    "cd_tcp_dependencia_organizativa_exclusiva": [128.5, 143.0, 155.5, 154.6, 160.5, 169.8],
+    "cd_tcp_dependencia_economica_exclusiva": [14.2, 9.5, 13.2, 12.4, 13.1, 13.8],
+    "cd_tcp_ambas_dependencias": [59.0, 57.1, 67.0, 64.9, 67.1, 69.9],
+    "cd_asalariados_contrato_comercial": [239.8, 234.3, 230.8, 240.7, 254.3, 259.1],
+    "cd_asalariados_riesgo_economico": [132.9, 146.8, 166.9, 181.2, 201.0, 185.1],
+    "asal_privados_contrato_indefinido": [3497.1, 3569.1, 3851.2, 4030.8, 4192.6, 4318.3],
+    "asal_privados_tiempo_determinado": [517.9, 495.0, 571.8, 532.2, 511.1, 522.8],
+    "asal_privados_corta_duracion": [500.3, 631.7, 664.8, 609.6, 614.8, 605.4],
+    "asal_publicos_contrato_indefinido": [656.4, 647.7, 664.9, 723.5, 738.8, 713.4],
+    "asal_publicos_tiempo_determinado": [316.2, 296.1, 292.0, 306.7, 335.9, 346.1],
+    "asal_publicos_corta_duracion": [37.5, 38.4, 45.1, 37.6, 39.8, 36.9],
+    "servicio_domestico_contrato_indefinido": [175.5, 166.0, 178.3, 167.2, 171.4, 163.5],
+    "servicio_domestico_tiempo_determinado": [12.3, 12.4, 15.0, 11.6, 11.1, 9.5],
+    "servicio_domestico_corta_duracion": [9.3, 11.8, 13.7, 10.3, 8.4, 9.5],
+    "familiar_o_personal_no_remunerado": [68.85, 68.07, 60.61, 59.55, 56.38, 53.99]
+  },
+  "notas_transcripcion": [
+    "Errata en el Anexo H del PDF: el subtotal 'Trabajadores/as por cuenta propia' 2024 aparece impreso como 1.648,24, pero sus componentes suman 1.643,3 y el Anexo G publica 1.643,24 (consistente con la identidad independientes 2024 = 1.922,07 - 278,82). Se transcribe 1.643,24.",
+    "La celda 'CD TCP con ambas dependencias' 2025 (69,9) fue verificada por identidad contable: 169,8 + 13,8 + 69,9 + 259,1 + 185,1 = 697,7 = subtotal contratistas dependientes (697,69).",
+    "Los porcentajes del tercer nivel (tabla p. 72 del PDF) no se transcriben: son derivables como valor/total_ocupados y transcribirlos solo agrega superficie de error.",
+    "Los subtotales de segundo nivel del Anexo H son los mismos del Anexo G y no se duplican aquí."
+  ],
+  "verificacion": {
+    "descripcion": "Chequeos aritméticos sobre las cifras transcritas (tolerancia 0,15 mil por redondeo a 1 decimal de los componentes)",
+    "identidades": [
+      "empleadores + cuenta_propia = subtotal_independientes (6/6 años)",
+      "cd + asal_priv + asal_pub + serv_dom + familiares = subtotal_dependientes (6/6 años)",
+      "subtotal_independientes + subtotal_dependientes = total_ocupados (6/6 años)",
+      "componentes nivel 3 suman su categoría de nivel 2 (6/6 años, 7/7 categorías)"
+    ]
+  }
+}

@@ -30,6 +30,10 @@ subset_columns:
   - cae_general
   - cae_especifico
   - categoria_ocupacion
+  - ciso1
+  - ciso2
+  - ciso3_b
+  - cd
   - ocup_form
   - sector
   - obe

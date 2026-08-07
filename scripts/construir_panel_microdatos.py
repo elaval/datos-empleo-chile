@@ -31,6 +31,11 @@ CONFIG_PATH    = BASE_DIR / "config" / "columns.yml"
 # Definición de columnas a leer (subset_columns) y orden en el YAML
 CFG = yaml.safe_load(open(CONFIG_PATH, encoding="utf-8"))
 
+# Desde el trimestre AMJ 2026 (adopción CISO-18) el INE renombró columnas en
+# los CSV publicados; se normalizan a los nombres históricos del pipeline.
+# id = "Iniciador/a disponible" → publicado como idisp desde AMJ 2026.
+RENAMES = {"idisp": "id"}
+
 def trimester_code(filename: str) -> str:
     """
     Dada una filename tipo 'ene-2025-02-efm.csv', devuelve '02-efm'
@@ -66,8 +71,10 @@ def main() -> None:
             sep=";",
             encoding="latin-1",
             low_memory=False,
-            usecols=lambda c: c in CFG["subset_columns"]
+            usecols=lambda c: c in CFG["subset_columns"] or c in RENAMES
         )
+        # Normalizar nombres nuevos del INE a los históricos (sin pisar existentes)
+        df = df.rename(columns={k: v for k, v in RENAMES.items() if v not in df.columns})
         # Asegurar que todas las columnas del YAML estén presentes
         missing = set(CFG["subset_columns"]) - set(df.columns)
         for col in missing:
