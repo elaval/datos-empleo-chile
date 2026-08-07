@@ -79,6 +79,16 @@ FINAL_COLS = [
     "categoria_serv_domestico_puertas_afuera",
     "categoria_serv_domestico_puertas_adentro",
 
+    "ciso_independientes",
+    "ciso_empleador",
+    "ciso_cuenta_propia",
+    "ciso_dependientes",
+    "ciso_contratistas_dependientes",
+    "ciso_asalariado_sector_privado",
+    "ciso_asalariado_sector_publico",
+    "ciso_servicio_domestico",
+    "ciso_familiar_no_remunerado",
+
     "grupo_ciuo_alta",
     "grupo_ciuo_media_baja",
     "grupo_ciuo_media",
@@ -191,6 +201,7 @@ def read_frames() -> list[pd.DataFrame]:
         "obe", "id", "ftp", "deseo_trabajar", "habituales", "efectivas", "activ",
         "c10", "c11",
         "r_p_rev4cl_caenes",
+        "ciso1", "ciso2",
 
     ]
 
@@ -213,6 +224,12 @@ def read_frames() -> list[pd.DataFrame]:
         # sexo → Int64
         if df["sexo"].dtype != "Int64":
             df["sexo"] = pd.to_numeric(df["sexo"], errors="coerce").astype("Int64")
+
+        # ciso1/ciso2 (CISO-18) llegan como string-NA en trimestres previos a
+        # AMJ 2026 y numéricas desde entonces → unificar a float (NaN donde no hay)
+        for c in ("ciso1", "ciso2"):
+            if c in df:
+                df[c] = pd.to_numeric(df[c], errors="coerce")
 
         frames.append(df)
     return frames
@@ -250,6 +267,19 @@ def rule_categoria_familiar_personal_no_remunerado(df):    return rule_ocupados(
 def rule_dependientes(df):
     # Ajusta los códigos a tu diccionario. Usar isin es más seguro que between.
     return rule_ocupados(df) & df["categoria_ocupacion"].isin([3, 4, 5, 6])
+
+# CISO-18 (publicada por el INE desde AMJ 2026; NA hacia atrás vía START_DATES).
+# ciso2 no es comparable con categoria_ocupacion (CISE-93): fusiona el servicio
+# doméstico, mueve familiares no remunerados a dependientes y separa contratistas.
+def rule_ciso_independientes(df):  return rule_ocupados(df) & (df["ciso1"] == 1)
+def rule_ciso_dependientes(df):    return rule_ocupados(df) & (df["ciso1"] == 2)
+def rule_ciso_empleador(df):       return rule_ocupados(df) & (df["ciso2"] == 1)
+def rule_ciso_cuenta_propia(df):   return rule_ocupados(df) & (df["ciso2"] == 2)
+def rule_ciso_contratistas_dependientes(df): return rule_ocupados(df) & (df["ciso2"] == 3)
+def rule_ciso_asalariado_sector_privado(df): return rule_ocupados(df) & (df["ciso2"] == 4)
+def rule_ciso_asalariado_sector_publico(df): return rule_ocupados(df) & (df["ciso2"] == 5)
+def rule_ciso_servicio_domestico(df):        return rule_ocupados(df) & (df["ciso2"] == 6)
+def rule_ciso_familiar_no_remunerado(df):    return rule_ocupados(df) & (df["ciso2"] == 7)
 def rule_dependientes_cotizantes(df):
     valid = df["b7a_1"].isin([0, 1])  # ajusta según tu codificación (1=Sí, 0/2=No)
     return rule_dependientes(df) & valid & (df["b7a_1"] == 1)
@@ -523,6 +553,16 @@ RULES: dict[str, callable] = {
     "categoria_serv_domestico_puertas_afuera": rule_categoria_serv_domestico_puertas_afuera,
     "categoria_serv_domestico_puertas_adentro": rule_categoria_serv_domestico_puertas_adentro,
     "categoria_no_corresponde": rule_categoria_no_corresponde,
+
+    "ciso_independientes": rule_ciso_independientes,
+    "ciso_empleador": rule_ciso_empleador,
+    "ciso_cuenta_propia": rule_ciso_cuenta_propia,
+    "ciso_dependientes": rule_ciso_dependientes,
+    "ciso_contratistas_dependientes": rule_ciso_contratistas_dependientes,
+    "ciso_asalariado_sector_privado": rule_ciso_asalariado_sector_privado,
+    "ciso_asalariado_sector_publico": rule_ciso_asalariado_sector_publico,
+    "ciso_servicio_domestico": rule_ciso_servicio_domestico,
+    "ciso_familiar_no_remunerado": rule_ciso_familiar_no_remunerado,
 
     "grupo_ciuo_1": rule_grupo_ciuo_1,
     "grupo_ciuo_2": rule_grupo_ciuo_2,

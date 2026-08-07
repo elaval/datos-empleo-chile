@@ -50,6 +50,17 @@ PUBLIC_COLS = [
     ("categoria_serv_domestico_puertas_adentro",  "Categoría: Servicio doméstico puertas adentro"),
     ("categoria_no_corresponde", "Categoría: No corresponde"),
 
+    # ── CISO-18 (desde AMJ 2026; NO comparable con las categorías CISE-93) ──
+    ("ciso_independientes",             "CISO-18: Independientes"),
+    ("ciso_empleador",                  "CISO-18: Empleador/a"),
+    ("ciso_cuenta_propia",              "CISO-18: Cuenta propia"),
+    ("ciso_dependientes",               "CISO-18: Dependientes"),
+    ("ciso_contratistas_dependientes",  "CISO-18: Contratistas dependientes"),
+    ("ciso_asalariado_sector_privado",  "CISO-18: Asalariado sector privado"),
+    ("ciso_asalariado_sector_publico",  "CISO-18: Asalariado sector público"),
+    ("ciso_servicio_domestico",         "CISO-18: Servicio doméstico"),
+    ("ciso_familiar_no_remunerado",     "CISO-18: Familiar no remunerado"),
+
 
     # ── Grupos CIUO-08 (rótulos INE) ─────────────────────────────────────
     ("grupo_ciuo08_1",   "CIUO08 G1 Directivos y gerentes"),
@@ -1446,6 +1457,17 @@ VARIABLE_META = ORDERED_VARIABLE_META
 
 # Diccionario: variable → fecha de arranque
 START_DATES = {
+    # CISO-18: el INE publica ciso1/ciso2 en las bases trimestrales desde AMJ 2026
+    "ciso_independientes": "2026-05",
+    "ciso_empleador": "2026-05",
+    "ciso_cuenta_propia": "2026-05",
+    "ciso_dependientes": "2026-05",
+    "ciso_contratistas_dependientes": "2026-05",
+    "ciso_asalariado_sector_privado": "2026-05",
+    "ciso_asalariado_sector_publico": "2026-05",
+    "ciso_servicio_domestico": "2026-05",
+    "ciso_familiar_no_remunerado": "2026-05",
+
     "o_formal": "2017-08",
     "o_informal": "2017-08",
     "o_sector_informal": "2017-08",
