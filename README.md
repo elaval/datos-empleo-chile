@@ -22,5 +22,15 @@ python -m scripts.generar_series_mensuales_simplificadas
 python -m scripts.generar_resumenes_locales
 python -m scripts.generar_totales_con_deltas
 
+## Capa de conocimiento (conocimiento/)
+# Capa intermedia entre los datos y los reportes/respuestas, pensada para que agentes
+# (Claude u otros) construyan conocimiento de orden superior sin re-procesar datos crudos.
+# Estratos: contrato (ontologia.md, indicadores.json, metodologia.md) + evidencia/ (regenerable)
+#           + hallazgos/ (curados). Empezar por conocimiento/README.md.
+# Regenerar la evidencia tras cada publicación del INE:
+python -m scripts.generar_conocimiento
+# Validar el pack: coherencia interna + vs microdatos + vs boletines del INE
+# (transcribir las cifras del boletín nuevo en conocimiento/referencia-ine.json)
+python -m scripts.validar_conocimiento
 
 

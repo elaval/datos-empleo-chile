@@ -1,0 +1,265 @@
+{
+  "version": "1.0",
+  "actualizado": "2026-08-05",
+  "nota": "Catálogo de indicadores = CONTRATO del dominio. Define qué significa cada indicador, su unidad, escala y cómo se computa. Es estable: cambia solo si cambia la definición, no en cada release. La evidencia (conocimiento/evidencia/) se computa según estas definiciones. Para provenance, escalas y advertencias, ver conocimiento/metodologia.md.",
+  "identidades": {
+    "fuerza_de_trabajo": "ft = o + do",
+    "poblacion_15_mas": "pet = ft + fuera_de_la_fuerza_de_trabajo",
+    "descomposicion_desocupacion": "delta_ft = delta_o + delta_do (toda variación de la fuerza de trabajo se reparte entre ocupados y desocupados)"
+  },
+  "indicadores": {
+    "pet": {
+      "nombre": "Población en edad de trabajar",
+      "definicion": "Personas de 15 años o más.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "formula_microdatos": "sum(fact_cal) sobre edad>=15",
+      "fuente_nacional": "columna pet de la tabla maestra",
+      "caveats": ["recalibracion-censo-2017"]
+    },
+    "ft": {
+      "nombre": "Fuerza de trabajo",
+      "definicion": "Personas 15+ ocupadas o desocupadas (es decir, activas en el mercado laboral).",
+      "unidad": "personas",
+      "escala": "conteo",
+      "formula_microdatos": "sum(fact_cal) sobre activ in (1,2)",
+      "fuente_nacional": "columna ft de la tabla maestra",
+      "caveats": ["recalibracion-censo-2017"]
+    },
+    "o": {
+      "nombre": "Ocupados",
+      "definicion": "Personas 15+ que trabajaron al menos una hora en la semana de referencia, o estaban temporalmente ausentes de su empleo.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "formula_microdatos": "sum(fact_cal) sobre activ==1",
+      "fuente_nacional": "columna o de la tabla maestra",
+      "caveats": ["recalibracion-censo-2017"]
+    },
+    "do": {
+      "nombre": "Desocupados",
+      "definicion": "Personas 15+ sin empleo que buscaron trabajo y están disponibles para trabajar.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "formula_microdatos": "sum(fact_cal) sobre activ==2",
+      "fuente_nacional": "columna do de la tabla maestra (OJO: 'do' es palabra reservada en SQL, citar como \"do\")",
+      "caveats": ["recalibracion-censo-2017"]
+    },
+    "td": {
+      "nombre": "Tasa de desocupación",
+      "definicion": "Porcentaje de la fuerza de trabajo que está desocupada.",
+      "unidad": "porcentaje",
+      "escala": "0-100",
+      "dominio": [0, 100],
+      "formula": "100 * do / ft",
+      "fuente_nacional": "columna td de la tabla maestra (ya en 0-100)",
+      "interpretacion": "Sube si los desocupados crecen más rápido que la fuerza de trabajo. NO baja necesariamente cuando crece el empleo: depende de si el empleo crece más o menos que la fuerza de trabajo.",
+      "caveats": ["recalibracion-censo-2017", "escala-tabla-dependiente"]
+    },
+    "tp": {
+      "nombre": "Tasa de participación",
+      "definicion": "Porcentaje de la población en edad de trabajar que está en la fuerza de trabajo.",
+      "unidad": "porcentaje",
+      "escala": "0-100",
+      "dominio": [0, 100],
+      "formula": "100 * ft / pet",
+      "fuente_nacional": "columna tp de la tabla maestra",
+      "caveats": ["recalibracion-censo-2017", "escala-tabla-dependiente"]
+    },
+    "to": {
+      "nombre": "Tasa de ocupación",
+      "definicion": "Porcentaje de la población en edad de trabajar que está ocupada.",
+      "unidad": "porcentaje",
+      "escala": "0-100",
+      "dominio": [0, 100],
+      "formula": "100 * o / pet",
+      "fuente_nacional": "columna to de la tabla maestra (OJO: 'to' es palabra reservada en SQL, citar como \"to\")",
+      "caveats": ["recalibracion-censo-2017", "escala-tabla-dependiente"]
+    },
+    "composicion_ocupados": {
+      "nombre": "Composición de ocupados por categoría ocupacional",
+      "definicion": "Reparto de los ocupados según su relación laboral. Suma ≈ ocupados totales.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "categorias": {
+        "empleador": "Ocupado que dirige su empresa y emplea a otros (categoria_ocupacion=1).",
+        "cuenta_propia": "Trabaja solo o con socios, sin empleados (categoria_ocupacion=2). Suele leerse como empleo de menor protección.",
+        "asalariado_sector_privado": "Empleado dependiente del sector privado (categoria_ocupacion=3).",
+        "asalariado_sector_publico": "Empleado dependiente del sector público (categoria_ocupacion=4).",
+        "servicio_domestico": "Personal de servicio doméstico, puertas afuera o adentro (categoria_ocupacion=5,6).",
+        "familiar_no_remunerado": "Trabaja sin pago en un negocio o predio de un familiar (categoria_ocupacion=7)."
+      },
+      "fuente_nacional": "columnas categoria_* de la tabla maestra",
+      "caveats": ["recalibracion-censo-2017"]
+    },
+    "informalidad": {
+      "nombre": "Ocupación formal / informal",
+      "definicion": "Ocupados según formalidad del empleo (definición OIT adoptada por INE desde 2017).",
+      "unidad": "personas",
+      "escala": "conteo",
+      "fuente_nacional": "columnas o_formal, o_informal de la tabla maestra",
+      "caveats": ["recalibracion-censo-2017", "serie-formalidad-desde-2017"]
+    },
+    "subutilizacion": {
+      "nombre": "Indicadores de subutilización laboral (OIT)",
+      "definicion": "Familia de tasas que amplían la desocupación incorporando otras formas de subutilización del trabajo. Cada nivel agrega un grupo distinto de personas.",
+      "unidad": "porcentaje",
+      "escala": "0-100",
+      "dominio": [0, 100],
+      "formulas": {
+        "su1": "100 * (DO + ID) / (FT + ID)",
+        "su2": "100 * (DO + ID + TPI) / (FT + ID)",
+        "su3": "100 * (DO + ID + FTP) / FTA",
+        "su4": "100 * (DO + ID + TPI + FTP) / FTA",
+        "tpl": "100 * (DO + ID + OBE) / (FT + ID)"
+      },
+      "componentes": {
+        "DO": "Desocupados.",
+        "ID": "Iniciadores disponibles: no buscaron empleo porque ya tienen uno que empieza pronto.",
+        "TPI": "Tiempo parcial involuntario: trabajan ≤30 h y quieren trabajar más (subempleo por horas).",
+        "FTP": "Fuerza de trabajo potencial: quieren trabajar pero no buscaron activamente o no estaban disponibles.",
+        "OBE": "Ocupados que buscaron empleo: tienen trabajo pero buscan otro.",
+        "FTA": "Fuerza de trabajo ampliada = FT + ID + FTP."
+      },
+      "relaciones": "SU1 ≤ SU2 ≤ SU4 y SU1 ≤ SU3 ≤ SU4, por construcción. SU1 es algo mayor que la TD porque incorpora a los iniciadores disponibles.",
+      "interpretacion": "Comparar la variación de SU2 con la de la TD indica si el deterioro pasa por desempleo abierto o por subempleo. Si SU2 sube mucho más que la TD, el problema está en las horas, no solo en los puestos.",
+      "fuente_nacional": "columnas su1, su2, su3, su4, tpl (snapshot.json → subutilizacion)",
+      "caveats": ["recalibracion-censo-2017", "su-dependen-de-iniciadores-disponibles"]
+    },
+    "ocupacion_ciuo08": {
+      "nombre": "Ocupados por grupo ocupacional (CIUO-08)",
+      "definicion": "Reparto de los ocupados según el gran grupo de la Clasificación Internacional Uniforme de Ocupaciones, versión 2008. Los grupos suman el total de ocupados.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "grupos": {
+        "g1_directivos_gerentes": "Directivos y gerentes",
+        "g2_profesionales_cientificos": "Profesionales, científicos e intelectuales",
+        "g3_tecnicos_nivel_medio": "Técnicos y profesionales de nivel medio",
+        "g4_apoyo_administrativo": "Personal de apoyo administrativo",
+        "g5_servicios_y_comercio": "Trabajadores de los servicios y comercio",
+        "g6_agropecuarios_pesqueros": "Agricultores y trabajadores agropecuarios y pesqueros",
+        "g7_artesanos_operarios": "Artesanos y operarios de oficios",
+        "g8_operadores_maquinas": "Operadores de máquinas y ensambladores",
+        "g9_ocupaciones_elementales": "Ocupaciones elementales",
+        "g10_no_identificado": "No identificado",
+        "sin_clasificacion": "Sin clasificación / NS-NR"
+      },
+      "agregado_alta_calificacion": "G1 + G2 + G3 = `grupo_ciuo_alta`, el mismo agregado que usa la tasa de desajuste educativo. Verificado: la suma de los tres coincide exactamente con esa columna.",
+      "fuente_nacional": "columnas grupo_ciuo08_1 … grupo_ciuo08_10 y grupo_ciuo08_nsnr (snapshot.json → ocupacion_ciuo08)",
+      "cobertura_temporal": "Desde 2019. La ENE usó CIUO-88 hasta 2018; 2017-2018 traen ambas clasificaciones.",
+      "caveats": ["recalibracion-censo-2017", "quiebre-serie-ciuo-2019"]
+    },
+    "jornada_horas_habituales": {
+      "nombre": "Distribución de la jornada (horas habituales)",
+      "definicion": "Reparto de los ocupados según las horas semanales HABITUALES que declaran trabajar. Los tramos '40 h exactas' y '45 h exactas' son valores puntuales, no rangos.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "tramos": ["h_1_30", "h_31_39", "h_40", "h_41_44", "h_45", "h_46_mas"],
+      "fuente_nacional": "columnas horas_1_30, horas_31_39, horas_40, horas_41_44, horas_45, horas_46_mas (snapshot.json → jornada.tramos)",
+      "contexto_legal": "La Ley 21.561 (2023) reduce la jornada máxima legal de 45 h a 40 h por fases: 44 h desde el 26-abr-2024, 42 h desde el 26-abr-2026 y 40 h desde el 26-abr-2028. 45 h fue la jornada legal máxima entre 2005 y 2024.",
+      "caveats": [
+        "recalibracion-censo-2017",
+        "horas-son-declaradas",
+        "Los tramos suman `o_declaran_horas`, no el total de ocupados: hay quienes no declaran horas (residuo en snapshot.json → jornada._cobertura)."
+      ]
+    },
+    "promedio_horas_habituales": {
+      "nombre": "Promedio de horas habituales",
+      "definicion": "Media de las horas semanales habituales entre los ocupados que las declaran.",
+      "unidad": "horas por semana",
+      "escala": "horas",
+      "fuente_nacional": "columna promedio_horas_habituales (snapshot.json → jornada.promedio_horas_habituales)",
+      "caveats": ["recalibracion-censo-2017", "horas-son-declaradas"]
+    },
+    "jornada_parcial": {
+      "nombre": "Jornada parcial voluntaria e involuntaria",
+      "definicion": "Ocupados que trabajan 30 horas habituales o menos, separados según declaren o no querer trabajar más horas.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "componentes": {
+        "involuntario": "Trabaja ≤30 h y está disponible para trabajar más (TPI). Es el subempleo por horas: entra en el cálculo de SU2 y SU4.",
+        "voluntario": "Trabaja ≤30 h y declara no querer trabajar más (TPV)."
+      },
+      "fuente_nacional": "columnas tpi y tpv (snapshot.json → jornada.parcial)",
+      "caveats": ["recalibracion-censo-2017"]
+    },
+    "educacion_ocupados": {
+      "nombre": "Ocupados por nivel educacional",
+      "definicion": "Reparto de los ocupados según el nivel educacional más alto completado.",
+      "unidad": "personas",
+      "escala": "conteo",
+      "niveles": {
+        "sin_basica_completa": "No completó la educación básica.",
+        "basica_completa": "Completó básica, no media.",
+        "media_completa": "Completó media, no superior.",
+        "superior_completa": "Completó educación superior (CFT, IP o universitaria)."
+      },
+      "desglose_superior": ["cft", "instituto_profesional", "universitaria"],
+      "fuente_nacional": "columnas o_sin_basica_completa, o_ed_basica_completa, o_ed_media_completa, o_ed_sup_completa (y o_ed_sup_cft / _ip / _univ)",
+      "caveats": [
+        "recalibracion-censo-2017",
+        "Los niveles NO suman exactamente el total de ocupados: hay casos sin dato de nivel educacional. El residuo se reporta en snapshot.json → educacion._cobertura.sin_dato_de_nivel."
+      ]
+    },
+    "tasa_desajuste_educativo": {
+      "nombre": "Tasa de desajuste educativo (sobrecalificación)",
+      "definicion": "Porcentaje de los ocupados con educación superior completa que trabaja en un puesto que NO es de alta calificación, según la clasificación de ocupaciones CIUO.",
+      "unidad": "porcentaje",
+      "escala": "0-100",
+      "dominio": [0, 100],
+      "formula": "100 * o_ed_sup_ciuo_no_alta / (o_ed_sup_ciuo_alta + o_ed_sup_ciuo_no_alta)",
+      "fuente_nacional": "columnas o_ed_sup_ciuo_alta y o_ed_sup_ciuo_no_alta (snapshot.json → educacion.tasa_desajuste)",
+      "interpretacion": "Sube cuando los titulados de educación superior crecen más rápido que los puestos que requieren alta calificación. Es una medida de sobrecalificación, no de calidad del trabajador ni del empleo.",
+      "caveats": [
+        "recalibracion-censo-2017",
+        "La correspondencia entre nivel educativo y calificación del puesto es una convención de la clasificación CIUO, no una medición directa de si el empleo 'requiere' o no ese título."
+      ]
+    },
+    "toi": {
+      "nombre": "Tasa de ocupación informal",
+      "definicion": "Porcentaje de los ocupados cuyo empleo es informal (definición OIT).",
+      "unidad": "porcentaje",
+      "escala": "0-100",
+      "dominio": [0, 100],
+      "formula": "100 * o_informal / o",
+      "fuente_nacional": "columna toi de la tabla maestra (en snapshot.json → formalidad.tasa_ocupacion_informal)",
+      "caveats": ["recalibracion-censo-2017", "serie-formalidad-desde-2017"]
+    }
+  },
+  "dimensiones": {
+    "sexo": {
+      "etiqueta": "Sexo",
+      "claves": ["Hombre", "Mujer"],
+      "fuente": "microdatos, variable sexo (1=Hombre, 2=Mujer)",
+      "nota": "La tabla maestra solo trae OCUPADOS por sexo (o_hombres/o_mujeres). Para ft/do/td por sexo se computa de microdatos."
+    },
+    "edad": {
+      "etiqueta": "Grupo de edad",
+      "claves": ["15-24", "25-34", "35-44", "45-54", "55-64", "65 y más"],
+      "fuente": "microdatos, variable continua edad (población 15+)",
+      "nota": "Grupos construidos desde la edad continua, no desde tramo_edad."
+    },
+    "region": {
+      "etiqueta": "Región",
+      "claves": "Las 16 regiones de Chile (código 1-16; 15=Arica y Parinacota, 16=Ñuble)",
+      "fuente": "microdatos, variable region"
+    },
+    "nacionalidad": {
+      "etiqueta": "Nacionalidad",
+      "claves": ["Chileno/a", "Extranjero/a"],
+      "fuente": "microdatos, variable nacionalidad (código de país ISO; 152=Chile, cualquier otro válido=Extranjero/a)",
+      "nota": "Robusto a nivel nacional (extranjeros ~10 % de la fuerza de trabajo). El conteo de ocupados coincide con o_chile/o_extranjero de la tabla maestra."
+    },
+    "categoria_ocupacion": {
+      "etiqueta": "Categoría ocupacional",
+      "claves": ["empleador", "cuenta_propia", "asalariado_sector_privado", "asalariado_sector_publico", "servicio_domestico", "familiar_no_remunerado"],
+      "fuente": "tabla maestra (columnas categoria_*), disponible como serie nacional completa",
+      "nota": "La categoría solo aplica a ocupados; los desocupados no tienen categoría ocupacional."
+    }
+  },
+  "convenciones": {
+    "delta_yoy": "Variación interanual = mismo mes central del año anterior (controla estacionalidad). Para stocks: delta_<x> (absoluto) y delta_rel_<x> (%). Para tasas: delta_pp_<x> (puntos porcentuales).",
+    "mes_central": "El trimestre móvil se identifica por su mes central (ej. mes_central=5 = trimestre abril-mayo-junio, AMJ).",
+    "ponderacion": "Todo agregado de microdatos se pondera SIEMPRE por fact_cal (nunca contar filas).",
+    "comparacion_temporal": "Comparar siempre contra el MISMO mes central de años anteriores; la comparación intertrimestral está contaminada por estacionalidad."
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "release": "2026-05-amj",
+  "nota": "Serie nacional del mes central 5 (AMJ), año contra año.",
+  "mes_central": 5,
+  "indicadores": {
+    "td": {
+      "primero": {
+        "ano": 2010,
+        "valor": 8.66
+      },
+      "ultimo": {
+        "ano": 2026,
+        "valor": 9.44
+      },
+      "hace_1_ano": {
+        "ano": 2025,
+        "valor": 8.89
+      },
+      "hace_5_anos": {
+        "ano": 2021,
+        "valor": 9.5
+      },
+      "maximo": {
+        "ano": 2020,
+        "valor": 12.22
+      },
+      "minimo": {
+        "ano": 2013,
+        "valor": 6.26
+      },
+      "direccion_1_ano": "sube",
+      "cambio_largo_plazo": {
+        "desde": 2010,
+        "hasta": 2026,
+        "delta_pp": 0.78
+      }
+    },
+    "tp": {
+      "primero": {
+        "ano": 2010,
+        "valor": 59.58
+      },
+      "ultimo": {
+        "ano": 2026,
+        "valor": 62.31
+      },
+      "hace_1_ano": {
+        "ano": 2025,
+        "valor": 61.94
+      },
+      "hace_5_anos": {
+        "ano": 2021,
+        "valor": 55.86
+      },
+      "maximo": {
+        "ano": 2018,
+        "valor": 63.05
+      },
+      "minimo": {
+        "ano": 2020,
+        "valor": 51.89
+      },
+      "direccion_1_ano": "sube",
+      "cambio_largo_plazo": {
+        "desde": 2010,
+        "hasta": 2026,
+        "delta_pp": 2.73
+      }
+    },
+    "to": {
+      "primero": {
+        "ano": 2010,
+        "valor": 54.42
+      },
+      "ultimo": {
+        "ano": 2026,
+        "valor": 56.43
+      },
+      "hace_1_ano": {
+        "ano": 2025,
+        "valor": 56.43
+      },
+      "hace_5_anos": {
+        "ano": 2021,
+        "valor": 50.55
+      },
+      "maximo": {
+        "ano": 2018,
+        "valor": 58.31
+      },
+      "minimo": {
+        "ano": 2020,
+        "valor": 45.55
+      },
+      "direccion_1_ano": "estable",
+      "cambio_largo_plazo": {
+        "desde": 2010,
+        "hasta": 2026,
+        "delta_pp": 2.01
+      }
+    },
+    "o": {
+      "primero": {
+        "ano": 2010,
+        "valor": 7221575.0
+      },
+      "ultimo": {
+        "ano": 2026,
+        "valor": 9403299.0
+      },
+      "hace_1_ano": {
+        "ano": 2025,
+        "valor": 9321521.0
+      },
+      "hace_5_anos": {
+        "ano": 2021,
+        "valor": 8041191.0
+      },
+      "maximo": {
+        "ano": 2026,
+        "valor": 9403299.0
+      },
+      "minimo": {
+        "ano": 2020,
+        "valor": 7142568.0
+      },
+      "direccion_1_ano": "sube",
+      "cambio_largo_plazo": {
+        "desde": 2010,
+        "hasta": 2026,
+        "delta": 2181724.0,
+        "delta_rel": 30.21
+      }
+    },
+    "ft": {
+      "primero": {
+        "ano": 2010,
+        "valor": 7905917.0
+      },
+      "ultimo": {
+        "ano": 2026,
+        "valor": 10383568.0
+      },
+      "hace_1_ano": {
+        "ano": 2025,
+        "valor": 10231361.0
+      },
+      "hace_5_anos": {
+        "ano": 2021,
+        "valor": 8884950.0
+      },
+      "maximo": {
+        "ano": 2026,
+        "valor": 10383568.0
+      },
+      "minimo": {
+        "ano": 2010,
+        "valor": 7905917.0
+      },
+      "direccion_1_ano": "sube",
+      "cambio_largo_plazo": {
+        "desde": 2010,
+        "hasta": 2026,
+        "delta": 2477651.0,
+        "delta_rel": 31.34
+      }
+    },
+    "do": {
+      "primero": {
+        "ano": 2010,
+        "valor": 684341.0
+      },
+      "ultimo": {
+        "ano": 2026,
+        "valor": 980270.0
+      },
+      "hace_1_ano": {
+        "ano": 2025,
+        "valor": 909840.0
+      },
+      "hace_5_anos": {
+        "ano": 2021,
+        "valor": 843758.0
+      },
+      "maximo": {
+        "ano": 2020,
+        "valor": 994130.0
+      },
+      "minimo": {
+        "ano": 2013,
+        "valor": 534576.0
+      },
+      "direccion_1_ano": "sube",
+      "cambio_largo_plazo": {
+        "desde": 2010,
+        "hasta": 2026,
+        "delta": 295929.0,
+        "delta_rel": 43.24
+      }
+    }
+  }
+}

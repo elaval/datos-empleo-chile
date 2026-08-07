@@ -1,0 +1,61 @@
+{
+  "nota": "Cifras PUBLICADAS por el INE en sus boletines oficiales, transcritas a mano desde el PDF. Sirven como referencia externa e independiente para validar el pack (scripts/validar_conocimiento.py). No se generan por script: se copian del boletín al incorporar cada nuevo release.",
+  "fuente": "Boletín Estadístico: Empleo Trimestral, INE. https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion",
+  "advertencia": "Solo son comparables directamente los releases recientes. Los boletines antiguos (previos a la recalibración con proyecciones post-Censo 2017) NO coinciden con esta base: ver el caveat 'recalibracion-censo-2017' en metodologia.md.",
+  "releases": {
+    "2026-05-amj": {
+      "boletin": "333",
+      "publicado": "2026-07-31",
+      "trimestre": "abril-junio 2026",
+      "niveles": {
+        "ft": 10383568,
+        "o": 9403299,
+        "do": 980270,
+        "o_informal": 2537804,
+        "fft": 6280249
+      },
+      "tasas": {
+        "td": 9.4,
+        "tp": 62.3,
+        "to": 56.4,
+        "toi": 27.0,
+        "tosi": 15.6,
+        "td_mujeres": 10.4,
+        "td_hombres": 8.7
+      },
+      "variaciones_12m_pct": {
+        "ft": 1.5,
+        "o": 0.9,
+        "do": 7.7,
+        "o_informal": 4.7,
+        "o_mujeres": 1.7,
+        "o_hombres": 0.3,
+        "cuenta_propia": 8.6,
+        "empleador": 9.4
+      }
+    },
+    "2025-05-amj": {
+      "boletin": "321",
+      "publicado": "2025-07-30",
+      "trimestre": "abril-junio 2025",
+      "niveles": {
+        "ft": 10231361,
+        "o": 9321521,
+        "do": 909840,
+        "o_informal": 2423198,
+        "fft": 6287192
+      },
+      "tasas": {
+        "td": 8.9,
+        "tp": 61.9,
+        "to": 56.4
+      },
+      "variaciones_12m_pct": {
+        "ft": 0.6,
+        "o": 0.0,
+        "do": 7.2,
+        "o_informal": -3.8
+      }
+    }
+  }
+}
