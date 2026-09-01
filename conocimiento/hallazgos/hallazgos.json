@@ -345,7 +345,7 @@
     },
     {
       "id": "h-2026-05-empleo-por-educacion",
-      "enunciado": "Todo el crecimiento del empleo se concentra en educación superior (+96.507, +2,5 %), más que el alza nacional neta (+81.778): los demás niveles restan en conjunto ~18.500, con caídas en quienes no completaron básica (-23.460, -5,1 %) y en media completa (-8.209). Dentro de la educación superior el alza es técnica, no universitaria: CFT +15,8 %, IP +4,7 %, universitaria apenas +0,6 %.",
+      "enunciado": "El crecimiento del empleo se concentra en educación superior: +96.507 (+2,5 %), más que el alza nacional neta (+81.778). Básica completa también sube (+13.153), pero media completa (-8.209) y sin básica completa (-23.460) caen, de modo que los otros tres niveles restan unas 18.500 personas en conjunto. Dentro de la educación superior el alza es técnica, no universitaria: CFT +15,8 %, IP +4,7 %, universitaria apenas +0,6 %.",
       "tipo": "composicion",
       "release": "2026-05-amj",
       "vigencia": "vigente",
@@ -375,7 +375,7 @@
     },
     {
       "id": "h-tend-desajuste-educativo",
-      "enunciado": "La sobrecalificación aumenta de forma sostenida: la proporción de ocupados con educación superior que trabaja en puestos que no son de alta calificación pasó de 27,2 % (2010) a 31,3 % (2026), con +0,85 pp solo en el último año. El mecanismo es visible: los puestos de alta calificación quedaron planos (-0,04 % interanual) mientras el empleo con educación superior creció 2,5 %.",
+      "enunciado": "La sobrecalificación aumenta de forma sostenida: la proporción de ocupados con educación superior que trabaja en ocupaciones fuera de los grandes grupos 1 a 3 de la CIUO —directivos, profesionales y técnicos de nivel medio— pasó de 27,2 % (2010) a 31,3 % (2026), con +0,85 pp solo en el último año. El mecanismo es visible: esos puestos de alta calificación quedaron planos (-0,04 % interanual) mientras el empleo con educación superior creció 2,5 %.",
       "tipo": "tendencia",
       "release": "2026-05-amj",
       "vigencia": "vigente",

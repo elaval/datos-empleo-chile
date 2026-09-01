@@ -3,6 +3,56 @@
   "fuente": "Boletín Estadístico: Empleo Trimestral, INE. https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion",
   "advertencia": "Solo son comparables directamente los releases recientes. Los boletines antiguos (previos a la recalibración con proyecciones post-Censo 2017) NO coinciden con esta base: ver el caveat 'recalibracion-censo-2017' en metodologia.md.",
   "releases": {
+    "2026-06-mjj": {
+      "boletin": "334",
+      "publicado": "2026-08-28",
+      "trimestre": "mayo-julio 2026",
+      "niveles": {
+        "ft": 10295061,
+        "o": 9314017,
+        "do": 981044,
+        "o_informal": 2467172,
+        "fft": 6380845
+      },
+      "tasas": {
+        "td": 9.5,
+        "tp": 61.7,
+        "to": 55.9,
+        "toi": 26.5,
+        "tosi": 15.1,
+        "su1": 9.8,
+        "su2": 16.0,
+        "su3": 17.4,
+        "td_mujeres": 10.3,
+        "td_hombres": 8.9
+      },
+      "variaciones_12m_pct": {
+        "ft": 0.7,
+        "o": -0.2,
+        "do": 10.4,
+        "o_informal": 1.6,
+        "o_mujeres": 1.0,
+        "o_hombres": -1.1,
+        "cuenta_propia": 5.5,
+        "empleador": 8.9
+      },
+      "ciso18_niveles": {
+        "_nota": "Anexo 2 del boletín (nueva dimensión CISO-18); comparable con las columnas ciso_* de la tabla integrada desde AMJ 2026",
+        "asalariados_privados": 5287184,
+        "cuenta_propia": 1677235,
+        "asalariados_publicos": 1074711,
+        "contratistas_dependientes": 729366,
+        "empleadores": 301627
+      },
+      "ciso18_variaciones_12m_pct": {
+        "empleadores": 8.9,
+        "contratistas_dependientes": 6.7,
+        "cuenta_propia": 3.7,
+        "asalariados_privados": -2.7,
+        "servicio_domestico": -0.2,
+        "familiares_no_remunerados": -6.7
+      }
+    },
     "2026-05-amj": {
       "boletin": "333",
       "publicado": "2026-07-31",

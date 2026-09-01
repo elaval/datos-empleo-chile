@@ -1,201 +1,201 @@
 {
-  "release": "2026-05-amj",
-  "nota": "Serie nacional del mes central 5 (AMJ), año contra año.",
-  "mes_central": 5,
+  "release": "2026-06-mjj",
+  "nota": "Serie nacional del mes central 6 (MJJ), año contra año.",
+  "mes_central": 6,
   "indicadores": {
     "td": {
       "primero": {
         "ano": 2010,
-        "valor": 8.66
+        "valor": 8.51
       },
       "ultimo": {
         "ano": 2026,
-        "valor": 9.44
+        "valor": 9.53
       },
       "hace_1_ano": {
         "ano": 2025,
-        "valor": 8.89
+        "valor": 8.7
       },
       "hace_5_anos": {
         "ano": 2021,
-        "valor": 9.5
+        "valor": 8.93
       },
       "maximo": {
         "ano": 2020,
-        "valor": 12.22
+        "valor": 13.09
       },
       "minimo": {
         "ano": 2013,
-        "valor": 6.26
+        "valor": 5.88
       },
       "direccion_1_ano": "sube",
       "cambio_largo_plazo": {
         "desde": 2010,
         "hasta": 2026,
-        "delta_pp": 0.78
+        "delta_pp": 1.02
       }
     },
     "tp": {
       "primero": {
         "ano": 2010,
-        "valor": 59.58
+        "valor": 59.69
       },
       "ultimo": {
         "ano": 2026,
-        "valor": 62.31
+        "valor": 61.74
       },
       "hace_1_ano": {
         "ano": 2025,
-        "valor": 61.94
+        "valor": 61.82
       },
       "hace_5_anos": {
         "ano": 2021,
-        "valor": 55.86
+        "valor": 56.2
       },
       "maximo": {
         "ano": 2018,
-        "valor": 63.05
+        "valor": 62.83
       },
       "minimo": {
         "ano": 2020,
-        "valor": 51.89
+        "valor": 51.82
       },
-      "direccion_1_ano": "sube",
+      "direccion_1_ano": "baja",
       "cambio_largo_plazo": {
         "desde": 2010,
         "hasta": 2026,
-        "delta_pp": 2.73
+        "delta_pp": 2.05
       }
     },
     "to": {
       "primero": {
         "ano": 2010,
-        "valor": 54.42
+        "valor": 54.61
       },
       "ultimo": {
         "ano": 2026,
-        "valor": 56.43
+        "valor": 55.85
       },
       "hace_1_ano": {
         "ano": 2025,
-        "valor": 56.43
+        "valor": 56.44
       },
       "hace_5_anos": {
         "ano": 2021,
-        "valor": 50.55
+        "valor": 51.17
       },
       "maximo": {
-        "ano": 2018,
-        "valor": 58.31
+        "ano": 2017,
+        "valor": 58.0
       },
       "minimo": {
         "ano": 2020,
-        "valor": 45.55
+        "valor": 45.03
       },
-      "direccion_1_ano": "estable",
+      "direccion_1_ano": "baja",
       "cambio_largo_plazo": {
         "desde": 2010,
         "hasta": 2026,
-        "delta_pp": 2.01
+        "delta_pp": 1.24
       }
     },
     "o": {
       "primero": {
         "ano": 2010,
-        "valor": 7221575.0
+        "valor": 7256516.0
       },
       "ultimo": {
         "ano": 2026,
-        "valor": 9403299.0
+        "valor": 9314017.0
       },
       "hace_1_ano": {
         "ano": 2025,
-        "valor": 9321521.0
+        "valor": 9330309.0
       },
       "hace_5_anos": {
         "ano": 2021,
-        "valor": 8041191.0
+        "valor": 8148948.0
       },
       "maximo": {
-        "ano": 2026,
-        "valor": 9403299.0
+        "ano": 2025,
+        "valor": 9330309.0
       },
       "minimo": {
         "ano": 2020,
-        "valor": 7142568.0
+        "valor": 7073193.0
       },
-      "direccion_1_ano": "sube",
+      "direccion_1_ano": "baja",
       "cambio_largo_plazo": {
         "desde": 2010,
         "hasta": 2026,
-        "delta": 2181724.0,
-        "delta_rel": 30.21
+        "delta": 2057501.0,
+        "delta_rel": 28.35
       }
     },
     "ft": {
       "primero": {
         "ano": 2010,
-        "valor": 7905917.0
+        "valor": 7931587.0
       },
       "ultimo": {
         "ano": 2026,
-        "valor": 10383568.0
+        "valor": 10295061.0
       },
       "hace_1_ano": {
         "ano": 2025,
-        "valor": 10231361.0
+        "valor": 10219282.0
       },
       "hace_5_anos": {
         "ano": 2021,
-        "valor": 8884950.0
+        "valor": 8948328.0
       },
       "maximo": {
         "ano": 2026,
-        "valor": 10383568.0
+        "valor": 10295061.0
       },
       "minimo": {
         "ano": 2010,
-        "valor": 7905917.0
+        "valor": 7931587.0
       },
       "direccion_1_ano": "sube",
       "cambio_largo_plazo": {
         "desde": 2010,
         "hasta": 2026,
-        "delta": 2477651.0,
-        "delta_rel": 31.34
+        "delta": 2363474.0,
+        "delta_rel": 29.8
       }
     },
     "do": {
       "primero": {
         "ano": 2010,
-        "valor": 684341.0
+        "valor": 675072.0
       },
       "ultimo": {
         "ano": 2026,
-        "valor": 980270.0
+        "valor": 981044.0
       },
       "hace_1_ano": {
         "ano": 2025,
-        "valor": 909840.0
+        "valor": 888973.0
       },
       "hace_5_anos": {
         "ano": 2021,
-        "valor": 843758.0
+        "valor": 799380.0
       },
       "maximo": {
         "ano": 2020,
-        "valor": 994130.0
+        "valor": 1065447.0
       },
       "minimo": {
         "ano": 2013,
-        "valor": 534576.0
+        "valor": 499248.0
       },
       "direccion_1_ano": "sube",
       "cambio_largo_plazo": {
         "desde": 2010,
         "hasta": 2026,
-        "delta": 295929.0,
-        "delta_rel": 43.24
+        "delta": 305972.0,
+        "delta_rel": 45.32
       }
     }
   }

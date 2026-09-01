@@ -1,5 +1,5 @@
 {
-  "release": "2026-05-amj",
+  "release": "2026-06-mjj",
   "serie": [
     {
       "ano": 2010,
@@ -19,6 +19,15 @@
         "asalariado_sector_publico": 779409.0,
         "servicio_domestico": 325382.0,
         "familiar_no_remunerado": 81077.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -98,6 +107,15 @@
         "servicio_domestico": 331308.0,
         "familiar_no_remunerado": 95393.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -175,6 +193,15 @@
         "asalariado_sector_publico": 797813.0,
         "servicio_domestico": 328560.0,
         "familiar_no_remunerado": 99210.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -254,6 +281,15 @@
         "servicio_domestico": 327597.0,
         "familiar_no_remunerado": 107676.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -331,6 +367,15 @@
         "asalariado_sector_publico": 818115.0,
         "servicio_domestico": 339439.0,
         "familiar_no_remunerado": 111288.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -410,6 +455,15 @@
         "servicio_domestico": 339492.0,
         "familiar_no_remunerado": 104788.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -487,6 +541,15 @@
         "asalariado_sector_publico": 810370.0,
         "servicio_domestico": 338017.0,
         "familiar_no_remunerado": 104629.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -566,6 +629,15 @@
         "servicio_domestico": 331047.0,
         "familiar_no_remunerado": 103292.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -643,6 +715,15 @@
         "asalariado_sector_publico": 788084.0,
         "servicio_domestico": 341959.0,
         "familiar_no_remunerado": 111080.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -722,6 +803,15 @@
         "servicio_domestico": 342196.0,
         "familiar_no_remunerado": 108819.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -799,6 +889,15 @@
         "asalariado_sector_publico": 762501.0,
         "servicio_domestico": 341358.0,
         "familiar_no_remunerado": 99230.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -878,6 +977,15 @@
         "servicio_domestico": 342579.0,
         "familiar_no_remunerado": 91128.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -955,6 +1063,15 @@
         "asalariado_sector_publico": 754821.0,
         "servicio_domestico": 356537.0,
         "familiar_no_remunerado": 93221.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1034,6 +1151,15 @@
         "servicio_domestico": 355505.0,
         "familiar_no_remunerado": 100144.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -1111,6 +1237,15 @@
         "asalariado_sector_publico": 769833.0,
         "servicio_domestico": 359630.0,
         "familiar_no_remunerado": 96808.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1190,6 +1325,15 @@
         "servicio_domestico": 363748.0,
         "familiar_no_remunerado": 95109.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -1267,6 +1411,15 @@
         "asalariado_sector_publico": 779076.0,
         "servicio_domestico": 358048.0,
         "familiar_no_remunerado": 85802.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1346,6 +1499,15 @@
         "servicio_domestico": 360260.0,
         "familiar_no_remunerado": 91563.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -1423,6 +1585,15 @@
         "asalariado_sector_publico": 800834.0,
         "servicio_domestico": 359348.0,
         "familiar_no_remunerado": 97246.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1502,6 +1673,15 @@
         "servicio_domestico": 369070.0,
         "familiar_no_remunerado": 100754.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -1579,6 +1759,15 @@
         "asalariado_sector_publico": 824489.0,
         "servicio_domestico": 366868.0,
         "familiar_no_remunerado": 107448.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1658,6 +1847,15 @@
         "servicio_domestico": 376213.0,
         "familiar_no_remunerado": 105754.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -1735,6 +1933,15 @@
         "asalariado_sector_publico": 845631.0,
         "servicio_domestico": 366769.0,
         "familiar_no_remunerado": 102294.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1814,6 +2021,15 @@
         "servicio_domestico": 357029.0,
         "familiar_no_remunerado": 100482.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -1891,6 +2107,15 @@
         "asalariado_sector_publico": 837449.0,
         "servicio_domestico": 346299.0,
         "familiar_no_remunerado": 98699.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -1970,6 +2195,15 @@
         "servicio_domestico": 345135.0,
         "familiar_no_remunerado": 93004.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2047,6 +2281,15 @@
         "asalariado_sector_publico": 856677.0,
         "servicio_domestico": 353521.0,
         "familiar_no_remunerado": 88997.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -2126,6 +2369,15 @@
         "servicio_domestico": 359016.0,
         "familiar_no_remunerado": 86525.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2203,6 +2455,15 @@
         "asalariado_sector_publico": 862451.0,
         "servicio_domestico": 364628.0,
         "familiar_no_remunerado": 87666.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -2282,6 +2543,15 @@
         "servicio_domestico": 363078.0,
         "familiar_no_remunerado": 88095.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2359,6 +2629,15 @@
         "asalariado_sector_publico": 856012.0,
         "servicio_domestico": 357851.0,
         "familiar_no_remunerado": 88255.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -2438,6 +2717,15 @@
         "servicio_domestico": 344241.0,
         "familiar_no_remunerado": 96444.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2515,6 +2803,15 @@
         "asalariado_sector_publico": 852568.0,
         "servicio_domestico": 343106.0,
         "familiar_no_remunerado": 102524.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -2594,6 +2891,15 @@
         "servicio_domestico": 342218.0,
         "familiar_no_remunerado": 106466.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2671,6 +2977,15 @@
         "asalariado_sector_publico": 846153.0,
         "servicio_domestico": 342530.0,
         "familiar_no_remunerado": 103687.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -2750,6 +3065,15 @@
         "servicio_domestico": 336592.0,
         "familiar_no_remunerado": 98579.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2827,6 +3151,15 @@
         "asalariado_sector_publico": 829686.0,
         "servicio_domestico": 328969.0,
         "familiar_no_remunerado": 97264.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -2906,6 +3239,15 @@
         "servicio_domestico": 340715.0,
         "familiar_no_remunerado": 103820.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -2983,6 +3325,15 @@
         "asalariado_sector_publico": 824838.0,
         "servicio_domestico": 342810.0,
         "familiar_no_remunerado": 101189.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3062,6 +3413,15 @@
         "servicio_domestico": 351453.0,
         "familiar_no_remunerado": 96381.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -3139,6 +3499,15 @@
         "asalariado_sector_publico": 839891.0,
         "servicio_domestico": 344619.0,
         "familiar_no_remunerado": 96799.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3218,6 +3587,15 @@
         "servicio_domestico": 336413.0,
         "familiar_no_remunerado": 100075.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -3295,6 +3673,15 @@
         "asalariado_sector_publico": 861367.0,
         "servicio_domestico": 333831.0,
         "familiar_no_remunerado": 108236.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3374,6 +3761,15 @@
         "servicio_domestico": 328166.0,
         "familiar_no_remunerado": 105515.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -3451,6 +3847,15 @@
         "asalariado_sector_publico": 889765.0,
         "servicio_domestico": 327046.0,
         "familiar_no_remunerado": 105599.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3530,6 +3935,15 @@
         "servicio_domestico": 325599.0,
         "familiar_no_remunerado": 106339.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -3607,6 +4021,15 @@
         "asalariado_sector_publico": 870781.0,
         "servicio_domestico": 323460.0,
         "familiar_no_remunerado": 112529.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3686,6 +4109,15 @@
         "servicio_domestico": 324298.0,
         "familiar_no_remunerado": 111717.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -3763,6 +4195,15 @@
         "asalariado_sector_publico": 866428.0,
         "servicio_domestico": 325917.0,
         "familiar_no_remunerado": 112701.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3842,6 +4283,15 @@
         "servicio_domestico": 324802.0,
         "familiar_no_remunerado": 104625.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -3919,6 +4369,15 @@
         "asalariado_sector_publico": 895201.0,
         "servicio_domestico": 336437.0,
         "familiar_no_remunerado": 106415.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -3998,6 +4457,15 @@
         "servicio_domestico": 339115.0,
         "familiar_no_remunerado": 103980.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -4075,6 +4543,15 @@
         "asalariado_sector_publico": 916304.0,
         "servicio_domestico": 352764.0,
         "familiar_no_remunerado": 102440.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -4154,6 +4631,15 @@
         "servicio_domestico": 351252.0,
         "familiar_no_remunerado": 92273.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -4231,6 +4717,15 @@
         "asalariado_sector_publico": 927908.0,
         "servicio_domestico": 355159.0,
         "familiar_no_remunerado": 98076.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -4310,6 +4805,15 @@
         "servicio_domestico": 351583.0,
         "familiar_no_remunerado": 98124.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -4387,6 +4891,15 @@
         "asalariado_sector_publico": 922778.0,
         "servicio_domestico": 334096.0,
         "familiar_no_remunerado": 106409.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -4466,6 +4979,15 @@
         "servicio_domestico": 321331.0,
         "familiar_no_remunerado": 100932.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -4543,6 +5065,15 @@
         "asalariado_sector_publico": 943636.0,
         "servicio_domestico": 296812.0,
         "familiar_no_remunerado": 105870.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -4622,6 +5153,15 @@
         "servicio_domestico": 298421.0,
         "familiar_no_remunerado": 102441.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -4699,6 +5239,15 @@
         "asalariado_sector_publico": 953859.0,
         "servicio_domestico": 292398.0,
         "familiar_no_remunerado": 100485.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -4778,6 +5327,15 @@
         "servicio_domestico": 310304.0,
         "familiar_no_remunerado": 93552.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -4855,6 +5413,15 @@
         "asalariado_sector_publico": 925913.0,
         "servicio_domestico": 315408.0,
         "familiar_no_remunerado": 93723.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -4934,6 +5501,15 @@
         "servicio_domestico": 324583.0,
         "familiar_no_remunerado": 91024.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5011,6 +5587,15 @@
         "asalariado_sector_publico": 934786.0,
         "servicio_domestico": 336846.0,
         "familiar_no_remunerado": 93963.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -5090,6 +5675,15 @@
         "servicio_domestico": 337718.0,
         "familiar_no_remunerado": 96766.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5167,6 +5761,15 @@
         "asalariado_sector_publico": 949935.0,
         "servicio_domestico": 330724.0,
         "familiar_no_remunerado": 94480.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -5246,6 +5849,15 @@
         "servicio_domestico": 337056.0,
         "familiar_no_remunerado": 95385.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5323,6 +5935,15 @@
         "asalariado_sector_publico": 946622.0,
         "servicio_domestico": 322622.0,
         "familiar_no_remunerado": 97041.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -5402,6 +6023,15 @@
         "servicio_domestico": 329561.0,
         "familiar_no_remunerado": 98955.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5479,6 +6109,15 @@
         "asalariado_sector_publico": 915581.0,
         "servicio_domestico": 325881.0,
         "familiar_no_remunerado": 94840.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -5558,6 +6197,15 @@
         "servicio_domestico": 327603.0,
         "familiar_no_remunerado": 90593.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5635,6 +6283,15 @@
         "asalariado_sector_publico": 891847.0,
         "servicio_domestico": 318725.0,
         "familiar_no_remunerado": 99738.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -5714,6 +6371,15 @@
         "servicio_domestico": 329362.0,
         "familiar_no_remunerado": 100373.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5791,6 +6457,15 @@
         "asalariado_sector_publico": 912699.0,
         "servicio_domestico": 333317.0,
         "familiar_no_remunerado": 99013.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -5870,6 +6545,15 @@
         "servicio_domestico": 338755.0,
         "familiar_no_remunerado": 89798.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -5947,6 +6631,15 @@
         "asalariado_sector_publico": 926690.0,
         "servicio_domestico": 333096.0,
         "familiar_no_remunerado": 87258.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6026,6 +6719,15 @@
         "servicio_domestico": 328752.0,
         "familiar_no_remunerado": 88516.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -6103,6 +6805,15 @@
         "asalariado_sector_publico": 923608.0,
         "servicio_domestico": 325849.0,
         "familiar_no_remunerado": 90818.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6182,6 +6893,15 @@
         "servicio_domestico": 328603.0,
         "familiar_no_remunerado": 92588.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -6259,6 +6979,15 @@
         "asalariado_sector_publico": 934249.0,
         "servicio_domestico": 332030.0,
         "familiar_no_remunerado": 105251.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6338,6 +7067,15 @@
         "servicio_domestico": 341064.0,
         "familiar_no_remunerado": 110325.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -6415,6 +7153,15 @@
         "asalariado_sector_publico": 890864.0,
         "servicio_domestico": 334063.0,
         "familiar_no_remunerado": 117617.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6494,6 +7241,15 @@
         "servicio_domestico": 326030.0,
         "familiar_no_remunerado": 106264.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -6571,6 +7327,15 @@
         "asalariado_sector_publico": 902598.0,
         "servicio_domestico": 314392.0,
         "familiar_no_remunerado": 101361.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6650,6 +7415,15 @@
         "servicio_domestico": 301192.0,
         "familiar_no_remunerado": 89595.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -6727,6 +7501,15 @@
         "asalariado_sector_publico": 963406.0,
         "servicio_domestico": 302356.0,
         "familiar_no_remunerado": 87859.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6806,6 +7589,15 @@
         "servicio_domestico": 309057.0,
         "familiar_no_remunerado": 90322.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -6883,6 +7675,15 @@
         "asalariado_sector_publico": 982132.0,
         "servicio_domestico": 322139.0,
         "familiar_no_remunerado": 90279.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": null,
@@ -6962,6 +7763,15 @@
         "servicio_domestico": 333150.0,
         "familiar_no_remunerado": 88804.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": null,
         "o_informal": null,
@@ -7039,6 +7849,15 @@
         "asalariado_sector_publico": 990330.0,
         "servicio_domestico": 339584.0,
         "familiar_no_remunerado": 83055.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6155307.0,
@@ -7118,6 +7937,15 @@
         "servicio_domestico": 332772.0,
         "familiar_no_remunerado": 85173.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6125851.0,
         "o_informal": 2496852.0,
@@ -7195,6 +8023,15 @@
         "asalariado_sector_publico": 1008464.0,
         "servicio_domestico": 336989.0,
         "familiar_no_remunerado": 93572.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6144476.0,
@@ -7274,6 +8111,15 @@
         "servicio_domestico": 329740.0,
         "familiar_no_remunerado": 98622.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6171223.0,
         "o_informal": 2597444.0,
@@ -7351,6 +8197,15 @@
         "asalariado_sector_publico": 1023831.0,
         "servicio_domestico": 347524.0,
         "familiar_no_remunerado": 122998.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6236821.0,
@@ -7430,6 +8285,15 @@
         "servicio_domestico": 333867.0,
         "familiar_no_remunerado": 121811.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6249509.0,
         "o_informal": 2537571.0,
@@ -7507,6 +8371,15 @@
         "asalariado_sector_publico": 1000787.0,
         "servicio_domestico": 334839.0,
         "familiar_no_remunerado": 121067.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6251707.0,
@@ -7586,6 +8459,15 @@
         "servicio_domestico": 321271.0,
         "familiar_no_remunerado": 99947.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6282374.0,
         "o_informal": 2498710.0,
@@ -7663,6 +8545,15 @@
         "asalariado_sector_publico": 1027679.0,
         "servicio_domestico": 321635.0,
         "familiar_no_remunerado": 95290.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6288590.0,
@@ -7742,6 +8633,15 @@
         "servicio_domestico": 317843.0,
         "familiar_no_remunerado": 91845.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6301187.0,
         "o_informal": 2454362.0,
@@ -7819,6 +8719,15 @@
         "asalariado_sector_publico": 1059445.0,
         "servicio_domestico": 318637.0,
         "familiar_no_remunerado": 86264.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6288211.0,
@@ -7898,6 +8807,15 @@
         "servicio_domestico": 323359.0,
         "familiar_no_remunerado": 81386.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6296606.0,
         "o_informal": 2410589.0,
@@ -7975,6 +8893,15 @@
         "asalariado_sector_publico": 1048517.0,
         "servicio_domestico": 311712.0,
         "familiar_no_remunerado": 81222.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6295183.0,
@@ -8054,6 +8981,15 @@
         "servicio_domestico": 310928.0,
         "familiar_no_remunerado": 90360.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6268567.0,
         "o_informal": 2505269.0,
@@ -8131,6 +9067,15 @@
         "asalariado_sector_publico": 1045717.0,
         "servicio_domestico": 315351.0,
         "familiar_no_remunerado": 107376.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6243837.0,
@@ -8210,6 +9155,15 @@
         "servicio_domestico": 321347.0,
         "familiar_no_remunerado": 109417.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6320470.0,
         "o_informal": 2593779.0,
@@ -8288,6 +9242,15 @@
         "servicio_domestico": 319732.0,
         "familiar_no_remunerado": 103551.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6374750.0,
         "o_informal": 2553201.0,
@@ -8365,6 +9328,15 @@
         "asalariado_sector_publico": 1041237.0,
         "servicio_domestico": 318335.0,
         "familiar_no_remunerado": 93035.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6422255.0,
@@ -8456,6 +9428,15 @@
         "servicio_domestico": 309872.0,
         "familiar_no_remunerado": 87083.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6400127.0,
         "o_informal": 2478983.0,
@@ -8545,6 +9526,15 @@
         "asalariado_sector_publico": 1061518.0,
         "servicio_domestico": 306285.0,
         "familiar_no_remunerado": 90885.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6418023.0,
@@ -8636,6 +9626,15 @@
         "servicio_domestico": 323287.0,
         "familiar_no_remunerado": 97633.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6425164.0,
         "o_informal": 2500111.0,
@@ -8725,6 +9724,15 @@
         "asalariado_sector_publico": 1101357.0,
         "servicio_domestico": 326666.0,
         "familiar_no_remunerado": 100036.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6412001.0,
@@ -8816,6 +9824,15 @@
         "servicio_domestico": 310787.0,
         "familiar_no_remunerado": 95033.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6405836.0,
         "o_informal": 2504722.0,
@@ -8905,6 +9922,15 @@
         "asalariado_sector_publico": 1150135.0,
         "servicio_domestico": 315178.0,
         "familiar_no_remunerado": 86297.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6408224.0,
@@ -8996,6 +10022,15 @@
         "servicio_domestico": 336988.0,
         "familiar_no_remunerado": 83183.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6470637.0,
         "o_informal": 2529454.0,
@@ -9085,6 +10120,15 @@
         "asalariado_sector_publico": 1106090.0,
         "servicio_domestico": 333788.0,
         "familiar_no_remunerado": 75318.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6425274.0,
@@ -9176,6 +10220,15 @@
         "servicio_domestico": 319811.0,
         "familiar_no_remunerado": 74856.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6414344.0,
         "o_informal": 2631019.0,
@@ -9265,6 +10318,15 @@
         "asalariado_sector_publico": 1116649.0,
         "servicio_domestico": 310938.0,
         "familiar_no_remunerado": 79454.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6423812.0,
@@ -9356,6 +10418,15 @@
         "servicio_domestico": 313520.0,
         "familiar_no_remunerado": 91962.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6458793.0,
         "o_informal": 2656848.0,
@@ -9445,6 +10516,15 @@
         "asalariado_sector_publico": 1097209.0,
         "servicio_domestico": 293611.0,
         "familiar_no_remunerado": 79689.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6432777.0,
@@ -9536,6 +10616,15 @@
         "servicio_domestico": 286485.0,
         "familiar_no_remunerado": 74555.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6361969.0,
         "o_informal": 2580455.0,
@@ -9625,6 +10714,15 @@
         "asalariado_sector_publico": 1090031.0,
         "servicio_domestico": 239644.0,
         "familiar_no_remunerado": 56065.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6069404.0,
@@ -9716,6 +10814,15 @@
         "servicio_domestico": 190176.0,
         "familiar_no_remunerado": 56737.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5696061.0,
         "o_informal": 1754462.0,
@@ -9805,6 +10912,15 @@
         "asalariado_sector_publico": 1092077.0,
         "servicio_domestico": 170316.0,
         "familiar_no_remunerado": 58256.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 5545343.0,
@@ -9896,6 +11012,15 @@
         "servicio_domestico": 168321.0,
         "familiar_no_remunerado": 63329.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5495508.0,
         "o_informal": 1577684.0,
@@ -9985,6 +11110,15 @@
         "asalariado_sector_publico": 1124842.0,
         "servicio_domestico": 176497.0,
         "familiar_no_remunerado": 65592.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 5571262.0,
@@ -10076,6 +11210,15 @@
         "servicio_domestico": 179310.0,
         "familiar_no_remunerado": 61769.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5635106.0,
         "o_informal": 1729949.0,
@@ -10165,6 +11308,15 @@
         "asalariado_sector_publico": 1129474.0,
         "servicio_domestico": 169327.0,
         "familiar_no_remunerado": 67186.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 5741385.0,
@@ -10256,6 +11408,15 @@
         "servicio_domestico": 188432.0,
         "familiar_no_remunerado": 77664.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5804444.0,
         "o_informal": 2112280.0,
@@ -10345,6 +11506,15 @@
         "asalariado_sector_publico": 1135205.0,
         "servicio_domestico": 194914.0,
         "familiar_no_remunerado": 81323.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 5860908.0,
@@ -10436,6 +11606,15 @@
         "servicio_domestico": 197432.0,
         "familiar_no_remunerado": 75364.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5921770.0,
         "o_informal": 2199650.0,
@@ -10525,6 +11704,15 @@
         "asalariado_sector_publico": 1117239.0,
         "servicio_domestico": 198734.0,
         "familiar_no_remunerado": 71205.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6006452.0,
@@ -10616,6 +11804,15 @@
         "servicio_domestico": 204476.0,
         "familiar_no_remunerado": 72145.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5973674.0,
         "o_informal": 2174531.0,
@@ -10705,6 +11902,15 @@
         "asalariado_sector_publico": 1082985.0,
         "servicio_domestico": 200890.0,
         "familiar_no_remunerado": 74138.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 5980572.0,
@@ -10796,6 +12002,15 @@
         "servicio_domestico": 203940.0,
         "familiar_no_remunerado": 70031.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5942678.0,
         "o_informal": 2098432.0,
@@ -10885,6 +12100,15 @@
         "asalariado_sector_publico": 1048695.0,
         "servicio_domestico": 197018.0,
         "familiar_no_remunerado": 62348.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 5953391.0,
@@ -10976,6 +12200,15 @@
         "servicio_domestico": 204653.0,
         "familiar_no_remunerado": 62499.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 5957613.0,
         "o_informal": 2191335.0,
@@ -11065,6 +12298,15 @@
         "asalariado_sector_publico": 1084059.0,
         "servicio_domestico": 208704.0,
         "familiar_no_remunerado": 57489.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6018168.0,
@@ -11156,6 +12398,15 @@
         "servicio_domestico": 212035.0,
         "familiar_no_remunerado": 58609.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6037868.0,
         "o_informal": 2307371.0,
@@ -11245,6 +12496,15 @@
         "asalariado_sector_publico": 1099760.0,
         "servicio_domestico": 222986.0,
         "familiar_no_remunerado": 63497.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6094846.0,
@@ -11336,6 +12596,15 @@
         "servicio_domestico": 224298.0,
         "familiar_no_remunerado": 72738.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6143783.0,
         "o_informal": 2414580.0,
@@ -11425,6 +12694,15 @@
         "asalariado_sector_publico": 1104249.0,
         "servicio_domestico": 223044.0,
         "familiar_no_remunerado": 79211.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6224166.0,
@@ -11516,6 +12794,15 @@
         "servicio_domestico": 220677.0,
         "familiar_no_remunerado": 70829.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6270321.0,
         "o_informal": 2442569.0,
@@ -11605,6 +12892,15 @@
         "asalariado_sector_publico": 1110426.0,
         "servicio_domestico": 215616.0,
         "familiar_no_remunerado": 64346.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6329724.0,
@@ -11696,6 +12992,15 @@
         "servicio_domestico": 219490.0,
         "familiar_no_remunerado": 57527.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6398677.0,
         "o_informal": 2398884.0,
@@ -11785,6 +13090,15 @@
         "asalariado_sector_publico": 1125144.0,
         "servicio_domestico": 236036.0,
         "familiar_no_remunerado": 57138.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6434879.0,
@@ -11876,6 +13190,15 @@
         "servicio_domestico": 234912.0,
         "familiar_no_remunerado": 58305.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6433286.0,
         "o_informal": 2421790.0,
@@ -11965,6 +13288,15 @@
         "asalariado_sector_publico": 1115087.0,
         "servicio_domestico": 238113.0,
         "familiar_no_remunerado": 59032.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6442499.0,
@@ -12056,6 +13388,15 @@
         "servicio_domestico": 235572.0,
         "familiar_no_remunerado": 58936.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6492333.0,
         "o_informal": 2357499.0,
@@ -12145,6 +13486,15 @@
         "asalariado_sector_publico": 1120421.0,
         "servicio_domestico": 232869.0,
         "familiar_no_remunerado": 58487.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6492904.0,
@@ -12236,6 +13586,15 @@
         "servicio_domestico": 226530.0,
         "familiar_no_remunerado": 57493.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6450303.0,
         "o_informal": 2393242.0,
@@ -12325,6 +13684,15 @@
         "asalariado_sector_publico": 1109588.0,
         "servicio_domestico": 230522.0,
         "familiar_no_remunerado": 61128.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6415563.0,
@@ -12416,6 +13784,15 @@
         "servicio_domestico": 238647.0,
         "familiar_no_remunerado": 60228.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6460060.0,
         "o_informal": 2423030.0,
@@ -12505,6 +13882,15 @@
         "asalariado_sector_publico": 1115803.0,
         "servicio_domestico": 243986.0,
         "familiar_no_remunerado": 68232.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6511666.0,
@@ -12596,6 +13982,15 @@
         "servicio_domestico": 231230.0,
         "familiar_no_remunerado": 65979.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6551573.0,
         "o_informal": 2456973.0,
@@ -12685,6 +14080,15 @@
         "asalariado_sector_publico": 1197048.0,
         "servicio_domestico": 218421.0,
         "familiar_no_remunerado": 65579.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6563730.0,
@@ -12776,6 +14180,15 @@
         "servicio_domestico": 204442.0,
         "familiar_no_remunerado": 58810.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6534086.0,
         "o_informal": 2472059.0,
@@ -12865,6 +14278,15 @@
         "asalariado_sector_publico": 1189092.0,
         "servicio_domestico": 208416.0,
         "familiar_no_remunerado": 55805.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6542748.0,
@@ -12956,6 +14378,15 @@
         "servicio_domestico": 217815.0,
         "familiar_no_remunerado": 55507.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6560264.0,
         "o_informal": 2473967.0,
@@ -13045,6 +14476,15 @@
         "asalariado_sector_publico": 1168201.0,
         "servicio_domestico": 220259.0,
         "familiar_no_remunerado": 54790.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6579797.0,
@@ -13136,6 +14576,15 @@
         "servicio_domestico": 217344.0,
         "familiar_no_remunerado": 56255.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6602862.0,
         "o_informal": 2425785.0,
@@ -13225,6 +14674,15 @@
         "asalariado_sector_publico": 1172246.0,
         "servicio_domestico": 211495.0,
         "familiar_no_remunerado": 58409.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6599226.0,
@@ -13316,6 +14774,15 @@
         "servicio_domestico": 215461.0,
         "familiar_no_remunerado": 58702.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6616340.0,
         "o_informal": 2407112.0,
@@ -13405,6 +14872,15 @@
         "asalariado_sector_publico": 1194881.0,
         "servicio_domestico": 214818.0,
         "familiar_no_remunerado": 61146.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6605041.0,
@@ -13496,6 +14972,15 @@
         "servicio_domestico": 222951.0,
         "familiar_no_remunerado": 60529.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6628639.0,
         "o_informal": 2509777.0,
@@ -13585,6 +15070,15 @@
         "asalariado_sector_publico": 1196320.0,
         "servicio_domestico": 226967.0,
         "familiar_no_remunerado": 64979.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6683857.0,
@@ -13676,6 +15170,15 @@
         "servicio_domestico": 225017.0,
         "familiar_no_remunerado": 65973.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6718514.0,
         "o_informal": 2554912.0,
@@ -13765,6 +15268,15 @@
         "asalariado_sector_publico": 1194871.0,
         "servicio_domestico": 218434.0,
         "familiar_no_remunerado": 64270.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6760749.0,
@@ -13856,6 +15368,15 @@
         "servicio_domestico": 223742.0,
         "familiar_no_remunerado": 61918.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6694043.0,
         "o_informal": 2614641.0,
@@ -13945,6 +15466,15 @@
         "asalariado_sector_publico": 1214315.0,
         "servicio_domestico": 221998.0,
         "familiar_no_remunerado": 55891.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6704346.0,
@@ -14036,6 +15566,15 @@
         "servicio_domestico": 230675.0,
         "familiar_no_remunerado": 54340.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6699251.0,
         "o_informal": 2632396.0,
@@ -14125,6 +15664,15 @@
         "asalariado_sector_publico": 1260342.0,
         "servicio_domestico": 231605.0,
         "familiar_no_remunerado": 55714.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6689865.0,
@@ -14216,6 +15764,15 @@
         "servicio_domestico": 229953.0,
         "familiar_no_remunerado": 55694.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6700950.0,
         "o_informal": 2556530.0,
@@ -14305,6 +15862,15 @@
         "asalariado_sector_publico": 1247777.0,
         "servicio_domestico": 223048.0,
         "familiar_no_remunerado": 54695.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6687926.0,
@@ -14396,6 +15962,15 @@
         "servicio_domestico": 210375.0,
         "familiar_no_remunerado": 53913.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6748880.0,
         "o_informal": 2494520.0,
@@ -14485,6 +16060,15 @@
         "asalariado_sector_publico": 1229220.0,
         "servicio_domestico": 215102.0,
         "familiar_no_remunerado": 52682.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6746834.0,
@@ -14576,6 +16160,15 @@
         "servicio_domestico": 213214.0,
         "familiar_no_remunerado": 54921.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6788325.0,
         "o_informal": 2497633.0,
@@ -14665,6 +16258,15 @@
         "asalariado_sector_publico": 1206281.0,
         "servicio_domestico": 214108.0,
         "familiar_no_remunerado": 53753.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6852116.0,
@@ -14756,6 +16358,15 @@
         "servicio_domestico": 209906.0,
         "familiar_no_remunerado": 54377.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6926752.0,
         "o_informal": 2467359.0,
@@ -14845,6 +16456,15 @@
         "asalariado_sector_publico": 1204182.0,
         "servicio_domestico": 206679.0,
         "familiar_no_remunerado": 52936.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6948712.0,
@@ -14936,6 +16556,15 @@
         "servicio_domestico": 209368.0,
         "familiar_no_remunerado": 51128.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6968804.0,
         "o_informal": 2420033.0,
@@ -15025,6 +16654,15 @@
         "asalariado_sector_publico": 1181745.0,
         "servicio_domestico": 209225.0,
         "familiar_no_remunerado": 52331.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6941165.0,
@@ -15116,6 +16754,15 @@
         "servicio_domestico": 221090.0,
         "familiar_no_remunerado": 52873.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6918364.0,
         "o_informal": 2427848.0,
@@ -15205,6 +16852,15 @@
         "asalariado_sector_publico": 1185728.0,
         "servicio_domestico": 217030.0,
         "familiar_no_remunerado": 55993.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6898323.0,
@@ -15296,6 +16952,15 @@
         "servicio_domestico": 215694.0,
         "familiar_no_remunerado": 55156.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6900904.0,
         "o_informal": 2429405.0,
@@ -15385,6 +17050,15 @@
         "asalariado_sector_publico": 1192201.0,
         "servicio_domestico": 202963.0,
         "familiar_no_remunerado": 55177.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6920892.0,
@@ -15476,6 +17150,15 @@
         "servicio_domestico": 208664.0,
         "familiar_no_remunerado": 49358.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6919264.0,
         "o_informal": 2458353.0,
@@ -15565,6 +17248,15 @@
         "asalariado_sector_publico": 1219145.0,
         "servicio_domestico": 215428.0,
         "familiar_no_remunerado": 51753.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6927014.0,
@@ -15656,6 +17348,15 @@
         "servicio_domestico": 213002.0,
         "familiar_no_remunerado": 54483.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6903292.0,
         "o_informal": 2498291.0,
@@ -15745,6 +17446,15 @@
         "asalariado_sector_publico": 1217971.0,
         "servicio_domestico": 199167.0,
         "familiar_no_remunerado": 58611.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6932487.0,
@@ -15836,6 +17546,15 @@
         "servicio_domestico": 186765.0,
         "familiar_no_remunerado": 58128.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6957393.0,
         "o_informal": 2545695.0,
@@ -15925,6 +17644,15 @@
         "asalariado_sector_publico": 1196906.0,
         "servicio_domestico": 187768.0,
         "familiar_no_remunerado": 51878.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6973952.0,
@@ -16016,6 +17744,15 @@
         "servicio_domestico": 197125.0,
         "familiar_no_remunerado": 47842.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6935527.0,
         "o_informal": 2498665.0,
@@ -16105,6 +17842,15 @@
         "asalariado_sector_publico": 1161768.0,
         "servicio_domestico": 204102.0,
         "familiar_no_remunerado": 52083.0
+      },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
       },
       "informalidad": {
         "o_formal": 6901607.0,
@@ -16196,6 +17942,15 @@
         "servicio_domestico": 212102.0,
         "familiar_no_remunerado": 54220.0
       },
+      "ciso18": {
+        "empleador": null,
+        "cuenta_propia": null,
+        "contratista_dependiente": null,
+        "asalariado_sector_privado": null,
+        "asalariado_sector_publico": null,
+        "servicio_domestico": null,
+        "familiar_no_remunerado": null
+      },
       "informalidad": {
         "o_formal": 6875863.0,
         "o_informal": 2540509.0,
@@ -16286,6 +18041,15 @@
         "servicio_domestico": 214916.0,
         "familiar_no_remunerado": 55298.0
       },
+      "ciso18": {
+        "empleador": 305576.0,
+        "cuenta_propia": 1713924.0,
+        "contratista_dependiente": 725943.0,
+        "asalariado_sector_privado": 5337002.0,
+        "asalariado_sector_publico": 1073524.0,
+        "servicio_domestico": 192033.0,
+        "familiar_no_remunerado": 55298.0
+      },
       "informalidad": {
         "o_formal": 6865494.0,
         "o_informal": 2537804.0,
@@ -16355,6 +18119,105 @@
         "parcial_involuntario": 647379.0,
         "parcial_voluntario": 1308858.0,
         "o_declaran_horas": 9376552.0
+      }
+    },
+    {
+      "ano": 2026,
+      "mes_central": 6,
+      "trimestre": "MJJ",
+      "pet": 16675906.0,
+      "ft": 10295061.0,
+      "o": 9314017.0,
+      "do": 981044.0,
+      "td": 9.53,
+      "tp": 61.74,
+      "to": 55.85,
+      "composicion_ocupados": {
+        "empleador": 301627.0,
+        "cuenta_propia": 1969340.0,
+        "asalariado_sector_privado": 5598984.0,
+        "asalariado_sector_publico": 1177220.0,
+        "servicio_domestico": 215391.0,
+        "familiar_no_remunerado": 51454.0
+      },
+      "ciso18": {
+        "empleador": 301627.0,
+        "cuenta_propia": 1677235.0,
+        "contratista_dependiente": 729366.0,
+        "asalariado_sector_privado": 5287184.0,
+        "asalariado_sector_publico": 1074711.0,
+        "servicio_domestico": 192439.0,
+        "familiar_no_remunerado": 51454.0
+      },
+      "informalidad": {
+        "o_formal": 6846845.0,
+        "o_informal": 2467172.0,
+        "toi": 26.49
+      },
+      "sexo_ocupados": {
+        "hombres": 5252914.0,
+        "mujeres": 4061103.0
+      },
+      "educacion": {
+        "sin_basica_completa": 424797.0,
+        "basica_completa": 1158193.0,
+        "media_completa": 3747064.0,
+        "superior_completa": 3977401.0
+      },
+      "educacion_superior": {
+        "cft": 237564.0,
+        "instituto_profesional": 1051541.0,
+        "universitaria": 2688297.0
+      },
+      "desajuste_educativo": {
+        "sup_en_puesto_alta_calificacion": 2726949.0,
+        "sup_en_puesto_no_alta_calificacion": 1250452.0,
+        "puestos_alta_calificacion_total": 3254762.0
+      },
+      "ocupacion_ciuo08": {
+        "g1_directivos_gerentes": 439930.0,
+        "g2_profesionales_cientificos": 1623169.0,
+        "g3_tecnicos_nivel_medio": 1191663.0,
+        "g4_apoyo_administrativo": 439632.0,
+        "g5_servicios_y_comercio": 2001981.0,
+        "g6_agropecuarios_pesqueros": 201874.0,
+        "g7_artesanos_operarios": 1158411.0,
+        "g8_operadores_maquinas": 749469.0,
+        "g9_ocupaciones_elementales": 1480188.0,
+        "g10_no_identificado": 23662.0,
+        "sin_clasificacion": 4038.0
+      },
+      "subutilizacion": {
+        "tasas": {
+          "su1": 9.79,
+          "su2": 16.04,
+          "su3": 17.39,
+          "su4": 23.12,
+          "tpl": 17.1
+        },
+        "componentes": {
+          "desocupados": 981044.0,
+          "iniciadores_disponibles": 29958.0,
+          "parcial_involuntario": 645465.0,
+          "fuerza_trabajo_potencial": 949914.0,
+          "ocupados_que_buscaron_empleo": 754205.0,
+          "fuerza_trabajo": 10295061.0,
+          "fuerza_trabajo_ampliada": 11274932.0
+        }
+      },
+      "jornada": {
+        "tramos": {
+          "h_1_30": 1982611.0,
+          "h_31_39": 402559.0,
+          "h_40": 1346791.0,
+          "h_41_44": 3851896.0,
+          "h_45": 478956.0,
+          "h_46_mas": 1226041.0
+        },
+        "promedio_horas_habituales": 38.7,
+        "parcial_involuntario": 645465.0,
+        "parcial_voluntario": 1298037.0,
+        "o_declaran_horas": 9288855.0
       }
     }
   ]

@@ -80,6 +80,21 @@ CATEGORIA_COLS = {
     "familiar_no_remunerado": "categoria_familiar_personal_no_remunerado",
 }
 
+# CISO-18 (segundo nivel). El INE publica ciso1/ciso2 en las bases trimestrales
+# solo desde AMJ 2026: antes de esa fecha las columnas vienen NA (no hay serie
+# retropolable desde microdatos públicos; ver ADR-0002). NO comparable con
+# CATEGORIA_COLS (CISE-93): fusiona servicio doméstico, mueve familiares no
+# remunerados a dependientes y separa contratistas dependientes.
+CISO18_COLS = {
+    "empleador": "ciso_empleador",
+    "cuenta_propia": "ciso_cuenta_propia",
+    "contratista_dependiente": "ciso_contratistas_dependientes",
+    "asalariado_sector_privado": "ciso_asalariado_sector_privado",
+    "asalariado_sector_publico": "ciso_asalariado_sector_publico",
+    "servicio_domestico": "ciso_servicio_domestico",
+    "familiar_no_remunerado": "ciso_familiar_no_remunerado",
+}
+
 # Nivel educacional alcanzado por los ocupados (columnas de la maestra).
 # OJO: no suman exactamente el total de ocupados — hay casos sin dato de nivel.
 EDUCACION_COLS = {
@@ -234,6 +249,10 @@ def build_nacional(maestra: pd.DataFrame):
             "to": _round(r["to"], 2),
             "composicion_ocupados": {
                 k: _round(r[col]) for k, col in CATEGORIA_COLS.items() if col in m.columns
+            },
+            # NA antes de AMJ 2026 (inicio de publicación CISO-18; ver ADR-0002)
+            "ciso18": {
+                k: _round(r[col]) for k, col in CISO18_COLS.items() if col in m.columns
             },
             "informalidad": {
                 "o_formal": _round(r["o_formal"]) if "o_formal" in m.columns else None,
@@ -404,6 +423,36 @@ def build_snapshot(serie_nac, cortes, release, generado):
         for nombre, cats in AGG.items()
     }
 
+    # CISO-18: solo si el release tiene datos (desde AMJ 2026). Sin serie previa
+    # en microdatos públicos, el delta interanual existirá recién cuando el año
+    # anterior también traiga la clasificación (AMJ 2027 en adelante).
+    ciso_ult = ult.get("ciso18") or {}
+    ciso_prev = (prev.get("ciso18") or {}) if prev else {}
+    total_o = nac.get("o")
+    ciso18 = None
+    if any(v is not None for v in ciso_ult.values()):
+        ciso18 = {
+            "nota": (
+                "Clasificación CISO-18 (segundo nivel). Publicada por el INE en las bases "
+                "trimestrales desde AMJ 2026: no hay serie previa reproducible desde microdatos "
+                "públicos, y NO es comparable con composicion_ocupados (CISE-93). Ver ADR-0002."
+            ),
+            "categorias": {
+                cat: {
+                    "o": v,
+                    "pct_ocupados": _round(100 * v / total_o, 2) if total_o else None,
+                    **(
+                        {
+                            "delta_o": _round(v - ciso_prev[cat]),
+                            "delta_rel_o": _round(100 * (v / ciso_prev[cat] - 1), 2),
+                        }
+                        if ciso_prev.get(cat) is not None else {}
+                    ),
+                }
+                for cat, v in ciso_ult.items() if v is not None
+            },
+        }
+
     # Formalidad del empleo (partición de ocupados; serie robusta desde 2017).
     inf_ult = ult["informalidad"]
     inf_prev = prev["informalidad"] if prev else None
@@ -498,8 +547,10 @@ def build_snapshot(serie_nac, cortes, release, generado):
     # Subutilización: tasas con su Δ en pp + componentes con su Δ absoluta.
     s_ult = ult["subutilizacion"]
     s_prev = prev["subutilizacion"] if prev else None
+    # Cada etiqueta declara sobre qué se construye la tasa. SU1 NO es la TD: le suma los
+    # iniciadores disponibles (al numerador y al denominador), por eso es algo mayor.
     ETIQ_SU = {
-        "su1": "SU1 · desocupación (incl. iniciadores disponibles)",
+        "su1": "SU1 · TD + iniciadores disponibles",
         "su2": "SU2 · SU1 + subempleo por horas",
         "su3": "SU3 · SU1 + fuerza de trabajo potencial",
         "su4": "SU4 · SU1 + subempleo por horas + potencial",
@@ -565,6 +616,7 @@ def build_snapshot(serie_nac, cortes, release, generado):
         },
         "nacional": nac,
         "composicion_ocupados": composicion,
+        "ciso18": ciso18,
         "formalidad": formalidad,
         "educacion": educacion,
         "subutilizacion": subutilizacion,
