@@ -1,5 +1,5 @@
 {
- "version": "2.0",
+ "version": "2.1",
  "actualizado": "2026-09-02",
  "nota": "Hallazgos = insights CURADOS sobre la evidencia. Cada uno enlaza la evidencia que lo respalda y declara su confianza y sus caveats. Un hallazgo NO es un hecho crudo (eso está en evidencia/): es una interpretación verificable. Regla de rigor: no citar un hallazgo sin su ventana_temporal y sus caveats. El campo no_implica marca explícitamente lo que el hallazgo NO permite concluir.",
  "esquema": {
@@ -57,7 +57,7 @@
  "hallazgos": [
   {
    "id": "h-2026-06-empleo-cae",
-   "enunciado": "El empleo dejó de crecer: los ocupados cayeron −16.292 (−0,17 %) en doce meses, la primera variación interanual negativa de un trimestre móvil desde marzo de 2021 — se rompe una racha de 62 trimestres consecutivos al alza iniciada en la recuperación pandémica.",
+   "enunciado": "El empleo dejó de crecer: los ocupados cayeron −16.292 (−0,17 %) en doce meses. Es la primera caída NO PANDÉMICA de todo el registro: en los 185 trimestres móviles con variación interanual disponible (2011-2026) el empleo solo cayó en 14, y 13 de ellos son el bloque consecutivo de la pandemia (marzo 2020 a marzo 2021). Este es el decimocuarto, y el único fuera de ese episodio.",
    "tipo": "nivel",
    "release": "2026-06-mjj",
    "vigencia": "vigente",
@@ -65,8 +65,16 @@
     "o": 9314017,
     "delta_o": -16292,
     "delta_rel_o": -0.17,
+    "trimestres_con_variacion_disponible": 185,
+    "trimestres_negativos_en_la_serie": 14,
+    "de_los_cuales_pandemicos": 13,
+    "bloque_pandemico": "2020-03 → 2021-03",
     "ultimo_trimestre_negativo_previo": "2021-03 (FMA 2021)",
-    "trimestres_al_alza_rotos": 62
+    "trimestres_al_alza_rotos": 62,
+    "minimo_serie": -1837365,
+    "minimo_serie_periodo": "MJJ 2020",
+    "maximo_serie": 1075755,
+    "maximo_serie_periodo": "MJJ 2021"
    },
    "evidencia_refs": [
     "evidencia/snapshot.json#/nacional/delta_yoy",
@@ -77,9 +85,10 @@
    "caveats": [
     "recalibracion-censo-2017",
     "media-movil-trimestral",
-    "La magnitud de la caída (−0,17 %) es pequeña y puede no distinguirse de cero dentro del error muestral: la señal robusta es el quiebre de la racha, no el tamaño de la cifra."
+    "La magnitud de la caída (−0,17 %) es pequeña y puede no distinguirse de cero dentro del error muestral: lo excepcional es el signo, no el tamaño.",
+    "La serie de variaciones interanuales empieza en el trimestre FMA 2011, porque la ENE vigente parte en 2010 y cada punto se compara con el mismo trimestre del año anterior: «todo el registro» significa 2011-2026, no la historia completa del empleo en Chile."
    ],
-   "no_implica": "Un trimestre negativo no establece una tendencia ni una recesión del empleo; tampoco dice por qué el empleo dejó de crecer."
+   "no_implica": "Un trimestre negativo no establece una tendencia ni una recesión del empleo, y que sea el único fuera de la pandemia no dice nada sobre su causa ni sobre su duración."
   },
   {
    "id": "h-2026-06-td-sube",
