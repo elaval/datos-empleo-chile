@@ -1,6 +1,6 @@
 {
- "version": "2.1",
- "actualizado": "2026-09-02",
+ "version": "3.0",
+ "actualizado": "2026-09-30",
  "nota": "Hallazgos = insights CURADOS sobre la evidencia. Cada uno enlaza la evidencia que lo respalda y declara su confianza y sus caveats. Un hallazgo NO es un hecho crudo (eso está en evidencia/): es una interpretación verificable. Regla de rigor: no citar un hallazgo sin su ventana_temporal y sus caveats. El campo no_implica marca explícitamente lo que el hallazgo NO permite concluir.",
  "esquema": {
   "tipo": [
@@ -56,11 +56,406 @@
  },
  "hallazgos": [
   {
+   "id": "h-2026-07-empleo-cae-mas",
+   "enunciado": "El empleo encadena su segundo trimestre de caída y la caída se profundiza: −81.352 ocupados en doce meses (−0,87 %), cinco veces la del trimestre anterior (−16.292). En los 186 trimestres móviles con variación interanual disponible (2011-2026) el empleo solo ha caído en 15, y 13 son el bloque consecutivo de la pandemia: estos dos son el único otro episodio del registro.",
+   "tipo": "nivel",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "o": 9273745,
+    "delta_o": -81352,
+    "delta_rel_o": -0.87,
+    "delta_o_trimestre_anterior": -16292,
+    "trimestres_con_variacion_disponible": 186,
+    "trimestres_negativos_en_la_serie": 15,
+    "de_los_cuales_pandemicos": 13,
+    "bloque_actual": "2026-06 → 2026-07 (en curso)",
+    "bloque_pandemico": "2020-03 → 2021-03"
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/nacional/delta_yoy",
+    "evidencia/series-nacional.json#/serie"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "media-movil-trimestral",
+    "La serie de variaciones interanuales empieza en FMA 2011, porque la ENE vigente parte en 2010 y cada punto se compara con el mismo trimestre del año anterior: «el registro» significa 2011-2026.",
+    "Dos trimestres móviles consecutivos comparten dos de sus tres meses, así que no son dos observaciones independientes de la caída."
+   ],
+   "no_implica": "Dos trimestres negativos consecutivos no establecen una recesión del empleo ni permiten proyectar los siguientes; tampoco dicen por qué el empleo se contrae."
+  },
+  {
+   "id": "h-2026-07-td-sube",
+   "enunciado": "La tasa de desocupación llegó a 9,64 %, subiendo 1,08 pp en doce meses: el mayor incremento interanual desde la pandemia y el nivel más alto para un trimestre de julio desde 2020.",
+   "tipo": "nivel",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "td": 9.64,
+    "delta_pp_td_yoy": 1.08,
+    "td_previo": 8.56,
+    "su1": 9.91,
+    "do": 989400,
+    "delta_do": 113512,
+    "delta_rel_do": 12.96
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/nacional",
+    "evidencia/series-nacional.json#/serie"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "media-movil-trimestral"
+   ],
+   "no_implica": "No implica una causa (gobierno, precios, ciclo); solo el nivel observado."
+  },
+  {
+   "id": "h-2026-07-cambia-el-motor",
+   "enunciado": "Cambió el mecanismo del alza de la desocupación. El trimestre anterior la fuerza de trabajo crecía (+75.779) y el empleo no alcanzaba a absorberla; ahora la fuerza de trabajo está casi plana (+32.160, +0,31 %) y la desocupación sube (+113.512, +13,0 %) porque el empleo se contrae. Es el mismo indicador subiendo por una razón distinta.",
+   "tipo": "identidad",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "delta_ft": 32160,
+    "delta_rel_ft": 0.31,
+    "delta_o": -81352,
+    "delta_do": 113512,
+    "delta_rel_do": 12.96,
+    "delta_ft_trimestre_anterior": 75779,
+    "delta_o_trimestre_anterior": -16292
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/nacional/delta_yoy"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "identidad-aritmetica-no-causal"
+   ],
+   "no_implica": "La identidad ΔFT = ΔO + ΔDO describe cómo se repartió la variación, no por qué el empleo cae ni por qué la fuerza de trabajo dejó de crecer."
+  },
+  {
+   "id": "h-2026-07-asalariados-caen",
+   "enunciado": "El empleo asalariado arrastra la caída y ahora también cede el sector público: asalariados −173.999 (−2,5 %), con privados −144.548 (−2,5 %) y públicos −29.451 (−2,5 %). Lo amortigua el trabajo independiente (+74.597), sobre todo cuenta propia (+57.893) y empleadores (+16.704), más un alza atípica del servicio doméstico (+20.262, +10,0 %).",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "delta_o_asalariados": -173999,
+    "delta_o_asalariado_privado": -144548,
+    "delta_o_asalariado_publico": -29451,
+    "delta_o_independientes": 74597,
+    "delta_o_cuenta_propia": 57893,
+    "delta_o_empleador": 16704,
+    "delta_o_servicio_domestico": 20262,
+    "delta_rel_servicio_domestico": 9.98,
+    "delta_o_nacional": -81352
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/composicion_ocupados"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017"
+   ],
+   "no_implica": "El avance del cuenta propia cuando cae el asalariado no prueba por sí solo un deterioro de la calidad del empleo; requiere cruzar con formalidad e ingresos."
+  },
+  {
+   "id": "h-2026-07-cae-el-empleo-formal",
+   "enunciado": "La contracción es casi enteramente de empleo formal: −88.124 ocupados formales (−1,3 %) contra +6.771 informales (+0,3 %). La tasa de ocupación informal subió a 26,3 % (+0,30 pp), pero por composición —cae el denominador formal— más que por creación de empleo informal.",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "delta_o_formal": -88124,
+    "delta_rel_o_formal": -1.27,
+    "delta_o_informal": 6771,
+    "delta_rel_o_informal": 0.28,
+    "toi": 26.32,
+    "delta_pp_toi": 0.3
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/formalidad"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "serie-formalidad-desde-2017"
+   ],
+   "no_implica": "Que la tasa de informalidad suba no significa que se hayan creado empleos informales en volumen: aquí sube porque el empleo formal cae mucho más que lo que crece el informal."
+  },
+  {
+   "id": "h-2026-07-subutilizacion",
+   "enunciado": "La subutilización sube más que la desocupación: la TD avanza 1,08 pp, pero SU2 —que agrega el subempleo por horas— sube 1,47 pp hasta 16,25 %, y la presión laboral 1,69 pp hasta 17,34 %. El tiempo parcial involuntario creció 6,9 % (+42.261 personas).",
+   "tipo": "nivel",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "td": 9.64,
+    "delta_pp_td": 1.08,
+    "su1": 9.91,
+    "delta_pp_su1": 1.07,
+    "su2": 16.25,
+    "delta_pp_su2": 1.47,
+    "su3": 17.66,
+    "delta_pp_su3": 1.19,
+    "su4": 23.45,
+    "delta_pp_su4": 1.54,
+    "tpl": 17.34,
+    "delta_pp_tpl": 1.69,
+    "delta_tpi": 42261,
+    "delta_rel_tpi": 6.93
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/subutilizacion"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "su-dependen-de-iniciadores-disponibles"
+   ],
+   "no_implica": "El alza del subempleo por horas no es atribuible a la reducción legal de jornada: el tiempo parcial involuntario mide jornadas de 30 h o menos, bajo el tramo que ajusta la Ley 21.561."
+  },
+  {
+   "id": "h-2026-07-caida-masculina",
+   "enunciado": "Toda la caída del empleo es masculina: los hombres perdieron −90.638 ocupados (−1,70 %) y las mujeres sumaron apenas +9.285 (+0,23 %), muy por debajo del aporte del trimestre anterior (+41.489). Aun así, la participación femenina marcó su máximo histórico (53,03 %) y la brecha con los hombres su mínimo (17,29 pp, desde 27,09 en 2010). La desocupación femenina sigue sobre la masculina: 10,32 % contra 9,11 %.",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "delta_o_hombres": -90638,
+    "delta_rel_o_hombres": -1.7,
+    "delta_o_mujeres": 9285,
+    "delta_rel_o_mujeres": 0.23,
+    "delta_o_mujeres_trimestre_anterior": 41489,
+    "tp_mujeres": 53.03,
+    "tp_hombres": 70.32,
+    "brecha_tp_pp": 17.29,
+    "td_mujeres": 10.32,
+    "td_hombres": 9.11,
+    "delta_pp_td_mujeres": 1.0,
+    "delta_pp_td_hombres": 1.13
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/cortes/sexo",
+    "evidencia/series-cortes.json#/cortes/sexo"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "«Máximo» y «mínimo» refieren a la serie comparable de trimestres de julio 2010-2026, no a todos los trimestres móviles."
+   ],
+   "no_implica": "Que el empleo femenino no caiga no significa que mejore su calidad: para eso hay que cruzar con categoría y formalidad."
+  },
+  {
+   "id": "h-2026-07-menores-de-35",
+   "enunciado": "El deterioro se concentra en los menores de 35 y se agudiza. El tramo 25-34 registró la mayor pérdida de empleo del trimestre (−119.037, −5,08 %) con su desocupación subiendo 2,28 pp hasta 12,18 %, y los 15-24 perdieron −28.676 ocupados (−4,93 %) con TD de 22,84 % (+2,49 pp). De los 35 años en adelante el empleo crece y la desocupación casi no se mueve. La brecha del tramo 25-34 con la tasa nacional llegó a 2,54 pp, la mayor desde 2020.",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "td_15_24": 22.84,
+    "delta_pp_td_15_24": 2.49,
+    "delta_o_15_24": -28676,
+    "td_25_34": 12.18,
+    "delta_pp_td_25_34": 2.28,
+    "delta_o_25_34": -119037,
+    "delta_rel_o_25_34": -5.08,
+    "brecha_25_34_vs_nacional_pp": 2.54,
+    "brecha_maxima_serie": {
+     "ano": 2020,
+     "pp": 3.13
+    },
+    "brecha_maxima_no_pandemica": {
+     "ano": 2017,
+     "pp": 2.58
+    },
+    "delta_o_45_54": 23115,
+    "delta_o_65_mas": 17000
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/cortes/edad",
+    "evidencia/series-cortes.json#/cortes/edad"
+   ],
+   "confianza": "media",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "Parte de la variación por tramo etario es demográfica (cohortes que cambian de tramo), no solo dinámica laboral: las tasas controlan el tamaño del grupo, los conteos no.",
+    "La brecha 2,54 pp es la mayor desde 2020 (3,13 pp), pero NO un máximo del registro no pandémico: 2017 llegó a 2,58 pp. Serie anual de trimestres de julio."
+   ],
+   "no_implica": "No implica destrucción neta de puestos jóvenes en la economía; y que el tramo 25-34 nunca haya estado bajo el promedio nacional no dice nada sobre la causa de esa brecha."
+  },
+  {
+   "id": "h-2026-07-extranjeros",
+   "enunciado": "Esta vez la caída del empleo alcanza a todos: los ocupados chilenos bajaron −71.609 (−0,86 %) y los extranjeros −9.743 (−0,95 %), tras un trimestre en que los extranjeros habían crecido. Pero las tasas van en direcciones opuestas: la desocupación de los extranjeros bajó a 6,82 % (−1,29 pp) y la de los chilenos subió a 9,98 % (+1,36 pp).",
+   "tipo": "brecha",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "delta_o_chilenos": -71609,
+    "delta_rel_o_chilenos": -0.86,
+    "delta_o_extranjeros": -9743,
+    "delta_rel_o_extranjeros": -0.95,
+    "td_extranjeros": 6.82,
+    "delta_pp_td_extranjeros": -1.29,
+    "td_chilenos": 9.98,
+    "delta_pp_td_chilenos": 1.36,
+    "tp_extranjeros": 79.18,
+    "n_extranjeros": 4047
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/cortes/nacionalidad"
+   ],
+   "confianza": "media",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "El n muestral de extranjeros (4.047) es moderado: sus variaciones tienen más error muestral que las nacionales.",
+    "Que la TD de un grupo baje mientras cae su empleo es aritméticamente posible si su fuerza de trabajo cae más que su ocupación: no es por sí solo una señal de mejora."
+   ],
+   "no_implica": "No dice nada sobre la calidad ni la formalidad del empleo migrante, ni sobre flujos migratorios."
+  },
+  {
+   "id": "h-2026-07-dispersion-regional",
+   "enunciado": "La desocupación mantiene una fuerte dispersión territorial: de 4,01 % en Aysén a 11,16 % en Ñuble, con O'Higgins (10,79 %), Biobío (10,68 %) y Los Ríos (10,22 %) también sobre 10 %. El alza más pronunciada del trimestre es la de O'Higgins (+2,17 pp).",
+   "tipo": "nivel",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "td_min": {
+     "Aysén": 4.01,
+     "Antofagasta": 6.33,
+     "Magallanes": 6.9
+    },
+    "td_max": {
+     "Ñuble": 11.16,
+     "O'Higgins": 10.79,
+     "Biobío": 10.68,
+     "Los Ríos": 10.22
+    },
+    "delta_pp_max": {
+     "O'Higgins": 2.17
+    },
+    "n_aysen": 1700
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/cortes/region"
+   ],
+   "confianza": "media",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "error-muestral-mayor-en-regiones-chicas"
+   ],
+   "no_implica": "Las diferencias regionales no identifican causas locales; mezclan estructura productiva, participación y error muestral."
+  },
+  {
+   "id": "h-2026-07-jornada-45h",
+   "enunciado": "La jornada de exactamente 45 horas sigue vaciándose: quedan 462.644 ocupados que la declaran (−386.124, −45,5 % interanual). El desplazamiento va sobre todo a las 40 horas exactas, que crecieron 16,8 % (+200.516). El promedio de horas habituales bajó a 38,65 h (−0,77 h).",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "h_45": 462644,
+    "delta_h_45": -386124,
+    "delta_rel_h_45": -45.49,
+    "h_40": 1393791,
+    "delta_h_40": 200516,
+    "delta_rel_h_40": 16.8,
+    "h_41_44": 3795523,
+    "delta_h_41_44": 49079,
+    "promedio_horas_habituales": 38.65,
+    "delta_promedio": -0.77
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/jornada"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "horas-son-declaradas",
+    "jornada-transicion-en-curso"
+   ],
+   "no_implica": "El desplazamiento es coherente con la Ley 21.561 (fase de 42 h desde abril de 2026), pero estas cifras no miden efectos de la ley sobre empleo, salarios ni productividad."
+  },
+  {
+   "id": "h-2026-07-cae-la-alta-calificacion",
+   "enunciado": "El ajuste llegó al empleo calificado. El agregado CIUO de alta calificación (G1-G3) perdió −87.647 ocupados (−2,64 %), con directivos y gerentes −7,14 %, técnicos de nivel medio −3,13 % y profesionales −1,05 %; apoyo administrativo cae otro −7,09 %. Crecen operadores de máquinas (+2,62 %), artesanos (+1,77 %) y servicios y comercio (+1,39 %). En paralelo, y por primera vez en la serie reciente, el empleo con educación superior también cae (−30.449, −0,76 %), y la sobrecalificación salta a 32,25 % (+1,59 pp).",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "delta_alta_calificacion_g1_g3": -87647,
+    "delta_rel_g1_g3": -2.64,
+    "delta_rel_g1": -7.14,
+    "delta_rel_g2": -1.05,
+    "delta_rel_g3": -3.13,
+    "delta_rel_g4": -7.09,
+    "delta_rel_g8": 2.62,
+    "delta_rel_g7": 1.77,
+    "delta_rel_g5": 1.39,
+    "delta_o_superior": -30449,
+    "delta_rel_o_superior": -0.76,
+    "tasa_desajuste": 32.25,
+    "delta_pp_desajuste": 1.59
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/ocupacion_ciuo08",
+    "evidencia/snapshot.json#/educacion"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "quiebre-serie-ciuo-2019",
+    "desajuste-es-convencion-ciuo",
+    "niveles-educacion-no-cierran"
+   ],
+   "no_implica": "Un trimestre no distingue ciclo, reclasificación y cambio estructural; tampoco prueba automatización ni sustitución tecnológica del empleo calificado."
+  },
+  {
+   "id": "h-2026-07-ciso18-contratistas",
+   "enunciado": "Los contratistas dependientes son la única categoría que crece con fuerza bajo la nueva clasificación CISO-18: 755.419 personas, 8,15 % de los ocupados, con un alza de 11,7 % en doce meses según el boletín del INE — el mayor aumento de todas las categorías, mientras los asalariados privados caen 3,5 %. Es la primera variación interanual oficial de esta categoría, que hasta 2026 quedaba repartida e invisible entre asalariados y cuenta propia.",
+   "tipo": "composicion",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "contratistas_dependientes": 755419,
+    "pct_ocupados": 8.15,
+    "pct_ocupados_trimestre_anterior": 7.83,
+    "delta_rel_segun_ine_boletin_335": 11.7,
+    "delta_rel_asalariados_privados_ciso": -3.5,
+    "delta_rel_cuenta_propia_ciso": 1.2,
+    "delta_rel_empleadores_ciso": 5.9
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/ciso18",
+    "referencia-ine.json#/releases/2026-07-jja/ciso18_variaciones_12m_pct"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 (variación interanual: cifra publicada por el INE, no derivable de microdatos públicos)",
+   "caveats": [
+    "ciso18-sin-serie-previa",
+    "La variación +11,7 % es transcrita del boletín n.º 335 del INE (anexo 2): no es reproducible desde esta base, que solo tiene el nivel desde AMJ 2026."
+   ],
+   "no_implica": "El crecimiento de la categoría no es necesariamente creación de empleo nuevo: puede reflejar también reclasificación de relaciones laborales que ya existían. No es comparable con las categorías CISE-93."
+  },
+  {
    "id": "h-2026-06-empleo-cae",
    "enunciado": "El empleo dejó de crecer: los ocupados cayeron −16.292 (−0,17 %) en doce meses. Es la primera caída NO PANDÉMICA de todo el registro: en los 185 trimestres móviles con variación interanual disponible (2011-2026) el empleo solo cayó en 14, y 13 de ellos son el bloque consecutivo de la pandemia (marzo 2020 a marzo 2021). Este es el decimocuarto, y el único fuera de ese episodio.",
    "tipo": "nivel",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "o": 9314017,
     "delta_o": -16292,
@@ -95,7 +490,7 @@
    "enunciado": "La tasa de desocupación llegó a 9,53 %, subiendo 0,83 pp en doce meses: el nivel más alto para un trimestre de junio desde 2020 (13,09 %, en plena pandemia).",
    "tipo": "nivel",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "td": 9.53,
     "delta_pp_td_yoy": 0.83,
@@ -119,7 +514,7 @@
    "enunciado": "Todo el crecimiento de la fuerza de trabajo terminó en la desocupación: la fuerza de trabajo sumó +75.779 personas, los ocupados restaron −16.292, y los desocupados crecieron +92.071 (+10,4 %).",
    "tipo": "identidad",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "delta_ft": 75779,
     "delta_o": -16292,
@@ -142,7 +537,7 @@
    "enunciado": "El empleo asalariado se contrajo −139.865 (−2,0 %; privados −136.385, públicos −3.480) y lo amortiguó el trabajo independiente: +127.578 (cuenta propia +102.971, +5,5 %; empleadores +24.607, +8,9 %). El empleo se recompone hacia su componente de menor protección.",
    "tipo": "composicion",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "delta_o_asalariados": -139865,
     "delta_o_asalariado_privado": -136385,
@@ -167,7 +562,7 @@
    "enunciado": "La caída del empleo es enteramente formal: el empleo formal perdió −54.059 ocupados (−0,8 %) y el informal ganó +37.767 (+1,6 %); la tasa de ocupación informal llegó a 26,5 % (+0,45 pp).",
    "tipo": "composicion",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "delta_o_formal": -54059,
     "delta_o_informal": 37767,
@@ -190,7 +585,7 @@
    "enunciado": "La tasa de desocupación subestima el deterioro: la TD sube 0,83 pp, pero SU2 (que agrega el subempleo por horas) sube 1,40 pp hasta 16,04 %, y la presión laboral 1,44 pp hasta 17,1 %. El tiempo parcial involuntario creció 10,6 % (+62.028 personas).",
    "tipo": "nivel",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "td": 9.53,
     "delta_pp_td": 0.83,
@@ -224,7 +619,7 @@
    "enunciado": "Toda la caída del empleo es masculina: los hombres perdieron −57.781 ocupados (−1,1 %, con su fuerza de trabajo plana: +0,02 %) y las mujeres ganaron +41.489 (+1,0 %). La participación femenina (53,2 %) marcó su máximo para un trimestre de junio y la brecha con los hombres (17,4 pp) su mínimo; la desocupación femenina igual subió a 10,29 % (+0,57 pp), todavía sobre la masculina (8,93 %, +1,02 pp).",
    "tipo": "composicion",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "delta_o_hombres": -57781,
     "delta_o_mujeres": 41489,
@@ -254,7 +649,7 @@
    "enunciado": "El deterioro se concentra en los menores de 35: la desocupación de 15-24 años llegó a 23,54 % (+1,9 pp) con sus ocupados cayendo −4,1 %, y el tramo 25-34 registró la mayor pérdida absoluta de empleo (−111.862, −4,8 %) con TD 12,21 % (+1,89 pp). De los 45 años en adelante el empleo crece y la desocupación casi no se mueve.",
    "tipo": "composicion",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "td_15_24": 23.54,
     "delta_pp_td_15_24": 1.9,
@@ -282,7 +677,7 @@
    "enunciado": "Al revés del patrón que se suele suponer: la caída del empleo es de trabajadores chilenos (−27.611) mientras los extranjeros aumentaron (+11.319), su desocupación bajó a 6,47 % (−1,92 pp) y la de los chilenos subió a 9,89 % (+1,15 pp). La migración no explica el deterioro del trimestre.",
    "tipo": "brecha",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "delta_o_chilenos": -27611,
     "delta_o_extranjeros": 11319,
@@ -309,7 +704,7 @@
    "enunciado": "Fuerte dispersión territorial de la desocupación: entre 3,96 % (Aysén) y 10,96 % (Ñuble), con Biobío (10,61 %), Los Ríos (10,57 %) y O'Higgins (10,50 %) también sobre 10 %. Biobío combina la segunda tasa más alta con una caída de empleo cuatro veces la nacional en términos relativos (−19.333, −2,7 %) y participación en retroceso (−0,96 pp).",
    "tipo": "nivel",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "td_min": {
      "Aysén": 3.96,
@@ -344,7 +739,7 @@
    "enunciado": "La jornada de exactamente 45 horas siguió desapareciendo: quedan 478.956 ocupados que la declaran (−448.489, −48,4 % interanual). Los tramos de ajuste concentran el desplazamiento: 41-44 h llegó a 3.851.896 (+184.763) y 40 h exactas a 1.346.791 (+147.441, +12,3 %). El promedio de horas habituales bajó a 38,7 h (−0,83 h).",
    "tipo": "composicion",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "h_45": 478956,
     "delta_h_45": -448489,
@@ -375,7 +770,7 @@
    "enunciado": "El empleo de alta calificación cayó: el agregado CIUO G1-G3 perdió −37.055 ocupados (−1,1 %), con directivos −3,7 % y profesionales −1,3 % (técnicos planos: +0,1 %). Crecen artesanos y operarios (+54.260, +4,9 %), servicios y comercio (+23.569) y operadores de máquinas (+13.664); apoyo administrativo profundiza su caída (−7,4 %). En paralelo, el empleo con educación superior casi se estancó (+0,6 %, con universitaria en −0,3 %) y el desajuste educativo subió a 31,44 % (+0,56 pp).",
    "tipo": "composicion",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "delta_alta_calificacion_g1_g3": -37055,
     "delta_rel_g1_g3": -1.13,
@@ -408,7 +803,7 @@
    "enunciado": "Debut de la CISO-18 en las bases trimestrales del INE: la nueva clasificación identifica 729.366 contratistas dependientes — el 7,83 % de los ocupados que antes quedaba repartido, invisible, entre asalariados y cuenta propia. Según el boletín n.º 334 del INE (calculado sobre sus bases internas), esa categoría creció 6,7 % en doce meses.",
    "tipo": "nivel",
    "release": "2026-06-mjj",
-   "vigencia": "vigente",
+   "vigencia": "superado",
    "cifras": {
     "contratistas_dependientes": 729366,
     "pct_ocupados": 7.83,
@@ -747,26 +1142,28 @@
   },
   {
    "id": "h-tend-desajuste-educativo",
-   "enunciado": "La sobrecalificación aumenta de forma sostenida: la proporción de ocupados con educación superior que trabaja en ocupaciones fuera de los grandes grupos 1 a 3 de la CIUO —directivos, profesionales y técnicos de nivel medio— pasó de 27,2 % (2010) a 31,3 % (2026), con +0,85 pp solo en el último año. El mecanismo es visible: esos puestos de alta calificación quedaron planos (-0,04 % interanual) mientras el empleo con educación superior creció 2,5 %.",
+   "enunciado": "La sobrecalificación sigue subiendo y este trimestre da su mayor salto anual: la proporción de ocupados con educación superior que trabaja fuera de los grandes grupos 1 a 3 de la CIUO —directivos, profesionales y técnicos de nivel medio— pasó de 27,2 % (2010) a 32,3 % (2026), con +1,59 pp solo en el último año. El mecanismo está a la vista: los puestos de alta calificación cayeron 2,6 % mientras el empleo con educación superior bajó apenas 0,8 %.",
    "tipo": "tendencia",
-   "release": "2026-05-amj",
+   "release": "2026-07-jja",
    "vigencia": "vigente",
    "cifras": {
     "tasa_desajuste_2010": 27.15,
-    "tasa_desajuste_2020": 29.44,
-    "tasa_desajuste_2026": 31.25,
-    "delta_pp_ultimo_ano": 0.85,
-    "delta_rel_puestos_alta_calificacion": -0.04,
-    "delta_rel_o_superior": 2.47,
-    "pct_ocupados_con_superior_2010": 22.7,
-    "pct_ocupados_con_superior_2026": 42.6
+    "tasa_desajuste_2015": 27.22,
+    "tasa_desajuste_2020": 30.58,
+    "tasa_desajuste_2025": 30.66,
+    "tasa_desajuste_2026": 32.25,
+    "delta_pp_ultimo_ano": 1.59,
+    "delta_rel_puestos_alta_calificacion": -2.64,
+    "delta_rel_o_superior": -0.76,
+    "pct_ocupados_con_superior_2010": 22.69,
+    "pct_ocupados_con_superior_2026": 42.67
    },
    "evidencia_refs": [
     "evidencia/snapshot.json#/educacion/tasa_desajuste",
     "evidencia/series-nacional.json#/serie/*/desajuste_educativo"
    ],
    "confianza": "media",
-   "ventana_temporal": "AMJ 2010 → AMJ 2026 (serie anual comparable)",
+   "ventana_temporal": "JJA 2010 → JJA 2026 (serie anual comparable)",
    "caveats": [
     "recalibracion-censo-2017",
     "desajuste-es-convencion-ciuo"
@@ -775,22 +1172,26 @@
   },
   {
    "id": "h-tend-migracion-empleo",
-   "enunciado": "Entre 2010 y 2026 el empleo extranjero pasó de 115 mil ocupados (1,6 % del total) a 1,02 millones (10,8 %) —casi nueve veces—; el grueso del salto ocurrió entre 2015 y 2019, con una meseta en torno al 11 % desde 2022.",
+   "enunciado": "Entre 2010 y 2026 el empleo extranjero pasó de 117 mil ocupados (1,6 % del total) a 1,02 millones (11,0 %); el grueso del salto ocurrió entre 2015 y 2019, y desde 2022 la participación está en meseta en torno al 11 %. Este trimestre el nivel incluso retrocede levemente.",
    "tipo": "tendencia",
-   "release": "2026-05-amj",
+   "release": "2026-07-jja",
    "vigencia": "vigente",
    "cifras": {
-    "o_ext_2010": 115112,
+    "o_ext_2010": 116698,
     "peso_ext_2010_pct": 1.6,
-    "o_ext_2019": 829189,
-    "o_ext_2026": 1015767,
-    "peso_ext_2026_pct": 10.8
+    "o_ext_2015": 315325,
+    "o_ext_2019": 830990,
+    "peso_ext_2019_pct": 9.31,
+    "o_ext_2022": 975260,
+    "o_ext_2026": 1017668,
+    "peso_ext_2026_pct": 10.97,
+    "delta_o_ext_ultimo_ano": -9743
    },
    "evidencia_refs": [
     "evidencia/series-cortes.json#/cortes/nacionalidad"
    ],
    "confianza": "alta",
-   "ventana_temporal": "AMJ 2010 → AMJ 2026 (serie anual comparable)",
+   "ventana_temporal": "JJA 2010 → JJA 2026 (serie anual comparable)",
    "caveats": [
     "recalibracion-censo-2017",
     "El n muestral de extranjeros es bajo en los años tempranos (2010 n≈940), por lo que sus niveles y TD de esos años son ruidosos; la tendencia de peso, en cambio, es inequívoca."
@@ -799,24 +1200,23 @@
   },
   {
    "id": "h-tend-brecha-participacion-sexo",
-   "enunciado": "La brecha de participación entre hombres y mujeres se redujo de 27,8 pp (2010) a 17,7 pp (2026), por el alza sostenida de la participación femenina (46,0 % → 53,7 %); pese a ello, la desocupación femenina se mantuvo por sobre la masculina en todo el período.",
+   "enunciado": "La brecha de participación entre hombres y mujeres alcanzó su mínimo histórico: 17,29 pp, desde 27,09 pp en 2010, por el alza sostenida de la participación femenina (46,1 % → 53,0 %, también máximo de la serie). Pese a ello, la desocupación femenina se mantuvo por sobre la masculina en todo el período.",
    "tipo": "tendencia",
-   "release": "2026-05-amj",
+   "release": "2026-07-jja",
    "vigencia": "vigente",
    "cifras": {
-    "brecha_tp_2010": 27.8,
-    "brecha_tp_2026": 17.7,
-    "tp_mujer_2010": 46.03,
-    "tp_mujer_2026": 53.66,
-    "tp_hombre_2026": 71.32,
-    "td_mujer_2026": 10.45,
-    "td_hombre_2026": 8.65
+    "brecha_tp_2010": 27.09,
+    "brecha_tp_2026": 17.29,
+    "tp_mujer_2026": 53.03,
+    "tp_hombre_2026": 70.32,
+    "td_mujer_2026": 10.32,
+    "td_hombre_2026": 9.11
    },
    "evidencia_refs": [
     "evidencia/series-cortes.json#/cortes/sexo"
    ],
    "confianza": "alta",
-   "ventana_temporal": "AMJ 2010 → AMJ 2026 (serie anual comparable)",
+   "ventana_temporal": "JJA 2010 → JJA 2026 (serie anual comparable)",
    "caveats": [
     "recalibracion-censo-2017"
    ],
@@ -824,22 +1224,22 @@
   },
   {
    "id": "h-tend-envejecimiento-y-juvenil",
-   "enunciado": "El empleo envejece por sus extremos: los ocupados de 65 y más se duplicaron entre 2010 y 2026 (298 mil → 621 mil), mientras la desocupación juvenil (15-24) subió desde su mínimo de ~16 % (2015) hasta 23,6 % en 2026.",
+   "enunciado": "El empleo envejece por sus extremos: los ocupados de 65 y más casi se duplicaron entre 2010 y 2026 (316 mil → 602 mil), mientras la desocupación juvenil (15-24) subió desde su mínimo de 15,4 % (2015) hasta 22,8 % en 2026.",
    "tipo": "tendencia",
-   "release": "2026-05-amj",
+   "release": "2026-07-jja",
    "vigencia": "vigente",
    "cifras": {
-    "o_65_mas_2010": 297842,
-    "o_65_mas_2026": 620743,
-    "td_15_24_2015": 16.27,
-    "td_15_24_2019": 18.59,
-    "td_15_24_2026": 23.62
+    "o_65_mas_2010": 316087,
+    "o_65_mas_2026": 601999,
+    "td_15_24_2015": 15.44,
+    "td_15_24_2019": 18.88,
+    "td_15_24_2026": 22.84
    },
    "evidencia_refs": [
     "evidencia/series-cortes.json#/cortes/edad"
    ],
    "confianza": "media",
-   "ventana_temporal": "AMJ 2010 → AMJ 2026 (serie anual comparable)",
+   "ventana_temporal": "JJA 2010 → JJA 2026 (serie anual comparable)",
    "caveats": [
     "recalibracion-censo-2017",
     "El alza del empleo 65+ refleja en parte el envejecimiento de la población (más personas en ese tramo), no solo mayor actividad laboral."
