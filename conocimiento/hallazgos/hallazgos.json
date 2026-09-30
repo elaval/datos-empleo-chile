@@ -1,5 +1,5 @@
 {
- "version": "3.1",
+ "version": "3.2",
  "actualizado": "2026-09-30",
  "nota": "Hallazgos = insights CURADOS sobre la evidencia. Cada uno enlaza la evidencia que lo respalda y declara su confianza y sus caveats. Un hallazgo NO es un hecho crudo (eso está en evidencia/): es una interpretación verificable. Regla de rigor: no citar un hallazgo sin su ventana_temporal y sus caveats. El campo no_implica marca explícitamente lo que el hallazgo NO permite concluir.",
  "esquema": {
@@ -423,7 +423,7 @@
   },
   {
    "id": "h-2026-07-cae-la-alta-calificacion",
-   "enunciado": "El ajuste llegó al empleo calificado. El agregado CIUO de alta calificación (G1-G3) perdió −87.647 ocupados (−2,64 %), con directivos y gerentes −7,14 %, técnicos de nivel medio −3,13 % y profesionales −1,05 %; apoyo administrativo cae otro −7,09 %. Crecen operadores de máquinas (+2,62 %), artesanos (+1,77 %) y servicios y comercio (+1,39 %). En paralelo, y por primera vez en la serie reciente, el empleo con educación superior también cae (−30.449, −0,76 %), y la sobrecalificación salta a 32,25 % (+1,59 pp).",
+   "enunciado": "El ajuste llegó al empleo calificado. El agregado CIUO de alta calificación (G1-G3) perdió −87.647 ocupados (−2,64 %), con directivos y gerentes −7,14 %, técnicos de nivel medio −3,13 % y profesionales −1,05 %; apoyo administrativo cae otro −7,09 %. Crecen operadores de máquinas (+2,62 %), artesanos (+1,77 %) y servicios y comercio (+1,39 %). En paralelo cae también el empleo con educación superior (−30.449, −0,76 %): es su primera caída interanual desde la pandemia —la anterior fue agosto de 2020— y el primer episodio no pandémico desde 2016.",
    "tipo": "composicion",
    "release": "2026-07-jja",
    "vigencia": "vigente",
@@ -440,7 +440,16 @@
     "delta_o_superior": -30449,
     "delta_rel_o_superior": -0.76,
     "tasa_desajuste": 32.25,
-    "delta_pp_desajuste": 1.59
+    "delta_pp_desajuste": 1.59,
+    "caidas_previas_empleo_superior": {
+     "serie_agostos": [
+      {
+       "ano": 2020,
+       "delta": -139643
+      }
+     ],
+     "todos_los_trimestres": "9 trimestres en tres episodios: 2016-09 y 2016-11 (aislados), 2020-03 a 2020-08 (6 consecutivos), y 2026-07"
+    }
    },
    "evidencia_refs": [
     "evidencia/snapshot.json#/ocupacion_ciuo08",
@@ -452,7 +461,8 @@
     "recalibracion-censo-2017",
     "quiebre-serie-ciuo-2019",
     "desajuste-es-convencion-ciuo",
-    "niveles-educacion-no-cierran"
+    "niveles-educacion-no-cierran",
+    "«Primera caída desde la pandemia» se verificó contra la serie completa: el empleo con educación superior ya había caído en 2016 (dos trimestres aislados) y en 2020 (seis consecutivos). No es un hecho inédito, sino el fin de una racha de cinco años."
    ],
    "no_implica": "Un trimestre no distingue ciclo, reclasificación y cambio estructural; tampoco prueba automatización ni sustitución tecnológica del empleo calificado."
   },
