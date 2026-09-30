@@ -1,5 +1,5 @@
 {
-  "release": "2026-06-mjj",
+  "release": "2026-07-jja",
   "serie": [
     {
       "ano": 2010,
@@ -18218,6 +18218,105 @@
         "parcial_involuntario": 645465.0,
         "parcial_voluntario": 1298037.0,
         "o_declaran_horas": 9288855.0
+      }
+    },
+    {
+      "ano": 2026,
+      "mes_central": 7,
+      "trimestre": "JJA",
+      "pet": 16687796.0,
+      "ft": 10263145.0,
+      "o": 9273745.0,
+      "do": 989400.0,
+      "td": 9.64,
+      "tp": 61.5,
+      "to": 55.57,
+      "composicion_ocupados": {
+        "empleador": 297743.0,
+        "cuenta_propia": 1947191.0,
+        "asalariado_sector_privado": 5589871.0,
+        "asalariado_sector_publico": 1162750.0,
+        "servicio_domestico": 223225.0,
+        "familiar_no_remunerado": 52964.0
+      },
+      "ciso18": {
+        "empleador": 297743.0,
+        "cuenta_propia": 1653696.0,
+        "contratista_dependiente": 755419.0,
+        "asalariado_sector_privado": 5253481.0,
+        "asalariado_sector_publico": 1063638.0,
+        "servicio_domestico": 196803.0,
+        "familiar_no_remunerado": 52964.0
+      },
+      "informalidad": {
+        "o_formal": 6832768.0,
+        "o_informal": 2440977.0,
+        "toi": 26.32
+      },
+      "sexo_ocupados": {
+        "hombres": 5225603.0,
+        "mujeres": 4048142.0
+      },
+      "educacion": {
+        "sin_basica_completa": 423056.0,
+        "basica_completa": 1152490.0,
+        "media_completa": 3733686.0,
+        "superior_completa": 3957346.0
+      },
+      "educacion_superior": {
+        "cft": 235528.0,
+        "instituto_profesional": 1038057.0,
+        "universitaria": 2683761.0
+      },
+      "desajuste_educativo": {
+        "sup_en_puesto_alta_calificacion": 2681085.0,
+        "sup_en_puesto_no_alta_calificacion": 1276261.0,
+        "puestos_alta_calificacion_total": 3227472.0
+      },
+      "ocupacion_ciuo08": {
+        "g1_directivos_gerentes": 420009.0,
+        "g2_profesionales_cientificos": 1631882.0,
+        "g3_tecnicos_nivel_medio": 1175581.0,
+        "g4_apoyo_administrativo": 434576.0,
+        "g5_servicios_y_comercio": 1997770.0,
+        "g6_agropecuarios_pesqueros": 199712.0,
+        "g7_artesanos_operarios": 1135691.0,
+        "g8_operadores_maquinas": 764112.0,
+        "g9_ocupaciones_elementales": 1486006.0,
+        "g10_no_identificado": 21592.0,
+        "sin_clasificacion": 6813.0
+      },
+      "subutilizacion": {
+        "tasas": {
+          "su1": 9.91,
+          "su2": 16.25,
+          "su3": 17.66,
+          "su4": 23.45,
+          "tpl": 17.34
+        },
+        "componentes": {
+          "desocupados": 989400.0,
+          "iniciadores_disponibles": 31045.0,
+          "parcial_involuntario": 651821.0,
+          "fuerza_trabajo_potencial": 969091.0,
+          "ocupados_que_buscaron_empleo": 764734.0,
+          "fuerza_trabajo": 10263145.0,
+          "fuerza_trabajo_ampliada": 11263281.0
+        }
+      },
+      "jornada": {
+        "tramos": {
+          "h_1_30": 1979154.0,
+          "h_31_39": 388867.0,
+          "h_40": 1393791.0,
+          "h_41_44": 3795523.0,
+          "h_45": 462644.0,
+          "h_46_mas": 1229781.0
+        },
+        "promedio_horas_habituales": 38.65,
+        "parcial_involuntario": 651821.0,
+        "parcial_voluntario": 1289227.0,
+        "o_declaran_horas": 9249760.0
       }
     }
   ]

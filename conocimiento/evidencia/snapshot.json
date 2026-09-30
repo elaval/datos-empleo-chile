@@ -1,77 +1,77 @@
 {
-  "release": "2026-06-mjj",
-  "generado": "2026-09-01",
+  "release": "2026-07-jja",
+  "generado": "2026-09-30",
   "fuente_metodologia": "conocimiento/metodologia.md",
   "periodo": {
     "ano": 2026,
-    "mes_central": 6,
-    "trimestre": "MJJ",
-    "etiqueta": "mayo-junio-julio 2026",
-    "comparacion": "MJJ 2025"
+    "mes_central": 7,
+    "trimestre": "JJA",
+    "etiqueta": "junio-julio-agosto 2026",
+    "comparacion": "JJA 2025"
   },
   "nacional": {
-    "pet": 16675906.0,
-    "ft": 10295061.0,
-    "o": 9314017.0,
-    "do": 981044.0,
-    "td": 9.53,
-    "tp": 61.74,
-    "to": 55.85,
+    "pet": 16687796.0,
+    "ft": 10263145.0,
+    "o": 9273745.0,
+    "do": 989400.0,
+    "td": 9.64,
+    "tp": 61.5,
+    "to": 55.57,
     "delta_yoy": {
-      "delta_pet": 144948.0,
-      "delta_rel_pet": 0.88,
-      "delta_ft": 75779.0,
-      "delta_rel_ft": 0.74,
-      "delta_o": -16292.0,
-      "delta_rel_o": -0.17,
-      "delta_do": 92071.0,
-      "delta_rel_do": 10.36,
-      "delta_pp_td": 0.83,
-      "delta_pp_tp": -0.08,
-      "delta_pp_to": -0.59
+      "delta_pet": 144614.0,
+      "delta_rel_pet": 0.87,
+      "delta_ft": 32160.0,
+      "delta_rel_ft": 0.31,
+      "delta_o": -81352.0,
+      "delta_rel_o": -0.87,
+      "delta_do": 113512.0,
+      "delta_rel_do": 12.96,
+      "delta_pp_td": 1.08,
+      "delta_pp_tp": -0.34,
+      "delta_pp_to": -0.98
     }
   },
   "composicion_ocupados": {
     "empleador": {
-      "o": 301627.0,
-      "delta_o": 24607.0,
-      "delta_rel_o": 8.88
+      "o": 297743.0,
+      "delta_o": 16704.0,
+      "delta_rel_o": 5.94
     },
     "cuenta_propia": {
-      "o": 1969340.0,
-      "delta_o": 102971.0,
-      "delta_rel_o": 5.52
+      "o": 1947191.0,
+      "delta_o": 57893.0,
+      "delta_rel_o": 3.06
     },
     "asalariado_sector_privado": {
-      "o": 5598984.0,
-      "delta_o": -136385.0,
-      "delta_rel_o": -2.38
+      "o": 5589871.0,
+      "delta_o": -144548.0,
+      "delta_rel_o": -2.52
     },
     "asalariado_sector_publico": {
-      "o": 1177220.0,
-      "delta_o": -3480.0,
-      "delta_rel_o": -0.29
+      "o": 1162750.0,
+      "delta_o": -29451.0,
+      "delta_rel_o": -2.47
     },
     "servicio_domestico": {
-      "o": 215391.0,
-      "delta_o": -303.0,
-      "delta_rel_o": -0.14
+      "o": 223225.0,
+      "delta_o": 20262.0,
+      "delta_rel_o": 9.98
     },
     "familiar_no_remunerado": {
-      "o": 51454.0,
-      "delta_o": -3702.0,
-      "delta_rel_o": -6.71
+      "o": 52964.0,
+      "delta_o": -2213.0,
+      "delta_rel_o": -4.01
     },
     "_agregados": {
       "asalariados": {
-        "o": 6776204.0,
-        "delta_o": -139865.0,
-        "delta_rel_o": -2.02
+        "o": 6752621.0,
+        "delta_o": -173999.0,
+        "delta_rel_o": -2.51
       },
       "independientes": {
-        "o": 2270967.0,
-        "delta_o": 127578.0,
-        "delta_rel_o": 5.95
+        "o": 2244934.0,
+        "delta_o": 74597.0,
+        "delta_rel_o": 3.44
       }
     }
   },
@@ -79,119 +79,119 @@
     "nota": "Clasificación CISO-18 (segundo nivel). Publicada por el INE en las bases trimestrales desde AMJ 2026: no hay serie previa reproducible desde microdatos públicos, y NO es comparable con composicion_ocupados (CISE-93). Ver ADR-0002.",
     "categorias": {
       "empleador": {
-        "o": 301627.0,
-        "pct_ocupados": 3.24
+        "o": 297743.0,
+        "pct_ocupados": 3.21
       },
       "cuenta_propia": {
-        "o": 1677235.0,
-        "pct_ocupados": 18.01
+        "o": 1653696.0,
+        "pct_ocupados": 17.83
       },
       "contratista_dependiente": {
-        "o": 729366.0,
-        "pct_ocupados": 7.83
+        "o": 755419.0,
+        "pct_ocupados": 8.15
       },
       "asalariado_sector_privado": {
-        "o": 5287184.0,
-        "pct_ocupados": 56.77
+        "o": 5253481.0,
+        "pct_ocupados": 56.65
       },
       "asalariado_sector_publico": {
-        "o": 1074711.0,
-        "pct_ocupados": 11.54
+        "o": 1063638.0,
+        "pct_ocupados": 11.47
       },
       "servicio_domestico": {
-        "o": 192439.0,
-        "pct_ocupados": 2.07
+        "o": 196803.0,
+        "pct_ocupados": 2.12
       },
       "familiar_no_remunerado": {
-        "o": 51454.0,
-        "pct_ocupados": 0.55
+        "o": 52964.0,
+        "pct_ocupados": 0.57
       }
     }
   },
   "formalidad": {
     "o_formal": {
-      "o": 6846845.0,
-      "delta_o": -54059.0,
-      "delta_rel_o": -0.78
+      "o": 6832768.0,
+      "delta_o": -88124.0,
+      "delta_rel_o": -1.27
     },
     "o_informal": {
-      "o": 2467172.0,
-      "delta_o": 37767.0,
-      "delta_rel_o": 1.55
+      "o": 2440977.0,
+      "delta_o": 6771.0,
+      "delta_rel_o": 0.28
     },
     "tasa_ocupacion_informal": {
-      "toi": 26.49,
-      "delta_pp": 0.45
+      "toi": 26.32,
+      "delta_pp": 0.3
     }
   },
   "educacion": {
     "por_nivel": {
       "sin_basica_completa": {
-        "o": 424797.0,
-        "delta_o": -29208.0,
-        "delta_rel_o": -6.43
+        "o": 423056.0,
+        "delta_o": -20751.0,
+        "delta_rel_o": -4.68
       },
       "basica_completa": {
-        "o": 1158193.0,
-        "delta_o": 21814.0,
-        "delta_rel_o": 1.92
+        "o": 1152490.0,
+        "delta_o": 18246.0,
+        "delta_rel_o": 1.61
       },
       "media_completa": {
-        "o": 3747064.0,
-        "delta_o": -33725.0,
-        "delta_rel_o": -0.89
+        "o": 3733686.0,
+        "delta_o": -49679.0,
+        "delta_rel_o": -1.31
       },
       "superior_completa": {
-        "o": 3977401.0,
-        "delta_o": 24022.0,
-        "delta_rel_o": 0.61
+        "o": 3957346.0,
+        "delta_o": -30449.0,
+        "delta_rel_o": -0.76
       }
     },
     "superior_por_tipo": {
       "cft": {
-        "o": 237564.0,
-        "delta_o": 5907.0,
-        "delta_rel_o": 2.55
+        "o": 235528.0,
+        "delta_o": -5455.0,
+        "delta_rel_o": -2.26
       },
       "instituto_profesional": {
-        "o": 1051541.0,
-        "delta_o": 25071.0,
-        "delta_rel_o": 2.44
+        "o": 1038057.0,
+        "delta_o": -17588.0,
+        "delta_rel_o": -1.67
       },
       "universitaria": {
-        "o": 2688297.0,
-        "delta_o": -6955.0,
-        "delta_rel_o": -0.26
+        "o": 2683761.0,
+        "delta_o": -7406.0,
+        "delta_rel_o": -0.28
       }
     },
     "desajuste": {
       "sup_en_puesto_alta_calificacion": {
-        "o": 2726949.0,
-        "delta_o": -5673.0,
-        "delta_rel_o": -0.21
+        "o": 2681085.0,
+        "delta_o": -84051.0,
+        "delta_rel_o": -3.04
       },
       "sup_en_puesto_no_alta_calificacion": {
-        "o": 1250452.0,
-        "delta_o": 29695.0,
-        "delta_rel_o": 2.43
+        "o": 1276261.0,
+        "delta_o": 53601.0,
+        "delta_rel_o": 4.38
       },
       "puestos_alta_calificacion_total": {
-        "o": 3254762.0,
-        "delta_o": -37055.0,
-        "delta_rel_o": -1.13
+        "o": 3227472.0,
+        "delta_o": -87648.0,
+        "delta_rel_o": -2.64
       }
     },
     "tasa_desajuste": {
       "definicion": "% de los ocupados con educación superior completa que trabaja en un puesto que NO es de alta calificación (CIUO).",
-      "valor": 31.44,
-      "delta_pp": 0.56
+      "valor": 32.25,
+      "delta_pp": 1.59
     },
     "_cobertura": {
-      "suma_niveles": 9307455.0,
-      "ocupados": 9314017.0,
-      "sin_dato_de_nivel": 6562.0,
-      "sin_dato_de_nivel_previo": 5757.0,
-      "delta_sin_dato_de_nivel": 805.0
+      "suma_niveles": 9266578.0,
+      "ocupados": 9273745.0,
+      "sin_dato_de_nivel": 7167.0,
+      "sin_dato_de_nivel_previo": 5886.0,
+      "delta_sin_dato_de_nivel": 1281.0
     }
   },
   "subutilizacion": {
@@ -199,119 +199,119 @@
     "tasas": {
       "su1": {
         "etiqueta": "SU1 · TD + iniciadores disponibles",
-        "valor": 9.79,
-        "delta_pp": 0.84
+        "valor": 9.91,
+        "delta_pp": 1.07
       },
       "su2": {
         "etiqueta": "SU2 · SU1 + subempleo por horas",
-        "valor": 16.04,
-        "delta_pp": 1.4
+        "valor": 16.25,
+        "delta_pp": 1.47
       },
       "su3": {
         "etiqueta": "SU3 · SU1 + fuerza de trabajo potencial",
-        "valor": 17.39,
-        "delta_pp": 0.71
+        "valor": 17.66,
+        "delta_pp": 1.19
       },
       "su4": {
         "etiqueta": "SU4 · SU1 + subempleo por horas + potencial",
-        "valor": 23.12,
-        "delta_pp": 1.23
+        "valor": 23.45,
+        "delta_pp": 1.54
       },
       "tpl": {
         "etiqueta": "Presión laboral · SU1 + ocupados que buscan otro empleo",
-        "valor": 17.1,
-        "delta_pp": 1.44
+        "valor": 17.34,
+        "delta_pp": 1.69
       }
     },
     "componentes": {
       "desocupados": {
-        "o": 981044.0,
-        "delta_o": 92071.0,
-        "delta_rel_o": 10.36
+        "o": 989400.0,
+        "delta_o": 113512.0,
+        "delta_rel_o": 12.96
       },
       "iniciadores_disponibles": {
-        "o": 29958.0,
-        "delta_o": 2066.0,
-        "delta_rel_o": 7.41
+        "o": 31045.0,
+        "delta_o": -308.0,
+        "delta_rel_o": -0.98
       },
       "parcial_involuntario": {
-        "o": 645465.0,
-        "delta_o": 62028.0,
-        "delta_rel_o": 10.63
+        "o": 651821.0,
+        "delta_o": 42261.0,
+        "delta_rel_o": 6.93
       },
       "fuerza_trabajo_potencial": {
-        "o": 949914.0,
-        "delta_o": -935.0,
-        "delta_rel_o": -0.1
+        "o": 969091.0,
+        "delta_o": 32067.0,
+        "delta_rel_o": 3.42
       },
       "ocupados_que_buscaron_empleo": {
-        "o": 754205.0,
-        "delta_o": 66036.0,
-        "delta_rel_o": 9.6
+        "o": 764734.0,
+        "delta_o": 65724.0,
+        "delta_rel_o": 9.4
       },
       "fuerza_trabajo": {
-        "o": 10295061.0,
-        "delta_o": 75779.0,
-        "delta_rel_o": 0.74
+        "o": 10263145.0,
+        "delta_o": 32160.0,
+        "delta_rel_o": 0.31
       },
       "fuerza_trabajo_ampliada": {
-        "o": 11274932.0,
-        "delta_o": 76908.0,
-        "delta_rel_o": 0.69
+        "o": 11263281.0,
+        "delta_o": 63919.0,
+        "delta_rel_o": 0.57
       }
     },
     "referencia_td": {
-      "valor": 9.53,
-      "delta_pp": 0.83
+      "valor": 9.64,
+      "delta_pp": 1.08
     }
   },
   "jornada": {
     "tramos": {
       "h_1_30": {
-        "o": 1982611.0,
-        "delta_o": 114252.0,
-        "delta_rel_o": 6.12
+        "o": 1979154.0,
+        "delta_o": 62858.0,
+        "delta_rel_o": 3.28
       },
       "h_31_39": {
-        "o": 402559.0,
-        "delta_o": 16381.0,
-        "delta_rel_o": 4.24
+        "o": 388867.0,
+        "delta_o": 9091.0,
+        "delta_rel_o": 2.39
       },
       "h_40": {
-        "o": 1346791.0,
-        "delta_o": 147441.0,
-        "delta_rel_o": 12.29
+        "o": 1393791.0,
+        "delta_o": 200516.0,
+        "delta_rel_o": 16.8
       },
       "h_41_44": {
-        "o": 3851896.0,
-        "delta_o": 184763.0,
-        "delta_rel_o": 5.04
+        "o": 3795523.0,
+        "delta_o": 49079.0,
+        "delta_rel_o": 1.31
       },
       "h_45": {
-        "o": 478956.0,
-        "delta_o": -448489.0,
-        "delta_rel_o": -48.36
+        "o": 462644.0,
+        "delta_o": -386124.0,
+        "delta_rel_o": -45.49
       },
       "h_46_mas": {
-        "o": 1226041.0,
-        "delta_o": -29047.0,
-        "delta_rel_o": -2.31
+        "o": 1229781.0,
+        "delta_o": -12414.0,
+        "delta_rel_o": -1.0
       }
     },
     "promedio_horas_habituales": {
-      "valor": 38.7,
-      "delta": -0.83
+      "valor": 38.65,
+      "delta": -0.77
     },
     "parcial": {
       "involuntario": {
-        "o": 645465.0,
-        "delta_o": 62028.0,
-        "delta_rel_o": 10.63
+        "o": 651821.0,
+        "delta_o": 42261.0,
+        "delta_rel_o": 6.93
       },
       "voluntario": {
-        "o": 1298037.0,
-        "delta_o": 53291.0,
-        "delta_rel_o": 4.28
+        "o": 1289227.0,
+        "delta_o": 18473.0,
+        "delta_rel_o": 1.45
       }
     },
     "contexto_legal": {
@@ -324,12 +324,12 @@
       "nota": "El trimestre AMJ 2026 capta solo parcialmente la fase de 42 h, vigente desde el 26 de abril de 2026: dos de sus tres meses son posteriores."
     },
     "_cobertura": {
-      "suma_tramos": 9288854.0,
-      "o_declaran_horas": 9288855.0,
-      "ocupados": 9314017.0,
-      "no_declaran_horas": 25162.0,
-      "no_declaran_horas_previo": 26756.0,
-      "delta_no_declaran_horas": -1594.0
+      "suma_tramos": 9249760.0,
+      "o_declaran_horas": 9249760.0,
+      "ocupados": 9273745.0,
+      "no_declaran_horas": 23985.0,
+      "no_declaran_horas_previo": 28343.0,
+      "delta_no_declaran_horas": -4358.0
     }
   },
   "ocupacion_ciuo08": {
@@ -339,77 +339,77 @@
     "grupos": {
       "g1_directivos_gerentes": {
         "etiqueta": "G1 Directivos y gerentes",
-        "o": 439930.0,
-        "delta_o": -16740.0,
-        "delta_rel_o": -3.67
+        "o": 420009.0,
+        "delta_o": -32293.0,
+        "delta_rel_o": -7.14
       },
       "g2_profesionales_cientificos": {
         "etiqueta": "G2 Profesionales y científicos",
-        "o": 1623169.0,
-        "delta_o": -21523.0,
-        "delta_rel_o": -1.31
+        "o": 1631882.0,
+        "delta_o": -17357.0,
+        "delta_rel_o": -1.05
       },
       "g3_tecnicos_nivel_medio": {
         "etiqueta": "G3 Técnicos de nivel medio",
-        "o": 1191663.0,
-        "delta_o": 1208.0,
-        "delta_rel_o": 0.1
+        "o": 1175581.0,
+        "delta_o": -37997.0,
+        "delta_rel_o": -3.13
       },
       "g4_apoyo_administrativo": {
         "etiqueta": "G4 Apoyo administrativo",
-        "o": 439632.0,
-        "delta_o": -34937.0,
-        "delta_rel_o": -7.36
+        "o": 434576.0,
+        "delta_o": -33172.0,
+        "delta_rel_o": -7.09
       },
       "g5_servicios_y_comercio": {
         "etiqueta": "G5 Servicios y comercio",
-        "o": 2001981.0,
-        "delta_o": 23569.0,
-        "delta_rel_o": 1.19
+        "o": 1997770.0,
+        "delta_o": 27295.0,
+        "delta_rel_o": 1.39
       },
       "g6_agropecuarios_pesqueros": {
         "etiqueta": "G6 Agropecuarios y pesqueros",
-        "o": 201874.0,
-        "delta_o": -15217.0,
-        "delta_rel_o": -7.01
+        "o": 199712.0,
+        "delta_o": -9088.0,
+        "delta_rel_o": -4.35
       },
       "g7_artesanos_operarios": {
         "etiqueta": "G7 Artesanos y operarios",
-        "o": 1158411.0,
-        "delta_o": 54260.0,
-        "delta_rel_o": 4.91
+        "o": 1135691.0,
+        "delta_o": 19745.0,
+        "delta_rel_o": 1.77
       },
       "g8_operadores_maquinas": {
         "etiqueta": "G8 Operadores de máquinas",
-        "o": 749469.0,
-        "delta_o": 13664.0,
-        "delta_rel_o": 1.86
+        "o": 764112.0,
+        "delta_o": 19508.0,
+        "delta_rel_o": 2.62
       },
       "g9_ocupaciones_elementales": {
         "etiqueta": "G9 Ocupaciones elementales",
-        "o": 1480188.0,
-        "delta_o": -21562.0,
-        "delta_rel_o": -1.44
+        "o": 1486006.0,
+        "delta_o": -15515.0,
+        "delta_rel_o": -1.03
       },
       "g10_no_identificado": {
         "etiqueta": "G10 No identificado",
-        "o": 23662.0,
-        "delta_o": 1016.0,
-        "delta_rel_o": 4.49
+        "o": 21592.0,
+        "delta_o": -4982.0,
+        "delta_rel_o": -18.75
       },
       "sin_clasificacion": {
         "etiqueta": "Sin clasificación / NS-NR",
-        "o": 4038.0,
-        "delta_o": -30.0,
-        "delta_rel_o": -0.74
+        "o": 6813.0,
+        "delta_o": 2504.0,
+        "delta_rel_o": 58.11
       }
     },
     "_agregados": {
       "alta_calificacion_g1_g3": {
         "nota": "Suma de G1-G3: es el mismo agregado que usa el desajuste educativo.",
-        "o": 3254762.0,
-        "delta_o": -37055.0,
-        "delta_rel_o": -1.13
+        "o": 3227472.0,
+        "delta_o": -87647.0,
+        "delta_rel_o": -2.64
       }
     }
   },
@@ -419,50 +419,50 @@
       "grupos": [
         {
           "clave": "Hombre",
-          "n": 38349,
-          "pet": 8169575.0,
-          "ft": 5768244.0,
-          "o": 5252914.0,
-          "do": 515330.0,
-          "td": 8.93,
-          "tp": 70.61,
-          "to": 64.3,
+          "n": 38277,
+          "pet": 8175550.0,
+          "ft": 5749390.0,
+          "o": 5225603.0,
+          "do": 523786.0,
+          "td": 9.11,
+          "tp": 70.32,
+          "to": 63.92,
           "delta_yoy": {
-            "delta_pet": 71724.0,
-            "delta_rel_pet": 0.89,
-            "delta_ft": 1221.0,
-            "delta_rel_ft": 0.02,
-            "delta_o": -57781.0,
-            "delta_rel_o": -1.09,
-            "delta_do": 59002.0,
-            "delta_rel_do": 12.93,
-            "delta_pp_td": 1.02,
-            "delta_pp_tp": -0.61,
-            "delta_pp_to": -1.28
+            "delta_pet": 71615.0,
+            "delta_rel_pet": 0.88,
+            "delta_ft": -27656.0,
+            "delta_rel_ft": -0.48,
+            "delta_o": -90638.0,
+            "delta_rel_o": -1.7,
+            "delta_do": 62981.0,
+            "delta_rel_do": 13.67,
+            "delta_pp_td": 1.13,
+            "delta_pp_tp": -0.97,
+            "delta_pp_to": -1.68
           }
         },
         {
           "clave": "Mujer",
-          "n": 44292,
-          "pet": 8506331.0,
-          "ft": 4526817.0,
-          "o": 4061103.0,
-          "do": 465714.0,
-          "td": 10.29,
-          "tp": 53.22,
-          "to": 47.74,
+          "n": 44114,
+          "pet": 8512246.0,
+          "ft": 4513756.0,
+          "o": 4048142.0,
+          "do": 465613.0,
+          "td": 10.32,
+          "tp": 53.03,
+          "to": 47.56,
           "delta_yoy": {
-            "delta_pet": 73224.0,
-            "delta_rel_pet": 0.87,
-            "delta_ft": 74558.0,
-            "delta_rel_ft": 1.67,
-            "delta_o": 41489.0,
-            "delta_rel_o": 1.03,
-            "delta_do": 33069.0,
-            "delta_rel_do": 7.64,
-            "delta_pp_td": 0.57,
-            "delta_pp_tp": 0.42,
-            "delta_pp_to": 0.08
+            "delta_pet": 72999.0,
+            "delta_rel_pet": 0.86,
+            "delta_ft": 59817.0,
+            "delta_rel_ft": 1.34,
+            "delta_o": 9285.0,
+            "delta_rel_o": 0.23,
+            "delta_do": 50530.0,
+            "delta_rel_do": 12.17,
+            "delta_pp_td": 1.0,
+            "delta_pp_tp": 0.25,
+            "delta_pp_to": -0.3
           }
         }
       ]
@@ -472,146 +472,146 @@
       "grupos": [
         {
           "clave": "15-24",
-          "n": 13246,
-          "pet": 2537731.0,
-          "ft": 710739.0,
-          "o": 543405.0,
-          "do": 167334.0,
-          "td": 23.54,
-          "tp": 28.01,
-          "to": 21.41,
+          "n": 13175,
+          "pet": 2537414.0,
+          "ft": 716489.0,
+          "o": 552875.0,
+          "do": 163615.0,
+          "td": 22.84,
+          "tp": 28.24,
+          "to": 21.79,
           "delta_yoy": {
-            "delta_pet": -5362.0,
-            "delta_rel_pet": -0.21,
-            "delta_ft": -12313.0,
-            "delta_rel_ft": -1.7,
-            "delta_o": -23187.0,
-            "delta_rel_o": -4.09,
-            "delta_do": 10874.0,
-            "delta_rel_do": 6.95,
-            "delta_pp_td": 1.9,
-            "delta_pp_tp": -0.42,
-            "delta_pp_to": -0.87
+            "delta_pet": -4957.0,
+            "delta_rel_pet": -0.19,
+            "delta_ft": -13684.0,
+            "delta_rel_ft": -1.87,
+            "delta_o": -28676.0,
+            "delta_rel_o": -4.93,
+            "delta_do": 14994.0,
+            "delta_rel_do": 10.09,
+            "delta_pp_td": 2.49,
+            "delta_pp_tp": -0.48,
+            "delta_pp_to": -1.08
           }
         },
         {
           "clave": "25-34",
-          "n": 12217,
-          "pet": 3070459.0,
-          "ft": 2540406.0,
-          "o": 2230272.0,
-          "do": 310134.0,
-          "td": 12.21,
-          "tp": 82.74,
-          "to": 72.64,
+          "n": 12163,
+          "pet": 3063779.0,
+          "ft": 2532445.0,
+          "o": 2223912.0,
+          "do": 308533.0,
+          "td": 12.18,
+          "tp": 82.66,
+          "to": 72.59,
           "delta_yoy": {
-            "delta_pet": -79125.0,
-            "delta_rel_pet": -2.51,
-            "delta_ft": -71239.0,
-            "delta_rel_ft": -2.73,
-            "delta_o": -111862.0,
-            "delta_rel_o": -4.78,
-            "delta_do": 40623.0,
-            "delta_rel_do": 15.07,
-            "delta_pp_td": 1.89,
-            "delta_pp_tp": -0.18,
-            "delta_pp_to": -1.72
+            "delta_pet": -79659.0,
+            "delta_rel_pet": -2.53,
+            "delta_ft": -68019.0,
+            "delta_rel_ft": -2.62,
+            "delta_o": -119037.0,
+            "delta_rel_o": -5.08,
+            "delta_do": 51018.0,
+            "delta_rel_do": 19.81,
+            "delta_pp_td": 2.28,
+            "delta_pp_tp": -0.07,
+            "delta_pp_to": -1.94
           }
         },
         {
           "clave": "35-44",
-          "n": 12685,
-          "pet": 3117836.0,
-          "ft": 2686382.0,
-          "o": 2479078.0,
-          "do": 207304.0,
-          "td": 7.72,
-          "tp": 86.16,
-          "to": 79.51,
+          "n": 12616,
+          "pet": 3122991.0,
+          "ft": 2675502.0,
+          "o": 2460625.0,
+          "do": 214876.0,
+          "td": 8.03,
+          "tp": 85.67,
+          "to": 78.79,
           "delta_yoy": {
-            "delta_pet": 68764.0,
-            "delta_rel_pet": 2.26,
-            "delta_ft": 73570.0,
-            "delta_rel_ft": 2.82,
-            "delta_o": 37579.0,
-            "delta_rel_o": 1.54,
-            "delta_do": 35990.0,
-            "delta_rel_do": 21.01,
-            "delta_pp_td": 1.16,
-            "delta_pp_tp": 0.47,
-            "delta_pp_to": -0.56
+            "delta_pet": 68142.0,
+            "delta_rel_pet": 2.23,
+            "delta_ft": 59841.0,
+            "delta_rel_ft": 2.29,
+            "delta_o": 20825.0,
+            "delta_rel_o": 0.85,
+            "delta_do": 39015.0,
+            "delta_rel_do": 22.19,
+            "delta_pp_td": 1.31,
+            "delta_pp_tp": 0.05,
+            "delta_pp_to": -1.08
           }
         },
         {
           "clave": "45-54",
-          "n": 12360,
-          "pet": 2634166.0,
-          "ft": 2131550.0,
-          "o": 1977060.0,
-          "do": 154490.0,
-          "td": 7.25,
-          "tp": 80.92,
-          "to": 75.05,
+          "n": 12313,
+          "pet": 2637004.0,
+          "ft": 2125692.0,
+          "o": 1965061.0,
+          "do": 160631.0,
+          "td": 7.56,
+          "tp": 80.61,
+          "to": 74.52,
           "delta_yoy": {
-            "delta_pet": 31335.0,
-            "delta_rel_pet": 1.2,
-            "delta_ft": 30566.0,
-            "delta_rel_ft": 1.45,
-            "delta_o": 36700.0,
-            "delta_rel_o": 1.89,
-            "delta_do": -6134.0,
-            "delta_rel_do": -3.82,
-            "delta_pp_td": -0.4,
-            "delta_pp_tp": 0.2,
-            "delta_pp_to": 0.5
+            "delta_pet": 31838.0,
+            "delta_rel_pet": 1.22,
+            "delta_ft": 23605.0,
+            "delta_rel_ft": 1.12,
+            "delta_o": 23115.0,
+            "delta_rel_o": 1.19,
+            "delta_do": 490.0,
+            "delta_rel_do": 0.31,
+            "delta_pp_td": -0.06,
+            "delta_pp_tp": -0.08,
+            "delta_pp_to": -0.02
           }
         },
         {
           "clave": "55-64",
-          "n": 13513,
-          "pet": 2334301.0,
-          "ft": 1587110.0,
-          "o": 1473352.0,
-          "do": 113758.0,
-          "td": 7.17,
-          "tp": 67.99,
-          "to": 63.12,
+          "n": 13521,
+          "pet": 2335785.0,
+          "ft": 1581151.0,
+          "o": 1469273.0,
+          "do": 111877.0,
+          "td": 7.08,
+          "tp": 67.69,
+          "to": 62.9,
           "delta_yoy": {
-            "delta_pet": 19627.0,
-            "delta_rel_pet": 0.85,
-            "delta_ft": 24593.0,
-            "delta_rel_ft": 1.57,
-            "delta_o": 12652.0,
-            "delta_rel_o": 0.87,
-            "delta_do": 11941.0,
-            "delta_rel_do": 11.73,
-            "delta_pp_td": 0.65,
-            "delta_pp_tp": 0.49,
-            "delta_pp_to": 0.01
+            "delta_pet": 19263.0,
+            "delta_rel_pet": 0.83,
+            "delta_ft": 13235.0,
+            "delta_rel_ft": 0.84,
+            "delta_o": 5420.0,
+            "delta_rel_o": 0.37,
+            "delta_do": 7813.0,
+            "delta_rel_do": 7.51,
+            "delta_pp_td": 0.44,
+            "delta_pp_tp": 0.01,
+            "delta_pp_to": -0.29
           }
         },
         {
           "clave": "65 y más",
-          "n": 18620,
-          "pet": 2981413.0,
-          "ft": 638873.0,
-          "o": 610850.0,
-          "do": 28023.0,
-          "td": 4.39,
-          "tp": 21.43,
-          "to": 20.49,
+          "n": 18603,
+          "pet": 2990823.0,
+          "ft": 631867.0,
+          "o": 601999.0,
+          "do": 29868.0,
+          "td": 4.73,
+          "tp": 21.13,
+          "to": 20.13,
           "delta_yoy": {
-            "delta_pet": 109709.0,
+            "delta_pet": 109987.0,
             "delta_rel_pet": 3.82,
-            "delta_ft": 30601.0,
-            "delta_rel_ft": 5.03,
-            "delta_o": 31825.0,
-            "delta_rel_o": 5.5,
-            "delta_do": -1224.0,
-            "delta_rel_do": -4.19,
-            "delta_pp_td": -0.42,
-            "delta_pp_tp": 0.25,
-            "delta_pp_to": 0.33
+            "delta_ft": 17183.0,
+            "delta_rel_ft": 2.8,
+            "delta_o": 17000.0,
+            "delta_rel_o": 2.91,
+            "delta_do": 182.0,
+            "delta_rel_do": 0.61,
+            "delta_pp_td": -0.1,
+            "delta_pp_tp": -0.21,
+            "delta_pp_to": -0.18
           }
         }
       ]
@@ -621,386 +621,386 @@
       "grupos": [
         {
           "clave": "Antofagasta",
-          "n": 3078,
-          "pet": 585077.0,
-          "ft": 391647.0,
-          "o": 366111.0,
-          "do": 25536.0,
-          "td": 6.52,
-          "tp": 66.94,
-          "to": 62.57,
+          "n": 3102,
+          "pet": 585494.0,
+          "ft": 385629.0,
+          "o": 361209.0,
+          "do": 24420.0,
+          "td": 6.33,
+          "tp": 65.86,
+          "to": 61.69,
           "delta_yoy": {
-            "delta_pet": 5197.0,
-            "delta_rel_pet": 0.9,
-            "delta_ft": 303.0,
-            "delta_rel_ft": 0.08,
-            "delta_o": 1131.0,
-            "delta_rel_o": 0.31,
-            "delta_do": -828.0,
-            "delta_rel_do": -3.14,
-            "delta_pp_td": -0.22,
-            "delta_pp_tp": -0.55,
-            "delta_pp_to": -0.37
+            "delta_pet": 5178.0,
+            "delta_rel_pet": 0.89,
+            "delta_ft": -3008.0,
+            "delta_rel_ft": -0.77,
+            "delta_o": -1292.0,
+            "delta_rel_o": -0.36,
+            "delta_do": -1716.0,
+            "delta_rel_do": -6.57,
+            "delta_pp_td": -0.4,
+            "delta_pp_tp": -1.11,
+            "delta_pp_to": -0.78
           }
         },
         {
           "clave": "Arica y Parinacota",
-          "n": 2322,
-          "pet": 215339.0,
-          "ft": 129617.0,
-          "o": 116649.0,
-          "do": 12968.0,
-          "td": 10.0,
-          "tp": 60.19,
-          "to": 54.17,
+          "n": 2289,
+          "pet": 215540.0,
+          "ft": 130175.0,
+          "o": 117893.0,
+          "do": 12282.0,
+          "td": 9.43,
+          "tp": 60.39,
+          "to": 54.7,
           "delta_yoy": {
-            "delta_pet": 2641.0,
-            "delta_rel_pet": 1.24,
-            "delta_ft": 2536.0,
-            "delta_rel_ft": 2.0,
-            "delta_o": -2437.0,
-            "delta_rel_o": -2.05,
-            "delta_do": 4973.0,
-            "delta_rel_do": 62.2,
-            "delta_pp_td": 3.71,
-            "delta_pp_tp": 0.44,
-            "delta_pp_to": -1.82
+            "delta_pet": 2629.0,
+            "delta_rel_pet": 1.23,
+            "delta_ft": 3875.0,
+            "delta_rel_ft": 3.07,
+            "delta_o": -8.0,
+            "delta_rel_o": -0.01,
+            "delta_do": 3883.0,
+            "delta_rel_do": 46.23,
+            "delta_pp_td": 2.78,
+            "delta_pp_tp": 1.07,
+            "delta_pp_to": -0.68
           }
         },
         {
           "clave": "Atacama",
           "n": 2855,
-          "pet": 256447.0,
-          "ft": 169750.0,
-          "o": 154221.0,
-          "do": 15529.0,
-          "td": 9.15,
-          "tp": 66.19,
-          "to": 60.14,
+          "pet": 256621.0,
+          "ft": 168973.0,
+          "o": 152987.0,
+          "do": 15986.0,
+          "td": 9.46,
+          "tp": 65.85,
+          "to": 59.62,
           "delta_yoy": {
-            "delta_pet": 2143.0,
+            "delta_pet": 2133.0,
             "delta_rel_pet": 0.84,
-            "delta_ft": 2041.0,
-            "delta_rel_ft": 1.22,
-            "delta_o": 2520.0,
-            "delta_rel_o": 1.66,
-            "delta_do": -480.0,
-            "delta_rel_do": -3.0,
-            "delta_pp_td": -0.4,
-            "delta_pp_tp": 0.24,
-            "delta_pp_to": 0.49
+            "delta_ft": 2361.0,
+            "delta_rel_ft": 1.42,
+            "delta_o": 1849.0,
+            "delta_rel_o": 1.22,
+            "delta_do": 512.0,
+            "delta_rel_do": 3.31,
+            "delta_pp_td": 0.17,
+            "delta_pp_tp": 0.38,
+            "delta_pp_to": 0.23
           }
         },
         {
           "clave": "Aysén",
-          "n": 1731,
-          "pet": 88056.0,
-          "ft": 58827.0,
-          "o": 56500.0,
-          "do": 2327.0,
-          "td": 3.96,
-          "tp": 66.81,
-          "to": 64.16,
+          "n": 1700,
+          "pet": 88104.0,
+          "ft": 59449.0,
+          "o": 57063.0,
+          "do": 2386.0,
+          "td": 4.01,
+          "tp": 67.48,
+          "to": 64.77,
           "delta_yoy": {
             "delta_pet": 623.0,
             "delta_rel_pet": 0.71,
-            "delta_ft": -3061.0,
-            "delta_rel_ft": -4.95,
-            "delta_o": -2546.0,
-            "delta_rel_o": -4.31,
-            "delta_do": -515.0,
-            "delta_rel_do": -18.12,
-            "delta_pp_td": -0.63,
-            "delta_pp_tp": -3.97,
-            "delta_pp_to": -3.37
+            "delta_ft": -1591.0,
+            "delta_rel_ft": -2.61,
+            "delta_o": -1370.0,
+            "delta_rel_o": -2.34,
+            "delta_do": -221.0,
+            "delta_rel_do": -8.48,
+            "delta_pp_td": -0.26,
+            "delta_pp_tp": -2.29,
+            "delta_pp_to": -2.02
           }
         },
         {
           "clave": "Biobío",
-          "n": 10076,
-          "pet": 1399151.0,
-          "ft": 783373.0,
-          "o": 700251.0,
-          "do": 83122.0,
-          "td": 10.61,
-          "tp": 55.99,
-          "to": 50.05,
+          "n": 9971,
+          "pet": 1399819.0,
+          "ft": 786788.0,
+          "o": 702791.0,
+          "do": 83997.0,
+          "td": 10.68,
+          "tp": 56.21,
+          "to": 50.21,
           "delta_yoy": {
-            "delta_pet": 8927.0,
+            "delta_pet": 8837.0,
             "delta_rel_pet": 0.64,
-            "delta_ft": -8339.0,
-            "delta_rel_ft": -1.05,
-            "delta_o": -19333.0,
-            "delta_rel_o": -2.69,
-            "delta_do": 10994.0,
-            "delta_rel_do": 15.24,
-            "delta_pp_td": 1.5,
-            "delta_pp_tp": -0.96,
-            "delta_pp_to": -1.71
+            "delta_ft": 115.0,
+            "delta_rel_ft": 0.01,
+            "delta_o": -6091.0,
+            "delta_rel_o": -0.86,
+            "delta_do": 6207.0,
+            "delta_rel_do": 7.98,
+            "delta_pp_td": 0.79,
+            "delta_pp_tp": -0.35,
+            "delta_pp_to": -0.75
           }
         },
         {
           "clave": "Coquimbo",
-          "n": 4925,
-          "pet": 730811.0,
-          "ft": 428716.0,
-          "o": 388117.0,
-          "do": 40600.0,
-          "td": 9.47,
-          "tp": 58.66,
-          "to": 53.11,
+          "n": 4919,
+          "pet": 731767.0,
+          "ft": 432069.0,
+          "o": 391646.0,
+          "do": 40423.0,
+          "td": 9.36,
+          "tp": 59.04,
+          "to": 53.52,
           "delta_yoy": {
-            "delta_pet": 11316.0,
-            "delta_rel_pet": 1.57,
-            "delta_ft": 7705.0,
-            "delta_rel_ft": 1.83,
-            "delta_o": -3216.0,
-            "delta_rel_o": -0.82,
-            "delta_do": 10922.0,
-            "delta_rel_do": 36.8,
-            "delta_pp_td": 2.42,
-            "delta_pp_tp": 0.15,
-            "delta_pp_to": -1.28
+            "delta_pet": 11352.0,
+            "delta_rel_pet": 1.58,
+            "delta_ft": -353.0,
+            "delta_rel_ft": -0.08,
+            "delta_o": -7824.0,
+            "delta_rel_o": -1.96,
+            "delta_do": 7471.0,
+            "delta_rel_do": 22.67,
+            "delta_pp_td": 1.74,
+            "delta_pp_tp": -0.98,
+            "delta_pp_to": -1.93
           }
         },
         {
           "clave": "La Araucanía",
-          "n": 4377,
-          "pet": 847527.0,
-          "ft": 482049.0,
-          "o": 433852.0,
-          "do": 48197.0,
-          "td": 10.0,
-          "tp": 56.88,
-          "to": 51.19,
+          "n": 4371,
+          "pet": 848047.0,
+          "ft": 476481.0,
+          "o": 428239.0,
+          "do": 48242.0,
+          "td": 10.12,
+          "tp": 56.19,
+          "to": 50.5,
           "delta_yoy": {
-            "delta_pet": 5850.0,
-            "delta_rel_pet": 0.7,
-            "delta_ft": 7723.0,
-            "delta_rel_ft": 1.63,
-            "delta_o": 3196.0,
-            "delta_rel_o": 0.74,
-            "delta_do": 4527.0,
-            "delta_rel_do": 10.37,
-            "delta_pp_td": 0.79,
-            "delta_pp_tp": 0.53,
-            "delta_pp_to": 0.02
+            "delta_pet": 5823.0,
+            "delta_rel_pet": 0.69,
+            "delta_ft": -378.0,
+            "delta_rel_ft": -0.08,
+            "delta_o": -4040.0,
+            "delta_rel_o": -0.93,
+            "delta_do": 3662.0,
+            "delta_rel_do": 8.21,
+            "delta_pp_td": 0.77,
+            "delta_pp_tp": -0.43,
+            "delta_pp_to": -0.83
           }
         },
         {
           "clave": "Los Lagos",
-          "n": 5500,
-          "pet": 760709.0,
-          "ft": 430340.0,
-          "o": 397331.0,
-          "do": 33009.0,
-          "td": 7.67,
-          "tp": 56.57,
-          "to": 52.23,
+          "n": 5332,
+          "pet": 761268.0,
+          "ft": 424776.0,
+          "o": 391678.0,
+          "do": 33098.0,
+          "td": 7.79,
+          "tp": 55.8,
+          "to": 51.45,
           "delta_yoy": {
-            "delta_pet": 6887.0,
+            "delta_pet": 6866.0,
             "delta_rel_pet": 0.91,
-            "delta_ft": 16091.0,
-            "delta_rel_ft": 3.88,
-            "delta_o": 6605.0,
-            "delta_rel_o": 1.69,
-            "delta_do": 9486.0,
-            "delta_rel_do": 40.33,
-            "delta_pp_td": 1.99,
-            "delta_pp_tp": 1.62,
-            "delta_pp_to": 0.4
+            "delta_ft": 8270.0,
+            "delta_rel_ft": 1.99,
+            "delta_o": -3820.0,
+            "delta_rel_o": -0.97,
+            "delta_do": 12091.0,
+            "delta_rel_do": 57.56,
+            "delta_pp_td": 2.75,
+            "delta_pp_tp": 0.59,
+            "delta_pp_to": -0.98
           }
         },
         {
           "clave": "Los Ríos",
-          "n": 3483,
-          "pet": 344084.0,
-          "ft": 200806.0,
-          "o": 179576.0,
-          "do": 21230.0,
-          "td": 10.57,
-          "tp": 58.36,
-          "to": 52.19,
+          "n": 3510,
+          "pet": 344271.0,
+          "ft": 198868.0,
+          "o": 178550.0,
+          "do": 20317.0,
+          "td": 10.22,
+          "tp": 57.76,
+          "to": 51.86,
           "delta_yoy": {
-            "delta_pet": 2451.0,
-            "delta_rel_pet": 0.72,
-            "delta_ft": 1302.0,
-            "delta_rel_ft": 0.65,
-            "delta_o": -3436.0,
-            "delta_rel_o": -1.88,
-            "delta_do": 4739.0,
-            "delta_rel_do": 28.74,
-            "delta_pp_td": 2.3,
-            "delta_pp_tp": -0.04,
-            "delta_pp_to": -1.38
+            "delta_pet": 2421.0,
+            "delta_rel_pet": 0.71,
+            "delta_ft": -1956.0,
+            "delta_rel_ft": -0.97,
+            "delta_o": -4045.0,
+            "delta_rel_o": -2.22,
+            "delta_do": 2089.0,
+            "delta_rel_do": 11.46,
+            "delta_pp_td": 1.14,
+            "delta_pp_tp": -0.99,
+            "delta_pp_to": -1.55
           }
         },
         {
           "clave": "Magallanes",
-          "n": 1822,
-          "pet": 154796.0,
-          "ft": 106102.0,
-          "o": 99813.0,
-          "do": 6289.0,
-          "td": 5.93,
-          "tp": 68.54,
-          "to": 64.48,
+          "n": 1816,
+          "pet": 154908.0,
+          "ft": 106197.0,
+          "o": 98868.0,
+          "do": 7329.0,
+          "td": 6.9,
+          "tp": 68.55,
+          "to": 63.82,
           "delta_yoy": {
-            "delta_pet": 1333.0,
-            "delta_rel_pet": 0.87,
-            "delta_ft": 2185.0,
-            "delta_rel_ft": 2.1,
-            "delta_o": 2852.0,
-            "delta_rel_o": 2.94,
-            "delta_do": -667.0,
-            "delta_rel_do": -9.59,
-            "delta_pp_td": -0.76,
-            "delta_pp_tp": 0.83,
-            "delta_pp_to": 1.3
+            "delta_pet": 1320.0,
+            "delta_rel_pet": 0.86,
+            "delta_ft": 1456.0,
+            "delta_rel_ft": 1.39,
+            "delta_o": 648.0,
+            "delta_rel_o": 0.66,
+            "delta_do": 809.0,
+            "delta_rel_do": 12.41,
+            "delta_pp_td": 0.67,
+            "delta_pp_tp": 0.35,
+            "delta_pp_to": -0.13
           }
         },
         {
           "clave": "Maule",
-          "n": 6019,
-          "pet": 973648.0,
-          "ft": 551606.0,
-          "o": 496230.0,
-          "do": 55376.0,
-          "td": 10.04,
-          "tp": 56.65,
-          "to": 50.97,
+          "n": 5961,
+          "pet": 974477.0,
+          "ft": 547314.0,
+          "o": 495503.0,
+          "do": 51811.0,
+          "td": 9.47,
+          "tp": 56.16,
+          "to": 50.85,
           "delta_yoy": {
-            "delta_pet": 10370.0,
-            "delta_rel_pet": 1.08,
-            "delta_ft": 3233.0,
-            "delta_rel_ft": 0.59,
-            "delta_o": -7065.0,
-            "delta_rel_o": -1.4,
-            "delta_do": 10298.0,
-            "delta_rel_do": 22.84,
-            "delta_pp_td": 1.82,
-            "delta_pp_tp": -0.28,
-            "delta_pp_to": -1.28
+            "delta_pet": 10363.0,
+            "delta_rel_pet": 1.07,
+            "delta_ft": -5710.0,
+            "delta_rel_ft": -1.03,
+            "delta_o": -14023.0,
+            "delta_rel_o": -2.75,
+            "delta_do": 8313.0,
+            "delta_rel_do": 19.11,
+            "delta_pp_td": 1.6,
+            "delta_pp_tp": -1.2,
+            "delta_pp_to": -2.0
           }
         },
         {
           "clave": "Metropolitana",
-          "n": 15904,
-          "pet": 6999177.0,
-          "ft": 4588180.0,
-          "o": 4152681.0,
-          "do": 435498.0,
-          "td": 9.49,
-          "tp": 65.55,
-          "to": 59.33,
+          "n": 16056,
+          "pet": 7003532.0,
+          "ft": 4576149.0,
+          "o": 4128399.0,
+          "do": 447750.0,
+          "td": 9.78,
+          "tp": 65.34,
+          "to": 58.95,
           "delta_yoy": {
-            "delta_pet": 52849.0,
+            "delta_pet": 52732.0,
             "delta_rel_pet": 0.76,
-            "delta_ft": 8149.0,
-            "delta_rel_ft": 0.18,
-            "delta_o": -4128.0,
-            "delta_rel_o": -0.1,
-            "delta_do": 12276.0,
-            "delta_rel_do": 2.9,
-            "delta_pp_td": 0.25,
-            "delta_pp_tp": -0.38,
-            "delta_pp_to": -0.51
+            "delta_ft": -3378.0,
+            "delta_rel_ft": -0.07,
+            "delta_o": -41459.0,
+            "delta_rel_o": -0.99,
+            "delta_do": 38081.0,
+            "delta_rel_do": 9.3,
+            "delta_pp_td": 0.83,
+            "delta_pp_tp": -0.54,
+            "delta_pp_to": -1.04
           }
         },
         {
           "clave": "O'Higgins",
-          "n": 5009,
-          "pet": 853565.0,
-          "ft": 486227.0,
-          "o": 435193.0,
-          "do": 51035.0,
-          "td": 10.5,
-          "tp": 56.96,
-          "to": 50.99,
+          "n": 5096,
+          "pet": 854307.0,
+          "ft": 487763.0,
+          "o": 435129.0,
+          "do": 52634.0,
+          "td": 10.79,
+          "tp": 57.09,
+          "to": 50.93,
           "delta_yoy": {
-            "delta_pet": 9294.0,
+            "delta_pet": 9295.0,
             "delta_rel_pet": 1.1,
-            "delta_ft": -5375.0,
-            "delta_rel_ft": -1.09,
-            "delta_o": -11340.0,
-            "delta_rel_o": -2.54,
-            "delta_do": 5967.0,
-            "delta_rel_do": 13.24,
-            "delta_pp_td": 1.33,
-            "delta_pp_tp": -1.27,
-            "delta_pp_to": -1.9
+            "delta_ft": -6295.0,
+            "delta_rel_ft": -1.27,
+            "delta_o": -16331.0,
+            "delta_rel_o": -3.62,
+            "delta_do": 10036.0,
+            "delta_rel_do": 23.56,
+            "delta_pp_td": 2.17,
+            "delta_pp_tp": -1.38,
+            "delta_pp_to": -2.5
           }
         },
         {
           "clave": "Tarapacá",
-          "n": 1822,
-          "pet": 326372.0,
-          "ft": 215492.0,
-          "o": 198658.0,
-          "do": 16834.0,
-          "td": 7.81,
-          "tp": 66.03,
-          "to": 60.87,
+          "n": 1775,
+          "pet": 326775.0,
+          "ft": 209556.0,
+          "o": 193155.0,
+          "do": 16401.0,
+          "td": 7.83,
+          "tp": 64.13,
+          "to": 59.11,
           "delta_yoy": {
-            "delta_pet": 4885.0,
-            "delta_rel_pet": 1.52,
-            "delta_ft": 6938.0,
-            "delta_rel_ft": 3.33,
-            "delta_o": 8004.0,
-            "delta_rel_o": 4.2,
-            "delta_do": -1066.0,
-            "delta_rel_do": -5.96,
-            "delta_pp_td": -0.77,
-            "delta_pp_tp": 1.16,
-            "delta_pp_to": 1.57
+            "delta_pet": 4866.0,
+            "delta_rel_pet": 1.51,
+            "delta_ft": 6321.0,
+            "delta_rel_ft": 3.11,
+            "delta_o": 4105.0,
+            "delta_rel_o": 2.17,
+            "delta_do": 2216.0,
+            "delta_rel_do": 15.62,
+            "delta_pp_td": 0.85,
+            "delta_pp_tp": 1.0,
+            "delta_pp_to": 0.38
           }
         },
         {
           "clave": "Valparaíso",
-          "n": 10142,
-          "pet": 1704836.0,
-          "ft": 1026985.0,
-          "o": 920383.0,
-          "do": 106602.0,
-          "td": 10.38,
-          "tp": 60.24,
-          "to": 53.99,
+          "n": 10136,
+          "pet": 1706264.0,
+          "ft": 1031682.0,
+          "o": 926291.0,
+          "do": 105391.0,
+          "td": 10.22,
+          "tp": 60.46,
+          "to": 54.29,
           "delta_yoy": {
-            "delta_pet": 17000.0,
-            "delta_rel_pet": 1.01,
-            "delta_ft": 27965.0,
-            "delta_rel_ft": 2.8,
-            "delta_o": 7722.0,
-            "delta_rel_o": 0.85,
-            "delta_do": 20244.0,
-            "delta_rel_do": 23.44,
-            "delta_pp_td": 1.74,
-            "delta_pp_tp": 1.05,
-            "delta_pp_to": -0.08
+            "delta_pet": 16964.0,
+            "delta_rel_pet": 1.0,
+            "delta_ft": 33290.0,
+            "delta_rel_ft": 3.33,
+            "delta_o": 15766.0,
+            "delta_rel_o": 1.73,
+            "delta_do": 17524.0,
+            "delta_rel_do": 19.94,
+            "delta_pp_td": 1.42,
+            "delta_pp_tp": 1.36,
+            "delta_pp_to": 0.39
           }
         },
         {
           "clave": "Ñuble",
-          "n": 3576,
-          "pet": 436311.0,
-          "ft": 245343.0,
-          "o": 218451.0,
-          "do": 26892.0,
-          "td": 10.96,
-          "tp": 56.23,
-          "to": 50.07,
+          "n": 3502,
+          "pet": 436602.0,
+          "ft": 241275.0,
+          "o": 214341.0,
+          "do": 26934.0,
+          "td": 11.16,
+          "tp": 55.26,
+          "to": 49.09,
           "delta_yoy": {
-            "delta_pet": 3182.0,
-            "delta_rel_pet": 0.73,
-            "delta_ft": 6380.0,
-            "delta_rel_ft": 2.67,
-            "delta_o": 5180.0,
-            "delta_rel_o": 2.43,
-            "delta_do": 1200.0,
-            "delta_rel_do": 4.67,
-            "delta_pp_td": 0.21,
-            "delta_pp_tp": 1.06,
-            "delta_pp_to": 0.83
+            "delta_pet": 3212.0,
+            "delta_rel_pet": 0.74,
+            "delta_ft": -862.0,
+            "delta_rel_ft": -0.36,
+            "delta_o": -3419.0,
+            "delta_rel_o": -1.57,
+            "delta_do": 2558.0,
+            "delta_rel_do": 10.49,
+            "delta_pp_td": 1.09,
+            "delta_pp_tp": -0.61,
+            "delta_pp_to": -1.16
           }
         }
       ]
@@ -1010,50 +1010,50 @@
       "grupos": [
         {
           "clave": "Chileno/a",
-          "n": 78611,
-          "pet": 15297928.0,
-          "ft": 9197979.0,
-          "o": 8287940.0,
-          "do": 910039.0,
-          "td": 9.89,
-          "tp": 60.13,
-          "to": 54.18,
+          "n": 78344,
+          "pet": 15308527.0,
+          "ft": 9170983.0,
+          "o": 8256077.0,
+          "do": 914906.0,
+          "td": 9.98,
+          "tp": 59.91,
+          "to": 53.93,
           "delta_yoy": {
-            "delta_pet": 128792.0,
-            "delta_rel_pet": 0.85,
-            "delta_ft": 86366.0,
-            "delta_rel_ft": 0.95,
-            "delta_o": -27611.0,
-            "delta_rel_o": -0.33,
-            "delta_do": 113977.0,
-            "delta_rel_do": 14.32,
-            "delta_pp_td": 1.15,
-            "delta_pp_tp": 0.06,
-            "delta_pp_to": -0.64
+            "delta_pet": 134009.0,
+            "delta_rel_pet": 0.88,
+            "delta_ft": 58091.0,
+            "delta_rel_ft": 0.64,
+            "delta_o": -71609.0,
+            "delta_rel_o": -0.86,
+            "delta_do": 129699.0,
+            "delta_rel_do": 16.52,
+            "delta_pp_td": 1.36,
+            "delta_pp_tp": -0.14,
+            "delta_pp_to": -0.95
           }
         },
         {
           "clave": "Extranjero/a",
-          "n": 4030,
-          "pet": 1377978.0,
-          "ft": 1097082.0,
-          "o": 1026077.0,
-          "do": 71005.0,
-          "td": 6.47,
-          "tp": 79.62,
-          "to": 74.46,
+          "n": 4047,
+          "pet": 1379269.0,
+          "ft": 1092162.0,
+          "o": 1017668.0,
+          "do": 74494.0,
+          "td": 6.82,
+          "tp": 79.18,
+          "to": 73.78,
           "delta_yoy": {
-            "delta_pet": 16156.0,
-            "delta_rel_pet": 1.19,
-            "delta_ft": -10587.0,
-            "delta_rel_ft": -0.96,
-            "delta_o": 11319.0,
-            "delta_rel_o": 1.12,
-            "delta_do": -21906.0,
-            "delta_rel_do": -23.58,
-            "delta_pp_td": -1.92,
-            "delta_pp_tp": -1.72,
-            "delta_pp_to": -0.05
+            "delta_pet": 10605.0,
+            "delta_rel_pet": 0.77,
+            "delta_ft": -25930.0,
+            "delta_rel_ft": -2.32,
+            "delta_o": -9743.0,
+            "delta_rel_o": -0.95,
+            "delta_do": -16187.0,
+            "delta_rel_do": -17.85,
+            "delta_pp_td": -1.29,
+            "delta_pp_tp": -2.51,
+            "delta_pp_to": -1.29
           }
         }
       ]

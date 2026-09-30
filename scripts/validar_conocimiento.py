@@ -44,7 +44,7 @@ CATEGORIA = {1: "empleador", 2: "cuenta_propia", 3: "asalariado_sector_privado",
              4: "asalariado_sector_publico", 5: "servicio_domestico",
              6: "servicio_domestico", 7: "familiar_no_remunerado"}
 
-TOL_PERSONAS = 1.0   # tolerancia por redondeo de la evidencia
+TOL_PERSONAS = 5.0   # tolerancia por redondeo de la evidencia (ponderación fact_cal)
 TOL_TASA = 0.06      # el boletín publica 1 decimal; la base, 2
 
 fallos: list[str] = []

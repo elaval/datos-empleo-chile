@@ -1,17 +1,17 @@
 {
-  "release": "2026-06-mjj",
-  "generado": "2026-09-01",
+  "release": "2026-07-jja",
+  "generado": "2026-09-30",
   "generador": "scripts/generar_conocimiento.py",
   "fuentes": {
     "nacional": "data/processed/agregados/integrado/ene_trimestre_totales.parquet",
-    "cortes": "data/processed/microdatos/ene-06-mjj.parquet"
+    "cortes": "data/processed/microdatos/ene-07-jja.parquet"
   },
   "cobertura_nacional": {
     "desde": "2010-02",
-    "hasta": "2026-06",
-    "periodos": 197
+    "hasta": "2026-07",
+    "periodos": 198
   },
-  "cortes_mes_central": 6,
+  "cortes_mes_central": 7,
   "cortes_anos": [
     2010,
     2011,
