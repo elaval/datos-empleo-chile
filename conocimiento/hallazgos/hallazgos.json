@@ -1,5 +1,5 @@
 {
- "version": "3.0",
+ "version": "3.1",
  "actualizado": "2026-09-30",
  "nota": "Hallazgos = insights CURADOS sobre la evidencia. Cada uno enlaza la evidencia que lo respalda y declara su confianza y sus caveats. Un hallazgo NO es un hecho crudo (eso está en evidencia/): es una interpretación verificable. Regla de rigor: no citar un hallazgo sin su ventana_temporal y sus caveats. El campo no_implica marca explícitamente lo que el hallazgo NO permite concluir.",
  "esquema": {
@@ -192,7 +192,7 @@
   },
   {
    "id": "h-2026-07-subutilizacion",
-   "enunciado": "La subutilización sube más que la desocupación: la TD avanza 1,08 pp, pero SU2 —que agrega el subempleo por horas— sube 1,47 pp hasta 16,25 %, y la presión laboral 1,69 pp hasta 17,34 %. El tiempo parcial involuntario creció 6,9 % (+42.261 personas).",
+   "enunciado": "La subutilización sube más que la desocupación: la TD avanza 1,08 pp, pero SU2 —que agrega el subempleo por horas— sube 1,47 pp hasta 16,25 %, y la presión laboral 1,69 pp hasta 17,34 %. La escala completa de la OIT muestra un deterioro más amplio que el que capta la tasa titular.",
    "tipo": "nivel",
    "release": "2026-07-jja",
    "vigencia": "vigente",
@@ -208,9 +208,7 @@
     "su4": 23.45,
     "delta_pp_su4": 1.54,
     "tpl": 17.34,
-    "delta_pp_tpl": 1.69,
-    "delta_tpi": 42261,
-    "delta_rel_tpi": 6.93
+    "delta_pp_tpl": 1.69
    },
    "evidencia_refs": [
     "evidencia/snapshot.json#/subutilizacion"
@@ -221,7 +219,42 @@
     "recalibracion-censo-2017",
     "su-dependen-de-iniciadores-disponibles"
    ],
-   "no_implica": "El alza del subempleo por horas no es atribuible a la reducción legal de jornada: el tiempo parcial involuntario mide jornadas de 30 h o menos, bajo el tramo que ajusta la Ley 21.561."
+   "no_implica": "Los niveles SU no son una escalera acumulativa: SU2, SU3 y SU4 parten de SU1 y le suman grupos distintos, así que no se pueden sumar entre sí. El detalle del subempleo por horas está en h-2026-07-subempleo-horas."
+  },
+  {
+   "id": "h-2026-07-subempleo-horas",
+   "enunciado": "El subempleo por horas es el motor de la subutilización: 651.821 personas trabajan menos horas de las que querrían, 6,9 % más que hace un año (+42.261). Eso es lo que empuja la SU2 (+1,47 pp) por sobre el alza de la desocupación (+1,08 pp). Aun así el nivel sigue por debajo de TODOS los registros de 2010 a 2019: viene recuperándose del piso de 2022 (453.825), no superando un techo histórico.",
+   "tipo": "nivel",
+   "release": "2026-07-jja",
+   "vigencia": "vigente",
+   "cifras": {
+    "tpi": 651821,
+    "delta_tpi": 42261,
+    "delta_rel_tpi": 6.93,
+    "su2": 16.25,
+    "delta_pp_su2": 1.47,
+    "delta_pp_td": 1.08,
+    "maximo_serie": {
+     "ano": 2011,
+     "valor": 903986
+    },
+    "minimo_serie": {
+     "ano": 2022,
+     "valor": 453825
+    }
+   },
+   "evidencia_refs": [
+    "evidencia/snapshot.json#/jornada/parcial",
+    "evidencia/series-nacional.json#/serie/*/jornada/parcial_involuntario"
+   ],
+   "confianza": "alta",
+   "ventana_temporal": "JJA 2026 vs JJA 2025",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "horas-son-declaradas",
+    "El tiempo parcial involuntario mide jornadas de 30 h o menos declaradas por la persona, junto con el deseo de trabajar más: no es una medida de horas contratadas."
+   ],
+   "no_implica": "Que crezca no lo vuelve alto en perspectiva histórica, y que esté bajo los niveles de 2010-2019 no significa que el mercado esté holgado: son dos lecturas distintas de la misma serie. Tampoco es atribuible a la reducción legal de jornada, que ajusta tramos muy por encima de las 30 horas."
   },
   {
    "id": "h-2026-07-caida-masculina",
@@ -1142,17 +1175,22 @@
   },
   {
    "id": "h-tend-desajuste-educativo",
-   "enunciado": "La sobrecalificación sigue subiendo y este trimestre da su mayor salto anual: la proporción de ocupados con educación superior que trabaja fuera de los grandes grupos 1 a 3 de la CIUO —directivos, profesionales y técnicos de nivel medio— pasó de 27,2 % (2010) a 32,3 % (2026), con +1,59 pp solo en el último año. El mecanismo está a la vista: los puestos de alta calificación cayeron 2,6 % mientras el empleo con educación superior bajó apenas 0,8 %.",
+   "enunciado": "La sobrecalificación volvió a subir y alcanza 32,3 %: su nivel más alto desde 2018 (33,0 %). La serie NO es monótona —creció con fuerza en 2017-2018, retrocedió hasta 2023 y volvió a subir—, pero la dirección de largo plazo es clara: +5,1 pp desde 2010, mientras la proporción de ocupados con educación superior pasaba de 22,7 % a 42,7 %.",
    "tipo": "tendencia",
    "release": "2026-07-jja",
    "vigencia": "vigente",
    "cifras": {
     "tasa_desajuste_2010": 27.15,
-    "tasa_desajuste_2015": 27.22,
-    "tasa_desajuste_2020": 30.58,
+    "tasa_desajuste_2018": 33.01,
+    "tasa_desajuste_2023": 29.86,
     "tasa_desajuste_2025": 30.66,
     "tasa_desajuste_2026": 32.25,
     "delta_pp_ultimo_ano": 1.59,
+    "mayor_salto_anual_de_la_serie": {
+     "ano": 2018,
+     "pp": 2.9
+    },
+    "cambio_largo_plazo_pp": 5.1,
     "delta_rel_puestos_alta_calificacion": -2.64,
     "delta_rel_o_superior": -0.76,
     "pct_ocupados_con_superior_2010": 22.69,
@@ -1166,7 +1204,9 @@
    "ventana_temporal": "JJA 2010 → JJA 2026 (serie anual comparable)",
    "caveats": [
     "recalibracion-censo-2017",
-    "desajuste-es-convencion-ciuo"
+    "desajuste-es-convencion-ciuo",
+    "quiebre-serie-ciuo-2019",
+    "La serie tiene vaivenes de más de 2 pp entre años contiguos, así que un solo año no marca tendencia: el máximo de la serie sigue siendo 2018, no el dato actual."
    ],
    "no_implica": "No prueba que el desajuste cause el estancamiento del empleo de alta calificación, ni al revés: es una relación estructural observada. Tampoco implica que ese empleo esté mal pagado o sea precario — para eso hay que cruzar con ingresos y formalidad."
   },
