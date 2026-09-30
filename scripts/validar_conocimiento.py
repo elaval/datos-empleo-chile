@@ -209,9 +209,35 @@ def main() -> int:
     # Hallazgos: refs y caveats resolubles
     hal = json.load(open(CONO / "hallazgos" / "hallazgos.json", encoding="utf-8"))
     glosario = hal["esquema"]["caveats"]["glosario"]
-    slugs = {c for h in hal["hallazgos"] for c in h["caveats"] if " " not in c}
-    check(slugs <= set(glosario), "todos los slugs de caveats están glosados",
+
+    # Los caveats con slug viven en DOS archivos, no solo en hallazgos.json: el contrato
+    # (indicadores.json) también los usa. Esta comprobación miraba solo el primero, y por eso
+    # `escala-tabla-dependiente` estuvo sin glosa sin que nada lo notara — justo el caveat que
+    # evita un error de factor 100 al leer las tasas. Un consumidor que no puede expandir un
+    # slug muestra el slug crudo o, peor, se come la advertencia.
+    ind = json.load(open(CONO / "indicadores.json", encoding="utf-8"))
+    def slugs_de(caveats):
+        return {c for c in (caveats or []) if " " not in c}
+    slugs = set()
+    for h in hal["hallazgos"]:
+        slugs |= slugs_de(h.get("caveats"))
+    for v in ind["indicadores"].values():
+        slugs |= slugs_de(v.get("caveats"))
+    check(slugs <= set(glosario),
+          "todos los slugs de caveats están glosados (hallazgos + indicadores)",
           f"sin glosa: {sorted(slugs - set(glosario)) or 'ninguno'}")
+
+    # Y que el catálogo no defina dos veces el mismo indicador con nombres distintos:
+    # al documentar la sobrecalificación se agregó `desajuste_educativo` existiendo ya
+    # `tasa_desajuste_educativo`, con la misma fórmula y la misma fuente.
+    formulas = {}
+    for k, v in ind["indicadores"].items():
+        f = (v.get("formula") or "").replace(" ", "").replace("×", "*")
+        if f:
+            formulas.setdefault(f, []).append(k)
+    dup = {f: ks for f, ks in formulas.items() if len(ks) > 1}
+    check(not dup, "ningún indicador está definido dos veces",
+          f"fórmulas repetidas: {sorted(v for ks in dup.values() for v in ks) or 'ninguna'}")
     check(all(h.get("vigencia") and h.get("confianza") for h in hal["hallazgos"]),
           "todos los hallazgos declaran vigencia y confianza")
 

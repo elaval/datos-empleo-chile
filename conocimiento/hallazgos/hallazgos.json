@@ -1,5 +1,5 @@
 {
- "version": "3.2",
+ "version": "3.3",
  "actualizado": "2026-09-30",
  "nota": "Hallazgos = insights CURADOS sobre la evidencia. Cada uno enlaza la evidencia que lo respalda y declara su confianza y sus caveats. Un hallazgo NO es un hecho crudo (eso está en evidencia/): es una interpretación verificable. Regla de rigor: no citar un hallazgo sin su ventana_temporal y sus caveats. El campo no_implica marca explícitamente lo que el hallazgo NO permite concluir.",
  "esquema": {
@@ -50,7 +50,8 @@
     "jornada-transicion-en-curso": "La Ley 21.561 reduce la jornada por fases (44 h en 2024, 42 h en 2026, 40 h en 2028). El trimestre solo capta parcialmente la fase vigente, así que la transición está en curso y la cifra no es un estado final.",
     "quiebre-serie-ciuo-2019": "La clasificación de ocupaciones cambió de CIUO-88 a CIUO-08: no hay serie comparable por grupo ocupacional antes de 2019 (en microdatos, b1_ciuo88 viene vacío desde ese año). Cualquier tendencia por grupo debe partir en 2019.",
     "su-dependen-de-iniciadores-disponibles": "Las tasas SU1-SU4 y la presión laboral dependen de los iniciadores disponibles (variable `id`), que el INE renombró a `idisp` al adoptar CISO-18. Un rezago en absorber ese renombre produjo cifras plausibles pero fabricadas para AMJ 2026; ya está corregido (ADR-0002) y el validador recomputa las tasas desde sus componentes.",
-    "ciso18-sin-serie-previa": "La clasificación CISO-18 se publica en las bases trimestrales del INE solo desde AMJ 2026: no hay serie previa derivable de los microdatos públicos, y NO es comparable con la composición CISE-93 (fusiona el servicio doméstico, mueve a los familiares no remunerados al grupo de dependientes y separa a los contratistas dependientes). Ver ADR-0002 del repositorio de datos."
+    "ciso18-sin-serie-previa": "La clasificación CISO-18 se publica en las bases trimestrales del INE solo desde AMJ 2026: no hay serie previa derivable de los microdatos públicos, y NO es comparable con la composición CISE-93 (fusiona el servicio doméstico, mueve a los familiares no remunerados al grupo de dependientes y separa a los contratistas dependientes). Ver ADR-0002 del repositorio de datos.",
+    "escala-tabla-dependiente": "La escala de las tasas depende de la tabla que se lea: en la tabla maestra (`ene_trimestre_totales.parquet`) y en toda esta capa van en 0-100 —la TD de JJA 2026 es 9,64—, mientras que en `totales_con_deltas.parquet` van en 0-1 —la misma TD es 0,096403—. Confundirlas produce un error de factor 100 con cifras que igual parecen plausibles."
    }
   }
  },

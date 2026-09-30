@@ -1,5 +1,5 @@
 {
- "version": "1.1",
+ "version": "1.2",
  "actualizado": "2026-09-30",
  "nota": "Catálogo de indicadores = CONTRATO del dominio. Define qué significa cada indicador, su unidad, escala y cómo se computa. Es estable: cambia solo si cambia la definición, no en cada release. La evidencia (conocimiento/evidencia/) se computa según estas definiciones. Para provenance, escalas y advertencias, ver conocimiento/metodologia.md.",
  "identidades": {
@@ -303,7 +303,7 @@
   },
   "tasa_desajuste_educativo": {
    "nombre": "Tasa de desajuste educativo (sobrecalificación)",
-   "definicion": "Porcentaje de los ocupados con educación superior completa que trabaja en un puesto que NO es de alta calificación, según la clasificación de ocupaciones CIUO.",
+   "definicion": "Porcentaje de los ocupados con educación superior completa que trabaja en una ocupación que NO pertenece a los grandes grupos 1 a 3 de la CIUO —directivos y gerentes; profesionales, científicos e intelectuales; técnicos de nivel medio—, que son los que la clasificación considera de alta calificación.",
    "unidad": "porcentaje",
    "escala": "0-100",
    "dominio": [
@@ -311,12 +311,15 @@
     100
    ],
    "formula": "100 * o_ed_sup_ciuo_no_alta / (o_ed_sup_ciuo_alta + o_ed_sup_ciuo_no_alta)",
-   "fuente_nacional": "columnas o_ed_sup_ciuo_alta y o_ed_sup_ciuo_no_alta (snapshot.json → educacion.tasa_desajuste)",
+   "fuente_nacional": "columnas o_ed_sup_ciuo_alta y o_ed_sup_ciuo_no_alta de la tabla maestra; snapshot.json → educacion.tasa_desajuste, y serie completa en series-nacional.json → desajuste_educativo",
    "interpretacion": "Sube cuando los titulados de educación superior crecen más rápido que los puestos que requieren alta calificación. Es una medida de sobrecalificación, no de calidad del trabajador ni del empleo.",
    "caveats": [
     "recalibracion-censo-2017",
-    "La correspondencia entre nivel educativo y calificación del puesto es una convención de la clasificación CIUO, no una medición directa de si el empleo 'requiere' o no ese título."
-   ]
+    "desajuste-es-convencion-ciuo",
+    "quiebre-serie-ciuo-2019",
+    "La serie tiene vaivenes de más de 2 pp entre años contiguos: un solo año no marca tendencia. El máximo de la serie es 2018 (33,0 %)."
+   ],
+   "no_mide": "No mide si una persona está mal empleada ni si su puesto «requiere» el título: mide una correspondencia entre nivel educativo y grupo ocupacional definida por convención en la CIUO. Tampoco dice nada sobre salarios."
   },
   "toi": {
    "nombre": "Tasa de ocupación informal",
@@ -332,20 +335,6 @@
    "caveats": [
     "recalibracion-censo-2017",
     "serie-formalidad-desde-2017"
-   ]
-  },
-  "desajuste_educativo": {
-   "nombre": "Desajuste educativo o sobrecalificación",
-   "definicion": "Porcentaje de los ocupados con educación superior completa que trabaja en una ocupación que NO pertenece a los grandes grupos 1 a 3 de la CIUO —directivos y gerentes; profesionales, científicos e intelectuales; técnicos de nivel medio—, que son los que la clasificación considera de alta calificación.",
-   "unidad": "porcentaje",
-   "escala": "0-100",
-   "formula": "100 × sup_en_puesto_no_alta_calificacion / (sup_en_puesto_alta_calificacion + sup_en_puesto_no_alta_calificacion)",
-   "fuente_nacional": "evidencia/snapshot.json → educacion.tasa_desajuste; serie completa en series-nacional.json → desajuste_educativo",
-   "no_mide": "No mide si una persona está mal empleada ni si su puesto «requiere» el título: mide una correspondencia entre nivel educativo y grupo ocupacional definida por convención en la CIUO. Tampoco dice nada sobre salarios.",
-   "caveats": [
-    "desajuste-es-convencion-ciuo",
-    "quiebre-serie-ciuo-2019",
-    "recalibracion-censo-2017"
    ]
   }
  },
