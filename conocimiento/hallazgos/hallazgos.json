@@ -1,5 +1,5 @@
 {
- "version": "3.4",
+ "version": "3.5",
  "actualizado": "2026-10-29",
  "nota": "Hallazgos = insights CURADOS sobre la evidencia. Cada uno enlaza la evidencia que lo respalda y declara su confianza y sus caveats. Un hallazgo NO es un hecho crudo (eso está en evidencia/): es una interpretación verificable. Regla de rigor: no citar un hallazgo sin su ventana_temporal y sus caveats. El campo no_implica marca explícitamente lo que el hallazgo NO permite concluir.",
  "esquema": {
@@ -1862,7 +1862,7 @@
   },
   {
    "id": "h-2026-08-empleo-superior-casi-plano",
-   "enunciado": "El empleo con educación superior encadena su segundo trimestre de caída interanual, pero casi se detiene: −3.452 ocupados (−0,09 %), tras −30.449 (−0,76 %) en JJA. En los 199 trimestres móviles de la serie ha caído en diez: dos aislados en 2016, seis consecutivos en 2020 y estos dos. Su peso en el empleo total siguió subiendo, a 42,86 % de los ocupados.",
+   "enunciado": "El empleo con educación superior encadena su segundo trimestre de caída interanual, pero casi se detiene: −3.452 ocupados (−0,09 %), tras −30.449 (−0,76 %) en JJA. De los 187 trimestres móviles con variación interanual disponible ha caído en diez: dos aislados en 2016, seis consecutivos en 2020 y estos dos. Su peso en el empleo total siguió subiendo, a 42,86 % de los ocupados.",
    "tipo": "nivel",
    "release": "2026-08-jas",
    "vigencia": "vigente",
@@ -1877,7 +1877,8 @@
     "episodios": "2016-09 y 2016-11 (aislados), 2020-03 a 2020-08 (seis consecutivos), 2026-07 y 2026-08",
     "delta_o_media_completa": -35466,
     "delta_o_basica_completa": -24525,
-    "delta_o_sin_basica_completa": -39688
+    "delta_o_sin_basica_completa": -39688,
+    "trimestres_con_variacion_disponible": 187
    },
    "evidencia_refs": [
     "evidencia/snapshot.json#/educacion",
@@ -1889,7 +1890,8 @@
     "recalibracion-censo-2017",
     "niveles-educacion-no-cierran",
     "La caída (−3.452, −0,09 %) no se distingue de cero dentro del error muestral: lo informativo es que la racha de cinco años de crecimiento se detuvo, no la magnitud.",
-    "El peso de 42,86 % sube aunque el nivel caiga, porque el empleo total cae más: es composición, no crecimiento del empleo calificado."
+    "El peso de 42,86 % sube aunque el nivel caiga, porque el empleo total cae más: es composición, no crecimiento del empleo calificado.",
+    "La cuenta de «diez caídas» es sobre los 187 trimestres móviles que tienen variación interanual, no sobre los 199 de la serie: los doce primeros no tienen con qué compararse. La versión anterior de esta ficha usaba 199 como denominador. Ver ADR-0003."
    ],
    "no_implica": "Que el empleo con superior se detenga no implica que los titulados estén quedando sin trabajo: la composición interna cambió y está en h-2026-08-rotacion-dentro-de-superior. Tampoco mide desempleo de titulados, que requiere cruzar nivel educativo con desocupación."
   },
