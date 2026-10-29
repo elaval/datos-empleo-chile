@@ -2,6 +2,11 @@
   "nota": "Cifras PUBLICADAS por el INE en sus boletines oficiales, transcritas a mano desde el PDF. Sirven como referencia externa e independiente para validar el pack (scripts/validar_conocimiento.py). No se generan por script: se copian del boletín al incorporar cada nuevo release.",
   "fuente": "Boletín Estadístico: Empleo Trimestral, INE. https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion",
   "advertencia": "Solo son comparables directamente los releases recientes. Los boletines antiguos (previos a la recalibración con proyecciones post-Censo 2017) NO coinciden con esta base: ver el caveat 'recalibracion-censo-2017' en metodologia.md.",
+  "referencias_hermanas": {
+    "_nota": "Referencia externa del INE cuya forma no es por release y que por eso vive en archivos aparte, como la serie CISO-18. Ambos los lee scripts/validar_conocimiento.py.",
+    "referencia-ine-ciso18.json": "Serie ANUAL CISO-18 2020-2025 del documento metodológico (anexos G y H).",
+    "referencia-ine-ajuste-estacional.json": "Serie de personas ocupadas CON AJUSTE ESTACIONAL por trimestre móvil 2010-2026, de la planilla de ajuste estacional. El ajuste lo calcula el INE: no es reproducible desde los microdatos, y se revisa completa en cada publicación."
+  },
   "releases": {
     "2026-07-jja": {
       "boletin": "335",

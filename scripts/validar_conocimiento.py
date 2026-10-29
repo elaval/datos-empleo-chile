@@ -31,6 +31,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CONO = ROOT / "conocimiento"
 EVID = CONO / "evidencia"
 MICRO_DIR = ROOT / "data" / "processed" / "microdatos"
+INTEGRADO = ROOT / "data" / "processed" / "agregados" / "integrado" / "ene_trimestre_totales.parquet"
 
 MESES = {1: "def", 2: "efm", 3: "fma", 4: "mam", 5: "amj", 6: "mjj",
          7: "jja", 8: "jas", 9: "aso", 10: "son", 11: "ond", 12: "nde"}
@@ -46,6 +47,7 @@ CATEGORIA = {1: "empleador", 2: "cuenta_propia", 3: "asalariado_sector_privado",
 
 TOL_PERSONAS = 5.0   # tolerancia por redondeo de la evidencia (ponderación fact_cal)
 TOL_TASA = 0.06      # el boletín publica 1 decimal; la base, 2
+TOL_PLANILLA = 20.0  # las planillas del INE vienen redondeadas: más holgura que TOL_PERSONAS
 
 fallos: list[str] = []
 checks = 0
@@ -232,10 +234,12 @@ def main() -> int:
     # `tasa_desajuste_educativo`, con la misma fórmula y la misma fuente.
     formulas = {}
     for k, v in ind["indicadores"].items():
-        f = (v.get("formula") or "").replace(" ", "").replace("×", "*")
-        if f:
-            formulas.setdefault(f, []).append(k)
-    dup = {f: ks for f, ks in formulas.items() if len(ks) > 1}
+        # ojo: no reusar `f` — en este scope `f` es snap["formalidad"] y el bloque B
+        # lo necesita más abajo. Pisarlo aquí abortaba el validador antes de terminar.
+        norm = (v.get("formula") or "").replace(" ", "").replace("×", "*")
+        if norm:
+            formulas.setdefault(norm, []).append(k)
+    dup = {norm: ks for norm, ks in formulas.items() if len(ks) > 1}
     check(not dup, "ningún indicador está definido dos veces",
           f"fórmulas repetidas: {sorted(v for ks in dup.values() for v in ks) or 'ninguna'}")
     check(all(h.get("vigencia") and h.get("confianza") for h in hal["hallazgos"]),
@@ -315,6 +319,39 @@ def main() -> int:
                 if k in tasas:
                     check(abs(tasas[k] - v) < TOL_TASA, f"tasa · {k}",
                           f"INE={v} pack={tasas[k]}")
+
+    # --- serie con ajuste estacional (referencia externa, archivo hermano)
+    # El ajuste lo calcula el INE y no se puede recomputar aquí. Lo que SÍ se puede
+    # verificar es la transcripción: la columna sin ajustar de la misma planilla debe
+    # reproducir `o` de la tabla integrada. Si eso coincide, el ajuste opera sobre el
+    # mismo universo que mide este repo; si no, la transcripción está desplazada
+    # (el error clásico es el rótulo "Dic - Feb", que el INE fecha por su mes central).
+    ae_path = CONO / "referencia-ine-ajuste-estacional.json"
+    if not ae_path.exists():
+        print("  (sin referencia-ine-ajuste-estacional.json: se omite)")
+    elif not INTEGRADO.exists():
+        print("  (sin tabla integrada: se omite el contraste del ajuste estacional)")
+    else:
+        ae = json.load(open(ae_path, encoding="utf-8"))
+        ti = pd.read_parquet(INTEGRADO, columns=["ano_trimestre", "mes_central", "o"])
+        tabla = {(int(r.ano_trimestre), int(r.mes_central)): float(r.o)
+                 for r in ti.itertuples()}
+        pares = [(d, tabla[(d["ano_trimestre"], d["mes_central"])])
+                 for d in ae["serie"]
+                 if (d["ano_trimestre"], d["mes_central"]) in tabla]
+        check(len(pares) == len(ae["serie"]),
+              "ajuste estacional · todo punto del INE tiene pareja en la tabla integrada",
+              f"{len(pares)} de {len(ae['serie'])}")
+        if pares:
+            peor = max(abs(d["o_sin_ajustar"] - o) for d, o in pares)
+            check(peor <= TOL_PLANILLA,
+                  "ajuste estacional · la columna sin ajustar reproduce la tabla integrada",
+                  f"{len(pares)} trimestres, peor desvío {peor:.1f} personas")
+        ultimo = ae["serie"][-1]
+        check((ultimo["ano_trimestre"], ultimo["mes_central"]) == (ano, mes),
+              "ajuste estacional · la serie llega al release vigente",
+              f"serie termina en {ultimo['ano_trimestre']}-{ultimo['mes_central']:02d}, "
+              f"release {ano}-{mes:02d} (hay que retranscribir la planilla COMPLETA)")
 
     # ---------------------------------------------------------------- fin
     print(f"\n{'—' * 56}")
