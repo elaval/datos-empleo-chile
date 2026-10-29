@@ -137,6 +137,73 @@ JORNADA_ETIQUETA = {
     "h_46_mas": "46 h o más",
 }
 
+# Fases de la Ley 21.561, por fecha de entrada en vigencia.
+LEY_JORNADA_FASES = (
+    (datetime.date(2024, 4, 26), 44),
+    (datetime.date(2026, 4, 26), 42),
+    (datetime.date(2028, 4, 26), 40),
+)
+LEY_JORNADA_PREVIA = 45  # jornada máxima antes de la primera fase
+MES_NOMBRE = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+              "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+
+
+def _meses_del_trimestre(ano: int, mes_central: int) -> list[tuple[int, int]]:
+    """Los tres meses (año, mes) que componen el trimestre móvil de ese mes central."""
+    idx = ano * 12 + (mes_central - 1)
+    return [((k // 12), (k % 12) + 1) for k in (idx - 1, idx, idx + 1)]
+
+
+def _fase_jornada(ano: int, mes: int):
+    """La fase de la Ley 21.561 vigente al EMPEZAR ese mes, o None si es anterior a todas.
+
+    Un mes cuenta dentro de una fase solo si empieza en o después de su fecha de
+    vigencia. Como cada fase entra a regir un 26 de abril, el abril correspondiente
+    queda siempre del lado anterior: lo capta a medias y no se le atribuye.
+    """
+    inicio = datetime.date(ano, mes, 1)
+    vigente = None
+    for fecha, horas in LEY_JORNADA_FASES:
+        if inicio >= fecha:
+            vigente = (fecha, horas)
+    return vigente
+
+
+def _nota_jornada_legal(ano: int, mes_central: int) -> str:
+    """Describe cómo se sitúa el trimestre móvil frente a las fases de la Ley 21.561.
+
+    Se CALCULA, no se escribe a mano: un texto fijo queda falso en cuanto avanza el
+    release. La versión anterior afirmaba «el trimestre AMJ 2026 capta solo
+    parcialmente la fase de 42 h» y siguió diciéndolo en JJA y JAS 2026, cuando ya
+    era falso.
+    """
+    etiqueta = f"{MESES_CENTRALES[mes_central][0]} {ano}"
+    meses = _meses_del_trimestre(ano, mes_central)
+    fases = [_fase_jornada(a, m) for a, m in meses]
+
+    def legible(fase):
+        fecha, _ = fase
+        return f"{fecha.day} de {MES_NOMBRE[fecha.month - 1]} de {fecha.year}"
+
+    if len(set(fases)) == 1:
+        fase = fases[0]
+        if fase is None:
+            primera_fecha, primera_horas = LEY_JORNADA_FASES[0]
+            return (f"El trimestre {etiqueta} es anterior a la primera fase de la Ley "
+                    f"21.561 ({primera_horas} h desde el "
+                    f"{primera_fecha.day} de {MES_NOMBRE[primera_fecha.month - 1]} de "
+                    f"{primera_fecha.year}): la jornada máxima legal de sus tres meses "
+                    f"es {LEY_JORNADA_PREVIA} h.")
+        return (f"El trimestre {etiqueta} está enteramente dentro de la fase de "
+                f"{fase[1]} h, vigente desde el {legible(fase)}.")
+
+    ultima = fases[-1]
+    posteriores = sum(1 for f in fases if f == ultima)
+    cuenta = {1: "uno de sus tres meses es posterior",
+              2: "dos de sus tres meses son posteriores"}[posteriores]
+    return (f"El trimestre {etiqueta} cae en la transición a la fase de {ultima[1]} h, "
+            f"vigente desde el {legible(ultima)}: {cuenta}.")
+
 # Grupos ocupacionales CIUO-08 (clasificación vigente).
 # ⚠ QUIEBRE DE SERIE: la ENE usó CIUO-88 hasta 2018 y CIUO-08 desde 2017 (2017-2018 traen
 # ambas). Las series por grupo ocupacional NO son continuas antes de 2019: por eso este
@@ -527,8 +594,7 @@ def build_snapshot(serie_nac, cortes, release, generado):
         "contexto_legal": {
             "ley": "Ley 21.561 (2023): reduce la jornada máxima de 45 h a 40 h por fases.",
             "fases": {"44_h": "2024-04-26", "42_h": "2026-04-26", "40_h": "2028-04-26"},
-            "nota": "El trimestre AMJ 2026 capta solo parcialmente la fase de 42 h, vigente "
-                    "desde el 26 de abril de 2026: dos de sus tres meses son posteriores.",
+            "nota": _nota_jornada_legal(ult["ano"], ult["mes_central"]),
         },
     }
     suma_tramos = sum(v for v in j_ult["tramos"].values() if v is not None)
