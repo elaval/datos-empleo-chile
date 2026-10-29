@@ -1266,7 +1266,7 @@
   },
   {
    "id": "h-tend-brecha-participacion-sexo",
-   "enunciado": "La brecha de participación entre hombres y mujeres alcanzó su mínimo de la serie JAS: 17,32 pp, desde 27,34 pp en 2010, por el alza sostenida de la participación femenina (47,1 % → 53,1 %, también máximo de la serie) y, este año, también por la caída de la masculina (71,4 % → 70,4 %). La desocupación femenina se ha mantenido por sobre la masculina en toda la serie salvo en 2020 y 2021, cuando la pandemia golpeó antes al empleo de los hombres.",
+   "enunciado": "La brecha de participación entre hombres y mujeres alcanzó su mínimo de la serie JAS: 17,32 pp, desde 27,34 pp en 2010, por el alza sostenida de la participación femenina (47,1 % → 53,1 %, también máximo de la serie) y, este año, también por la caída de la masculina (71,4 % → 70,4 %). La desocupación femenina se ha mantenido por sobre la masculina en toda la serie salvo en 2020, cuando la pandemia golpeó antes al empleo de los hombres.",
    "tipo": "tendencia",
    "release": "2026-08-jas",
    "vigencia": "vigente",
@@ -1285,11 +1285,11 @@
      "2020": {
       "td_mujer": 11.65,
       "td_hombre": 12.83
-     },
-     "2021": {
-      "td_mujer": 8.61,
-      "td_hombre": 8.26
      }
+    },
+    "td_2021": {
+     "td_mujer": 8.61,
+     "td_hombre": 8.26
     }
    },
    "evidencia_refs": [
@@ -1300,7 +1300,7 @@
    "caveats": [
     "recalibracion-censo-2017",
     "Parte del cierre de la brecha en 2026 no viene del avance femenino sino del retroceso masculino: la participación de los hombres cayó 1,03 pp en el año, su mayor caída de la serie fuera de 2020. Una brecha que se cierra por abajo no es el mismo hecho que una que se cierra por arriba.",
-    "La versión anterior de esta ficha (release 2026-07-jja) afirmaba que la desocupación femenina estuvo sobre la masculina «en todo el período»: era falso. En la serie JAS hay dos excepciones, 2020 y 2021."
+    "La versión anterior de esta ficha (release 2026-07-jja) afirmaba que la desocupación femenina estuvo sobre la masculina «en todo el período». Era falso ya en la serie sobre la que se escribió: 2020 es excepción tanto en los trimestres JJA (12,06 % contra 13,49 %) como en los JAS (11,65 % contra 12,83 %). No fue el cambio de mes central lo que la falseó, sino que la afirmación universal nunca se comprobó contra la serie completa. Ver ADR-0003."
    ],
    "no_implica": "La menor brecha no implica paridad: la participación femenina (53,1 %) sigue muy por debajo de la masculina (70,4 %). Y el mínimo de la brecha no implica mejora del empleo femenino este trimestre: su nivel de ocupadas cayó (ver h-2026-08-cae-tambien-el-empleo-femenino)."
   },
@@ -1323,7 +1323,11 @@
     "td_15_24_2025": 19.68,
     "td_15_24_2026": 24.39,
     "pet_65_mas_2026": 3000076,
-    "delta_rel_pet_65_mas_ultimo_ano": 3.81
+    "delta_rel_pet_65_mas_ultimo_ano": 3.81,
+    "td_15_24_minimo_serie_jja": {
+     "ano": 2013,
+     "valor": 15.0
+    }
    },
    "evidencia_refs": [
     "evidencia/series-cortes.json#/cortes/edad"
@@ -1333,7 +1337,7 @@
    "caveats": [
     "recalibracion-censo-2017",
     "El alza del empleo 65+ refleja en parte el envejecimiento de la población (más personas en ese tramo), no solo mayor actividad laboral: su población en edad de trabajar creció 3,81 % solo en el último año. La tasa de participación del tramo, en cambio, bajó 0,41 pp.",
-    "El mínimo de la TD juvenil es 2013 (14,43 %) en la serie JAS; la versión anterior de esta ficha, construida sobre los trimestres JJA, situaba el mínimo en 2015."
+    "El mínimo de la TD juvenil es 2013 en las dos series: 14,43 % en los trimestres JAS y 15,0 % en los JJA. La versión anterior de esta ficha lo situaba en 2015 (15,44 %), que no era el mínimo ni en su propia serie. Ver ADR-0003."
    ],
    "no_implica": "No implica que la economía esté expulsando jóvenes ni reteniendo mayores por una sola causa; son dinámicas demográficas y laborales combinadas. El salto juvenil de este año (+4,71 pp) es de un trimestre y no establece una tendencia nueva."
   },

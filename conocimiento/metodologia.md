@@ -20,6 +20,29 @@ su **mes central**. Ejemplo: mes central 5 = trimestre **abril-mayo-junio (AMJ)*
   interanual). El empleo tiene estacionalidad fuerte; la comparación entre trimestres
   consecutivos la confunde. Toda la evidencia de cortes usa esta lógica año-contra-año.
 
+## 1-bis. ⚠️ Doce series anuales, no una: los extremos no se heredan
+
+Hay **una serie anual comparable por mes central**, doce en total, y cada una tiene sus
+propios máximos y mínimos. El mismo indicador, en el mismo año, da cifras distintas según
+el trimestre móvil desde el que se mire: el mínimo de la desocupación juvenil es 15,00 % en
+la serie de trimestres JJA y 14,43 % en la de JAS, ambos en 2013.
+
+A veces cambia la conclusión, no solo el decimal. En 2026 la brecha de desocupación del
+tramo 25-34 contra la tasa nacional vale 2,54 pp en la serie JJA —bajo el récord no
+pandémico de 2017— y 2,67 pp en la serie JAS, donde **es** el máximo de toda la serie.
+
+Reglas que se siguen de esto:
+
+- Una afirmación de extremo («el máximo», «el más alto desde») o de universalidad («nunca»,
+  «en todo el período», «por primera vez») **se computa sobre la serie completa** antes de
+  escribirse. No se hereda del release anterior ni se deduce de otra ficha.
+- Toda afirmación de extremo **declara sobre qué serie** se midió: la serie anual del mes
+  central del release (diecisiete puntos, uno por año) o los 199 trimestres móviles.
+- Al cambiar el mes central del release, los extremos **se recalculan**, no se arrastran.
+
+Esto no es una precaución teórica: dos afirmaciones falsas sobrevivieron un release por no
+hacerlo. Ver [`ADR-0003`](../docs/decisions/0003-extremos-de-serie.md).
+
 ## 2. Ponderación: `fact_cal`
 
 Los agregados de microdatos se calculan **siempre** ponderando por `fact_cal` (factor
@@ -107,3 +130,5 @@ la tabla maestra (misma ponderación `fact_cal`).
 - `delta_<x>`: variación interanual absoluta. `delta_rel_<x>`: en %. `delta_pp_<x>`: en
   puntos porcentuales (solo tasas).
 - Comparación válida = mismo mes central, año contra año.
+- Un extremo («máximo», «mínimo», «nunca») se computa sobre la serie completa y se dice
+  sobre qué serie: hay doce, una por mes central (sección 1-bis).
