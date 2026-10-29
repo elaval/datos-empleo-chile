@@ -8,6 +8,58 @@
     "referencia-ine-ajuste-estacional.json": "Serie de personas ocupadas CON AJUSTE ESTACIONAL por trimestre móvil 2010-2026, de la planilla de ajuste estacional. El ajuste lo calcula el INE: no es reproducible desde los microdatos, y se revisa completa en cada publicación."
   },
   "releases": {
+    "2026-08-jas": {
+      "boletin": "336",
+      "publicado": "2026-10-29",
+      "trimestre": "julio-septiembre 2026",
+      "niveles": {
+        "ft": 10282718,
+        "o": 9274742,
+        "do": 1007976,
+        "o_informal": 2451443,
+        "fft": 6416440
+      },
+      "tasas": {
+        "td": 9.8,
+        "tp": 61.6,
+        "to": 55.5,
+        "toi": 26.4,
+        "tosi": 14.8,
+        "su1": 10.1,
+        "su2": 16.5,
+        "su3": 17.9,
+        "tpl": 17.7,
+        "td_mujeres": 10.5,
+        "td_hombres": 9.3
+      },
+      "variaciones_12m_pct": {
+        "ft": 0.3,
+        "o": -1.1,
+        "do": 15.3,
+        "o_informal": -0.3,
+        "o_mujeres": -0.1,
+        "o_hombres": -1.9,
+        "cuenta_propia": 2.0,
+        "empleador": -2.8
+      },
+      "ciso18_niveles": {
+        "_nota": "Anexo 2 del boletín (nueva dimensión CISO-18); comparable con las columnas ciso_* de la tabla integrada desde AMJ 2026",
+        "asalariados_privados": 5244033,
+        "cuenta_propia": 1664091,
+        "asalariados_publicos": 1077480,
+        "contratistas_dependientes": 761094,
+        "empleadores": 284883
+      },
+      "ciso18_variaciones_12m_pct": {
+        "familiares_no_remunerados": 13.8,
+        "contratistas_dependientes": 12.9,
+        "servicio_domestico": 2.3,
+        "cuenta_propia": 0.2,
+        "asalariados_publicos": -2.7,
+        "empleadores": -2.8,
+        "asalariados_privados": -3.1
+      }
+    },
     "2026-07-jja": {
       "boletin": "335",
       "publicado": "2026-09-30",

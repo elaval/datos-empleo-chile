@@ -1,28 +1,32 @@
 {
   "nota": "Serie de personas ocupadas con AJUSTE ESTACIONAL, trimestres móviles 2010-2026, PUBLICADA por el INE y transcrita desde su planilla de ajuste estacional. Evidencia EXTERNA: el ajuste lo calcula el INE con su propio modelo y NO es reproducible desde los microdatos de este repo. Se incluye la columna sin ajustar de la misma planilla porque es el puente que permite verificar que ambas series describen el mismo universo (ver `verificacion`).",
-  "fuente": "INE, planilla 'ajuste estacional' de la Encuesta Nacional de Empleo, hoja `niveles_as`. Publicación correspondiente al boletín n°335 (junio-agosto 2026, publicado 2026-09-30). La planilla 'ajuste estacional histórico' acompaña 80 publicaciones sucesivas de la misma serie.",
+  "fuente": "INE, planilla 'ajuste estacional' de la Encuesta Nacional de Empleo, hoja `niveles_as`. Publicación correspondiente al boletín n°336 (julio-septiembre 2026, publicado 2026-10-29). La planilla 'ajuste estacional histórico' acompaña 81 publicaciones sucesivas de la misma serie.",
   "advertencia": "Cita textual del pie de la planilla del INE: «/1 Las estimaciones pueden sufrir cambios de un período a otro, debido a la naturaleza de la metodología de ajuste estacional, en donde el modelo se actualiza en cada período con la incorporación de nuevos períodos de información.» En consecuencia la serie ajustada NO es estable entre publicaciones: se revisa completa cada mes, no solo en su último punto (ver `revisiones` para la magnitud medida). La serie sin ajustar sí es estable. Regla de uso: la ajustada sirve para leer la DIRECCIÓN del empleo (es la única que admite comparar un trimestre móvil con el inmediatamente anterior); la sin ajustar, cuando se necesita una cifra que no cambie al mes siguiente.",
   "unidad": "personas",
   "convencion_fecha": "El INE rotula cada trimestre móvil con el año de su MES CENTRAL. Por eso «Dic - Feb» aparece bajo el año de su enero, no bajo el de su diciembre: `mes_central` 1 corresponde al trimestre dic-ene-feb. Transcribir con otra convención desplaza la serie un año y rompe el empalme con la tabla integrada.",
   "advertencia_trimestres_moviles": "Dos trimestres móviles consecutivos comparten dos de sus tres meses. Las variaciones respecto del trimestre anterior que habilita la serie ajustada NO son observaciones independientes: el solapamiento las suaviza por construcción.",
   "revisiones": {
-    "descripcion": "Magnitud medida de la inestabilidad que advierte el INE, sobre el trimestre abril-junio de 2026 a lo largo de las 3 publicaciones del histórico en que aparece.",
+    "descripcion": "Magnitud medida de la inestabilidad que advierte el INE, sobre el trimestre abril-junio de 2026 a lo largo de las 4 publicaciones del histórico en que aparece.",
     "trimestre": "2026 / mes_central 5 (abril-junio 2026)",
     "o_ajustada_publicada": [
       9419984,
       9412794,
-      9410930
+      9410930,
+      9411671
     ],
     "o_ajustada_rango_personas": 9054,
     "o_sin_ajustar_publicada": [
+      9403299,
+      9403299,
+      9403299,
       9403299
     ],
     "o_sin_ajustar_rango_personas": 0,
-    "lectura": "El mismo trimestre ha valido tres cifras ajustadas distintas (rango de 9.054 personas) mientras su cifra sin ajustar no se movió."
+    "lectura": "El mismo trimestre ha valido cuatro cifras ajustadas distintas (rango de 9.054 personas) mientras su cifra sin ajustar no se movió ni una persona en las cuatro. La revisión no converge: la cuarta publicación lo movió de vuelta hacia arriba, dentro del rango que ya tenían las tres anteriores."
   },
   "verificacion": {
     "descripcion": "La columna sin ajustar de la planilla del INE se contrasta contra `o` de data/processed/agregados/integrado/ene_trimestre_totales.parquet en los trimestres que ambas comparten. Es el control que distingue una transcripción correcta de una plausible, y el que habilita usar la columna ajustada: si el universo sin ajustar coincide, el ajuste opera sobre la misma población que mide este repo.",
-    "trimestres_contrastados": 198,
+    "trimestres_contrastados": 199,
     "desvio_maximo_personas": 8.04,
     "veredicto": "coinciden; el desvío es redondeo de la planilla publicada",
     "automatizado_en": "scripts/validar_conocimiento.py (bloque C)"
@@ -37,25 +41,25 @@
       "ano_trimestre": 2010,
       "mes_central": 2,
       "o_sin_ajustar": 7156212,
-      "o_ajustada": 7132186
+      "o_ajustada": 7132188
     },
     {
       "ano_trimestre": 2010,
       "mes_central": 3,
       "o_sin_ajustar": 7198777,
-      "o_ajustada": 7171115
+      "o_ajustada": 7171116
     },
     {
       "ano_trimestre": 2010,
       "mes_central": 4,
       "o_sin_ajustar": 7181903,
-      "o_ajustada": 7182174
+      "o_ajustada": 7182175
     },
     {
       "ano_trimestre": 2010,
       "mes_central": 5,
       "o_sin_ajustar": 7221575,
-      "o_ajustada": 7236904
+      "o_ajustada": 7236905
     },
     {
       "ano_trimestre": 2010,
@@ -85,49 +89,49 @@
       "ano_trimestre": 2010,
       "mes_central": 10,
       "o_sin_ajustar": 7503092,
-      "o_ajustada": 7504086
+      "o_ajustada": 7504085
     },
     {
       "ano_trimestre": 2010,
       "mes_central": 11,
       "o_sin_ajustar": 7572318,
-      "o_ajustada": 7540936
+      "o_ajustada": 7540937
     },
     {
       "ano_trimestre": 2010,
       "mes_central": 12,
       "o_sin_ajustar": 7615516,
-      "o_ajustada": 7560855
+      "o_ajustada": 7560852
     },
     {
       "ano_trimestre": 2011,
       "mes_central": 1,
       "o_sin_ajustar": 7621030,
-      "o_ajustada": 7564285
+      "o_ajustada": 7564283
     },
     {
       "ano_trimestre": 2011,
       "mes_central": 2,
       "o_sin_ajustar": 7623922,
-      "o_ajustada": 7598966
+      "o_ajustada": 7598968
     },
     {
       "ano_trimestre": 2011,
       "mes_central": 3,
       "o_sin_ajustar": 7655096,
-      "o_ajustada": 7625891
+      "o_ajustada": 7625892
     },
     {
       "ano_trimestre": 2011,
       "mes_central": 4,
       "o_sin_ajustar": 7665522,
-      "o_ajustada": 7664931
+      "o_ajustada": 7664932
     },
     {
       "ano_trimestre": 2011,
       "mes_central": 5,
       "o_sin_ajustar": 7698543,
-      "o_ajustada": 7715508
+      "o_ajustada": 7715509
     },
     {
       "ano_trimestre": 2011,
@@ -139,7 +143,7 @@
       "ano_trimestre": 2011,
       "mes_central": 7,
       "o_sin_ajustar": 7684190,
-      "o_ajustada": 7743779
+      "o_ajustada": 7743778
     },
     {
       "ano_trimestre": 2011,
@@ -163,31 +167,31 @@
       "ano_trimestre": 2011,
       "mes_central": 11,
       "o_sin_ajustar": 7786902,
-      "o_ajustada": 7752173
+      "o_ajustada": 7752174
     },
     {
       "ano_trimestre": 2011,
       "mes_central": 12,
       "o_sin_ajustar": 7816553,
-      "o_ajustada": 7760862
+      "o_ajustada": 7760858
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 1,
       "o_sin_ajustar": 7874074,
-      "o_ajustada": 7817503
+      "o_ajustada": 7817498
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 2,
       "o_sin_ajustar": 7844776,
-      "o_ajustada": 7821994
+      "o_ajustada": 7822001
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 3,
       "o_sin_ajustar": 7850458,
-      "o_ajustada": 7822536
+      "o_ajustada": 7822535
     },
     {
       "ano_trimestre": 2012,
@@ -199,217 +203,217 @@
       "ano_trimestre": 2012,
       "mes_central": 5,
       "o_sin_ajustar": 7819530,
-      "o_ajustada": 7838504
+      "o_ajustada": 7838506
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 6,
       "o_sin_ajustar": 7809455,
-      "o_ajustada": 7863038
+      "o_ajustada": 7863040
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 7,
       "o_sin_ajustar": 7809889,
-      "o_ajustada": 7871626
+      "o_ajustada": 7871623
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 8,
       "o_sin_ajustar": 7874075,
-      "o_ajustada": 7915964
+      "o_ajustada": 7915965
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 9,
       "o_sin_ajustar": 7889402,
-      "o_ajustada": 7918841
+      "o_ajustada": 7918843
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 10,
       "o_sin_ajustar": 7924594,
-      "o_ajustada": 7920550
+      "o_ajustada": 7920551
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 11,
       "o_sin_ajustar": 7952257,
-      "o_ajustada": 7913610
+      "o_ajustada": 7913611
     },
     {
       "ano_trimestre": 2012,
       "mes_central": 12,
       "o_sin_ajustar": 7998630,
-      "o_ajustada": 7939823
+      "o_ajustada": 7939818
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 1,
       "o_sin_ajustar": 7993297,
-      "o_ajustada": 7936064
+      "o_ajustada": 7936056
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 2,
       "o_sin_ajustar": 7990686,
-      "o_ajustada": 7971117
+      "o_ajustada": 7971125
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 3,
       "o_sin_ajustar": 8019067,
-      "o_ajustada": 7993563
+      "o_ajustada": 7993560
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 4,
       "o_sin_ajustar": 8018269,
-      "o_ajustada": 8016182
+      "o_ajustada": 8016181
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 5,
       "o_sin_ajustar": 8004246,
-      "o_ajustada": 8027073
+      "o_ajustada": 8027079
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 6,
       "o_sin_ajustar": 7986815,
-      "o_ajustada": 8041043
+      "o_ajustada": 8041049
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 7,
       "o_sin_ajustar": 8008577,
-      "o_ajustada": 8074715
+      "o_ajustada": 8074712
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 8,
       "o_sin_ajustar": 8010843,
-      "o_ajustada": 8051582
+      "o_ajustada": 8051583
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 9,
       "o_sin_ajustar": 8029597,
-      "o_ajustada": 8058367
+      "o_ajustada": 8058366
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 10,
       "o_sin_ajustar": 8067127,
-      "o_ajustada": 8057133
+      "o_ajustada": 8057134
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 11,
       "o_sin_ajustar": 8149389,
-      "o_ajustada": 8106524
+      "o_ajustada": 8106528
     },
     {
       "ano_trimestre": 2013,
       "mes_central": 12,
       "o_sin_ajustar": 8170961,
-      "o_ajustada": 8107233
+      "o_ajustada": 8107231
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 1,
       "o_sin_ajustar": 8202890,
-      "o_ajustada": 8145512
+      "o_ajustada": 8145490
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 2,
       "o_sin_ajustar": 8156196,
-      "o_ajustada": 8139912
+      "o_ajustada": 8139928
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 3,
       "o_sin_ajustar": 8181309,
-      "o_ajustada": 8159098
+      "o_ajustada": 8159091
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 4,
       "o_sin_ajustar": 8155971,
-      "o_ajustada": 8155240
+      "o_ajustada": 8155235
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 5,
       "o_sin_ajustar": 8120437,
-      "o_ajustada": 8149369
+      "o_ajustada": 8149373
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 6,
       "o_sin_ajustar": 8084993,
-      "o_ajustada": 8140100
+      "o_ajustada": 8140126
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 7,
       "o_sin_ajustar": 8044549,
-      "o_ajustada": 8111402
+      "o_ajustada": 8111392
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 8,
       "o_sin_ajustar": 8088721,
-      "o_ajustada": 8127821
+      "o_ajustada": 8127820
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 9,
       "o_sin_ajustar": 8137947,
-      "o_ajustada": 8168085
+      "o_ajustada": 8168079
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 10,
       "o_sin_ajustar": 8207692,
-      "o_ajustada": 8193233
+      "o_ajustada": 8193239
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 11,
       "o_sin_ajustar": 8249620,
-      "o_ajustada": 8202050
+      "o_ajustada": 8202057
     },
     {
       "ano_trimestre": 2014,
       "mes_central": 12,
       "o_sin_ajustar": 8259158,
-      "o_ajustada": 8189278
+      "o_ajustada": 8189281
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 1,
       "o_sin_ajustar": 8263091,
-      "o_ajustada": 8205545
+      "o_ajustada": 8205509
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 2,
       "o_sin_ajustar": 8232200,
-      "o_ajustada": 8218575
+      "o_ajustada": 8218593
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 3,
       "o_sin_ajustar": 8230255,
-      "o_ajustada": 8210542
+      "o_ajustada": 8210530
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 4,
       "o_sin_ajustar": 8211794,
-      "o_ajustada": 8213710
+      "o_ajustada": 8213703
     },
     {
       "ano_trimestre": 2015,
@@ -421,805 +425,811 @@
       "ano_trimestre": 2015,
       "mes_central": 6,
       "o_sin_ajustar": 8220826,
-      "o_ajustada": 8277447
+      "o_ajustada": 8277494
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 7,
       "o_sin_ajustar": 8250061,
-      "o_ajustada": 8318892
+      "o_ajustada": 8318877
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 8,
       "o_sin_ajustar": 8302039,
-      "o_ajustada": 8341516
+      "o_ajustada": 8341510
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 9,
       "o_sin_ajustar": 8312069,
-      "o_ajustada": 8343308
+      "o_ajustada": 8343295
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 10,
       "o_sin_ajustar": 8359292,
-      "o_ajustada": 8339541
+      "o_ajustada": 8339550
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 11,
       "o_sin_ajustar": 8428470,
-      "o_ajustada": 8373981
+      "o_ajustada": 8374001
     },
     {
       "ano_trimestre": 2015,
       "mes_central": 12,
       "o_sin_ajustar": 8452067,
-      "o_ajustada": 8375746
+      "o_ajustada": 8375756
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 1,
       "o_sin_ajustar": 8417133,
-      "o_ajustada": 8359516
+      "o_ajustada": 8359470
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 2,
       "o_sin_ajustar": 8360572,
-      "o_ajustada": 8351025
+      "o_ajustada": 8351045
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 3,
       "o_sin_ajustar": 8376229,
-      "o_ajustada": 8359887
+      "o_ajustada": 8359866
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 4,
       "o_sin_ajustar": 8350311,
-      "o_ajustada": 8354628
+      "o_ajustada": 8354616
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 5,
       "o_sin_ajustar": 8337421,
-      "o_ajustada": 8372827
+      "o_ajustada": 8372821
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 6,
       "o_sin_ajustar": 8336229,
-      "o_ajustada": 8395438
+      "o_ajustada": 8395504
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 7,
       "o_sin_ajustar": 8333200,
-      "o_ajustada": 8401698
+      "o_ajustada": 8401691
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 8,
       "o_sin_ajustar": 8378381,
-      "o_ajustada": 8417907
+      "o_ajustada": 8417864
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 9,
       "o_sin_ajustar": 8393722,
-      "o_ajustada": 8426022
+      "o_ajustada": 8426052
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 10,
       "o_sin_ajustar": 8467097,
-      "o_ajustada": 8446717
+      "o_ajustada": 8446656
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 11,
       "o_sin_ajustar": 8500710,
-      "o_ajustada": 8440036
+      "o_ajustada": 8440107
     },
     {
       "ano_trimestre": 2016,
       "mes_central": 12,
       "o_sin_ajustar": 8534552,
-      "o_ajustada": 8452279
+      "o_ajustada": 8452334
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 1,
       "o_sin_ajustar": 8485700,
-      "o_ajustada": 8430111
+      "o_ajustada": 8430036
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 2,
       "o_sin_ajustar": 8484447,
-      "o_ajustada": 8476412
+      "o_ajustada": 8476419
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 3,
       "o_sin_ajustar": 8499904,
-      "o_ajustada": 8486198
+      "o_ajustada": 8486187
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 4,
       "o_sin_ajustar": 8535210,
-      "o_ajustada": 8542612
+      "o_ajustada": 8542594
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 5,
       "o_sin_ajustar": 8524137,
-      "o_ajustada": 8559830
+      "o_ajustada": 8559805
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 6,
       "o_sin_ajustar": 8537398,
-      "o_ajustada": 8599747
+      "o_ajustada": 8599820
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 7,
       "o_sin_ajustar": 8573496,
-      "o_ajustada": 8644137
+      "o_ajustada": 8644138
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 8,
       "o_sin_ajustar": 8613093,
-      "o_ajustada": 8656409
+      "o_ajustada": 8656340
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 9,
       "o_sin_ajustar": 8622704,
-      "o_ajustada": 8654952
+      "o_ajustada": 8655020
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 10,
       "o_sin_ajustar": 8712681,
-      "o_ajustada": 8692352
+      "o_ajustada": 8692219
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 11,
       "o_sin_ajustar": 8768667,
-      "o_ajustada": 8701461
+      "o_ajustada": 8701581
     },
     {
       "ano_trimestre": 2017,
       "mes_central": 12,
       "o_sin_ajustar": 8793923,
-      "o_ajustada": 8703424
+      "o_ajustada": 8703536
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 1,
       "o_sin_ajustar": 8787080,
-      "o_ajustada": 8726248
+      "o_ajustada": 8726135
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 2,
       "o_sin_ajustar": 8759081,
-      "o_ajustada": 8749365
+      "o_ajustada": 8749368
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 3,
       "o_sin_ajustar": 8781084,
-      "o_ajustada": 8769412
+      "o_ajustada": 8769409
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 4,
       "o_sin_ajustar": 8766651,
-      "o_ajustada": 8776421
+      "o_ajustada": 8776394
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 5,
       "o_sin_ajustar": 8755549,
-      "o_ajustada": 8791896
+      "o_ajustada": 8791870
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 6,
       "o_sin_ajustar": 8708738,
-      "o_ajustada": 8775283
+      "o_ajustada": 8775374
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 7,
       "o_sin_ajustar": 8707194,
-      "o_ajustada": 8778439
+      "o_ajustada": 8778405
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 8,
       "o_sin_ajustar": 8710908,
-      "o_ajustada": 8759313
+      "o_ajustada": 8759229
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 9,
       "o_sin_ajustar": 8773836,
-      "o_ajustada": 8807142
+      "o_ajustada": 8807251
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 10,
       "o_sin_ajustar": 8828991,
-      "o_ajustada": 8812962
+      "o_ajustada": 8812748
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 11,
       "o_sin_ajustar": 8914248,
-      "o_ajustada": 8842484
+      "o_ajustada": 8842628
     },
     {
       "ano_trimestre": 2018,
       "mes_central": 12,
       "o_sin_ajustar": 8927952,
-      "o_ajustada": 8833364
+      "o_ajustada": 8833543
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 1,
       "o_sin_ajustar": 8907637,
-      "o_ajustada": 8845503
+      "o_ajustada": 8845370
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 2,
       "o_sin_ajustar": 8879110,
-      "o_ajustada": 8865048
+      "o_ajustada": 8865058
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 3,
       "o_sin_ajustar": 8916017,
-      "o_ajustada": 8904662
+      "o_ajustada": 8904686
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 4,
       "o_sin_ajustar": 8925275,
-      "o_ajustada": 8936997
+      "o_ajustada": 8936979
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 5,
       "o_sin_ajustar": 8922608,
-      "o_ajustada": 8957829
+      "o_ajustada": 8957813
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 6,
       "o_sin_ajustar": 8910558,
-      "o_ajustada": 8980007
+      "o_ajustada": 8980093
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 7,
       "o_sin_ajustar": 8928049,
-      "o_ajustada": 9000688
+      "o_ajustada": 9000567
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 8,
       "o_sin_ajustar": 9000091,
-      "o_ajustada": 9056345
+      "o_ajustada": 9056262
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 9,
       "o_sin_ajustar": 8994360,
-      "o_ajustada": 9029371
+      "o_ajustada": 9029453
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 10,
       "o_sin_ajustar": 9045363,
-      "o_ajustada": 9034230
+      "o_ajustada": 9033992
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 11,
       "o_sin_ajustar": 9087132,
-      "o_ajustada": 9011825
+      "o_ajustada": 9011952
     },
     {
       "ano_trimestre": 2019,
       "mes_central": 12,
       "o_sin_ajustar": 9115641,
-      "o_ajustada": 9018912
+      "o_ajustada": 9019122
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 1,
       "o_sin_ajustar": 9063374,
-      "o_ajustada": 8993597
+      "o_ajustada": 8993494
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 2,
       "o_sin_ajustar": 8942425,
-      "o_ajustada": 8918576
+      "o_ajustada": 8918623
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 3,
       "o_sin_ajustar": 8235931,
-      "o_ajustada": 8224696
+      "o_ajustada": 8224755
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 4,
       "o_sin_ajustar": 7450523,
-      "o_ajustada": 7457726
+      "o_ajustada": 7457708
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 5,
       "o_sin_ajustar": 7142568,
-      "o_ajustada": 7166648
+      "o_ajustada": 7166658
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 6,
       "o_sin_ajustar": 7073193,
-      "o_ajustada": 7123500
+      "o_ajustada": 7123508
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 7,
       "o_sin_ajustar": 7191414,
-      "o_ajustada": 7245987
+      "o_ajustada": 7246007
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 8,
       "o_sin_ajustar": 7365055,
-      "o_ajustada": 7412681
+      "o_ajustada": 7412572
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 9,
       "o_sin_ajustar": 7667659,
-      "o_ajustada": 7699006
+      "o_ajustada": 7699097
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 10,
       "o_sin_ajustar": 7916724,
-      "o_ajustada": 7913135
+      "o_ajustada": 7912679
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 11,
       "o_sin_ajustar": 8026217,
-      "o_ajustada": 7961818
+      "o_ajustada": 7961975
     },
     {
       "ano_trimestre": 2020,
       "mes_central": 12,
       "o_sin_ajustar": 8121420,
-      "o_ajustada": 8041097
+      "o_ajustada": 8041328
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 1,
       "o_sin_ajustar": 8167623,
-      "o_ajustada": 8109076
+      "o_ajustada": 8109000
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 2,
       "o_sin_ajustar": 8148206,
-      "o_ajustada": 8125915
+      "o_ajustada": 8125988
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 3,
       "o_sin_ajustar": 8104129,
-      "o_ajustada": 8090813
+      "o_ajustada": 8090943
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 4,
       "o_sin_ajustar": 8041110,
-      "o_ajustada": 8047209
+      "o_ajustada": 8047232
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 5,
       "o_sin_ajustar": 8041191,
-      "o_ajustada": 8066946
+      "o_ajustada": 8067022
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 6,
       "o_sin_ajustar": 8148948,
-      "o_ajustada": 8206222
+      "o_ajustada": 8206243
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 7,
       "o_sin_ajustar": 8258775,
-      "o_ajustada": 8324247
+      "o_ajustada": 8324181
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 8,
       "o_sin_ajustar": 8345240,
-      "o_ajustada": 8404579
+      "o_ajustada": 8404262
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 9,
       "o_sin_ajustar": 8456511,
-      "o_ajustada": 8497486
+      "o_ajustada": 8497698
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 10,
       "o_sin_ajustar": 8558362,
-      "o_ajustada": 8562732
+      "o_ajustada": 8562027
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 11,
       "o_sin_ajustar": 8678287,
-      "o_ajustada": 8614449
+      "o_ajustada": 8614653
     },
     {
       "ano_trimestre": 2021,
       "mes_central": 12,
       "o_sin_ajustar": 8712890,
-      "o_ajustada": 8627388
+      "o_ajustada": 8627619
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 1,
       "o_sin_ajustar": 8768645,
-      "o_ajustada": 8696110
+      "o_ajustada": 8696091
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 2,
       "o_sin_ajustar": 8797561,
-      "o_ajustada": 8764346
+      "o_ajustada": 8764493
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 3,
       "o_sin_ajustar": 8835478,
-      "o_ajustada": 8817797
+      "o_ajustada": 8817988
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 4,
       "o_sin_ajustar": 8855076,
-      "o_ajustada": 8859293
+      "o_ajustada": 8859414
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 5,
       "o_sin_ajustar": 8838432,
-      "o_ajustada": 8865370
+      "o_ajustada": 8865567
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 6,
       "o_sin_ajustar": 8849831,
-      "o_ajustada": 8908403
+      "o_ajustada": 8908701
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 7,
       "o_sin_ajustar": 8853293,
-      "o_ajustada": 8924447
+      "o_ajustada": 8923857
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 8,
       "o_sin_ajustar": 8843544,
-      "o_ajustada": 8908254
+      "o_ajustada": 8907822
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 9,
       "o_sin_ajustar": 8869323,
-      "o_ajustada": 8917258
+      "o_ajustada": 8917568
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 10,
       "o_sin_ajustar": 8883090,
-      "o_ajustada": 8893563
+      "o_ajustada": 8892467
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 11,
       "o_sin_ajustar": 8965230,
-      "o_ajustada": 8906262
+      "o_ajustada": 8906702
     },
     {
       "ano_trimestre": 2022,
       "mes_central": 12,
       "o_sin_ajustar": 9008546,
-      "o_ajustada": 8924856
+      "o_ajustada": 8924923
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 1,
       "o_sin_ajustar": 9030162,
-      "o_ajustada": 8955267
+      "o_ajustada": 8955255
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 2,
       "o_sin_ajustar": 9006145,
-      "o_ajustada": 8971276
+      "o_ajustada": 8971486
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 3,
       "o_sin_ajustar": 9006729,
-      "o_ajustada": 8984418
+      "o_ajustada": 8984696
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 4,
       "o_sin_ajustar": 9034231,
-      "o_ajustada": 9031060
+      "o_ajustada": 9031370
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 5,
       "o_sin_ajustar": 9035114,
-      "o_ajustada": 9055887
+      "o_ajustada": 9056253
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 6,
       "o_sin_ajustar": 9028647,
-      "o_ajustada": 9082305
+      "o_ajustada": 9082996
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 7,
       "o_sin_ajustar": 9005443,
-      "o_ajustada": 9076050
+      "o_ajustada": 9075033
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 8,
       "o_sin_ajustar": 9023452,
-      "o_ajustada": 9089925
+      "o_ajustada": 9089558
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 9,
       "o_sin_ajustar": 9052989,
-      "o_ajustada": 9104787
+      "o_ajustada": 9104920
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 10,
       "o_sin_ajustar": 9138417,
-      "o_ajustada": 9153644
+      "o_ajustada": 9152159
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 11,
       "o_sin_ajustar": 9223135,
-      "o_ajustada": 9169690
+      "o_ajustada": 9170339
     },
     {
       "ano_trimestre": 2023,
       "mes_central": 12,
       "o_sin_ajustar": 9273426,
-      "o_ajustada": 9192804
+      "o_ajustada": 9192626
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 1,
       "o_sin_ajustar": 9309608,
-      "o_ajustada": 9232279
+      "o_ajustada": 9232332
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 2,
       "o_sin_ajustar": 9308685,
-      "o_ajustada": 9272056
+      "o_ajustada": 9272356
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 3,
       "o_sin_ajustar": 9339296,
-      "o_ajustada": 9312430
+      "o_ajustada": 9312807
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 4,
       "o_sin_ajustar": 9331647,
-      "o_ajustada": 9321394
+      "o_ajustada": 9321876
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 5,
       "o_sin_ajustar": 9321380,
-      "o_ajustada": 9337697
+      "o_ajustada": 9338227
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 6,
       "o_sin_ajustar": 9257480,
-      "o_ajustada": 9308735
+      "o_ajustada": 9309810
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 7,
       "o_sin_ajustar": 9235064,
-      "o_ajustada": 9308650
+      "o_ajustada": 9307105
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 8,
       "o_sin_ajustar": 9243400,
-      "o_ajustada": 9311047
+      "o_ajustada": 9311070
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 9,
       "o_sin_ajustar": 9248984,
-      "o_ajustada": 9304250
+      "o_ajustada": 9304068
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 10,
       "o_sin_ajustar": 9285958,
-      "o_ajustada": 9305434
+      "o_ajustada": 9303361
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 11,
       "o_sin_ajustar": 9306059,
-      "o_ajustada": 9259024
+      "o_ajustada": 9259970
     },
     {
       "ano_trimestre": 2024,
       "mes_central": 12,
       "o_sin_ajustar": 9394112,
-      "o_ajustada": 9316084
+      "o_ajustada": 9315657
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 1,
       "o_sin_ajustar": 9396874,
-      "o_ajustada": 9322275
+      "o_ajustada": 9322310
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 2,
       "o_sin_ajustar": 9388838,
-      "o_ajustada": 9354430
+      "o_ajustada": 9354762
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 3,
       "o_sin_ajustar": 9359307,
-      "o_ajustada": 9329188
+      "o_ajustada": 9329700
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 4,
       "o_sin_ajustar": 9346212,
-      "o_ajustada": 9329111
+      "o_ajustada": 9329774
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 5,
       "o_sin_ajustar": 9321521,
-      "o_ajustada": 9331554
+      "o_ajustada": 9332251
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 6,
       "o_sin_ajustar": 9330309,
-      "o_ajustada": 9379618
+      "o_ajustada": 9381021
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 7,
       "o_sin_ajustar": 9355097,
-      "o_ajustada": 9431986
+      "o_ajustada": 9430288
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 8,
       "o_sin_ajustar": 9377617,
-      "o_ajustada": 9447498
+      "o_ajustada": 9447695
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 9,
       "o_sin_ajustar": 9386410,
-      "o_ajustada": 9443100
+      "o_ajustada": 9442529
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 10,
       "o_sin_ajustar": 9401582,
-      "o_ajustada": 9421924
+      "o_ajustada": 9419408
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 11,
       "o_sin_ajustar": 9473270,
-      "o_ajustada": 9429319
+      "o_ajustada": 9430338
     },
     {
       "ano_trimestre": 2025,
       "mes_central": 12,
       "o_sin_ajustar": 9503088,
-      "o_ajustada": 9426618
+      "o_ajustada": 9426010
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 1,
       "o_sin_ajustar": 9491627,
-      "o_ajustada": 9417029
+      "o_ajustada": 9417096
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 2,
       "o_sin_ajustar": 9434192,
-      "o_ajustada": 9399746
+      "o_ajustada": 9400124
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 3,
       "o_sin_ajustar": 9427606,
-      "o_ajustada": 9395675
+      "o_ajustada": 9396258
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 4,
       "o_sin_ajustar": 9416372,
-      "o_ajustada": 9396395
+      "o_ajustada": 9397149
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 5,
       "o_sin_ajustar": 9403299,
-      "o_ajustada": 9410930
+      "o_ajustada": 9411671
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 6,
       "o_sin_ajustar": 9314017,
-      "o_ajustada": 9362270
+      "o_ajustada": 9363809
     },
     {
       "ano_trimestre": 2026,
       "mes_central": 7,
       "o_sin_ajustar": 9273745,
-      "o_ajustada": 9350417
+      "o_ajustada": 9348484
+    },
+    {
+      "ano_trimestre": 2026,
+      "mes_central": 8,
+      "o_sin_ajustar": 9274742,
+      "o_ajustada": 9343768
     }
   ]
 }
