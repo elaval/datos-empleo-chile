@@ -1137,6 +1137,165 @@ def build_descomposicion(cortes: dict, serie_nac: list, mes_central: int):
     }
 
 
+# --------------------------------------------------------------------------
+# 6. FLUJOS — la misma persona doce meses después
+# --------------------------------------------------------------------------
+# `idrph` identifica a la misma persona entre trimestres, así que el panel rotativo
+# de la ENE permite seguirla. Comprobado, no supuesto: en el enlace JAS 2025 → JAS
+# 2026 coinciden el sexo en 99,75 % de los casos, la región en 99,98 % y la edad
+# avanza 0 a 2 años en 98,69 %. Y los pares comparten TODOS el mes de entrevista,
+# así que el intervalo es exactamente doce meses, no «alrededor de un año».
+#
+# ESTO NO ES UNA ESTIMACIÓN POBLACIONAL Y NO PUEDE PRESENTARSE COMO TAL:
+#   · `fact_cal` es un ponderador transversal, diseñado para representar a la
+#     población en UN trimestre, no para la submuestra que permanece doce meses.
+#     Se publican las dos versiones —sin ponderar y ponderando por el factor del
+#     año base— para que la distancia entre ambas quede a la vista.
+#   · la permanencia es de ~26 % y NO es aleatoria: el bloque `sesgo_de_permanencia`
+#     mide su dirección comparando los indicadores del año base en la submuestra
+#     enlazada contra la muestra completa del mismo año. El sesgo tiene signo
+#     constante en los dieciséis pares: la submuestra SUBESTIMA la desocupación.
+#     Esa es la corrección que el lector tiene que tener en mente, y por eso va
+#     pegada a cada par en vez de en una nota al pie.
+#   · el par 2019-2020 NO es enlazable: 3 personas de 86.031. La pandemia cortó el
+#     panel. No hay transición que cruce el shock y se declara en `no_derivable`.
+ESTADOS = {1: "ocupado", 2: "desocupado", 3: "fuera_de_la_fuerza_de_trabajo"}
+MIN_ENLACES = 1000  # bajo este umbral no se publica matriz: el error la haría ilegible
+
+
+def _transiciones(par, col_peso=None):
+    """Matriz de transición: proporciones por fila (estado de origen)."""
+    out = {}
+    for cod, nombre in ESTADOS.items():
+        fila = par[par.activ0 == cod]
+        if not len(fila):
+            continue
+        n = len(fila)
+        w = fila[col_peso].sum() if col_peso else n
+        destinos = {}
+        for cod1, nombre1 in ESTADOS.items():
+            sel = fila[fila.activ1 == cod1]
+            destinos[f"a_{nombre1}"] = _round(
+                100 * ((sel[col_peso].sum() if col_peso else len(sel)) / w), 2) if w else None
+        out[nombre] = {"n": n, **destinos}
+    return out
+
+
+def build_flujos(micro, mes_central: int):
+    m = micro[micro["edad"] >= 15].copy()
+    m["ano_trimestre"] = m["ano_trimestre"].astype(int)
+    anos = sorted(int(x) for x in m["ano_trimestre"].unique())
+    pares, no_derivable = [], {}
+
+    for y0, y1 in zip(anos, anos[1:]):
+        a = m[m.ano_trimestre == y0]
+        b = m[m.ano_trimestre == y1]
+        par = a.merge(b, on="idrph", suffixes=("0", "1"))
+        n_base, n_enl = len(a), len(par)
+
+        def _ind(d, suf="", peso=None):
+            w = d[peso] if peso else pd.Series(1.0, index=d.index)
+            pet = w.sum()
+            o = w[d["activ" + suf] == 1].sum()
+            do = w[d["activ" + suf] == 2].sum()
+            ft = o + do
+            return (_round(100 * o / pet, 2) if pet else None,
+                    _round(100 * do / ft, 2) if ft else None)
+
+        to_f, td_f = _ind(a)
+        enlace = {
+            "n_muestra_base": n_base,
+            "n_enlazados": n_enl,
+            "pct_permanencia": _round(100 * n_enl / n_base, 1) if n_base else None,
+            "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)",
+        }
+        if n_enl < MIN_ENLACES:
+            no_derivable[f"{y0}-{y1}"] = (
+                f"No enlazable: {n_enl} personas de {n_base:,} en la muestra base. Sin "
+                f"transiciones para este par.".replace(",", ".")
+            )
+            pares.append({"desde": y0, "hasta": y1, "enlace": enlace,
+                          "sesgo_de_permanencia": None, "transiciones": None})
+            continue
+
+        to_e, td_e = _ind(par, "0")
+        pares.append({
+            "desde": y0,
+            "hasta": y1,
+            "enlace": enlace,
+            "sesgo_de_permanencia": {
+                "nota": ("Indicadores del AÑO BASE calculados sobre la submuestra que "
+                         "permanece, contra la muestra completa del mismo año. La diferencia "
+                         "es la dirección del sesgo de permanencia, no una corrección "
+                         "aplicable: no se puede restar de las transiciones."),
+                "to_muestra_completa": to_f, "to_enlazados": to_e,
+                "sesgo_to_pp": _round(to_e - to_f, 2) if (to_e and to_f) else None,
+                "td_muestra_completa": td_f, "td_enlazados": td_e,
+                "sesgo_td_pp": _round(td_e - td_f, 2) if (td_e and td_f) else None,
+            },
+            "transiciones": {
+                "nota": ("Proporciones por fila dentro de la submuestra enlazada. NO son "
+                         "estimaciones poblacionales."),
+                "sin_ponderar": _transiciones(par),
+                "ponderado_por_factor_del_ano_base": _transiciones(par, "fact_cal0"),
+            },
+            "entre_los_que_siguen_ocupados": _sigue_ocupado(par),
+        })
+
+    return {
+        "mes_central": mes_central,
+        "nota": ("Transiciones de la MISMA persona a doce meses, enlazada por `idrph` en el "
+                 "panel rotativo de la ENE. Mide flujos de personas, no diferencias entre dos "
+                 "fotos agregadas. No es una estimación poblacional: ver advertencias."),
+        "metodo": ("Para cada par de años consecutivos del mes central, se enlazan por `idrph` "
+                   "las personas de 15 años o más presentes en los dos años y se tabula el "
+                   "estado de actividad en t contra t+12. Todos los pares comparten mes de "
+                   "entrevista, así que el intervalo es exactamente doce meses."),
+        "advertencias": [
+            "`fact_cal` es un ponderador TRANSVERSAL: representa a la población en un "
+            "trimestre, no a la submuestra que permanece doce meses. Por eso las matrices se "
+            "publican sin ponderar y ponderadas, y ninguna de las dos es un nivel poblacional.",
+            "La permanencia ronda el 26 % y no es aleatoria. El bloque `sesgo_de_permanencia` "
+            "lo mide: la submuestra enlazada SUBESTIMA la desocupación del año base en todos "
+            "los pares. Cualquier lectura de las transiciones tiene que cargar con eso.",
+            "Las transiciones describen qué pasó con esas personas, no por qué. Un flujo de "
+            "ocupado a fuera de la fuerza de trabajo no dice si fue desaliento, estudio, "
+            "cuidado o jubilación: eso no es derivable de esta capa.",
+            "El enlace se verificó por coherencia de sexo, región y edad (99,75 %, 99,98 % y "
+            "98,69 % en el par más reciente). Un residuo de enlaces falsos es inevitable.",
+        ],
+        "no_derivable": no_derivable,
+        "pares": pares,
+    }
+
+
+def _sigue_ocupado(par):
+    """Qué cambió para quienes están ocupados en los dos años."""
+    oo = par[(par.activ0 == 1) & (par.activ1 == 1)]
+    if not len(oo):
+        return None
+    out = {"n": len(oo)}
+    if "categoria_ocupacion0" in oo.columns:
+        cambio = (oo.categoria_ocupacion0 != oo.categoria_ocupacion1) & \
+                 oo.categoria_ocupacion0.notna() & oo.categoria_ocupacion1.notna()
+        base = (oo.categoria_ocupacion0.notna() & oo.categoria_ocupacion1.notna()).sum()
+        out["cambio_de_categoria_ocupacional_pct"] = (
+            _round(100 * cambio.sum() / base, 2) if base else None)
+    if "ocup_form0" in oo.columns:
+        val = oo[oo.ocup_form0.isin([1, 2]) & oo.ocup_form1.isin([1, 2])]
+        if len(val):
+            out["formalidad"] = {
+                "n": len(val),
+                "formal_a_informal_pct": _round(
+                    100 * len(val[(val.ocup_form0 == 1) & (val.ocup_form1 == 2)]) / len(val), 2),
+                "informal_a_formal_pct": _round(
+                    100 * len(val[(val.ocup_form0 == 2) & (val.ocup_form1 == 1)]) / len(val), 2),
+                "sigue_informal_pct": _round(
+                    100 * len(val[(val.ocup_form0 == 2) & (val.ocup_form1 == 2)]) / len(val), 2),
+            }
+    return out
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     generado = datetime.date.today().isoformat()
@@ -1150,7 +1309,8 @@ def main():
     micro_path = MICRO_DIR / f"{MESES_CENTRALES[mc][2]}.parquet"
     micro = pd.read_parquet(
         micro_path,
-        columns=["ano_trimestre", "edad", "sexo", "region", "nacionalidad", "activ", "fact_cal"],
+        columns=["ano_trimestre", "edad", "sexo", "region", "nacionalidad", "activ", "fact_cal",
+                 "idrph", "categoria_ocupacion", "ocup_form"],
     )
     cortes, anos_cortes = build_cortes(micro)
 
@@ -1158,6 +1318,7 @@ def main():
     tendencias = build_tendencias(serie_nac)
     tendencias_cortes = build_tendencias_cortes(cortes)
     descomposicion = build_descomposicion(cortes, serie_nac, mc)
+    flujos = build_flujos(micro, mc)
 
     meta = {
         "release": release,
@@ -1196,6 +1357,7 @@ def main():
         "cortes": tendencias_cortes,
     })
     write("descomposicion.json", {"release": release, **descomposicion})
+    write("flujos.json", {"release": release, **flujos})
     print("Listo.")
 
 

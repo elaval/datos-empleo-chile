@@ -406,6 +406,24 @@
     "vinculo-universo-dependientes",
     "duracion-contrato-sobre-todos-los-dependientes"
    ]
+  },
+  "flujos_de_personas": {
+   "nombre": "Transiciones de la misma persona a doce meses",
+   "definicion": "Qué pasó con cada persona doce meses después: si siguió ocupada, pasó a desocupada o salió de la fuerza de trabajo, y qué cambió para quienes siguen ocupados (categoría ocupacional, formalidad). Mide flujos de personas, no diferencias entre dos fotos agregadas.",
+   "unidad": "porcentaje de la submuestra enlazada",
+   "escala": "proporcion",
+   "formula_microdatos": "Enlace por `idrph` entre los dos años del mismo mes central, personas de 15 años o más presentes en ambos; tabulación de `activ` en t contra t+12. Todos los pares comparten mes de entrevista, así que el intervalo es exactamente doce meses.",
+   "validacion_del_enlace": "Coherencia del par más reciente: 99,75 % mismo sexo, 99,98 % misma región, 98,69 % con edad +0 a +2 años. El enlace se verificó, no se supuso.",
+   "fuente_nacional": "conocimiento/evidencia/flujos.json",
+   "cobertura_temporal": "Dieciséis pares de años consecutivos del mes central del release. El par 2019-2020 no existe: la pandemia cortó el panel.",
+   "lo_que_no_es": "No es una estimación poblacional. Las proporciones se publican sin ponderar y ponderadas por el factor del año base, y las dos versiones difieren hasta unos dos puntos: esa distancia es parte del resultado, no un detalle técnico.",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "flujos-no-son-estimacion-poblacional",
+    "sesgo-de-permanencia-del-panel",
+    "panel-cortado-en-2020",
+    "identidad-aritmetica-no-causal"
+   ]
   }
  },
  "dimensiones": {

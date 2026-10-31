@@ -308,6 +308,44 @@ def main() -> int:
               "Δ ramas + Δ sin rama declarada = Δ nacional",
               f"residuo {cobr['delta_sin_rama_declarada']:+,.0f}")
 
+    # Flujos: cada fila de la matriz tiene que sumar 100 %, el enlace no puede ser mayor
+    # que la muestra, y el último par tiene que llegar al release. Un par sin suficientes
+    # enlaces NO se publica con matriz: se declara en `no_derivable`, y eso también se
+    # comprueba, porque publicar una matriz de tres personas sería peor que no publicarla.
+    fl_path = EVID / "flujos.json"
+    if fl_path.exists():
+        fl = json.load(open(fl_path, encoding="utf-8"))
+        peor_fila, n_mat, malos = 0.0, 0, []
+        for par in fl["pares"]:
+            e = par["enlace"]
+            if e["n_enlazados"] > e["n_muestra_base"]:
+                malos.append(f"{par['desde']}-{par['hasta']}: más enlaces que muestra")
+            tr = par.get("transiciones")
+            clave = f"{par['desde']}-{par['hasta']}"
+            if not tr:
+                if clave not in fl["no_derivable"]:
+                    malos.append(f"{clave}: sin matriz y sin declararse no derivable")
+                continue
+            for version in ("sin_ponderar", "ponderado_por_factor_del_ano_base"):
+                for est, fila in tr[version].items():
+                    suma = sum(v for k, v in fila.items()
+                               if k.startswith("a_") and v is not None)
+                    n_mat += 1
+                    peor_fila = max(peor_fila, abs(suma - 100))
+        check(not malos, "flujos · enlaces y pares declarados",
+              "; ".join(malos) if malos else f"{len(fl['pares'])} pares")
+        check(peor_fila < 0.05, "flujos · cada fila de la matriz suma 100 %",
+              f"{n_mat} filas, peor desvío {peor_fila:.3f} pp")
+        ult = fl["pares"][-1]
+        check(ult["hasta"] == ano, "flujos · el último par llega al release",
+              f"último par {ult['desde']}-{ult['hasta']}, release {ano}")
+        # El sesgo de permanencia es el dato que hace citable la matriz: si falta, la
+        # matriz queda sin su corrección y no debería publicarse.
+        sin_sesgo = [f"{p['desde']}-{p['hasta']}" for p in fl["pares"]
+                     if p.get("transiciones") and not p.get("sesgo_de_permanencia")]
+        check(not sin_sesgo, "flujos · toda matriz publicada declara su sesgo de permanencia",
+              "; ".join(sin_sesgo) if sin_sesgo else "ninguna sin declarar")
+
     # Hallazgos: refs y caveats resolubles
     hal = json.load(open(CONO / "hallazgos" / "hallazgos.json", encoding="utf-8"))
     glosario = hal["esquema"]["caveats"]["glosario"]

@@ -127,6 +127,29 @@ La identificación de estas variables se verificó contra una cifra publicada po
 de los asalariados públicos con contrato escrito en EFM 2018, documento de trabajo n°1 de mayo
 de 2018— y el validador la comprueba en cada corrida. Ver ADR-0004.
 
+## 3-quater. ⚠️ Los flujos no son una estimación poblacional
+
+`flujos.json` sigue a la **misma persona** doce meses, enlazada por `idrph` en el panel
+rotativo de la ENE. Es la única pieza de esta capa que mide movimiento de personas en vez de
+diferencias entre dos fotos agregadas, y también la única que **no** se puede citar como un
+nivel de población. Tres razones, en orden de importancia:
+
+1. **`fact_cal` es transversal.** Representa a la población en un trimestre, no a la
+   submuestra que permanece un año. Por eso cada matriz se publica dos veces —sin ponderar y
+   ponderada por el factor del año base— y la distancia entre ambas, que llega a dos puntos,
+   es parte del resultado. Nunca se dice «X personas pasaron de ocupadas a desocupadas».
+2. **La permanencia no es aleatoria.** Ronda el 26 %, y en los dieciséis pares disponibles la
+   submuestra enlazada **subestima** la tasa de desocupación del año base. El signo es
+   constante, así que no es ruido: es dirección. Cada par declara su magnitud en
+   `sesgo_de_permanencia`, que es un dato para tener en mente, no una corrección que se pueda
+   restar de las transiciones.
+3. **El panel se cortó en 2020.** El par 2019-2020 tiene 3 enlaces de 86.031. No hay
+   transición que cruce la pandemia, y un salto 2019-2021 no la reemplaza: son veinticuatro
+   meses, no doce.
+
+Lo que sí se puede afirmar: la **forma** de la matriz y cómo cambia entre años, porque el
+sesgo opera en la misma dirección en todos los pares. Lo que no: el nivel.
+
 ## 4. ⚠️ Escala de las tasas: depende de la tabla de origen
 
 - Tabla **maestra** (`ene_trimestre_totales.parquet`) y **esta capa de conocimiento**:

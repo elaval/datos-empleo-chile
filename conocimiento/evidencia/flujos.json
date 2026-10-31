@@ -1,0 +1,1067 @@
+{
+  "release": "2026-08-jas",
+  "mes_central": 8,
+  "nota": "Transiciones de la MISMA persona a doce meses, enlazada por `idrph` en el panel rotativo de la ENE. Mide flujos de personas, no diferencias entre dos fotos agregadas. No es una estimación poblacional: ver advertencias.",
+  "metodo": "Para cada par de años consecutivos del mes central, se enlazan por `idrph` las personas de 15 años o más presentes en los dos años y se tabula el estado de actividad en t contra t+12. Todos los pares comparten mes de entrevista, así que el intervalo es exactamente doce meses.",
+  "advertencias": [
+    "`fact_cal` es un ponderador TRANSVERSAL: representa a la población en un trimestre, no a la submuestra que permanece doce meses. Por eso las matrices se publican sin ponderar y ponderadas, y ninguna de las dos es un nivel poblacional.",
+    "La permanencia ronda el 26 % y no es aleatoria. El bloque `sesgo_de_permanencia` lo mide: la submuestra enlazada SUBESTIMA la desocupación del año base en todos los pares. Cualquier lectura de las transiciones tiene que cargar con eso.",
+    "Las transiciones describen qué pasó con esas personas, no por qué. Un flujo de ocupado a fuera de la fuerza de trabajo no dice si fue desaliento, estudio, cuidado o jubilación: eso no es derivable de esta capa.",
+    "El enlace se verificó por coherencia de sexo, región y edad (99,75 %, 99,98 % y 98,69 % en el par más reciente). Un residuo de enlaces falsos es inevitable."
+  ],
+  "no_derivable": {
+    "2019-2020": "No enlazable: 3 personas de 86.031 en la muestra base. Sin transiciones para este par."
+  },
+  "pares": [
+    {
+      "desde": 2010,
+      "hasta": 2011,
+      "enlace": {
+        "n_muestra_base": 89383,
+        "n_enlazados": 31423,
+        "pct_permanencia": 35.2,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 53.41,
+        "to_enlazados": 52.93,
+        "sesgo_to_pp": -0.48,
+        "td_muestra_completa": 8.0,
+        "td_enlazados": 6.87,
+        "sesgo_td_pp": -1.13
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16633,
+            "a_ocupado": 85.82,
+            "a_desocupado": 3.31,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.87
+          },
+          "desocupado": {
+            "n": 1227,
+            "a_ocupado": 54.52,
+            "a_desocupado": 19.23,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.24
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 13563,
+            "a_ocupado": 15.36,
+            "a_desocupado": 2.93,
+            "a_fuera_de_la_fuerza_de_trabajo": 81.71
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16633,
+            "a_ocupado": 86.4,
+            "a_desocupado": 3.44,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.15
+          },
+          "desocupado": {
+            "n": 1227,
+            "a_ocupado": 53.43,
+            "a_desocupado": 22.13,
+            "a_fuera_de_la_fuerza_de_trabajo": 24.43
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 13563,
+            "a_ocupado": 15.64,
+            "a_desocupado": 3.79,
+            "a_fuera_de_la_fuerza_de_trabajo": 80.56
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 14275,
+        "cambio_de_categoria_ocupacional_pct": 18.19
+      }
+    },
+    {
+      "desde": 2011,
+      "hasta": 2012,
+      "enlace": {
+        "n_muestra_base": 88123,
+        "n_enlazados": 31164,
+        "pct_permanencia": 35.4,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 54.24,
+        "to_enlazados": 53.66,
+        "sesgo_to_pp": -0.58,
+        "td_muestra_completa": 7.35,
+        "td_enlazados": 6.71,
+        "sesgo_td_pp": -0.64
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16723,
+            "a_ocupado": 85.95,
+            "a_desocupado": 2.98,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.07
+          },
+          "desocupado": {
+            "n": 1202,
+            "a_ocupado": 53.99,
+            "a_desocupado": 14.56,
+            "a_fuera_de_la_fuerza_de_trabajo": 31.45
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 13239,
+            "a_ocupado": 15.35,
+            "a_desocupado": 2.79,
+            "a_fuera_de_la_fuerza_de_trabajo": 81.86
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16723,
+            "a_ocupado": 86.62,
+            "a_desocupado": 3.28,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.1
+          },
+          "desocupado": {
+            "n": 1202,
+            "a_ocupado": 56.51,
+            "a_desocupado": 15.04,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.45
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 13239,
+            "a_ocupado": 15.89,
+            "a_desocupado": 2.95,
+            "a_fuera_de_la_fuerza_de_trabajo": 81.17
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 14374,
+        "cambio_de_categoria_ocupacional_pct": 16.76
+      }
+    },
+    {
+      "desde": 2012,
+      "hasta": 2013,
+      "enlace": {
+        "n_muestra_base": 85896,
+        "n_enlazados": 29698,
+        "pct_permanencia": 34.6,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 54.81,
+        "to_enlazados": 54.44,
+        "sesgo_to_pp": -0.37,
+        "td_muestra_completa": 6.41,
+        "td_enlazados": 5.74,
+        "sesgo_td_pp": -0.67
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16169,
+            "a_ocupado": 85.66,
+            "a_desocupado": 2.91,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.42
+          },
+          "desocupado": {
+            "n": 985,
+            "a_ocupado": 54.52,
+            "a_desocupado": 17.06,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.43
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12544,
+            "a_ocupado": 15.19,
+            "a_desocupado": 2.41,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.4
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16169,
+            "a_ocupado": 86.43,
+            "a_desocupado": 2.92,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.65
+          },
+          "desocupado": {
+            "n": 985,
+            "a_ocupado": 56.4,
+            "a_desocupado": 16.45,
+            "a_fuera_de_la_fuerza_de_trabajo": 27.14
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12544,
+            "a_ocupado": 15.1,
+            "a_desocupado": 2.42,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.49
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 13851,
+        "cambio_de_categoria_ocupacional_pct": 16.79
+      }
+    },
+    {
+      "desde": 2013,
+      "hasta": 2014,
+      "enlace": {
+        "n_muestra_base": 84406,
+        "n_enlazados": 30577,
+        "pct_permanencia": 36.2,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 54.91,
+        "to_enlazados": 55.07,
+        "sesgo_to_pp": 0.16,
+        "td_muestra_completa": 6.02,
+        "td_enlazados": 5.15,
+        "sesgo_td_pp": -0.87
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16838,
+            "a_ocupado": 85.92,
+            "a_desocupado": 3.01,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.08
+          },
+          "desocupado": {
+            "n": 915,
+            "a_ocupado": 55.3,
+            "a_desocupado": 17.81,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.89
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12824,
+            "a_ocupado": 14.96,
+            "a_desocupado": 2.64,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.4
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16838,
+            "a_ocupado": 85.75,
+            "a_desocupado": 3.81,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.45
+          },
+          "desocupado": {
+            "n": 915,
+            "a_ocupado": 59.8,
+            "a_desocupado": 15.24,
+            "a_fuera_de_la_fuerza_de_trabajo": 24.96
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12824,
+            "a_ocupado": 14.79,
+            "a_desocupado": 2.9,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.31
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 14467,
+        "cambio_de_categoria_ocupacional_pct": 16.48
+      }
+    },
+    {
+      "desde": 2014,
+      "hasta": 2015,
+      "enlace": {
+        "n_muestra_base": 85220,
+        "n_enlazados": 29636,
+        "pct_permanencia": 34.8,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 54.89,
+        "to_enlazados": 54.74,
+        "sesgo_to_pp": -0.15,
+        "td_muestra_completa": 6.59,
+        "td_enlazados": 5.71,
+        "sesgo_td_pp": -0.88
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16223,
+            "a_ocupado": 86.01,
+            "a_desocupado": 3.08,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.92
+          },
+          "desocupado": {
+            "n": 983,
+            "a_ocupado": 52.8,
+            "a_desocupado": 19.33,
+            "a_fuera_de_la_fuerza_de_trabajo": 27.87
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12430,
+            "a_ocupado": 14.59,
+            "a_desocupado": 2.82,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.59
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16223,
+            "a_ocupado": 87.52,
+            "a_desocupado": 3.12,
+            "a_fuera_de_la_fuerza_de_trabajo": 9.36
+          },
+          "desocupado": {
+            "n": 983,
+            "a_ocupado": 52.56,
+            "a_desocupado": 20.77,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.67
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12430,
+            "a_ocupado": 14.73,
+            "a_desocupado": 3.24,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.03
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 13953,
+        "cambio_de_categoria_ocupacional_pct": 16.24
+      }
+    },
+    {
+      "desde": 2015,
+      "hasta": 2016,
+      "enlace": {
+        "n_muestra_base": 84142,
+        "n_enlazados": 30057,
+        "pct_permanencia": 35.7,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 55.03,
+        "to_enlazados": 54.59,
+        "sesgo_to_pp": -0.44,
+        "td_muestra_completa": 6.58,
+        "td_enlazados": 5.99,
+        "sesgo_td_pp": -0.59
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16407,
+            "a_ocupado": 85.23,
+            "a_desocupado": 3.28,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.5
+          },
+          "desocupado": {
+            "n": 1046,
+            "a_ocupado": 53.92,
+            "a_desocupado": 17.59,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.49
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12604,
+            "a_ocupado": 14.75,
+            "a_desocupado": 2.72,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.53
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16407,
+            "a_ocupado": 85.76,
+            "a_desocupado": 3.57,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.67
+          },
+          "desocupado": {
+            "n": 1046,
+            "a_ocupado": 53.61,
+            "a_desocupado": 18.15,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.24
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12604,
+            "a_ocupado": 15.32,
+            "a_desocupado": 2.99,
+            "a_fuera_de_la_fuerza_de_trabajo": 81.69
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 13983,
+        "cambio_de_categoria_ocupacional_pct": 17.07
+      }
+    },
+    {
+      "desde": 2016,
+      "hasta": 2017,
+      "enlace": {
+        "n_muestra_base": 83412,
+        "n_enlazados": 29313,
+        "pct_permanencia": 35.1,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 54.9,
+        "to_enlazados": 55.41,
+        "sesgo_to_pp": 0.51,
+        "td_muestra_completa": 6.6,
+        "td_enlazados": 5.67,
+        "sesgo_td_pp": -0.93
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16241,
+            "a_ocupado": 85.7,
+            "a_desocupado": 3.19,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.11
+          },
+          "desocupado": {
+            "n": 977,
+            "a_ocupado": 52.92,
+            "a_desocupado": 21.08,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.0
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12095,
+            "a_ocupado": 13.83,
+            "a_desocupado": 2.51,
+            "a_fuera_de_la_fuerza_de_trabajo": 83.66
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16241,
+            "a_ocupado": 86.47,
+            "a_desocupado": 3.52,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.01
+          },
+          "desocupado": {
+            "n": 977,
+            "a_ocupado": 52.12,
+            "a_desocupado": 22.71,
+            "a_fuera_de_la_fuerza_de_trabajo": 25.17
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12095,
+            "a_ocupado": 14.73,
+            "a_desocupado": 2.85,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.42
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 13918,
+        "cambio_de_categoria_ocupacional_pct": 17.05
+      }
+    },
+    {
+      "desde": 2017,
+      "hasta": 2018,
+      "enlace": {
+        "n_muestra_base": 82979,
+        "n_enlazados": 29715,
+        "pct_permanencia": 35.8,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 55.34,
+        "to_enlazados": 54.84,
+        "sesgo_to_pp": -0.5,
+        "td_muestra_completa": 6.7,
+        "td_enlazados": 5.96,
+        "sesgo_td_pp": -0.74
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 16297,
+            "a_ocupado": 85.67,
+            "a_desocupado": 3.55,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.77
+          },
+          "desocupado": {
+            "n": 1032,
+            "a_ocupado": 52.81,
+            "a_desocupado": 20.25,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.94
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12386,
+            "a_ocupado": 13.52,
+            "a_desocupado": 2.82,
+            "a_fuera_de_la_fuerza_de_trabajo": 83.66
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 16297,
+            "a_ocupado": 85.75,
+            "a_desocupado": 4.05,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.2
+          },
+          "desocupado": {
+            "n": 1032,
+            "a_ocupado": 54.6,
+            "a_desocupado": 21.52,
+            "a_fuera_de_la_fuerza_de_trabajo": 23.89
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 12386,
+            "a_ocupado": 15.51,
+            "a_desocupado": 3.2,
+            "a_fuera_de_la_fuerza_de_trabajo": 81.29
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 13962,
+        "cambio_de_categoria_ocupacional_pct": 16.13,
+        "formalidad": {
+          "n": 13962,
+          "formal_a_informal_pct": 6.09,
+          "informal_a_formal_pct": 7.33,
+          "sigue_informal_pct": 21.34
+        }
+      }
+    },
+    {
+      "desde": 2018,
+      "hasta": 2019,
+      "enlace": {
+        "n_muestra_base": 82949,
+        "n_enlazados": 19303,
+        "pct_permanencia": 23.3,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 54.85,
+        "to_enlazados": 54.24,
+        "sesgo_to_pp": -0.61,
+        "td_muestra_completa": 7.15,
+        "td_enlazados": 5.85,
+        "sesgo_td_pp": -1.3
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 10470,
+            "a_ocupado": 85.05,
+            "a_desocupado": 2.94,
+            "a_fuera_de_la_fuerza_de_trabajo": 12.01
+          },
+          "desocupado": {
+            "n": 650,
+            "a_ocupado": 50.92,
+            "a_desocupado": 20.92,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.15
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 8183,
+            "a_ocupado": 14.13,
+            "a_desocupado": 2.43,
+            "a_fuera_de_la_fuerza_de_trabajo": 83.44
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 10470,
+            "a_ocupado": 85.94,
+            "a_desocupado": 3.58,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.49
+          },
+          "desocupado": {
+            "n": 650,
+            "a_ocupado": 49.87,
+            "a_desocupado": 24.21,
+            "a_fuera_de_la_fuerza_de_trabajo": 25.91
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 8183,
+            "a_ocupado": 15.57,
+            "a_desocupado": 2.89,
+            "a_fuera_de_la_fuerza_de_trabajo": 81.54
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 8905,
+        "cambio_de_categoria_ocupacional_pct": 16.43,
+        "formalidad": {
+          "n": 8905,
+          "formal_a_informal_pct": 6.27,
+          "informal_a_formal_pct": 7.18,
+          "sigue_informal_pct": 23.32
+        }
+      }
+    },
+    {
+      "desde": 2019,
+      "hasta": 2020,
+      "enlace": {
+        "n_muestra_base": 86031,
+        "n_enlazados": 3,
+        "pct_permanencia": 0.0,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": null,
+      "transiciones": null
+    },
+    {
+      "desde": 2020,
+      "hasta": 2021,
+      "enlace": {
+        "n_muestra_base": 58084,
+        "n_enlazados": 17271,
+        "pct_permanencia": 29.7,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 42.55,
+        "to_enlazados": 42.11,
+        "sesgo_to_pp": -0.44,
+        "td_muestra_completa": 11.1,
+        "td_enlazados": 9.33,
+        "sesgo_td_pp": -1.77
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 7273,
+            "a_ocupado": 85.19,
+            "a_desocupado": 2.25,
+            "a_fuera_de_la_fuerza_de_trabajo": 12.55
+          },
+          "desocupado": {
+            "n": 748,
+            "a_ocupado": 54.01,
+            "a_desocupado": 18.58,
+            "a_fuera_de_la_fuerza_de_trabajo": 27.41
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9250,
+            "a_ocupado": 13.36,
+            "a_desocupado": 2.57,
+            "a_fuera_de_la_fuerza_de_trabajo": 84.06
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 7273,
+            "a_ocupado": 86.83,
+            "a_desocupado": 2.62,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.55
+          },
+          "desocupado": {
+            "n": 748,
+            "a_ocupado": 55.94,
+            "a_desocupado": 19.4,
+            "a_fuera_de_la_fuerza_de_trabajo": 24.66
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9250,
+            "a_ocupado": 14.06,
+            "a_desocupado": 3.34,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.59
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 6196,
+        "cambio_de_categoria_ocupacional_pct": 14.04,
+        "formalidad": {
+          "n": 6196,
+          "formal_a_informal_pct": 5.29,
+          "informal_a_formal_pct": 6.36,
+          "sigue_informal_pct": 16.28
+        }
+      }
+    },
+    {
+      "desde": 2021,
+      "hasta": 2022,
+      "enlace": {
+        "n_muestra_base": 85759,
+        "n_enlazados": 19473,
+        "pct_permanencia": 22.7,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 46.33,
+        "to_enlazados": 45.64,
+        "sesgo_to_pp": -0.69,
+        "td_muestra_completa": 7.55,
+        "td_enlazados": 7.29,
+        "sesgo_td_pp": -0.26
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 8888,
+            "a_ocupado": 83.36,
+            "a_desocupado": 3.42,
+            "a_fuera_de_la_fuerza_de_trabajo": 13.22
+          },
+          "desocupado": {
+            "n": 699,
+            "a_ocupado": 52.07,
+            "a_desocupado": 20.03,
+            "a_fuera_de_la_fuerza_de_trabajo": 27.9
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9886,
+            "a_ocupado": 13.35,
+            "a_desocupado": 2.65,
+            "a_fuera_de_la_fuerza_de_trabajo": 84.0
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 8888,
+            "a_ocupado": 85.0,
+            "a_desocupado": 3.76,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.24
+          },
+          "desocupado": {
+            "n": 699,
+            "a_ocupado": 53.87,
+            "a_desocupado": 19.33,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.8
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9886,
+            "a_ocupado": 14.38,
+            "a_desocupado": 3.29,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.32
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 7409,
+        "cambio_de_categoria_ocupacional_pct": 15.98,
+        "formalidad": {
+          "n": 7409,
+          "formal_a_informal_pct": 6.1,
+          "informal_a_formal_pct": 7.52,
+          "sigue_informal_pct": 19.69
+        }
+      }
+    },
+    {
+      "desde": 2022,
+      "hasta": 2023,
+      "enlace": {
+        "n_muestra_base": 77370,
+        "n_enlazados": 17995,
+        "pct_permanencia": 23.3,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 48.89,
+        "to_enlazados": 48.63,
+        "sesgo_to_pp": -0.26,
+        "td_muestra_completa": 7.51,
+        "td_enlazados": 6.97,
+        "sesgo_td_pp": -0.54
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 8751,
+            "a_ocupado": 82.3,
+            "a_desocupado": 4.02,
+            "a_fuera_de_la_fuerza_de_trabajo": 13.68
+          },
+          "desocupado": {
+            "n": 656,
+            "a_ocupado": 51.07,
+            "a_desocupado": 20.88,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.05
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 8588,
+            "a_ocupado": 11.92,
+            "a_desocupado": 3.34,
+            "a_fuera_de_la_fuerza_de_trabajo": 84.73
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 8751,
+            "a_ocupado": 83.83,
+            "a_desocupado": 4.43,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.74
+          },
+          "desocupado": {
+            "n": 656,
+            "a_ocupado": 52.39,
+            "a_desocupado": 22.39,
+            "a_fuera_de_la_fuerza_de_trabajo": 25.22
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 8588,
+            "a_ocupado": 12.49,
+            "a_desocupado": 4.17,
+            "a_fuera_de_la_fuerza_de_trabajo": 83.33
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 7202,
+        "cambio_de_categoria_ocupacional_pct": 15.79,
+        "formalidad": {
+          "n": 7202,
+          "formal_a_informal_pct": 6.48,
+          "informal_a_formal_pct": 6.64,
+          "sigue_informal_pct": 20.24
+        }
+      }
+    },
+    {
+      "desde": 2023,
+      "hasta": 2024,
+      "enlace": {
+        "n_muestra_base": 83407,
+        "n_enlazados": 19275,
+        "pct_permanencia": 23.1,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 50.09,
+        "to_enlazados": 51.26,
+        "sesgo_to_pp": 1.17,
+        "td_muestra_completa": 8.51,
+        "td_enlazados": 7.84,
+        "sesgo_td_pp": -0.67
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 9881,
+            "a_ocupado": 84.65,
+            "a_desocupado": 3.71,
+            "a_fuera_de_la_fuerza_de_trabajo": 11.64
+          },
+          "desocupado": {
+            "n": 841,
+            "a_ocupado": 49.58,
+            "a_desocupado": 20.45,
+            "a_fuera_de_la_fuerza_de_trabajo": 29.96
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 8553,
+            "a_ocupado": 12.58,
+            "a_desocupado": 3.54,
+            "a_fuera_de_la_fuerza_de_trabajo": 83.88
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 9881,
+            "a_ocupado": 86.55,
+            "a_desocupado": 4.14,
+            "a_fuera_de_la_fuerza_de_trabajo": 9.31
+          },
+          "desocupado": {
+            "n": 841,
+            "a_ocupado": 50.41,
+            "a_desocupado": 22.01,
+            "a_fuera_de_la_fuerza_de_trabajo": 27.58
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 8553,
+            "a_ocupado": 13.23,
+            "a_desocupado": 4.56,
+            "a_fuera_de_la_fuerza_de_trabajo": 82.22
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 8364,
+        "cambio_de_categoria_ocupacional_pct": 14.83,
+        "formalidad": {
+          "n": 8364,
+          "formal_a_informal_pct": 6.7,
+          "informal_a_formal_pct": 6.42,
+          "sigue_informal_pct": 20.58
+        }
+      }
+    },
+    {
+      "desde": 2024,
+      "hasta": 2025,
+      "enlace": {
+        "n_muestra_base": 85225,
+        "n_enlazados": 21381,
+        "pct_permanencia": 25.1,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 51.44,
+        "to_enlazados": 50.86,
+        "sesgo_to_pp": -0.58,
+        "td_muestra_completa": 8.56,
+        "td_enlazados": 8.38,
+        "sesgo_td_pp": -0.18
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 10874,
+            "a_ocupado": 84.15,
+            "a_desocupado": 3.85,
+            "a_fuera_de_la_fuerza_de_trabajo": 12.0
+          },
+          "desocupado": {
+            "n": 994,
+            "a_ocupado": 47.69,
+            "a_desocupado": 24.65,
+            "a_fuera_de_la_fuerza_de_trabajo": 27.67
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9513,
+            "a_ocupado": 12.15,
+            "a_desocupado": 3.45,
+            "a_fuera_de_la_fuerza_de_trabajo": 84.4
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 10874,
+            "a_ocupado": 85.43,
+            "a_desocupado": 4.23,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.34
+          },
+          "desocupado": {
+            "n": 994,
+            "a_ocupado": 48.66,
+            "a_desocupado": 26.33,
+            "a_fuera_de_la_fuerza_de_trabajo": 25.01
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9513,
+            "a_ocupado": 12.74,
+            "a_desocupado": 4.16,
+            "a_fuera_de_la_fuerza_de_trabajo": 83.1
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 9150,
+        "cambio_de_categoria_ocupacional_pct": 13.83,
+        "formalidad": {
+          "n": 9150,
+          "formal_a_informal_pct": 5.92,
+          "informal_a_formal_pct": 6.38,
+          "sigue_informal_pct": 19.51
+        }
+      }
+    },
+    {
+      "desde": 2025,
+      "hasta": 2026,
+      "enlace": {
+        "n_muestra_base": 81561,
+        "n_enlazados": 21195,
+        "pct_permanencia": 26.0,
+        "intervalo": "exactamente 12 meses (todos los pares comparten mes de entrevista)"
+      },
+      "sesgo_de_permanencia": {
+        "nota": "Indicadores del AÑO BASE calculados sobre la submuestra que permanece, contra la muestra completa del mismo año. La diferencia es la dirección del sesgo de permanencia, no una corrección aplicable: no se puede restar de las transiciones.",
+        "to_muestra_completa": 51.62,
+        "to_enlazados": 50.99,
+        "sesgo_to_pp": -0.63,
+        "td_muestra_completa": 8.42,
+        "td_enlazados": 7.99,
+        "sesgo_td_pp": -0.43
+      },
+      "transiciones": {
+        "nota": "Proporciones por fila dentro de la submuestra enlazada. NO son estimaciones poblacionales.",
+        "sin_ponderar": {
+          "ocupado": {
+            "n": 10808,
+            "a_ocupado": 82.86,
+            "a_desocupado": 4.48,
+            "a_fuera_de_la_fuerza_de_trabajo": 12.66
+          },
+          "desocupado": {
+            "n": 938,
+            "a_ocupado": 48.29,
+            "a_desocupado": 23.67,
+            "a_fuera_de_la_fuerza_de_trabajo": 28.04
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9449,
+            "a_ocupado": 10.31,
+            "a_desocupado": 3.78,
+            "a_fuera_de_la_fuerza_de_trabajo": 85.91
+          }
+        },
+        "ponderado_por_factor_del_ano_base": {
+          "ocupado": {
+            "n": 10808,
+            "a_ocupado": 84.74,
+            "a_desocupado": 4.59,
+            "a_fuera_de_la_fuerza_de_trabajo": 10.67
+          },
+          "desocupado": {
+            "n": 938,
+            "a_ocupado": 49.74,
+            "a_desocupado": 23.4,
+            "a_fuera_de_la_fuerza_de_trabajo": 26.86
+          },
+          "fuera_de_la_fuerza_de_trabajo": {
+            "n": 9449,
+            "a_ocupado": 10.67,
+            "a_desocupado": 4.54,
+            "a_fuera_de_la_fuerza_de_trabajo": 84.78
+          }
+        }
+      },
+      "entre_los_que_siguen_ocupados": {
+        "n": 8956,
+        "cambio_de_categoria_ocupacional_pct": 13.97,
+        "formalidad": {
+          "n": 8956,
+          "formal_a_informal_pct": 5.92,
+          "informal_a_formal_pct": 6.38,
+          "sigue_informal_pct": 19.34
+        }
+      }
+    }
+  ]
+}
