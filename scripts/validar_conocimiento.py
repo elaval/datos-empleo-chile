@@ -346,6 +346,51 @@ def main() -> int:
         check(not sin_sesgo, "flujos · toda matriz publicada declara su sesgo de permanencia",
               "; ".join(sin_sesgo) if sin_sesgo else "ninguna sin declarar")
 
+    # Precisión: los intervalos tienen que colgar de las MISMAS cifras que publica la capa,
+    # y el efecto de diseño tiene que ser mayor que 1. Ese último chequeo es el centinela:
+    # si alguien calcula la varianza ignorando estratos y conglomerados, los intervalos
+    # salen igual de plausibles pero más angostos, y el deff cae a ~1.
+    pr_path = EVID / "precision.json"
+    if pr_path.exists():
+        pr = json.load(open(pr_path, encoding="utf-8"))
+        if pr.get("disponible"):
+            peor = max(abs(pr["nacional"][k]["valor_pct"] - nac[k])
+                       for k in ("td", "tp", "to") if pr["nacional"].get(k))
+            check(peor < 0.02, "precisión · las tasas nacionales son las mismas de la capa",
+                  f"peor desvío {peor:.4f} pp")
+            peor_c, cual = 0.0, None
+            for dim, grupos in pr["cortes"].items():
+                pub = {g["clave"]: g["td"] for g in snap["cortes"][dim]["grupos"]}
+                for g in grupos:
+                    if g["clave"] in pub and abs(g["td"]["valor_pct"] - pub[g["clave"]]) > peor_c:
+                        peor_c, cual = abs(g["td"]["valor_pct"] - pub[g["clave"]]), f"{dim}/{g['clave']}"
+            check(peor_c < 0.02, "precisión · las tasas por grupo son las mismas de los cortes",
+                  f"peor desvío {peor_c:.4f} pp ({cual})")
+            deff = pr["nacional"]["td"].get("deff")
+            check(deff is not None and deff > 1.2,
+                  "precisión · el efecto de diseño supera 1 (la muestra es por conglomerados)",
+                  f"deff = {deff}")
+            malos = []
+            for dim, grupos in pr["cortes"].items():
+                for g in grupos:
+                    r = g["td"]
+                    lo, hi = r["ic95_pp"]
+                    if not (lo <= r["valor_pct"] <= hi):
+                        malos.append(f"{dim}/{g['clave']}: el IC no contiene la estimación")
+                    if r["gl"] <= 0:
+                        malos.append(f"{dim}/{g['clave']}: grados de libertad no positivos")
+            check(not malos, "precisión · cada intervalo contiene su estimación",
+                  "; ".join(malos[:3]) if malos else f"{sum(len(v) for v in pr['cortes'].values())} grupos")
+            # La variación conservadora NUNCA puede ser más angosta que la del año vigente solo.
+            estrechos = []
+            for dim, grupos in pr["cortes"].items():
+                for g in grupos:
+                    v = g.get("variacion_td")
+                    if v and v["se_pp"] < g["td"]["se_pp"] - 1e-9:
+                        estrechos.append(f"{dim}/{g['clave']}")
+            check(not estrechos, "precisión · el error de la variación no es menor que el del nivel",
+                  "; ".join(estrechos[:3]) if estrechos else "ninguno")
+
     # Hallazgos: refs y caveats resolubles
     hal = json.load(open(CONO / "hallazgos" / "hallazgos.json", encoding="utf-8"))
     glosario = hal["esquema"]["caveats"]["glosario"]

@@ -5,6 +5,8 @@ subset_columns:
   - mes_encuesta
   - id_identificacion
   - idrph
+  - estrato
+  - conglomerado
   - region
   - edad
   - tramo_edad

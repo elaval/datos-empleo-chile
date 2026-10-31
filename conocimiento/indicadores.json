@@ -424,6 +424,26 @@
     "panel-cortado-en-2020",
     "identidad-aritmetica-no-causal"
    ]
+  },
+  "precision_de_las_estimaciones": {
+   "nombre": "Error estándar e intervalo de confianza bajo el diseño muestral",
+   "definicion": "Cuánta de la diferencia entre dos cifras de esta capa puede ser muestreo. Para las tasas nacionales y para cada grupo de cada corte: error estándar, intervalo al 95 %, coeficiente de variación, efecto de diseño y grados de libertad, más la variación interanual con su propio intervalo.",
+   "unidad": "puntos porcentuales",
+   "escala": "variacion",
+   "metodo": "Linealización de Taylor para la razón más estimador de ultimate cluster sobre los estratos y conglomerados reales de la ENE. Grados de libertad = conglomerados − estratos; el intervalo usa el cuantil t, como el INE. Los dominios se aplican a las variables y no a la muestra: subsetear por región subestima la varianza.",
+   "por_que_no_es_muestreo_aleatorio_simple": "La ENE es una muestra estratificada por conglomerados. Tratarla como aleatoria simple subestima el error: en la TD nacional de JAS 2026 el efecto de diseño es 2,29, así que el error verdadero es 1,5 veces el que daría la fórmula simple.",
+   "fiabilidad": "Se aplican las etiquetas del propio INE: fiable con CV bajo 15 %, poco fiable entre 15 % y 30 %, no fiable sobre 30 % o con menos de 60 casos muestrales o menos de 9 grados de libertad.",
+   "variacion_conservadora": "El intervalo de una variación interanual ignora la covarianza que introduce el panel rotativo, que reduciría la varianza de la diferencia. Es deliberado: ensancha el intervalo, así que lo que se declara distinguible lo es.",
+   "fuente_nacional": "conocimiento/evidencia/precision.json",
+   "cobertura_temporal": "Desde NDE 2019, cuando los microdatos públicos empiezan a traer el conglomerado.",
+   "validacion_externa": "No se encontró una serie publicada de errores muestrales del INE con la que contrastar. La validación es interna: las estimaciones puntuales reproducen exactamente las de la capa, y el efecto de diseño queda en el rango esperado para una encuesta de hogares por conglomerados.",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "intervalo-cubre-solo-muestreo",
+    "comparar-exige-el-intervalo-de-la-diferencia",
+    "precision-solo-desde-2019",
+    "error-muestral-mayor-en-regiones-chicas"
+   ]
   }
  },
  "dimensiones": {

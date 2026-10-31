@@ -150,6 +150,29 @@ nivel de población. Tres razones, en orden de importancia:
 Lo que sí se puede afirmar: la **forma** de la matriz y cómo cambia entre años, porque el
 sesgo opera en la misma dirección en todos los pares. Lo que no: el nivel.
 
+## 3-quinquies. ⚠️ Una diferencia pequeña entre grupos puede ser solo muestreo
+
+La ENE es una muestra **estratificada por conglomerados**, no aleatoria simple. Tratarla como
+simple subestima el error: en la TD nacional de JAS 2026 el efecto de diseño es **2,29**, así que
+el error verdadero es 1,5 veces el que daría la fórmula ingenua.
+
+`precision.json` publica, para las tasas nacionales y para cada grupo de cada corte, el error
+estándar, el intervalo al 95 %, el coeficiente de variación y el efecto de diseño. Tres reglas de
+lectura, y la segunda es la que más se incumple:
+
+1. **El intervalo cubre el error de muestreo y nada más.** No dice nada sobre respuestas mal
+   declaradas, no respuesta ni errores de clasificación.
+2. **Para comparar dos grupos, el intervalo que corresponde es el de su DIFERENCIA**, no el de
+   cada uno. Dos intervalos que se solapan no prueban que las cifras sean iguales.
+3. **No hay intervalos antes de NDE 2019**: los microdatos públicos no traen el conglomerado
+   antes de esa fecha, y rellenar con una fórmula de muestreo aleatorio simple sería peor que no
+   tener la cifra.
+
+El caso que motivó este bloque: el ranking regional de alzas de la desocupación en JAS 2026 era
+Los Lagos +2,20 pp, Maule +2,14 y O'Higgins +2,07. La diferencia entre la primera y la segunda es
+de **0,05 pp contra un intervalo de ±2,47 pp** para esa diferencia. El orden del podio es ruido, y
+sin el intervalo no había forma de saberlo: las tres cifras parecen igual de sólidas.
+
 ## 4. ⚠️ Escala de las tasas: depende de la tabla de origen
 
 - Tabla **maestra** (`ene_trimestre_totales.parquet`) y **esta capa de conocimiento**:

@@ -24,7 +24,9 @@ from __future__ import annotations
 
 import datetime
 import json
+import math
 import pathlib
+import statistics
 
 import numpy as np
 import pandas as pd
@@ -61,6 +63,14 @@ REGION = {
 }
 
 # Grupos etarios construidos desde la variable continua `edad` (población 15+).
+def _bin_edad(d):
+    """Tramo etario de cada fila, o NA fuera de los tramos definidos."""
+    out = pd.Series(pd.NA, index=d.index, dtype=object)
+    for lo, hi, lab in GRUPOS_EDAD:
+        out[(d["edad"] >= lo) & (d["edad"] <= hi)] = lab
+    return out
+
+
 GRUPOS_EDAD = [
     (15, 24, "15-24"),
     (25, 34, "25-34"),
@@ -1296,6 +1306,213 @@ def _sigue_ocupado(par):
     return out
 
 
+# --------------------------------------------------------------------------
+# 7. PRECISIÓN — error estándar bajo el diseño muestral
+# --------------------------------------------------------------------------
+# Hasta aquí la capa publicaba cifras sin decir cuánta de su variación es muestreo.
+# La ENE es una muestra estratificada por conglomerados, así que la varianza NO es la
+# de un muestreo aleatorio simple: ignorar el diseño subestima el error (aquí, por un
+# factor de 2,3 en la TD nacional).
+#
+# MÉTODO: linealización de Taylor para la razón + estimador «ultimate cluster».
+#   Para R = Y/X, el valor linealizado de cada persona es u = (y − R·x)/X̂, y la
+#   varianza del total Σw·u se estima por estrato sobre sus conglomerados:
+#       Var = Σ_h  n_h/(n_h−1) · Σ_j (t_hj − t̄_h)²
+#   con t_hj la suma de w·u del conglomerado j. Grados de libertad = conglomerados
+#   menos estratos. El intervalo usa el cuantil t, no el normal, como hace el INE.
+#
+# ⚠ DOMINIOS (región, sexo, tramo de edad): el dominio se aplica a las VARIABLES, no
+# a la muestra. Fuera del dominio el valor linealizado es 0 y el conglomerado sigue
+# aportando a su estrato. Subsetear la muestra por dominio subestima la varianza, y es
+# el error clásico al estimar por región.
+#
+# ⚠ COBERTURA: `conglomerado` solo viene en los microdatos públicos desde NDE 2019.
+# Sin él no hay varianza de diseño, así que los trimestres anteriores no tienen
+# intervalo y se declara, en vez de rellenarlos con una fórmula que no corresponde.
+_Z975 = statistics.NormalDist().inv_cdf(0.975)
+
+
+def _t975(gl: int) -> float:
+    """Cuantil t de Student al 97,5 % por expansión de Cornish-Fisher sobre el normal.
+
+    Evita una dependencia nueva (scipy) por una función de cuatro líneas. Con gl ≥ 10
+    el error es < 1e-4, y aquí los grados de libertad son centenares o miles.
+    """
+    if gl <= 0:
+        return float("nan")
+    z, v = _Z975, float(gl)
+    return (z + (z ** 3 + z) / (4 * v) + (5 * z ** 5 + 16 * z ** 3 + 3 * z) / (96 * v ** 2)
+            + (3 * z ** 7 + 19 * z ** 5 + 17 * z ** 3 - 15 * z) / (384 * v ** 3))
+
+
+def _fiabilidad(cv_pct, n, gl):
+    """Etiquetas de fiabilidad del INE, aplicadas tal cual las define el instituto."""
+    if n is not None and n < 60:
+        return "no fiable (menos de 60 casos muestrales)"
+    if gl is not None and gl < 9:
+        return "no fiable (menos de 9 grados de libertad)"
+    if cv_pct is None:
+        return None
+    if cv_pct > 30:
+        return "no fiable (CV sobre 30 %)"
+    if cv_pct > 15:
+        return "poco fiable (CV entre 15 % y 30 %)"
+    return "fiable (CV bajo 15 %)"
+
+
+def _razon_con_error(sub, num, den, dominio=None):
+    """Razón ponderada con su error estándar bajo el diseño. None si falta el diseño."""
+    if "conglomerado" not in sub.columns or sub["conglomerado"].isna().all():
+        return None
+    w = sub["fact_cal"].to_numpy(dtype=float)
+    y = np.asarray(num, dtype=float).copy()
+    x = np.asarray(den, dtype=float).copy()
+    if dominio is not None:
+        m = np.asarray(dominio, dtype=bool)
+        y, x = y * m, x * m
+    tot_x = float((w * x).sum())
+    if tot_x <= 0:
+        return None
+    R = float((w * y).sum()) / tot_x
+    t = w * ((y - R * x) / tot_x)
+    marco = pd.DataFrame({"h": sub["estrato"].to_numpy(), "c": sub["conglomerado"].to_numpy(),
+                          "t": t})
+    por_cong = marco.groupby(["h", "c"], sort=False)["t"].sum()
+    var, n_cong, n_estr = 0.0, 0, 0
+    for _, s in por_cong.groupby(level=0):
+        n_h = len(s)
+        n_cong += n_h
+        n_estr += 1
+        if n_h < 2:        # estrato con un solo conglomerado: no aporta varianza
+            continue
+        var += n_h / (n_h - 1) * float(((s - s.mean()) ** 2).sum())
+    gl = n_cong - n_estr
+    se = math.sqrt(var)
+    n_dom = int((x > 0).sum())
+    deff = None
+    if 0 < R < 1 and n_dom:
+        se_mas = math.sqrt(R * (1 - R) / n_dom)
+        deff = _round((se / se_mas) ** 2, 2) if se_mas else None
+    tc = _t975(gl)
+    cv = 100 * se / R if R else None
+    return {
+        "valor_pct": _round(100 * R, 2),
+        "se_pp": _round(100 * se, 3),
+        "ic95_pp": [_round(100 * (R - tc * se), 2), _round(100 * (R + tc * se), 2)],
+        "margen_pp": _round(100 * tc * se, 2),
+        "cv_pct": _round(cv, 2),
+        "deff": deff,
+        "gl": gl,
+        "n_muestral": n_dom,
+        "fiabilidad": _fiabilidad(cv, n_dom, gl),
+    }
+
+
+def build_precision(micro, mes_central: int, ano: int):
+    m = micro[micro["edad"] >= 15]
+    disponible = sorted(int(a) for a in m.loc[m["conglomerado"].notna(), "ano_trimestre"].unique())
+    if ano not in disponible:
+        return {"mes_central": mes_central, "disponible": False,
+                "nota": "El release no trae la variable de conglomerado: sin varianza de diseño."}
+
+    act = m[m["ano_trimestre"] == ano]
+    prev = m[m["ano_trimestre"] == ano - 1] if (ano - 1) in disponible else None
+
+    def tasas(sub, dominio=None):
+        o = (sub["activ"] == 1).to_numpy(dtype=float)
+        do = (sub["activ"] == 2).to_numpy(dtype=float)
+        ft = o + do
+        uno = np.ones(len(sub), dtype=float)
+        return {"td": _razon_con_error(sub, do, ft, dominio),
+                "tp": _razon_con_error(sub, ft, uno, dominio),
+                "to": _razon_con_error(sub, o, uno, dominio)}
+
+    def con_delta(r_act, r_prev):
+        """Variación con intervalo CONSERVADOR: ignora la covarianza del panel rotativo.
+
+        Las muestras de dos años consecutivos se solapan (~26 % de las personas), y ese
+        solape genera covarianza POSITIVA entre las dos estimaciones, que reduce la
+        varianza de la diferencia. Ignorarla ensancha el intervalo: lo que se declara
+        distinguible lo es, y algo distinguible puede quedar fuera. Se prefiere ese
+        error al contrario.
+        """
+        if not r_act or not r_prev:
+            return None
+        d = r_act["valor_pct"] - r_prev["valor_pct"]
+        se = math.sqrt(r_act["se_pp"] ** 2 + r_prev["se_pp"] ** 2)
+        gl = min(r_act["gl"], r_prev["gl"])
+        margen = _t975(gl) * se
+        return {"delta_pp": _round(d, 2), "se_pp": _round(se, 3),
+                "margen_pp": _round(margen, 2),
+                "ic95_pp": [_round(d - margen, 2), _round(d + margen, 2)],
+                "distinto_de_cero": bool(abs(d) > margen),
+                "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."}
+
+    nac_act, nac_prev = tasas(act), (tasas(prev) if prev is not None else {})
+    nacional = {k: {**v, "variacion": con_delta(v, nac_prev.get(k))} if v else None
+                for k, v in nac_act.items()}
+
+    claves = {
+        "sexo": lambda d: d["sexo"].map(SEXO),
+        "edad": lambda d: _bin_edad(d),
+        "region": lambda d: d["region"].map(REGION),
+        "nacionalidad": lambda d: d["nacionalidad"].apply(
+            lambda x: "Chileno/a" if x == 152 else ("Extranjero/a" if pd.notna(x) else None)),
+    }
+    cortes = {}
+    for dim, fn in claves.items():
+        g_act, g_prev = fn(act), (fn(prev) if prev is not None else None)
+        grupos = []
+        for clave in sorted(x for x in g_act.dropna().unique()):
+            r = _razon_con_error(act, (act["activ"] == 2).to_numpy(dtype=float),
+                                 (act["activ"].isin([1, 2])).to_numpy(dtype=float),
+                                 (g_act == clave).to_numpy())
+            rp = None
+            if prev is not None and (g_prev == clave).any():
+                rp = _razon_con_error(prev, (prev["activ"] == 2).to_numpy(dtype=float),
+                                      (prev["activ"].isin([1, 2])).to_numpy(dtype=float),
+                                      (g_prev == clave).to_numpy())
+            if r:
+                grupos.append({"clave": clave, "td": r, "variacion_td": con_delta(r, rp)})
+        grupos.sort(key=lambda x: -x["td"]["valor_pct"])
+        cortes[dim] = grupos
+
+    return {
+        "mes_central": mes_central,
+        "disponible": True,
+        "ano": ano,
+        "nota": ("Error estándar e intervalo de confianza al 95 % bajo el diseño muestral real "
+                 "de la ENE (estratos y conglomerados), no bajo muestreo aleatorio simple. "
+                 "Dice cuánta de la diferencia entre dos cifras puede ser muestreo."),
+        "metodo": ("Linealización de Taylor para la razón más estimador de ultimate cluster: "
+                   "Var = Σ_h n_h/(n_h−1) · Σ_j (t_hj − t̄_h)², con t_hj la suma de los valores "
+                   "linealizados ponderados de cada conglomerado. Grados de libertad = "
+                   "conglomerados − estratos. El intervalo usa el cuantil t, como el INE."),
+        "cobertura": {
+            "anos_con_diseno": disponible,
+            "nota": ("La variable de conglomerado solo viene en los microdatos públicos desde "
+                     "NDE 2019. Los trimestres anteriores no tienen intervalo: no se rellenan "
+                     "con una fórmula de muestreo aleatorio simple, que subestimaría el error."),
+        },
+        "fiabilidad_segun_ine": {
+            "fiable": "CV bajo 15 %",
+            "poco_fiable": "CV entre 15 % y 30 %",
+            "no_fiable": "CV sobre 30 %, menos de 60 casos muestrales o menos de 9 grados de libertad",
+        },
+        "advertencias": [
+            "El intervalo cubre el error de MUESTREO, no el de medición: no dice nada sobre "
+            "respuestas mal declaradas, no respuesta ni errores de clasificación.",
+            "Dos intervalos que se solapan no prueban que las cifras sean iguales; dos que no "
+            "se solapan sí indican que la diferencia excede el muestreo. Para comparar dos "
+            "grupos, el intervalo que corresponde es el de su DIFERENCIA, no el de cada uno.",
+            "El intervalo de una variación ignora la covarianza del panel rotativo y por eso es "
+            "conservador: ensancha el intervalo en vez de estrecharlo.",
+        ],
+        "nacional": nacional,
+        "cortes": cortes,
+    }
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     generado = datetime.date.today().isoformat()
@@ -1310,7 +1527,7 @@ def main():
     micro = pd.read_parquet(
         micro_path,
         columns=["ano_trimestre", "edad", "sexo", "region", "nacionalidad", "activ", "fact_cal",
-                 "idrph", "categoria_ocupacion", "ocup_form"],
+                 "idrph", "categoria_ocupacion", "ocup_form", "estrato", "conglomerado"],
     )
     cortes, anos_cortes = build_cortes(micro)
 
@@ -1319,6 +1536,7 @@ def main():
     tendencias_cortes = build_tendencias_cortes(cortes)
     descomposicion = build_descomposicion(cortes, serie_nac, mc)
     flujos = build_flujos(micro, mc)
+    precision = build_precision(micro, mc, int(ult['ano']))
 
     meta = {
         "release": release,
@@ -1358,6 +1576,7 @@ def main():
     })
     write("descomposicion.json", {"release": release, **descomposicion})
     write("flujos.json", {"release": release, **flujos})
+    write("precision.json", {"release": release, **precision})
     print("Listo.")
 
 

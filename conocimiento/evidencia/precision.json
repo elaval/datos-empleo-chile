@@ -1,0 +1,845 @@
+{
+  "release": "2026-08-jas",
+  "mes_central": 8,
+  "disponible": true,
+  "ano": 2026,
+  "nota": "Error estándar e intervalo de confianza al 95 % bajo el diseño muestral real de la ENE (estratos y conglomerados), no bajo muestreo aleatorio simple. Dice cuánta de la diferencia entre dos cifras puede ser muestreo.",
+  "metodo": "Linealización de Taylor para la razón más estimador de ultimate cluster: Var = Σ_h n_h/(n_h−1) · Σ_j (t_hj − t̄_h)², con t_hj la suma de los valores linealizados ponderados de cada conglomerado. Grados de libertad = conglomerados − estratos. El intervalo usa el cuantil t, como el INE.",
+  "cobertura": {
+    "anos_con_diseno": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "nota": "La variable de conglomerado solo viene en los microdatos públicos desde NDE 2019. Los trimestres anteriores no tienen intervalo: no se rellenan con una fórmula de muestreo aleatorio simple, que subestimaría el error."
+  },
+  "fiabilidad_segun_ine": {
+    "fiable": "CV bajo 15 %",
+    "poco_fiable": "CV entre 15 % y 30 %",
+    "no_fiable": "CV sobre 30 %, menos de 60 casos muestrales o menos de 9 grados de libertad"
+  },
+  "advertencias": [
+    "El intervalo cubre el error de MUESTREO, no el de medición: no dice nada sobre respuestas mal declaradas, no respuesta ni errores de clasificación.",
+    "Dos intervalos que se solapan no prueban que las cifras sean iguales; dos que no se solapan sí indican que la diferencia excede el muestreo. Para comparar dos grupos, el intervalo que corresponde es el de su DIFERENCIA, no el de cada uno.",
+    "El intervalo de una variación ignora la covarianza del panel rotativo y por eso es conservador: ensancha el intervalo en vez de estrecharlo."
+  ],
+  "nacional": {
+    "td": {
+      "valor_pct": 9.8,
+      "se_pp": 0.21,
+      "ic95_pp": [
+        9.39,
+        10.22
+      ],
+      "margen_pp": 0.41,
+      "cv_pct": 2.15,
+      "deff": 2.29,
+      "gl": 5220,
+      "n_muestral": 45799,
+      "fiabilidad": "fiable (CV bajo 15 %)",
+      "variacion": {
+        "delta_pp": 1.27,
+        "se_pp": 0.275,
+        "margen_pp": 0.54,
+        "ic95_pp": [
+          0.73,
+          1.81
+        ],
+        "distinto_de_cero": true,
+        "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+      }
+    },
+    "tp": {
+      "valor_pct": 61.58,
+      "se_pp": 0.277,
+      "ic95_pp": [
+        61.03,
+        62.12
+      ],
+      "margen_pp": 0.54,
+      "cv_pct": 0.45,
+      "deff": 2.67,
+      "gl": 5220,
+      "n_muestral": 82072,
+      "fiabilidad": "fiable (CV bajo 15 %)",
+      "variacion": {
+        "delta_pp": -0.35,
+        "se_pp": 0.381,
+        "margen_pp": 0.75,
+        "ic95_pp": [
+          -1.1,
+          0.4
+        ],
+        "distinto_de_cero": false,
+        "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+      }
+    },
+    "to": {
+      "valor_pct": 55.54,
+      "se_pp": 0.274,
+      "ic95_pp": [
+        55.0,
+        56.08
+      ],
+      "margen_pp": 0.54,
+      "cv_pct": 0.49,
+      "deff": 2.5,
+      "gl": 5220,
+      "n_muestral": 82072,
+      "fiabilidad": "fiable (CV bajo 15 %)",
+      "variacion": {
+        "delta_pp": -1.1,
+        "se_pp": 0.38,
+        "margen_pp": 0.74,
+        "ic95_pp": [
+          -1.84,
+          -0.36
+        ],
+        "distinto_de_cero": true,
+        "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+      }
+    }
+  },
+  "cortes": {
+    "sexo": [
+      {
+        "clave": "Mujer",
+        "td": {
+          "valor_pct": 10.46,
+          "se_pp": 0.322,
+          "ic95_pp": [
+            9.83,
+            11.09
+          ],
+          "margen_pp": 0.63,
+          "cv_pct": 3.07,
+          "deff": 2.32,
+          "gl": 5220,
+          "n_muestral": 21045,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.37,
+          "se_pp": 0.41,
+          "margen_pp": 0.8,
+          "ic95_pp": [
+            0.57,
+            2.17
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Hombre",
+        "td": {
+          "valor_pct": 9.28,
+          "se_pp": 0.261,
+          "ic95_pp": [
+            8.77,
+            9.8
+          ],
+          "margen_pp": 0.51,
+          "cv_pct": 2.81,
+          "deff": 2.0,
+          "gl": 5220,
+          "n_muestral": 24754,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.19,
+          "se_pp": 0.355,
+          "margen_pp": 0.7,
+          "ic95_pp": [
+            0.49,
+            1.89
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      }
+    ],
+    "edad": [
+      {
+        "clave": "15-24",
+        "td": {
+          "valor_pct": 24.39,
+          "se_pp": 1.025,
+          "ic95_pp": [
+            22.38,
+            26.4
+          ],
+          "margen_pp": 2.01,
+          "cv_pct": 4.2,
+          "deff": 2.06,
+          "gl": 5220,
+          "n_muestral": 3610,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 4.71,
+          "se_pp": 1.335,
+          "margen_pp": 2.62,
+          "ic95_pp": [
+            2.09,
+            7.33
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "25-34",
+        "td": {
+          "valor_pct": 12.47,
+          "se_pp": 0.594,
+          "ic95_pp": [
+            11.31,
+            13.64
+          ],
+          "margen_pp": 1.17,
+          "cv_pct": 4.76,
+          "deff": 3.16,
+          "gl": 5220,
+          "n_muestral": 9759,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 2.62,
+          "se_pp": 0.716,
+          "margen_pp": 1.4,
+          "ic95_pp": [
+            1.22,
+            4.02
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "45-54",
+        "td": {
+          "valor_pct": 7.88,
+          "se_pp": 0.356,
+          "ic95_pp": [
+            7.18,
+            8.57
+          ],
+          "margen_pp": 0.7,
+          "cv_pct": 4.52,
+          "deff": 1.65,
+          "gl": 5220,
+          "n_muestral": 9443,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.58,
+          "se_pp": 0.513,
+          "margen_pp": 1.01,
+          "ic95_pp": [
+            -0.43,
+            1.59
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "35-44",
+        "td": {
+          "valor_pct": 7.72,
+          "se_pp": 0.414,
+          "ic95_pp": [
+            6.9,
+            8.53
+          ],
+          "margen_pp": 0.81,
+          "cv_pct": 5.37,
+          "deff": 2.5,
+          "gl": 5220,
+          "n_muestral": 10382,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.82,
+          "se_pp": 0.561,
+          "margen_pp": 1.1,
+          "ic95_pp": [
+            -0.28,
+            1.92
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "55-64",
+        "td": {
+          "valor_pct": 6.99,
+          "se_pp": 0.355,
+          "ic95_pp": [
+            6.29,
+            7.68
+          ],
+          "margen_pp": 0.7,
+          "cv_pct": 5.08,
+          "deff": 1.69,
+          "gl": 5220,
+          "n_muestral": 8702,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.24,
+          "se_pp": 0.506,
+          "margen_pp": 0.99,
+          "ic95_pp": [
+            -0.75,
+            1.23
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "65 y más",
+        "td": {
+          "valor_pct": 4.85,
+          "se_pp": 0.429,
+          "ic95_pp": [
+            4.01,
+            5.69
+          ],
+          "margen_pp": 0.84,
+          "cv_pct": 8.85,
+          "deff": 1.56,
+          "gl": 5220,
+          "n_muestral": 3903,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": -0.73,
+          "se_pp": 0.666,
+          "margen_pp": 1.31,
+          "ic95_pp": [
+            -2.04,
+            0.58
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      }
+    ],
+    "region": [
+      {
+        "clave": "Ñuble",
+        "td": {
+          "valor_pct": 11.82,
+          "se_pp": 0.911,
+          "ic95_pp": [
+            10.04,
+            13.61
+          ],
+          "margen_pp": 1.79,
+          "cv_pct": 7.7,
+          "deff": 1.38,
+          "gl": 5220,
+          "n_muestral": 1733,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.85,
+          "se_pp": 1.162,
+          "margen_pp": 2.28,
+          "ic95_pp": [
+            -0.43,
+            4.13
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "O'Higgins",
+        "td": {
+          "valor_pct": 10.89,
+          "se_pp": 0.718,
+          "ic95_pp": [
+            9.48,
+            12.29
+          ],
+          "margen_pp": 1.41,
+          "cv_pct": 6.59,
+          "deff": 1.46,
+          "gl": 5220,
+          "n_muestral": 2742,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 2.07,
+          "se_pp": 1.019,
+          "margen_pp": 2.0,
+          "ic95_pp": [
+            0.07,
+            4.07
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Biobío",
+        "td": {
+          "valor_pct": 10.48,
+          "se_pp": 0.476,
+          "ic95_pp": [
+            9.54,
+            11.41
+          ],
+          "margen_pp": 0.93,
+          "cv_pct": 4.54,
+          "deff": 1.25,
+          "gl": 5220,
+          "n_muestral": 5183,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.41,
+          "se_pp": 0.706,
+          "margen_pp": 1.38,
+          "ic95_pp": [
+            -0.97,
+            1.79
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Metropolitana",
+        "td": {
+          "valor_pct": 10.35,
+          "se_pp": 0.406,
+          "ic95_pp": [
+            9.55,
+            11.15
+          ],
+          "margen_pp": 0.8,
+          "cv_pct": 3.93,
+          "deff": 1.69,
+          "gl": 5220,
+          "n_muestral": 9511,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.56,
+          "se_pp": 0.521,
+          "margen_pp": 1.02,
+          "ic95_pp": [
+            0.54,
+            2.58
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Valparaíso",
+        "td": {
+          "valor_pct": 9.88,
+          "se_pp": 0.483,
+          "ic95_pp": [
+            8.93,
+            10.83
+          ],
+          "margen_pp": 0.95,
+          "cv_pct": 4.89,
+          "deff": 1.49,
+          "gl": 5220,
+          "n_muestral": 5701,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.35,
+          "se_pp": 0.659,
+          "margen_pp": 1.29,
+          "ic95_pp": [
+            0.06,
+            2.64
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Los Ríos",
+        "td": {
+          "valor_pct": 9.84,
+          "se_pp": 0.797,
+          "ic95_pp": [
+            8.28,
+            11.4
+          ],
+          "margen_pp": 1.56,
+          "cv_pct": 8.1,
+          "deff": 1.35,
+          "gl": 5220,
+          "n_muestral": 1881,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.91,
+          "se_pp": 1.114,
+          "margen_pp": 2.18,
+          "ic95_pp": [
+            -1.27,
+            3.09
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Maule",
+        "td": {
+          "valor_pct": 9.65,
+          "se_pp": 0.617,
+          "ic95_pp": [
+            8.44,
+            10.86
+          ],
+          "margen_pp": 1.21,
+          "cv_pct": 6.39,
+          "deff": 1.33,
+          "gl": 5220,
+          "n_muestral": 3041,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 2.14,
+          "se_pp": 0.835,
+          "margen_pp": 1.64,
+          "ic95_pp": [
+            0.5,
+            3.78
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "La Araucanía",
+        "td": {
+          "valor_pct": 9.36,
+          "se_pp": 0.644,
+          "ic95_pp": [
+            8.1,
+            10.62
+          ],
+          "margen_pp": 1.26,
+          "cv_pct": 6.88,
+          "deff": 1.09,
+          "gl": 5220,
+          "n_muestral": 2239,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.27,
+          "se_pp": 0.921,
+          "margen_pp": 1.8,
+          "ic95_pp": [
+            -1.53,
+            2.07
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Coquimbo",
+        "td": {
+          "valor_pct": 8.97,
+          "se_pp": 0.857,
+          "ic95_pp": [
+            7.29,
+            10.65
+          ],
+          "margen_pp": 1.68,
+          "cv_pct": 9.56,
+          "deff": 2.4,
+          "gl": 5220,
+          "n_muestral": 2668,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.37,
+          "se_pp": 1.1,
+          "margen_pp": 2.16,
+          "ic95_pp": [
+            -0.79,
+            3.53
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Atacama",
+        "td": {
+          "valor_pct": 8.75,
+          "se_pp": 0.716,
+          "ic95_pp": [
+            7.35,
+            10.16
+          ],
+          "margen_pp": 1.4,
+          "cv_pct": 8.18,
+          "deff": 1.1,
+          "gl": 5220,
+          "n_muestral": 1706,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": -0.16,
+          "se_pp": 1.114,
+          "margen_pp": 2.18,
+          "ic95_pp": [
+            -2.34,
+            2.02
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Tarapacá",
+        "td": {
+          "valor_pct": 8.54,
+          "se_pp": 0.827,
+          "ic95_pp": [
+            6.92,
+            10.16
+          ],
+          "margen_pp": 1.62,
+          "cv_pct": 9.69,
+          "deff": 0.99,
+          "gl": 5220,
+          "n_muestral": 1126,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 0.49,
+          "se_pp": 1.211,
+          "margen_pp": 2.37,
+          "ic95_pp": [
+            -1.88,
+            2.86
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Arica y Parinacota",
+        "td": {
+          "valor_pct": 7.78,
+          "se_pp": 1.035,
+          "ic95_pp": [
+            5.75,
+            9.81
+          ],
+          "margen_pp": 2.03,
+          "cv_pct": 13.31,
+          "deff": 1.94,
+          "gl": 5220,
+          "n_muestral": 1299,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.2,
+          "se_pp": 1.285,
+          "margen_pp": 2.52,
+          "ic95_pp": [
+            -1.32,
+            3.72
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Los Lagos",
+        "td": {
+          "valor_pct": 7.69,
+          "se_pp": 0.712,
+          "ic95_pp": [
+            6.29,
+            9.08
+          ],
+          "margen_pp": 1.39,
+          "cv_pct": 9.26,
+          "deff": 1.93,
+          "gl": 5220,
+          "n_muestral": 2706,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 2.2,
+          "se_pp": 0.947,
+          "margen_pp": 1.86,
+          "ic95_pp": [
+            0.34,
+            4.06
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Antofagasta",
+        "td": {
+          "valor_pct": 6.74,
+          "se_pp": 0.608,
+          "ic95_pp": [
+            5.55,
+            7.93
+          ],
+          "margen_pp": 1.19,
+          "cv_pct": 9.02,
+          "deff": 1.14,
+          "gl": 5220,
+          "n_muestral": 1937,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": -1.14,
+          "se_pp": 0.963,
+          "margen_pp": 1.89,
+          "ic95_pp": [
+            -3.03,
+            0.75
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Magallanes",
+        "td": {
+          "valor_pct": 6.44,
+          "se_pp": 1.016,
+          "ic95_pp": [
+            4.45,
+            8.43
+          ],
+          "margen_pp": 1.99,
+          "cv_pct": 15.76,
+          "deff": 2.03,
+          "gl": 5220,
+          "n_muestral": 1184,
+          "fiabilidad": "poco fiable (CV entre 15 % y 30 %)"
+        },
+        "variacion_td": {
+          "delta_pp": -0.06,
+          "se_pp": 1.238,
+          "margen_pp": 2.43,
+          "ic95_pp": [
+            -2.49,
+            2.37
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Aysén",
+        "td": {
+          "valor_pct": 4.0,
+          "se_pp": 0.621,
+          "ic95_pp": [
+            2.78,
+            5.22
+          ],
+          "margen_pp": 1.22,
+          "cv_pct": 15.54,
+          "deff": 1.15,
+          "gl": 5220,
+          "n_muestral": 1142,
+          "fiabilidad": "poco fiable (CV entre 15 % y 30 %)"
+        },
+        "variacion_td": {
+          "delta_pp": -0.72,
+          "se_pp": 0.878,
+          "margen_pp": 1.72,
+          "ic95_pp": [
+            -2.44,
+            1.0
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      }
+    ],
+    "nacionalidad": [
+      {
+        "clave": "Chileno/a",
+        "td": {
+          "valor_pct": 10.14,
+          "se_pp": 0.225,
+          "ic95_pp": [
+            9.7,
+            10.58
+          ],
+          "margen_pp": 0.44,
+          "cv_pct": 2.22,
+          "deff": 2.37,
+          "gl": 5220,
+          "n_muestral": 42769,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": 1.49,
+          "se_pp": 0.289,
+          "margen_pp": 0.57,
+          "ic95_pp": [
+            0.92,
+            2.06
+          ],
+          "distinto_de_cero": true,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      },
+      {
+        "clave": "Extranjero/a",
+        "td": {
+          "valor_pct": 7.0,
+          "se_pp": 0.852,
+          "ic95_pp": [
+            5.33,
+            8.67
+          ],
+          "margen_pp": 1.67,
+          "cv_pct": 12.16,
+          "deff": 3.38,
+          "gl": 5220,
+          "n_muestral": 3030,
+          "fiabilidad": "fiable (CV bajo 15 %)"
+        },
+        "variacion_td": {
+          "delta_pp": -0.51,
+          "se_pp": 1.089,
+          "margen_pp": 2.13,
+          "ic95_pp": [
+            -2.64,
+            1.62
+          ],
+          "distinto_de_cero": false,
+          "nota": "Intervalo conservador: ignora la covarianza del panel rotativo."
+        }
+      }
+    ]
+  }
+}
