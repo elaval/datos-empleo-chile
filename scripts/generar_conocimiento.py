@@ -879,6 +879,143 @@ def build_tendencias_cortes(cortes):
     return out
 
 
+# --------------------------------------------------------------------------
+# 5. DESCOMPOSICIÓN COMPOSICIÓN / INTRA-GRUPO (shift-share)
+# --------------------------------------------------------------------------
+# Una tasa nacional es el promedio ponderado de las tasas de sus grupos, con pesos
+# iguales a la participación de cada grupo en el denominador. Cuando la tasa nacional
+# se mueve, hay dos razones posibles y conviene no confundirlas:
+#
+#   · CAMBIÓ QUIÉN COMPONE la población (más adultos mayores, más población extranjera);
+#   · CAMBIÓ LA SITUACIÓN DENTRO de cada grupo.
+#
+# Se usa la descomposición simétrica (pesos y tasas promediados entre los dos años), que
+# es EXACTA: composición + intra = variación total, sin residuo. Demostración:
+#   Σ Δw·(r₀+r₁)/2 + Σ (w₀+w₁)/2·Δr = Σ w₁r₁ − Σ w₀r₀
+# La alternativa asimétrica (pesos del año base) deja un término de interacción que hay
+# que repartir a mano, y repartirlo es una decisión que nadie podría auditar después.
+#
+# ⚠ Los cortes son de UNA dimensión. La descomposición por edad no controla por sexo ni al
+# revés: son lentes alternativos sobre el mismo cambio, no sumandos de una partición común.
+TASAS_DESCOMPONIBLES = {
+    # tasa: (numerador, denominador, qué es el ponderador)
+    "td": ("do", "ft", "participación del grupo en la fuerza de trabajo"),
+    "tp": ("ft", "pet", "participación del grupo en la población en edad de trabajar"),
+    "to": ("o", "pet", "participación del grupo en la población en edad de trabajar"),
+}
+
+
+def _descomponer(grupos: dict, ano0: int, ano1: int, num: str, den: str):
+    """Shift-share simétrico de una tasa entre dos años. Devuelve None si falta un año."""
+    filas = {}
+    for clave, serie in grupos.items():
+        f0 = next((x for x in serie if x["ano"] == ano0), None)
+        f1 = next((x for x in serie if x["ano"] == ano1), None)
+        if not f0 or not f1 or not f0.get(den) or not f1.get(den):
+            return None
+        filas[clave] = (f0, f1)
+
+    tot0 = sum(f0[den] for f0, _ in filas.values())
+    tot1 = sum(f1[den] for _, f1 in filas.values())
+    if not tot0 or not tot1:
+        return None
+
+    tasa0 = 100 * sum(f0[num] for f0, _ in filas.values()) / tot0
+    tasa1 = 100 * sum(f1[num] for _, f1 in filas.values()) / tot1
+    # Tasa nacional promedio de los dos años: CENTRA el aporte de composición de cada grupo.
+    # Sin centrar, el aporte por grupo es Δpeso × tasa del grupo, y eso NO se puede leer solo:
+    # como los pesos suman 1 en los dos años, Σ Δpeso = 0, y el signo de cada término queda
+    # dictado por el nivel de la tasa del grupo en vez de por su posición respecto del país.
+    # El caso que lo delató: entre 2010 y 2026 los jóvenes 15-24 pasan de 21,67 % a 15,19 % de
+    # la PET y su tasa de ocupación es la más baja de todas; sin centrar su aporte sale −1,69 pp,
+    # que leído solo dice «la caída del peso juvenil bajó la ocupación nacional», y es al revés.
+    # Centrado da +1,91 pp: menos peso en el grupo de tasa más baja EMPUJA la tasa nacional
+    # hacia arriba. El total no cambia — Σ Δpeso × tasa_media_nacional = 0 — así que centrar
+    # arregla la lectura por grupo sin tocar la aritmética del agregado.
+    tasa_media = (tasa0 + tasa1) / 2
+
+    comp_total, intra_total, detalle = 0.0, 0.0, []
+    for clave, (f0, f1) in filas.items():
+        w0, w1 = f0[den] / tot0, f1[den] / tot1
+        r0, r1 = 100 * f0[num] / f0[den], 100 * f1[num] / f1[den]
+        comp = (w1 - w0) * ((r0 + r1) / 2 - tasa_media)
+        intra = (w0 + w1) / 2 * (r1 - r0)
+        comp_total += comp
+        intra_total += intra
+        detalle.append({
+            "clave": clave,
+            "peso_desde_pct": _round(100 * w0, 2),
+            "peso_hasta_pct": _round(100 * w1, 2),
+            "tasa_desde": _round(r0, 2),
+            "tasa_hasta": _round(r1, 2),
+            "aporte_composicion_pp": _round(comp, 3),
+            "aporte_intra_pp": _round(intra, 3),
+        })
+    detalle.sort(key=lambda d: abs(d["aporte_intra_pp"] + d["aporte_composicion_pp"]), reverse=True)
+    return {
+        "tasa_desde": _round(tasa0, 2),
+        "tasa_hasta": _round(tasa1, 2),
+        "delta_pp": _round(tasa1 - tasa0, 2),
+        "efecto_composicion_pp": _round(comp_total, 3),
+        "efecto_intra_pp": _round(intra_total, 3),
+        "residuo_pp": _round((tasa1 - tasa0) - (comp_total + intra_total), 6),
+        "grupos": detalle,
+    }
+
+
+def build_descomposicion(cortes: dict, serie_nac: list, mes_central: int):
+    ult = serie_nac[-1]["ano"]
+    horizontes = [
+        (ult - 1, ult, "último año"),
+        (2019, ult, "contra el último trimestre previo a la pandemia"),
+        (serie_nac[0]["ano"], ult, "toda la serie"),
+    ]
+    salida = []
+    for ano0, ano1, etiqueta in horizontes:
+        if ano0 >= ano1:
+            continue
+        tasas = {}
+        for tasa, (num, den, pond) in TASAS_DESCOMPONIBLES.items():
+            dims = {}
+            for dim, obj in cortes.items():
+                d = _descomponer(obj["grupos"], ano0, ano1, num, den)
+                if d:
+                    dims[dim] = {"etiqueta_dim": obj["etiqueta_dim"], **d}
+            if dims:
+                tasas[tasa] = {"ponderador": pond, "dimensiones": dims}
+        if tasas:
+            salida.append({"desde": ano0, "hasta": ano1, "etiqueta": etiqueta, "tasas": tasas})
+    return {
+        "mes_central": mes_central,
+        "nota": (
+            "Separa cuánto del movimiento de una tasa nacional viene de que cambió la "
+            "composición de la población y cuánto de que cambió la situación dentro de cada "
+            "grupo. Es aritmética exacta sobre los cortes publicados: composición + intra = "
+            "variación total, con residuo 0. No establece causas."
+        ),
+        "metodo": (
+            "Descomposición simétrica (shift-share): el aporte de composición de cada grupo es "
+            "Δpeso × (tasa promedio del grupo − tasa promedio nacional), y el aporte intra-grupo "
+            "es peso promedio × Δtasa del grupo. La suma sobre los grupos reproduce exactamente "
+            "la variación de la tasa nacional. El aporte de composición va CENTRADO en la tasa "
+            "nacional: sin centrar, el signo de cada grupo lo dicta el nivel de su tasa y no su "
+            "posición respecto del país, y el número por grupo se lee al revés (los pesos suman "
+            "1 en los dos años, así que Σ Δpeso = 0 y centrar no altera el total)."
+        ),
+        "advertencias": [
+            "Los cortes son de UNA dimensión: la descomposición por edad no controla por sexo "
+            "ni al revés. Cada dimensión es un lente alternativo sobre el mismo cambio, no un "
+            "sumando de una partición común.",
+            "Un aporte grande de composición no dice que la composición sea la causa: dice que, "
+            "con las tasas de cada grupo congeladas, el solo cambio de pesos habría movido la "
+            "tasa nacional en esa magnitud.",
+            "Los grupos con n muestral chico (ver `n` en series-cortes.json) aportan aritmética "
+            "frágil: el error muestral de su tasa viaja al aporte.",
+        ],
+        "horizontes": salida,
+    }
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     generado = datetime.date.today().isoformat()
@@ -899,6 +1036,7 @@ def main():
     snapshot = build_snapshot(serie_nac, cortes, release, generado)
     tendencias = build_tendencias(serie_nac)
     tendencias_cortes = build_tendencias_cortes(cortes)
+    descomposicion = build_descomposicion(cortes, serie_nac, mc)
 
     meta = {
         "release": release,
@@ -936,6 +1074,7 @@ def main():
                 f"pp para tasas, absoluto + % para stocks.",
         "cortes": tendencias_cortes,
     })
+    write("descomposicion.json", {"release": release, **descomposicion})
     print("Listo.")
 
 

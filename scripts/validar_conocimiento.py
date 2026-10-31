@@ -108,6 +108,41 @@ def main() -> int:
               "ramas + sin rama declarada = ocupados",
               f"sin rama: {cobr['sin_rama_declarada']:,.0f}")
 
+    # Descomposición composición / intra-grupo: la identidad tiene que cerrar SIN residuo, y
+    # los aportes por grupo tienen que sumar cada efecto. El aporte de composición va centrado
+    # en la tasa nacional, así que la suma de los centrados debe dar el mismo total que el
+    # efecto agregado: si alguien quita el centrado, el total no cambia pero esta suma sí.
+    desc_path = EVID / "descomposicion.json"
+    if desc_path.exists():
+        desc = json.load(open(desc_path, encoding="utf-8"))
+        peor_res, peor_grp, n_casos = 0.0, 0.0, 0
+        for hz in desc["horizontes"]:
+            for tasa, obj in hz["tasas"].items():
+                for dim, d in obj["dimensiones"].items():
+                    n_casos += 1
+                    peor_res = max(peor_res, abs(d["residuo_pp"]), abs(
+                        d["delta_pp"] - (d["efecto_composicion_pp"] + d["efecto_intra_pp"])))
+                    sc = sum(g["aporte_composicion_pp"] for g in d["grupos"])
+                    si = sum(g["aporte_intra_pp"] for g in d["grupos"])
+                    peor_grp = max(peor_grp, abs(sc - d["efecto_composicion_pp"]),
+                                   abs(si - d["efecto_intra_pp"]))
+        check(peor_res < 0.01, "descomposición: composición + intra = Δ de la tasa",
+              f"{n_casos} casos, peor residuo {peor_res:.4f} pp")
+        check(peor_grp < 0.01, "descomposición: los aportes por grupo suman cada efecto",
+              f"peor desvío {peor_grp:.4f} pp")
+        # El extremo final de cada descomposición es la tasa del release: si no coincide, la
+        # descomposición se calculó sobre otros años o sobre otro mes central.
+        ult = max(h["hasta"] for h in desc["horizontes"])
+        peor_t = 0.0
+        for hz in desc["horizontes"]:
+            if hz["hasta"] != ult:
+                continue
+            for tasa, obj in hz["tasas"].items():
+                for d in obj["dimensiones"].values():
+                    peor_t = max(peor_t, abs(d["tasa_hasta"] - nac[tasa]))
+        check(peor_t < 0.02, "descomposición: la tasa final es la del release",
+              f"peor desvío {peor_t:.4f} pp")
+
     edu = snap.get("educacion")
     if edu:
         cob = edu["_cobertura"]

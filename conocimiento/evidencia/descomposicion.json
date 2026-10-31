@@ -1,0 +1,2581 @@
+{
+  "release": "2026-08-jas",
+  "mes_central": 8,
+  "nota": "Separa cuánto del movimiento de una tasa nacional viene de que cambió la composición de la población y cuánto de que cambió la situación dentro de cada grupo. Es aritmética exacta sobre los cortes publicados: composición + intra = variación total, con residuo 0. No establece causas.",
+  "metodo": "Descomposición simétrica (shift-share): el aporte de composición de cada grupo es Δpeso × (tasa promedio del grupo − tasa promedio nacional), y el aporte intra-grupo es peso promedio × Δtasa del grupo. La suma sobre los grupos reproduce exactamente la variación de la tasa nacional. El aporte de composición va CENTRADO en la tasa nacional: sin centrar, el signo de cada grupo lo dicta el nivel de su tasa y no su posición respecto del país, y el número por grupo se lee al revés (los pesos suman 1 en los dos años, así que Σ Δpeso = 0 y centrar no altera el total).",
+  "advertencias": [
+    "Los cortes son de UNA dimensión: la descomposición por edad no controla por sexo ni al revés. Cada dimensión es un lente alternativo sobre el mismo cambio, no un sumando de una partición común.",
+    "Un aporte grande de composición no dice que la composición sea la causa: dice que, con las tasas de cada grupo congeladas, el solo cambio de pesos habría movido la tasa nacional en esa magnitud.",
+    "Los grupos con n muestral chico (ver `n` en series-cortes.json) aportan aritmética frágil: el error muestral de su tasa viaja al aporte."
+  ],
+  "horizontes": [
+    {
+      "desde": 2025,
+      "hasta": 2026,
+      "etiqueta": "último año",
+      "tasas": {
+        "td": {
+          "ponderador": "participación del grupo en la fuerza de trabajo",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 8.53,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.27,
+              "efecto_composicion_pp": 0.005,
+              "efecto_intra_pp": 1.268,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 56.51,
+                  "peso_hasta_pct": 56.02,
+                  "tasa_desde": 8.09,
+                  "tasa_hasta": 9.28,
+                  "aporte_composicion_pp": 0.002,
+                  "aporte_intra_pp": 0.669
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 43.49,
+                  "peso_hasta_pct": 43.98,
+                  "tasa_desde": 9.09,
+                  "tasa_hasta": 10.46,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": 0.599
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 8.53,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.27,
+              "efecto_composicion_pp": -0.035,
+              "efecto_intra_pp": 1.309,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 25.24,
+                  "peso_hasta_pct": 24.56,
+                  "tasa_desde": 9.85,
+                  "tasa_hasta": 12.47,
+                  "aporte_composicion_pp": -0.013,
+                  "aporte_intra_pp": 0.653
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 7.11,
+                  "peso_hasta_pct": 7.06,
+                  "tasa_desde": 19.68,
+                  "tasa_hasta": 24.39,
+                  "aporte_composicion_pp": -0.006,
+                  "aporte_intra_pp": 0.334
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 25.55,
+                  "peso_hasta_pct": 25.92,
+                  "tasa_desde": 6.9,
+                  "tasa_hasta": 7.72,
+                  "aporte_composicion_pp": -0.007,
+                  "aporte_intra_pp": 0.211
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 20.61,
+                  "peso_hasta_pct": 20.7,
+                  "tasa_desde": 7.3,
+                  "tasa_hasta": 7.88,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.119
+                },
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 6.19,
+                  "peso_hasta_pct": 6.29,
+                  "tasa_desde": 5.58,
+                  "tasa_hasta": 4.85,
+                  "aporte_composicion_pp": -0.004,
+                  "aporte_intra_pp": -0.045
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 15.31,
+                  "peso_hasta_pct": 15.47,
+                  "tasa_desde": 6.75,
+                  "tasa_hasta": 6.99,
+                  "aporte_composicion_pp": -0.004,
+                  "aporte_intra_pp": 0.037
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 8.53,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.27,
+              "efecto_composicion_pp": 0.0,
+              "efecto_intra_pp": 1.273,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 44.58,
+                  "peso_hasta_pct": 44.65,
+                  "tasa_desde": 8.79,
+                  "tasa_hasta": 10.35,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.696
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 9.78,
+                  "peso_hasta_pct": 9.91,
+                  "tasa_desde": 8.53,
+                  "tasa_hasta": 9.88,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.133
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.36,
+                  "peso_hasta_pct": 5.34,
+                  "tasa_desde": 7.51,
+                  "tasa_hasta": 9.65,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.115
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 4.83,
+                  "peso_hasta_pct": 4.81,
+                  "tasa_desde": 8.82,
+                  "tasa_hasta": 10.89,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.1
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.22,
+                  "peso_hasta_pct": 4.17,
+                  "tasa_desde": 5.49,
+                  "tasa_hasta": 7.69,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": 0.092
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.22,
+                  "peso_hasta_pct": 4.23,
+                  "tasa_desde": 7.6,
+                  "tasa_hasta": 8.97,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.058
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.36,
+                  "peso_hasta_pct": 2.35,
+                  "tasa_desde": 9.97,
+                  "tasa_hasta": 11.82,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.044
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.78,
+                  "peso_hasta_pct": 3.76,
+                  "tasa_desde": 7.88,
+                  "tasa_hasta": 6.74,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.043
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 7.72,
+                  "peso_hasta_pct": 7.61,
+                  "tasa_desde": 10.07,
+                  "tasa_hasta": 10.48,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.031
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 1.98,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 8.93,
+                  "tasa_hasta": 9.84,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.018
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.25,
+                  "peso_hasta_pct": 1.26,
+                  "tasa_desde": 6.58,
+                  "tasa_hasta": 7.78,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.015
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 4.66,
+                  "peso_hasta_pct": 4.62,
+                  "tasa_desde": 9.09,
+                  "tasa_hasta": 9.36,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.012
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 2.0,
+                  "peso_hasta_pct": 2.07,
+                  "tasa_desde": 8.05,
+                  "tasa_hasta": 8.54,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.01
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.63,
+                  "peso_hasta_pct": 1.64,
+                  "tasa_desde": 8.91,
+                  "tasa_hasta": 8.75,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.003
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.6,
+                  "peso_hasta_pct": 0.58,
+                  "tasa_desde": 4.72,
+                  "tasa_hasta": 4.0,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.004
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 1.03,
+                  "peso_hasta_pct": 1.02,
+                  "tasa_desde": 6.5,
+                  "tasa_hasta": 6.44,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.001
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 8.53,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.27,
+              "efecto_composicion_pp": 0.004,
+              "efecto_intra_pp": 1.27,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 89.18,
+                  "peso_hasta_pct": 89.36,
+                  "tasa_desde": 8.65,
+                  "tasa_hasta": 10.14,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 1.325
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 10.82,
+                  "peso_hasta_pct": 10.64,
+                  "tasa_desde": 7.51,
+                  "tasa_hasta": 7.0,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": -0.055
+                }
+              ]
+            }
+          }
+        },
+        "tp": {
+          "ponderador": "participación del grupo en la población en edad de trabajar",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 61.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -0.35,
+              "efecto_composicion_pp": 0.001,
+              "efecto_intra_pp": -0.35,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 48.99,
+                  "peso_hasta_pct": 48.99,
+                  "tasa_desde": 71.44,
+                  "tasa_hasta": 70.41,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.503
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 51.01,
+                  "peso_hasta_pct": 51.01,
+                  "tasa_desde": 52.79,
+                  "tasa_hasta": 53.09,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.153
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 61.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -0.35,
+              "efecto_composicion_pp": -0.216,
+              "efecto_intra_pp": -0.134,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 17.46,
+                  "peso_hasta_pct": 17.97,
+                  "tasa_desde": 21.97,
+                  "tasa_hasta": 21.56,
+                  "aporte_composicion_pp": -0.204,
+                  "aporte_intra_pp": -0.072
+                },
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 18.95,
+                  "peso_hasta_pct": 18.31,
+                  "tasa_desde": 82.47,
+                  "tasa_hasta": 82.62,
+                  "aporte_composicion_pp": -0.133,
+                  "aporte_intra_pp": 0.027
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 15.75,
+                  "peso_hasta_pct": 15.81,
+                  "tasa_desde": 81.03,
+                  "tasa_hasta": 80.61,
+                  "aporte_composicion_pp": 0.011,
+                  "aporte_intra_pp": -0.065
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 14.0,
+                  "peso_hasta_pct": 14.0,
+                  "tasa_desde": 67.7,
+                  "tasa_hasta": 68.06,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.049
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 15.35,
+                  "peso_hasta_pct": 15.19,
+                  "tasa_desde": 28.67,
+                  "tasa_hasta": 28.63,
+                  "aporte_composicion_pp": 0.053,
+                  "aporte_intra_pp": -0.006
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 18.49,
+                  "peso_hasta_pct": 18.73,
+                  "tasa_desde": 85.57,
+                  "tasa_hasta": 85.21,
+                  "aporte_composicion_pp": 0.057,
+                  "aporte_intra_pp": -0.067
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 61.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -0.35,
+              "efecto_composicion_pp": -0.002,
+              "efecto_intra_pp": -0.348,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 8.41,
+                  "peso_hasta_pct": 8.39,
+                  "tasa_desde": 56.88,
+                  "tasa_hasta": 55.91,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.082
+                },
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 42.01,
+                  "peso_hasta_pct": 41.96,
+                  "tasa_desde": 65.71,
+                  "tasa_hasta": 65.52,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": -0.079
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.56,
+                  "peso_hasta_pct": 4.56,
+                  "tasa_desde": 57.33,
+                  "tasa_hasta": 56.33,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.046
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.83,
+                  "peso_hasta_pct": 5.84,
+                  "tasa_desde": 56.9,
+                  "tasa_hasta": 56.3,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.035
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.11,
+                  "peso_hasta_pct": 5.12,
+                  "tasa_desde": 58.55,
+                  "tasa_hasta": 57.84,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.036
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.21,
+                  "peso_hasta_pct": 10.23,
+                  "tasa_desde": 59.32,
+                  "tasa_hasta": 59.64,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.033
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.09,
+                  "peso_hasta_pct": 5.08,
+                  "tasa_desde": 56.66,
+                  "tasa_hasta": 56.02,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.032
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.95,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 63.56,
+                  "tasa_hasta": 65.04,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.029
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.36,
+                  "peso_hasta_pct": 4.39,
+                  "tasa_desde": 60.02,
+                  "tasa_hasta": 59.41,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.027
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.51,
+                  "peso_hasta_pct": 3.51,
+                  "tasa_desde": 66.72,
+                  "tasa_hasta": 66.0,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.025
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.07,
+                  "peso_hasta_pct": 2.06,
+                  "tasa_desde": 59.49,
+                  "tasa_hasta": 58.39,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.023
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.53,
+                  "peso_hasta_pct": 0.53,
+                  "tasa_desde": 70.08,
+                  "tasa_hasta": 67.58,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.013
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.62,
+                  "peso_hasta_pct": 2.62,
+                  "tasa_desde": 55.9,
+                  "tasa_hasta": 55.41,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.013
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.54,
+                  "peso_hasta_pct": 1.54,
+                  "tasa_desde": 65.42,
+                  "tasa_hasta": 65.73,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.005
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.93,
+                  "peso_hasta_pct": 0.93,
+                  "tasa_desde": 68.48,
+                  "tasa_hasta": 67.97,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.005
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.29,
+                  "peso_hasta_pct": 1.29,
+                  "tasa_desde": 60.16,
+                  "tasa_hasta": 60.26,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.001
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 61.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -0.35,
+              "efecto_composicion_pp": -0.006,
+              "efecto_intra_pp": -0.343,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 91.74,
+                  "peso_hasta_pct": 91.77,
+                  "tasa_desde": 60.2,
+                  "tasa_hasta": 59.96,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.223
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 8.26,
+                  "peso_hasta_pct": 8.23,
+                  "tasa_desde": 81.07,
+                  "tasa_hasta": 79.61,
+                  "aporte_composicion_pp": -0.006,
+                  "aporte_intra_pp": -0.121
+                }
+              ]
+            }
+          }
+        },
+        "to": {
+          "ponderador": "participación del grupo en la población en edad de trabajar",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 56.64,
+              "tasa_hasta": 55.54,
+              "delta_pp": -1.1,
+              "efecto_composicion_pp": 0.001,
+              "efecto_intra_pp": -1.105,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 48.99,
+                  "peso_hasta_pct": 48.99,
+                  "tasa_desde": 65.65,
+                  "tasa_hasta": 63.87,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.873
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 51.01,
+                  "peso_hasta_pct": 51.01,
+                  "tasa_desde": 47.99,
+                  "tasa_hasta": 47.54,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.232
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 56.64,
+              "tasa_hasta": 55.54,
+              "delta_pp": -1.1,
+              "efecto_composicion_pp": -0.171,
+              "efecto_intra_pp": -0.933,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 18.95,
+                  "peso_hasta_pct": 18.31,
+                  "tasa_desde": 74.35,
+                  "tasa_hasta": 72.31,
+                  "aporte_composicion_pp": -0.11,
+                  "aporte_intra_pp": -0.38
+                },
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 17.46,
+                  "peso_hasta_pct": 17.97,
+                  "tasa_desde": 20.74,
+                  "tasa_hasta": 20.52,
+                  "aporte_composicion_pp": -0.181,
+                  "aporte_intra_pp": -0.04
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 15.35,
+                  "peso_hasta_pct": 15.19,
+                  "tasa_desde": 23.03,
+                  "tasa_hasta": 21.65,
+                  "aporte_composicion_pp": 0.054,
+                  "aporte_intra_pp": -0.21
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 18.49,
+                  "peso_hasta_pct": 18.73,
+                  "tasa_desde": 79.67,
+                  "tasa_hasta": 78.64,
+                  "aporte_composicion_pp": 0.056,
+                  "aporte_intra_pp": -0.192
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 15.75,
+                  "peso_hasta_pct": 15.81,
+                  "tasa_desde": 75.11,
+                  "tasa_hasta": 74.26,
+                  "aporte_composicion_pp": 0.011,
+                  "aporte_intra_pp": -0.134
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 14.0,
+                  "peso_hasta_pct": 14.0,
+                  "tasa_desde": 63.14,
+                  "tasa_hasta": 63.3,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.023
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 56.64,
+              "tasa_hasta": 55.54,
+              "delta_pp": -1.1,
+              "efecto_composicion_pp": -0.001,
+              "efecto_intra_pp": -1.103,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 42.01,
+                  "peso_hasta_pct": 41.96,
+                  "tasa_desde": 59.93,
+                  "tasa_hasta": 58.74,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": -0.502
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.83,
+                  "peso_hasta_pct": 5.84,
+                  "tasa_desde": 52.63,
+                  "tasa_hasta": 50.86,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.103
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.56,
+                  "peso_hasta_pct": 4.56,
+                  "tasa_desde": 54.18,
+                  "tasa_hasta": 52.0,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.1
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.11,
+                  "peso_hasta_pct": 5.12,
+                  "tasa_desde": 53.38,
+                  "tasa_hasta": 51.54,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.094
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 8.41,
+                  "peso_hasta_pct": 8.39,
+                  "tasa_desde": 51.15,
+                  "tasa_hasta": 50.05,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.093
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.36,
+                  "peso_hasta_pct": 4.39,
+                  "tasa_desde": 55.46,
+                  "tasa_hasta": 54.08,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.06
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.21,
+                  "peso_hasta_pct": 10.23,
+                  "tasa_desde": 54.26,
+                  "tasa_hasta": 53.75,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.052
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.62,
+                  "peso_hasta_pct": 2.62,
+                  "tasa_desde": 50.33,
+                  "tasa_hasta": 48.86,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.038
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.09,
+                  "peso_hasta_pct": 5.08,
+                  "tasa_desde": 51.5,
+                  "tasa_hasta": 50.78,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.037
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.07,
+                  "peso_hasta_pct": 2.06,
+                  "tasa_desde": 54.18,
+                  "tasa_hasta": 52.64,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.032
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.95,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 58.44,
+                  "tasa_hasta": 59.48,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.02
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.53,
+                  "peso_hasta_pct": 0.53,
+                  "tasa_desde": 66.77,
+                  "tasa_hasta": 64.88,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.01
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.29,
+                  "peso_hasta_pct": 1.29,
+                  "tasa_desde": 56.2,
+                  "tasa_hasta": 55.57,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.008
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.54,
+                  "peso_hasta_pct": 1.54,
+                  "tasa_desde": 59.59,
+                  "tasa_hasta": 59.97,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.006
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.93,
+                  "peso_hasta_pct": 0.93,
+                  "tasa_desde": 64.03,
+                  "tasa_hasta": 63.59,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.004
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.51,
+                  "peso_hasta_pct": 3.51,
+                  "tasa_desde": 61.46,
+                  "tasa_hasta": 61.55,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.003
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 56.64,
+              "tasa_hasta": 55.54,
+              "delta_pp": -1.1,
+              "efecto_composicion_pp": -0.006,
+              "efecto_intra_pp": -1.098,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 91.74,
+                  "peso_hasta_pct": 91.77,
+                  "tasa_desde": 54.99,
+                  "tasa_hasta": 53.88,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -1.02
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 8.26,
+                  "peso_hasta_pct": 8.23,
+                  "tasa_desde": 74.98,
+                  "tasa_hasta": 74.03,
+                  "aporte_composicion_pp": -0.006,
+                  "aporte_intra_pp": -0.078
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "desde": 2019,
+      "hasta": 2026,
+      "etiqueta": "contra el último trimestre previo a la pandemia",
+      "tasas": {
+        "td": {
+          "ponderador": "participación del grupo en la fuerza de trabajo",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 7.34,
+              "tasa_hasta": 9.8,
+              "delta_pp": 2.47,
+              "efecto_composicion_pp": 0.013,
+              "efecto_intra_pp": 2.452,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 57.1,
+                  "peso_hasta_pct": 56.02,
+                  "tasa_desde": 6.81,
+                  "tasa_hasta": 9.28,
+                  "aporte_composicion_pp": 0.006,
+                  "aporte_intra_pp": 1.398
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 42.9,
+                  "peso_hasta_pct": 43.98,
+                  "tasa_desde": 8.03,
+                  "tasa_hasta": 10.46,
+                  "aporte_composicion_pp": 0.007,
+                  "aporte_intra_pp": 1.055
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 7.34,
+              "tasa_hasta": 9.8,
+              "delta_pp": 2.47,
+              "efecto_composicion_pp": -0.375,
+              "efecto_intra_pp": 2.84,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 26.53,
+                  "peso_hasta_pct": 24.56,
+                  "tasa_desde": 9.54,
+                  "tasa_hasta": 12.47,
+                  "aporte_composicion_pp": -0.048,
+                  "aporte_intra_pp": 0.751
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 20.37,
+                  "peso_hasta_pct": 20.7,
+                  "tasa_desde": 4.85,
+                  "tasa_hasta": 7.88,
+                  "aporte_composicion_pp": -0.007,
+                  "aporte_intra_pp": 0.62
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 14.83,
+                  "peso_hasta_pct": 15.47,
+                  "tasa_desde": 3.95,
+                  "tasa_hasta": 6.99,
+                  "aporte_composicion_pp": -0.02,
+                  "aporte_intra_pp": 0.459
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 23.47,
+                  "peso_hasta_pct": 25.92,
+                  "tasa_desde": 6.18,
+                  "tasa_hasta": 7.72,
+                  "aporte_composicion_pp": -0.04,
+                  "aporte_intra_pp": 0.38
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 8.92,
+                  "peso_hasta_pct": 7.06,
+                  "tasa_desde": 18.57,
+                  "tasa_hasta": 24.39,
+                  "aporte_composicion_pp": -0.24,
+                  "aporte_intra_pp": 0.465
+                },
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 5.89,
+                  "peso_hasta_pct": 6.29,
+                  "tasa_desde": 2.16,
+                  "tasa_hasta": 4.85,
+                  "aporte_composicion_pp": -0.02,
+                  "aporte_intra_pp": 0.164
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 7.34,
+              "tasa_hasta": 9.8,
+              "delta_pp": 2.47,
+              "efecto_composicion_pp": 0.006,
+              "efecto_intra_pp": 2.459,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 44.06,
+                  "peso_hasta_pct": 44.65,
+                  "tasa_desde": 8.1,
+                  "tasa_hasta": 10.35,
+                  "aporte_composicion_pp": 0.004,
+                  "aporte_intra_pp": 0.999
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 9.91,
+                  "peso_hasta_pct": 9.91,
+                  "tasa_desde": 7.08,
+                  "tasa_hasta": 9.88,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.278
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 7.84,
+                  "peso_hasta_pct": 7.61,
+                  "tasa_desde": 7.53,
+                  "tasa_hasta": 10.48,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.228
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.42,
+                  "peso_hasta_pct": 4.17,
+                  "tasa_desde": 3.13,
+                  "tasa_hasta": 7.69,
+                  "aporte_composicion_pp": 0.008,
+                  "aporte_intra_pp": 0.196
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 4.83,
+                  "peso_hasta_pct": 4.81,
+                  "tasa_desde": 7.38,
+                  "tasa_hasta": 10.89,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.169
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.45,
+                  "peso_hasta_pct": 5.34,
+                  "tasa_desde": 6.78,
+                  "tasa_hasta": 9.65,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.155
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 4.72,
+                  "peso_hasta_pct": 4.62,
+                  "tasa_desde": 7.06,
+                  "tasa_hasta": 9.36,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.107
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.01,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 4.91,
+                  "tasa_hasta": 9.84,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": 0.098
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.23,
+                  "peso_hasta_pct": 4.23,
+                  "tasa_desde": 6.65,
+                  "tasa_hasta": 8.97,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.098
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.47,
+                  "peso_hasta_pct": 2.35,
+                  "tasa_desde": 9.03,
+                  "tasa_hasta": 11.82,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": 0.067
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.94,
+                  "peso_hasta_pct": 2.07,
+                  "tasa_desde": 6.41,
+                  "tasa_hasta": 8.54,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.043
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.59,
+                  "peso_hasta_pct": 3.76,
+                  "tasa_desde": 7.36,
+                  "tasa_hasta": 6.74,
+                  "aporte_composicion_pp": -0.003,
+                  "aporte_intra_pp": -0.023
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 1.01,
+                  "peso_hasta_pct": 1.02,
+                  "tasa_desde": 4.15,
+                  "tasa_hasta": 6.44,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.023
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.25,
+                  "peso_hasta_pct": 1.26,
+                  "tasa_desde": 6.52,
+                  "tasa_hasta": 7.78,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.016
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.66,
+                  "peso_hasta_pct": 1.64,
+                  "tasa_desde": 8.1,
+                  "tasa_hasta": 8.75,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.011
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.6,
+                  "peso_hasta_pct": 0.58,
+                  "tasa_desde": 4.71,
+                  "tasa_hasta": 4.0,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.004
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 7.34,
+              "tasa_hasta": 9.8,
+              "delta_pp": 2.47,
+              "efecto_composicion_pp": -0.01,
+              "efecto_intra_pp": 2.476,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 90.36,
+                  "peso_hasta_pct": 89.36,
+                  "tasa_desde": 7.23,
+                  "tasa_hasta": 10.14,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 2.607
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 9.64,
+                  "peso_hasta_pct": 10.64,
+                  "tasa_desde": 8.3,
+                  "tasa_hasta": 7.0,
+                  "aporte_composicion_pp": -0.009,
+                  "aporte_intra_pp": -0.131
+                }
+              ]
+            }
+          }
+        },
+        "tp": {
+          "ponderador": "participación del grupo en la población en edad de trabajar",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 62.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -1.35,
+              "efecto_composicion_pp": 0.01,
+              "efecto_intra_pp": -1.365,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 48.94,
+                  "peso_hasta_pct": 48.99,
+                  "tasa_desde": 73.42,
+                  "tasa_hasta": 70.41,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": -1.474
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 51.06,
+                  "peso_hasta_pct": 51.01,
+                  "tasa_desde": 52.88,
+                  "tasa_hasta": 53.09,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": 0.109
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 62.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -1.35,
+              "efecto_composicion_pp": -0.689,
+              "efecto_intra_pp": -0.666,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 14.72,
+                  "peso_hasta_pct": 17.97,
+                  "tasa_desde": 25.17,
+                  "tasa_hasta": 21.56,
+                  "aporte_composicion_pp": -1.261,
+                  "aporte_intra_pp": -0.589
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 17.7,
+                  "peso_hasta_pct": 18.73,
+                  "tasa_desde": 83.41,
+                  "tasa_hasta": 85.21,
+                  "aporte_composicion_pp": 0.226,
+                  "aporte_intra_pp": 0.328
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 17.61,
+                  "peso_hasta_pct": 15.19,
+                  "tasa_desde": 31.88,
+                  "tasa_hasta": 28.63,
+                  "aporte_composicion_pp": 0.773,
+                  "aporte_intra_pp": -0.532
+                },
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 20.45,
+                  "peso_hasta_pct": 18.31,
+                  "tasa_desde": 81.66,
+                  "tasa_hasta": 82.62,
+                  "aporte_composicion_pp": -0.426,
+                  "aporte_intra_pp": 0.185
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 13.53,
+                  "peso_hasta_pct": 14.0,
+                  "tasa_desde": 68.94,
+                  "tasa_hasta": 68.06,
+                  "aporte_composicion_pp": 0.029,
+                  "aporte_intra_pp": -0.122
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 15.98,
+                  "peso_hasta_pct": 15.81,
+                  "tasa_desde": 80.2,
+                  "tasa_hasta": 80.61,
+                  "aporte_composicion_pp": -0.031,
+                  "aporte_intra_pp": 0.065
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 62.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -1.35,
+              "efecto_composicion_pp": 0.038,
+              "efecto_intra_pp": -1.393,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 41.79,
+                  "peso_hasta_pct": 41.96,
+                  "tasa_desde": 66.35,
+                  "tasa_hasta": 65.52,
+                  "aporte_composicion_pp": 0.007,
+                  "aporte_intra_pp": -0.348
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.6,
+                  "peso_hasta_pct": 4.56,
+                  "tasa_desde": 60.51,
+                  "tasa_hasta": 56.33,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.191
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.23,
+                  "peso_hasta_pct": 4.39,
+                  "tasa_desde": 62.94,
+                  "tasa_hasta": 59.41,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": -0.152
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.83,
+                  "peso_hasta_pct": 5.84,
+                  "tasa_desde": 58.88,
+                  "tasa_hasta": 56.3,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.15
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.23,
+                  "peso_hasta_pct": 10.23,
+                  "tasa_desde": 60.98,
+                  "tasa_hasta": 59.64,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.136
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.09,
+                  "peso_hasta_pct": 5.12,
+                  "tasa_desde": 59.73,
+                  "tasa_hasta": 57.84,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.096
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 8.66,
+                  "peso_hasta_pct": 8.39,
+                  "tasa_desde": 56.96,
+                  "tasa_hasta": 55.91,
+                  "aporte_composicion_pp": 0.016,
+                  "aporte_intra_pp": -0.09
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.67,
+                  "peso_hasta_pct": 2.62,
+                  "tasa_desde": 58.09,
+                  "tasa_hasta": 55.41,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": -0.071
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.22,
+                  "peso_hasta_pct": 5.08,
+                  "tasa_desde": 56.98,
+                  "tasa_hasta": 56.02,
+                  "aporte_composicion_pp": 0.008,
+                  "aporte_intra_pp": -0.049
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.12,
+                  "peso_hasta_pct": 2.06,
+                  "tasa_desde": 59.74,
+                  "tasa_hasta": 58.39,
+                  "aporte_composicion_pp": 0.002,
+                  "aporte_intra_pp": -0.028
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.27,
+                  "peso_hasta_pct": 1.29,
+                  "tasa_desde": 62.22,
+                  "tasa_hasta": 60.26,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.025
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.56,
+                  "peso_hasta_pct": 1.54,
+                  "tasa_desde": 66.89,
+                  "tasa_hasta": 65.73,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.018
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.54,
+                  "peso_hasta_pct": 0.53,
+                  "tasa_desde": 70.14,
+                  "tasa_hasta": 67.58,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.014
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.85,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 65.91,
+                  "tasa_hasta": 65.04,
+                  "aporte_composicion_pp": 0.004,
+                  "aporte_intra_pp": -0.017
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.42,
+                  "peso_hasta_pct": 3.51,
+                  "tasa_desde": 66.15,
+                  "tasa_hasta": 66.0,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": -0.005
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.93,
+                  "peso_hasta_pct": 0.93,
+                  "tasa_desde": 68.07,
+                  "tasa_hasta": 67.97,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.001
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 62.93,
+              "tasa_hasta": 61.58,
+              "delta_pp": -1.35,
+              "efecto_composicion_pp": 0.153,
+              "efecto_intra_pp": -1.508,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 92.54,
+                  "peso_hasta_pct": 91.77,
+                  "tasa_desde": 61.45,
+                  "tasa_hasta": 59.96,
+                  "aporte_composicion_pp": 0.012,
+                  "aporte_intra_pp": -1.375
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 7.46,
+                  "peso_hasta_pct": 8.23,
+                  "tasa_desde": 81.3,
+                  "tasa_hasta": 79.61,
+                  "aporte_composicion_pp": 0.141,
+                  "aporte_intra_pp": -0.133
+                }
+              ]
+            }
+          }
+        },
+        "to": {
+          "ponderador": "participación del grupo en la población en edad de trabajar",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 58.31,
+              "tasa_hasta": 55.54,
+              "delta_pp": -2.77,
+              "efecto_composicion_pp": 0.009,
+              "efecto_intra_pp": -2.783,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 48.94,
+                  "peso_hasta_pct": 48.99,
+                  "tasa_desde": 68.42,
+                  "tasa_hasta": 63.87,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": -2.225
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 51.06,
+                  "peso_hasta_pct": 51.01,
+                  "tasa_desde": 48.63,
+                  "tasa_hasta": 47.54,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": -0.557
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 58.31,
+              "tasa_hasta": 55.54,
+              "delta_pp": -2.77,
+              "efecto_composicion_pp": -0.434,
+              "efecto_intra_pp": -2.339,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 14.72,
+                  "peso_hasta_pct": 17.97,
+                  "tasa_desde": 24.62,
+                  "tasa_hasta": 20.52,
+                  "aporte_composicion_pp": -1.114,
+                  "aporte_intra_pp": -0.672
+                },
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 20.45,
+                  "peso_hasta_pct": 18.31,
+                  "tasa_desde": 73.88,
+                  "tasa_hasta": 72.31,
+                  "aporte_composicion_pp": -0.346,
+                  "aporte_intra_pp": -0.304
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 13.53,
+                  "peso_hasta_pct": 14.0,
+                  "tasa_desde": 66.22,
+                  "tasa_hasta": 63.3,
+                  "aporte_composicion_pp": 0.036,
+                  "aporte_intra_pp": -0.401
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 15.98,
+                  "peso_hasta_pct": 15.81,
+                  "tasa_desde": 76.31,
+                  "tasa_hasta": 74.26,
+                  "aporte_composicion_pp": -0.031,
+                  "aporte_intra_pp": -0.325
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 17.7,
+                  "peso_hasta_pct": 18.73,
+                  "tasa_desde": 78.26,
+                  "tasa_hasta": 78.64,
+                  "aporte_composicion_pp": 0.221,
+                  "aporte_intra_pp": 0.069
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 17.61,
+                  "peso_hasta_pct": 15.19,
+                  "tasa_desde": 25.96,
+                  "tasa_hasta": 21.65,
+                  "aporte_composicion_pp": 0.8,
+                  "aporte_intra_pp": -0.707
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 58.31,
+              "tasa_hasta": 55.54,
+              "delta_pp": -2.77,
+              "efecto_composicion_pp": 0.036,
+              "efecto_intra_pp": -2.81,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 41.79,
+                  "peso_hasta_pct": 41.96,
+                  "tasa_desde": 60.98,
+                  "tasa_hasta": 58.74,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": -0.938
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.6,
+                  "peso_hasta_pct": 4.56,
+                  "tasa_desde": 58.61,
+                  "tasa_hasta": 52.0,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.303
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.23,
+                  "peso_hasta_pct": 10.23,
+                  "tasa_desde": 56.66,
+                  "tasa_hasta": 53.75,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.297
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.83,
+                  "peso_hasta_pct": 5.84,
+                  "tasa_desde": 54.88,
+                  "tasa_hasta": 50.86,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.234
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 8.66,
+                  "peso_hasta_pct": 8.39,
+                  "tasa_desde": 52.67,
+                  "tasa_hasta": 50.05,
+                  "aporte_composicion_pp": 0.015,
+                  "aporte_intra_pp": -0.224
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.23,
+                  "peso_hasta_pct": 4.39,
+                  "tasa_desde": 58.75,
+                  "tasa_hasta": 54.08,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.201
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.09,
+                  "peso_hasta_pct": 5.12,
+                  "tasa_desde": 55.32,
+                  "tasa_hasta": 51.54,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.193
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.22,
+                  "peso_hasta_pct": 5.08,
+                  "tasa_desde": 52.95,
+                  "tasa_hasta": 50.78,
+                  "aporte_composicion_pp": 0.007,
+                  "aporte_intra_pp": -0.112
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.67,
+                  "peso_hasta_pct": 2.62,
+                  "tasa_desde": 52.84,
+                  "tasa_hasta": 48.86,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": -0.105
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.12,
+                  "peso_hasta_pct": 2.06,
+                  "tasa_desde": 56.8,
+                  "tasa_hasta": 52.64,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.087
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.85,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 61.69,
+                  "tasa_hasta": 59.48,
+                  "aporte_composicion_pp": 0.004,
+                  "aporte_intra_pp": -0.042
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.27,
+                  "peso_hasta_pct": 1.29,
+                  "tasa_desde": 58.17,
+                  "tasa_hasta": 55.57,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.033
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.56,
+                  "peso_hasta_pct": 1.54,
+                  "tasa_desde": 61.48,
+                  "tasa_hasta": 59.97,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.023
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.93,
+                  "peso_hasta_pct": 0.93,
+                  "tasa_desde": 65.24,
+                  "tasa_hasta": 63.59,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.015
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.42,
+                  "peso_hasta_pct": 3.51,
+                  "tasa_desde": 61.28,
+                  "tasa_hasta": 61.55,
+                  "aporte_composicion_pp": 0.004,
+                  "aporte_intra_pp": 0.009
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.54,
+                  "peso_hasta_pct": 0.53,
+                  "tasa_desde": 66.83,
+                  "tasa_hasta": 64.88,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": -0.01
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 58.31,
+              "tasa_hasta": 55.54,
+              "delta_pp": -2.77,
+              "efecto_composicion_pp": 0.146,
+              "efecto_intra_pp": -2.919,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 92.54,
+                  "peso_hasta_pct": 91.77,
+                  "tasa_desde": 57.0,
+                  "tasa_hasta": 53.88,
+                  "aporte_composicion_pp": 0.011,
+                  "aporte_intra_pp": -2.878
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 7.46,
+                  "peso_hasta_pct": 8.23,
+                  "tasa_desde": 74.55,
+                  "tasa_hasta": 74.03,
+                  "aporte_composicion_pp": 0.134,
+                  "aporte_intra_pp": -0.041
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "desde": 2010,
+      "hasta": 2026,
+      "etiqueta": "toda la serie",
+      "tasas": {
+        "td": {
+          "ponderador": "participación del grupo en la fuerza de trabajo",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 8.12,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.68,
+              "efecto_composicion_pp": 0.065,
+              "efecto_intra_pp": 1.613,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 60.05,
+                  "peso_hasta_pct": 56.02,
+                  "tasa_desde": 7.31,
+                  "tasa_hasta": 9.28,
+                  "aporte_composicion_pp": 0.027,
+                  "aporte_intra_pp": 1.145
+                },
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 39.95,
+                  "peso_hasta_pct": 43.98,
+                  "tasa_desde": 9.35,
+                  "tasa_hasta": 10.46,
+                  "aporte_composicion_pp": 0.038,
+                  "aporte_intra_pp": 0.468
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 8.12,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.68,
+              "efecto_composicion_pp": -1.025,
+              "efecto_intra_pp": 2.703,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 25.43,
+                  "peso_hasta_pct": 24.56,
+                  "tasa_desde": 9.18,
+                  "tasa_hasta": 12.47,
+                  "aporte_composicion_pp": -0.016,
+                  "aporte_intra_pp": 0.824
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 20.81,
+                  "peso_hasta_pct": 20.7,
+                  "tasa_desde": 5.41,
+                  "tasa_hasta": 7.88,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": 0.511
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 24.52,
+                  "peso_hasta_pct": 25.92,
+                  "tasa_desde": 6.69,
+                  "tasa_hasta": 7.72,
+                  "aporte_composicion_pp": -0.025,
+                  "aporte_intra_pp": 0.259
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 11.88,
+                  "peso_hasta_pct": 15.47,
+                  "tasa_desde": 4.56,
+                  "tasa_hasta": 6.99,
+                  "aporte_composicion_pp": -0.114,
+                  "aporte_intra_pp": 0.331
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 13.31,
+                  "peso_hasta_pct": 7.06,
+                  "tasa_desde": 17.78,
+                  "tasa_hasta": 24.39,
+                  "aporte_composicion_pp": -0.758,
+                  "aporte_intra_pp": 0.673
+                },
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 4.05,
+                  "peso_hasta_pct": 6.29,
+                  "tasa_desde": 2.84,
+                  "tasa_hasta": 4.85,
+                  "aporte_composicion_pp": -0.115,
+                  "aporte_intra_pp": 0.104
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 8.12,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.68,
+              "efecto_composicion_pp": -0.026,
+              "efecto_intra_pp": 1.704,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 42.9,
+                  "peso_hasta_pct": 44.65,
+                  "tasa_desde": 7.89,
+                  "tasa_hasta": 10.35,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": 1.075
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.25,
+                  "peso_hasta_pct": 5.34,
+                  "tasa_desde": 7.1,
+                  "tasa_hasta": 9.65,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.135
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.06,
+                  "peso_hasta_pct": 4.81,
+                  "tasa_desde": 8.45,
+                  "tasa_hasta": 10.89,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": 0.12
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 8.74,
+                  "peso_hasta_pct": 7.61,
+                  "tasa_desde": 9.24,
+                  "tasa_hasta": 10.48,
+                  "aporte_composicion_pp": -0.01,
+                  "aporte_intra_pp": 0.101
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.81,
+                  "peso_hasta_pct": 2.07,
+                  "tasa_desde": 4.02,
+                  "tasa_hasta": 8.54,
+                  "aporte_composicion_pp": -0.007,
+                  "aporte_intra_pp": 0.088
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.51,
+                  "peso_hasta_pct": 2.35,
+                  "tasa_desde": 8.63,
+                  "tasa_hasta": 11.82,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": 0.078
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.31,
+                  "peso_hasta_pct": 3.76,
+                  "tasa_desde": 7.77,
+                  "tasa_hasta": 6.74,
+                  "aporte_composicion_pp": -0.008,
+                  "aporte_intra_pp": -0.036
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.66,
+                  "peso_hasta_pct": 1.64,
+                  "tasa_desde": 6.17,
+                  "tasa_hasta": 8.75,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.043
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 3.98,
+                  "peso_hasta_pct": 4.23,
+                  "tasa_desde": 7.96,
+                  "tasa_hasta": 8.97,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.042
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.27,
+                  "peso_hasta_pct": 4.62,
+                  "tasa_desde": 8.56,
+                  "tasa_hasta": 9.36,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.04
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 1.97,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 9.07,
+                  "tasa_hasta": 9.84,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.015
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.52,
+                  "peso_hasta_pct": 4.17,
+                  "tasa_desde": 7.51,
+                  "tasa_hasta": 7.69,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": 0.008
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.63,
+                  "peso_hasta_pct": 0.58,
+                  "tasa_desde": 5.54,
+                  "tasa_hasta": 4.0,
+                  "aporte_composicion_pp": 0.002,
+                  "aporte_intra_pp": -0.009
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.89,
+                  "peso_hasta_pct": 1.02,
+                  "tasa_desde": 6.71,
+                  "tasa_hasta": 6.44,
+                  "aporte_composicion_pp": -0.003,
+                  "aporte_intra_pp": -0.003
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.3,
+                  "peso_hasta_pct": 1.26,
+                  "tasa_desde": 7.45,
+                  "tasa_hasta": 7.78,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": 0.004
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.21,
+                  "peso_hasta_pct": 9.91,
+                  "tasa_desde": 9.84,
+                  "tasa_hasta": 9.88,
+                  "aporte_composicion_pp": -0.003,
+                  "aporte_intra_pp": 0.004
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 8.12,
+              "tasa_hasta": 9.8,
+              "delta_pp": 1.68,
+              "efecto_composicion_pp": -0.328,
+              "efecto_intra_pp": 2.006,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 98.42,
+                  "peso_hasta_pct": 89.36,
+                  "tasa_desde": 8.19,
+                  "tasa_hasta": 10.14,
+                  "aporte_composicion_pp": -0.018,
+                  "aporte_intra_pp": 1.827
+                },
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 1.58,
+                  "peso_hasta_pct": 10.64,
+                  "tasa_desde": 4.08,
+                  "tasa_hasta": 7.0,
+                  "aporte_composicion_pp": -0.31,
+                  "aporte_intra_pp": 0.179
+                }
+              ]
+            }
+          }
+        },
+        "tp": {
+          "ponderador": "participación del grupo en la población en edad de trabajar",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 60.37,
+              "tasa_hasta": 61.58,
+              "delta_pp": 1.2,
+              "efecto_composicion_pp": 0.059,
+              "efecto_intra_pp": 1.145,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 51.27,
+                  "peso_hasta_pct": 51.01,
+                  "tasa_desde": 47.05,
+                  "tasa_hasta": 53.09,
+                  "aporte_composicion_pp": 0.029,
+                  "aporte_intra_pp": 3.093
+                },
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 48.73,
+                  "peso_hasta_pct": 48.99,
+                  "tasa_desde": 74.39,
+                  "tasa_hasta": 70.41,
+                  "aporte_composicion_pp": 0.03,
+                  "aporte_intra_pp": -1.947
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 60.37,
+              "tasa_hasta": 61.58,
+              "delta_pp": 1.2,
+              "efecto_composicion_pp": -0.777,
+              "efecto_intra_pp": 1.98,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 12.05,
+                  "peso_hasta_pct": 17.97,
+                  "tasa_desde": 20.26,
+                  "tasa_hasta": 21.56,
+                  "aporte_composicion_pp": -2.369,
+                  "aporte_intra_pp": 0.195
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 18.48,
+                  "peso_hasta_pct": 18.73,
+                  "tasa_desde": 80.12,
+                  "tasa_hasta": 85.21,
+                  "aporte_composicion_pp": 0.055,
+                  "aporte_intra_pp": 0.947
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 11.72,
+                  "peso_hasta_pct": 14.0,
+                  "tasa_desde": 61.19,
+                  "tasa_hasta": 68.06,
+                  "aporte_composicion_pp": 0.083,
+                  "aporte_intra_pp": 0.883
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 16.56,
+                  "peso_hasta_pct": 15.81,
+                  "tasa_desde": 75.86,
+                  "tasa_hasta": 80.61,
+                  "aporte_composicion_pp": -0.13,
+                  "aporte_intra_pp": 0.769
+                },
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 19.51,
+                  "peso_hasta_pct": 18.31,
+                  "tasa_desde": 78.67,
+                  "tasa_hasta": 82.62,
+                  "aporte_composicion_pp": -0.237,
+                  "aporte_intra_pp": 0.746
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 21.67,
+                  "peso_hasta_pct": 15.19,
+                  "tasa_desde": 37.09,
+                  "tasa_hasta": 28.63,
+                  "aporte_composicion_pp": 1.821,
+                  "aporte_intra_pp": -1.559
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 60.37,
+              "tasa_hasta": 61.58,
+              "delta_pp": 1.2,
+              "efecto_composicion_pp": 0.137,
+              "efecto_intra_pp": 1.067,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 40.83,
+                  "peso_hasta_pct": 41.96,
+                  "tasa_desde": 63.43,
+                  "tasa_hasta": 65.52,
+                  "aporte_composicion_pp": 0.04,
+                  "aporte_intra_pp": 0.865
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.93,
+                  "peso_hasta_pct": 5.84,
+                  "tasa_desde": 53.44,
+                  "tasa_hasta": 56.3,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": 0.168
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.2,
+                  "peso_hasta_pct": 3.51,
+                  "tasa_desde": 62.47,
+                  "tasa_hasta": 66.0,
+                  "aporte_composicion_pp": 0.01,
+                  "aporte_intra_pp": 0.118
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.23,
+                  "peso_hasta_pct": 2.06,
+                  "tasa_desde": 53.22,
+                  "tasa_hasta": 58.39,
+                  "aporte_composicion_pp": 0.009,
+                  "aporte_intra_pp": 0.111
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 9.17,
+                  "peso_hasta_pct": 8.39,
+                  "tasa_desde": 57.52,
+                  "tasa_hasta": 55.91,
+                  "aporte_composicion_pp": 0.033,
+                  "aporte_intra_pp": -0.142
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.95,
+                  "peso_hasta_pct": 0.93,
+                  "tasa_desde": 56.86,
+                  "tasa_hasta": 67.97,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": 0.104
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.12,
+                  "peso_hasta_pct": 5.12,
+                  "tasa_desde": 59.74,
+                  "tasa_hasta": 57.84,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.097
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.49,
+                  "peso_hasta_pct": 5.08,
+                  "tasa_desde": 57.95,
+                  "tasa_hasta": 56.02,
+                  "aporte_composicion_pp": 0.016,
+                  "aporte_intra_pp": -0.102
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.71,
+                  "peso_hasta_pct": 4.56,
+                  "tasa_desde": 57.98,
+                  "tasa_hasta": 56.33,
+                  "aporte_composicion_pp": 0.006,
+                  "aporte_intra_pp": -0.077
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.62,
+                  "peso_hasta_pct": 1.54,
+                  "tasa_desde": 61.85,
+                  "tasa_hasta": 65.73,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": 0.061
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.8,
+                  "peso_hasta_pct": 2.62,
+                  "tasa_desde": 53.92,
+                  "tasa_hasta": 55.41,
+                  "aporte_composicion_pp": 0.012,
+                  "aporte_intra_pp": 0.04
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.24,
+                  "peso_hasta_pct": 1.29,
+                  "tasa_desde": 63.08,
+                  "tasa_hasta": 60.26,
+                  "aporte_composicion_pp": 0.0,
+                  "aporte_intra_pp": -0.036
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.38,
+                  "peso_hasta_pct": 10.23,
+                  "tasa_desde": 59.35,
+                  "tasa_hasta": 59.64,
+                  "aporte_composicion_pp": 0.002,
+                  "aporte_intra_pp": 0.03
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.1,
+                  "peso_hasta_pct": 4.39,
+                  "tasa_desde": 58.66,
+                  "tasa_hasta": 59.41,
+                  "aporte_composicion_pp": -0.006,
+                  "aporte_intra_pp": 0.032
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.66,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 65.82,
+                  "tasa_hasta": 65.04,
+                  "aporte_composicion_pp": 0.013,
+                  "aporte_intra_pp": -0.014
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.56,
+                  "peso_hasta_pct": 0.53,
+                  "tasa_desde": 67.05,
+                  "tasa_hasta": 67.58,
+                  "aporte_composicion_pp": -0.002,
+                  "aporte_intra_pp": 0.003
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 60.37,
+              "tasa_hasta": 61.58,
+              "delta_pp": 1.2,
+              "efecto_composicion_pp": 1.099,
+              "efecto_intra_pp": 0.105,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 1.32,
+                  "peso_hasta_pct": 8.23,
+                  "tasa_desde": 72.37,
+                  "tasa_hasta": 79.61,
+                  "aporte_composicion_pp": 1.038,
+                  "aporte_intra_pp": 0.346
+                },
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 98.68,
+                  "peso_hasta_pct": 91.77,
+                  "tasa_desde": 60.21,
+                  "tasa_hasta": 59.96,
+                  "aporte_composicion_pp": 0.061,
+                  "aporte_intra_pp": -0.241
+                }
+              ]
+            }
+          }
+        },
+        "to": {
+          "ponderador": "participación del grupo en la población en edad de trabajar",
+          "dimensiones": {
+            "sexo": {
+              "etiqueta_dim": "Sexo",
+              "tasa_desde": 55.47,
+              "tasa_hasta": 55.54,
+              "delta_pp": 0.07,
+              "efecto_composicion_pp": 0.056,
+              "efecto_intra_pp": 0.017,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Mujer",
+                  "peso_desde_pct": 51.27,
+                  "peso_hasta_pct": 51.01,
+                  "tasa_desde": 42.65,
+                  "tasa_hasta": 47.54,
+                  "aporte_composicion_pp": 0.027,
+                  "aporte_intra_pp": 2.501
+                },
+                {
+                  "clave": "Hombre",
+                  "peso_desde_pct": 48.73,
+                  "peso_hasta_pct": 48.99,
+                  "tasa_desde": 68.96,
+                  "tasa_hasta": 63.87,
+                  "aporte_composicion_pp": 0.029,
+                  "aporte_intra_pp": -2.484
+                }
+              ]
+            },
+            "edad": {
+              "etiqueta_dim": "Grupo de edad",
+              "tasa_desde": 55.47,
+              "tasa_hasta": 55.54,
+              "delta_pp": 0.07,
+              "efecto_composicion_pp": -0.341,
+              "efecto_intra_pp": 0.413,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "65 y más",
+                  "peso_desde_pct": 12.05,
+                  "peso_hasta_pct": 17.97,
+                  "tasa_desde": 19.69,
+                  "tasa_hasta": 20.52,
+                  "aporte_composicion_pp": -2.093,
+                  "aporte_intra_pp": 0.124
+                },
+                {
+                  "clave": "35-44",
+                  "peso_desde_pct": 18.48,
+                  "peso_hasta_pct": 18.73,
+                  "tasa_desde": 74.76,
+                  "tasa_hasta": 78.64,
+                  "aporte_composicion_pp": 0.054,
+                  "aporte_intra_pp": 0.721
+                },
+                {
+                  "clave": "55-64",
+                  "peso_desde_pct": 11.72,
+                  "peso_hasta_pct": 14.0,
+                  "tasa_desde": 58.4,
+                  "tasa_hasta": 63.3,
+                  "aporte_composicion_pp": 0.121,
+                  "aporte_intra_pp": 0.631
+                },
+                {
+                  "clave": "15-24",
+                  "peso_desde_pct": 21.67,
+                  "peso_hasta_pct": 15.19,
+                  "tasa_desde": 30.49,
+                  "tasa_hasta": 21.65,
+                  "aporte_composicion_pp": 1.907,
+                  "aporte_intra_pp": -1.631
+                },
+                {
+                  "clave": "45-54",
+                  "peso_desde_pct": 16.56,
+                  "peso_hasta_pct": 15.81,
+                  "tasa_desde": 71.76,
+                  "tasa_hasta": 74.26,
+                  "aporte_composicion_pp": -0.132,
+                  "aporte_intra_pp": 0.406
+                },
+                {
+                  "clave": "25-34",
+                  "peso_desde_pct": 19.51,
+                  "peso_hasta_pct": 18.31,
+                  "tasa_desde": 71.45,
+                  "tasa_hasta": 72.31,
+                  "aporte_composicion_pp": -0.198,
+                  "aporte_intra_pp": 0.163
+                }
+              ]
+            },
+            "region": {
+              "etiqueta_dim": "Región",
+              "tasa_desde": 55.47,
+              "tasa_hasta": 55.54,
+              "delta_pp": 0.07,
+              "efecto_composicion_pp": 0.137,
+              "efecto_intra_pp": -0.064,
+              "residuo_pp": -0.0,
+              "grupos": [
+                {
+                  "clave": "Metropolitana",
+                  "peso_desde_pct": 40.83,
+                  "peso_hasta_pct": 41.96,
+                  "tasa_desde": 58.42,
+                  "tasa_hasta": 58.74,
+                  "aporte_composicion_pp": 0.035,
+                  "aporte_intra_pp": 0.131
+                },
+                {
+                  "clave": "O'Higgins",
+                  "peso_desde_pct": 5.12,
+                  "peso_hasta_pct": 5.12,
+                  "tasa_desde": 54.69,
+                  "tasa_hasta": 51.54,
+                  "aporte_composicion_pp": -0.0,
+                  "aporte_intra_pp": -0.161
+                },
+                {
+                  "clave": "Biobío",
+                  "peso_desde_pct": 9.17,
+                  "peso_hasta_pct": 8.39,
+                  "tasa_desde": 52.21,
+                  "tasa_hasta": 50.05,
+                  "aporte_composicion_pp": 0.034,
+                  "aporte_intra_pp": -0.189
+                },
+                {
+                  "clave": "Antofagasta",
+                  "peso_desde_pct": 3.2,
+                  "peso_hasta_pct": 3.51,
+                  "tasa_desde": 57.61,
+                  "tasa_hasta": 61.55,
+                  "aporte_composicion_pp": 0.013,
+                  "aporte_intra_pp": 0.132
+                },
+                {
+                  "clave": "La Araucanía",
+                  "peso_desde_pct": 5.49,
+                  "peso_hasta_pct": 5.08,
+                  "tasa_desde": 52.99,
+                  "tasa_hasta": 50.78,
+                  "aporte_composicion_pp": 0.015,
+                  "aporte_intra_pp": -0.117
+                },
+                {
+                  "clave": "Los Ríos",
+                  "peso_desde_pct": 2.23,
+                  "peso_hasta_pct": 2.06,
+                  "tasa_desde": 48.39,
+                  "tasa_hasta": 52.64,
+                  "aporte_composicion_pp": 0.009,
+                  "aporte_intra_pp": 0.091
+                },
+                {
+                  "clave": "Magallanes",
+                  "peso_desde_pct": 0.95,
+                  "peso_hasta_pct": 0.93,
+                  "tasa_desde": 53.05,
+                  "tasa_hasta": 63.59,
+                  "aporte_composicion_pp": -0.001,
+                  "aporte_intra_pp": 0.099
+                },
+                {
+                  "clave": "Maule",
+                  "peso_desde_pct": 5.93,
+                  "peso_hasta_pct": 5.84,
+                  "tasa_desde": 49.64,
+                  "tasa_hasta": 50.86,
+                  "aporte_composicion_pp": 0.005,
+                  "aporte_intra_pp": 0.072
+                },
+                {
+                  "clave": "Los Lagos",
+                  "peso_desde_pct": 4.71,
+                  "peso_hasta_pct": 4.56,
+                  "tasa_desde": 53.62,
+                  "tasa_hasta": 52.0,
+                  "aporte_composicion_pp": 0.004,
+                  "aporte_intra_pp": -0.075
+                },
+                {
+                  "clave": "Tarapacá",
+                  "peso_desde_pct": 1.66,
+                  "peso_hasta_pct": 1.96,
+                  "tasa_desde": 63.17,
+                  "tasa_hasta": 59.48,
+                  "aporte_composicion_pp": 0.018,
+                  "aporte_intra_pp": -0.067
+                },
+                {
+                  "clave": "Arica y Parinacota",
+                  "peso_desde_pct": 1.24,
+                  "peso_hasta_pct": 1.29,
+                  "tasa_desde": 58.39,
+                  "tasa_hasta": 55.57,
+                  "aporte_composicion_pp": 0.001,
+                  "aporte_intra_pp": -0.036
+                },
+                {
+                  "clave": "Atacama",
+                  "peso_desde_pct": 1.62,
+                  "peso_hasta_pct": 1.54,
+                  "tasa_desde": 58.03,
+                  "tasa_hasta": 59.97,
+                  "aporte_composicion_pp": -0.003,
+                  "aporte_intra_pp": 0.031
+                },
+                {
+                  "clave": "Valparaíso",
+                  "peso_desde_pct": 10.38,
+                  "peso_hasta_pct": 10.23,
+                  "tasa_desde": 53.51,
+                  "tasa_hasta": 53.75,
+                  "aporte_composicion_pp": 0.003,
+                  "aporte_intra_pp": 0.024
+                },
+                {
+                  "clave": "Aysén",
+                  "peso_desde_pct": 0.56,
+                  "peso_hasta_pct": 0.53,
+                  "tasa_desde": 63.33,
+                  "tasa_hasta": 64.88,
+                  "aporte_composicion_pp": -0.003,
+                  "aporte_intra_pp": 0.008
+                },
+                {
+                  "clave": "Ñuble",
+                  "peso_desde_pct": 2.8,
+                  "peso_hasta_pct": 2.62,
+                  "tasa_desde": 49.27,
+                  "tasa_hasta": 48.86,
+                  "aporte_composicion_pp": 0.012,
+                  "aporte_intra_pp": -0.011
+                },
+                {
+                  "clave": "Coquimbo",
+                  "peso_desde_pct": 4.1,
+                  "peso_hasta_pct": 4.39,
+                  "tasa_desde": 53.99,
+                  "tasa_hasta": 54.08,
+                  "aporte_composicion_pp": -0.004,
+                  "aporte_intra_pp": 0.004
+                }
+              ]
+            },
+            "nacionalidad": {
+              "etiqueta_dim": "Nacionalidad",
+              "tasa_desde": 55.47,
+              "tasa_hasta": 55.54,
+              "delta_pp": 0.07,
+              "efecto_composicion_pp": 1.185,
+              "efecto_intra_pp": -1.112,
+              "residuo_pp": 0.0,
+              "grupos": [
+                {
+                  "clave": "Extranjero/a",
+                  "peso_desde_pct": 1.32,
+                  "peso_hasta_pct": 8.23,
+                  "tasa_desde": 69.41,
+                  "tasa_hasta": 74.03,
+                  "aporte_composicion_pp": 1.121,
+                  "aporte_intra_pp": 0.221
+                },
+                {
+                  "clave": "Chileno/a",
+                  "peso_desde_pct": 98.68,
+                  "peso_hasta_pct": 91.77,
+                  "tasa_desde": 55.28,
+                  "tasa_hasta": 53.88,
+                  "aporte_composicion_pp": 0.064,
+                  "aporte_intra_pp": -1.333
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

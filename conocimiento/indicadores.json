@@ -368,6 +368,27 @@
     "serie-rama-desde-2017",
     "ramas-no-cierran"
    ]
+  },
+  "descomposicion_composicion_intra": {
+   "nombre": "Descomposición composición / intra-grupo de una tasa (shift-share)",
+   "definicion": "Separa el movimiento de una tasa nacional en dos partes: cuánto viene de que cambió la composición de la población entre grupos y cuánto de que cambió la tasa dentro de los grupos. Responde a «¿empeoró el mercado laboral o cambió quién lo compone?».",
+   "unidad": "puntos porcentuales",
+   "escala": "variación",
+   "tasas_descomponibles": {
+    "td": "ponderador: participación del grupo en la fuerza de trabajo",
+    "tp": "ponderador: participación del grupo en la población en edad de trabajar",
+    "to": "ponderador: participación del grupo en la población en edad de trabajar"
+   },
+   "formula": "Descomposición simétrica. Aporte de composición del grupo g: Δw_g × (r̄_g − R̄), donde w es el peso en el denominador, r̄_g la tasa promedio del grupo entre los dos años y R̄ la tasa nacional promedio. Aporte intra-grupo: w̄_g × Δr_g. La suma de los dos efectos es EXACTAMENTE la variación de la tasa nacional, sin residuo.",
+   "por_que_centrada": "El aporte de composición va centrado en la tasa nacional. Sin centrar, como Σ Δw = 0, el signo de cada grupo lo dicta el nivel de su tasa y no su posición respecto del país, y el número por grupo se lee al revés: entre 2010 y 2026 los jóvenes 15-24 pierden peso en la PET y tienen la tasa de ocupación más baja; sin centrar su aporte sale −1,69 pp (como si su caída hubiera bajado la ocupación nacional) y centrado sale +1,91 pp, que es lo correcto. El total no cambia al centrar.",
+   "fuente_nacional": "conocimiento/evidencia/descomposicion.json (derivado de series-cortes.json)",
+   "cobertura_temporal": "Tres horizontes sobre la serie anual del mes central del release: último año, contra 2019 (último trimestre previo a la pandemia) y toda la serie desde 2010.",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "descomposicion-de-una-dimension",
+    "composicion-no-es-causa",
+    "error-muestral-mayor-en-regiones-chicas"
+   ]
   }
  },
  "dimensiones": {
