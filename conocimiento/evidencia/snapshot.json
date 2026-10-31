@@ -1,6 +1,6 @@
 {
   "release": "2026-08-jas",
-  "generado": "2026-10-29",
+  "generado": "2026-10-31",
   "fuente_metodologia": "conocimiento/metodologia.md",
   "periodo": {
     "ano": 2026,
@@ -106,6 +106,191 @@
         "o": 56162.0,
         "pct_ocupados": 0.61
       }
+    }
+  },
+  "composicion_desocupados": {
+    "nota": "Partición exacta de los desocupados: cesantes son quienes tuvieron un empleo antes y lo perdieron; el resto busca trabajo por primera vez. La distinción separa destrucción de empleo de dificultad de entrada.",
+    "grupos": {
+      "cesantes": {
+        "etiqueta": "Cesantes (tuvieron empleo antes)",
+        "pct_desocupados": 90.77,
+        "o": 914890.0,
+        "delta_o": 115131.0,
+        "delta_rel_o": 14.4
+      },
+      "busca_trabajo_primera_vez": {
+        "etiqueta": "Buscan trabajo por primera vez",
+        "pct_desocupados": 9.23,
+        "o": 93086.0,
+        "delta_o": 18457.0,
+        "delta_rel_o": 24.73
+      }
+    },
+    "_cobertura": {
+      "suma_grupos": 1007976.0,
+      "desocupados": 1007976.0,
+      "residuo": 0.0
+    }
+  },
+  "rama_actividad": {
+    "clasificacion": "CAENES rev. 4 (21 secciones)",
+    "nota_quiebre": "La ENE clasifica la rama con CAENES rev. 4 desde JAS 2017. Antes usaba CIIU rev. 3, que no es empalmable a nivel de sección: no existe serie de rama anterior a ese trimestre.",
+    "ramas": {
+      "r01": {
+        "etiqueta": "Agricultura, ganadería, silvicultura y pesca",
+        "pct_ocupados": 5.24,
+        "o": 485662.0,
+        "delta_o": -13623.0,
+        "delta_rel_o": -2.73
+      },
+      "r02": {
+        "etiqueta": "Explotación de minas y canteras",
+        "pct_ocupados": 3.27,
+        "o": 303508.0,
+        "delta_o": 7498.0,
+        "delta_rel_o": 2.53
+      },
+      "r03": {
+        "etiqueta": "Industrias manufactureras",
+        "pct_ocupados": 9.01,
+        "o": 835843.0,
+        "delta_o": -74000.0,
+        "delta_rel_o": -8.13
+      },
+      "r04": {
+        "etiqueta": "Suministro de electricidad, gas, vapor y aire acondicionado",
+        "pct_ocupados": 0.47,
+        "o": 43569.0,
+        "delta_o": -5089.0,
+        "delta_rel_o": -10.46
+      },
+      "r05": {
+        "etiqueta": "Suministro de agua, alcantarillado y gestión de residuos",
+        "pct_ocupados": 0.79,
+        "o": 73004.0,
+        "delta_o": 3709.0,
+        "delta_rel_o": 5.35
+      },
+      "r06": {
+        "etiqueta": "Construcción",
+        "pct_ocupados": 8.01,
+        "o": 742731.0,
+        "delta_o": 20084.0,
+        "delta_rel_o": 2.78
+      },
+      "r07": {
+        "etiqueta": "Comercio al por mayor y al por menor",
+        "pct_ocupados": 18.71,
+        "o": 1735214.0,
+        "delta_o": -16219.0,
+        "delta_rel_o": -0.93
+      },
+      "r08": {
+        "etiqueta": "Transporte y almacenamiento",
+        "pct_ocupados": 6.8,
+        "o": 630723.0,
+        "delta_o": 23056.0,
+        "delta_rel_o": 3.79
+      },
+      "r09": {
+        "etiqueta": "Alojamiento y servicio de comidas",
+        "pct_ocupados": 4.76,
+        "o": 441545.0,
+        "delta_o": -5837.0,
+        "delta_rel_o": -1.3
+      },
+      "r10": {
+        "etiqueta": "Información y comunicaciones",
+        "pct_ocupados": 2.01,
+        "o": 186206.0,
+        "delta_o": -48792.0,
+        "delta_rel_o": -20.76
+      },
+      "r11": {
+        "etiqueta": "Actividades financieras y de seguros",
+        "pct_ocupados": 1.89,
+        "o": 175290.0,
+        "delta_o": -28740.0,
+        "delta_rel_o": -14.09
+      },
+      "r12": {
+        "etiqueta": "Actividades inmobiliarias",
+        "pct_ocupados": 1.12,
+        "o": 104125.0,
+        "delta_o": 16688.0,
+        "delta_rel_o": 19.09
+      },
+      "r13": {
+        "etiqueta": "Actividades profesionales, científicas y técnicas",
+        "pct_ocupados": 3.96,
+        "o": 367742.0,
+        "delta_o": 5787.0,
+        "delta_rel_o": 1.6
+      },
+      "r14": {
+        "etiqueta": "Servicios administrativos y de apoyo",
+        "pct_ocupados": 3.39,
+        "o": 314386.0,
+        "delta_o": -13291.0,
+        "delta_rel_o": -4.06
+      },
+      "r15": {
+        "etiqueta": "Administración pública y defensa",
+        "pct_ocupados": 5.82,
+        "o": 540213.0,
+        "delta_o": 3688.0,
+        "delta_rel_o": 0.69
+      },
+      "r16": {
+        "etiqueta": "Enseñanza",
+        "pct_ocupados": 8.87,
+        "o": 823004.0,
+        "delta_o": 19246.0,
+        "delta_rel_o": 2.39
+      },
+      "r17": {
+        "etiqueta": "Salud humana y asistencia social",
+        "pct_ocupados": 7.93,
+        "o": 735893.0,
+        "delta_o": 4108.0,
+        "delta_rel_o": 0.56
+      },
+      "r18": {
+        "etiqueta": "Actividades artísticas, de entretenimiento y recreativas",
+        "pct_ocupados": 1.28,
+        "o": 118957.0,
+        "delta_o": 14415.0,
+        "delta_rel_o": 13.79
+      },
+      "r19": {
+        "etiqueta": "Otras actividades de servicios",
+        "pct_ocupados": 3.49,
+        "o": 323343.0,
+        "delta_o": -17889.0,
+        "delta_rel_o": -5.24
+      },
+      "r20": {
+        "etiqueta": "Hogares como empleadores",
+        "pct_ocupados": 2.83,
+        "o": 262526.0,
+        "delta_o": 4416.0,
+        "delta_rel_o": 1.71
+      },
+      "r21": {
+        "etiqueta": "Organizaciones y órganos extraterritoriales",
+        "pct_ocupados": 0.03,
+        "o": 2891.0,
+        "delta_o": 1174.0,
+        "delta_rel_o": 68.38
+      }
+    },
+    "_cobertura": {
+      "nota": "Las 21 secciones no suman el total de ocupados: hay casos sin rama declarada. Para cuadrar la variación por rama con la nacional hay que incluir la variación del residuo.",
+      "suma_ramas": 9246375.0,
+      "ocupados": 9274742.0,
+      "sin_rama_declarada": 28367.0,
+      "sin_rama_declarada_previo": 31631.0,
+      "delta_sin_rama_declarada": -3264.0
     }
   },
   "formalidad": {

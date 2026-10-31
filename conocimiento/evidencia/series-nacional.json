@@ -38,6 +38,33 @@
         "hombres": 4382553.0,
         "mujeres": 2773659.0
       },
+      "composicion_desocupados": {
+        "cesantes": 634321.0,
+        "busca_trabajo_primera_vez": 93154.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 889481.0,
         "basica_completa": 1665376.0,
@@ -124,6 +151,33 @@
       "sexo_ocupados": {
         "hombres": 4403560.0,
         "mujeres": 2795217.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 614162.0,
+        "busca_trabajo_primera_vez": 83578.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 893769.0,
@@ -212,6 +266,33 @@
         "hombres": 4398206.0,
         "mujeres": 2783697.0
       },
+      "composicion_desocupados": {
+        "cesantes": 640566.0,
+        "busca_trabajo_primera_vez": 77348.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 893390.0,
         "basica_completa": 1645071.0,
@@ -298,6 +379,33 @@
       "sexo_ocupados": {
         "hombres": 4416487.0,
         "mujeres": 2805088.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 607899.0,
+        "busca_trabajo_primera_vez": 76442.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 877119.0,
@@ -386,6 +494,33 @@
         "hombres": 4412861.0,
         "mujeres": 2843655.0
       },
+      "composicion_desocupados": {
+        "cesantes": 605989.0,
+        "busca_trabajo_primera_vez": 69082.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 884988.0,
         "basica_completa": 1672918.0,
@@ -472,6 +607,33 @@
       "sexo_ocupados": {
         "hombres": 4418308.0,
         "mujeres": 2870913.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 598308.0,
+        "busca_trabajo_primera_vez": 73289.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 874218.0,
@@ -560,6 +722,33 @@
         "hombres": 4476459.0,
         "mujeres": 2913007.0
       },
+      "composicion_desocupados": {
+        "cesantes": 583941.0,
+        "busca_trabajo_primera_vez": 69512.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 875857.0,
         "basica_completa": 1727596.0,
@@ -646,6 +835,33 @@
       "sexo_ocupados": {
         "hombres": 4490712.0,
         "mujeres": 2923718.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 553168.0,
+        "busca_trabajo_primera_vez": 75365.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 869629.0,
@@ -734,6 +950,33 @@
         "hombres": 4529957.0,
         "mujeres": 2973135.0
       },
+      "composicion_desocupados": {
+        "cesantes": 509265.0,
+        "busca_trabajo_primera_vez": 75055.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 903482.0,
         "basica_completa": 1751124.0,
@@ -820,6 +1063,33 @@
       "sexo_ocupados": {
         "hombres": 4560347.0,
         "mujeres": 3011971.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 498840.0,
+        "busca_trabajo_primera_vez": 89558.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 925778.0,
@@ -908,6 +1178,33 @@
         "hombres": 4598005.0,
         "mujeres": 3017512.0
       },
+      "composicion_desocupados": {
+        "cesantes": 508320.0,
+        "busca_trabajo_primera_vez": 103974.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 926202.0,
         "basica_completa": 1765727.0,
@@ -994,6 +1291,33 @@
       "sexo_ocupados": {
         "hombres": 4622266.0,
         "mujeres": 2998764.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 511238.0,
+        "busca_trabajo_primera_vez": 101589.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 920370.0,
@@ -1082,6 +1406,33 @@
         "hombres": 4612403.0,
         "mujeres": 3011519.0
       },
+      "composicion_desocupados": {
+        "cesantes": 539122.0,
+        "busca_trabajo_primera_vez": 83323.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 915792.0,
         "basica_completa": 1771642.0,
@@ -1168,6 +1519,33 @@
       "sexo_ocupados": {
         "hombres": 4618987.0,
         "mujeres": 3036109.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 533759.0,
+        "busca_trabajo_primera_vez": 61159.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 915442.0,
@@ -1256,6 +1634,33 @@
         "hombres": 4597254.0,
         "mujeres": 3068268.0
       },
+      "composicion_desocupados": {
+        "cesantes": 542039.0,
+        "busca_trabajo_primera_vez": 62036.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 908890.0,
         "basica_completa": 1770366.0,
@@ -1342,6 +1747,33 @@
       "sexo_ocupados": {
         "hombres": 4614243.0,
         "mujeres": 3084301.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 534956.0,
+        "busca_trabajo_primera_vez": 63440.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 897668.0,
@@ -1430,6 +1862,33 @@
         "hombres": 4587375.0,
         "mujeres": 3072051.0
       },
+      "composicion_desocupados": {
+        "cesantes": 553135.0,
+        "busca_trabajo_primera_vez": 72680.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 914673.0,
         "basica_completa": 1721868.0,
@@ -1516,6 +1975,33 @@
       "sexo_ocupados": {
         "hombres": 4605833.0,
         "mujeres": 3078357.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 556144.0,
+        "busca_trabajo_primera_vez": 68214.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 906259.0,
@@ -1604,6 +2090,33 @@
         "hombres": 4604094.0,
         "mujeres": 3084312.0
       },
+      "composicion_desocupados": {
+        "cesantes": 567359.0,
+        "busca_trabajo_primera_vez": 67397.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 893958.0,
         "basica_completa": 1712164.0,
@@ -1690,6 +2203,33 @@
       "sexo_ocupados": {
         "hombres": 4600214.0,
         "mujeres": 3102922.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 558940.0,
+        "busca_trabajo_primera_vez": 59942.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 891241.0,
@@ -1778,6 +2318,33 @@
         "hombres": 4611196.0,
         "mujeres": 3105655.0
       },
+      "composicion_desocupados": {
+        "cesantes": 536698.0,
+        "busca_trabajo_primera_vez": 73861.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 899398.0,
         "basica_completa": 1739538.0,
@@ -1864,6 +2431,33 @@
       "sexo_ocupados": {
         "hombres": 4641743.0,
         "mujeres": 3145159.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 476852.0,
+        "busca_trabajo_primera_vez": 92601.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 904203.0,
@@ -1952,6 +2546,33 @@
         "hombres": 4676679.0,
         "mujeres": 3139874.0
       },
+      "composicion_desocupados": {
+        "cesantes": 468677.0,
+        "busca_trabajo_primera_vez": 106484.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 899695.0,
         "basica_completa": 1740709.0,
@@ -2038,6 +2659,33 @@
       "sexo_ocupados": {
         "hombres": 4719320.0,
         "mujeres": 3154754.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 448522.0,
+        "busca_trabajo_primera_vez": 101430.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 906614.0,
@@ -2126,6 +2774,33 @@
         "hombres": 4719553.0,
         "mujeres": 3125223.0
       },
+      "composicion_desocupados": {
+        "cesantes": 489674.0,
+        "busca_trabajo_primera_vez": 82448.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 919987.0,
         "basica_completa": 1715930.0,
@@ -2212,6 +2887,33 @@
       "sexo_ocupados": {
         "hombres": 4708208.0,
         "mujeres": 3142250.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 495420.0,
+        "busca_trabajo_primera_vez": 74078.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 916367.0,
@@ -2300,6 +3002,33 @@
         "hombres": 4695277.0,
         "mujeres": 3142997.0
       },
+      "composicion_desocupados": {
+        "cesantes": 523284.0,
+        "busca_trabajo_primera_vez": 61426.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 891896.0,
         "basica_completa": 1711606.0,
@@ -2386,6 +3115,33 @@
       "sexo_ocupados": {
         "hombres": 4662022.0,
         "mujeres": 3157508.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 511570.0,
+        "busca_trabajo_primera_vez": 57270.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 857282.0,
@@ -2474,6 +3230,33 @@
         "hombres": 4652376.0,
         "mujeres": 3157078.0
       },
+      "composicion_desocupados": {
+        "cesantes": 509516.0,
+        "busca_trabajo_primera_vez": 48150.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 845850.0,
         "basica_completa": 1714269.0,
@@ -2560,6 +3343,33 @@
       "sexo_ocupados": {
         "hombres": 4656712.0,
         "mujeres": 3153176.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 499399.0,
+        "busca_trabajo_primera_vez": 46969.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 838800.0,
@@ -2648,6 +3458,33 @@
         "hombres": 4692171.0,
         "mujeres": 3181904.0
       },
+      "composicion_desocupados": {
+        "cesantes": 503640.0,
+        "busca_trabajo_primera_vez": 50633.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 847393.0,
         "basica_completa": 1708774.0,
@@ -2734,6 +3571,33 @@
       "sexo_ocupados": {
         "hombres": 4691860.0,
         "mujeres": 3197542.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 513408.0,
+        "busca_trabajo_primera_vez": 52682.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 853291.0,
@@ -2822,6 +3686,33 @@
         "hombres": 4712727.0,
         "mujeres": 3211866.0
       },
+      "composicion_desocupados": {
+        "cesantes": 480920.0,
+        "busca_trabajo_primera_vez": 57291.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 869240.0,
         "basica_completa": 1702967.0,
@@ -2908,6 +3799,33 @@
       "sexo_ocupados": {
         "hombres": 4732039.0,
         "mujeres": 3220218.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 458738.0,
+        "busca_trabajo_primera_vez": 69120.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 874227.0,
@@ -2996,6 +3914,33 @@
         "hombres": 4772271.0,
         "mujeres": 3226359.0
       },
+      "composicion_desocupados": {
+        "cesantes": 433598.0,
+        "busca_trabajo_primera_vez": 87788.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 881916.0,
         "basica_completa": 1734849.0,
@@ -3082,6 +4027,33 @@
       "sexo_ocupados": {
         "hombres": 4769155.0,
         "mujeres": 3224142.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 458041.0,
+        "busca_trabajo_primera_vez": 84384.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 865208.0,
@@ -3170,6 +4142,33 @@
         "hombres": 4757971.0,
         "mujeres": 3232715.0
       },
+      "composicion_desocupados": {
+        "cesantes": 473170.0,
+        "busca_trabajo_primera_vez": 75584.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 867201.0,
         "basica_completa": 1738940.0,
@@ -3256,6 +4255,33 @@
       "sexo_ocupados": {
         "hombres": 4765758.0,
         "mujeres": 3253309.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 503883.0,
+        "busca_trabajo_primera_vez": 57172.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 865619.0,
@@ -3344,6 +4370,33 @@
         "hombres": 4751819.0,
         "mujeres": 3266451.0
       },
+      "composicion_desocupados": {
+        "cesantes": 498753.0,
+        "busca_trabajo_primera_vez": 62451.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 849277.0,
         "basica_completa": 1709249.0,
@@ -3430,6 +4483,33 @@
       "sexo_ocupados": {
         "hombres": 4735198.0,
         "mujeres": 3269048.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 480462.0,
+        "busca_trabajo_primera_vez": 54115.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 827229.0,
@@ -3518,6 +4598,33 @@
         "hombres": 4725249.0,
         "mujeres": 3261566.0
       },
+      "composicion_desocupados": {
+        "cesantes": 451378.0,
+        "busca_trabajo_primera_vez": 47870.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 809376.0,
         "basica_completa": 1685390.0,
@@ -3604,6 +4711,33 @@
       "sexo_ocupados": {
         "hombres": 4737459.0,
         "mujeres": 3271118.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 455801.0,
+        "busca_trabajo_primera_vez": 41718.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 809840.0,
@@ -3692,6 +4826,33 @@
         "hombres": 4739223.0,
         "mujeres": 3271620.0
       },
+      "composicion_desocupados": {
+        "cesantes": 460183.0,
+        "busca_trabajo_primera_vez": 38519.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 801826.0,
         "basica_completa": 1667589.0,
@@ -3778,6 +4939,33 @@
       "sexo_ocupados": {
         "hombres": 4740530.0,
         "mujeres": 3289068.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 462604.0,
+        "busca_trabajo_primera_vez": 45624.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 807229.0,
@@ -3866,6 +5054,33 @@
         "hombres": 4749541.0,
         "mujeres": 3317586.0
       },
+      "composicion_desocupados": {
+        "cesantes": 454805.0,
+        "busca_trabajo_primera_vez": 47796.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 804001.0,
         "basica_completa": 1706949.0,
@@ -3952,6 +5167,33 @@
       "sexo_ocupados": {
         "hombres": 4798085.0,
         "mujeres": 3351304.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 436388.0,
+        "busca_trabajo_primera_vez": 63702.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 828711.0,
@@ -4040,6 +5282,33 @@
         "hombres": 4826009.0,
         "mujeres": 3344952.0
       },
+      "composicion_desocupados": {
+        "cesantes": 454100.0,
+        "busca_trabajo_primera_vez": 88908.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 810683.0,
         "basica_completa": 1722680.0,
@@ -4126,6 +5395,33 @@
       "sexo_ocupados": {
         "hombres": 4844715.0,
         "mujeres": 3358175.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 452865.0,
+        "busca_trabajo_primera_vez": 87903.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 816816.0,
@@ -4214,6 +5510,33 @@
         "hombres": 4810638.0,
         "mujeres": 3345558.0
       },
+      "composicion_desocupados": {
+        "cesantes": 485752.0,
+        "busca_trabajo_primera_vez": 80921.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 827308.0,
         "basica_completa": 1720181.0,
@@ -4300,6 +5623,33 @@
       "sexo_ocupados": {
         "hombres": 4804186.0,
         "mujeres": 3377123.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 481724.0,
+        "busca_trabajo_primera_vez": 53854.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 844329.0,
@@ -4388,6 +5738,33 @@
         "hombres": 4788463.0,
         "mujeres": 3367508.0
       },
+      "composicion_desocupados": {
+        "cesantes": 496861.0,
+        "busca_trabajo_primera_vez": 53765.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 826615.0,
         "basica_completa": 1715929.0,
@@ -4474,6 +5851,33 @@
       "sexo_ocupados": {
         "hombres": 4769673.0,
         "mujeres": 3350764.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 520097.0,
+        "busca_trabajo_primera_vez": 46082.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 813033.0,
@@ -4562,6 +5966,33 @@
         "hombres": 4733354.0,
         "mujeres": 3351638.0
       },
+      "composicion_desocupados": {
+        "cesantes": 526920.0,
+        "busca_trabajo_primera_vez": 43851.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 787177.0,
         "basica_completa": 1677736.0,
@@ -4648,6 +6079,33 @@
       "sexo_ocupados": {
         "hombres": 4714272.0,
         "mujeres": 3330276.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 543501.0,
+        "busca_trabajo_primera_vez": 45893.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 782666.0,
@@ -4736,6 +6194,33 @@
         "hombres": 4717766.0,
         "mujeres": 3370955.0
       },
+      "composicion_desocupados": {
+        "cesantes": 540082.0,
+        "busca_trabajo_primera_vez": 46410.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 775675.0,
         "basica_completa": 1652117.0,
@@ -4822,6 +6307,33 @@
       "sexo_ocupados": {
         "hombres": 4750666.0,
         "mujeres": 3387280.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 520136.0,
+        "busca_trabajo_primera_vez": 51535.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 786122.0,
@@ -4910,6 +6422,33 @@
         "hombres": 4804973.0,
         "mujeres": 3402719.0
       },
+      "composicion_desocupados": {
+        "cesantes": 495020.0,
+        "busca_trabajo_primera_vez": 48880.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 803098.0,
         "basica_completa": 1666450.0,
@@ -4996,6 +6535,33 @@
       "sexo_ocupados": {
         "hombres": 4840413.0,
         "mujeres": 3409207.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 482117.0,
+        "busca_trabajo_primera_vez": 63692.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 815826.0,
@@ -5084,6 +6650,33 @@
         "hombres": 4876338.0,
         "mujeres": 3382820.0
       },
+      "composicion_desocupados": {
+        "cesantes": 481905.0,
+        "busca_trabajo_primera_vez": 66516.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 809376.0,
         "basica_completa": 1704527.0,
@@ -5170,6 +6763,33 @@
       "sexo_ocupados": {
         "hombres": 4878599.0,
         "mujeres": 3384492.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 481990.0,
+        "busca_trabajo_primera_vez": 65618.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 803650.0,
@@ -5258,6 +6878,33 @@
         "hombres": 4887837.0,
         "mujeres": 3344363.0
       },
+      "composicion_desocupados": {
+        "cesantes": 490705.0,
+        "busca_trabajo_primera_vez": 56129.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 798692.0,
         "basica_completa": 1689112.0,
@@ -5344,6 +6991,33 @@
       "sexo_ocupados": {
         "hombres": 4870905.0,
         "mujeres": 3359350.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 501864.0,
+        "busca_trabajo_primera_vez": 56742.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 788459.0,
@@ -5432,6 +7106,33 @@
         "hombres": 4856934.0,
         "mujeres": 3354860.0
       },
+      "composicion_desocupados": {
+        "cesantes": 534419.0,
+        "busca_trabajo_primera_vez": 60143.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 784220.0,
         "basica_completa": 1654663.0,
@@ -5518,6 +7219,33 @@
       "sexo_ocupados": {
         "hombres": 4838627.0,
         "mujeres": 3376987.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 529125.0,
+        "busca_trabajo_primera_vez": 58041.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 772899.0,
@@ -5606,6 +7334,33 @@
         "hombres": 4839300.0,
         "mujeres": 3381526.0
       },
+      "composicion_desocupados": {
+        "cesantes": 537474.0,
+        "busca_trabajo_primera_vez": 52082.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 770047.0,
         "basica_completa": 1663339.0,
@@ -5692,6 +7447,33 @@
       "sexo_ocupados": {
         "hombres": 4835352.0,
         "mujeres": 3414709.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 534518.0,
+        "busca_trabajo_primera_vez": 44540.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 780239.0,
@@ -5780,6 +7562,33 @@
         "hombres": 4868855.0,
         "mujeres": 3433184.0
       },
+      "composicion_desocupados": {
+        "cesantes": 536453.0,
+        "busca_trabajo_primera_vez": 44875.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 774884.0,
         "basica_completa": 1662065.0,
@@ -5866,6 +7675,33 @@
       "sexo_ocupados": {
         "hombres": 4863841.0,
         "mujeres": 3448229.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 526814.0,
+        "busca_trabajo_primera_vez": 45827.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 767827.0,
@@ -5954,6 +7790,33 @@
         "hombres": 4890005.0,
         "mujeres": 3469286.0
       },
+      "composicion_desocupados": {
+        "cesantes": 501304.0,
+        "busca_trabajo_primera_vez": 48838.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 780100.0,
         "basica_completa": 1687481.0,
@@ -6040,6 +7903,33 @@
       "sexo_ocupados": {
         "hombres": 4914743.0,
         "mujeres": 3513726.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 468550.0,
+        "busca_trabajo_primera_vez": 57094.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 788149.0,
@@ -6128,6 +8018,33 @@
         "hombres": 4959315.0,
         "mujeres": 3492752.0
       },
+      "composicion_desocupados": {
+        "cesantes": 464855.0,
+        "busca_trabajo_primera_vez": 66748.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 802035.0,
         "basica_completa": 1705033.0,
@@ -6214,6 +8131,33 @@
       "sexo_ocupados": {
         "hombres": 4968034.0,
         "mujeres": 3449091.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 473058.0,
+        "busca_trabajo_primera_vez": 68605.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 804606.0,
@@ -6302,6 +8246,33 @@
         "hombres": 4941940.0,
         "mujeres": 3418631.0
       },
+      "composicion_desocupados": {
+        "cesantes": 520959.0,
+        "busca_trabajo_primera_vez": 59348.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 799209.0,
         "basica_completa": 1673990.0,
@@ -6388,6 +8359,33 @@
       "sexo_ocupados": {
         "hombres": 4931879.0,
         "mujeres": 3444350.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 534986.0,
+        "busca_trabajo_primera_vez": 57411.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 800079.0,
@@ -6476,6 +8474,33 @@
         "hombres": 4877464.0,
         "mujeres": 3472847.0
       },
+      "composicion_desocupados": {
+        "cesantes": 572098.0,
+        "busca_trabajo_primera_vez": 59046.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 791950.0,
         "basica_completa": 1684094.0,
@@ -6562,6 +8587,33 @@
       "sexo_ocupados": {
         "hombres": 4863865.0,
         "mujeres": 3473556.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 566404.0,
+        "busca_trabajo_primera_vez": 62881.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 780417.0,
@@ -6650,6 +8702,33 @@
         "hombres": 4858057.0,
         "mujeres": 3478172.0
       },
+      "composicion_desocupados": {
+        "cesantes": 595090.0,
+        "busca_trabajo_primera_vez": 58188.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 791281.0,
         "basica_completa": 1642866.0,
@@ -6736,6 +8815,33 @@
       "sexo_ocupados": {
         "hombres": 4870466.0,
         "mujeres": 3462733.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 581872.0,
+        "busca_trabajo_primera_vez": 52149.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 789416.0,
@@ -6824,6 +8930,33 @@
         "hombres": 4891117.0,
         "mujeres": 3487264.0
       },
+      "composicion_desocupados": {
+        "cesantes": 584264.0,
+        "busca_trabajo_primera_vez": 49344.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 796804.0,
         "basica_completa": 1629045.0,
@@ -6910,6 +9043,33 @@
       "sexo_ocupados": {
         "hombres": 4891319.0,
         "mujeres": 3502403.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 556889.0,
+        "busca_trabajo_primera_vez": 44027.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 792090.0,
@@ -6998,6 +9158,33 @@
         "hombres": 4927726.0,
         "mujeres": 3539370.0
       },
+      "composicion_desocupados": {
+        "cesantes": 528292.0,
+        "busca_trabajo_primera_vez": 50981.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 795868.0,
         "basica_completa": 1646128.0,
@@ -7084,6 +9271,33 @@
       "sexo_ocupados": {
         "hombres": 4932162.0,
         "mujeres": 3568548.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 502771.0,
+        "busca_trabajo_primera_vez": 59150.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 813464.0,
@@ -7172,6 +9386,33 @@
         "hombres": 4962960.0,
         "mujeres": 3571592.0
       },
+      "composicion_desocupados": {
+        "cesantes": 505891.0,
+        "busca_trabajo_primera_vez": 74685.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 820529.0,
         "basica_completa": 1684869.0,
@@ -7258,6 +9499,33 @@
       "sexo_ocupados": {
         "hombres": 4949121.0,
         "mujeres": 3536579.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 535065.0,
+        "busca_trabajo_primera_vez": 81265.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 810244.0,
@@ -7346,6 +9614,33 @@
         "hombres": 4988918.0,
         "mujeres": 3495529.0
       },
+      "composicion_desocupados": {
+        "cesantes": 564854.0,
+        "busca_trabajo_primera_vez": 77709.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 792169.0,
         "basica_completa": 1654836.0,
@@ -7432,6 +9727,33 @@
       "sexo_ocupados": {
         "hombres": 4978167.0,
         "mujeres": 3521737.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 579549.0,
+        "busca_trabajo_primera_vez": 67899.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 788330.0,
@@ -7520,6 +9842,33 @@
         "hombres": 4989452.0,
         "mujeres": 3545758.0
       },
+      "composicion_desocupados": {
+        "cesantes": 611701.0,
+        "busca_trabajo_primera_vez": 63053.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 753451.0,
         "basica_completa": 1624172.0,
@@ -7606,6 +9955,33 @@
       "sexo_ocupados": {
         "hombres": 4969380.0,
         "mujeres": 3554757.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 608307.0,
+        "busca_trabajo_primera_vez": 64199.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 744409.0,
@@ -7694,6 +10070,33 @@
         "hombres": 4963054.0,
         "mujeres": 3574343.0
       },
+      "composicion_desocupados": {
+        "cesantes": 602524.0,
+        "busca_trabajo_primera_vez": 61524.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
+      },
       "educacion": {
         "sin_basica_completa": 725117.0,
         "basica_completa": 1575089.0,
@@ -7780,6 +10183,33 @@
       "sexo_ocupados": {
         "hombres": 4966026.0,
         "mujeres": 3607470.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 573359.0,
+        "busca_trabajo_primera_vez": 62807.0
+      },
+      "rama_actividad": {
+        "r01": null,
+        "r02": null,
+        "r03": null,
+        "r04": null,
+        "r05": null,
+        "r06": null,
+        "r07": null,
+        "r08": null,
+        "r09": null,
+        "r10": null,
+        "r11": null,
+        "r12": null,
+        "r13": null,
+        "r14": null,
+        "r15": null,
+        "r16": null,
+        "r17": null,
+        "r18": null,
+        "r19": null,
+        "r20": null,
+        "r21": null
       },
       "educacion": {
         "sin_basica_completa": 731893.0,
@@ -7868,6 +10298,33 @@
         "hombres": 4977295.0,
         "mujeres": 3635798.0
       },
+      "composicion_desocupados": {
+        "cesantes": 588638.0,
+        "busca_trabajo_primera_vez": 59191.0
+      },
+      "rama_actividad": {
+        "r01": 651670.0,
+        "r02": 197117.0,
+        "r03": 906672.0,
+        "r04": 44114.0,
+        "r05": 53782.0,
+        "r06": 705412.0,
+        "r07": 1694736.0,
+        "r08": 565924.0,
+        "r09": 379534.0,
+        "r10": 166282.0,
+        "r11": 163935.0,
+        "r12": 88186.0,
+        "r13": 274977.0,
+        "r14": 227032.0,
+        "r15": 473947.0,
+        "r16": 766196.0,
+        "r17": 494508.0,
+        "r18": 104848.0,
+        "r19": 273096.0,
+        "r20": 378653.0,
+        "r21": 2471.0
+      },
       "educacion": {
         "sin_basica_completa": 720862.0,
         "basica_completa": 1622798.0,
@@ -7954,6 +10411,33 @@
       "sexo_ocupados": {
         "hombres": 4993776.0,
         "mujeres": 3628928.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 585062.0,
+        "busca_trabajo_primera_vez": 62433.0
+      },
+      "rama_actividad": {
+        "r01": 659287.0,
+        "r02": 190522.0,
+        "r03": 936884.0,
+        "r04": 48844.0,
+        "r05": 50378.0,
+        "r06": 701593.0,
+        "r07": 1672303.0,
+        "r08": 560337.0,
+        "r09": 376811.0,
+        "r10": 155755.0,
+        "r11": 168637.0,
+        "r12": 84833.0,
+        "r13": 273715.0,
+        "r14": 246349.0,
+        "r15": 484823.0,
+        "r16": 768307.0,
+        "r17": 486153.0,
+        "r18": 107472.0,
+        "r19": 269818.0,
+        "r20": 377946.0,
+        "r21": 1934.0
       },
       "educacion": {
         "sin_basica_completa": 720319.0,
@@ -8042,6 +10526,33 @@
         "hombres": 5024248.0,
         "mujeres": 3688433.0
       },
+      "composicion_desocupados": {
+        "cesantes": 566858.0,
+        "busca_trabajo_primera_vez": 59204.0
+      },
+      "rama_actividad": {
+        "r01": 667685.0,
+        "r02": 199361.0,
+        "r03": 959785.0,
+        "r04": 51796.0,
+        "r05": 46508.0,
+        "r06": 714102.0,
+        "r07": 1676677.0,
+        "r08": 569649.0,
+        "r09": 393161.0,
+        "r10": 160701.0,
+        "r11": 171650.0,
+        "r12": 84075.0,
+        "r13": 286822.0,
+        "r14": 235907.0,
+        "r15": 473064.0,
+        "r16": 783323.0,
+        "r17": 472430.0,
+        "r18": 112643.0,
+        "r19": 269446.0,
+        "r20": 380342.0,
+        "r21": 3554.0
+      },
       "educacion": {
         "sin_basica_completa": 739703.0,
         "basica_completa": 1625768.0,
@@ -8128,6 +10639,33 @@
       "sexo_ocupados": {
         "hombres": 5057824.0,
         "mujeres": 3710843.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 535533.0,
+        "busca_trabajo_primera_vez": 75323.0
+      },
+      "rama_actividad": {
+        "r01": 724810.0,
+        "r02": 205925.0,
+        "r03": 942170.0,
+        "r04": 49930.0,
+        "r05": 48830.0,
+        "r06": 711036.0,
+        "r07": 1645132.0,
+        "r08": 581835.0,
+        "r09": 403768.0,
+        "r10": 161144.0,
+        "r11": 171231.0,
+        "r12": 88086.0,
+        "r13": 291636.0,
+        "r14": 240456.0,
+        "r15": 483144.0,
+        "r16": 777790.0,
+        "r17": 469835.0,
+        "r18": 109166.0,
+        "r19": 288340.0,
+        "r20": 370238.0,
+        "r21": 4167.0
       },
       "educacion": {
         "sin_basica_completa": 746730.0,
@@ -8216,6 +10754,33 @@
         "hombres": 5076960.0,
         "mujeres": 3716963.0
       },
+      "composicion_desocupados": {
+        "cesantes": 549213.0,
+        "busca_trabajo_primera_vez": 94979.0
+      },
+      "rama_actividad": {
+        "r01": 765047.0,
+        "r02": 223031.0,
+        "r03": 951646.0,
+        "r04": 46187.0,
+        "r05": 48841.0,
+        "r06": 726263.0,
+        "r07": 1648441.0,
+        "r08": 576019.0,
+        "r09": 411955.0,
+        "r10": 166875.0,
+        "r11": 165629.0,
+        "r12": 83819.0,
+        "r13": 285481.0,
+        "r14": 220046.0,
+        "r15": 475808.0,
+        "r16": 757444.0,
+        "r17": 467917.0,
+        "r18": 110497.0,
+        "r19": 277888.0,
+        "r20": 380180.0,
+        "r21": 4908.0
+      },
       "educacion": {
         "sin_basica_completa": 744032.0,
         "basica_completa": 1629769.0,
@@ -8302,6 +10867,33 @@
       "sexo_ocupados": {
         "hombres": 5100373.0,
         "mujeres": 3686707.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 559551.0,
+        "busca_trabajo_primera_vez": 102864.0
+      },
+      "rama_actividad": {
+        "r01": 789471.0,
+        "r02": 218784.0,
+        "r03": 937817.0,
+        "r04": 41472.0,
+        "r05": 47376.0,
+        "r06": 727275.0,
+        "r07": 1653597.0,
+        "r08": 579226.0,
+        "r09": 434921.0,
+        "r10": 173156.0,
+        "r11": 167092.0,
+        "r12": 89205.0,
+        "r13": 275847.0,
+        "r14": 222760.0,
+        "r15": 477530.0,
+        "r16": 722388.0,
+        "r17": 474215.0,
+        "r18": 104830.0,
+        "r19": 281418.0,
+        "r20": 365110.0,
+        "r21": 3592.0
       },
       "educacion": {
         "sin_basica_completa": 740451.0,
@@ -8390,6 +10982,33 @@
         "hombres": 5089332.0,
         "mujeres": 3669749.0
       },
+      "composicion_desocupados": {
+        "cesantes": 605649.0,
+        "busca_trabajo_primera_vez": 91879.0
+      },
+      "rama_actividad": {
+        "r01": 768561.0,
+        "r02": 227137.0,
+        "r03": 940977.0,
+        "r04": 44345.0,
+        "r05": 46142.0,
+        "r06": 731325.0,
+        "r07": 1646761.0,
+        "r08": 570977.0,
+        "r09": 427593.0,
+        "r10": 183574.0,
+        "r11": 170455.0,
+        "r12": 86730.0,
+        "r13": 283740.0,
+        "r14": 227591.0,
+        "r15": 465512.0,
+        "r16": 723745.0,
+        "r17": 474845.0,
+        "r18": 104909.0,
+        "r19": 265702.0,
+        "r20": 366141.0,
+        "r21": 2318.0
+      },
       "educacion": {
         "sin_basica_completa": 738025.0,
         "basica_completa": 1610031.0,
@@ -8476,6 +11095,33 @@
       "sexo_ocupados": {
         "hombres": 5101258.0,
         "mujeres": 3679826.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 585187.0,
+        "busca_trabajo_primera_vez": 75125.0
+      },
+      "rama_actividad": {
+        "r01": 743012.0,
+        "r02": 213356.0,
+        "r03": 906353.0,
+        "r04": 40825.0,
+        "r05": 45213.0,
+        "r06": 718620.0,
+        "r07": 1659982.0,
+        "r08": 600842.0,
+        "r09": 430708.0,
+        "r10": 175001.0,
+        "r11": 170809.0,
+        "r12": 91891.0,
+        "r13": 310378.0,
+        "r14": 239174.0,
+        "r15": 464995.0,
+        "r16": 754094.0,
+        "r17": 478731.0,
+        "r18": 104997.0,
+        "r19": 276573.0,
+        "r20": 353507.0,
+        "r21": 2023.0
       },
       "educacion": {
         "sin_basica_completa": 752399.0,
@@ -8564,6 +11210,33 @@
         "hombres": 5091390.0,
         "mujeres": 3675261.0
       },
+      "composicion_desocupados": {
+        "cesantes": 630706.0,
+        "busca_trabajo_primera_vez": 67972.0
+      },
+      "rama_actividad": {
+        "r01": 699309.0,
+        "r02": 217509.0,
+        "r03": 891841.0,
+        "r04": 41248.0,
+        "r05": 49999.0,
+        "r06": 726068.0,
+        "r07": 1649614.0,
+        "r08": 598383.0,
+        "r09": 431625.0,
+        "r10": 174753.0,
+        "r11": 168186.0,
+        "r12": 86820.0,
+        "r13": 321696.0,
+        "r14": 226012.0,
+        "r15": 464622.0,
+        "r16": 786942.0,
+        "r17": 497101.0,
+        "r18": 106838.0,
+        "r19": 271011.0,
+        "r20": 354784.0,
+        "r21": 2291.0
+      },
       "educacion": {
         "sin_basica_completa": 733198.0,
         "basica_completa": 1581651.0,
@@ -8650,6 +11323,33 @@
       "sexo_ocupados": {
         "hombres": 5088923.0,
         "mujeres": 3666625.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 636214.0,
+        "busca_trabajo_primera_vez": 75099.0
+      },
+      "rama_actividad": {
+        "r01": 652601.0,
+        "r02": 210364.0,
+        "r03": 899894.0,
+        "r04": 41031.0,
+        "r05": 47993.0,
+        "r06": 736854.0,
+        "r07": 1639128.0,
+        "r08": 598463.0,
+        "r09": 442783.0,
+        "r10": 174646.0,
+        "r11": 166968.0,
+        "r12": 89602.0,
+        "r13": 328536.0,
+        "r14": 230000.0,
+        "r15": 477928.0,
+        "r16": 785553.0,
+        "r17": 494997.0,
+        "r18": 113304.0,
+        "r19": 268493.0,
+        "r20": 353694.0,
+        "r21": 2717.0
       },
       "educacion": {
         "sin_basica_completa": 708613.0,
@@ -8738,6 +11438,33 @@
         "hombres": 5069650.0,
         "mujeres": 3639088.0
       },
+      "composicion_desocupados": {
+        "cesantes": 670508.0,
+        "busca_trabajo_primera_vez": 71720.0
+      },
+      "rama_actividad": {
+        "r01": 632554.0,
+        "r02": 220245.0,
+        "r03": 907772.0,
+        "r04": 43211.0,
+        "r05": 43963.0,
+        "r06": 750460.0,
+        "r07": 1619711.0,
+        "r08": 583005.0,
+        "r09": 451830.0,
+        "r10": 178361.0,
+        "r11": 167328.0,
+        "r12": 82287.0,
+        "r13": 302467.0,
+        "r14": 217438.0,
+        "r15": 472067.0,
+        "r16": 798020.0,
+        "r17": 498127.0,
+        "r18": 109306.0,
+        "r19": 274780.0,
+        "r20": 354014.0,
+        "r21": 1793.0
+      },
       "educacion": {
         "sin_basica_completa": 689526.0,
         "basica_completa": 1540612.0,
@@ -8824,6 +11551,33 @@
       "sexo_ocupados": {
         "hombres": 5061301.0,
         "mujeres": 3645893.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 651846.0,
+        "busca_trabajo_primera_vez": 76489.0
+      },
+      "rama_actividad": {
+        "r01": 641969.0,
+        "r02": 216800.0,
+        "r03": 918492.0,
+        "r04": 42386.0,
+        "r05": 38856.0,
+        "r06": 742884.0,
+        "r07": 1641231.0,
+        "r08": 589477.0,
+        "r09": 452212.0,
+        "r10": 166817.0,
+        "r11": 163290.0,
+        "r12": 82701.0,
+        "r13": 293308.0,
+        "r14": 216849.0,
+        "r15": 470714.0,
+        "r16": 788050.0,
+        "r17": 489832.0,
+        "r18": 113514.0,
+        "r19": 276384.0,
+        "r20": 359985.0,
+        "r21": 1444.0
       },
       "educacion": {
         "sin_basica_completa": 691920.0,
@@ -8912,6 +11666,33 @@
         "hombres": 5058289.0,
         "mujeres": 3652618.0
       },
+      "composicion_desocupados": {
+        "cesantes": 630745.0,
+        "busca_trabajo_primera_vez": 72521.0
+      },
+      "rama_actividad": {
+        "r01": 644132.0,
+        "r02": 211419.0,
+        "r03": 905276.0,
+        "r04": 49070.0,
+        "r05": 43458.0,
+        "r06": 742466.0,
+        "r07": 1664647.0,
+        "r08": 583088.0,
+        "r09": 439418.0,
+        "r10": 174439.0,
+        "r11": 170005.0,
+        "r12": 87052.0,
+        "r13": 286085.0,
+        "r14": 207298.0,
+        "r15": 469686.0,
+        "r16": 795781.0,
+        "r17": 497017.0,
+        "r18": 111010.0,
+        "r19": 280836.0,
+        "r20": 348066.0,
+        "r21": 660.0
+      },
       "educacion": {
         "sin_basica_completa": 680814.0,
         "basica_completa": 1540592.0,
@@ -8998,6 +11779,33 @@
       "sexo_ocupados": {
         "hombres": 5070851.0,
         "mujeres": 3702986.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 627859.0,
+        "busca_trabajo_primera_vez": 74509.0
+      },
+      "rama_actividad": {
+        "r01": 649560.0,
+        "r02": 208597.0,
+        "r03": 911755.0,
+        "r04": 50858.0,
+        "r05": 46392.0,
+        "r06": 746325.0,
+        "r07": 1675138.0,
+        "r08": 581970.0,
+        "r09": 445455.0,
+        "r10": 174390.0,
+        "r11": 168963.0,
+        "r12": 91010.0,
+        "r13": 284954.0,
+        "r14": 223181.0,
+        "r15": 474563.0,
+        "r16": 795392.0,
+        "r17": 506460.0,
+        "r18": 108948.0,
+        "r19": 280450.0,
+        "r20": 348803.0,
+        "r21": 670.0
       },
       "educacion": {
         "sin_basica_completa": 675882.0,
@@ -9086,6 +11894,33 @@
         "hombres": 5083802.0,
         "mujeres": 3745189.0
       },
+      "composicion_desocupados": {
+        "cesantes": 604185.0,
+        "busca_trabajo_primera_vez": 92230.0
+      },
+      "rama_actividad": {
+        "r01": 674763.0,
+        "r02": 210662.0,
+        "r03": 886063.0,
+        "r04": 53388.0,
+        "r05": 48223.0,
+        "r06": 759614.0,
+        "r07": 1693342.0,
+        "r08": 593625.0,
+        "r09": 438308.0,
+        "r10": 177093.0,
+        "r11": 165658.0,
+        "r12": 88110.0,
+        "r13": 290419.0,
+        "r14": 221323.0,
+        "r15": 479626.0,
+        "r16": 787418.0,
+        "r17": 508544.0,
+        "r18": 118379.0,
+        "r19": 280103.0,
+        "r20": 353557.0,
+        "r21": 772.0
+      },
       "educacion": {
         "sin_basica_completa": 690758.0,
         "basica_completa": 1605235.0,
@@ -9172,6 +12007,33 @@
       "sexo_ocupados": {
         "hombres": 5136299.0,
         "mujeres": 3777950.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 588585.0,
+        "busca_trabajo_primera_vez": 97499.0
+      },
+      "rama_actividad": {
+        "r01": 721589.0,
+        "r02": 216495.0,
+        "r03": 887612.0,
+        "r04": 47140.0,
+        "r05": 46547.0,
+        "r06": 769465.0,
+        "r07": 1680884.0,
+        "r08": 595499.0,
+        "r09": 442158.0,
+        "r10": 179057.0,
+        "r11": 169346.0,
+        "r12": 82719.0,
+        "r13": 282023.0,
+        "r14": 235260.0,
+        "r15": 491420.0,
+        "r16": 787250.0,
+        "r17": 521045.0,
+        "r18": 121666.0,
+        "r19": 277800.0,
+        "r20": 358160.0,
+        "r21": 1111.0
       },
       "educacion": {
         "sin_basica_completa": 699702.0,
@@ -9260,6 +12122,33 @@
         "hombres": 5156616.0,
         "mujeres": 3771335.0
       },
+      "composicion_desocupados": {
+        "cesantes": 578850.0,
+        "busca_trabajo_primera_vez": 106540.0
+      },
+      "rama_actividad": {
+        "r01": 760283.0,
+        "r02": 219224.0,
+        "r03": 888065.0,
+        "r04": 46392.0,
+        "r05": 41613.0,
+        "r06": 743712.0,
+        "r07": 1700715.0,
+        "r08": 576421.0,
+        "r09": 442436.0,
+        "r10": 178613.0,
+        "r11": 182059.0,
+        "r12": 81627.0,
+        "r13": 276947.0,
+        "r14": 234914.0,
+        "r15": 492089.0,
+        "r16": 775752.0,
+        "r17": 516275.0,
+        "r18": 136773.0,
+        "r19": 278352.0,
+        "r20": 352922.0,
+        "r21": 2766.0
+      },
       "educacion": {
         "sin_basica_completa": 704495.0,
         "basica_completa": 1584749.0,
@@ -9346,6 +12235,33 @@
       "sexo_ocupados": {
         "hombres": 5180812.0,
         "mujeres": 3726825.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 587819.0,
+        "busca_trabajo_primera_vez": 86180.0
+      },
+      "rama_actividad": {
+        "r01": 766666.0,
+        "r02": 223797.0,
+        "r03": 922350.0,
+        "r04": 47429.0,
+        "r05": 40828.0,
+        "r06": 758106.0,
+        "r07": 1675636.0,
+        "r08": 550370.0,
+        "r09": 433947.0,
+        "r10": 172109.0,
+        "r11": 178438.0,
+        "r12": 86267.0,
+        "r13": 289624.0,
+        "r14": 238620.0,
+        "r15": 489379.0,
+        "r16": 753366.0,
+        "r17": 522737.0,
+        "r18": 124723.0,
+        "r19": 278519.0,
+        "r20": 352034.0,
+        "r21": 2691.0
       },
       "educacion": {
         "sin_basica_completa": 687276.0,
@@ -9446,6 +12362,33 @@
         "hombres": 5164368.0,
         "mujeres": 3714742.0
       },
+      "composicion_desocupados": {
+        "cesantes": 607574.0,
+        "busca_trabajo_primera_vez": 85064.0
+      },
+      "rama_actividad": {
+        "r01": 746527.0,
+        "r02": 228670.0,
+        "r03": 926488.0,
+        "r04": 54327.0,
+        "r05": 37113.0,
+        "r06": 752305.0,
+        "r07": 1668160.0,
+        "r08": 548156.0,
+        "r09": 446105.0,
+        "r10": 160214.0,
+        "r11": 181084.0,
+        "r12": 85748.0,
+        "r13": 294061.0,
+        "r14": 236637.0,
+        "r15": 486717.0,
+        "r16": 749381.0,
+        "r17": 514523.0,
+        "r18": 131927.0,
+        "r19": 286484.0,
+        "r20": 341855.0,
+        "r21": 2628.0
+      },
       "educacion": {
         "sin_basica_completa": 679330.0,
         "basica_completa": 1573429.0,
@@ -9544,6 +12487,33 @@
       "sexo_ocupados": {
         "hombres": 5170534.0,
         "mujeres": 3745483.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 598051.0,
+        "busca_trabajo_primera_vez": 82989.0
+      },
+      "rama_actividad": {
+        "r01": 708440.0,
+        "r02": 236425.0,
+        "r03": 919076.0,
+        "r04": 52062.0,
+        "r05": 47765.0,
+        "r06": 760344.0,
+        "r07": 1698957.0,
+        "r08": 568993.0,
+        "r09": 430996.0,
+        "r10": 164109.0,
+        "r11": 178959.0,
+        "r12": 87346.0,
+        "r13": 297026.0,
+        "r14": 235428.0,
+        "r15": 490128.0,
+        "r16": 772398.0,
+        "r17": 518962.0,
+        "r18": 122302.0,
+        "r19": 280596.0,
+        "r20": 343340.0,
+        "r21": 2364.0
       },
       "educacion": {
         "sin_basica_completa": 666769.0,
@@ -9644,6 +12614,33 @@
         "hombres": 5143409.0,
         "mujeres": 3781866.0
       },
+      "composicion_desocupados": {
+        "cesantes": 609125.0,
+        "busca_trabajo_primera_vez": 86699.0
+      },
+      "rama_actividad": {
+        "r01": 672163.0,
+        "r02": 236538.0,
+        "r03": 880989.0,
+        "r04": 49268.0,
+        "r05": 50443.0,
+        "r06": 761556.0,
+        "r07": 1731086.0,
+        "r08": 574274.0,
+        "r09": 437441.0,
+        "r10": 165148.0,
+        "r11": 177717.0,
+        "r12": 86249.0,
+        "r13": 292565.0,
+        "r14": 221827.0,
+        "r15": 498893.0,
+        "r16": 814934.0,
+        "r17": 518082.0,
+        "r18": 123712.0,
+        "r19": 270835.0,
+        "r20": 359583.0,
+        "r21": 1969.0
+      },
       "educacion": {
         "sin_basica_completa": 654050.0,
         "basica_completa": 1566360.0,
@@ -9742,6 +12739,33 @@
       "sexo_ocupados": {
         "hombres": 5119782.0,
         "mujeres": 3802826.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 608645.0,
+        "busca_trabajo_primera_vez": 89205.0
+      },
+      "rama_actividad": {
+        "r01": 638495.0,
+        "r02": 238901.0,
+        "r03": 874810.0,
+        "r04": 44718.0,
+        "r05": 54089.0,
+        "r06": 758876.0,
+        "r07": 1750161.0,
+        "r08": 559602.0,
+        "r09": 442240.0,
+        "r10": 162335.0,
+        "r11": 173109.0,
+        "r12": 79035.0,
+        "r13": 304017.0,
+        "r14": 225919.0,
+        "r15": 515523.0,
+        "r16": 824227.0,
+        "r17": 534032.0,
+        "r18": 120932.0,
+        "r19": 252127.0,
+        "r20": 367692.0,
+        "r21": 1768.0
       },
       "educacion": {
         "sin_basica_completa": 653049.0,
@@ -9842,6 +12866,33 @@
         "hombres": 5112283.0,
         "mujeres": 3798275.0
       },
+      "composicion_desocupados": {
+        "cesantes": 626863.0,
+        "busca_trabajo_primera_vez": 100683.0
+      },
+      "rama_actividad": {
+        "r01": 629870.0,
+        "r02": 234094.0,
+        "r03": 851672.0,
+        "r04": 46011.0,
+        "r05": 50783.0,
+        "r06": 766060.0,
+        "r07": 1744234.0,
+        "r08": 565593.0,
+        "r09": 451994.0,
+        "r10": 154480.0,
+        "r11": 169792.0,
+        "r12": 75419.0,
+        "r13": 291190.0,
+        "r14": 225920.0,
+        "r15": 540625.0,
+        "r16": 824056.0,
+        "r17": 551739.0,
+        "r18": 129686.0,
+        "r19": 257147.0,
+        "r20": 348916.0,
+        "r21": 1276.0
+      },
       "educacion": {
         "sin_basica_completa": 640254.0,
         "basica_completa": 1570927.0,
@@ -9940,6 +12991,33 @@
       "sexo_ocupados": {
         "hombres": 5118786.0,
         "mujeres": 3809263.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 638421.0,
+        "busca_trabajo_primera_vez": 92973.0
+      },
+      "rama_actividad": {
+        "r01": 640429.0,
+        "r02": 234861.0,
+        "r03": 856467.0,
+        "r04": 43529.0,
+        "r05": 53064.0,
+        "r06": 759291.0,
+        "r07": 1722673.0,
+        "r08": 560103.0,
+        "r09": 452651.0,
+        "r10": 162759.0,
+        "r11": 164612.0,
+        "r12": 77526.0,
+        "r13": 297915.0,
+        "r14": 241649.0,
+        "r15": 532961.0,
+        "r16": 819048.0,
+        "r17": 556869.0,
+        "r18": 128238.0,
+        "r19": 268750.0,
+        "r20": 353145.0,
+        "r21": 1508.0
       },
       "educacion": {
         "sin_basica_completa": 642150.0,
@@ -10040,6 +13118,33 @@
         "hombres": 5167774.0,
         "mujeres": 3832317.0
       },
+      "composicion_desocupados": {
+        "cesantes": 625348.0,
+        "busca_trabajo_primera_vez": 87305.0
+      },
+      "rama_actividad": {
+        "r01": 636335.0,
+        "r02": 240829.0,
+        "r03": 836264.0,
+        "r04": 47877.0,
+        "r05": 57818.0,
+        "r06": 787463.0,
+        "r07": 1724724.0,
+        "r08": 585380.0,
+        "r09": 448196.0,
+        "r10": 163312.0,
+        "r11": 164660.0,
+        "r12": 83350.0,
+        "r13": 302985.0,
+        "r14": 236252.0,
+        "r15": 517232.0,
+        "r16": 823480.0,
+        "r17": 559925.0,
+        "r18": 138059.0,
+        "r19": 270515.0,
+        "r20": 374328.0,
+        "r21": 1107.0
+      },
       "educacion": {
         "sin_basica_completa": 654764.0,
         "basica_completa": 1562275.0,
@@ -10138,6 +13243,33 @@
       "sexo_ocupados": {
         "hombres": 5182047.0,
         "mujeres": 3812313.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 613825.0,
+        "busca_trabajo_primera_vez": 77864.0
+      },
+      "rama_actividad": {
+        "r01": 643954.0,
+        "r02": 235365.0,
+        "r03": 852284.0,
+        "r04": 47015.0,
+        "r05": 59035.0,
+        "r06": 795808.0,
+        "r07": 1712491.0,
+        "r08": 594116.0,
+        "r09": 452910.0,
+        "r10": 152763.0,
+        "r11": 173172.0,
+        "r12": 83880.0,
+        "r13": 324770.0,
+        "r14": 228627.0,
+        "r15": 495003.0,
+        "r16": 799935.0,
+        "r17": 554292.0,
+        "r18": 136329.0,
+        "r19": 275352.0,
+        "r20": 375747.0,
+        "r21": 1511.0
       },
       "educacion": {
         "sin_basica_completa": 668806.0,
@@ -10238,6 +13370,33 @@
         "hombres": 5216910.0,
         "mujeres": 3828453.0
       },
+      "composicion_desocupados": {
+        "cesantes": 589002.0,
+        "busca_trabajo_primera_vez": 87682.0
+      },
+      "rama_actividad": {
+        "r01": 669719.0,
+        "r02": 234962.0,
+        "r03": 876099.0,
+        "r04": 49768.0,
+        "r05": 61488.0,
+        "r06": 803900.0,
+        "r07": 1721337.0,
+        "r08": 588542.0,
+        "r09": 447102.0,
+        "r10": 140806.0,
+        "r11": 188987.0,
+        "r12": 83611.0,
+        "r13": 326287.0,
+        "r14": 225418.0,
+        "r15": 503761.0,
+        "r16": 797880.0,
+        "r17": 555966.0,
+        "r18": 131442.0,
+        "r19": 275517.0,
+        "r20": 361512.0,
+        "r21": 1257.0
+      },
       "educacion": {
         "sin_basica_completa": 687893.0,
         "basica_completa": 1551643.0,
@@ -10336,6 +13495,33 @@
       "sexo_ocupados": {
         "hombres": 5234266.0,
         "mujeres": 3852866.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 594460.0,
+        "busca_trabajo_primera_vez": 96159.0
+      },
+      "rama_actividad": {
+        "r01": 730326.0,
+        "r02": 238783.0,
+        "r03": 883837.0,
+        "r04": 46026.0,
+        "r05": 60874.0,
+        "r06": 787596.0,
+        "r07": 1745006.0,
+        "r08": 585065.0,
+        "r09": 436604.0,
+        "r10": 145004.0,
+        "r11": 191993.0,
+        "r12": 79368.0,
+        "r13": 310048.0,
+        "r14": 224758.0,
+        "r15": 509329.0,
+        "r16": 799306.0,
+        "r17": 560051.0,
+        "r18": 122494.0,
+        "r19": 280106.0,
+        "r20": 348364.0,
+        "r21": 2194.0
       },
       "educacion": {
         "sin_basica_completa": 683295.0,
@@ -10436,6 +13622,33 @@
         "hombres": 5236123.0,
         "mujeres": 3879518.0
       },
+      "composicion_desocupados": {
+        "cesantes": 634883.0,
+        "busca_trabajo_primera_vez": 98162.0
+      },
+      "rama_actividad": {
+        "r01": 762705.0,
+        "r02": 225099.0,
+        "r03": 882262.0,
+        "r04": 45731.0,
+        "r05": 65935.0,
+        "r06": 774973.0,
+        "r07": 1742643.0,
+        "r08": 553221.0,
+        "r09": 443129.0,
+        "r10": 144861.0,
+        "r11": 187983.0,
+        "r12": 72254.0,
+        "r13": 338145.0,
+        "r14": 252567.0,
+        "r15": 510012.0,
+        "r16": 749315.0,
+        "r17": 553649.0,
+        "r18": 130150.0,
+        "r19": 288073.0,
+        "r20": 355459.0,
+        "r21": 2574.0
+      },
       "educacion": {
         "sin_basica_completa": 753240.0,
         "basica_completa": 1615984.0,
@@ -10534,6 +13747,33 @@
       "sexo_ocupados": {
         "hombres": 5225730.0,
         "mujeres": 3837644.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 666714.0,
+        "busca_trabajo_primera_vez": 101158.0
+      },
+      "rama_actividad": {
+        "r01": 726957.0,
+        "r02": 234039.0,
+        "r03": 876654.0,
+        "r04": 48776.0,
+        "r05": 66953.0,
+        "r06": 772708.0,
+        "r07": 1708609.0,
+        "r08": 563657.0,
+        "r09": 452215.0,
+        "r10": 155186.0,
+        "r11": 181568.0,
+        "r12": 81094.0,
+        "r13": 327619.0,
+        "r14": 270025.0,
+        "r15": 501776.0,
+        "r16": 721758.0,
+        "r17": 551787.0,
+        "r18": 128940.0,
+        "r19": 291953.0,
+        "r20": 341118.0,
+        "r21": 2369.0
       },
       "educacion": {
         "sin_basica_completa": 798701.0,
@@ -10634,6 +13874,33 @@
         "hombres": 5198320.0,
         "mujeres": 3744104.0
       },
+      "composicion_desocupados": {
+        "cesantes": 703299.0,
+        "busca_trabajo_primera_vez": 98506.0
+      },
+      "rama_actividad": {
+        "r01": 679112.0,
+        "r02": 227097.0,
+        "r03": 860390.0,
+        "r04": 49933.0,
+        "r05": 66583.0,
+        "r06": 756472.0,
+        "r07": 1688349.0,
+        "r08": 564501.0,
+        "r09": 427247.0,
+        "r10": 167085.0,
+        "r11": 182544.0,
+        "r12": 88623.0,
+        "r13": 327494.0,
+        "r14": 305795.0,
+        "r15": 494139.0,
+        "r16": 697946.0,
+        "r17": 551682.0,
+        "r18": 113304.0,
+        "r19": 298039.0,
+        "r20": 335842.0,
+        "r21": 1631.0
+      },
       "educacion": {
         "sin_basica_completa": 799735.0,
         "basica_completa": 1539174.0,
@@ -10732,6 +13999,33 @@
       "sexo_ocupados": {
         "hombres": 4840735.0,
         "mujeres": 3395196.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 734804.0,
+        "busca_trabajo_primera_vez": 79923.0
+      },
+      "rama_actividad": {
+        "r01": 598610.0,
+        "r02": 224663.0,
+        "r03": 809715.0,
+        "r04": 52658.0,
+        "r05": 62588.0,
+        "r06": 682083.0,
+        "r07": 1528624.0,
+        "r08": 525127.0,
+        "r09": 344475.0,
+        "r10": 168810.0,
+        "r11": 189650.0,
+        "r12": 87025.0,
+        "r13": 279400.0,
+        "r14": 280174.0,
+        "r15": 493383.0,
+        "r16": 721169.0,
+        "r17": 521399.0,
+        "r18": 82819.0,
+        "r19": 274864.0,
+        "r20": 281386.0,
+        "r21": 0.0
       },
       "educacion": {
         "sin_basica_completa": 655147.0,
@@ -10832,6 +14126,33 @@
         "hombres": 4417801.0,
         "mujeres": 3032721.0
       },
+      "composicion_desocupados": {
+        "cesantes": 878813.0,
+        "busca_trabajo_primera_vez": 61548.0
+      },
+      "rama_actividad": {
+        "r01": 508864.0,
+        "r02": 201025.0,
+        "r03": 754475.0,
+        "r04": 48263.0,
+        "r05": 62375.0,
+        "r06": 585939.0,
+        "r07": 1394445.0,
+        "r08": 476160.0,
+        "r09": 251957.0,
+        "r10": 155483.0,
+        "r11": 194986.0,
+        "r12": 63281.0,
+        "r13": 254917.0,
+        "r14": 251717.0,
+        "r15": 482946.0,
+        "r16": 703256.0,
+        "r17": 509662.0,
+        "r18": 63241.0,
+        "r19": 255401.0,
+        "r20": 226018.0,
+        "r21": 0.0
+      },
       "educacion": {
         "sin_basica_completa": 512300.0,
         "basica_completa": 1170403.0,
@@ -10930,6 +14251,33 @@
       "sexo_ocupados": {
         "hombres": 4231848.0,
         "mujeres": 2910721.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 936389.0,
+        "busca_trabajo_primera_vez": 57742.0
+      },
+      "rama_actividad": {
+        "r01": 468498.0,
+        "r02": 190009.0,
+        "r03": 747281.0,
+        "r04": 48679.0,
+        "r05": 60217.0,
+        "r06": 526727.0,
+        "r07": 1331605.0,
+        "r08": 444707.0,
+        "r09": 227535.0,
+        "r10": 153863.0,
+        "r11": 195472.0,
+        "r12": 61246.0,
+        "r13": 242849.0,
+        "r14": 231881.0,
+        "r15": 487605.0,
+        "r16": 703913.0,
+        "r17": 510733.0,
+        "r18": 55699.0,
+        "r19": 240250.0,
+        "r20": 203735.0,
+        "r21": 0.0
       },
       "educacion": {
         "sin_basica_completa": 443897.0,
@@ -11030,6 +14378,33 @@
         "hombres": 4173934.0,
         "mujeres": 2899259.0
       },
+      "composicion_desocupados": {
+        "cesantes": 994168.0,
+        "busca_trabajo_primera_vez": 71279.0
+      },
+      "rama_actividad": {
+        "r01": 447794.0,
+        "r02": 184878.0,
+        "r03": 744755.0,
+        "r04": 49277.0,
+        "r05": 57356.0,
+        "r06": 499226.0,
+        "r07": 1309553.0,
+        "r08": 436602.0,
+        "r09": 228225.0,
+        "r10": 148436.0,
+        "r11": 184909.0,
+        "r12": 61789.0,
+        "r13": 259281.0,
+        "r14": 230532.0,
+        "r15": 498038.0,
+        "r16": 692015.0,
+        "r17": 534903.0,
+        "r18": 55178.0,
+        "r19": 231918.0,
+        "r20": 197525.0,
+        "r21": 0.0
+      },
       "educacion": {
         "sin_basica_completa": 404718.0,
         "basica_completa": 1071908.0,
@@ -11128,6 +14503,33 @@
       "sexo_ocupados": {
         "hombres": 4230267.0,
         "mujeres": 2961147.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 993505.0,
+        "busca_trabajo_primera_vez": 72291.0
+      },
+      "rama_actividad": {
+        "r01": 421614.0,
+        "r02": 189188.0,
+        "r03": 760469.0,
+        "r04": 51921.0,
+        "r05": 55373.0,
+        "r06": 496059.0,
+        "r07": 1345172.0,
+        "r08": 434614.0,
+        "r09": 246495.0,
+        "r10": 145037.0,
+        "r11": 193603.0,
+        "r12": 62533.0,
+        "r13": 265048.0,
+        "r14": 237765.0,
+        "r15": 509209.0,
+        "r16": 705282.0,
+        "r17": 536590.0,
+        "r18": 57542.0,
+        "r19": 247026.0,
+        "r20": 204544.0,
+        "r21": 1348.0
       },
       "educacion": {
         "sin_basica_completa": 396820.0,
@@ -11228,6 +14630,33 @@
         "hombres": 4332794.0,
         "mujeres": 3032261.0
       },
+      "composicion_desocupados": {
+        "cesantes": 965691.0,
+        "busca_trabajo_primera_vez": 71891.0
+      },
+      "rama_actividad": {
+        "r01": 476652.0,
+        "r02": 190897.0,
+        "r03": 787689.0,
+        "r04": 50678.0,
+        "r05": 58368.0,
+        "r06": 519841.0,
+        "r07": 1355905.0,
+        "r08": 436430.0,
+        "r09": 241237.0,
+        "r10": 145014.0,
+        "r11": 193139.0,
+        "r12": 60094.0,
+        "r13": 282076.0,
+        "r14": 235260.0,
+        "r15": 522937.0,
+        "r16": 710838.0,
+        "r17": 534126.0,
+        "r18": 65206.0,
+        "r19": 259952.0,
+        "r20": 207646.0,
+        "r21": 1802.0
+      },
       "educacion": {
         "sin_basica_completa": 417263.0,
         "basica_completa": 1117132.0,
@@ -11326,6 +14755,33 @@
       "sexo_ocupados": {
         "hombres": 4531061.0,
         "mujeres": 3136598.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 939216.0,
+        "busca_trabajo_primera_vez": 64695.0
+      },
+      "rama_actividad": {
+        "r01": 508333.0,
+        "r02": 196187.0,
+        "r03": 805216.0,
+        "r04": 53247.0,
+        "r05": 57725.0,
+        "r06": 592421.0,
+        "r07": 1436170.0,
+        "r08": 460631.0,
+        "r09": 254930.0,
+        "r10": 153033.0,
+        "r11": 191842.0,
+        "r12": 63119.0,
+        "r13": 300773.0,
+        "r14": 223430.0,
+        "r15": 529001.0,
+        "r16": 725479.0,
+        "r17": 536280.0,
+        "r18": 76943.0,
+        "r19": 268898.0,
+        "r20": 206003.0,
+        "r21": 1829.0
       },
       "educacion": {
         "sin_basica_completa": 439556.0,
@@ -11426,6 +14882,33 @@
         "hombres": 4701328.0,
         "mujeres": 3215395.0
       },
+      "composicion_desocupados": {
+        "cesantes": 879222.0,
+        "busca_trabajo_primera_vez": 75130.0
+      },
+      "rama_actividad": {
+        "r01": 542222.0,
+        "r02": 199489.0,
+        "r03": 807783.0,
+        "r04": 56122.0,
+        "r05": 59033.0,
+        "r06": 618723.0,
+        "r07": 1526712.0,
+        "r08": 476096.0,
+        "r09": 261673.0,
+        "r10": 162365.0,
+        "r11": 187790.0,
+        "r12": 67633.0,
+        "r13": 314988.0,
+        "r14": 227521.0,
+        "r15": 519455.0,
+        "r16": 747584.0,
+        "r17": 540672.0,
+        "r18": 70107.0,
+        "r19": 272343.0,
+        "r20": 229649.0,
+        "r21": 1056.0
+      },
       "educacion": {
         "sin_basica_completa": 459060.0,
         "basica_completa": 1204821.0,
@@ -11524,6 +15007,33 @@
       "sexo_ocupados": {
         "hombres": 4773744.0,
         "mujeres": 3252472.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 837060.0,
+        "busca_trabajo_primera_vez": 83204.0
+      },
+      "rama_actividad": {
+        "r01": 574070.0,
+        "r02": 197820.0,
+        "r03": 780484.0,
+        "r04": 58124.0,
+        "r05": 57197.0,
+        "r06": 655603.0,
+        "r07": 1557242.0,
+        "r08": 480221.0,
+        "r09": 282530.0,
+        "r10": 169476.0,
+        "r11": 173265.0,
+        "r12": 75542.0,
+        "r13": 315070.0,
+        "r14": 222727.0,
+        "r15": 532008.0,
+        "r16": 734317.0,
+        "r17": 548213.0,
+        "r18": 67623.0,
+        "r19": 283573.0,
+        "r20": 237247.0,
+        "r21": 1271.0
       },
       "educacion": {
         "sin_basica_completa": 471093.0,
@@ -11624,6 +15134,33 @@
         "hombres": 4816037.0,
         "mujeres": 3305383.0
       },
+      "composicion_desocupados": {
+        "cesantes": 836774.0,
+        "busca_trabajo_primera_vez": 88440.0
+      },
+      "rama_actividad": {
+        "r01": 593616.0,
+        "r02": 202144.0,
+        "r03": 771383.0,
+        "r04": 61035.0,
+        "r05": 60580.0,
+        "r06": 659693.0,
+        "r07": 1582641.0,
+        "r08": 481540.0,
+        "r09": 299967.0,
+        "r10": 174892.0,
+        "r11": 179958.0,
+        "r12": 88250.0,
+        "r13": 312471.0,
+        "r14": 245385.0,
+        "r15": 527953.0,
+        "r16": 722076.0,
+        "r17": 546236.0,
+        "r18": 59855.0,
+        "r19": 295630.0,
+        "r20": 234140.0,
+        "r21": 1736.0
+      },
       "educacion": {
         "sin_basica_completa": 504442.0,
         "basica_completa": 1232049.0,
@@ -11722,6 +15259,33 @@
       "sexo_ocupados": {
         "hombres": 4833886.0,
         "mujeres": 3333737.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 843781.0,
+        "busca_trabajo_primera_vez": 94543.0
+      },
+      "rama_actividad": {
+        "r01": 618497.0,
+        "r02": 214371.0,
+        "r03": 776347.0,
+        "r04": 53516.0,
+        "r05": 61722.0,
+        "r06": 692608.0,
+        "r07": 1539850.0,
+        "r08": 489535.0,
+        "r09": 313501.0,
+        "r10": 193075.0,
+        "r11": 176917.0,
+        "r12": 97183.0,
+        "r13": 307206.0,
+        "r14": 256551.0,
+        "r15": 531018.0,
+        "r16": 682114.0,
+        "r17": 544876.0,
+        "r18": 68007.0,
+        "r19": 289057.0,
+        "r20": 230300.0,
+        "r21": 976.0
       },
       "educacion": {
         "sin_basica_completa": 503712.0,
@@ -11822,6 +15386,33 @@
         "hombres": 4826056.0,
         "mujeres": 3322150.0
       },
+      "composicion_desocupados": {
+        "cesantes": 852554.0,
+        "busca_trabajo_primera_vez": 88534.0
+      },
+      "rama_actividad": {
+        "r01": 613679.0,
+        "r02": 214789.0,
+        "r03": 794521.0,
+        "r04": 51767.0,
+        "r05": 61730.0,
+        "r06": 703207.0,
+        "r07": 1527623.0,
+        "r08": 494836.0,
+        "r09": 313875.0,
+        "r10": 198443.0,
+        "r11": 180015.0,
+        "r12": 86669.0,
+        "r13": 305162.0,
+        "r14": 245359.0,
+        "r15": 522701.0,
+        "r16": 685711.0,
+        "r17": 537623.0,
+        "r18": 65398.0,
+        "r19": 273611.0,
+        "r20": 239258.0,
+        "r21": 762.0
+      },
       "educacion": {
         "sin_basica_completa": 514106.0,
         "basica_completa": 1270866.0,
@@ -11920,6 +15511,33 @@
       "sexo_ocupados": {
         "hombres": 4802906.0,
         "mujeres": 3301222.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 837221.0,
+        "busca_trabajo_primera_vez": 87754.0
+      },
+      "rama_actividad": {
+        "r01": 574752.0,
+        "r02": 212814.0,
+        "r03": 829119.0,
+        "r04": 47023.0,
+        "r05": 56712.0,
+        "r06": 718090.0,
+        "r07": 1516802.0,
+        "r08": 487294.0,
+        "r09": 306478.0,
+        "r10": 196018.0,
+        "r11": 176541.0,
+        "r12": 86558.0,
+        "r13": 304230.0,
+        "r14": 236301.0,
+        "r15": 521912.0,
+        "r16": 689206.0,
+        "r17": 539355.0,
+        "r18": 64532.0,
+        "r19": 276542.0,
+        "r20": 233525.0,
+        "r21": 348.0
       },
       "educacion": {
         "sin_basica_completa": 500384.0,
@@ -12020,6 +15638,33 @@
         "hombres": 4746478.0,
         "mujeres": 3294632.0
       },
+      "composicion_desocupados": {
+        "cesantes": 821587.0,
+        "busca_trabajo_primera_vez": 75575.0
+      },
+      "rama_actividad": {
+        "r01": 526949.0,
+        "r02": 216546.0,
+        "r03": 818496.0,
+        "r04": 49269.0,
+        "r05": 53032.0,
+        "r06": 729471.0,
+        "r07": 1498115.0,
+        "r08": 495167.0,
+        "r09": 300342.0,
+        "r10": 195330.0,
+        "r11": 174604.0,
+        "r12": 80735.0,
+        "r13": 315213.0,
+        "r14": 220256.0,
+        "r15": 516811.0,
+        "r16": 703862.0,
+        "r17": 538369.0,
+        "r18": 65437.0,
+        "r19": 284613.0,
+        "r20": 233254.0,
+        "r21": 346.0
+      },
       "educacion": {
         "sin_basica_completa": 481769.0,
         "basica_completa": 1229968.0,
@@ -12118,6 +15763,33 @@
       "sexo_ocupados": {
         "hombres": 4739490.0,
         "mujeres": 3301701.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 776891.0,
+        "busca_trabajo_primera_vez": 66867.0
+      },
+      "rama_actividad": {
+        "r01": 482246.0,
+        "r02": 213960.0,
+        "r03": 825116.0,
+        "r04": 44744.0,
+        "r05": 50669.0,
+        "r06": 738717.0,
+        "r07": 1504400.0,
+        "r08": 523798.0,
+        "r09": 313022.0,
+        "r10": 207583.0,
+        "r11": 177518.0,
+        "r12": 78463.0,
+        "r13": 300483.0,
+        "r14": 222249.0,
+        "r15": 494128.0,
+        "r16": 707984.0,
+        "r17": 547064.0,
+        "r18": 67308.0,
+        "r19": 290906.0,
+        "r20": 225862.0,
+        "r21": 264.0
       },
       "educacion": {
         "sin_basica_completa": 468891.0,
@@ -12218,6 +15890,33 @@
         "hombres": 4797207.0,
         "mujeres": 3351741.0
       },
+      "composicion_desocupados": {
+        "cesantes": 736776.0,
+        "busca_trabajo_primera_vez": 62604.0
+      },
+      "rama_actividad": {
+        "r01": 468397.0,
+        "r02": 218587.0,
+        "r03": 817673.0,
+        "r04": 47132.0,
+        "r05": 57409.0,
+        "r06": 742131.0,
+        "r07": 1541675.0,
+        "r08": 544978.0,
+        "r09": 326111.0,
+        "r10": 211179.0,
+        "r11": 172363.0,
+        "r12": 77457.0,
+        "r13": 296058.0,
+        "r14": 223887.0,
+        "r15": 495770.0,
+        "r16": 713034.0,
+        "r17": 563304.0,
+        "r18": 73340.0,
+        "r19": 297153.0,
+        "r20": 237404.0,
+        "r21": 250.0
+      },
       "educacion": {
         "sin_basica_completa": 475644.0,
         "basica_completa": 1242061.0,
@@ -12316,6 +16015,33 @@
       "sexo_ocupados": {
         "hombres": 4859405.0,
         "mujeres": 3399370.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 709393.0,
+        "busca_trabajo_primera_vez": 62510.0
+      },
+      "rama_actividad": {
+        "r01": 471387.0,
+        "r02": 215558.0,
+        "r03": 821654.0,
+        "r04": 47269.0,
+        "r05": 58118.0,
+        "r06": 754331.0,
+        "r07": 1585873.0,
+        "r08": 545477.0,
+        "r09": 348836.0,
+        "r10": 209113.0,
+        "r11": 170403.0,
+        "r12": 82171.0,
+        "r13": 300976.0,
+        "r14": 232571.0,
+        "r15": 492508.0,
+        "r16": 707623.0,
+        "r17": 572429.0,
+        "r18": 72227.0,
+        "r19": 304735.0,
+        "r20": 241897.0,
+        "r21": 946.0
       },
       "educacion": {
         "sin_basica_completa": 506270.0,
@@ -12416,6 +16142,33 @@
         "hombres": 4906501.0,
         "mujeres": 3438739.0
       },
+      "composicion_desocupados": {
+        "cesantes": 703780.0,
+        "busca_trabajo_primera_vez": 62062.0
+      },
+      "rama_actividad": {
+        "r01": 479849.0,
+        "r02": 219935.0,
+        "r03": 830053.0,
+        "r04": 52785.0,
+        "r05": 56748.0,
+        "r06": 756355.0,
+        "r07": 1607332.0,
+        "r08": 509673.0,
+        "r09": 360334.0,
+        "r10": 206273.0,
+        "r11": 165878.0,
+        "r12": 83969.0,
+        "r13": 319985.0,
+        "r14": 244083.0,
+        "r15": 507685.0,
+        "r16": 706517.0,
+        "r17": 570202.0,
+        "r18": 77520.0,
+        "r19": 316937.0,
+        "r20": 248222.0,
+        "r21": 945.0
+      },
       "educacion": {
         "sin_basica_completa": 518450.0,
         "basica_completa": 1287199.0,
@@ -12514,6 +16267,33 @@
       "sexo_ocupados": {
         "hombres": 4946017.0,
         "mujeres": 3510494.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 675330.0,
+        "busca_trabajo_primera_vez": 67678.0
+      },
+      "rama_actividad": {
+        "r01": 487690.0,
+        "r02": 228063.0,
+        "r03": 830334.0,
+        "r04": 50588.0,
+        "r05": 56263.0,
+        "r06": 780865.0,
+        "r07": 1640438.0,
+        "r08": 481569.0,
+        "r09": 387199.0,
+        "r10": 210389.0,
+        "r11": 157303.0,
+        "r12": 83545.0,
+        "r13": 340083.0,
+        "r14": 255924.0,
+        "r15": 494592.0,
+        "r16": 711130.0,
+        "r17": 573597.0,
+        "r18": 74411.0,
+        "r19": 311600.0,
+        "r20": 269928.0,
+        "r21": 1125.0
       },
       "educacion": {
         "sin_basica_completa": 537572.0,
@@ -12614,6 +16394,33 @@
         "hombres": 4992795.0,
         "mujeres": 3565568.0
       },
+      "composicion_desocupados": {
+        "cesantes": 630366.0,
+        "busca_trabajo_primera_vez": 66321.0
+      },
+      "rama_actividad": {
+        "r01": 510128.0,
+        "r02": 230636.0,
+        "r03": 851830.0,
+        "r04": 54564.0,
+        "r05": 56792.0,
+        "r06": 795201.0,
+        "r07": 1651454.0,
+        "r08": 493185.0,
+        "r09": 379181.0,
+        "r10": 209956.0,
+        "r11": 161649.0,
+        "r12": 84404.0,
+        "r13": 334770.0,
+        "r14": 265862.0,
+        "r15": 501997.0,
+        "r16": 719100.0,
+        "r17": 573372.0,
+        "r18": 77454.0,
+        "r19": 296851.0,
+        "r20": 278513.0,
+        "r21": 1177.0
+      },
       "educacion": {
         "sin_basica_completa": 541313.0,
         "basica_completa": 1342774.0,
@@ -12712,6 +16519,33 @@
       "sexo_ocupados": {
         "hombres": 5045344.0,
         "mujeres": 3632943.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 604333.0,
+        "busca_trabajo_primera_vez": 67964.0
+      },
+      "rama_actividad": {
+        "r01": 548066.0,
+        "r02": 236921.0,
+        "r03": 859053.0,
+        "r04": 53192.0,
+        "r05": 60380.0,
+        "r06": 800900.0,
+        "r07": 1689476.0,
+        "r08": 505434.0,
+        "r09": 369691.0,
+        "r10": 196396.0,
+        "r11": 167873.0,
+        "r12": 81776.0,
+        "r13": 331478.0,
+        "r14": 268758.0,
+        "r15": 495732.0,
+        "r16": 723442.0,
+        "r17": 585010.0,
+        "r18": 81952.0,
+        "r19": 311045.0,
+        "r20": 281030.0,
+        "r21": 1168.0
       },
       "educacion": {
         "sin_basica_completa": 550894.0,
@@ -12812,6 +16646,33 @@
         "hombres": 5072568.0,
         "mujeres": 3640322.0
       },
+      "composicion_desocupados": {
+        "cesantes": 611248.0,
+        "busca_trabajo_primera_vez": 71988.0
+      },
+      "rama_actividad": {
+        "r01": 580859.0,
+        "r02": 240449.0,
+        "r03": 853943.0,
+        "r04": 52655.0,
+        "r05": 54135.0,
+        "r06": 802406.0,
+        "r07": 1675830.0,
+        "r08": 531622.0,
+        "r09": 347223.0,
+        "r10": 194591.0,
+        "r11": 172997.0,
+        "r12": 86251.0,
+        "r13": 310956.0,
+        "r14": 273057.0,
+        "r15": 497336.0,
+        "r16": 712397.0,
+        "r17": 593403.0,
+        "r18": 91395.0,
+        "r19": 331343.0,
+        "r20": 274068.0,
+        "r21": 1453.0
+      },
       "educacion": {
         "sin_basica_completa": 556151.0,
         "basica_completa": 1358175.0,
@@ -12910,6 +16771,33 @@
       "sexo_ocupados": {
         "hombres": 5103423.0,
         "mujeres": 3665222.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 632039.0,
+        "busca_trabajo_primera_vez": 78780.0
+      },
+      "rama_actividad": {
+        "r01": 583396.0,
+        "r02": 247428.0,
+        "r03": 860916.0,
+        "r04": 43185.0,
+        "r05": 57332.0,
+        "r06": 781089.0,
+        "r07": 1692440.0,
+        "r08": 540705.0,
+        "r09": 372183.0,
+        "r10": 200274.0,
+        "r11": 170896.0,
+        "r12": 89810.0,
+        "r13": 304414.0,
+        "r14": 283738.0,
+        "r15": 494184.0,
+        "r16": 703095.0,
+        "r17": 614779.0,
+        "r18": 85141.0,
+        "r19": 337662.0,
+        "r20": 268175.0,
+        "r21": 1102.0
       },
       "educacion": {
         "sin_basica_completa": 564756.0,
@@ -13010,6 +16898,33 @@
         "hombres": 5124955.0,
         "mujeres": 3672606.0
       },
+      "composicion_desocupados": {
+        "cesantes": 655651.0,
+        "busca_trabajo_primera_vez": 88391.0
+      },
+      "rama_actividad": {
+        "r01": 573892.0,
+        "r02": 258584.0,
+        "r03": 868082.0,
+        "r04": 41009.0,
+        "r05": 59418.0,
+        "r06": 783043.0,
+        "r07": 1678855.0,
+        "r08": 542910.0,
+        "r09": 389173.0,
+        "r10": 201401.0,
+        "r11": 169273.0,
+        "r12": 100257.0,
+        "r13": 309186.0,
+        "r14": 285808.0,
+        "r15": 502888.0,
+        "r16": 695245.0,
+        "r17": 621449.0,
+        "r18": 84899.0,
+        "r19": 327265.0,
+        "r20": 266074.0,
+        "r21": 1264.0
+      },
       "educacion": {
         "sin_basica_completa": 565719.0,
         "basica_completa": 1362711.0,
@@ -13108,6 +17023,33 @@
       "sexo_ocupados": {
         "hombres": 5120780.0,
         "mujeres": 3714697.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 660650.0,
+        "busca_trabajo_primera_vez": 81365.0
+      },
+      "rama_actividad": {
+        "r01": 553616.0,
+        "r02": 261671.0,
+        "r03": 880344.0,
+        "r04": 45102.0,
+        "r05": 67394.0,
+        "r06": 768524.0,
+        "r07": 1687058.0,
+        "r08": 546923.0,
+        "r09": 403083.0,
+        "r10": 202748.0,
+        "r11": 180011.0,
+        "r12": 102439.0,
+        "r13": 324888.0,
+        "r14": 268641.0,
+        "r15": 509574.0,
+        "r16": 693363.0,
+        "r17": 626014.0,
+        "r18": 82120.0,
+        "r19": 314339.0,
+        "r20": 284860.0,
+        "r21": 917.0
       },
       "educacion": {
         "sin_basica_completa": 565507.0,
@@ -13208,6 +17150,33 @@
         "hombres": 5118435.0,
         "mujeres": 3736641.0
       },
+      "composicion_desocupados": {
+        "cesantes": 673556.0,
+        "busca_trabajo_primera_vez": 75986.0
+      },
+      "rama_actividad": {
+        "r01": 534744.0,
+        "r02": 262818.0,
+        "r03": 881170.0,
+        "r04": 43389.0,
+        "r05": 59954.0,
+        "r06": 773442.0,
+        "r07": 1695892.0,
+        "r08": 544409.0,
+        "r09": 404406.0,
+        "r10": 206644.0,
+        "r11": 181649.0,
+        "r12": 103072.0,
+        "r13": 332902.0,
+        "r14": 275439.0,
+        "r15": 498630.0,
+        "r16": 716349.0,
+        "r17": 608244.0,
+        "r18": 83159.0,
+        "r19": 326659.0,
+        "r20": 288949.0,
+        "r21": 262.0
+      },
       "educacion": {
         "sin_basica_completa": 557829.0,
         "basica_completa": 1362139.0,
@@ -13306,6 +17275,33 @@
       "sexo_ocupados": {
         "hombres": 5106684.0,
         "mujeres": 3731748.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 680554.0,
+        "busca_trabajo_primera_vez": 68359.0
+      },
+      "rama_actividad": {
+        "r01": 509460.0,
+        "r02": 265903.0,
+        "r03": 891221.0,
+        "r04": 45690.0,
+        "r05": 55877.0,
+        "r06": 776434.0,
+        "r07": 1682515.0,
+        "r08": 553247.0,
+        "r09": 381973.0,
+        "r10": 213254.0,
+        "r11": 189723.0,
+        "r12": 114224.0,
+        "r13": 323561.0,
+        "r14": 276398.0,
+        "r15": 499139.0,
+        "r16": 738691.0,
+        "r17": 601108.0,
+        "r18": 77206.0,
+        "r19": 318461.0,
+        "r20": 293746.0,
+        "r21": 863.0
       },
       "educacion": {
         "sin_basica_completa": 546570.0,
@@ -13406,6 +17402,33 @@
         "hombres": 5092337.0,
         "mujeres": 3757494.0
       },
+      "composicion_desocupados": {
+        "cesantes": 693788.0,
+        "busca_trabajo_primera_vez": 67281.0
+      },
+      "rama_actividad": {
+        "r01": 497476.0,
+        "r02": 268777.0,
+        "r03": 894564.0,
+        "r04": 45884.0,
+        "r05": 57614.0,
+        "r06": 788726.0,
+        "r07": 1672187.0,
+        "r08": 545637.0,
+        "r09": 389728.0,
+        "r10": 215256.0,
+        "r11": 179867.0,
+        "r12": 115313.0,
+        "r13": 311401.0,
+        "r14": 286149.0,
+        "r15": 490867.0,
+        "r16": 763495.0,
+        "r17": 605030.0,
+        "r18": 81692.0,
+        "r19": 317087.0,
+        "r20": 293332.0,
+        "r21": 1067.0
+      },
       "educacion": {
         "sin_basica_completa": 544871.0,
         "basica_completa": 1335774.0,
@@ -13504,6 +17527,33 @@
       "sexo_ocupados": {
         "hombres": 5099563.0,
         "mujeres": 3753730.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 696588.0,
+        "busca_trabajo_primera_vez": 65884.0
+      },
+      "rama_actividad": {
+        "r01": 510204.0,
+        "r02": 284737.0,
+        "r03": 888612.0,
+        "r04": 40662.0,
+        "r05": 60486.0,
+        "r06": 789745.0,
+        "r07": 1651023.0,
+        "r08": 544724.0,
+        "r09": 396713.0,
+        "r10": 208922.0,
+        "r11": 178810.0,
+        "r12": 109475.0,
+        "r13": 320455.0,
+        "r14": 282610.0,
+        "r15": 487088.0,
+        "r16": 748084.0,
+        "r17": 614771.0,
+        "r18": 93708.0,
+        "r19": 316140.0,
+        "r20": 292176.0,
+        "r21": 1042.0
       },
       "educacion": {
         "sin_basica_completa": 550509.0,
@@ -13604,6 +17654,33 @@
         "hombres": 5098485.0,
         "mujeres": 3745059.0
       },
+      "composicion_desocupados": {
+        "cesantes": 708372.0,
+        "busca_trabajo_primera_vez": 64816.0
+      },
+      "rama_actividad": {
+        "r01": 514148.0,
+        "r02": 289284.0,
+        "r03": 880801.0,
+        "r04": 41544.0,
+        "r05": 60400.0,
+        "r06": 772950.0,
+        "r07": 1648376.0,
+        "r08": 545781.0,
+        "r09": 408392.0,
+        "r10": 200918.0,
+        "r11": 167393.0,
+        "r12": 101286.0,
+        "r13": 329777.0,
+        "r14": 271629.0,
+        "r15": 489576.0,
+        "r16": 744379.0,
+        "r17": 609872.0,
+        "r18": 104409.0,
+        "r19": 326782.0,
+        "r20": 292281.0,
+        "r21": 1673.0
+      },
       "educacion": {
         "sin_basica_completa": 548676.0,
         "basica_completa": 1338735.0,
@@ -13702,6 +17779,33 @@
       "sexo_ocupados": {
         "hombres": 5128151.0,
         "mujeres": 3741172.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 703158.0,
+        "busca_trabajo_primera_vez": 64775.0
+      },
+      "rama_actividad": {
+        "r01": 517564.0,
+        "r02": 287649.0,
+        "r03": 877797.0,
+        "r04": 36570.0,
+        "r05": 59038.0,
+        "r06": 767435.0,
+        "r07": 1689209.0,
+        "r08": 545630.0,
+        "r09": 400326.0,
+        "r10": 192433.0,
+        "r11": 163567.0,
+        "r12": 99623.0,
+        "r13": 341381.0,
+        "r14": 277414.0,
+        "r15": 497494.0,
+        "r16": 754389.0,
+        "r17": 592183.0,
+        "r18": 107734.0,
+        "r19": 320695.0,
+        "r20": 297222.0,
+        "r21": 1601.0
       },
       "educacion": {
         "sin_basica_completa": 548461.0,
@@ -13802,6 +17906,33 @@
         "hombres": 5112088.0,
         "mujeres": 3771002.0
       },
+      "composicion_desocupados": {
+        "cesantes": 701294.0,
+        "busca_trabajo_primera_vez": 65781.0
+      },
+      "rama_actividad": {
+        "r01": 534531.0,
+        "r02": 281532.0,
+        "r03": 846078.0,
+        "r04": 41555.0,
+        "r05": 57845.0,
+        "r06": 744397.0,
+        "r07": 1723600.0,
+        "r08": 553354.0,
+        "r09": 396836.0,
+        "r10": 189967.0,
+        "r11": 169171.0,
+        "r12": 106831.0,
+        "r13": 347706.0,
+        "r14": 260546.0,
+        "r15": 501269.0,
+        "r16": 771609.0,
+        "r17": 593558.0,
+        "r18": 102003.0,
+        "r19": 313301.0,
+        "r20": 309337.0,
+        "r21": 1608.0
+      },
       "educacion": {
         "sin_basica_completa": 536304.0,
         "basica_completa": 1342713.0,
@@ -13900,6 +18031,33 @@
       "sexo_ocupados": {
         "hombres": 5142410.0,
         "mujeres": 3822820.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 689157.0,
+        "busca_trabajo_primera_vez": 75912.0
+      },
+      "rama_actividad": {
+        "r01": 577628.0,
+        "r02": 269634.0,
+        "r03": 865738.0,
+        "r04": 43603.0,
+        "r05": 62612.0,
+        "r06": 747150.0,
+        "r07": 1713582.0,
+        "r08": 563851.0,
+        "r09": 404448.0,
+        "r10": 194044.0,
+        "r11": 175414.0,
+        "r12": 108988.0,
+        "r13": 341290.0,
+        "r14": 288780.0,
+        "r15": 492522.0,
+        "r16": 762534.0,
+        "r17": 602483.0,
+        "r18": 102242.0,
+        "r19": 310481.0,
+        "r20": 310276.0,
+        "r21": 1001.0
       },
       "educacion": {
         "sin_basica_completa": 552701.0,
@@ -14000,6 +18158,33 @@
         "hombres": 5167625.0,
         "mujeres": 3840920.0
       },
+      "composicion_desocupados": {
+        "cesantes": 705299.0,
+        "busca_trabajo_primera_vez": 82018.0
+      },
+      "rama_actividad": {
+        "r01": 614500.0,
+        "r02": 273034.0,
+        "r03": 854894.0,
+        "r04": 48103.0,
+        "r05": 63190.0,
+        "r06": 742775.0,
+        "r07": 1698748.0,
+        "r08": 576010.0,
+        "r09": 412631.0,
+        "r10": 194250.0,
+        "r11": 191675.0,
+        "r12": 103608.0,
+        "r13": 338132.0,
+        "r14": 291072.0,
+        "r15": 505460.0,
+        "r16": 745286.0,
+        "r17": 623157.0,
+        "r18": 101080.0,
+        "r19": 314857.0,
+        "r20": 290410.0,
+        "r21": 1009.0
+      },
       "educacion": {
         "sin_basica_completa": 554260.0,
         "basica_completa": 1392135.0,
@@ -14098,6 +18283,33 @@
       "sexo_ocupados": {
         "hombres": 5191026.0,
         "mujeres": 3839135.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 738092.0,
+        "busca_trabajo_primera_vez": 86520.0
+      },
+      "rama_actividad": {
+        "r01": 618225.0,
+        "r02": 267923.0,
+        "r03": 873574.0,
+        "r04": 47191.0,
+        "r05": 61944.0,
+        "r06": 744692.0,
+        "r07": 1672843.0,
+        "r08": 558007.0,
+        "r09": 419169.0,
+        "r10": 197935.0,
+        "r11": 192748.0,
+        "r12": 97541.0,
+        "r13": 323498.0,
+        "r14": 297379.0,
+        "r15": 525802.0,
+        "r16": 730019.0,
+        "r17": 661729.0,
+        "r18": 103459.0,
+        "r19": 338698.0,
+        "r20": 264734.0,
+        "r21": 1849.0
       },
       "educacion": {
         "sin_basica_completa": 556641.0,
@@ -14198,6 +18410,33 @@
         "hombres": 5185551.0,
         "mujeres": 3820594.0
       },
+      "composicion_desocupados": {
+        "cesantes": 789064.0,
+        "busca_trabajo_primera_vez": 80868.0
+      },
+      "rama_actividad": {
+        "r01": 603843.0,
+        "r02": 272634.0,
+        "r03": 876299.0,
+        "r04": 46120.0,
+        "r05": 62879.0,
+        "r06": 740358.0,
+        "r07": 1702137.0,
+        "r08": 559857.0,
+        "r09": 412003.0,
+        "r10": 192148.0,
+        "r11": 191059.0,
+        "r12": 87283.0,
+        "r13": 324455.0,
+        "r14": 279185.0,
+        "r15": 527688.0,
+        "r16": 722018.0,
+        "r17": 674331.0,
+        "r18": 108965.0,
+        "r19": 336952.0,
+        "r20": 247407.0,
+        "r21": 3808.0
+      },
       "educacion": {
         "sin_basica_completa": 550979.0,
         "basica_completa": 1355620.0,
@@ -14296,6 +18535,33 @@
       "sexo_ocupados": {
         "hombres": 5190018.0,
         "mujeres": 3816711.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 781373.0,
+        "busca_trabajo_primera_vez": 72529.0
+      },
+      "rama_actividad": {
+        "r01": 577737.0,
+        "r02": 278642.0,
+        "r03": 884695.0,
+        "r04": 47085.0,
+        "r05": 65119.0,
+        "r06": 744493.0,
+        "r07": 1692753.0,
+        "r08": 573244.0,
+        "r09": 406121.0,
+        "r10": 193596.0,
+        "r11": 192063.0,
+        "r12": 88501.0,
+        "r13": 316469.0,
+        "r14": 286802.0,
+        "r15": 519436.0,
+        "r16": 734933.0,
+        "r17": 685064.0,
+        "r18": 95663.0,
+        "r19": 333032.0,
+        "r20": 251463.0,
+        "r21": 4191.0
       },
       "educacion": {
         "sin_basica_completa": 538173.0,
@@ -14396,6 +18662,33 @@
         "hombres": 5177600.0,
         "mujeres": 3856631.0
       },
+      "composicion_desocupados": {
+        "cesantes": 774400.0,
+        "busca_trabajo_primera_vez": 67515.0
+      },
+      "rama_actividad": {
+        "r01": 538347.0,
+        "r02": 279162.0,
+        "r03": 892189.0,
+        "r04": 47441.0,
+        "r05": 62988.0,
+        "r06": 744803.0,
+        "r07": 1758310.0,
+        "r08": 591555.0,
+        "r09": 399642.0,
+        "r10": 197429.0,
+        "r11": 185917.0,
+        "r12": 86392.0,
+        "r13": 316775.0,
+        "r14": 293222.0,
+        "r15": 520858.0,
+        "r16": 746406.0,
+        "r17": 671330.0,
+        "r18": 97227.0,
+        "r19": 310269.0,
+        "r20": 261772.0,
+        "r21": 4637.0
+      },
       "educacion": {
         "sin_basica_completa": 526549.0,
         "basica_completa": 1332386.0,
@@ -14494,6 +18787,33 @@
       "sexo_ocupados": {
         "hombres": 5151724.0,
         "mujeres": 3883390.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 773322.0,
+        "busca_trabajo_primera_vez": 68984.0
+      },
+      "rama_actividad": {
+        "r01": 501236.0,
+        "r02": 284213.0,
+        "r03": 892262.0,
+        "r04": 54109.0,
+        "r05": 63570.0,
+        "r06": 730251.0,
+        "r07": 1738306.0,
+        "r08": 580617.0,
+        "r09": 402816.0,
+        "r10": 204572.0,
+        "r11": 186323.0,
+        "r12": 86506.0,
+        "r13": 335678.0,
+        "r14": 284837.0,
+        "r15": 540180.0,
+        "r16": 767557.0,
+        "r17": 680263.0,
+        "r18": 96212.0,
+        "r19": 309639.0,
+        "r20": 264432.0,
+        "r21": 3016.0
       },
       "educacion": {
         "sin_basica_completa": 506357.0,
@@ -14594,6 +18914,33 @@
         "hombres": 5130513.0,
         "mujeres": 3898135.0
       },
+      "composicion_desocupados": {
+        "cesantes": 795649.0,
+        "busca_trabajo_primera_vez": 72521.0
+      },
+      "rama_actividad": {
+        "r01": 484272.0,
+        "r02": 276167.0,
+        "r03": 881145.0,
+        "r04": 47430.0,
+        "r05": 59870.0,
+        "r06": 725302.0,
+        "r07": 1739981.0,
+        "r08": 574941.0,
+        "r09": 405364.0,
+        "r10": 206136.0,
+        "r11": 181208.0,
+        "r12": 93414.0,
+        "r13": 355072.0,
+        "r14": 283125.0,
+        "r15": 555904.0,
+        "r16": 775442.0,
+        "r17": 679169.0,
+        "r18": 108121.0,
+        "r19": 308042.0,
+        "r20": 261389.0,
+        "r21": 3565.0
+      },
       "educacion": {
         "sin_basica_completa": 502991.0,
         "basica_completa": 1314211.0,
@@ -14692,6 +19039,33 @@
       "sexo_ocupados": {
         "hombres": 5116106.0,
         "mujeres": 3889337.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 814665.0,
+        "busca_trabajo_primera_vez": 75510.0
+      },
+      "rama_actividad": {
+        "r01": 488909.0,
+        "r02": 272684.0,
+        "r03": 875273.0,
+        "r04": 48221.0,
+        "r05": 63464.0,
+        "r06": 721458.0,
+        "r07": 1718777.0,
+        "r08": 577108.0,
+        "r09": 403310.0,
+        "r10": 199697.0,
+        "r11": 196762.0,
+        "r12": 104866.0,
+        "r13": 350337.0,
+        "r14": 270762.0,
+        "r15": 545489.0,
+        "r16": 774835.0,
+        "r17": 675863.0,
+        "r18": 112389.0,
+        "r19": 321505.0,
+        "r20": 260389.0,
+        "r21": 2676.0
       },
       "educacion": {
         "sin_basica_completa": 505790.0,
@@ -14792,6 +19166,33 @@
         "hombres": 5129354.0,
         "mujeres": 3894099.0
       },
+      "composicion_desocupados": {
+        "cesantes": 811322.0,
+        "busca_trabajo_primera_vez": 71637.0
+      },
+      "rama_actividad": {
+        "r01": 499454.0,
+        "r02": 274723.0,
+        "r03": 886850.0,
+        "r04": 46325.0,
+        "r05": 62867.0,
+        "r06": 720600.0,
+        "r07": 1727341.0,
+        "r08": 582513.0,
+        "r09": 402387.0,
+        "r10": 177558.0,
+        "r11": 193914.0,
+        "r12": 101522.0,
+        "r13": 340916.0,
+        "r14": 284953.0,
+        "r15": 553048.0,
+        "r16": 762798.0,
+        "r17": 670367.0,
+        "r18": 109807.0,
+        "r19": 332619.0,
+        "r20": 267410.0,
+        "r21": 2037.0
+      },
       "educacion": {
         "sin_basica_completa": 517607.0,
         "basica_completa": 1296107.0,
@@ -14890,6 +19291,33 @@
       "sexo_ocupados": {
         "hombres": 5140682.0,
         "mujeres": 3912307.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 813192.0,
+        "busca_trabajo_primera_vez": 69762.0
+      },
+      "rama_actividad": {
+        "r01": 511867.0,
+        "r02": 278696.0,
+        "r03": 898779.0,
+        "r04": 48487.0,
+        "r05": 69902.0,
+        "r06": 691506.0,
+        "r07": 1728470.0,
+        "r08": 571717.0,
+        "r09": 405835.0,
+        "r10": 180350.0,
+        "r11": 194346.0,
+        "r12": 93939.0,
+        "r13": 343821.0,
+        "r14": 285356.0,
+        "r15": 554403.0,
+        "r16": 778908.0,
+        "r17": 666818.0,
+        "r18": 117071.0,
+        "r19": 337587.0,
+        "r20": 265040.0,
+        "r21": 2527.0
       },
       "educacion": {
         "sin_basica_completa": 524182.0,
@@ -14990,6 +19418,33 @@
         "hombres": 5192100.0,
         "mujeres": 3946317.0
       },
+      "composicion_desocupados": {
+        "cesantes": 799196.0,
+        "busca_trabajo_primera_vez": 75161.0
+      },
+      "rama_actividad": {
+        "r01": 536284.0,
+        "r02": 283965.0,
+        "r03": 906700.0,
+        "r04": 49336.0,
+        "r05": 69042.0,
+        "r06": 704820.0,
+        "r07": 1744094.0,
+        "r08": 571636.0,
+        "r09": 413588.0,
+        "r10": 184207.0,
+        "r11": 188802.0,
+        "r12": 85867.0,
+        "r13": 341546.0,
+        "r14": 287810.0,
+        "r15": 555074.0,
+        "r16": 783203.0,
+        "r17": 661399.0,
+        "r18": 122593.0,
+        "r19": 339824.0,
+        "r20": 270675.0,
+        "r21": 3396.0
+      },
       "educacion": {
         "sin_basica_completa": 536406.0,
         "basica_completa": 1279112.0,
@@ -15088,6 +19543,33 @@
       "sexo_ocupados": {
         "hombres": 5229860.0,
         "mujeres": 3993275.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 768383.0,
+        "busca_trabajo_primera_vez": 85728.0
+      },
+      "rama_actividad": {
+        "r01": 574799.0,
+        "r02": 275650.0,
+        "r03": 902191.0,
+        "r04": 50363.0,
+        "r05": 72045.0,
+        "r06": 696150.0,
+        "r07": 1783002.0,
+        "r08": 565000.0,
+        "r09": 422677.0,
+        "r10": 193701.0,
+        "r11": 192519.0,
+        "r12": 87553.0,
+        "r13": 344850.0,
+        "r14": 285798.0,
+        "r15": 533009.0,
+        "r16": 786132.0,
+        "r17": 678013.0,
+        "r18": 122153.0,
+        "r19": 341884.0,
+        "r20": 274383.0,
+        "r21": 6184.0
       },
       "educacion": {
         "sin_basica_completa": 534921.0,
@@ -15188,6 +19670,33 @@
         "hombres": 5261606.0,
         "mujeres": 4011820.0
       },
+      "composicion_desocupados": {
+        "cesantes": 759342.0,
+        "busca_trabajo_primera_vez": 94999.0
+      },
+      "rama_actividad": {
+        "r01": 618562.0,
+        "r02": 280080.0,
+        "r03": 892615.0,
+        "r04": 52171.0,
+        "r05": 69737.0,
+        "r06": 708756.0,
+        "r07": 1809385.0,
+        "r08": 567576.0,
+        "r09": 430561.0,
+        "r10": 196174.0,
+        "r11": 184265.0,
+        "r12": 84477.0,
+        "r13": 321932.0,
+        "r14": 294855.0,
+        "r15": 527425.0,
+        "r16": 781110.0,
+        "r17": 683308.0,
+        "r18": 111587.0,
+        "r19": 341005.0,
+        "r20": 278962.0,
+        "r21": 5032.0
+      },
       "educacion": {
         "sin_basica_completa": 536830.0,
         "basica_completa": 1299906.0,
@@ -15286,6 +19795,33 @@
       "sexo_ocupados": {
         "hombres": 5308892.0,
         "mujeres": 4000716.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 771426.0,
+        "busca_trabajo_primera_vez": 93874.0
+      },
+      "rama_actividad": {
+        "r01": 626317.0,
+        "r02": 280454.0,
+        "r03": 889647.0,
+        "r04": 50888.0,
+        "r05": 71572.0,
+        "r06": 721591.0,
+        "r07": 1811302.0,
+        "r08": 566378.0,
+        "r09": 440584.0,
+        "r10": 198096.0,
+        "r11": 187391.0,
+        "r12": 85989.0,
+        "r13": 329718.0,
+        "r14": 303276.0,
+        "r15": 536840.0,
+        "r16": 761652.0,
+        "r17": 693906.0,
+        "r18": 110704.0,
+        "r19": 335887.0,
+        "r20": 273566.0,
+        "r21": 4286.0
       },
       "educacion": {
         "sin_basica_completa": 536125.0,
@@ -15386,6 +19922,33 @@
         "hombres": 5329750.0,
         "mujeres": 3978934.0
       },
+      "composicion_desocupados": {
+        "cesantes": 793178.0,
+        "busca_trabajo_primera_vez": 91368.0
+      },
+      "rama_actividad": {
+        "r01": 610405.0,
+        "r02": 285631.0,
+        "r03": 864794.0,
+        "r04": 51126.0,
+        "r05": 71281.0,
+        "r06": 739637.0,
+        "r07": 1788313.0,
+        "r08": 590544.0,
+        "r09": 442454.0,
+        "r10": 201925.0,
+        "r11": 189425.0,
+        "r12": 89189.0,
+        "r13": 314533.0,
+        "r14": 297708.0,
+        "r15": 563741.0,
+        "r16": 750095.0,
+        "r17": 687214.0,
+        "r18": 114218.0,
+        "r19": 348379.0,
+        "r20": 278361.0,
+        "r21": 1749.0
+      },
       "educacion": {
         "sin_basica_completa": 544262.0,
         "basica_completa": 1309005.0,
@@ -15484,6 +20047,33 @@
       "sexo_ocupados": {
         "hombres": 5351726.0,
         "mujeres": 3987569.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 785126.0,
+        "busca_trabajo_primera_vez": 85112.0
+      },
+      "rama_actividad": {
+        "r01": 578920.0,
+        "r02": 287660.0,
+        "r03": 875045.0,
+        "r04": 54408.0,
+        "r05": 71996.0,
+        "r06": 744176.0,
+        "r07": 1780892.0,
+        "r08": 612890.0,
+        "r09": 426794.0,
+        "r10": 200775.0,
+        "r11": 198563.0,
+        "r12": 89445.0,
+        "r13": 342486.0,
+        "r14": 290397.0,
+        "r15": 587308.0,
+        "r16": 736768.0,
+        "r17": 694494.0,
+        "r18": 119759.0,
+        "r19": 345465.0,
+        "r20": 271611.0,
+        "r21": 2717.0
       },
       "educacion": {
         "sin_basica_completa": 539736.0,
@@ -15584,6 +20174,33 @@
         "hombres": 5333931.0,
         "mujeres": 3997716.0
       },
+      "composicion_desocupados": {
+        "cesantes": 766419.0,
+        "busca_trabajo_primera_vez": 79641.0
+      },
+      "rama_actividad": {
+        "r01": 551981.0,
+        "r02": 286272.0,
+        "r03": 860243.0,
+        "r04": 57071.0,
+        "r05": 66588.0,
+        "r06": 738837.0,
+        "r07": 1779664.0,
+        "r08": 622676.0,
+        "r09": 417964.0,
+        "r10": 202053.0,
+        "r11": 193053.0,
+        "r12": 97286.0,
+        "r13": 335397.0,
+        "r14": 281019.0,
+        "r15": 608823.0,
+        "r16": 766801.0,
+        "r17": 699696.0,
+        "r18": 119265.0,
+        "r19": 335619.0,
+        "r20": 278392.0,
+        "r21": 2925.0
+      },
       "educacion": {
         "sin_basica_completa": 535907.0,
         "basica_completa": 1291310.0,
@@ -15682,6 +20299,33 @@
       "sexo_ocupados": {
         "hombres": 5310730.0,
         "mujeres": 4010650.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 779972.0,
+        "busca_trabajo_primera_vez": 69074.0
+      },
+      "rama_actividad": {
+        "r01": 519315.0,
+        "r02": 279891.0,
+        "r03": 862654.0,
+        "r04": 59382.0,
+        "r05": 64181.0,
+        "r06": 747733.0,
+        "r07": 1802325.0,
+        "r08": 600845.0,
+        "r09": 425536.0,
+        "r10": 200317.0,
+        "r11": 195640.0,
+        "r12": 100074.0,
+        "r13": 348182.0,
+        "r14": 275652.0,
+        "r15": 598453.0,
+        "r16": 799651.0,
+        "r17": 689577.0,
+        "r18": 111986.0,
+        "r19": 330357.0,
+        "r20": 279410.0,
+        "r21": 2857.0
       },
       "educacion": {
         "sin_basica_completa": 509824.0,
@@ -15782,6 +20426,33 @@
         "hombres": 5263303.0,
         "mujeres": 3994176.0
       },
+      "composicion_desocupados": {
+        "cesantes": 812672.0,
+        "busca_trabajo_primera_vez": 67719.0
+      },
+      "rama_actividad": {
+        "r01": 505822.0,
+        "r02": 287014.0,
+        "r03": 865102.0,
+        "r04": 59517.0,
+        "r05": 61783.0,
+        "r06": 744489.0,
+        "r07": 1797420.0,
+        "r08": 587093.0,
+        "r09": 418891.0,
+        "r10": 191502.0,
+        "r11": 199066.0,
+        "r12": 98046.0,
+        "r13": 340035.0,
+        "r14": 278482.0,
+        "r15": 587705.0,
+        "r16": 806206.0,
+        "r17": 691235.0,
+        "r18": 106548.0,
+        "r19": 324524.0,
+        "r20": 279218.0,
+        "r21": 1680.0
+      },
       "educacion": {
         "sin_basica_completa": 504276.0,
         "basica_completa": 1238894.0,
@@ -15880,6 +20551,33 @@
       "sexo_ocupados": {
         "hombres": 5246615.0,
         "mujeres": 3988449.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 833130.0,
+        "busca_trabajo_primera_vez": 69235.0
+      },
+      "rama_actividad": {
+        "r01": 502118.0,
+        "r02": 283155.0,
+        "r03": 878099.0,
+        "r04": 56304.0,
+        "r05": 63172.0,
+        "r06": 729073.0,
+        "r07": 1788532.0,
+        "r08": 587876.0,
+        "r09": 419985.0,
+        "r10": 193172.0,
+        "r11": 203280.0,
+        "r12": 94387.0,
+        "r13": 348747.0,
+        "r14": 284323.0,
+        "r15": 564535.0,
+        "r16": 803710.0,
+        "r17": 680865.0,
+        "r18": 97401.0,
+        "r19": 338506.0,
+        "r20": 277962.0,
+        "r21": 1525.0
       },
       "educacion": {
         "sin_basica_completa": 488443.0,
@@ -15980,6 +20678,33 @@
         "hombres": 5247989.0,
         "mujeres": 3995411.0
       },
+      "composicion_desocupados": {
+        "cesantes": 810850.0,
+        "busca_trabajo_primera_vez": 74650.0
+      },
+      "rama_actividad": {
+        "r01": 511772.0,
+        "r02": 285889.0,
+        "r03": 876031.0,
+        "r04": 53901.0,
+        "r05": 65976.0,
+        "r06": 718164.0,
+        "r07": 1774104.0,
+        "r08": 595799.0,
+        "r09": 423952.0,
+        "r10": 193681.0,
+        "r11": 200314.0,
+        "r12": 92008.0,
+        "r13": 355293.0,
+        "r14": 290110.0,
+        "r15": 559692.0,
+        "r16": 803288.0,
+        "r17": 694453.0,
+        "r18": 103582.0,
+        "r19": 336512.0,
+        "r20": 264340.0,
+        "r21": 1550.0
+      },
       "educacion": {
         "sin_basica_completa": 501311.0,
         "basica_completa": 1214470.0,
@@ -16078,6 +20803,33 @@
       "sexo_ocupados": {
         "hombres": 5271330.0,
         "mujeres": 3977655.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 793282.0,
+        "busca_trabajo_primera_vez": 74767.0
+      },
+      "rama_actividad": {
+        "r01": 506526.0,
+        "r02": 288722.0,
+        "r03": 901604.0,
+        "r04": 50455.0,
+        "r05": 69162.0,
+        "r06": 716506.0,
+        "r07": 1725381.0,
+        "r08": 558984.0,
+        "r09": 428564.0,
+        "r10": 206583.0,
+        "r11": 207484.0,
+        "r12": 93239.0,
+        "r13": 363406.0,
+        "r14": 286307.0,
+        "r15": 554484.0,
+        "r16": 809119.0,
+        "r17": 698884.0,
+        "r18": 109644.0,
+        "r19": 352721.0,
+        "r20": 270554.0,
+        "r21": 2370.0
       },
       "educacion": {
         "sin_basica_completa": 504229.0,
@@ -16178,6 +20930,33 @@
         "hombres": 5294767.0,
         "mujeres": 3991191.0
       },
+      "composicion_desocupados": {
+        "cesantes": 756905.0,
+        "busca_trabajo_primera_vez": 74505.0
+      },
+      "rama_actividad": {
+        "r01": 539365.0,
+        "r02": 290384.0,
+        "r03": 914150.0,
+        "r04": 49917.0,
+        "r05": 73169.0,
+        "r06": 715230.0,
+        "r07": 1715832.0,
+        "r08": 552505.0,
+        "r09": 438010.0,
+        "r10": 197344.0,
+        "r11": 198293.0,
+        "r12": 90057.0,
+        "r13": 371036.0,
+        "r14": 278674.0,
+        "r15": 560658.0,
+        "r16": 811028.0,
+        "r17": 724915.0,
+        "r18": 112795.0,
+        "r19": 346021.0,
+        "r20": 267996.0,
+        "r21": 3466.0
+      },
       "educacion": {
         "sin_basica_completa": 514195.0,
         "basica_completa": 1209344.0,
@@ -16276,6 +21055,33 @@
       "sexo_ocupados": {
         "hombres": 5343775.0,
         "mujeres": 3962285.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 737881.0,
+        "busca_trabajo_primera_vez": 80116.0
+      },
+      "rama_actividad": {
+        "r01": 574300.0,
+        "r02": 294082.0,
+        "r03": 911131.0,
+        "r04": 38380.0,
+        "r05": 73374.0,
+        "r06": 705240.0,
+        "r07": 1737232.0,
+        "r08": 561899.0,
+        "r09": 429190.0,
+        "r10": 206724.0,
+        "r11": 196323.0,
+        "r12": 90446.0,
+        "r13": 351161.0,
+        "r14": 279721.0,
+        "r15": 587362.0,
+        "r16": 802901.0,
+        "r17": 724410.0,
+        "r18": 115096.0,
+        "r19": 318618.0,
+        "r20": 274003.0,
+        "r21": 2926.0
       },
       "educacion": {
         "sin_basica_completa": 514569.0,
@@ -16376,6 +21182,33 @@
         "hombres": 5376048.0,
         "mujeres": 4018063.0
       },
+      "composicion_desocupados": {
+        "cesantes": 727107.0,
+        "busca_trabajo_primera_vez": 92326.0
+      },
+      "rama_actividad": {
+        "r01": 613210.0,
+        "r02": 286904.0,
+        "r03": 874498.0,
+        "r04": 44832.0,
+        "r05": 71689.0,
+        "r06": 717596.0,
+        "r07": 1760650.0,
+        "r08": 598644.0,
+        "r09": 456169.0,
+        "r10": 205958.0,
+        "r11": 202754.0,
+        "r12": 95419.0,
+        "r13": 348933.0,
+        "r14": 291896.0,
+        "r15": 569086.0,
+        "r16": 789003.0,
+        "r17": 724379.0,
+        "r18": 114999.0,
+        "r19": 321953.0,
+        "r20": 267523.0,
+        "r21": 3063.0
+      },
       "educacion": {
         "sin_basica_completa": 505425.0,
         "basica_completa": 1237826.0,
@@ -16474,6 +21307,33 @@
       "sexo_ocupados": {
         "hombres": 5382048.0,
         "mujeres": 4014826.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 762982.0,
+        "busca_trabajo_primera_vez": 96749.0
+      },
+      "rama_actividad": {
+        "r01": 608227.0,
+        "r02": 291749.0,
+        "r03": 869031.0,
+        "r04": 49764.0,
+        "r05": 68954.0,
+        "r06": 733209.0,
+        "r07": 1766632.0,
+        "r08": 609905.0,
+        "r09": 452746.0,
+        "r10": 212940.0,
+        "r11": 219527.0,
+        "r12": 95969.0,
+        "r13": 328568.0,
+        "r14": 299963.0,
+        "r15": 568385.0,
+        "r16": 780274.0,
+        "r17": 700924.0,
+        "r18": 115757.0,
+        "r19": 321522.0,
+        "r20": 267438.0,
+        "r21": 2697.0
       },
       "educacion": {
         "sin_basica_completa": 502813.0,
@@ -16574,6 +21434,33 @@
         "hombres": 5358782.0,
         "mujeres": 4030056.0
       },
+      "composicion_desocupados": {
+        "cesantes": 802990.0,
+        "busca_trabajo_primera_vez": 92683.0
+      },
+      "rama_actividad": {
+        "r01": 602266.0,
+        "r02": 298553.0,
+        "r03": 890076.0,
+        "r04": 55880.0,
+        "r05": 72505.0,
+        "r06": 729471.0,
+        "r07": 1742687.0,
+        "r08": 593258.0,
+        "r09": 475420.0,
+        "r10": 212441.0,
+        "r11": 226284.0,
+        "r12": 98786.0,
+        "r13": 340107.0,
+        "r14": 303587.0,
+        "r15": 552304.0,
+        "r16": 759790.0,
+        "r17": 698580.0,
+        "r18": 110231.0,
+        "r19": 327483.0,
+        "r20": 267819.0,
+        "r21": 3516.0
+      },
       "educacion": {
         "sin_basica_completa": 495451.0,
         "basica_completa": 1212260.0,
@@ -16672,6 +21559,33 @@
       "sexo_ocupados": {
         "hombres": 5350576.0,
         "mujeres": 4008732.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 817623.0,
+        "busca_trabajo_primera_vez": 90095.0
+      },
+      "rama_actividad": {
+        "r01": 579878.0,
+        "r02": 306537.0,
+        "r03": 877013.0,
+        "r04": 52457.0,
+        "r05": 68319.0,
+        "r06": 724891.0,
+        "r07": 1758625.0,
+        "r08": 594115.0,
+        "r09": 464282.0,
+        "r10": 216340.0,
+        "r11": 218706.0,
+        "r12": 94896.0,
+        "r13": 341788.0,
+        "r14": 303393.0,
+        "r15": 560867.0,
+        "r16": 769094.0,
+        "r17": 696473.0,
+        "r18": 112545.0,
+        "r19": 324622.0,
+        "r20": 267355.0,
+        "r21": 3256.0
       },
       "educacion": {
         "sin_basica_completa": 483914.0,
@@ -16772,6 +21686,33 @@
         "hombres": 5330202.0,
         "mujeres": 4016010.0
       },
+      "composicion_desocupados": {
+        "cesantes": 830035.0,
+        "busca_trabajo_primera_vez": 87888.0
+      },
+      "rama_actividad": {
+        "r01": 554978.0,
+        "r02": 314569.0,
+        "r03": 875794.0,
+        "r04": 54847.0,
+        "r05": 70266.0,
+        "r06": 712650.0,
+        "r07": 1755692.0,
+        "r08": 577784.0,
+        "r09": 464810.0,
+        "r10": 223497.0,
+        "r11": 213156.0,
+        "r12": 99391.0,
+        "r13": 349140.0,
+        "r14": 291924.0,
+        "r15": 559552.0,
+        "r16": 785066.0,
+        "r17": 702121.0,
+        "r18": 117615.0,
+        "r19": 317989.0,
+        "r20": 277084.0,
+        "r21": 4839.0
+      },
       "educacion": {
         "sin_basica_completa": 481279.0,
         "basica_completa": 1192293.0,
@@ -16870,6 +21811,33 @@
       "sexo_ocupados": {
         "hombres": 5303977.0,
         "mujeres": 4017544.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 827502.0,
+        "busca_trabajo_primera_vez": 82338.0
+      },
+      "rama_actividad": {
+        "r01": 509561.0,
+        "r02": 320116.0,
+        "r03": 878605.0,
+        "r04": 49192.0,
+        "r05": 68644.0,
+        "r06": 711865.0,
+        "r07": 1755020.0,
+        "r08": 574881.0,
+        "r09": 444525.0,
+        "r10": 236789.0,
+        "r11": 204378.0,
+        "r12": 105021.0,
+        "r13": 355911.0,
+        "r14": 284563.0,
+        "r15": 555553.0,
+        "r16": 821587.0,
+        "r17": 707155.0,
+        "r18": 115898.0,
+        "r19": 318564.0,
+        "r20": 269735.0,
+        "r21": 4366.0
       },
       "educacion": {
         "sin_basica_completa": 462233.0,
@@ -16970,6 +21938,33 @@
         "hombres": 5310695.0,
         "mujeres": 4019614.0
       },
+      "composicion_desocupados": {
+        "cesantes": 816858.0,
+        "busca_trabajo_primera_vez": 72115.0
+      },
+      "rama_actividad": {
+        "r01": 493016.0,
+        "r02": 320276.0,
+        "r03": 912684.0,
+        "r04": 49896.0,
+        "r05": 73480.0,
+        "r06": 709068.0,
+        "r07": 1747877.0,
+        "r08": 583368.0,
+        "r09": 441682.0,
+        "r10": 236071.0,
+        "r11": 201005.0,
+        "r12": 101217.0,
+        "r13": 357179.0,
+        "r14": 287891.0,
+        "r15": 557908.0,
+        "r16": 822448.0,
+        "r17": 710852.0,
+        "r18": 108165.0,
+        "r19": 320472.0,
+        "r20": 264298.0,
+        "r21": 3649.0
+      },
       "educacion": {
         "sin_basica_completa": 454005.0,
         "basica_completa": 1136379.0,
@@ -17068,6 +22063,33 @@
       "sexo_ocupados": {
         "hombres": 5316241.0,
         "mujeres": 4038857.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 804408.0,
+        "busca_trabajo_primera_vez": 71480.0
+      },
+      "rama_actividad": {
+        "r01": 490876.0,
+        "r02": 302989.0,
+        "r03": 928285.0,
+        "r04": 47448.0,
+        "r05": 73162.0,
+        "r06": 711583.0,
+        "r07": 1771930.0,
+        "r08": 593682.0,
+        "r09": 435814.0,
+        "r10": 237228.0,
+        "r11": 199819.0,
+        "r12": 99655.0,
+        "r13": 359278.0,
+        "r14": 297715.0,
+        "r15": 546828.0,
+        "r16": 817667.0,
+        "r17": 732472.0,
+        "r18": 97029.0,
+        "r19": 324003.0,
+        "r20": 251298.0,
+        "r21": 1954.0
       },
       "educacion": {
         "sin_basica_completa": 443807.0,
@@ -17168,6 +22190,33 @@
         "hombres": 5324440.0,
         "mujeres": 4053177.0
       },
+      "composicion_desocupados": {
+        "cesantes": 799759.0,
+        "busca_trabajo_primera_vez": 74629.0
+      },
+      "rama_actividad": {
+        "r01": 499285.0,
+        "r02": 296010.0,
+        "r03": 909843.0,
+        "r04": 48658.0,
+        "r05": 69295.0,
+        "r06": 722647.0,
+        "r07": 1751433.0,
+        "r08": 607667.0,
+        "r09": 447382.0,
+        "r10": 234998.0,
+        "r11": 204030.0,
+        "r12": 87437.0,
+        "r13": 361955.0,
+        "r14": 327677.0,
+        "r15": 536525.0,
+        "r16": 803758.0,
+        "r17": 731785.0,
+        "r18": 104542.0,
+        "r19": 341232.0,
+        "r20": 258110.0,
+        "r21": 1717.0
+      },
       "educacion": {
         "sin_basica_completa": 451888.0,
         "basica_completa": 1166593.0,
@@ -17266,6 +22315,33 @@
       "sexo_ocupados": {
         "hombres": 5300127.0,
         "mujeres": 4086283.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 786042.0,
+        "busca_trabajo_primera_vez": 80055.0
+      },
+      "rama_actividad": {
+        "r01": 515618.0,
+        "r02": 289798.0,
+        "r03": 900959.0,
+        "r04": 46646.0,
+        "r05": 74485.0,
+        "r06": 702671.0,
+        "r07": 1744967.0,
+        "r08": 599423.0,
+        "r09": 437907.0,
+        "r10": 235759.0,
+        "r11": 202567.0,
+        "r12": 97206.0,
+        "r13": 358696.0,
+        "r14": 335903.0,
+        "r15": 517665.0,
+        "r16": 814145.0,
+        "r17": 748169.0,
+        "r18": 110560.0,
+        "r19": 347910.0,
+        "r20": 268359.0,
+        "r21": 1503.0
       },
       "educacion": {
         "sin_basica_completa": 468744.0,
@@ -17366,6 +22442,33 @@
         "hombres": 5317653.0,
         "mujeres": 4083930.0
       },
+      "composicion_desocupados": {
+        "cesantes": 778299.0,
+        "busca_trabajo_primera_vez": 86583.0
+      },
+      "rama_actividad": {
+        "r01": 545864.0,
+        "r02": 296387.0,
+        "r03": 892971.0,
+        "r04": 45331.0,
+        "r05": 72355.0,
+        "r06": 714839.0,
+        "r07": 1727057.0,
+        "r08": 582761.0,
+        "r09": 438323.0,
+        "r10": 224095.0,
+        "r11": 193999.0,
+        "r12": 94282.0,
+        "r13": 375122.0,
+        "r14": 364937.0,
+        "r15": 517113.0,
+        "r16": 810746.0,
+        "r17": 735713.0,
+        "r18": 123413.0,
+        "r19": 348805.0,
+        "r20": 262048.0,
+        "r21": 2797.0
+      },
       "educacion": {
         "sin_basica_completa": 480748.0,
         "basica_completa": 1155230.0,
@@ -17464,6 +22567,33 @@
       "sexo_ocupados": {
         "hombres": 5363450.0,
         "mujeres": 4109819.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 729607.0,
+        "busca_trabajo_primera_vez": 99700.0
+      },
+      "rama_actividad": {
+        "r01": 566348.0,
+        "r02": 302274.0,
+        "r03": 917640.0,
+        "r04": 45197.0,
+        "r05": 76708.0,
+        "r06": 718646.0,
+        "r07": 1729886.0,
+        "r08": 591685.0,
+        "r09": 460794.0,
+        "r10": 218191.0,
+        "r11": 185418.0,
+        "r12": 93794.0,
+        "r13": 377860.0,
+        "r14": 353828.0,
+        "r15": 512883.0,
+        "r16": 822518.0,
+        "r17": 756374.0,
+        "r18": 118769.0,
+        "r19": 338108.0,
+        "r20": 250264.0,
+        "r21": 4740.0
       },
       "educacion": {
         "sin_basica_completa": 482667.0,
@@ -17564,6 +22694,33 @@
         "hombres": 5375151.0,
         "mujeres": 4127937.0
       },
+      "composicion_desocupados": {
+        "cesantes": 749122.0,
+        "busca_trabajo_primera_vez": 109321.0
+      },
+      "rama_actividad": {
+        "r01": 572699.0,
+        "r02": 302484.0,
+        "r03": 909412.0,
+        "r04": 48895.0,
+        "r05": 78165.0,
+        "r06": 724825.0,
+        "r07": 1752072.0,
+        "r08": 604682.0,
+        "r09": 491088.0,
+        "r10": 210865.0,
+        "r11": 185135.0,
+        "r12": 97070.0,
+        "r13": 376350.0,
+        "r14": 350834.0,
+        "r15": 518781.0,
+        "r16": 798389.0,
+        "r17": 760811.0,
+        "r18": 118790.0,
+        "r19": 329022.0,
+        "r20": 238703.0,
+        "r21": 4758.0
+      },
       "educacion": {
         "sin_basica_completa": 483983.0,
         "basica_completa": 1158142.0,
@@ -17662,6 +22819,33 @@
       "sexo_ocupados": {
         "hombres": 5381494.0,
         "mujeres": 4110133.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 754232.0,
+        "busca_trabajo_primera_vez": 108281.0
+      },
+      "rama_actividad": {
+        "r01": 580126.0,
+        "r02": 306346.0,
+        "r03": 893559.0,
+        "r04": 48386.0,
+        "r05": 81316.0,
+        "r06": 731087.0,
+        "r07": 1753573.0,
+        "r08": 624129.0,
+        "r09": 495292.0,
+        "r10": 194460.0,
+        "r11": 183218.0,
+        "r12": 111138.0,
+        "r13": 377010.0,
+        "r14": 331477.0,
+        "r15": 511533.0,
+        "r16": 794275.0,
+        "r17": 763554.0,
+        "r18": 108247.0,
+        "r19": 325977.0,
+        "r20": 243054.0,
+        "r21": 4816.0
       },
       "educacion": {
         "sin_basica_completa": 474777.0,
@@ -17762,6 +22946,33 @@
         "hombres": 5354206.0,
         "mujeres": 4079986.0
       },
+      "composicion_desocupados": {
+        "cesantes": 818979.0,
+        "busca_trabajo_primera_vez": 106131.0
+      },
+      "rama_actividad": {
+        "r01": 581700.0,
+        "r02": 298200.0,
+        "r03": 907015.0,
+        "r04": 48348.0,
+        "r05": 78384.0,
+        "r06": 725941.0,
+        "r07": 1762044.0,
+        "r08": 602688.0,
+        "r09": 483661.0,
+        "r10": 190877.0,
+        "r11": 199689.0,
+        "r12": 117338.0,
+        "r13": 370164.0,
+        "r14": 315034.0,
+        "r15": 520559.0,
+        "r16": 771063.0,
+        "r17": 741130.0,
+        "r18": 108035.0,
+        "r19": 324867.0,
+        "r20": 253722.0,
+        "r21": 3125.0
+      },
       "educacion": {
         "sin_basica_completa": 482632.0,
         "basica_completa": 1164900.0,
@@ -17860,6 +23071,33 @@
       "sexo_ocupados": {
         "hombres": 5368118.0,
         "mujeres": 4059488.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 844249.0,
+        "busca_trabajo_primera_vez": 100544.0
+      },
+      "rama_actividad": {
+        "r01": 565653.0,
+        "r02": 295867.0,
+        "r03": 913142.0,
+        "r04": 44420.0,
+        "r05": 76148.0,
+        "r06": 729858.0,
+        "r07": 1782498.0,
+        "r08": 608655.0,
+        "r09": 455080.0,
+        "r10": 187740.0,
+        "r11": 190993.0,
+        "r12": 117119.0,
+        "r13": 377661.0,
+        "r14": 308720.0,
+        "r15": 522143.0,
+        "r16": 777218.0,
+        "r17": 737901.0,
+        "r18": 109347.0,
+        "r19": 337096.0,
+        "r20": 258130.0,
+        "r21": 3134.0
       },
       "educacion": {
         "sin_basica_completa": 474496.0,
@@ -17960,6 +23198,33 @@
         "hombres": 5340191.0,
         "mujeres": 4076181.0
       },
+      "composicion_desocupados": {
+        "cesantes": 879017.0,
+        "busca_trabajo_primera_vez": 102298.0
+      },
+      "rama_actividad": {
+        "r01": 527083.0,
+        "r02": 291368.0,
+        "r03": 921131.0,
+        "r04": 44604.0,
+        "r05": 76527.0,
+        "r06": 700230.0,
+        "r07": 1788626.0,
+        "r08": 612523.0,
+        "r09": 457101.0,
+        "r10": 202176.0,
+        "r11": 194681.0,
+        "r12": 108169.0,
+        "r13": 389804.0,
+        "r14": 299336.0,
+        "r15": 532527.0,
+        "r16": 786220.0,
+        "r17": 743989.0,
+        "r18": 112569.0,
+        "r19": 332823.0,
+        "r20": 265015.0,
+        "r21": 1993.0
+      },
       "educacion": {
         "sin_basica_completa": 457928.0,
         "basica_completa": 1177192.0,
@@ -18058,6 +23323,33 @@
       "sexo_ocupados": {
         "hombres": 5318896.0,
         "mujeres": 4084403.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 889848.0,
+        "busca_trabajo_primera_vez": 90421.0
+      },
+      "rama_actividad": {
+        "r01": 504024.0,
+        "r02": 291585.0,
+        "r03": 904758.0,
+        "r04": 49071.0,
+        "r05": 77481.0,
+        "r06": 711732.0,
+        "r07": 1774423.0,
+        "r08": 625962.0,
+        "r09": 431174.0,
+        "r10": 200722.0,
+        "r11": 197405.0,
+        "r12": 105386.0,
+        "r13": 386675.0,
+        "r14": 320163.0,
+        "r15": 538497.0,
+        "r16": 805022.0,
+        "r17": 743441.0,
+        "r18": 108737.0,
+        "r19": 334563.0,
+        "r20": 264168.0,
+        "r21": 2044.0
       },
       "educacion": {
         "sin_basica_completa": 438773.0,
@@ -18158,6 +23450,33 @@
         "hombres": 5252914.0,
         "mujeres": 4061103.0
       },
+      "composicion_desocupados": {
+        "cesantes": 893873.0,
+        "busca_trabajo_primera_vez": 87171.0
+      },
+      "rama_actividad": {
+        "r01": 486151.0,
+        "r02": 299091.0,
+        "r03": 888191.0,
+        "r04": 48870.0,
+        "r05": 73114.0,
+        "r06": 724359.0,
+        "r07": 1746517.0,
+        "r08": 606117.0,
+        "r09": 441525.0,
+        "r10": 201568.0,
+        "r11": 198601.0,
+        "r12": 94864.0,
+        "r13": 388721.0,
+        "r14": 317668.0,
+        "r15": 538222.0,
+        "r16": 795675.0,
+        "r17": 732228.0,
+        "r18": 110987.0,
+        "r19": 329135.0,
+        "r20": 266013.0,
+        "r21": 2057.0
+      },
       "educacion": {
         "sin_basica_completa": 424797.0,
         "basica_completa": 1158193.0,
@@ -18257,6 +23576,33 @@
         "hombres": 5225603.0,
         "mujeres": 4048142.0
       },
+      "composicion_desocupados": {
+        "cesantes": 901354.0,
+        "busca_trabajo_primera_vez": 88046.0
+      },
+      "rama_actividad": {
+        "r01": 488700.0,
+        "r02": 291784.0,
+        "r03": 858099.0,
+        "r04": 43513.0,
+        "r05": 73394.0,
+        "r06": 734794.0,
+        "r07": 1748837.0,
+        "r08": 614941.0,
+        "r09": 442875.0,
+        "r10": 197269.0,
+        "r11": 190280.0,
+        "r12": 100043.0,
+        "r13": 367005.0,
+        "r14": 322989.0,
+        "r15": 528028.0,
+        "r16": 806107.0,
+        "r17": 732268.0,
+        "r18": 111047.0,
+        "r19": 324704.0,
+        "r20": 271023.0,
+        "r21": 2842.0
+      },
       "educacion": {
         "sin_basica_completa": 423056.0,
         "basica_completa": 1152490.0,
@@ -18355,6 +23701,33 @@
       "sexo_ocupados": {
         "hombres": 5225448.0,
         "mujeres": 4049294.0
+      },
+      "composicion_desocupados": {
+        "cesantes": 914890.0,
+        "busca_trabajo_primera_vez": 93086.0
+      },
+      "rama_actividad": {
+        "r01": 485662.0,
+        "r02": 303508.0,
+        "r03": 835843.0,
+        "r04": 43569.0,
+        "r05": 73004.0,
+        "r06": 742731.0,
+        "r07": 1735214.0,
+        "r08": 630723.0,
+        "r09": 441545.0,
+        "r10": 186206.0,
+        "r11": 175290.0,
+        "r12": 104125.0,
+        "r13": 367742.0,
+        "r14": 314386.0,
+        "r15": 540213.0,
+        "r16": 823004.0,
+        "r17": 735893.0,
+        "r18": 118957.0,
+        "r19": 323343.0,
+        "r20": 262526.0,
+        "r21": 2891.0
       },
       "educacion": {
         "sin_basica_completa": 412200.0,

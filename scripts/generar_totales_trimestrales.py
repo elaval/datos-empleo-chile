@@ -201,6 +201,7 @@ def read_frames() -> list[pd.DataFrame]:
         "obe", "id", "ftp", "deseo_trabajar", "habituales", "efectivas", "activ",
         "c10", "c11",
         "r_p_rev4cl_caenes",
+        "b14_rev4cl_caenes",
         "ciso1", "ciso2",
 
     ]
@@ -452,68 +453,80 @@ def rule_edad_65_mas(df):
     # edad ≥ 65
     return rule_ocupados(df) & (df["edad"] >= 65)
 
+# Rama de actividad (CAENES rev. 4, 21 secciones).
+# Se usa `b14_rev4cl_caenes` y NO `r_p_rev4cl_caenes`: son variables distintas que
+# coinciden en 90,4% de las filas, y solo b14 reproduce el boletín del INE. Contraste
+# contra el boletín n°336 (JAS 2026), variación a doce meses:
+#   manufactura      INE -8,1%   b14 -8,1%   r_p -6,7%
+#   info. y comunic. INE -20,8%  b14 -20,8%  r_p -19,2%
+#   financieras      INE -14,1%  b14 -14,1%  r_p -17,1%
+#   inmobiliarias    INE +19,1%  b14 +19,1%  r_p  +7,2%
+#   enseñanza        INE  +2,4%  b14  +2,4%  r_p  +8,5%
+#   hombres/manuf.   INE -10,2%  b14 -10,2%  r_p  -8,8%
+#   mujeres/info.    INE -33,1%  b14 -33,1%  r_p -32,7%
+# `b13_rev4cl_caenes` es otra cosa: cubre ~1,0 millón de ocupados, no el total.
 def rule_rama_1(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 1)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 1)
 
 def rule_rama_2(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 2)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 2)
 
 def rule_rama_3(df):    
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 3)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 3)
 
 def rule_rama_4(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 4)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 4)
 
 def rule_rama_5(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 5)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 5)
 
 def rule_rama_6(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 6)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 6)
 
 def rule_rama_7(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 7)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 7)
 
 def rule_rama_8(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 8)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 8)
 
 def rule_rama_9(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 9)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 9)
 
 def rule_rama_10(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 10)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 10)
 
 def rule_rama_11(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 11)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 11)
 
 def rule_rama_12(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 12)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 12)
 
 def rule_rama_13(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 13)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 13)
 
 def rule_rama_14(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 14)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 14)
 
 def rule_rama_15(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 15)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 15)
 
 def rule_rama_16(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 16)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 16)
 
 def rule_rama_17(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 17)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 17)
 
 def rule_rama_18(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 18)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 18)
 
 def rule_rama_19(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 19)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 19)
 
 def rule_rama_20(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 20)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 20)
 
 def rule_rama_21(df):
-    return rule_ocupados(df) & (df["r_p_rev4cl_caenes"] == 21)
+    return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 21)
 
 
 RULES: dict[str, callable] = {

@@ -90,6 +90,24 @@ def main() -> int:
         check(abs(s - nac["o"]) <= TOL_PERSONAS, f"corte '{dim}' suma ocupados",
               f"{s - nac['o']:+.0f}")
 
+    des = snap.get("composicion_desocupados")
+    if des:
+        cob = des["_cobertura"]
+        check(abs(cob["suma_grupos"] - nac["do"]) <= TOL_PERSONAS,
+              "cesantes + buscan por primera vez = desocupados",
+              f"{cob['suma_grupos'] - nac['do']:+.0f}")
+
+    ram = snap.get("rama_actividad")
+    if ram:
+        cobr = ram["_cobertura"]
+        suma_r = sum(v["o"] for v in ram["ramas"].values())
+        check(abs(suma_r - cobr["suma_ramas"]) <= TOL_PERSONAS,
+              "las ramas publicadas suman el total del bloque",
+              f"{suma_r - cobr['suma_ramas']:+.0f}")
+        check(abs(cobr["suma_ramas"] + cobr["sin_rama_declarada"] - nac["o"]) <= TOL_PERSONAS,
+              "ramas + sin rama declarada = ocupados",
+              f"sin rama: {cobr['sin_rama_declarada']:,.0f}")
+
     edu = snap.get("educacion")
     if edu:
         cob = edu["_cobertura"]
@@ -207,6 +225,17 @@ def main() -> int:
             check(abs(s - d_nac) <= TOL_PERSONAS,
                   "Δ tramos de jornada + Δ no declaran = Δ nacional",
                   f"residuo {cobj['delta_no_declaran_horas']:+,.0f}")
+    if des and nac["delta_yoy"].get("delta_do") is not None:
+        d_do = nac["delta_yoy"]["delta_do"]
+        s = suma_deltas(des["grupos"])
+        check(abs(s - d_do) <= TOL_PERSONAS,
+              "Δ cesantes + Δ primera vez = Δ desocupados", f"{s - d_do:+.0f}")
+    if ram and ram["_cobertura"].get("delta_sin_rama_declarada") is not None:
+        cobr = ram["_cobertura"]
+        s = suma_deltas(ram["ramas"]) + cobr["delta_sin_rama_declarada"]
+        check(abs(s - d_nac) <= TOL_PERSONAS,
+              "Δ ramas + Δ sin rama declarada = Δ nacional",
+              f"residuo {cobr['delta_sin_rama_declarada']:+,.0f}")
 
     # Hallazgos: refs y caveats resolubles
     hal = json.load(open(CONO / "hallazgos" / "hallazgos.json", encoding="utf-8"))
@@ -266,6 +295,28 @@ def main() -> int:
     check(abs(inf - f["o_informal"]["o"]) <= TOL_PERSONAS, "ocupados informales",
           f"micro={inf:,.0f} pack={f['o_informal']['o']:,.0f}")
 
+    if des:
+        for clave, cod in (("cesantes", 8), ("busca_trabajo_primera_vez", 9)):
+            v = w[s.cae_especifico == cod].sum()
+            pk = des["grupos"][clave]["o"]
+            check(abs(v - pk) <= TOL_PERSONAS, f"desocupados · {clave}",
+                  f"micro={v:,.0f} pack={pk:,.0f}")
+
+    # La rama se recomputa desde `b14_rev4cl_caenes`. NO desde `r_p_rev4cl_caenes`:
+    # son variables distintas (coinciden en 90,4% de las filas) y solo b14 reproduce
+    # el boletín del INE. Este chequeo existe para que ese cambio no se revierta en
+    # silencio: con r_p el bloque sigue sumando bien y las cifras siguen siendo
+    # plausibles, pero ya no son las que publica el INE.
+    if ram:
+        peor, peor_rama = 0.0, None
+        for clave, v in ram["ramas"].items():
+            cod = int(clave[1:])
+            rec = w[(s.activ == 1) & (s.b14_rev4cl_caenes == cod)].sum()
+            if abs(rec - v["o"]) > peor:
+                peor, peor_rama = abs(rec - v["o"]), clave
+        check(peor <= TOL_PERSONAS, "rama de actividad desde b14_rev4cl_caenes",
+              f"peor desvío {peor:.1f} ({peor_rama})")
+
     def bin_edad(df):
         out = pd.Series(index=df.index, dtype=object)
         for lo, hi, lab in GRUPOS_EDAD:
@@ -319,6 +370,22 @@ def main() -> int:
                 if k in tasas:
                     check(abs(tasas[k] - v) < TOL_TASA, f"tasa · {k}",
                           f"INE={v} pack={tasas[k]}")
+            # Rama: el boletín publica la variación a doce meses en %, no niveles.
+            # Es el contraste que detectó que la base usaba la variable CAENES
+            # equivocada (`r_p_` en vez de `b14_`): con la otra variable estas
+            # siete cifras no cuadran y el bloque igual suma bien.
+            if ram and r0.get("rama_variaciones_12m_pct"):
+                for clave, v in r0["rama_variaciones_12m_pct"].items():
+                    pk = ram["ramas"].get(clave, {}).get("delta_rel_o")
+                    if pk is None:
+                        continue
+                    check(abs(pk - v) < TOL_TASA,
+                          f"rama · Δ12m {ram['ramas'][clave]['etiqueta'][:34]}",
+                          f"INE={v}% pack={pk}%")
+                for clave, d in (r0.get("rama_variaciones_12m_pct_no_reconcilia") or {}).items():
+                    pk = ram["ramas"].get(clave, {}).get("delta_rel_o")
+                    print(f"  · brecha conocida y no resuelta · rama {clave}: "
+                          f"INE={d['ine']}% base={pk}% (ver referencia-ine.json)")
 
     # --- serie con ajuste estacional (referencia externa, archivo hermano)
     # El ajuste lo calcula el INE y no se puede recomputar aquí. Lo que SÍ se puede

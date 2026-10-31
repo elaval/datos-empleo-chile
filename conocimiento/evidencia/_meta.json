@@ -1,6 +1,6 @@
 {
   "release": "2026-08-jas",
-  "generado": "2026-10-29",
+  "generado": "2026-10-31",
   "generador": "scripts/generar_conocimiento.py",
   "fuentes": {
     "nacional": "data/processed/agregados/integrado/ene_trimestre_totales.parquet",

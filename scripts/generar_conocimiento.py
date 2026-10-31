@@ -238,6 +238,51 @@ CIUO08_ETIQUETA = {
 # Los grupos 1-3 componen la "alta calificación" que usa el desajuste educativo.
 CIUO08_ALTA = ["g1_directivos_gerentes", "g2_profesionales_cientificos", "g3_tecnicos_nivel_medio"]
 
+# Composición de la desocupación. Partición EXACTA de `do`: quien perdió un empleo
+# (cesante) y quien busca por primera vez. Serie completa desde 2010-02.
+DESOCUPADOS_COLS = {
+    "cesantes": "cesantes",
+    "busca_trabajo_primera_vez": "busca_trabajo_por_primera_vez",
+}
+DESOCUPADOS_ETIQUETA = {
+    "cesantes": "Cesantes (tuvieron empleo antes)",
+    "busca_trabajo_primera_vez": "Buscan trabajo por primera vez",
+}
+
+# Rama de actividad económica del empleo principal: CAENES rev. 4, 21 secciones.
+# Se construye desde `b14_rev4cl_caenes` (ver el comentario de las reglas en
+# generar_totales_trimestrales.py: `r_p_rev4cl_caenes` es otra variable y no
+# reproduce el boletín del INE).
+# ⚠ El INE publica esta clasificación desde JAS 2017. Antes la vigente
+# era CIIU rev. 3, que NO es empalmable con esta a nivel de sección: los trimestres
+# anteriores salen en NA y el bloque del snapshot no se emite.
+# ⚠ Las 21 secciones NO suman el total de ocupados: hay casos sin rama declarada.
+# El residuo se expone en `_cobertura` (igual que en educación y jornada).
+RAMA_COLS = {f"r{i:02d}": f"rama_{i}" for i in range(1, 22)}
+RAMA_ETIQUETA = {
+    "r01": "Agricultura, ganadería, silvicultura y pesca",
+    "r02": "Explotación de minas y canteras",
+    "r03": "Industrias manufactureras",
+    "r04": "Suministro de electricidad, gas, vapor y aire acondicionado",
+    "r05": "Suministro de agua, alcantarillado y gestión de residuos",
+    "r06": "Construcción",
+    "r07": "Comercio al por mayor y al por menor",
+    "r08": "Transporte y almacenamiento",
+    "r09": "Alojamiento y servicio de comidas",
+    "r10": "Información y comunicaciones",
+    "r11": "Actividades financieras y de seguros",
+    "r12": "Actividades inmobiliarias",
+    "r13": "Actividades profesionales, científicas y técnicas",
+    "r14": "Servicios administrativos y de apoyo",
+    "r15": "Administración pública y defensa",
+    "r16": "Enseñanza",
+    "r17": "Salud humana y asistencia social",
+    "r18": "Actividades artísticas, de entretenimiento y recreativas",
+    "r19": "Otras actividades de servicios",
+    "r20": "Hogares como empleadores",
+    "r21": "Organizaciones y órganos extraterritoriales",
+}
+
 CATEGORIA_ETIQUETA = {
     "empleador": "Empleador",
     "cuenta_propia": "Cuenta propia",
@@ -329,6 +374,14 @@ def build_nacional(maestra: pd.DataFrame):
             "sexo_ocupados": {
                 "hombres": _round(r["o_hombres"]) if "o_hombres" in m.columns else None,
                 "mujeres": _round(r["o_mujeres"]) if "o_mujeres" in m.columns else None,
+            },
+            # Partición exacta de los desocupados; serie completa desde 2010-02.
+            "composicion_desocupados": {
+                k: _round(r[col]) for k, col in DESOCUPADOS_COLS.items() if col in m.columns
+            },
+            # NA antes de JAS 2017 (inicio de CAENES rev. 4 en la ENE).
+            "rama_actividad": {
+                k: _round(r[col]) for k, col in RAMA_COLS.items() if col in m.columns
             },
             "educacion": {
                 k: _round(r[col]) for k, col in EDUCACION_COLS.items() if col in m.columns
@@ -531,6 +584,68 @@ def build_snapshot(serie_nac, cortes, release, generado):
     if inf_prev and inf_prev.get("toi") is not None and inf_ult.get("toi") is not None:
         formalidad["tasa_ocupacion_informal"]["delta_pp"] = _round(inf_ult["toi"] - inf_prev["toi"], 2)
 
+    # Composición de la desocupación: cesantía vs. primera búsqueda. Partición exacta
+    # de `do`, así que el residuo de `_cobertura` debe ser 0.
+    des_ult = ult["composicion_desocupados"]
+    des_prev = prev["composicion_desocupados"] if prev else None
+    total_do = nac.get("do")
+    desocupados = {
+        "nota": "Partición exacta de los desocupados: cesantes son quienes tuvieron un "
+                "empleo antes y lo perdieron; el resto busca trabajo por primera vez. "
+                "La distinción separa destrucción de empleo de dificultad de entrada.",
+        "grupos": {
+            k: {
+                "etiqueta": DESOCUPADOS_ETIQUETA[k],
+                "pct_desocupados": _round(100 * v / total_do, 2) if (v and total_do) else None,
+                **_comp_entry(v, (des_prev or {}).get(k)),
+            }
+            for k, v in des_ult.items()
+        },
+    }
+    suma_des = sum(v for v in des_ult.values() if v is not None)
+    desocupados["_cobertura"] = {
+        "suma_grupos": _round(suma_des),
+        "desocupados": _round(total_do),
+        "residuo": _round(total_do - suma_des) if total_do is not None else None,
+    }
+
+    # Rama de actividad económica (CAENES rev. 4). Solo si el release la trae.
+    rama = None
+    ram_ult = ult.get("rama_actividad") or {}
+    if any(v is not None for v in ram_ult.values()):
+        ram_prev = (prev.get("rama_actividad") or {}) if prev else {}
+        rama = {
+            "clasificacion": "CAENES rev. 4 (21 secciones)",
+            "nota_quiebre": "La ENE clasifica la rama con CAENES rev. 4 desde JAS 2017. Antes "
+                            "usaba CIIU rev. 3, que no es empalmable a nivel de sección: no "
+                            "existe serie de rama anterior a ese trimestre.",
+            "ramas": {
+                k: {
+                    "etiqueta": RAMA_ETIQUETA[k],
+                    "pct_ocupados": _round(100 * v / total_o, 2) if (v and total_o) else None,
+                    **_comp_entry(v, ram_prev.get(k)),
+                }
+                for k, v in ram_ult.items() if v is not None
+            },
+        }
+        suma_ram = sum(v for v in ram_ult.values() if v is not None)
+        suma_ram_prev = (sum(v for v in ram_prev.values() if v is not None)
+                         if ram_prev else None)
+        sin_rama = total_o - suma_ram if total_o is not None else None
+        sin_rama_prev = (prev["o"] - suma_ram_prev
+                         if (prev and suma_ram_prev) else None)
+        rama["_cobertura"] = {
+            "nota": "Las 21 secciones no suman el total de ocupados: hay casos sin rama "
+                    "declarada. Para cuadrar la variación por rama con la nacional hay que "
+                    "incluir la variación del residuo.",
+            "suma_ramas": _round(suma_ram),
+            "ocupados": _round(total_o),
+            "sin_rama_declarada": _round(sin_rama),
+            "sin_rama_declarada_previo": _round(sin_rama_prev),
+            "delta_sin_rama_declarada": (_round(sin_rama - sin_rama_prev)
+                                         if sin_rama_prev is not None else None),
+        }
+
     # Educación: nivel alcanzado por los ocupados + desglose de superior + desajuste.
     def _bloque(dic_ult, dic_prev):
         return {k: _comp_entry(v, (dic_prev or {}).get(k)) for k, v in dic_ult.items()}
@@ -683,6 +798,8 @@ def build_snapshot(serie_nac, cortes, release, generado):
         "nacional": nac,
         "composicion_ocupados": composicion,
         "ciso18": ciso18,
+        "composicion_desocupados": desocupados,
+        "rama_actividad": rama,
         "formalidad": formalidad,
         "educacion": educacion,
         "subutilizacion": subutilizacion,

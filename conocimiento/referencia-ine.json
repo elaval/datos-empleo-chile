@@ -42,6 +42,21 @@
         "cuenta_propia": 2.0,
         "empleador": -2.8
       },
+      "rama_variaciones_12m_pct": {
+        "r03": -8.1,
+        "r06": 2.8,
+        "r10": -20.8,
+        "r11": -14.1,
+        "r12": 19.1,
+        "r16": 2.4
+      },
+      "rama_variaciones_12m_pct_no_reconcilia": {
+        "r19": {
+          "ine": -5.1,
+          "base": -5.24,
+          "nota": "El boletín atribuye -5,1% a «otras actividades de servicios». La sección S de CAENES rev. 4 da -5,24% en esta base y ninguna agrupación con las secciones vecinas (R, T, U) se acerca más. Se deja registrado en vez de ajustar la tolerancia: la brecha es de 0,14 pp y su causa no está establecida."
+        }
+      },
       "ciso18_niveles": {
         "_nota": "Anexo 2 del boletín (nueva dimensión CISO-18); comparable con las columnas ciso_* de la tabla integrada desde AMJ 2026",
         "asalariados_privados": 5244033,

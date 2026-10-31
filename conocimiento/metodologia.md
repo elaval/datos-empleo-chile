@@ -77,6 +77,7 @@ errores: son cambios de estándar internacional que el INE adopta.
 |---|---|---|
 | **CIUO-88 → CIUO-08** | La *ocupación* (qué tarea hace la persona) | CIUO-88 hasta 2018, CIUO-08 desde 2017. En microdatos, `b1_ciuo88` viene **vacío desde 2019**. |
 | **CISE-93 → CISO-18** | La *situación en la ocupación* (relación laboral) | El INE adopta CISO-18 en AMJ 2026. `categoria_ocupacion` (CISE-93) se mantiene intacta. Ver ADR-0002. |
+| **CIIU rev. 3 → CAENES rev. 4** | La *rama de actividad* (a qué se dedica el establecimiento) | CAENES rev. 4 desde **JAS 2017**. Antes, CIIU rev. 3 en `b13_ciiu_rev3`/`b14_ciiu_rev3`, no empalmable a nivel de sección. |
 
 **Reglas prácticas:**
 
@@ -87,11 +88,19 @@ errores: son cambios de estándar internacional que el INE adopta.
   la tendencia larga es utilizable, el desglose por grupo hacia atrás no.
 - Un salto brusco en una categoría residual (`G10 No identificado`, `NS-NR`) suele indicar
   cambio de codificación, no un fenómeno real. Verificar antes de interpretarlo.
+- El bloque `rama_actividad` **solo se emite desde JAS 2017**, por la misma razón.
 - **Un renombre puede romper un indicador sin que se note.** Con CISO-18 el INE renombró
   `id` (iniciadores disponibles) a `idisp`; el pipeline rellenaba con NA en vez de fallar, y
   las tasas de subutilización (SU1–SU4) y de presión laboral de AMJ 2026 salieron
   **plausibles pero fabricadas**. Ya está corregido (ADR-0002), y por eso el validador
   recomputa esas tasas desde sus componentes en vez de confiar en la columna publicada.
+- **Dos variables con nombre parecido no son la misma variable.** La rama de actividad se
+  computa desde `b14_rev4cl_caenes`. El pipeline usaba `r_p_rev4cl_caenes`, que coincide con
+  ella en el **90,4 %** de las filas y suma casi el mismo total: las 21 secciones cuadraban,
+  los órdenes de magnitud eran creíbles y nada en la coherencia interna fallaba. Lo que no
+  cuadraba era el boletín — enseñanza daba +8,5 % donde el INE publica +2,4 %. Se detectó
+  **solo** al contrastar contra la fuente externa, y por eso el validador recomputa la rama
+  desde `b14` y verifica seis variaciones del boletín n°336 una por una.
 
 ## 4. ⚠️ Escala de las tasas: depende de la tabla de origen
 

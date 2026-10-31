@@ -336,6 +336,38 @@
     "recalibracion-censo-2017",
     "serie-formalidad-desde-2017"
    ]
+  },
+  "composicion_desocupados": {
+   "nombre": "Desocupados por condición: cesantes y primera búsqueda",
+   "definicion": "Partición exacta de los desocupados. Cesante es quien tuvo un empleo y lo perdió; el resto busca trabajo por primera vez. La distinción separa destrucción de empleo de dificultad de entrada al mercado laboral.",
+   "unidad": "personas",
+   "escala": "conteo",
+   "grupos": {
+    "cesantes": "Cesantes (tuvieron empleo antes)",
+    "busca_trabajo_primera_vez": "Buscan trabajo por primera vez"
+   },
+   "formula_microdatos": "cesantes = sum(fact_cal) sobre cae_especifico==8; busca_trabajo_primera_vez = sum(fact_cal) sobre cae_especifico==9",
+   "fuente_nacional": "columnas cesantes y busca_trabajo_por_primera_vez de la tabla maestra (snapshot.json → composicion_desocupados)",
+   "cobertura_temporal": "Serie completa desde 2010-02 (199 trimestres móviles).",
+   "identidad": "cesantes + busca_trabajo_primera_vez = do (residuo 0, verificado).",
+   "caveats": [
+    "recalibracion-censo-2017"
+   ]
+  },
+  "rama_actividad": {
+   "nombre": "Ocupados por rama de actividad económica (CAENES rev. 4)",
+   "definicion": "Reparto de los ocupados según la sección de actividad económica del establecimiento donde trabajan, en las 21 secciones de CAENES rev. 4.",
+   "unidad": "personas",
+   "escala": "conteo",
+   "formula_microdatos": "sum(fact_cal) sobre activ==1 agrupado por b14_rev4cl_caenes. NO usar r_p_rev4cl_caenes: es otra variable, coincide en 90,4% de las filas y no reproduce las variaciones que publica el boletín del INE.",
+   "fuente_nacional": "columnas rama_1 … rama_21 de la tabla maestra (snapshot.json → rama_actividad)",
+   "cobertura_temporal": "Desde JAS 2017. Antes la ENE clasificaba con CIIU rev. 3, no empalmable.",
+   "validacion_externa": "Seis de las siete variaciones a doce meses que publica el boletín n°336 se reproducen dentro de 0,04 pp. La séptima (otras actividades de servicios) queda registrada como brecha no resuelta en referencia-ine.json.",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "serie-rama-desde-2017",
+    "ramas-no-cierran"
+   ]
   }
  },
  "dimensiones": {
