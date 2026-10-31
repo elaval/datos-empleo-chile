@@ -100,7 +100,7 @@ errores: son cambios de estándar internacional que el INE adopta.
   los órdenes de magnitud eran creíbles y nada en la coherencia interna fallaba. Lo que no
   cuadraba era el boletín — enseñanza daba +8,5 % donde el INE publica +2,4 %. Se detectó
   **solo** al contrastar contra la fuente externa, y por eso el validador recomputa la rama
-  desde `b14` y verifica seis variaciones del boletín n°336 una por una.
+  desde `b14` y verifica seis variaciones del boletín n°336 una por una. Ver ADR-0004.
 
 ## 4. ⚠️ Escala de las tasas: depende de la tabla de origen
 
