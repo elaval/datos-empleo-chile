@@ -56,9 +56,12 @@ que se extienda, quedan las variables que responden directamente «cómo se cont
 
 | Variable | Qué mide | Disponible desde |
 |---|---|---|
-| `b15_1`, `b15_2` | Acuerdo escrito o de palabra; indefinido, plazo fijo o por obra | **2010** |
+| `b8` | ¿Tiene contrato escrito? (sí / no) | **2010** |
+| `b9` | Duración del contrato o acuerdo: definido o indefinido | **2010** |
+| `b10` | Si es definido: temporada, obra, menos de 3 meses, renovable, reemplazo | **2010** |
+| `b12` | Contratado directamente, vía contratista, servicios temporales o enganchador | **2010** |
+| `b15_1`, `b15_2` | Tamaño de la empresa donde trabaja (tramos y conteo exacto hasta 10) | **2010** |
 | `b17_mes`, `b17_ano` | Mes y año de inicio del empleo actual → antigüedad | **2010** |
-| `b12` | Tamaño del establecimiento | **2010** |
 | `e15_meses` / `e15_anos` → `e21_tramo` | Duración de la búsqueda de empleo | 2010, con cambio de nombre y de formato ~2020 |
 | `e16_ciuo88`, `e18_ciiu_rev3` → equivalentes | Ocupación y rama del **empleo anterior** del desocupado | 2010, con cambio de clasificación |
 | `ocup_honorarios` | Ocupados a honorarios | ~2020 |
@@ -68,9 +71,17 @@ que se extienda, quedan las variables que responden directamente «cómo se cont
 | `parentesco`, `hogar`, `nro_linea` | Estructura del hogar → jefatura, hogares sin ocupados | 2010 |
 | `estudia_actual`, `curso` | Jóvenes que no estudian ni trabajan | 2010 |
 
-`b15_1` y `b15_2` desde 2010 son el activo más valioso de esta lista: diecisiete años de **tipo de
+`b8`, `b9` y `b10` desde 2010 son el activo más valioso de esta lista: diecisiete años de **tipo de
 contrato**, que es la variable que la narrativa necesita y que ningún informe del INE pone en serie
 larga.
+
+> **Corrección del 31-10-2026.** La primera versión de esta tabla identificaba `b15_1`/`b15_2` como
+> el tipo de contrato y `b12` como el tamaño de la empresa. Las dos cosas estaban al revés, y no
+> salían de ninguna fuente: eran mi inferencia a partir del nombre de la variable. El libro de
+> códigos del INE dice que `b15_1` es «¿cuántas personas trabajan en esa empresa, negocio,
+> institución que le paga o actividad por cuenta propia?» y que el contrato vive en `b8`, `b9` y
+> `b10`. Es el mismo error del ADR-0004 en su versión más simple: deducir qué mide una variable en
+> vez de leerlo en la fuente.
 
 ## 4. El hallazgo del inventario: los microdatos permiten seguir a la misma persona
 
@@ -124,7 +135,7 @@ asalariado, lo de 2026 es el patrón cíclico conocido y no hay nada estructural
 **Pregunta:** entre quienes sí tienen empleo dependiente, ¿cambió la forma del vínculo? ¿Más plazo
 fijo y por obra, menos indefinido? ¿Menos cotización?
 **Insumo:** `cotizantes` / `dependientes_cotizantes` desde 2017 (ya computado: 83,96 % → 83,57 %
-entre JAS 2025 y 2026) **más** `b15_1` / `b15_2` desde 2010, que exigen extender el panel.
+entre JAS 2025 y 2026) **más** `b8`, `b9`, `b10` y `b12` desde 2010, que exigen extender el panel.
 Costo medio.
 **Método:** serie de composición del vínculo dentro de los dependientes; tasa de cotización como
 proxy independiente de la misma cosa. Las dos series deben moverse juntas; si no, una de las dos
@@ -211,7 +222,7 @@ afirmación defendible, o lo desarma a tiempo.
    de evidencia a partir de los agregados. Es el mejor retorno por hora de trabajo del plan.
 2. **Shift-share** (Línea F): aritmética sobre los cortes ya publicados. Da el marco que permite
    interpretar todo lo demás sin caer en el error de composición.
-3. **Extender el panel a las variables de contrato** (Línea B): `b15_1`, `b15_2`, `b17_*`, `b12`.
+3. **Extender el panel a las variables de contrato** (Línea B): `b8`, `b9`, `b10`, `b12`, `b17_*`.
    Diecisiete años de tipo de contrato es el corazón de la narrativa.
 4. **Flujos** (Línea D), con la validación como parte del entregable, no como un paso posterior.
 5. **Errores estándar** (Línea G) y el resto de la Línea C.

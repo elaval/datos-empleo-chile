@@ -102,6 +102,31 @@ errores: son cambios de estándar internacional que el INE adopta.
   **solo** al contrastar contra la fuente externa, y por eso el validador recomputa la rama
   desde `b14` y verifica seis variaciones del boletín n°336 una por una. Ver ADR-0004.
 
+## 3-ter. ⚠️ El vínculo contractual tiene universo propio y dos denominadores
+
+El bloque `vinculo_contractual` no describe a los ocupados: describe a los **dependientes**
+(asalariados privados y públicos más servicio doméstico, `categoria_ocupacion` 3-6), que son
+quienes la ENE pregunta. Empleadores, cuenta propia y familiares no remunerados quedan **fuera
+del universo, no en cero**: una proporción de contrato nunca se calcula sobre el total de
+ocupados.
+
+Y dentro de ese universo hay una trampa de denominador que se ve venir solo si se lee la
+pregunta:
+
+- **`b8`** es «¿tiene contrato escrito?». Su proporción va sobre los dependientes.
+- **`b9`** es «la duración de ese **contrato o acuerdo de trabajo**». Se le pregunta a *todos*
+  los dependientes, también a quien trabaja con acuerdo de palabra. Su proporción va sobre los
+  dependientes **igual que b8** — no sobre los que tienen contrato escrito. Con el denominador
+  equivocado, el «% con contrato indefinido» de JAS 2026 sube de 76,22 % a 86,22 %: diez puntos,
+  sin que ninguna suma deje de cuadrar.
+- **`b10`** (qué tipo de plazo definido) se pregunta solo a quien declaró plazo definido, y trae
+  sus propios códigos de no sabe / no responde: los cinco tipos **no** suman el total, y el
+  residuo va en `_cobertura`.
+
+La identificación de estas variables se verificó contra una cifra publicada por el INE —98,1 %
+de los asalariados públicos con contrato escrito en EFM 2018, documento de trabajo n°1 de mayo
+de 2018— y el validador la comprueba en cada corrida. Ver ADR-0004.
+
 ## 4. ⚠️ Escala de las tasas: depende de la tabla de origen
 
 - Tabla **maestra** (`ene_trimestre_totales.parquet`) y **esta capa de conocimiento**:

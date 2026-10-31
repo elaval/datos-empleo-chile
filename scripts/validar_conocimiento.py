@@ -108,6 +108,42 @@ def main() -> int:
               "ramas + sin rama declarada = ocupados",
               f"sin rama: {cobr['sin_rama_declarada']:,.0f}")
 
+    # Vínculo contractual: las dos particiones tienen que caber dentro de los dependientes,
+    # y el denominador de cada proporción tiene que ser el que dice ser. El error que este
+    # chequeo previene es calcular el «% indefinido» sobre los que tienen contrato escrito
+    # en vez de sobre todos los dependientes: b9 pregunta por «contrato O ACUERDO», así que
+    # su universo son todos. Con el denominador equivocado la cifra sube ~2 pp y sigue
+    # pareciendo razonable.
+    vc = snap.get("vinculo_contractual")
+    if vc:
+        dep = vc["denominador"]["dependientes"]
+        cob = vc["_cobertura"]
+        check(abs(cob["responden_contrato_escrito"] + cob["sin_dato_contrato_escrito"] - dep)
+              <= TOL_PERSONAS, "contrato escrito + sin dato = dependientes",
+              f"sin dato: {cob['sin_dato_contrato_escrito']:,.0f}")
+        check(abs(cob["responden_duracion"] + cob["sin_dato_duracion"] - dep) <= TOL_PERSONAS,
+              "indefinido + definido + sin dato = dependientes",
+              f"sin dato: {cob['sin_dato_duracion']:,.0f}")
+        peor = 0.0
+        for bloque in ("contrato_escrito", "duracion"):
+            for k, e in vc[bloque].items():
+                if e.get("personas") and e.get("pct_dependientes") is not None:
+                    peor = max(peor, abs(100 * e["personas"] / dep - e["pct_dependientes"]))
+        check(peor < 0.01, "las proporciones de vínculo van sobre los dependientes",
+              f"peor desvío {peor:.4f} pp")
+        # b10 se pregunta solo a quien declara plazo definido y trae sus propios códigos de
+        # no sabe / no responde, así que la partición cierra CON residuo, no sin él.
+        tipos = sum(v["o"] for v in vc["plazo_definido_por_tipo"].values() if v.get("o"))
+        check(abs(cob["suma_tipos_de_plazo"] + cob["sin_dato_tipo_de_plazo"]
+                  - cob["plazo_definido"]) <= TOL_PERSONAS,
+              "tipos de plazo definido + sin dato = plazo definido",
+              f"sin dato: {cob['sin_dato_tipo_de_plazo']:,.0f}")
+        check(abs(tipos - cob["suma_tipos_de_plazo"]) <= TOL_PERSONAS,
+              "los tipos publicados suman el total del bloque", f"{tipos - cob['suma_tipos_de_plazo']:+.0f}")
+        via = sum(v["o"] for v in vc["via_de_contratacion"].values() if v.get("o"))
+        check(via <= dep + TOL_PERSONAS, "las vías de contratación caben en los dependientes",
+              f"vías {via:,.0f} de {dep:,.0f}")
+
     # Descomposición composición / intra-grupo: la identidad tiene que cerrar SIN residuo, y
     # los aportes por grupo tienen que sumar cada efecto. El aporte de composición va centrado
     # en la tasa nacional, así que la suma de los centrados debe dar el mismo total que el
@@ -337,6 +373,25 @@ def main() -> int:
             check(abs(v - pk) <= TOL_PERSONAS, f"desocupados · {clave}",
                   f"micro={v:,.0f} pack={pk:,.0f}")
 
+    if vc:
+        dep_m = w[(s.activ == 1) & (s.categoria_ocupacion.between(3, 6))].sum()
+        check(abs(dep_m - vc["denominador"]["dependientes"]) <= TOL_PERSONAS,
+              "vínculo · universo de dependientes",
+              f"micro={dep_m:,.0f} pack={vc['denominador']['dependientes']:,.0f}")
+        oc_dep = s[(s.activ == 1) & (s.categoria_ocupacion.between(3, 6))]
+        casos = (("contrato_escrito", "con_contrato_escrito", "b8", 1),
+                 ("contrato_escrito", "sin_contrato_escrito", "b8", 2),
+                 ("duracion", "plazo_definido", "b9", 1),
+                 ("duracion", "plazo_indefinido", "b9", 2))
+        peor, cual = 0.0, None
+        for bloque, clave, var, cod in casos:
+            rec = oc_dep.fact_cal[oc_dep[var] == cod].sum()
+            pk = vc[bloque][clave]["personas"]
+            if abs(rec - pk) > peor:
+                peor, cual = abs(rec - pk), clave
+        check(peor <= TOL_PERSONAS, "vínculo contractual desde b8/b9",
+              f"peor desvío {peor:.1f} ({cual})")
+
     # La rama se recomputa desde `b14_rev4cl_caenes`. NO desde `r_p_rev4cl_caenes`:
     # son variables distintas (coinciden en 90,4% de las filas) y solo b14 reproduce
     # el boletín del INE. Este chequeo existe para que ese cambio no se revierta en
@@ -421,6 +476,23 @@ def main() -> int:
                     pk = ram["ramas"].get(clave, {}).get("delta_rel_o")
                     print(f"  · brecha conocida y no resuelta · rama {clave}: "
                           f"INE={d['ine']}% base={pk}% (ver referencia-ine.json)")
+
+    # --- ancla externa del vínculo contractual (documento de trabajo del INE)
+    # «Mirada conceptual y analítica a los asalariados públicos» (n°1, mayo 2018) publica:
+    # con contrato escrito, 98,1 % de los asalariados públicos en el trimestre EFM 2018.
+    # Es la única cifra publicada que encontramos para identificar b8, y por eso se verifica
+    # en cada corrida aunque sea de otro trimestre: si cambia, la variable dejó de ser la que
+    # creemos (ADR-0004). No es el release vigente: es un punto fijo de la serie.
+    efm = MICRO_DIR / "ene-02-efm.parquet"
+    if efm.exists():
+        e = pd.read_parquet(efm, columns=["ano_trimestre", "activ", "categoria_ocupacion",
+                                          "b8", "fact_cal"])
+        e = e[(e.ano_trimestre == 2018) & (e.activ == 1) & (e.categoria_ocupacion == 4)]
+        if len(e):
+            pct = 100 * e.fact_cal[e.b8 == 1].sum() / e.fact_cal.sum()
+            check(abs(pct - 98.1) < 0.1,
+                  "vínculo · asalariados públicos con contrato escrito, EFM 2018",
+                  f"INE=98.1% base={pct:.2f}%")
 
     # --- serie con ajuste estacional (referencia externa, archivo hermano)
     # El ajuste lo calcula el INE y no se puede recomputar aquí. Lo que SÍ se puede

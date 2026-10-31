@@ -132,6 +132,118 @@
       "residuo": 0.0
     }
   },
+  "vinculo_contractual": {
+    "nota": "Vínculo contractual de los dependientes (asalariados privados y públicos más servicio doméstico), que son quienes la ENE pregunta. Empleadores, cuenta propia y familiares no remunerados quedan fuera del universo, no en cero.",
+    "denominador": {
+      "dependientes": 6979249.0,
+      "delta_dependientes": -140696.0
+    },
+    "contrato_escrito": {
+      "con_contrato_escrito": {
+        "etiqueta": "Con contrato escrito",
+        "personas": 6169898.0,
+        "pct_dependientes": 88.4,
+        "delta_personas": -114479.0,
+        "delta_pp": 0.14
+      },
+      "sin_contrato_escrito": {
+        "etiqueta": "Sin contrato escrito (acuerdo de palabra)",
+        "personas": 795733.0,
+        "pct_dependientes": 11.4,
+        "delta_personas": -24762.0,
+        "delta_pp": -0.12
+      }
+    },
+    "duracion": {
+      "plazo_indefinido": {
+        "etiqueta": "Contrato o acuerdo indefinido",
+        "personas": 5319589.0,
+        "pct_dependientes": 76.22,
+        "delta_personas": -57562.0,
+        "delta_pp": 0.7
+      },
+      "plazo_definido": {
+        "etiqueta": "Contrato o acuerdo de plazo definido",
+        "personas": 1623949.0,
+        "pct_dependientes": 23.27,
+        "delta_personas": -81075.0,
+        "delta_pp": -0.68
+      }
+    },
+    "plazo_definido_por_tipo": {
+      "temporada": {
+        "etiqueta": "Limitado a la temporada",
+        "o": 207470.0,
+        "delta_o": -9945.0,
+        "delta_rel_o": -4.57
+      },
+      "obra_o_proyecto": {
+        "etiqueta": "Por obra, proyecto o faena",
+        "o": 561319.0,
+        "delta_o": -40047.0,
+        "delta_rel_o": -6.66
+      },
+      "menos_de_3_meses": {
+        "etiqueta": "Menos de tres meses (prueba o práctica)",
+        "o": 321451.0,
+        "delta_o": -16816.0,
+        "delta_rel_o": -4.97
+      },
+      "renovable_anual": {
+        "etiqueta": "Renovable una vez al año",
+        "o": 436423.0,
+        "delta_o": -21299.0,
+        "delta_rel_o": -4.65
+      },
+      "reemplazo": {
+        "etiqueta": "Por reemplazo",
+        "o": 92236.0,
+        "delta_o": 11613.0,
+        "delta_rel_o": 14.4
+      }
+    },
+    "via_de_contratacion": {
+      "directo_con_la_empresa": {
+        "etiqueta": "Directamente con la empresa donde trabaja",
+        "pct_dependientes": 81.93,
+        "o": 5718423.0,
+        "delta_o": -111196.0,
+        "delta_rel_o": -1.91
+      },
+      "contratista_o_subcontratista": {
+        "etiqueta": "Con un contratista o subcontratista",
+        "pct_dependientes": 10.34,
+        "o": 721355.0,
+        "delta_o": 6487.0,
+        "delta_rel_o": 0.91
+      },
+      "empresa_de_servicios_temporales": {
+        "etiqueta": "Con una empresa de servicios temporales",
+        "pct_dependientes": 4.17,
+        "o": 290718.0,
+        "delta_o": -33739.0,
+        "delta_rel_o": -10.4
+      },
+      "enganchador_agricola": {
+        "etiqueta": "Con un enganchador (contratista agrícola)",
+        "pct_dependientes": 0.38,
+        "o": 26798.0,
+        "delta_o": -1390.0,
+        "delta_rel_o": -4.93
+      }
+    },
+    "_cobertura": {
+      "nota": "El residuo son dependientes que no saben o no responden la pregunta.",
+      "dependientes": 6979249.0,
+      "responden_contrato_escrito": 6965631.0,
+      "sin_dato_contrato_escrito": 13618.0,
+      "responden_duracion": 6943538.0,
+      "sin_dato_duracion": 35711.0,
+      "suma_tipos_de_plazo": 1618899.0,
+      "plazo_definido": 1623949.0,
+      "sin_dato_tipo_de_plazo": 5050.0
+    }
+  },
   "rama_actividad": {
     "clasificacion": "CAENES rev. 4 (21 secciones)",
     "nota_quiebre": "La ENE clasifica la rama con CAENES rev. 4 desde JAS 2017. Antes usaba CIIU rev. 3, que no es empalmable a nivel de sección: no existe serie de rama anterior a ese trimestre.",

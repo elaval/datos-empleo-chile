@@ -140,6 +140,20 @@ FINAL_COLS = [
     "rama_20",
     "rama_21",
 
+    "dep_contrato_escrito",
+    "dep_sin_contrato_escrito",
+    "dep_plazo_definido",
+    "dep_plazo_indefinido",
+    "dep_definido_temporada",
+    "dep_definido_obra",
+    "dep_definido_menos_3_meses",
+    "dep_definido_renovable_anual",
+    "dep_definido_reemplazo",
+    "dep_contratado_directamente",
+    "dep_subcontratado",
+    "dep_servicios_temporales",
+    "dep_enganchador",
+
     "horas_1_30",
     "tpi",
     "tpv",
@@ -202,6 +216,7 @@ def read_frames() -> list[pd.DataFrame]:
         "c10", "c11",
         "r_p_rev4cl_caenes",
         "b14_rev4cl_caenes",
+        "b8", "b9", "b10", "b12",
         "ciso1", "ciso2",
 
     ]
@@ -529,6 +544,47 @@ def rule_rama_21(df):
     return rule_ocupados(df) & (df["b14_rev4cl_caenes"] == 21)
 
 
+# ── Tipo de vínculo contractual de los dependientes ─────────────────────────
+# Universo: categoria_ocupacion 3-6 (asalariados privados y públicos + servicio
+# doméstico), que son exactamente quienes responden b8/b9. Empleadores, cuenta
+# propia y familiares no remunerados vienen en NA y quedan fuera por la regla.
+#
+# VARIABLES, según el libro de códigos del INE (codigos-ene-2020.pdf):
+#   b8  «En ese empleo, ¿tiene contrato escrito?» · 1 Sí · 2 No
+#   b9  «La duración de ese contrato o acuerdo de trabajo es...» · 1 definido
+#       (plazo fijo) · 2 indefinido
+#   b10 «Su contrato o acuerdo definido es…» · 1 temporada · 2 término de obra o
+#       proyecto · 3 menos de tres meses (prueba o práctica) · 4 renovable una vez
+#       al año · 5 por reemplazo
+#   b12 «Está contratado o tiene un acuerdo de trabajo…» · 1 directamente con la
+#       empresa · 2 con un contratista o subcontratista · 3 con una empresa de
+#       servicios temporales · 4 con un enganchador (contratista agrícola)
+#
+# ⚠ b9 NO se pregunta solo a quien tiene contrato escrito: la pregunta dice
+# «contrato O ACUERDO de trabajo», así que su universo son todos los dependientes.
+# El denominador de la mezcla indefinido/definido es `categoria_dependientes`, no
+# `dep_contrato_escrito`. Confundirlos infla la proporción de indefinidos.
+#
+# CONTRASTE EXTERNO (ADR-0004), documento de trabajo del INE «Mirada conceptual y
+# analítica a los asalariados públicos» (n°1, mayo 2018), trimestre EFM 2018:
+# «las personas con contrato escrito representaron el 98,1% del total de
+# asalariados públicos». Esta base da 98,07 % con b8 sobre categoria_ocupacion==4.
+# Es la cifra que identifica b8 como la variable de contrato escrito.
+def rule_dep_contrato_escrito(df):      return rule_dependientes(df) & (df["b8"] == 1)
+def rule_dep_sin_contrato_escrito(df):  return rule_dependientes(df) & (df["b8"] == 2)
+def rule_dep_plazo_definido(df):        return rule_dependientes(df) & (df["b9"] == 1)
+def rule_dep_plazo_indefinido(df):      return rule_dependientes(df) & (df["b9"] == 2)
+def rule_dep_definido_temporada(df):    return rule_dependientes(df) & (df["b10"] == 1)
+def rule_dep_definido_obra(df):         return rule_dependientes(df) & (df["b10"] == 2)
+def rule_dep_definido_menos_3_meses(df): return rule_dependientes(df) & (df["b10"] == 3)
+def rule_dep_definido_renovable_anual(df): return rule_dependientes(df) & (df["b10"] == 4)
+def rule_dep_definido_reemplazo(df):    return rule_dependientes(df) & (df["b10"] == 5)
+def rule_dep_contratado_directamente(df): return rule_dependientes(df) & (df["b12"] == 1)
+def rule_dep_subcontratado(df):         return rule_dependientes(df) & (df["b12"] == 2)
+def rule_dep_servicios_temporales(df):  return rule_dependientes(df) & (df["b12"] == 3)
+def rule_dep_enganchador(df):           return rule_dependientes(df) & (df["b12"] == 4)
+
+
 RULES: dict[str, callable] = {
     "pet": rule_edad_trabajar,
     "ft": rule_fuerza_de_trabajo,
@@ -684,6 +740,19 @@ RULES: dict[str, callable] = {
     "rama_20": rule_rama_20,
     "rama_21": rule_rama_21,
 
+    "dep_contrato_escrito": rule_dep_contrato_escrito,
+    "dep_sin_contrato_escrito": rule_dep_sin_contrato_escrito,
+    "dep_plazo_definido": rule_dep_plazo_definido,
+    "dep_plazo_indefinido": rule_dep_plazo_indefinido,
+    "dep_definido_temporada": rule_dep_definido_temporada,
+    "dep_definido_obra": rule_dep_definido_obra,
+    "dep_definido_menos_3_meses": rule_dep_definido_menos_3_meses,
+    "dep_definido_renovable_anual": rule_dep_definido_renovable_anual,
+    "dep_definido_reemplazo": rule_dep_definido_reemplazo,
+    "dep_contratado_directamente": rule_dep_contratado_directamente,
+    "dep_subcontratado": rule_dep_subcontratado,
+    "dep_servicios_temporales": rule_dep_servicios_temporales,
+    "dep_enganchador": rule_dep_enganchador,
 }
 
 

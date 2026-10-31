@@ -133,6 +133,21 @@ PUBLIC_COLS = [
     ("rama_20", "Rama 20: Actividades de los hogares como empleadores"),
     ("rama_21", "Rama 21: Actividades de organizaciones y órganos extraterritoriales"),
 
+    # ── Tipo de vínculo contractual de los dependientes ──────────────────
+    ("dep_contrato_escrito", "Dependientes con contrato escrito"),
+    ("dep_sin_contrato_escrito", "Dependientes sin contrato escrito (acuerdo de palabra)"),
+    ("dep_plazo_definido", "Dependientes con contrato o acuerdo de plazo definido"),
+    ("dep_plazo_indefinido", "Dependientes con contrato o acuerdo indefinido"),
+    ("dep_definido_temporada", "Plazo definido: limitado a la temporada"),
+    ("dep_definido_obra", "Plazo definido: por obra, proyecto o faena"),
+    ("dep_definido_menos_3_meses", "Plazo definido: menos de tres meses (prueba o práctica)"),
+    ("dep_definido_renovable_anual", "Plazo definido: renovable una vez al año"),
+    ("dep_definido_reemplazo", "Plazo definido: por reemplazo"),
+    ("dep_contratado_directamente", "Contratado directamente con la empresa donde trabaja"),
+    ("dep_subcontratado", "Contratado con un contratista o subcontratista"),
+    ("dep_servicios_temporales", "Contratado con una empresa de servicios temporales"),
+    ("dep_enganchador", "Contratado con un enganchador (contratista agrícola)"),
+
 
     # ── Horas trabajadas ────────────────────────────────────────────────
     ("horas_1_30", "Horas 1-30"),

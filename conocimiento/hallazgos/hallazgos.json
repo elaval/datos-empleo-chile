@@ -55,7 +55,9 @@
     "serie-rama-desde-2017": "La rama de actividad existe desde el trimestre JAS 2017, cuando la ENE adoptó CAENES rev. 4. Antes la clasificación vigente era CIIU rev. 3, que no es empalmable a nivel de sección: no hay serie de rama anterior a ese trimestre.",
     "ramas-no-cierran": "Las 21 secciones de rama no suman el total de ocupados: hay casos sin rama declarada (~28 mil personas en JAS 2026). Para cuadrar la variación por rama con la nacional hay que incluir la variación de ese residuo.",
     "descomposicion-de-una-dimension": "La descomposición composición/intra se hace sobre cortes de UNA dimensión: la de edad no controla por sexo ni al revés. Cada dimensión es un lente alternativo sobre el mismo cambio, no un sumando de una partición común, y sus efectos no se suman entre dimensiones.",
-    "composicion-no-es-causa": "Un efecto de composición grande no dice que la composición sea la causa del movimiento. Dice que, con las tasas de cada grupo congeladas, el solo cambio de pesos habría movido la tasa nacional en esa magnitud. La causa no es derivable de esta capa."
+    "composicion-no-es-causa": "Un efecto de composición grande no dice que la composición sea la causa del movimiento. Dice que, con las tasas de cada grupo congeladas, el solo cambio de pesos habría movido la tasa nacional en esa magnitud. La causa no es derivable de esta capa.",
+    "vinculo-universo-dependientes": "El vínculo contractual solo existe para los dependientes (asalariados privados y públicos más servicio doméstico): son quienes la ENE pregunta. Empleadores, trabajadores por cuenta propia y familiares no remunerados quedan FUERA del universo, no en cero, así que una proporción de contrato nunca se calcula sobre el total de ocupados.",
+    "duracion-contrato-sobre-todos-los-dependientes": "El porcentaje con contrato indefinido se calcula sobre TODOS los dependientes, no sobre los que tienen contrato escrito: la pregunta de la ENE es por la duración del «contrato o acuerdo de trabajo» y se le hace también a quien trabaja con acuerdo de palabra. Usar el denominador equivocado infla la cifra alrededor de dos puntos."
    }
   }
  },

@@ -389,6 +389,23 @@
     "composicion-no-es-causa",
     "error-muestral-mayor-en-regiones-chicas"
    ]
+  },
+  "vinculo_contractual": {
+   "nombre": "Vínculo contractual de los dependientes",
+   "definicion": "Forma del vínculo laboral de los ocupados dependientes: si tienen contrato escrito o acuerdo de palabra, si la duración es indefinida o de plazo definido, de qué tipo es el plazo definido, y si están contratados directamente o a través de un tercero.",
+   "unidad": "personas",
+   "escala": "conteo",
+   "universo": "Dependientes: categoria_ocupacion 3-6, es decir asalariados del sector privado y del público más servicio doméstico. Es exactamente el universo que responde b8/b9 en la ENE.",
+   "formula_microdatos": "contrato escrito = sum(fact_cal) sobre b8==1; sin contrato escrito = b8==2; plazo definido = b9==1; indefinido = b9==2; tipo de plazo definido = b10 (1 temporada, 2 obra o proyecto, 3 menos de tres meses, 4 renovable una vez al año, 5 reemplazo); vía de contratación = b12 (1 directo, 2 contratista o subcontratista, 3 empresa de servicios temporales, 4 enganchador).",
+   "denominadores": "Las dos proporciones van sobre los dependientes. OJO: el «% indefinido» también, no sobre los que tienen contrato escrito — b9 pregunta por la duración del «contrato o acuerdo».",
+   "fuente_nacional": "columnas dep_* de la tabla maestra (snapshot.json → vinculo_contractual; series-nacional.json → vinculo_contractual)",
+   "cobertura_temporal": "Serie completa desde 2010-02 (199 trimestres móviles).",
+   "validacion_externa": "Documento de trabajo del INE «Mirada conceptual y analítica a los asalariados públicos» (n°1, mayo 2018): con contrato escrito, 98,1 % de los asalariados públicos en EFM 2018. Esta base da 98,07 %. Es la cifra que identifica b8 como la variable de contrato escrito.",
+   "caveats": [
+    "recalibracion-censo-2017",
+    "vinculo-universo-dependientes",
+    "duracion-contrato-sobre-todos-los-dependientes"
+   ]
   }
  },
  "dimensiones": {

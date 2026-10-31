@@ -283,6 +283,53 @@ RAMA_ETIQUETA = {
     "r21": "Organizaciones y órganos extraterritoriales",
 }
 
+# Tipo de vínculo contractual de los dependientes (asalariados privados y públicos +
+# servicio doméstico): categoria_ocupacion 3-6, que es exactamente el universo que
+# responde b8/b9 en la ENE. Serie completa desde 2010-02.
+#
+# ⚠ DOS DENOMINADORES DISTINTOS, y confundirlos infla la cifra:
+#   · «% con contrato escrito» se calcula sobre los dependientes (b8);
+#   · «% indefinido» TAMBIÉN se calcula sobre los dependientes, no sobre los que tienen
+#     contrato escrito, porque b9 pregunta por la duración del «contrato O ACUERDO de
+#     trabajo» y se le hace a todos los dependientes, con contrato escrito o sin él.
+#
+# Identificación de las variables verificada contra una cifra publicada por el INE
+# (ver ADR-0004 y el comentario de las reglas en generar_totales_trimestrales.py).
+CONTRATO_COLS = {
+    "con_contrato_escrito": "dep_contrato_escrito",
+    "sin_contrato_escrito": "dep_sin_contrato_escrito",
+    "plazo_indefinido": "dep_plazo_indefinido",
+    "plazo_definido": "dep_plazo_definido",
+}
+CONTRATO_DEFINIDO_COLS = {
+    "temporada": "dep_definido_temporada",
+    "obra_o_proyecto": "dep_definido_obra",
+    "menos_de_3_meses": "dep_definido_menos_3_meses",
+    "renovable_anual": "dep_definido_renovable_anual",
+    "reemplazo": "dep_definido_reemplazo",
+}
+CONTRATO_VIA_COLS = {
+    "directo_con_la_empresa": "dep_contratado_directamente",
+    "contratista_o_subcontratista": "dep_subcontratado",
+    "empresa_de_servicios_temporales": "dep_servicios_temporales",
+    "enganchador_agricola": "dep_enganchador",
+}
+CONTRATO_ETIQUETA = {
+    "con_contrato_escrito": "Con contrato escrito",
+    "sin_contrato_escrito": "Sin contrato escrito (acuerdo de palabra)",
+    "plazo_indefinido": "Contrato o acuerdo indefinido",
+    "plazo_definido": "Contrato o acuerdo de plazo definido",
+    "temporada": "Limitado a la temporada",
+    "obra_o_proyecto": "Por obra, proyecto o faena",
+    "menos_de_3_meses": "Menos de tres meses (prueba o práctica)",
+    "renovable_anual": "Renovable una vez al año",
+    "reemplazo": "Por reemplazo",
+    "directo_con_la_empresa": "Directamente con la empresa donde trabaja",
+    "contratista_o_subcontratista": "Con un contratista o subcontratista",
+    "empresa_de_servicios_temporales": "Con una empresa de servicios temporales",
+    "enganchador_agricola": "Con un enganchador (contratista agrícola)",
+}
+
 CATEGORIA_ETIQUETA = {
     "empleador": "Empleador",
     "cuenta_propia": "Cuenta propia",
@@ -382,6 +429,19 @@ def build_nacional(maestra: pd.DataFrame):
             # NA antes de JAS 2017 (inicio de CAENES rev. 4 en la ENE).
             "rama_actividad": {
                 k: _round(r[col]) for k, col in RAMA_COLS.items() if col in m.columns
+            },
+            # Vínculo contractual de los dependientes; serie completa desde 2010-02.
+            "vinculo_contractual": {
+                "dependientes": (_round(r["categoria_dependientes"])
+                                 if "categoria_dependientes" in m.columns else None),
+                **{k: _round(r[col]) for k, col in CONTRATO_COLS.items() if col in m.columns},
+                "plazo_definido_por_tipo": {
+                    k: _round(r[col]) for k, col in CONTRATO_DEFINIDO_COLS.items()
+                    if col in m.columns
+                },
+                "via_de_contratacion": {
+                    k: _round(r[col]) for k, col in CONTRATO_VIA_COLS.items() if col in m.columns
+                },
             },
             "educacion": {
                 k: _round(r[col]) for k, col in EDUCACION_COLS.items() if col in m.columns
@@ -609,6 +669,66 @@ def build_snapshot(serie_nac, cortes, release, generado):
         "residuo": _round(total_do - suma_des) if total_do is not None else None,
     }
 
+    # Vínculo contractual de los dependientes. Las dos proporciones que importan van con
+    # su denominador escrito al lado, porque son distintas de lo que el lector supone:
+    # el «% indefinido» se calcula sobre todos los dependientes, no sobre los que tienen
+    # contrato escrito (b9 pregunta por «contrato o acuerdo», ver CONTRATO_COLS).
+    vc_ult = ult.get("vinculo_contractual") or {}
+    vc_prev = (prev.get("vinculo_contractual") or {}) if prev else {}
+    contrato = None
+    if vc_ult.get("dependientes"):
+        dep, dep_prev = vc_ult["dependientes"], vc_prev.get("dependientes")
+
+        def _prop(clave):
+            v, vp = vc_ult.get(clave), vc_prev.get(clave)
+            e = {"etiqueta": CONTRATO_ETIQUETA[clave], "personas": v,
+                 "pct_dependientes": _round(100 * v / dep, 2) if (v and dep) else None}
+            if v is not None and vp is not None:
+                e["delta_personas"] = _round(v - vp)
+                if dep_prev:
+                    e["delta_pp"] = _round(100 * v / dep - 100 * vp / dep_prev, 2)
+            return e
+
+        contrato = {
+            "nota": ("Vínculo contractual de los dependientes (asalariados privados y "
+                     "públicos más servicio doméstico), que son quienes la ENE pregunta. "
+                     "Empleadores, cuenta propia y familiares no remunerados quedan fuera "
+                     "del universo, no en cero."),
+            "denominador": {"dependientes": dep,
+                            "delta_dependientes": (_round(dep - dep_prev) if dep_prev else None)},
+            "contrato_escrito": {k: _prop(k) for k in
+                                 ("con_contrato_escrito", "sin_contrato_escrito")},
+            "duracion": {k: _prop(k) for k in ("plazo_indefinido", "plazo_definido")},
+            "plazo_definido_por_tipo": {
+                k: {"etiqueta": CONTRATO_ETIQUETA[k],
+                    **_comp_entry(v, (vc_prev.get("plazo_definido_por_tipo") or {}).get(k))}
+                for k, v in (vc_ult.get("plazo_definido_por_tipo") or {}).items()
+            },
+            "via_de_contratacion": {
+                k: {"etiqueta": CONTRATO_ETIQUETA[k],
+                    "pct_dependientes": _round(100 * v / dep, 2) if (v and dep) else None,
+                    **_comp_entry(v, (vc_prev.get("via_de_contratacion") or {}).get(k))}
+                for k, v in (vc_ult.get("via_de_contratacion") or {}).items()
+            },
+        }
+        esc = (vc_ult.get("con_contrato_escrito") or 0) + (vc_ult.get("sin_contrato_escrito") or 0)
+        dur = (vc_ult.get("plazo_indefinido") or 0) + (vc_ult.get("plazo_definido") or 0)
+        tipos = sum(v for v in (vc_ult.get("plazo_definido_por_tipo") or {}).values() if v)
+        definido = vc_ult.get("plazo_definido") or 0
+        contrato["_cobertura"] = {
+            "nota": "El residuo son dependientes que no saben o no responden la pregunta.",
+            "dependientes": dep,
+            "responden_contrato_escrito": _round(esc),
+            "sin_dato_contrato_escrito": _round(dep - esc),
+            "responden_duracion": _round(dur),
+            "sin_dato_duracion": _round(dep - dur),
+            # b10 se pregunta SOLO a quien declara plazo definido, y tiene sus propios
+            # códigos de no sabe / no responde: los tipos no cierran contra el total.
+            "suma_tipos_de_plazo": _round(tipos),
+            "plazo_definido": _round(definido),
+            "sin_dato_tipo_de_plazo": _round(definido - tipos),
+        }
+
     # Rama de actividad económica (CAENES rev. 4). Solo si el release la trae.
     rama = None
     ram_ult = ult.get("rama_actividad") or {}
@@ -799,6 +919,7 @@ def build_snapshot(serie_nac, cortes, release, generado):
         "composicion_ocupados": composicion,
         "ciso18": ciso18,
         "composicion_desocupados": desocupados,
+        "vinculo_contractual": contrato,
         "rama_actividad": rama,
         "formalidad": formalidad,
         "educacion": educacion,
