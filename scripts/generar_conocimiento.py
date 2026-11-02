@@ -1191,6 +1191,66 @@ def _transiciones(par, col_peso=None):
     return out
 
 
+def _flujos_por_edad(base_ano, par):
+    """Matriz de transición por tramo de edad, con el error bajo el diseño muestral.
+
+    El tramo es el del AÑO BASE: se sigue a la misma persona, así que la cohorte no se
+    redefine a mitad del intervalo —quien tenía 24 al salir sigue contando en 15-24
+    aunque cumpla 25 por el camino—. Sin eso, el flujo y su denominador describirían
+    poblaciones distintas.
+
+    La precisión se estima sobre la muestra COMPLETA del año base: el enlace y el tramo
+    entran como VARIABLES que valen cero fuera del dominio, no subseteando la muestra.
+    Subsetear subestima la varianza, y es el error clásico al estimar por dominio (ver
+    la sección 7, de donde vienen `_razon_con_error` y `MIN_CASOS_INE`).
+
+    Lo que ese intervalo cubre es el MUESTREO dentro de la submuestra enlazada. NO cubre
+    el sesgo de permanencia: ése tiene signo, se mide en `sesgo_de_permanencia` y no
+    lleva intervalo porque no es varianza.
+    """
+    b = base_ano.copy()
+    # `idrph` es único dentro de un año (comprobado), así que el enlace es 1 a 1.
+    b["activ1"] = pd.to_numeric(b["idrph"].map(par.set_index("idrph")["activ1"]),
+                                errors="coerce")
+    tr = _bin_edad(b).fillna("").astype(str).to_numpy()
+    orig = b["activ"].to_numpy()
+    dst = b["activ1"].to_numpy(dtype=float)        # NaN en quien no permanece
+    fact = b["fact_cal"].to_numpy(dtype=float)
+    salida = []
+    for _, _, lab in GRUPOS_EDAD:
+        en_tramo = (tr == lab)
+        filas = {}
+        for cod, nombre in ESTADOS.items():
+            den = en_tramo & (orig == cod) & ~np.isnan(dst)
+            n = int(den.sum())
+            if not n:
+                continue
+            w = fact * den
+            sp, pond, prec = {}, {}, {}
+            for cod1, nombre1 in ESTADOS.items():
+                hit = den & (dst == cod1)
+                clave = f"a_{nombre1}"
+                sp[clave] = _round(100 * int(hit.sum()) / n, 2)
+                pond[clave] = _round(100 * w[hit].sum() / w.sum(), 2) if w.sum() else None
+                p = _razon_con_error(b, hit.astype(float), den.astype(float))
+                if p:
+                    prec[clave] = {k: p[k] for k in
+                                   ("se_pp", "ic95_pp", "margen_pp", "cv_pct", "gl", "fiabilidad")}
+            filas[nombre] = {
+                "n": n,
+                # El umbral de casos del INE vale también en los pares sin variable de
+                # diseño, donde no hay intervalo que avise: una fila bajo el mínimo NO se
+                # lee, y se publica con el aviso puesto en vez de esconderla.
+                "alcanza_el_minimo_de_casos_del_ine": bool(n >= MIN_CASOS_INE),
+                "sin_ponderar": sp,
+                "ponderado_por_factor_del_ano_base": pond,
+                "precision": prec or None,
+            }
+        if filas:
+            salida.append({"tramo": lab, "origen": filas})
+    return salida
+
+
 def build_flujos(micro, mes_central: int):
     m = micro[micro["edad"] >= 15].copy()
     m["ano_trimestre"] = m["ano_trimestre"].astype(int)
@@ -1250,6 +1310,7 @@ def build_flujos(micro, mes_central: int):
                 "ponderado_por_factor_del_ano_base": _transiciones(par, "fact_cal0"),
             },
             "entre_los_que_siguen_ocupados": _sigue_ocupado(par),
+            "por_edad_del_ano_base": _flujos_por_edad(a, par),
         })
 
     return {
@@ -1273,7 +1334,28 @@ def build_flujos(micro, mes_central: int):
             "cuidado o jubilación: eso no es derivable de esta capa.",
             "El enlace se verificó por coherencia de sexo, región y edad (99,75 %, 99,98 % y "
             "98,69 % en el par más reciente). Un residuo de enlaces falsos es inevitable.",
+            "El corte por edad parte las mismas 21 mil personas en dieciocho filas, así que "
+            "las celdas quedan chicas: la de los desocupados de un tramo ronda las decenas. "
+            "Antes de comparar dos tramos hay que mirar el intervalo de `precision` y el "
+            "aviso de casos mínimos; la diferencia que no los pasa no es un hallazgo.",
         ],
+        "corte_por_edad": {
+            "donde": "`pares[].por_edad_del_ano_base`",
+            "nota": ("La misma matriz de transición, abierta por tramo de edad del AÑO BASE: "
+                     "se sigue a la misma persona, así que la cohorte no se redefine a mitad "
+                     "del intervalo. Las filas de cada tramo suman 100 % hacia los tres "
+                     "destinos; los tramos NO suman entre sí."),
+            "precision": ("`precision` trae el error bajo el diseño muestral real de la ENE "
+                          "—estratos y conglomerados—, estimado sobre la muestra completa del "
+                          "año base con el tramo y el enlace como variables de dominio. Cubre "
+                          "el MUESTREO dentro de la submuestra enlazada y nada más. Viene "
+                          "nula en los pares cuyo año base es anterior a 2020, que no traen "
+                          "la variable de conglomerado."),
+            "minimo_de_casos": (f"`alcanza_el_minimo_de_casos_del_ine` es falso bajo "
+                                f"{MIN_CASOS_INE} casos, el umbral del propio INE. Esas filas "
+                                f"se publican con el aviso puesto, no escondidas: el `n` está "
+                                f"a la vista para que se lea como lo que es."),
+        },
         "no_derivable": no_derivable,
         "pares": pares,
     }
@@ -1345,10 +1427,13 @@ def _t975(gl: int) -> float:
             + (3 * z ** 7 + 19 * z ** 5 + 17 * z ** 3 - 15 * z) / (384 * v ** 3))
 
 
+MIN_CASOS_INE = 60  # el INE no lee una celda bajo 60 casos muestrales
+
+
 def _fiabilidad(cv_pct, n, gl):
     """Etiquetas de fiabilidad del INE, aplicadas tal cual las define el instituto."""
-    if n is not None and n < 60:
-        return "no fiable (menos de 60 casos muestrales)"
+    if n is not None and n < MIN_CASOS_INE:
+        return f"no fiable (menos de {MIN_CASOS_INE} casos muestrales)"
     if gl is not None and gl < 9:
         return "no fiable (menos de 9 grados de libertad)"
     if cv_pct is None:

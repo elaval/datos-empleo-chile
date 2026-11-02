@@ -150,6 +150,29 @@ nivel de población. Tres razones, en orden de importancia:
 Lo que sí se puede afirmar: la **forma** de la matriz y cómo cambia entre años, porque el
 sesgo opera en la misma dirección en todos los pares. Lo que no: el nivel.
 
+**El corte por edad (`por_edad_del_ano_base`) hereda las tres advertencias y agrega una.** El
+tramo es el del **año base**, no el del año de llegada: se sigue a la misma persona, así que
+quien tenía 24 al salir sigue contando en 15-24 aunque cumpla 25 por el camino. Sin eso, el
+flujo y su denominador describirían poblaciones distintas.
+
+Lo que agrega es un problema de escala: el corte parte las mismas ~21 mil personas enlazadas en
+dieciocho filas, y la fila de los desocupados de un tramo ronda las **decenas**. Por eso cada
+fila trae su `n`, el campo `alcanza_el_minimo_de_casos_del_ine` —falso bajo 60 casos, el umbral
+del propio instituto— y, cuando el año base es 2020 o posterior, el error bajo el diseño en
+`precision`. Una fila bajo el mínimo se publica con el aviso puesto en vez de esconderse, porque
+el `n` a la vista es más informativo que una ausencia sin explicar. **Antes de comparar dos
+tramos hay que mirar el intervalo de la DIFERENCIA**, igual que en §3-quinquies.
+
+Ese intervalo cubre el muestreo dentro de la submuestra enlazada. **No** cubre el sesgo de
+permanencia, que tiene signo y se mide aparte: un intervalo angosto no lo compensa.
+
+El caso que motivó el bloque: de los desocupados de 55 a 64 años en JAS 2025, el 34,4 % había
+salido de la fuerza de trabajo doce meses después, contra el 19,2 % de los de 25 a 34. La
+diferencia es de 15,2 pp contra un error de 6,5 pp, así que se lee. Calculada antes con la
+fórmula de muestreo aleatorio simple inflada a ojo, la misma diferencia quedaba por debajo del
+umbral y se habría descartado un hallazgo real: el atajo no solo exagera el error, lo exagera lo
+suficiente para borrar cosas que están ahí.
+
 ## 3-quinquies. ⚠️ Una diferencia pequeña entre grupos puede ser solo muestreo
 
 La ENE es una muestra **estratificada por conglomerados**, no aleatoria simple. Tratarla como

@@ -1,6 +1,6 @@
 {
- "version": "1.2",
- "actualizado": "2026-09-30",
+ "version": "1.3",
+ "actualizado": "2026-11-01",
  "nota": "Catálogo de indicadores = CONTRATO del dominio. Define qué significa cada indicador, su unidad, escala y cómo se computa. Es estable: cambia solo si cambia la definición, no en cada release. La evidencia (conocimiento/evidencia/) se computa según estas definiciones. Para provenance, escalas y advertencias, ver conocimiento/metodologia.md.",
  "identidades": {
   "fuerza_de_trabajo": "ft = o + do",
@@ -409,20 +409,21 @@
   },
   "flujos_de_personas": {
    "nombre": "Transiciones de la misma persona a doce meses",
-   "definicion": "Qué pasó con cada persona doce meses después: si siguió ocupada, pasó a desocupada o salió de la fuerza de trabajo, y qué cambió para quienes siguen ocupados (categoría ocupacional, formalidad). Mide flujos de personas, no diferencias entre dos fotos agregadas.",
+   "definicion": "Qué pasó con cada persona doce meses después: si siguió ocupada, pasó a desocupada o salió de la fuerza de trabajo, y qué cambió para quienes siguen ocupados (categoría ocupacional, formalidad). Mide flujos de personas, no diferencias entre dos fotos agregadas. La matriz se publica también abierta por tramo de edad del año base.",
    "unidad": "porcentaje de la submuestra enlazada",
    "escala": "proporcion",
-   "formula_microdatos": "Enlace por `idrph` entre los dos años del mismo mes central, personas de 15 años o más presentes en ambos; tabulación de `activ` en t contra t+12. Todos los pares comparten mes de entrevista, así que el intervalo es exactamente doce meses.",
+   "formula_microdatos": "Enlace por `idrph` entre los dos años del mismo mes central, personas de 15 años o más presentes en ambos; tabulación de `activ` en t contra t+12. Todos los pares comparten mes de entrevista, así que el intervalo es exactamente doce meses. El corte por edad usa el tramo del AÑO BASE —se sigue a la misma persona, así que la cohorte no se redefine a mitad del intervalo— y estima su error sobre la muestra completa de ese año, con el tramo y el enlace como variables de dominio: subsetear la muestra subestimaría la varianza.",
    "validacion_del_enlace": "Coherencia del par más reciente: 99,75 % mismo sexo, 99,98 % misma región, 98,69 % con edad +0 a +2 años. El enlace se verificó, no se supuso.",
    "fuente_nacional": "conocimiento/evidencia/flujos.json",
    "cobertura_temporal": "Dieciséis pares de años consecutivos del mes central del release. El par 2019-2020 no existe: la pandemia cortó el panel.",
-   "lo_que_no_es": "No es una estimación poblacional. Las proporciones se publican sin ponderar y ponderadas por el factor del año base, y las dos versiones difieren hasta unos dos puntos: esa distancia es parte del resultado, no un detalle técnico.",
+   "lo_que_no_es": "No es una estimación poblacional. Las proporciones se publican sin ponderar y ponderadas por el factor del año base, y las dos versiones difieren hasta unos dos puntos: esa distancia es parte del resultado, no un detalle técnico. En el corte por edad, además, las celdas son chicas: cada fila declara su `n` y si alcanza los 60 casos que el INE exige para leer una cifra.",
    "caveats": [
     "recalibracion-censo-2017",
     "flujos-no-son-estimacion-poblacional",
     "sesgo-de-permanencia-del-panel",
     "panel-cortado-en-2020",
-    "identidad-aritmetica-no-causal"
+    "identidad-aritmetica-no-causal",
+    "celdas-chicas-en-el-corte-por-edad"
    ]
   },
   "precision_de_las_estimaciones": {
