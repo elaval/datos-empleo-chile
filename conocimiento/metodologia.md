@@ -196,6 +196,22 @@ Los Lagos +2,20 pp, Maule +2,14 y O'Higgins +2,07. La diferencia entre la primer
 de **0,05 pp contra un intervalo de ±2,47 pp** para esa diferencia. El orden del podio es ruido, y
 sin el intervalo no había forma de saberlo: las tres cifras parecen igual de sólidas.
 
+**Donde no hay intervalo, hay un n.** Las secciones de rama (CAENES) no tienen intervalo
+publicado: `precision.json` cubre tasas, no niveles por rama. Lo que sí viaja con cada sección,
+desde esta versión, son sus **casos muestrales** —el año del release, el previo y la tabla
+`casos_muestrales_por_ano` desde JAS 2017—, junto con el indicador
+`alcanza_el_minimo_de_casos_del_ine`. El criterio es el del propio INE: **bajo 60 casos una celda
+no se lee**. No es un sustituto del intervalo y no debe tratarse como uno — un n holgado no vuelve
+precisa una diferencia chica, y dos secciones con n cómodo pueden diferir dentro del ruido—, pero
+separa lo que se puede mirar de lo que no.
+
+El caso concreto: «Organizaciones y órganos extraterritoriales» pasó de 1.107 a 2.891 ocupados
+entre JAS 2019 y JAS 2026, **+161 %**, el alza más grande de las 21 secciones. Descansa sobre
+**seis casos muestrales en 2019 y siete en 2026**. Ordenada junto a las demás encabezaba el
+ranking y aplastaba la escala de cualquier gráfico que la incluyera; con su n a la vista, se
+excluye del gráfico y se publica marcada. Sin el n, esa cifra se ve exactamente igual de sólida
+que el +31,4 % de salud, que descansa sobre 3.158 casos.
+
 ## 4. ⚠️ Escala de las tasas: depende de la tabla de origen
 
 - Tabla **maestra** (`ene_trimestre_totales.parquet`) y **esta capa de conocimiento**:

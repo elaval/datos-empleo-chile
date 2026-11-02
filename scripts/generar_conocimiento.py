@@ -293,6 +293,29 @@ RAMA_ETIQUETA = {
     "r21": "Organizaciones y órganos extraterritoriales",
 }
 
+
+def _casos_por_rama(micro: pd.DataFrame) -> dict[int, dict[str, int]]:
+    """Casos muestrales por sección CAENES y año, en el mes central de los cortes.
+
+    El nivel ponderado dice cuánta gente hay; este número dice sobre cuántas observaciones
+    descansa esa cifra, que es lo que decide si se puede leer (ver MIN_CASOS_INE). Sin él,
+    una sección de dos mil personas estimadas desde seis casos se parece en el JSON a otra
+    de dos mil estimada desde seiscientos, y solo una de las dos se sostiene.
+
+    Se cuenta sobre `b14_rev4cl_caenes` y `activ == 1`, el mismo universo con el que el
+    validador recomputa los niveles: contarlo de otra forma daría un n que no corresponde
+    a la cifra que acompaña. El código 999 es «sin sección declarada», no una sección.
+    """
+    oc = micro[micro["activ"] == 1]
+    cuenta = oc.groupby(["ano_trimestre", "b14_rev4cl_caenes"], dropna=True).size()
+    out: dict[int, dict[str, int]] = {}
+    for (ano, cod), n in cuenta.items():
+        cod = int(cod)
+        clave = f"r{cod:02d}" if cod <= 21 else "sin_seccion_declarada"
+        out.setdefault(int(ano), {})[clave] = int(n)
+    return out
+
+
 # Tipo de vínculo contractual de los dependientes (asalariados privados y públicos +
 # servicio doméstico): categoria_ocupacion 3-6, que es exactamente el universo que
 # responde b8/b9 en la ENE. Serie completa desde 2010-02.
@@ -560,7 +583,7 @@ def build_cortes(micro: pd.DataFrame):
 # --------------------------------------------------------------------------
 # 3. SNAPSHOT + TENDENCIAS
 # --------------------------------------------------------------------------
-def build_snapshot(serie_nac, cortes, release, generado):
+def build_snapshot(serie_nac, cortes, release, generado, casos_rama=None):
     ult = serie_nac[-1]
     # previo = mismo mes central, año anterior
     prev = next(
@@ -744,18 +767,43 @@ def build_snapshot(serie_nac, cortes, release, generado):
     ram_ult = ult.get("rama_actividad") or {}
     if any(v is not None for v in ram_ult.values()):
         ram_prev = (prev.get("rama_actividad") or {}) if prev else {}
+        # Casos muestrales: los del año del release y los del previo, para que cada celda
+        # viaje con el n que la sostiene. Solo desde el primer año con rama publicada: antes
+        # de ese trimestre la variable existe en los microdatos pero no hay nivel que
+        # acompañar, y publicar el n invitaría a una comparación que el quiebre no admite.
+        casos = casos_rama or {}
+        ano_ult, ano_prev = int(ult["ano"]), (int(prev["ano"]) if prev else None)
+        desde_rama = min((int(f["ano"]) for f in serie_nac
+                          if f["mes_central"] == ult["mes_central"]
+                          and any(v is not None for v in (f.get("rama_actividad") or {}).values())),
+                         default=ano_ult)
+        n_ult, n_prev = casos.get(ano_ult, {}), casos.get(ano_prev, {}) if ano_prev else {}
         rama = {
             "clasificacion": "CAENES rev. 4 (21 secciones)",
             "nota_quiebre": "La ENE clasifica la rama con CAENES rev. 4 desde JAS 2017. Antes "
                             "usaba CIIU rev. 3, que no es empalmable a nivel de sección: no "
                             "existe serie de rama anterior a ese trimestre.",
+            "nota_casos": "Cada sección viaja con sus casos muestrales. El INE no lee una "
+                          f"celda bajo {MIN_CASOS_INE} casos: cuando "
+                          "`alcanza_el_minimo_de_casos_del_ine` es falso, el nivel está "
+                          "publicado pero no se sostiene y no debe citarse ni ordenarse "
+                          "contra los demás. Los casos NO son un intervalo de confianza: "
+                          "un n holgado no vuelve precisa una diferencia chica.",
             "ramas": {
                 k: {
                     "etiqueta": RAMA_ETIQUETA[k],
                     "pct_ocupados": _round(100 * v / total_o, 2) if (v and total_o) else None,
                     **_comp_entry(v, ram_prev.get(k)),
+                    "casos_muestrales": n_ult.get(k),
+                    "casos_muestrales_previo": n_prev.get(k),
+                    "alcanza_el_minimo_de_casos_del_ine": (
+                        bool(n_ult[k] >= MIN_CASOS_INE) if k in n_ult else None),
                 }
                 for k, v in ram_ult.items() if v is not None
+            },
+            "casos_muestrales_por_ano": {
+                str(a): dict(sorted(d.items()))
+                for a, d in sorted(casos.items()) if a >= desde_rama
             },
         }
         suma_ram = sum(v for v in ram_ult.values() if v is not None)
@@ -774,6 +822,8 @@ def build_snapshot(serie_nac, cortes, release, generado):
             "sin_rama_declarada_previo": _round(sin_rama_prev),
             "delta_sin_rama_declarada": (_round(sin_rama - sin_rama_prev)
                                          if sin_rama_prev is not None else None),
+            "casos_sin_rama_declarada": n_ult.get("sin_seccion_declarada"),
+            "casos_sin_rama_declarada_previo": n_prev.get("sin_seccion_declarada"),
         }
 
     # Educación: nivel alcanzado por los ocupados + desglose de superior + desajuste.
@@ -1612,11 +1662,13 @@ def main():
     micro = pd.read_parquet(
         micro_path,
         columns=["ano_trimestre", "edad", "sexo", "region", "nacionalidad", "activ", "fact_cal",
-                 "idrph", "categoria_ocupacion", "ocup_form", "estrato", "conglomerado"],
+                 "idrph", "categoria_ocupacion", "ocup_form", "estrato", "conglomerado",
+                 "b14_rev4cl_caenes"],
     )
     cortes, anos_cortes = build_cortes(micro)
 
-    snapshot = build_snapshot(serie_nac, cortes, release, generado)
+    snapshot = build_snapshot(serie_nac, cortes, release, generado,
+                              casos_rama=_casos_por_rama(micro))
     tendencias = build_tendencias(serie_nac)
     tendencias_cortes = build_tendencias_cortes(cortes)
     descomposicion = build_descomposicion(cortes, serie_nac, mc)

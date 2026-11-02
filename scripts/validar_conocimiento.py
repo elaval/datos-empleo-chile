@@ -490,6 +490,16 @@ def main() -> int:
         check(peor <= TOL_PERSONAS, "rama de actividad desde b14_rev4cl_caenes",
               f"peor desvío {peor:.1f} ({peor_rama})")
 
+        # Los casos muestrales son el n que decide si una celda de rama se puede leer, así
+        # que tienen que contar EXACTAMENTE los mismos ocupados que los niveles: si alguien
+        # cambia el universo de uno y no del otro, el JSON seguiría pareciendo correcto.
+        ocupados_en_muestra = int((s.activ == 1).sum())
+        suma_casos = sum(v["casos_muestrales"] or 0 for v in ram["ramas"].values())
+        suma_casos += cobr.get("casos_sin_rama_declarada") or 0
+        check(suma_casos == ocupados_en_muestra,
+              "casos muestrales por rama = ocupados de la muestra",
+              f"{suma_casos} contra {ocupados_en_muestra}")
+
     def bin_edad(df):
         out = pd.Series(index=df.index, dtype=object)
         for lo, hi, lab in GRUPOS_EDAD:
